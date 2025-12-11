@@ -99,7 +99,7 @@ export async function getHomeContent(): Promise<HomeContent> {
       heading:
         typeof highlights.heading === "string" ? highlights.heading : "",
       items: Array.isArray(highlights.items)
-        ? highlights.items.map((item) => ({
+        ? highlights.items.map((item: Record<string, unknown>) => ({
             title: typeof item?.["title"] === "string" ? item["title"] : "",
             description:
               typeof item?.["description"] === "string"
