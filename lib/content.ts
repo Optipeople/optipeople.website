@@ -62,8 +62,9 @@ function normalizeLinks(links: unknown): NavLink[] {
 function normalizeCta(cta: unknown): Cta | undefined {
   if (!cta || typeof cta !== "object") return undefined
 
-  const label = typeof cta["label"] === "string" ? cta["label"] : ""
-  const href = typeof cta["href"] === "string" ? cta["href"] : ""
+  const typed = cta as Record<string, unknown>
+  const label = typeof typed.label === "string" ? typed.label : ""
+  const href = typeof typed.href === "string" ? typed.href : ""
 
   if (!label || !href) return undefined
 
