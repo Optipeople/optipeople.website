@@ -13,11 +13,9 @@ nav:
     href: "#contact"
 hero:
   eyebrow: Industrial staffing, simplified
-  title: Reliable crews for demanding operations
+  title: Digital Platform for Smart Operations
   subtitle: >-
-    Optipeople builds high-performing teams for sites that cannot slow down.
-    We recruit, train, and roster skilled people so your supervisors can focus
-    on the work.
+    Transform your operations with AI-powered smart solutions and intelligent automation.
   primaryCta:
     label: Talk with our team
     href: "#contact"
