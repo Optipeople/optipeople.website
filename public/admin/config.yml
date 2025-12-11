@@ -1,0 +1,96 @@
+backend:
+  name: github
+  repo: optipeople/optipeople.website
+  branch: main
+media_folder: public/uploads
+public_folder: /uploads
+publish_mode: simple
+site_url: https://optipeople.com
+display_url: https://optipeople.com
+
+collections:
+  - name: home
+    label: Home
+    files:
+      - file: content/home.md
+        name: home
+        label: Homepage
+        fields:
+          - label: Navigation
+            name: nav
+            widget: object
+            fields:
+              - { label: Brand, name: brand, widget: string }
+              - label: Links
+                name: links
+                widget: list
+                summary: "{{fields.label}} → {{fields.href}}"
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: href, widget: string }
+              - label: Primary CTA
+                name: cta
+                widget: object
+                required: false
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: href, widget: string }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: text }
+              - label: Primary CTA
+                name: primaryCta
+                widget: object
+                required: false
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: href, widget: string }
+              - label: Secondary CTA
+                name: secondaryCta
+                widget: object
+                required: false
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: href, widget: string }
+          - label: Highlights
+            name: highlights
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Company, name: company, widget: string }
+              - { label: Blurb, name: blurb, widget: text }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: Phone, name: phone, widget: string, required: false }
+              - {
+                  label: Location,
+                  name: location,
+                  widget: string,
+                  required: false,
+                }
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: href, widget: string }
+
