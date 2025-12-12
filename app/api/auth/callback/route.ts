@@ -89,10 +89,20 @@ function renderResult(data: {
     <script>
       (function() {
         const payload = ${JSON.stringify(payload)};
+        const targetOrigin = window.location.origin;
+        const provider = payload.provider || "github";
+
+        // Decap/Netlify CMS GitHub backend expects this legacy string format:
+        // "authorization:<provider>:<token>"
+        // (and often ignores other payload shapes).
         if (window.opener && payload.success && payload.token) {
-          window.opener.postMessage({ token: payload.token, provider: payload.provider }, "*");
+          window.opener.postMessage("authorization:" + provider + ":" + payload.token, targetOrigin);
+          // Fallback for newer/alternate listeners.
+          window.opener.postMessage({ token: payload.token, provider }, targetOrigin);
         } else if (window.opener) {
-          window.opener.postMessage({ error: payload.error || payload.message || "OAuth failed" }, "*");
+          const msg = payload.error || payload.message || "OAuth failed";
+          window.opener.postMessage("authorization:" + provider + ":error:" + msg, targetOrigin);
+          window.opener.postMessage({ error: msg, provider }, targetOrigin);
         }
         window.close();
       })();
