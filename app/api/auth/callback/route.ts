@@ -30,7 +30,7 @@ export async function GET(request: Request) {
     return renderResult({
       success: false,
       message: "Invalid OAuth state",
-      targetOrigin: storedOrigin,
+      openerOrigin: storedOrigin,
     })
   }
 
@@ -62,7 +62,7 @@ export async function GET(request: Request) {
       success: false,
       message: "Failed to get access token",
       error: "error" in json ? json.error : undefined,
-      targetOrigin: storedOrigin,
+      openerOrigin: storedOrigin,
     })
   }
 
@@ -70,7 +70,7 @@ export async function GET(request: Request) {
     success: true,
     token: json.access_token,
     provider: "github",
-    targetOrigin: storedOrigin,
+    openerOrigin: storedOrigin,
   })
 }
 
@@ -80,7 +80,7 @@ function renderResult(data: {
   provider?: string
   message?: string
   error?: string
-  targetOrigin?: string
+  openerOrigin?: string
 }) {
   const payload = {
     token: data.token,
@@ -88,7 +88,7 @@ function renderResult(data: {
     success: data.success,
     message: data.message,
     error: data.error,
-    targetOrigin: data.targetOrigin,
+    openerOrigin: data.openerOrigin,
   }
 
   const html = `<!doctype html>
@@ -97,25 +97,57 @@ function renderResult(data: {
     <script>
       (function() {
         const payload = ${JSON.stringify(payload)};
-        // IMPORTANT: postMessage targetOrigin must match the opener window's origin.
-        // If /admin is on a different domain than this callback, using window.location.origin
-        // would prevent delivery. We persist the opener origin from the initial /api/auth request.
-        const targetOrigin = payload.targetOrigin || "*";
         const provider = payload.provider || "github";
+        const openerOrigin = payload.openerOrigin;
 
-        // Decap/Netlify CMS GitHub backend expects this legacy string format:
-        // "authorization:<provider>:<token>"
-        // (and often ignores other payload shapes).
-        if (window.opener && payload.success && payload.token) {
-          window.opener.postMessage("authorization:" + provider + ":" + payload.token, targetOrigin);
-          // Fallback for newer/alternate listeners.
-          window.opener.postMessage({ token: payload.token, provider }, targetOrigin);
-        } else if (window.opener) {
-          const msg = payload.error || payload.message || "OAuth failed";
-          window.opener.postMessage("authorization:" + provider + ":error:" + msg, targetOrigin);
-          window.opener.postMessage({ error: msg, provider }, targetOrigin);
+        // Decap/Netlify CMS OAuth popup handshake:
+        // 1) Popup -> opener: "authorizing:<provider>" (targetOrigin "*")
+        // 2) Opener -> popup: (any message, used to learn opener origin)
+        // 3) Popup -> opener: "authorization:<provider>:<status>:<json>"
+        //    where status is "success" or "error".
+        function sendResult(targetOrigin) {
+          if (!window.opener) return;
+          if (openerOrigin && targetOrigin !== openerOrigin) return;
+
+          if (payload.success && payload.token) {
+            const content = { token: payload.token, provider };
+            window.opener.postMessage(
+              "authorization:" + provider + ":success:" + JSON.stringify(content),
+              targetOrigin
+            );
+          } else {
+            const msg = payload.error || payload.message || "OAuth failed";
+            const content = { error: msg, provider };
+            window.opener.postMessage(
+              "authorization:" + provider + ":error:" + JSON.stringify(content),
+              targetOrigin
+            );
+          }
+          window.close();
         }
-        window.close();
+
+        function receiveMessage(e) {
+          try {
+            // If we have an expected opener origin, only accept that.
+            if (openerOrigin && e.origin !== openerOrigin) return;
+            sendResult(e.origin);
+          } finally {
+            window.removeEventListener("message", receiveMessage, false);
+          }
+        }
+
+        window.addEventListener("message", receiveMessage, false);
+
+        // Start handshake with parent. If the opener doesn't respond (rare),
+        // fall back to a direct postMessage.
+        if (window.opener) {
+          window.opener.postMessage("authorizing:" + provider, "*");
+          setTimeout(function() {
+            // Prefer the stored opener origin; otherwise allow any origin.
+            sendResult(openerOrigin || "*");
+          }, 1500);
+        }
+
       })();
     </script>
   </body>
