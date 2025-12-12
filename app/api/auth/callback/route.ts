@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 
 const STATE_COOKIE = "decap_oauth_state"
+const ORIGIN_COOKIE = "decap_oauth_origin"
 
 type TokenResponse =
   | { access_token: string; token_type: string; scope: string }
@@ -13,6 +14,7 @@ export async function GET(request: Request) {
   const state = url.searchParams.get("state")
   const cookieStore = await cookies()
   const storedState = cookieStore.get(STATE_COOKIE)?.value
+  const storedOrigin = cookieStore.get(ORIGIN_COOKIE)?.value
 
   const clientId = process.env.GITHUB_CLIENT_ID
   const clientSecret = process.env.GITHUB_CLIENT_SECRET
@@ -28,10 +30,12 @@ export async function GET(request: Request) {
     return renderResult({
       success: false,
       message: "Invalid OAuth state",
+      targetOrigin: storedOrigin,
     })
   }
 
   cookieStore.delete(STATE_COOKIE)
+  cookieStore.delete(ORIGIN_COOKIE)
 
   const tokenResponse = await fetch(
     "https://github.com/login/oauth/access_token",
@@ -58,6 +62,7 @@ export async function GET(request: Request) {
       success: false,
       message: "Failed to get access token",
       error: "error" in json ? json.error : undefined,
+      targetOrigin: storedOrigin,
     })
   }
 
@@ -65,6 +70,7 @@ export async function GET(request: Request) {
     success: true,
     token: json.access_token,
     provider: "github",
+    targetOrigin: storedOrigin,
   })
 }
 
@@ -74,6 +80,7 @@ function renderResult(data: {
   provider?: string
   message?: string
   error?: string
+  targetOrigin?: string
 }) {
   const payload = {
     token: data.token,
@@ -81,6 +88,7 @@ function renderResult(data: {
     success: data.success,
     message: data.message,
     error: data.error,
+    targetOrigin: data.targetOrigin,
   }
 
   const html = `<!doctype html>
@@ -89,7 +97,10 @@ function renderResult(data: {
     <script>
       (function() {
         const payload = ${JSON.stringify(payload)};
-        const targetOrigin = window.location.origin;
+        // IMPORTANT: postMessage targetOrigin must match the opener window's origin.
+        // If /admin is on a different domain than this callback, using window.location.origin
+        // would prevent delivery. We persist the opener origin from the initial /api/auth request.
+        const targetOrigin = payload.targetOrigin || "*";
         const provider = payload.provider || "github";
 
         // Decap/Netlify CMS GitHub backend expects this legacy string format:
