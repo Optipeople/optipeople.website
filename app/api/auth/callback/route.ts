@@ -11,7 +11,8 @@ export async function GET(request: Request) {
   const url = new URL(request.url)
   const code = url.searchParams.get("code")
   const state = url.searchParams.get("state")
-  const storedState = cookies().get(STATE_COOKIE)?.value
+  const cookieStore = await cookies()
+  const storedState = cookieStore.get(STATE_COOKIE)?.value
 
   const clientId = process.env.GITHUB_CLIENT_ID
   const clientSecret = process.env.GITHUB_CLIENT_SECRET
@@ -30,7 +31,7 @@ export async function GET(request: Request) {
     })
   }
 
-  cookies().delete(STATE_COOKIE)
+  cookieStore.delete(STATE_COOKIE)
 
   const tokenResponse = await fetch(
     "https://github.com/login/oauth/access_token",
@@ -104,4 +105,3 @@ function renderResult(data: {
     headers: { "Content-Type": "text/html" },
   })
 }
-

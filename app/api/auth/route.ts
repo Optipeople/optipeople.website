@@ -29,7 +29,8 @@ export async function GET(request: Request) {
   authUrl.searchParams.set("state", state)
   authUrl.searchParams.set("allow_signup", "false")
 
-  cookies().set({
+  const cookieStore = await cookies()
+  cookieStore.set({
     name: STATE_COOKIE,
     value: state,
     httpOnly: true,
@@ -41,4 +42,3 @@ export async function GET(request: Request) {
 
   return NextResponse.redirect(authUrl.toString())
 }
-

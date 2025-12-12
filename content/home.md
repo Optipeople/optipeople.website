@@ -12,7 +12,7 @@ nav:
     label: Book a call
     href: "#contact"
 hero:
-  eyebrow: Industrial staffing, simplified
+  eyebrow: AI staffing and automation
   title: Digital Platform for Smart Operations
   subtitle: >-
     Transform your operations with AI-powered smart solutions and intelligent automation.
