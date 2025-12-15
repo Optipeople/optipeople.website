@@ -13,6 +13,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
+### If hot reload doesn't work on Windows
+
+This repo enables file-watcher polling for `npm run dev` (helps when the project is inside OneDrive-synced folders like `Documents`).
+
 ## Content & CMS
 
 - Home content is sourced from `content/home.md`.

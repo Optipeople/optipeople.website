@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
   title: "Optipeople | Reliable industrial staffing",
@@ -23,11 +13,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const ibmPlexCssHref =
+    "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap";
+
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
+        <link rel="preload" as="style" href={ibmPlexCssHref} />
+        <link
+          id="ibm-plex-fonts"
+          rel="stylesheet"
+          href={ibmPlexCssHref}
+          media="print"
+        />
+        <script
+          // Non-blocking CSS load pattern: upgrade media once stylesheet is loaded.
+          dangerouslySetInnerHTML={{
+            __html:
+              "(()=>{var l=document.getElementById('ibm-plex-fonts');if(!l)return;function s(){l.media='all'};if(l.sheet){s();return;}l.addEventListener('load',s);})();",
+          }}
+        />
+        <noscript>
+          <link rel="stylesheet" href={ibmPlexCssHref} />
+        </noscript>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground min-h-screen`}
+        className="antialiased bg-background text-foreground min-h-screen"
       >
+        <SiteHeader />
         {children}
       </body>
     </html>
