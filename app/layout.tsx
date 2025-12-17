@@ -32,6 +32,7 @@ export default function RootLayout({
           rel="stylesheet"
           href={ibmPlexCssHref}
           media="print"
+          suppressHydrationWarning
         />
         <script
           // Non-blocking CSS load pattern: upgrade media once stylesheet is loaded.
