@@ -15,6 +15,7 @@ const tabSlides: SlideData[] = [
     primaryLabel: "Explore manufacturing solutions",
     primaryHref: "/modules/smart-operations",
     bgColor: "bg-blue-50/0",
+    layout: "overlay",
   },
   {
     tab: "OEMs and machine builders",
@@ -26,6 +27,7 @@ const tabSlides: SlideData[] = [
     primaryLabel: "Explore OEM and aftersales solutions",
     primaryHref: "/modules/ai-solutions",
     bgColor: "bg-blue-50/0",
+    layout: "overlay",
   },
   {
     tab: "Service and aftermarket teams",
@@ -37,39 +39,40 @@ const tabSlides: SlideData[] = [
     primaryLabel: "Explore service solutions",
     primaryHref: "/services",
     bgColor: "bg-blue-50/0",
+    layout: "overlay",
   },
 ]
 
-const slides: SlideData[] = [
+const verticalSlides: SlideData[] = [
   {
-    title: "Digital Platform for Smart Operations",
-    description:
-      "A full-stack layer for planning, execution, and real-time insight—built for industrial teams that can't afford downtime.",
+    title: "Real-time monitoring",
+    description: "Track operations and performance metrics in real-time across all your systems.",
     imageSrc: "/window.svg",
-    imageAlt: "Smart operations illustration",
-    primaryLabel: "Talk to us",
-    primaryHref: "/#contact",
-    bgColor: "bg-blue-50/0",
+    imageAlt: "Real-time monitoring illustration",
+    primaryLabel: "Learn more about monitoring",
+    primaryHref: "/modules/smart-operations",
+    bgColor: "bg-black",
+    layout: "vertical",
   },
   {
-    title: "From signals to actions—fast",
-    description:
-      "Turn operational data into practical recommendations with guardrails, traceability, and performance you can trust.",
+    title: "AI-powered insights",
+    description: "Leverage artificial intelligence to predict issues and optimize operations.",
     imageSrc: "/globe.svg",
-    imageAlt: "Signals to actions illustration",
-    primaryLabel: "See AI solutions",
+    imageAlt: "AI insights illustration",
+    primaryLabel: "Explore AI solutions",
     primaryHref: "/modules/ai-solutions",
-    bgColor: "bg-blue-50/0",
+    bgColor: "bg-black",
+    layout: "vertical",
   },
   {
-    title: "Design, deploy, and scale workflows",
-    description:
-      "Automate repetitive tasks without sacrificing quality—so teams ship improvements continuously, not quarterly.",
+    title: "Automated workflows",
+    description: "Streamline processes with intelligent automation and workflow management.",
     imageSrc: "/file.svg",
-    imageAlt: "Workflow automation illustration",
-    primaryLabel: "Explore automation",
+    imageAlt: "Automation illustration",
+    primaryLabel: "Discover automation",
     primaryHref: "/modules/automation",
-    bgColor: "bg-blue-50/0",
+    bgColor: "bg-black",
+    layout: "vertical",
   },
 ]
 
@@ -77,13 +80,14 @@ export default function Home() {
   return (
     <main>
       <section className="py-12 lg:py-16">
-        <div className="mx-auto w-full max-w-5xl px-4 lg:px-6 xl:px-8">
+        <div className="mx-auto w-full max-w-5xl px-4 lg:px-6 xl:px-8 xl:py-22">
           <h1 className="text-3xl lg:text-6xl font-light text-foreground text-center">
             Digital Operations Platform
           </h1>
           <p className="mt-6 text-xl text-foreground/70 text-center">
             One platform for production, performance, and connected operations.
           </p>
+          {/*
           <div className="mt-6 flex items-center justify-center">
             <Button asChild variant="outline">
               <Link href="/modules/smart-operations" className="cursor-pointer">
@@ -91,22 +95,26 @@ export default function Home() {
               </Link>
             </Button>
           </div>
+          */}
         </div>
 
         <SlideCarousel
           slides={tabSlides}
-          navigationType="tabs"
+          navigationType={["tabs", "dots"]}
           ariaLabel="Team solutions"
           className="mt-8"
         />
       </section>
 
-      <SlideCarousel
-        slides={slides}
-        navigationType="dots"
-        ariaLabel="Homepage highlights"
-        className="py-20"
-      />
+      <section className="py-12 lg:py-16">
+        <SlideCarousel
+          slides={verticalSlides}
+          navigationType={["arrows"]}
+          ariaLabel="Platform features"
+          className="mt-8"
+        />
+      </section>
+
     </main>
   )
 }
