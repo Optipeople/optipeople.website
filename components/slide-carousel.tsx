@@ -50,7 +50,9 @@ export function SlideCarousel({
   const [canScrollNext, setCanScrollNext] = useState(false)
   const tabNavRef = useRef<HTMLDivElement | null>(null)
   const tabButtonRefs = useRef<Array<HTMLButtonElement | null>>([])
+  const indicatorRef = useRef<HTMLDivElement | null>(null)
   const [tabIndicator, setTabIndicator] = useState({ left: 0, width: 0 })
+  const isTabClickRef = useRef(false) // Track if navigation came from tab click
 
   // Normalize navigationType to array
   const navigationTypes = Array.isArray(navigationType) 
@@ -88,11 +90,22 @@ export function SlideCarousel({
     updateCurrent()
     api.on("select", updateCurrent)
     api.on("reInit", updateCurrent)
+    
+    // Reset tab click flag when carousel settles
+    const onSettle = () => {
+      isTabClickRef.current = false
+    }
+    api.on("settle", onSettle)
+
+    return () => {
+      api.off("select", updateCurrent)
+      api.off("settle", onSettle)
+    }
   }, [api, slides.length])
 
-  // Ensure first slide is centered on initial load
+  // Ensure first slide is centered on initial load (only for non-vertical layouts)
   useEffect(() => {
-    if (!api) return
+    if (!api || hasVerticalLayout) return
 
     let hasScrolled = false
 
@@ -126,29 +139,75 @@ export function SlideCarousel({
       clearTimeout(timeoutId)
       api.off("reInit", handleReInit)
     }
-  }, [api])
+  }, [api, hasVerticalLayout])
 
-  const scrollTo = (index: number) => {
+  // For vertical layouts on mobile, scroll to first real slide (skip spacer)
+  useEffect(() => {
+    if (!api || !hasVerticalLayout) return
+
+    const isMobile = window.matchMedia("(max-width: 1023px)").matches
+    if (!isMobile) return
+
+    let hasScrolled = false
+
+    const scrollToFirst = () => {
+      if (hasScrolled) return
+      const currentIndex = api.selectedScrollSnap()
+      if (currentIndex === 0) {
+        api.scrollTo(1, true)
+        hasScrolled = true
+      }
+    }
+
+    requestAnimationFrame(scrollToFirst)
+    const timeoutId = setTimeout(scrollToFirst, 50)
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [api, hasVerticalLayout])
+
+  const scrollTo = (index: number, fromTabClick = false) => {
+    isTabClickRef.current = fromTabClick
     api?.scrollTo(index + 1)
   }
 
   const updateTabIndicator = () => {
-    const navEl = tabNavRef.current
     const btnEl = tabButtonRefs.current[current]
-    if (!navEl || !btnEl) return
+    if (!btnEl) return
 
-    const navRect = navEl.getBoundingClientRect()
-    const btnRect = btnEl.getBoundingClientRect()
-
+    // Use offsetLeft/offsetWidth which are relative to the offset parent (inner wrapper)
+    // This works correctly regardless of scroll position
     setTabIndicator({
-      left: btnRect.left - navRect.left,
-      width: btnRect.width,
+      left: btnEl.offsetLeft,
+      width: btnEl.offsetWidth,
     })
   }
 
   useLayoutEffect(() => {
     if (hasTabs) {
-      updateTabIndicator()
+      const btnEl = tabButtonRefs.current[current]
+      const navEl = tabNavRef.current
+      const indicatorEl = indicatorRef.current
+      const wasTabClick = isTabClickRef.current
+      
+      if (btnEl && navEl && indicatorEl) {
+        updateTabIndicator()
+        
+        // Scroll active tab into view (center it)
+        const navRect = navEl.getBoundingClientRect()
+        const btnRect = btnEl.getBoundingClientRect()
+        const scrollLeft = navEl.scrollLeft
+        const btnLeftRelative = btnRect.left - navRect.left + scrollLeft
+        const btnCenter = btnLeftRelative + btnRect.width / 2
+        const navCenter = navEl.clientWidth / 2
+        navEl.scrollTo({
+          left: btnCenter - navCenter,
+          behavior: wasTabClick ? "smooth" : "instant",
+        })
+      } else {
+        updateTabIndicator()
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current, hasTabs])
@@ -176,43 +235,50 @@ export function SlideCarousel({
     if (!hasTabs) return null
 
     return (
-      <div className="mt-8 flex justify-center">
+      <div className="mt-8 flex justify-center px-4">
         <div
           ref={tabNavRef}
-          className="relative inline-flex flex-wrap justify-center gap-2 
-          bg-slate-100 rounded-full border-[5px] border-slate-100"
+          className="inline-flex
+          bg-slate-100 rounded-full border-[5px] border-slate-100
+          overflow-x-auto max-w-full
+          scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none]
+          [&::-webkit-scrollbar]:hidden"
           role="tablist"
           aria-label={`${ariaLabel} navigation`}
         >
-          <div
-            aria-hidden="true"
-            className="absolute left-0 top-0 bottom-0 rounded-full bg-primary transition-[transform,width] duration-300 ease-out pointer-events-none"
-            style={{
-              width: tabIndicator.width,
-              transform: `translateX(${tabIndicator.left}px)`,
-            }}
-          />
-          {slides.map((slide, index) => (
-            <button
-              key={slide.tab ?? index}
-              onClick={() => scrollTo(index)}
-              ref={(el) => {
-                tabButtonRefs.current[index] = el
+          {/* Inner wrapper positions indicator relative to content, not scroll viewport */}
+          <div className="relative inline-flex gap-2">
+            <div
+              ref={indicatorRef}
+              aria-hidden="true"
+              className="absolute left-0 top-0 bottom-0 rounded-full bg-primary transition-[transform,width] duration-300 ease-out pointer-events-none"
+              style={{
+                width: tabIndicator.width,
+                transform: `translateX(${tabIndicator.left}px)`,
               }}
-              id={tabIds[index]}
-              role="tab"
-              aria-selected={current === index}
-              tabIndex={current === index ? 0 : -1}
-              className={`cursor-pointer relative z-10 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                current === index
-                  ? "text-white"
-                  : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
-              }`}
-              aria-label={`Switch to ${slide.tab ?? slide.title}`}
-            >
-              {slide.tab ?? slide.title}
-            </button>
-          ))}
+            />
+            {slides.map((slide, index) => (
+              <button
+                key={slide.tab ?? index}
+                onClick={() => scrollTo(index, true)}
+                ref={(el) => {
+                  tabButtonRefs.current[index] = el
+                }}
+                id={tabIds[index]}
+                role="tab"
+                aria-selected={current === index}
+                tabIndex={current === index ? 0 : -1}
+                className={`cursor-pointer relative z-10 px-4 py-2.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
+                  current === index
+                    ? "text-white"
+                    : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                }`}
+                aria-label={`Switch to ${slide.tab ?? slide.title}`}
+              >
+                {slide.tab ?? slide.title}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     )
@@ -240,10 +306,10 @@ export function SlideCarousel({
   }
 
   const verticalItemClass =
-    "basis-[70%] sm:basis-[60%] lg:basis-[25%] max-w-[320px]"
+    "basis-[95%] lg:basis-[380px] shrink-0"
   const verticalSpacerClass =
-    "basis-[15%] sm:basis-[20%] lg:basis-[12.5%]"
-  const defaultItemClass = "basis-[85%] sm:basis-[80%] lg:basis-[75%]"
+    "basis-[95%] lg:basis-[22.5%] shrink-0"
+  const defaultItemClass = "basis-[95%] lg:basis-[55%]"
 
   return (
     <section className={className}>
@@ -255,7 +321,7 @@ export function SlideCarousel({
           opts={{
             loop: false,
             align: "center",
-            startIndex: 1,
+            startIndex: hasVerticalLayout ? 0 : 1,
             slidesToScroll: 1,
             duration: 40,
           }}
@@ -290,7 +356,7 @@ export function SlideCarousel({
                       role="button"
                       tabIndex={0}
                       aria-label={`Go to slide ${index + 1}: ${slide.title}`}
-                      className={`relative ${isVertical ? "aspect-[9/16] w-full max-h-[600px]" : "aspect-[3/2] max-h-[600px]"} w-full rounded-4xl ${slide.bgColor} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`}
+                      className={`relative h-[600px] w-full rounded-4xl ${slide.bgColor} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`}
                     >
                       <Card className="p-0 bg-white/0 border-none text-foreground shadow-none w-full h-full">
                         <CardContent className="h-full p-0">
