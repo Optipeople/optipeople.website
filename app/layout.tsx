@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Optipeople | Reliable industrial staffing",
@@ -46,10 +47,11 @@ export default function RootLayout({
         </noscript>
       </head>
       <body
-        className="antialiased bg-background text-foreground min-h-screen"
+        className="antialiased bg-background text-foreground min-h-screen flex flex-col"
       >
         <SiteHeader />
-        {children}
+        <main className="flex-1">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
