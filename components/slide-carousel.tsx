@@ -25,6 +25,7 @@ export type SlideData = {
   bgColor: string
   tab?: string // For tab navigation
   layout?: SlideLayout // Layout type for this slide
+  overlay?: "dark" | "light" | "none" // Overlay style (default: "dark")
 }
 
 export type NavigationType = "tabs" | "dots" | "arrows" | ("tabs" | "dots" | "arrows")[]
@@ -356,7 +357,7 @@ export function SlideCarousel({
                       role="button"
                       tabIndex={0}
                       aria-label={`Go to slide ${index + 1}: ${slide.title}`}
-                      className={`relative h-[600px] w-full rounded-4xl ${slide.bgColor} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`}
+                      className={`relative h-[600px] w-full rounded-4xl mb-5 overflow-hidden ${isVertical ? "" : slide.bgColor} cursor-pointer focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]`}
                     >
                       <Card className="p-0 bg-white/0 border-none text-foreground shadow-none w-full h-full">
                         <CardContent className="h-full p-0">
@@ -404,7 +405,7 @@ export function SlideCarousel({
                           ) : layout === "overlay" ? (
                             /* Overlay layout */
                             <div className="relative h-full w-full overflow-hidden rounded-4xl">
-                              {/* Background image */}
+                              {/* Background image - sharp (visible on right) */}
                               <Image
                                 src={slide.imageSrc ?? "/globe.svg"}
                                 alt={slide.imageAlt ?? `${slide.title} illustration`}
@@ -414,19 +415,49 @@ export function SlideCarousel({
                                 priority={index === 0}
                               />
                               
-                              {/* Overlay gradient for text readability */}
-                              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+                              {/* Blurred layer with gradient mask (fades left to right) */}
+                              <div 
+                                className="absolute inset-0 overflow-hidden"
+                                style={{
+                                  maskImage: 'linear-gradient(to right, black 0%, black 15%, transparent 60%)',
+                                  WebkitMaskImage: 'linear-gradient(to right, black 0%, black 15%, transparent 70%)',
+                                }}
+                              >
+                                <div className="absolute -inset-4">
+                                  <Image
+                                    src={slide.imageSrc ?? "/globe.svg"}
+                                    alt=""
+                                    fill
+                                    sizes="100vw"
+                                    className="object-cover blur-md"
+                                    aria-hidden="true"
+                                  />
+                                </div>
+                              </div>
+                              
+                              {/* Color overlay (conditionally rendered) */}
+                              {slide.overlay !== "none" && (
+                                <div 
+                                  className="absolute inset-0"
+                                  style={{
+                                    maskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
+                                    WebkitMaskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
+                                  }}
+                                >
+                                  <div className={`absolute inset-0 ${slide.overlay === "light" ? "bg-white/90" : "bg-black/80"}`} />
+                                </div>
+                              )}
                               
                               {/* Content overlay */}
-                              <div className="relative z-10 h-full flex flex-col justify-center p-12 lg:p-20">
-                                <h3 className="text-4xl lg:text-5xl tracking-tight leading-[1.2] font-extralight text-white mb-4">
+                              <div className="relative z-10 h-full flex flex-col justify-center p-12 lg:p-20 max-w-[60%]">
+                                <h3 className={`text-4xl lg:text-5xl tracking-tight leading-[1.2] font-extralight mb-4 ${slide.overlay === "light" ? "text-black" : "text-white"}`}>
                                   {slide.title}
                                 </h3>
-                                <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl">
+                                <p className={`text-lg lg:text-xl mb-8 ${slide.overlay === "light" ? "text-black/80" : "text-white/90"}`}>
                                   {slide.description}
                                 </p>
                                 <div>
-                                  <Button asChild variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+                                  <Button asChild variant="green" className={slide.overlay === "light" ? "" : ""}>
                                     <Link
                                       href={slide.primaryHref}
                                       className="cursor-pointer"
@@ -441,35 +472,49 @@ export function SlideCarousel({
                             </div>
                           ) : (
                             /* Vertical layout */
-                            <div className="relative h-full w-full overflow-hidden rounded-4xl bg-black text-white flex flex-col">
-                              {/* Title */}
-                              <div className="px-6 pt-6 pb-2">
-                                <h3 className="text-sm font-medium text-white/90 uppercase tracking-wide">
-                                  {slide.title}
-                                </h3>
-                              </div>
-                              
-                              {/* Description */}
-                              <div className="px-6 pb-4 flex-1">
-                                <p className="text-xl lg:text-2xl font-light leading-tight">
-                                  {slide.description}
-                                </p>
-                              </div>
-                              
-                              {/* Image */}
-                              <div className="relative flex-1 min-h-[200px] px-6 pb-6">
+                            <div className="absolute inset-0 text-white">
+                              {/* Background image - fills container, positioned below bottom to push image down */}
+                              <div className="absolute inset-0 top-[30%]">
                                 <Image
                                   src={slide.imageSrc ?? "/globe.svg"}
                                   alt={slide.imageAlt ?? `${slide.title} illustration`}
                                   fill
                                   sizes="(min-width: 1024px) 25vw, 40vw"
-                                  className="object-contain"
+                                  className="object-cover object-top"
                                   priority={index === 0}
                                 />
                               </div>
                               
+                              {/* Gradient overlay - fades image towards top */}
+                              <div 
+                                className="absolute inset-0 pointer-events-none"
+                                style={{
+                                  background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 25%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.3) 75%, rgba(0,0,0,0) 100%)',
+                                }}
+                              />
+                              
+                              {/* Content overlay */}
+                              <div className="relative z-10 h-full flex flex-col">
+                                {/* Title */}
+                                <div className="px-6 pt-6 pb-2">
+                                  <h3 className="text-sm font-medium text-white/90 uppercase tracking-wide">
+                                    {slide.title}
+                                  </h3>
+                                </div>
+                                
+                                {/* Description */}
+                                <div className="px-6 pb-4">
+                                  <p className="text-xl lg:text-2xl font-light leading-tight">
+                                    {slide.description}
+                                  </p>
+                                </div>
+                                
+                                {/* Spacer to push button to bottom */}
+                                <div className="flex-1" />
+                              </div>
+                              
                               {/* Angle-right icon button */}
-                              <div className="absolute bottom-6 right-6">
+                              <div className="absolute bottom-6 right-6 z-10">
                                 <Button
                                   asChild
                                   size="icon"
