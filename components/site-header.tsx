@@ -108,7 +108,7 @@ export function SiteHeader() {
         </nav>
 
         <Button asChild size="sm">
-          <Link href="/#contact" className="cursor-pointer">
+          <Link href="/talk-to-us" className="cursor-pointer">
             Talk to us
           </Link>
         </Button>

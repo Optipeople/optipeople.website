@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { CallToAction } from "@/components/call-to-action";
 
 export const metadata: Metadata = {
   title: "Optipeople | Reliable industrial staffing",
@@ -51,6 +52,12 @@ export default function RootLayout({
       >
         <SiteHeader />
         <main className="flex-1">{children}</main>
+        <CallToAction
+          title="Turn insight into action"
+          description="Stop guessing. Start running on facts."
+          primaryLabel="Book a talk"
+          primaryHref="/talk-to-us"
+        />
         <SiteFooter />
       </body>
     </html>

@@ -22,15 +22,19 @@ const footerLinks = {
 } as const
 
 const contactInfo = {
-  email: "info@optipeople.dk",
-  phone: "+45 12 34 56 78",
-  address: "Copenhagen, Denmark",
+  email: "hej@optipeople.dk",
+  phone: "+45 23 74 47 05",
+  address: "Sønderskovvej 17",
+  postalCode: "8362",
+  city: "Hørning",
+  companyName: "OptiPeople ApS",
+  cvr: "32883532",
 } as const
 
 const socialLinks = [
   {
     title: "LinkedIn",
-    href: "https://linkedin.com/company/optipeople",
+    href: "https://www.linkedin.com/company/optipeople-aps/",
     icon: Linkedin,
   },
 ] as const
@@ -73,8 +77,7 @@ export function SiteFooter() {
                 <span className="sr-only">Optipeople</span>
               </Link>
               <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                Building ready-to-work crews for industrial operations across
-                the Nordics.
+                One platform for production, performance, and connected operations.
               </p>
 
               {/* Contact info */}
@@ -93,9 +96,17 @@ export function SiteFooter() {
                   <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
                   <span>{contactInfo.phone}</span>
                 </a>
-                <div className="flex items-center gap-3 text-sm text-gray-400">
-                  <MapPin className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  <span>{contactInfo.address}</span>
+                <div className="flex items-start gap-3 text-sm text-gray-400">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>
+                    {contactInfo.address}
+                    <br />
+                    {contactInfo.postalCode} {contactInfo.city}
+                  </span>
+                </div>
+                <div className="text-sm text-gray-400 mt-4">
+                  <p>{contactInfo.companyName}</p>
+                  <p>CVR {contactInfo.cvr}</p>
                 </div>
               </div>
             </div>
@@ -183,10 +194,10 @@ export function SiteFooter() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-sm text-gray-500">
-                {currentYear} Optipeople. All rights reserved.
+                {currentYear} {contactInfo.companyName}. All rights reserved.
               </p>
               <p className="text-sm text-gray-500">
-                Reliable industrial staffing
+                Connected operations made simple
               </p>
             </div>
           </div>
