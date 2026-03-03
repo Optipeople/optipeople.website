@@ -56,7 +56,7 @@ export default function RootLayout({
           title="Turn insight into action"
           description="Stop guessing. Start running on facts."
           primaryLabel="Book a talk"
-          primaryHref="/talk-to-us"
+          primaryHref="/contact"
         />
         <SiteFooter />
       </body>

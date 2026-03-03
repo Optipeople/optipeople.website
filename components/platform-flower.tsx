@@ -29,7 +29,7 @@ const modules: ModuleNode[] = [
     textColor: "light",
     x: 50,
     y: 50,
-    connections: ["production", "quality", "maintenance", "energy", "analysis", "extra"],
+    connections: ["production", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"],
   },
   {
     id: "production",
@@ -42,7 +42,7 @@ const modules: ModuleNode[] = [
     textColor: "light",
     x: 50,
     y: 12,
-    connections: ["opticloud", "quality", "maintenance"],
+    connections: ["opticloud", "quality", "iot"],
   },
   {
     id: "quality",
@@ -53,9 +53,22 @@ const modules: ModuleNode[] = [
     bgVar: "--yellow-dark2",
     borderVar: "--yellow-dark3",
     textColor: "dark",
-    x: 85,
-    y: 28,
-    connections: ["opticloud", "production", "analysis"],
+    x: 80,
+    y: 26,
+    connections: ["opticloud", "production", "erp-shopfloor"],
+  },
+  {
+    id: "erp-shopfloor",
+    name: "ERP Shopfloor",
+    description: "Bridge ERP and floor",
+    pitch: "Your ERP knows the plan. Your machines know reality. OptiCloud connects the two — giving planners real-time actuals and operators the context they need.",
+    features: ["Two-way ERP sync", "Work order tracking", "Live shopfloor dashboards"],
+    bgVar: "--purple-dark1",
+    borderVar: "--purple-dark2",
+    textColor: "light",
+    x: 87,
+    y: 59,
+    connections: ["opticloud", "quality", "maintenance"],
   },
   {
     id: "maintenance",
@@ -66,9 +79,9 @@ const modules: ModuleNode[] = [
     bgVar: "--orange-dark2",
     borderVar: "--orange-dark3",
     textColor: "light",
-    x: 85,
-    y: 72,
-    connections: ["opticloud", "production", "energy"],
+    x: 67,
+    y: 84,
+    connections: ["opticloud", "erp-shopfloor", "energy"],
   },
   {
     id: "energy",
@@ -79,8 +92,8 @@ const modules: ModuleNode[] = [
     bgVar: "--orange-dark3",
     borderVar: "--orange-dark3",
     textColor: "light",
-    x: 50,
-    y: 88,
+    x: 34,
+    y: 84,
     connections: ["opticloud", "maintenance", "analysis"],
   },
   {
@@ -92,27 +105,27 @@ const modules: ModuleNode[] = [
     bgVar: "--green-light2",
     borderVar: "--green-light1",
     textColor: "dark",
-    x: 15,
-    y: 72,
-    connections: ["opticloud", "quality", "energy"],
+    x: 13,
+    y: 59,
+    connections: ["opticloud", "energy", "iot"],
   },
   {
-    id: "extra",
-    name: "AI / Extra",
-    description: "Your production copilot",
-    pitch: "Ask questions in plain language, detect patterns automatically, and get AI-powered recommendations based on your own data.",
-    features: ["AI assistant", "Pattern detection", "Smart forecasting"],
+    id: "iot",
+    name: "IoT",
+    description: "Get data from anything",
+    pitch: "Connect any machine, sensor, or system to your platform. Ingest data from PLCs, IoT gateways, and legacy equipment — no matter the protocol or age.",
+    features: ["Plug-and-play connectors", "Protocol-agnostic ingestion", "Edge data collection"],
     bgVar: "--green-dark1",
     borderVar: "--green-dark2",
     textColor: "light",
-    x: 15,
-    y: 28,
+    x: 20,
+    y: 26,
     connections: ["opticloud", "production", "analysis"],
   },
 ]
 
 // Module IDs for auto-rotation (excluding opticloud center)
-const rotationOrder = ["production", "quality", "maintenance", "energy", "analysis", "extra"]
+const rotationOrder = ["production", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"]
 
 export function PlatformFlower() {
   const [activeModule, setActiveModule] = useState<string | null>(null)

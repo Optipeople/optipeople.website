@@ -7,13 +7,20 @@ import logo from "@/app/Optipeople-Logo-Vector.svg"
 const footerLinks = {
   company: [
     { title: "About", href: "/about" },
-    { title: "Services", href: "/services" },
-    { title: "Contact", href: "/#contact" },
+    { title: "Contact", href: "/contact" },
   ],
   modules: [
-    { title: "Smart Operations", href: "/modules/smart-operations" },
-    { title: "AI Solutions", href: "/modules/ai-solutions" },
-    { title: "Automation", href: "/modules/automation" },
+    { title: "Production", href: "/modules/production" },
+    { title: "Quality", href: "/modules/quality" },
+    { title: "Maintenance", href: "/modules/maintenance" },
+    { title: "Energy", href: "/modules/energy" },
+    { title: "Analysis", href: "/modules/analysis" },
+  ],
+  services: [
+    { title: "Smart Operations", href: "/services/smart-operations" },
+    { title: "AI Agentic Solutions", href: "/services/ai-solutions" },
+    { title: "Automation", href: "/services/automation" },
+    { title: "Business Intelligence", href: "/services/business-intelligence" },
   ],
   legal: [
     { title: "Privacy Policy", href: "/privacy" },
@@ -63,7 +70,7 @@ export function SiteFooter() {
       <div className="px-6 lg:px-8 py-12 lg:py-16">
         <div className="max-w-6xl mx-auto">
           {/* Main footer content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
             {/* Brand column */}
             <div className="lg:col-span-1">
               <Link href="/" className="inline-block mb-6">
@@ -137,6 +144,25 @@ export function SiteFooter() {
               </h3>
               <ul className="space-y-3">
                 {footerLinks.modules.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services links */}
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
+                Services
+              </h3>
+              <ul className="space-y-3">
+                {footerLinks.services.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

@@ -15,20 +15,56 @@ import {
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
 
-const navigationItems = [
-  { title: "About", href: "/about" },
-  { title: "Services", href: "/services" },
-] as const
+const navigationItems: readonly { title: string; href: string }[] = []
 
-const dropdownTitle = "Modules"
-const dropdownItems = [
-  { title: "Smart Operations", href: "/modules/smart-operations" },
-  { title: "AI Solutions", href: "/modules/ai-solutions" },
-  { title: "Automation", href: "/modules/automation" },
+const dropdownMenus = [
+  {
+    title: "Modules",
+    items: [
+      { title: "Production", href: "/modules/production" },
+      { title: "Quality", href: "/modules/quality" },
+      { title: "Maintenance", href: "/modules/maintenance" },
+      { title: "Energy", href: "/modules/energy" },
+      { title: "Analysis", href: "/modules/analysis" },
+      { title: "IoT", href: "/modules/iot" },
+      { title: "ERP Shopfloor", href: "/modules/erp-shopfloor" },
+      { title: "MES", href: "/modules/mes" },
+    ],
+  },
+  {
+    title: "Services",
+    items: [
+      { title: "Smart Operations", href: "/services/smart-operations" },
+      { title: "AI Agentic Solutions", href: "/services/ai-solutions" },
+      { title: "Automation", href: "/services/automation" },
+      { title: "Business Intelligence", href: "/services/business-intelligence" },
+    ],
+  },
+  {
+    title: "Customers",
+    items: [
+      { title: "Carl Hansen & Søn", href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai" },
+      { title: "DFI Geisler", href: "/blog/dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights" },
+      { title: "Kvik", href: "/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud" },
+      { title: "Steel Products", href: "/blog/optimizing-machine-performance-and-power-consumption-with-opticloud-at-steel-products" },
+      { title: "Dansk Træemballage", href: "/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud" },
+      { title: "XL-BYG Brejnholt", href: "/blog/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging" },
+    ],
+  },
+  {
+    title: "Resources",
+    items: [
+      { title: "Insights", href: "/blog" },
+      { title: "Videos", href: "/videos" },
+      { title: "Get Help", href: "/get-help" },
+      { title: "Contact", href: "/contact" },
+      { title: "About", href: "/about" },
+    ],
+  },
 ] as const
 
 export function SiteHeader() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   return (
     <header className="w-full bg-background/95 backdrop-blur-md sticky top-0 z-20">
@@ -61,20 +97,24 @@ export function SiteHeader() {
             </Link>
           ))}
 
-          {dropdownItems.length > 0 && (
-            <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
+          {dropdownMenus.map((menu) => (
+            <DropdownMenu
+              key={menu.title}
+              open={openDropdown === menu.title}
+              onOpenChange={(open) => setOpenDropdown(open ? menu.title : null)}
+            >
               <DropdownMenuTrigger asChild>
                 <button
                   type="button"
                   className="cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
-                  aria-expanded={isDropdownOpen}
+                  aria-expanded={openDropdown === menu.title}
                   aria-haspopup="true"
-                  aria-label={`${dropdownTitle} menu`}
+                  aria-label={`${menu.title} menu`}
                 >
-                  <span>{dropdownTitle}</span>
+                  <span>{menu.title}</span>
                   <ChevronDown
                     className={`w-3 h-3 transition-transform duration-200 ${
-                      isDropdownOpen ? "rotate-180" : ""
+                      openDropdown === menu.title ? "rotate-180" : ""
                     }`}
                     aria-hidden="true"
                   />
@@ -85,9 +125,9 @@ export function SiteHeader() {
                 align="start"
                 sideOffset={8}
                 className="w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2"
-                aria-label={`${dropdownTitle} submenu`}
+                aria-label={`${menu.title} submenu`}
               >
-                {dropdownItems.map((item) => (
+                {menu.items.map((item) => (
                   <DropdownMenuItem
                     key={item.href}
                     asChild
@@ -104,11 +144,11 @@ export function SiteHeader() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-          )}
+          ))}
         </nav>
 
         <Button asChild size="sm">
-          <Link href="/talk-to-us" className="cursor-pointer">
+          <Link href="/contact" className="cursor-pointer">
             Talk to us
           </Link>
         </Button>
