@@ -76,15 +76,15 @@ export default function IoTPage() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8">
+      <section className="pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8 bg-primary">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-medium text-primary mb-4">
+          <p className="text-sm font-medium text-white/90 mb-4">
             IoT Module
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light leading-tight text-white">
             Get Data from Anything
           </h1>
-          <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-6 text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
             Connect any machine, sensor, or system to your platform. Ingest data
             from PLCs, IoT gateways, and legacy equipment — no matter the
             protocol or age.
@@ -93,7 +93,12 @@ export default function IoTPage() {
             <Button asChild size="lg">
               <Link href="/contact">Request a Demo</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="bg-white/10 border-white/30 text-white shadow-none hover:bg-white/20 hover:text-white"
+            >
               <Link href="#capabilities">See Capabilities</Link>
             </Button>
           </div>
