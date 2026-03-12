@@ -56,6 +56,7 @@ const dropdownMenus = [
     items: [
       { title: "Insights", href: "/blog" },
       { title: "Videos", href: "/videos" },
+      { title: "People", href: "/resources/people" },
       { title: "Get Help", href: "/get-help" },
       { title: "Contact", href: "/contact" },
       { title: "About", href: "/about" },
@@ -171,5 +172,4 @@ export function SiteHeader() {
     </header>
   )
 }
-
 
