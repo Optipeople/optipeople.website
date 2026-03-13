@@ -1,28 +1,27 @@
-export default function CasesPage() {
-  return (
-    <main className="min-h-screen">
-      <section className="pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
-            Cases
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-light text-foreground tracking-tight leading-tight">
-            Real results from real factories
-          </h1>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
-            See how industrial teams use Opticloud to improve production
-            efficiency, reduce downtime, and make better decisions every day.
-          </p>
-        </div>
-      </section>
+import { PostArchive } from "@/components/post-archive"
+import { getPostsByCategory } from "@/lib/blog-data"
 
-      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-lg text-muted-foreground">
-            Case studies coming soon.
-          </p>
-        </div>
-      </section>
+interface CasesPageProps {
+  searchParams: Promise<{ page?: string }>
+}
+
+export default async function CasesPage({ searchParams }: CasesPageProps) {
+  const params = await searchParams
+  const currentPage = Math.max(1, parseInt(params.page || "1", 10))
+  const posts = getPostsByCategory("Cases")
+
+  return (
+    <main>
+      <PostArchive
+        posts={posts}
+        basePath="/cases"
+        eyebrow="Cases"
+        title="Real results from real factories"
+        emptyTitle="No case studies yet"
+        emptyBody="Case studies will appear here as customer stories are published."
+        ctaLabel="Read case study"
+        currentPage={currentPage}
+      />
     </main>
   )
 }

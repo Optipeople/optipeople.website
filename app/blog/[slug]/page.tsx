@@ -76,6 +76,8 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   const headings = extractHeadings(post.content)
+  const backHref = post.category === "Cases" ? "/cases" : "/blog"
+  const backLabel = post.category === "Cases" ? "Back to cases" : "Back to blog"
 
   return (
     <main>
@@ -83,9 +85,9 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <Button asChild variant="ghost" size="sm" className="mb-8">
-              <Link href="/blog">
+              <Link href={backHref}>
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to blog
+                {backLabel}
               </Link>
             </Button>
 
@@ -99,7 +101,7 @@ export default async function BlogPostPage({ params }: Props) {
               <div>
                 <header className="mb-8">
                   <p className="text-sm text-muted-foreground">
-                    {post.date} &middot; {post.author}
+                    {post.category} &middot; {post.date} &middot; {post.author}
                   </p>
                   <h1 className="mt-2 text-4xl font-light text-foreground">
                     {post.title}

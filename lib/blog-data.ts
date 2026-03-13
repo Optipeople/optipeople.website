@@ -62,6 +62,10 @@ export function getLatestPosts(count: number = 3): BlogPost[] {
   return getAllPosts().slice(0, count)
 }
 
+export function getLatestPostsByCategory(category: string, count: number = 3): BlogPost[] {
+  return getPostsByCategory(category).slice(0, count)
+}
+
 export function getCategories(): string[] {
   const posts = getAllPosts()
   return [...new Set(posts.map((post) => post.category))].sort()

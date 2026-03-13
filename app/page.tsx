@@ -6,7 +6,7 @@ import { PlatformFlower } from "@/components/platform-flower"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-import { getLatestPosts } from "@/lib/blog-data"
+import { getLatestPostsByCategory } from "@/lib/blog-data"
 import { ArrowRight } from "lucide-react"
 
 const tabSlides: SlideData[] = [
@@ -282,7 +282,7 @@ export default function Home() {
               </h2>
             </div>
             <Link
-              href="/blog"
+              href="/cases"
               className="hidden sm:flex items-center gap-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors group"
             >
               View all
@@ -293,7 +293,7 @@ export default function Home() {
           {/* Blog Grid */}
           <div className="grid gap-8 lg:gap-12">
             {/* Featured Post */}
-            {getLatestPosts(4).slice(0, 1).map((post) => (
+            {getLatestPostsByCategory("Cases", 4).slice(0, 1).map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
@@ -325,7 +325,7 @@ export default function Home() {
 
             {/* Secondary Posts */}
             <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 pt-8 border-t border-border/50">
-              {getLatestPosts(4).slice(1, 4).map((post) => (
+              {getLatestPostsByCategory("Cases", 4).slice(1, 4).map((post) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
@@ -356,7 +356,7 @@ export default function Home() {
           {/* Mobile View All Link */}
           <div className="mt-12 sm:hidden">
             <Button asChild variant="outline" className="w-full">
-              <Link href="/blog">
+              <Link href="/cases">
                 View all cases
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
