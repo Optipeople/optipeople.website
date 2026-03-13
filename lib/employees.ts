@@ -95,7 +95,7 @@ export const employees: Employee[] = [
     email: "sf@optipeople.dk",
     team: "Marketing",
     location: "Denmark",
-    expertise: ["Marketing", "Project Management", "Content Strategy"],
+    expertise: ["Marketing", "Campaign Management", "Content Strategy"],
     photo: "/images/default-hero-bg.png",
     startYear: 2024,
   },
