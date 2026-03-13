@@ -26,7 +26,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
+import { SlideCarousel } from "@/components/slide-carousel"
 import { ChevronDown } from "lucide-react"
 
 export default function ComponentsPage() {

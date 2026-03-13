@@ -1,11 +1,10 @@
 "use client"
 
-import Image from "next/image"
 import { useMemo } from "react"
 import { employees } from "@/lib/employees"
 
 export function PeopleDirectory() {
-  const stats = useMemo(() => {
+  const { stats, orderedEmployees } = useMemo(() => {
     const uniqueTeams = new Set(employees.map((employee) => employee.team))
     const uniqueLocations = new Set(employees.map((employee) => employee.location))
 
@@ -19,12 +18,37 @@ export function PeopleDirectory() {
       1
     )
 
-    return [
-      { value: `${employees.length}`, label: "Employees" },
-      { value: `${uniqueTeams.size}`, label: "Departments" },
-      { value: `${uniqueLocations.size}`, label: "Locations" },
-      { value: `${averageTenure}+ yrs`, label: "Average tenure" },
-    ]
+    const priorityByRole: Record<string, number> = {
+      "Chief Executive Officer": 1,
+      "Chief Technology Officer": 2,
+      "Head of Projects": 3,
+      "Sales Engineer": 4,
+      "Technical Consultant": 5,
+      "BI Consultant": 6,
+      "IoT Engineer": 7,
+      "Marketing Project Manager": 8,
+    }
+
+    const orderedEmployees = [...employees].sort((a, b) => {
+      const aPriority = priorityByRole[a.role] ?? 999
+      const bPriority = priorityByRole[b.role] ?? 999
+
+      if (aPriority !== bPriority) {
+        return aPriority - bPriority
+      }
+
+      return a.name.localeCompare(b.name)
+    })
+
+    return {
+      stats: [
+        { value: `${employees.length}`, label: "Employees" },
+        { value: `${uniqueTeams.size}`, label: "Departments" },
+        { value: `${uniqueLocations.size}`, label: "Locations" },
+        { value: `${averageTenure}+ yrs`, label: "Average tenure" },
+      ],
+      orderedEmployees,
+    }
   }, [])
 
   return (
@@ -38,8 +62,8 @@ export function PeopleDirectory() {
             Meet the team behind OptiPeople
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl">
-            Engineers, consultants, and operations specialists helping industrial
-            teams improve performance every day.
+            Leadership, engineering, projects, sales, and consulting working
+            together to help industrial teams improve performance every day.
           </p>
         </div>
       </section>
@@ -60,20 +84,50 @@ export function PeopleDirectory() {
       <section className="py-16 lg:py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10">
-            {employees.map((person) => (
-              <article key={person.slug} className="group">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-muted mb-4">
-                  <Image
-                    src={person.photo}
-                    alt={`${person.name}, ${person.role} at OptiPeople`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+            {orderedEmployees.map((person) => (
+              <article
+                key={person.slug}
+                className="rounded-3xl border border-border/60 bg-background p-6 transition-colors hover:border-primary/40"
+              >
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">
+                      {person.team}
+                    </p>
+                    <h2 className="mt-2 text-lg font-medium leading-tight">
+                      {person.name}
+                    </h2>
+                    <p className="mt-2 text-sm text-muted-foreground">{person.role}</p>
+                  </div>
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-muted text-sm font-medium text-foreground">
+                    {person.name
+                      .split(" ")
+                      .slice(0, 2)
+                      .map((part) => part[0])
+                      .join("")}
+                  </div>
                 </div>
-                <h2 className="text-base font-medium">{person.name}</h2>
-                <p className="text-sm text-muted-foreground">{person.role}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{person.team}</p>
-                <p className="mt-1 text-xs text-muted-foreground">{person.location}</p>
+
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p>{person.location}</p>
+                  <a
+                    href={`mailto:${person.email}`}
+                    className="inline-flex items-center text-foreground underline-offset-4 hover:underline"
+                  >
+                    {person.email}
+                  </a>
+                </div>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {person.expertise.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
