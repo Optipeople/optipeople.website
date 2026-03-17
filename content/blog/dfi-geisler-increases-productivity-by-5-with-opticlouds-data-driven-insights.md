@@ -6,27 +6,67 @@ category: "Cases"
 image: "/images/blog/geisler-486x500.png"
 ---
 
-## DFI Case Study
+## At a Glance
 
-DFI Geisler currently measures productivity on seven selected processing machines used in their countertop production on Mors.
+DFI Geisler uses Opticloud to track performance on seven selected processing machines in its countertop production on Mors.
 
-“We use Opticloud systematically on a daily basis with these seven machines.”
+Over the past two years, that systematic use of production data has helped the company increase productivity by approximately **5%**.
 
-Department production managers print machine reports weekly and post them on boards at each machine.
+## The Situation
 
-Managers maintain ongoing dialogue with employees about the number of items produced, uptime, and the most common downtime reasons.
+DFI Geisler wanted a clearer view of how its key machines were performing from day to day.
 
-Frequent downtime causes are analyzed in collaboration with operators to propose ways to streamline workflows and reduce recurring issues.
+The team needed a shared way to follow:
 
-Operators received thorough training on Opticloud and were actively involved in its implementation. They also focus heavily on logging accurate downtime reasons.
+- number of items produced
+- uptime
+- recurring downtime causes
 
-“Accurate data and downtime registration are crucial for us to address the correct issues and take the right actions.”
+That visibility had to support both managers and operators, not just reporting after the fact.
 
-“For some of our operators, recording accurate data has become a kind of competition to maximize productivity.”
+## How Opticloud Is Used
 
-Production managers regularly review trends in machine breakdown causes.
+Opticloud is used as part of the daily operating rhythm around the seven machines.
 
-Over the past two years, Opticloud has helped DFI Geisler increase productivity by approximately 5%. The company recognizes that data collection, combined with continuous improvements, is key to achieving greater productivity.
+Department production managers print weekly machine reports and place them on boards by each machine. Those reports create a concrete starting point for conversations on the shopfloor.
 
-Tommy Andersen
+Managers and employees review the data together and use it to discuss performance, downtime, and possible improvements.
+
+## What Made the Setup Work
+
+Two elements stand out in the DFI Geisler setup.
+
+### 1. Accurate downtime registration
+
+Operators were trained thoroughly in Opticloud and were involved actively in the implementation.
+
+That helped create ownership around data quality and made downtime registration more consistent.
+
+> "Accurate data and downtime registration are crucial for us to address the correct issues and take the right actions."
+
+### 2. Ongoing follow-up on recurring issues
+
+Frequent downtime causes are reviewed jointly by managers and operators.
+
+Instead of treating stops as isolated incidents, the team uses patterns in the data to identify where workflows can be streamlined and where recurring issues can be reduced.
+
+Production managers also review trends in machine breakdown causes over time, which supports more focused improvement work.
+
+## The Result
+
+The result has been a measurable productivity improvement of around **5%** over two years.
+
+The company sees that better data alone is not enough. The value comes from combining reliable data collection with continuous improvement and regular dialogue on the shopfloor.
+
+> "We use Opticloud systematically on a daily basis with these seven machines."
+
+> "For some of our operators, recording accurate data has become a kind of competition to maximize productivity."
+
+## Key Takeaway
+
+At DFI Geisler, Opticloud works because the data is visible, discussed regularly, and tied directly to action.
+
+That turns production reporting from a passive metric into an active improvement tool.
+
+Tommy Andersen  
 Production Manager, DFI Geisler

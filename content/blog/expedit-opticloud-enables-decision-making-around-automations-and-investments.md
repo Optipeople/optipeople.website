@@ -6,17 +6,25 @@ category: "Cases"
 image: "/images/blog/expedit.jpg"
 ---
 
-*"With the solution we have been able to analyze what we can do to get a better production flow and minimize errors."*
+## At a Glance
 
-## How
+Expedit uses Opticloud to understand production flow better, reduce errors, and create a stronger basis for automation and investment decisions.
 
-Opticloud is connected to wood and metal lines in Expedit's manufacturing facility in Hadsten, Denmark.
+> "With the solution we have been able to analyze what we can do to get a better production flow and minimize errors."
 
-## Results and Daily Use
+## How Opticloud Is Used
 
-- Visibility into how to minimize errors.
-- A better foundation for improving production flow.
-- Operators can quickly see the status of each machine.
-- Better collaboration and data sharing on large screens.
+Opticloud is connected to wood and metal lines at Expedit's manufacturing facility in Hadsten, Denmark.
+
+That gives operators and managers a shared view of machine status and production performance.
+
+## The Result
+
+The setup gives Expedit:
+
+- better visibility into how errors can be reduced
+- a stronger basis for improving production flow
+- quick status visibility for operators on each machine
+- better collaboration and data sharing on large screens
 
 Website: [www.expedit.dk](https://www.expedit.dk)

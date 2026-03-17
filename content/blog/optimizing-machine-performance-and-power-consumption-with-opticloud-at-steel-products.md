@@ -6,13 +6,32 @@ category: "Cases"
 image: "/images/blog/stans-lille.jpg"
 ---
 
-The operators play a key role in logging downtime reasons on various machines and ensuring data accuracy. One operator has even set up a personal Opticloud account to monitor machine performance effectively.
+## At a Glance
 
-They also select the item being produced, aligning machine data with the specific production tasks.
+Steel Products uses Opticloud to improve visibility into machine performance while also tracking power consumption per produced item.
 
-Opticloud provides a valuable tool for analyzing idle times and identifying trends in production data tied to specific items.
+## How Opticloud Is Used
 
-Additionally, power consumption data is collected from connected machines, enabling detailed tracking of energy usage per produced item. Observing power consumption trends over time will offer further insights.
+Operators play an important role in the setup by logging downtime reasons on multiple machines and helping maintain data accuracy.
 
-Jacob Schrøder Nørgaard
+Operators also select the item being produced, which links machine data to the specific production task being run.
+
+That makes it possible to analyze:
+
+- idle time
+- trends in production data tied to specific items
+- energy usage per produced item
+
+Power consumption data is collected from connected machines, creating a more detailed view of operational and energy performance over time.
+
+## The Result
+
+The setup gives Steel Products a stronger basis for:
+
+- monitoring machine performance
+- improving data quality
+- understanding item-level production behavior
+- tracking energy usage in relation to output
+
+Jacob Schrøder Nørgaard  
 Project Engineer, Steel Products

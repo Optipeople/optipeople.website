@@ -6,27 +6,40 @@ category: "Cases"
 image: "/images/blog/broen.png"
 ---
 
-Broen A/S, which produces valves for various purposes, wanted visibility into the reasons for stops in their production machines and needed operators to clarify any downtime.
+## At a Glance
 
-## What
+Broen wanted better visibility into stop causes and a real-time production picture that managers and operators could use together.
 
-Broen also wanted a real-time picture of production that managers and operators could use together to track key figures such as produced items and OEE.
+Opticloud helped create that shared operational view.
 
-## Why
+## The Situation
 
-This was essential for increasing output.
+Broen A/S produces valves for a range of applications and needed clearer insight into why production machines stopped.
 
-It also ensured, through a digital overview, that available capacity was used effectively. In turn, that supported competitiveness and digital transformation across the factory.
+The company also wanted a real-time overview of key figures such as produced items and OEE.
 
-## How
+## Why It Mattered
 
-Broen selected key machines where Opticloud was installed. Opticloud collects data from each of those machines while operators can easily register stop causes. Managers can now quickly get an overview of production.
+That visibility was important for:
 
-## Results
+- increasing output
+- using available capacity more effectively
+- strengthening competitiveness
+- supporting digital transformation across the factory
 
-- Machine operators can actively explain why stops happen.
-- Broen's specialists analyze the data to create both real-time production overviews and weekly and monthly reports adapted to their needs.
-- Managers and operators work together to improve uptime while making daily work easier for operators.
-- Broen has been very satisfied with both the solution and OptiPeople's service and support.
+## How Opticloud Is Used
+
+Opticloud was installed on selected key machines.
+
+The platform collects data from those machines while operators can register stop causes directly. Managers can then get a quick overview of production status and performance.
+
+## The Result
+
+The setup gives Broen:
+
+- active operator input on why stops happen
+- real-time production overviews plus weekly and monthly reports
+- better collaboration between managers and operators around uptime
+- a solution the company has been very satisfied with, together with OptiPeople's service and support
 
 Website: [broen.com](http://www.broen.com)

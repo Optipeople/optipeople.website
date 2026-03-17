@@ -6,60 +6,63 @@ category: "Cases"
 image: "/images/blog/fra-data-til-effektivitet.jpg"
 ---
 
-How do you optimize the efficiency of a machine in practice? That question is worth a lot of money, which is why we dug into our project archive and wrote a story about one of our clients.
+## At a Glance
 
-For confidentiality reasons, the story is anonymized, but it is based on real production data and the actual investment simulations that were used.
+This anonymized case shows how a factory used Opticloud data to uncover efficiency opportunities, improve OEE, and make a better-informed equipment investment.
 
-The starting point was a machine producing different series sizes. Changeovers in production cost money, so the project focused on analyzing production data and identifying efficiency opportunities.
+The core result was an increase in OEE from **21%** to **41%**.
 
-Data was missing, which is why Opticloud was set up. There was an expectation that production could be optimized, but there was no real basis for decision-making.
+## The Situation
 
-First, a data logger was mounted on the machine, and then data collection and analysis began. Along the way, service checks were also carried out to improve OEE.
+The machine in focus produced both small and large series sizes.
 
-With two service checks, OEE increased from **21%** to as much as **41%**.
+Because changeovers were expensive, the factory suspected there was room for improvement, but lacked the data needed to make confident decisions.
 
-Service checks were conducted in October and February. After both service checks, OEE moved to another level.
+Opticloud was introduced to create that decision basis.
 
-It turned out that the machine's productivity was closely linked to series size. The machine can produce both small and large items, and the many changeovers were a core problem.
+## What the Data Showed
 
-OEE could be improved by reducing the number of series types and item numbers in production.
+Once data collection began, it became clear that the machine's productivity was closely linked to series size.
 
-From April, the machine started producing significantly larger series sizes. It makes a major difference to earnings when OEE rises from 30% to 41% in five months. The shift was from "under 150 topics per series" to "over 500 topics."
+The many changeovers were a major cause of low efficiency. Smaller series absorbed too much time in setup and reduced overall performance.
 
-## How was the increase created?
+Service checks also played a role. After checks in October and February, OEE moved to a higher level.
 
-An investment analysis was carried out based on data. The analysis showed that it made sense to buy one more machine to produce small elements.
+## How the Improvement Was Created
 
-The smaller machine has no setup time but produces more slowly than the large one. It wins, however, when it comes to small series. After the investment, the factory had two efficient machines instead of one that spent too much time idle or in setup mode.
+The analysis showed that it made sense to buy an additional smaller machine for small elements.
 
-The advantage of analyzing production data is that it becomes possible to view OEE for each series size. It is not enough to look at the machine as a whole. One machine can have high OEE for some item types, while others drag the average down. It is common to lack concrete data at this level of detail, and that can lead to wrong conclusions.
+That smaller machine had no setup time, even though it produced more slowly than the larger one. For small series, it was still the better choice.
 
-The red bar shows how many items each series size represents in total production. On the left are the main series, and on the far right is the "0000-0049" series where OEE is low. That makes sense, because very small series still have changeover costs that reduce productivity.
+After the investment, the factory no longer depended on one machine that spent too much time idle or in setup mode. Instead, it had two machines better suited to different production patterns.
 
-At the bottom of the blue bars, you can see OEE for each series size. OEE is above 50% for columns 1, 2, and 6. These are the three series sizes where 500 items or more are produced before the machine is changed over.
+## Why the Analysis Mattered
 
-## When we produce large series sizes we have high OEE
+An important insight was that OEE had to be evaluated by series size, not only at machine level.
 
-That makes the business case clear, but can the effect of an extra smaller machine be calculated precisely?
+One machine can perform well for some product types while being dragged down by others. Without that level of detail, it is easy to reach the wrong conclusion.
 
-Yes, it can.
+In this case, the strongest OEE results appeared in the series sizes where **500 items or more** were produced before changeover.
 
-Opticloud collects fairly detailed data about each production machine. For example, all downtime is categorized, so there is data on downtime caused by maintenance, cleaning, logistics, changeovers, human error, materials, environment, and more.
+## The Result
 
-Before investing in a new machine, OEE was 21%. After purchasing the smaller machine, the figure rose to 41%.
+The factory saw several measurable gains:
 
-## A Little Extra Data
+- OEE improved from **21%** to **41%**
+- 6,119 units could be produced in **2.3 shifts** instead of **3.0 shifts**
+- daily production time for that volume dropped from **24 hours** to **18.5 hours**
+- that corresponds to a saving of **5.5 hours per day**
 
-The number of shifts needed to produce 6,119 units fell from 3.0 shifts to 2.3 shifts. A shift in production equals 8 working hours. That means it now takes 18.5 hours to produce what previously took 24 hours, a saving of 5.5 hours per day.
+## The Business Case
 
-There are two ways to calculate payback time for a new machine, and the real answer is probably somewhere between the two.
+Two payback perspectives were considered.
 
-One method is **fixed cost**. Here the question is how quickly the new machine is paid off with current production. The total investment, including the new machine, was DKK 3.5 million, and the saving per year was DKK 750,000. That gives a positive return on investment after 4.6 years.
+Using a fixed-cost approach, a total investment of **DKK 3.5 million** and an annual saving of **DKK 750,000** produced a payback time of **4.6 years**.
 
-The second method is **earnings maximization**. Instead of producing in less time, the surplus time is used to produce more. If the additional goods can be sold, that is a strong outcome.
+Using an earnings-maximization approach, the additional production capacity was valued at **DKK 2.96 million per year**. If that extra output could be sold, payback time was **1.2 years**.
 
-In this case, the value of the additional production was DKK 2.96 million per year. If all of that extra output is sold, it takes 1.2 years to achieve a positive return on investment. After that, it becomes a profitable business.
+## Key Takeaway
 
-The key is finding the easiest way to optimize production. The method changes from project to project, but every project starts with data collection. Stay focused on the small details.
+The case shows that production optimization starts with data.
 
-Want to know more about how data can be used to optimize your production? We know a lot about that. Call or write to us. We always have time to help.
+When the right level of detail is available, it becomes possible to improve service routines, adjust production strategy, and evaluate investments on a much stronger basis.

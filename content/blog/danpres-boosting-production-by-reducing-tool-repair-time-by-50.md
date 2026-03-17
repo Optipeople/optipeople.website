@@ -6,25 +6,45 @@ category: "Cases"
 image: "/images/blog/danpres.jpg"
 ---
 
-Danpres shared insights from two weeks of production, covering weeks 35 and 36.
+## At a Glance
 
-Stop reasons for tool repair were entered into Opticloud by operators at Danpres. The total time spent on tool repair during the two weeks was 17 hours. In Opticloud, this becomes useful operational data that can support the work of reducing tool repair time.
+Danpres used Opticloud data from two weeks of production to quantify the effect of reducing tool repair time.
 
-If the amount of tool repair is reduced by 50%, 8.5 production hours are freed up every other week. That translates to 17 production hours freed up per month.
+The analysis showed that cutting tool repair time by **50%** could release meaningful production capacity within the existing schedule.
 
-Opticloud also tracks the number of items produced, making it possible to connect recovered time with actual production volume.
+## The Situation
 
-The monthly freed-up production time can be multiplied by the average number of items produced per hour during weeks 35 and 36:
+During weeks 35 and 36, operators at Danpres entered stop reasons for tool repair into Opticloud.
+
+The recorded tool-repair time over those two weeks was **17 hours**.
+
+By turning that downtime into operational data, the company gained a clearer basis for improvement work.
+
+## What the Analysis Showed
+
+If tool repair time is reduced by **50%**, then:
+
+- **8.5 production hours** are freed up every other week
+- **17 production hours** are freed up per month
+
+Because Opticloud also tracks produced output, the time recovery can be linked directly to production volume.
+
+Using the average number of items produced per effective hour in weeks 35 and 36:
 
 `17 hours x 936 average items per effective hour = 15,912 items`
 
-This yields an annual additional output of `190,044 items`.
+That corresponds to an annual additional output of:
 
-In this example, time previously spent on tool repairs is converted into effective production time. When less time is used on repairs, more scheduled time can be used for producing items instead.
+`190,044 items`
 
-By halving time spent on tool repairs, downtime is reduced and more effective operating hours are gained within the existing production schedule.
+## The Result
 
-It can also be argued that cutting tool repair time by half may reduce labor costs in the maintenance department.
+The case shows how less time spent on tool repairs can:
+
+- reduce downtime
+- increase effective operating hours
+- turn existing scheduled time into more production output
+- potentially reduce labor cost pressure in maintenance
 
 Tim Ostergaard  
 Supply Chain Manager, Danpres

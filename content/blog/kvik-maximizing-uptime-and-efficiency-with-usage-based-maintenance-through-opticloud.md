@@ -6,34 +6,53 @@ category: "Cases"
 image: "/images/blog/kivk-768x500.jpg"
 ---
 
-Extra Production Time – From Time-Based to Usage-Based Maintenance
-Challenges:
-Wasted time during maintenance.
-Maintenance based on fixed time intervals.
+## At a Glance
 
-Results for Machines with 24/7 Operation:
-Approximately 4 fewer services per year = ~40 additional production hours annually.
+Kvik uses Opticloud to move from time-based maintenance to usage-based maintenance, increasing uptime while reducing unnecessary service work.
 
-Results for Machines with Single-Shift Operation or Less:
-Around 50% fewer service hours.
+## The Challenge
 
-Increased Uptime
-Challenges:
-Lack of clarity on uptime.
-No insight into downtime causes.
-Manual entry of downtime reasons.
-Invalid data.
+Kvik faced two related problems.
 
-Results:
-5% increase in uptime.
-Automatic downtime cause logging.
-Valid and reliable data.
-Microstop tracking.
-Fewer interruptions.
+### Maintenance planning
 
-“We use the Opticloud service module to send notifications.We now perform maintenance based on desired operating hours instead of fixed time intervals.This makes us much more efficient and saves us unnecessary maintenance and downtime.”
+- wasted time during maintenance
+- maintenance based on fixed time intervals
 
-“The Opticloud service module sends an email to a dedicated Outlook calendar. A day is automatically booked 7 days ahead in the calendar.The service team then has 7 days to plan the exact day for performing maintenance on the machine.”
+### Uptime visibility
 
-Stefan Lindell
+- lack of clarity on uptime
+- no clear insight into downtime causes
+- manual entry of downtime reasons
+- invalid data
+
+## How Opticloud Is Used
+
+Kvik uses the Opticloud service module to trigger maintenance notifications based on desired operating hours instead of fixed time intervals.
+
+The module sends an email to a dedicated Outlook calendar. A day is automatically booked seven days ahead, giving the service team time to plan the exact maintenance date.
+
+## The Result
+
+### Extra production time
+
+For machines running 24/7, Kvik sees approximately **4 fewer services per year**, corresponding to around **40 additional production hours annually**.
+
+For machines with single-shift operation or less, service time is reduced by around **50%**.
+
+### Increased uptime
+
+Kvik also reports:
+
+- **5% higher uptime**
+- automatic downtime cause logging
+- valid and reliable data
+- microstop tracking
+- fewer interruptions
+
+> "We use the Opticloud service module to send notifications. We now perform maintenance based on desired operating hours instead of fixed time intervals. This makes us much more efficient and saves us unnecessary maintenance and downtime."
+
+> "The Opticloud service module sends an email to a dedicated Outlook calendar. A day is automatically booked 7 days ahead in the calendar. The service team then has 7 days to plan the exact day for performing maintenance on the machine."
+
+Stefan Lindell  
 Lean Project Manager, Kvik

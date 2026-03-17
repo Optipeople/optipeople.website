@@ -6,25 +6,37 @@ category: "Cases"
 image: "/images/blog/fiberline-results.png"
 ---
 
-Fiberline Composites produces glass and carbon fiber materials for several industries and works strategically with what they call continuous improvement. They wanted to know when and why their machines were stopped. Opticloud gave them that insight.
+## At a Glance
 
-*"Now [stop reasons](https://optipeople.com/with-only-3-steps-you-can-identify-your-stop-reason/) are being registered and we have gotten a much better overview of our machines' efficiency, including downtime, stop reasons and breakdowns."*  
+Fiberline Composites wanted better visibility into when and why machines were stopping.
+
+With Opticloud, the company gained that insight and achieved a **41% reduction in unnecessary stops** and a **6% reduction in average time per stop**.
+
+> "Now [stop reasons](https://optipeople.com/with-only-3-steps-you-can-identify-your-stop-reason/) are being registered and we have gotten a much better overview of our machines' efficiency, including downtime, stop reasons and breakdowns."
+
 Johnny Nielsen, Fiberline Composites
 
-## Goal
+## The Goal
 
-- See when and why machines stop.
-- Increase competitiveness.
-- Speed up digital transformation.
+Fiberline wanted to:
 
-## How
+- see when machines stop
+- understand why machines stop
+- increase competitiveness
+- speed up digital transformation
 
-- Data is collected from the machines through a software-to-software integration and then sent to the Opticloud platform.
+## How Opticloud Is Used
 
-## Results
+Data is collected from the machines through a software-to-software integration and sent to the Opticloud platform.
 
-- 6% reduction in average time per stop.
-- 41% reduction in unnecessary stops.
-- Better decisions based on Opticloud data.
+That creates a stronger basis for tracking stops, downtime, and breakdown patterns.
+
+## The Result
+
+Fiberline achieved:
+
+- a **6% reduction** in average time per stop
+- a **41% reduction** in unnecessary stops
+- better decision-making based on Opticloud data
 
 Website: [fiberlinecomposites.com](http://fiberlinecomposites.com)

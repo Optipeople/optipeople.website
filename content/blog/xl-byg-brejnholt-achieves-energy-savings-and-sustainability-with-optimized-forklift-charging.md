@@ -6,19 +6,29 @@ category: "Cases"
 image: "/images/blog/xl-byg-768x500.jpg"
 ---
 
-**XL-BYG Brejnholt Focuses on Reducing Energy Consumption and Achieving Full Fossil-Free Operation**
+## At a Glance
 
-* Automatically charges forklifts when electricity is cheapest
-* No change in employee behavior required
-* Measurement of electricity, water, and heating
-* Main meter for energy data
+XL-BYG Brejnholt uses Opticloud to reduce energy consumption and support its move toward full fossil-free operation.
 
-**Results:**
+## How Opticloud Is Used
 
-* Savings on forklift electricity bills
-* Charging forklifts with solar energy
-* Ability to perform ROI calculations on energy initiatives and receive subsidies
-* Savings on additional amperage for the location, e.g., for electric vehicles
-* Opportunity to sell standby services
-* Charging with minimal CO2 emissions
-* Logbook function
+The setup is designed to optimize forklift charging and give the business a stronger energy overview.
+
+It includes:
+
+- automatic forklift charging when electricity is cheapest
+- no need to change employee behavior
+- measurement of electricity, water, and heating
+- a main meter for energy data
+
+## The Result
+
+The solution supports:
+
+- savings on forklift electricity bills
+- charging forklifts using solar energy
+- ROI calculations on energy initiatives and subsidy opportunities
+- savings on additional amperage at the site, for example for electric vehicles
+- the possibility of selling standby services
+- charging with minimal CO2 emissions
+- use of a logbook function

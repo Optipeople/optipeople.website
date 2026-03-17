@@ -6,28 +6,46 @@ category: "Cases"
 image: "/images/blog/medicinal-customer.jpg"
 ---
 
-## Our customer who produces medicines for animals saw an increasing need for real-time knowledge of production.
+## At a Glance
 
-## What
+An animal medicine producer needed more detailed and timely production insight to improve efficiency without increasing pressure on employees.
 
-They already had a production overview, but the level of detail was lower than desired. There was a concrete need for detailed production knowledge immediately, rather than receiving it only at month-end plus three weeks.
+Opticloud provided the real-time operational data needed to support that shift.
 
-There was also a desire to move away from decision-making based on gut feeling and toward a more data-based approach. A summary of stoppages, real uptime, and startup and shutdown times was highly requested.
+## The Situation
 
-## Why
+The company already had a production overview, but not at the level of detail required.
 
-To remain competitive, the customer wanted to improve production efficiency without increasing pressure on employees. Instead, the focus was on harvesting the lowest-hanging fruit first.
+There was a clear need for immediate production knowledge rather than waiting until month-end plus three weeks.
 
-## How
+The team also wanted to move away from decisions based on gut feeling and toward a more data-based way of working.
 
-Opticloud collects data from each machine line in production, and employees use Opticloud to enter stop causes.
+The missing visibility included:
 
-## Results
+- stoppages
+- real uptime
+- startup times
+- shutdown times
 
-- Machine operators can actively explain why stops happen.
-- Management and the project team have an overview of stop causes and can optimize the production process continuously.
-- Management can work with operators to improve uptime while also making work easier for operators.
-- Opticloud data is used to create trend analyses of stop-related causes, helping management decide which product areas to focus on.
-- Opticloud makes it possible to plan service based on production data and build a stronger basis for preventive maintenance.
-- Opticloud can form the basis for energy measurements in production, making it possible to compare energy use against produced output and optimize processes without increasing energy consumption.
-- Based on success in one country, Opticloud can also be used globally in the company to replace features previously handled on paper.
+## Why It Mattered
+
+To remain competitive, the customer wanted to improve production efficiency while keeping the focus on practical, low-effort improvements first.
+
+## How Opticloud Is Used
+
+Opticloud collects data from each machine line in production, while employees use the platform to enter stop causes.
+
+That creates a stronger operational picture for both management and operators.
+
+## The Result
+
+The setup gives the customer:
+
+- active operator input on why stops happen
+- better visibility into stop causes for management and project teams
+- a stronger basis for continuous process optimization
+- better collaboration between management and operators around uptime improvements
+- trend analysis of stop-related causes to help prioritize product areas
+- a basis for service planning and preventive maintenance using production data
+- a basis for energy measurement against produced output
+- a model that can be scaled globally and replace paper-based routines

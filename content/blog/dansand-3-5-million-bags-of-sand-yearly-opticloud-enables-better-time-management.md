@@ -6,18 +6,32 @@ category: "Cases"
 image: "/images/blog/dansand.jpg"
 ---
 
-Dansand is Denmark's leading sand specialist. Their sand is used in construction, industry, playgrounds, sports, and DIY projects. They use Opticloud on their handling lines for big bags of sand.
+## At a Glance
 
-*"We would like to use data to make investment decisions when a machine partly or fully has to be changed. That will make sure we are making the right investments."*  
-Soren Torp Madsen, Dansand
+Dansand uses Opticloud on handling lines for big bags of sand to support daily follow-up and better decision-making around operations and investment.
 
-## How
+## The Situation
 
-Opticloud measures uptime on the machine lines and counts output amounts.
+As Denmark's leading sand specialist, Dansand runs production where machine visibility and time management matter.
 
-## Results and Daily Use
+The company wanted stronger data for evaluating processes and for making better investment decisions when machines needed to be partially or fully replaced.
 
-- Reports from Opticloud are used as the basis for production meetings.
-- Team collaboration is strengthened.
-- Opticloud data is used to improve processes.
-- Opticloud data is used to support investment decisions.
+> "We would like to use data to make investment decisions when a machine partly or fully has to be changed. That will make sure we are making the right investments."
+
+## How Opticloud Is Used
+
+Opticloud measures:
+
+- uptime on the machine lines
+- produced output amounts
+
+The resulting data is used directly in ongoing operational follow-up.
+
+## The Result
+
+At Dansand, Opticloud data is used to:
+
+- provide the basis for production meetings
+- strengthen collaboration across the team
+- support process improvements
+- support better investment decisions

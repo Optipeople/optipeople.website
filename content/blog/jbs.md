@@ -6,21 +6,32 @@ category: "Cases"
 image: "/images/blog/jbs.png"
 ---
 
-Gurit is a global company, and its core material kitting business, formerly known as JSB Group, is a major supplier to the global wind industry and uses Opticloud.
+## At a Glance
 
-*"When we are doing optimization projects, we can measure them - that is key to being able to make the right decisions for effective and streamlined production."*  
-Kristian Vallevik, Gurit
+Gurit uses Opticloud in its core material kitting business to create a clearer overview of production capacity and support better operational decisions.
 
-## How and What
+## The Situation
 
-- Opticloud is connected to CNC machines.
-- Full ERP integration.
-- Uptime and stop-cause registration.
+Gurit wanted a stronger basis for optimization work and more reliable insight into how production resources were being used.
 
-## Results
+The need was not only to see what was happening, but to measure improvement efforts so decisions could be made on facts rather than assumptions.
 
-- Overview of capacity.
-- More effective training of new employees.
-- Savings from not having to invest in new machines.
+> "When we are doing optimization projects, we can measure them - that is key to being able to make the right decisions for effective and streamlined production."
+
+## How Opticloud Is Used
+
+Opticloud is set up around the production environment with:
+
+- connection to CNC machines
+- full ERP integration
+- uptime and stop-cause registration
+
+## The Result
+
+The setup gives Gurit:
+
+- a stronger overview of capacity
+- better support for training new employees
+- savings by avoiding unnecessary investment in new machines
 
 Website: [gurit.com/en/kitting](https://www.gurit.com/en/kitting/)

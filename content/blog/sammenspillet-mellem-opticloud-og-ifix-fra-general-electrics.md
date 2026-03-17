@@ -6,32 +6,45 @@ category: "Cases"
 image: "/images/blog/fiberline-ifix.png"
 ---
 
-The first step toward complete production visibility starts with data capture.
+## At a Glance
 
-That is our home ground. We work to create accurate data across many machines delivered by many manufacturers.
+This case shows how Opticloud can work together with iFix from General Electric to create a broader factory monitoring setup.
 
-Today, industrial machines often have a PLC built in, and some machine manufacturers also offer systems that visualize data from their own machines.
+Opticloud handles data capture and structuring, while iFix can use that data as part of a wider SCADA environment.
 
-That is a start, but an overview across everything is a much stronger tool. This is where Opticloud enters the picture.
+## The Situation
 
-With Opticloud, data can be collected and visualized, but in some projects the need goes one step further. Here we are talking about SCADA, short for Supervisory Control and Data Acquisition.
+Many factories already have machines with built-in PLCs and isolated machine-specific views of production data.
 
-SCADA systems create and visualize data across computers, network communication, and graphical user interfaces. The result is a system that can monitor very complicated processes.
+That can be useful, but it does not automatically create a complete overview across the factory.
 
-In this context, data from a PLC is often used, either a mini-computer built into each machine or a data logger from OptiPeople. Our data logger is also a PLC.
+In projects where OEE data needs to feed a larger monitoring environment, a SCADA system such as iFix may already be in place.
 
-When OEE measurements from Opticloud need to be used as part of a larger monitoring project, a SCADA system may already be in place. It may be iFix from General Electric, which we have already integrated with.
+## How Opticloud Is Used
 
-Think of the Opticloud control panel as the operator's entry point for viewing machine-operation data. Here the operator can also specify [stop reasons](https://optipeople.com/with-only-3-steps-you-can-identify-your-stop-reason/), take notes, write in the machine's logbook, and more, so it also works as an HMI.
+Opticloud handles the data collection layer.
 
-When we integrate Opticloud with iFix, or similar systems, Opticloud handles the data collection.
+That includes:
 
-Data is then aggregated in a uniform format and passed on to iFix. Opticloud can handle more difficult scenarios. For example, one machine can have multiple tracks, and different item numbers can run on each track at the same time.
+- collecting and visualizing machine data
+- giving operators an interface for [stop reasons](https://optipeople.com/with-only-3-steps-you-can-identify-your-stop-reason/), notes, and logbook entries
+- aggregating machine data into a consistent format for downstream use
 
-When one track stops, Opticloud knows the machine is still partially producing and creates the correct data before passing it on to iFix. Opticloud can also handle factories where some machines have their own PLC and others have none at all.
+The setup is designed to work in more complex environments too. For example, Opticloud can handle cases where one machine has multiple tracks, where different item numbers run at the same time, or where some machines have their own PLC while others do not.
 
-iFix uses several additional data sources unrelated to OEE measurement, and the combined result is a complete monitoring solution for the factory.
+## How the Integration Works
 
-The effect is that a complete SCADA solution can help each user respond correctly in a given situation. "What should I do when...?" can be answered by the system.
+When Opticloud is integrated with iFix or a similar system, the structured production data is passed on for use in the SCADA layer.
 
-This creates the basis for an effective alarm strategy when something fails, shortens response time, and saves money in the long run.
+iFix can then combine that data with other data sources that are unrelated to OEE measurement.
+
+The result is a broader monitoring solution that helps users understand what is happening and how to respond.
+
+## The Result
+
+The integration creates a stronger operational setup by:
+
+- improving visibility across the factory
+- supporting more effective alarm strategies
+- reducing response time when something fails
+- creating a basis for long-term cost savings
