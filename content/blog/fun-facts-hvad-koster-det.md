@@ -3,7 +3,7 @@ title: "Fun Facts: What Are the Costs?"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/fun-facts-costs.jpg"
+image: "/images/blog/focus-on-capex.jpg"
 ---
 
 This article uses real production figures to illustrate what inefficiency can cost when availability is low.

@@ -26,6 +26,7 @@ function resolveImagePath(image: unknown): string | undefined {
   if (normalizedImage.startsWith("/images/blog/")) {
     const fileName = path.posix.basename(normalizedImage)
     candidates.push(`/images/blog and case/${fileName}`)
+    candidates.push(`/images/blog and case/blog/${fileName}`)
   }
 
   for (const candidate of candidates) {
