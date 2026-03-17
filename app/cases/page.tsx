@@ -15,6 +15,8 @@ export default async function CasesPage({ searchParams }: CasesPageProps) {
       <PostArchive
         posts={posts}
         basePath="/cases"
+        backHref="/insights"
+        backLabel="Back to insights"
         eyebrow="Cases"
         title="Real results from real factories"
         emptyTitle="No case studies yet"

@@ -27,7 +27,7 @@ Opticloud handles the data collection layer.
 That includes:
 
 - collecting and visualizing machine data
-- giving operators an interface for [stop reasons](https://optipeople.com/with-only-3-steps-you-can-identify-your-stop-reason/), notes, and logbook entries
+- giving operators an interface for stop reasons, notes, and logbook entries
 - aggregating machine data into a consistent format for downstream use
 
 The setup is designed to work in more complex environments too. For example, Opticloud can handle cases where one machine has multiple tracks, where different item numbers run at the same time, or where some machines have their own PLC while others do not.

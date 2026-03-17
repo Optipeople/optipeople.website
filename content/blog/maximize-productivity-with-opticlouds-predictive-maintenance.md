@@ -32,7 +32,7 @@ Go from calendar-based maintenance to data-driven maintenance.
 
 ## Here Is How Easy It Is to Add Alarms
 
-Video: [TPM alarm setup demo](https://optipeople.com/wp-content/uploads/2023/06/edce4470c5cd82b459d2a5890a094251.mp4)
+Video: TPM alarm setup demo
 
 ### How to Add Your First TPM Alarm
 

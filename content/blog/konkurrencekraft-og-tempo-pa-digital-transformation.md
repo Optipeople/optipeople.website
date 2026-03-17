@@ -12,7 +12,7 @@ Fiberline Composites wanted better visibility into when and why machines were st
 
 With Opticloud, the company gained that insight and achieved a **41% reduction in unnecessary stops** and a **6% reduction in average time per stop**.
 
-> "Now [stop reasons](https://optipeople.com/with-only-3-steps-you-can-identify-your-stop-reason/) are being registered and we have gotten a much better overview of our machines' efficiency, including downtime, stop reasons and breakdowns."
+> "Now stop reasons are being registered and we have gotten a much better overview of our machines' efficiency, including downtime, stop reasons and breakdowns."
 
 Johnny Nielsen, Fiberline Composites
 

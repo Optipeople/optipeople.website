@@ -1,8 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 import type { BlogPost } from "@/lib/blog-data"
+import { Button } from "@/components/ui/button"
 
 type PostArchiveProps = {
   posts: BlogPost[]
@@ -14,6 +15,8 @@ type PostArchiveProps = {
   ctaLabel: string
   currentPage: number
   postsPerPage?: number
+  backHref?: string
+  backLabel?: string
 }
 
 export function PostArchive({
@@ -26,6 +29,8 @@ export function PostArchive({
   ctaLabel,
   currentPage,
   postsPerPage = 10,
+  backHref,
+  backLabel,
 }: PostArchiveProps) {
   const totalPages = Math.max(1, Math.ceil(posts.length / postsPerPage))
   const validPage = Math.min(currentPage, totalPages)
@@ -39,6 +44,15 @@ export function PostArchive({
   return (
     <section className="py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        {backHref && backLabel && (
+          <Button asChild variant="ghost" size="sm" className="mb-8">
+            <Link href={backHref}>
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              {backLabel}
+            </Link>
+          </Button>
+        )}
+
         <div className="mb-16">
           <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
             {eyebrow}

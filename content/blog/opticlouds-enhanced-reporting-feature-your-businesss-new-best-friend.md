@@ -6,7 +6,7 @@ category: "Insights"
 image: "/images/blog/oee-module-report.png"
 ---
 
-Video: [Customizable report templates demo](https://optipeople.com/wp-content/uploads/2023/08/4879d6e6c47d690ab5355b1750ede19e.mp4)
+Video: Customizable report templates demo
 
 Welcome to the future of efficient reporting with Opticloud's new and enhanced feature, the Customizable Report Templates. This feature allows you to focus on the data that matters by personalizing your reports.
 

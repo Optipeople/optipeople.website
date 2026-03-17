@@ -15,6 +15,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <PostArchive
         posts={posts}
         basePath="/blog"
+        backHref="/insights"
+        backLabel="Back to insights"
         eyebrow="Blog"
         title="Articles and insight pieces"
         emptyTitle="No blog posts yet"
