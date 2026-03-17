@@ -146,6 +146,7 @@ const verticalSlides: SlideData[] = [
 // Customer logos for the logo wall
 // YouTube videos for the video carousel
 const customerVideos: VideoData[] = [
+  { videoId: "3LOknXK4buo" },
   { videoId: "O55qA3g6bWQ" },
   { videoId: "AgHZcfeu8mQ" },
   { videoId: "H4HvdRpmHjo" },

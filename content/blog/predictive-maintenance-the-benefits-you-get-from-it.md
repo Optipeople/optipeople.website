@@ -3,7 +3,7 @@ title: "Predictive Maintenance: The Benefits You Get From It"
 date: "2022-09-05"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/predictive-maintenance-kvik.png"
+image: "/images/blog/predictive-maintenance-report.png"
 ---
 
 Predictive maintenance uses data and analytics to predict when equipment is likely to fail. That allows maintenance to be scheduled before breakdown happens, helping avoid costly downtime and repairs.

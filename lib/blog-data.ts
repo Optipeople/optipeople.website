@@ -13,6 +13,30 @@ export type BlogPost = {
 }
 
 const postsDirectory = path.join(process.cwd(), "content/blog")
+const publicDirectory = path.join(process.cwd(), "public")
+
+function resolveImagePath(image: unknown): string | undefined {
+  if (typeof image !== "string" || image.trim() === "") {
+    return undefined
+  }
+
+  const normalizedImage = image.trim()
+  const candidates = [normalizedImage]
+
+  if (normalizedImage.startsWith("/images/blog/")) {
+    const fileName = path.posix.basename(normalizedImage)
+    candidates.push(`/images/blog and case/${fileName}`)
+  }
+
+  for (const candidate of candidates) {
+    const absolutePath = path.join(publicDirectory, candidate.replace(/^\//, ""))
+    if (fs.existsSync(absolutePath)) {
+      return encodeURI(candidate)
+    }
+  }
+
+  return undefined
+}
 
 export function getAllPosts(): BlogPost[] {
   const fileNames = fs.readdirSync(postsDirectory)
@@ -31,7 +55,7 @@ export function getAllPosts(): BlogPost[] {
         date: data.date,
         author: data.author,
         category: data.category,
-        image: data.image,
+        image: resolveImagePath(data.image),
       } as BlogPost
     })
 
@@ -51,7 +75,7 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
       date: data.date,
       author: data.author,
       category: data.category,
-      image: data.image,
+      image: resolveImagePath(data.image),
     } as BlogPost
   } catch {
     return undefined

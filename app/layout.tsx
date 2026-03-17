@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { SiteHeader } from "@/components/site-header";
+import { ClientOnlyHeader } from "@/components/client-only-header";
 import { SiteFooter } from "@/components/site-footer";
 import { CallToAction } from "@/components/call-to-action";
 
@@ -50,7 +50,7 @@ export default function RootLayout({
       <body
         className="antialiased bg-background text-foreground min-h-screen flex flex-col"
       >
-        <SiteHeader />
+        <ClientOnlyHeader />
         <main className="flex-1">{children}</main>
         <CallToAction
           title="Turn insight into action"
