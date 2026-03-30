@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useMemo } from "react"
 import { employees } from "@/lib/employees"
 
@@ -87,9 +88,19 @@ export function PeopleDirectory() {
             {orderedEmployees.map((person) => (
               <article
                 key={person.slug}
-                className="rounded-3xl border border-border/60 bg-background p-6 transition-colors hover:border-primary/40"
+                className="overflow-hidden rounded-3xl border border-border/60 bg-background transition-colors hover:border-primary/40"
               >
-                <div className="mb-5 flex items-start justify-between gap-4">
+                <div className="relative aspect-[4/5] bg-muted">
+                  <Image
+                    src={person.photo}
+                    alt={`${person.name}, ${person.role} at OptiPeople`}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                  />
+                </div>
+
+                <div className="p-6">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">
                       {person.team}
@@ -99,34 +110,27 @@ export function PeopleDirectory() {
                     </h2>
                     <p className="mt-2 text-sm text-muted-foreground">{person.role}</p>
                   </div>
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-muted text-sm font-medium text-foreground">
-                    {person.name
-                      .split(" ")
-                      .slice(0, 2)
-                      .map((part) => part[0])
-                      .join("")}
-                  </div>
-                </div>
 
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  <p>{person.location}</p>
-                  <a
-                    href={`mailto:${person.email}`}
-                    className="inline-flex items-center text-foreground underline-offset-4 hover:underline"
-                  >
-                    {person.email}
-                  </a>
-                </div>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {person.expertise.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground"
+                  <div className="mt-5 space-y-2 text-sm text-muted-foreground">
+                    <p>{person.location}</p>
+                    <a
+                      href={`mailto:${person.email}`}
+                      className="inline-flex items-center text-foreground underline-offset-4 hover:underline"
                     >
-                      {item}
-                    </span>
-                  ))}
+                      {person.email}
+                    </a>
+                  </div>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {person.expertise.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}

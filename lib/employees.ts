@@ -19,18 +19,18 @@ export const employees: Employee[] = [
     team: "Leadership",
     location: "Denmark",
     expertise: ["Leadership", "Strategy", "Business Development"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Stefan_peoplephoto-2.png",
     startYear: 2024,
   },
   {
     slug: "morten-pradsgaard",
     name: "Morten Pradsgaard",
     role: "Chief Technology Officer",
-    email: "mp@optipeople.dk",
+    email: "mpg@optipeople.dk",
     team: "Engineering",
     location: "Denmark",
     expertise: ["Software Architecture", "Technology Strategy", "Platform Engineering"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Morten_peoplephoto.png",
     startYear: 2024,
   },
   {
@@ -41,7 +41,7 @@ export const employees: Employee[] = [
     team: "Consulting",
     location: "Denmark",
     expertise: ["Technical Consulting", "Solution Design", "Customer Delivery"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Alexander_peoplephoto.png",
     startYear: 2024,
   },
   {
@@ -52,7 +52,7 @@ export const employees: Employee[] = [
     team: "Projects",
     location: "Denmark",
     expertise: ["Project Management", "Delivery", "Operations Coordination"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Rasmus_peoplephoto.png",
     startYear: 2024,
   },
   {
@@ -63,7 +63,7 @@ export const employees: Employee[] = [
     team: "Engineering",
     location: "Denmark",
     expertise: ["IoT", "Industrial Connectivity", "Edge Devices"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Mads W_peoplephoto.png",
     startYear: 2024,
   },
   {
@@ -74,7 +74,7 @@ export const employees: Employee[] = [
     team: "Business Intelligence",
     location: "Denmark",
     expertise: ["Business Intelligence", "Reporting", "Data Analysis"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Mads H_peoplephoto.png",
     startYear: 2024,
   },
   {
@@ -85,7 +85,7 @@ export const employees: Employee[] = [
     team: "Sales",
     location: "Denmark",
     expertise: ["Technical Sales", "Solution Advisory", "Customer Engagement"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Marcus_peoplephoto.png",
     startYear: 2024,
   },
   {
@@ -96,7 +96,7 @@ export const employees: Employee[] = [
     team: "Marketing",
     location: "Denmark",
     expertise: ["Marketing", "Campaign Management", "Content Strategy"],
-    photo: "/images/default-hero-bg.png",
+    photo: "/images/peoplephoto/Sofie_peoplephoto.png",
     startYear: 2024,
   },
 ]
