@@ -15,7 +15,7 @@ export type BlogPost = {
 const postsDirectory = path.join(process.cwd(), "content/blog")
 const publicDirectory = path.join(process.cwd(), "public")
 
-function resolveImagePath(image: unknown): string | undefined {
+export function resolveImagePath(image: unknown): string | undefined {
   if (typeof image !== "string" || image.trim() === "") {
     return undefined
   }

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { getAllSlugs, getPostBySlug } from "@/lib/blog-data"
+import { getAllSlugs, getPostBySlug, resolveImagePath } from "@/lib/blog-data"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import ReactMarkdown from "react-markdown"
@@ -91,13 +91,23 @@ function MarkdownContent({ content }: { content: string }) {
           <a href={href} className="text-primary hover:underline">{children}</a>
         ),
         img: ({ src, alt }) => (
-          <Image
-            src={typeof src === "string" ? src : ""}
-            alt={alt || ""}
-            width={800}
-            height={450}
-            className="rounded-lg my-6"
-          />
+          (() => {
+            const resolvedSrc = resolveImagePath(src)
+
+            if (!resolvedSrc) {
+              return null
+            }
+
+            return (
+              <Image
+                src={resolvedSrc}
+                alt={alt || ""}
+                width={800}
+                height={450}
+                className="rounded-lg my-6"
+              />
+            )
+          })()
         ),
         pre: ({ children }) => (
           <pre className="overflow-x-auto rounded-lg bg-muted p-4 text-sm">{children}</pre>
