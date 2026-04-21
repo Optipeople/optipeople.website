@@ -24,12 +24,6 @@ const values = [
   },
 ]
 
-const stats = [
-  { metric: "10+", label: "Years in industrial operations" },
-  { metric: "50+", label: "Factories running on Opticloud" },
-  { metric: "15k+", label: "Machines connected" },
-]
-
 const priorityByRole: Record<string, number> = {
   "Chief Executive Officer": 1,
   "Chief Technology Officer": 2,
@@ -51,6 +45,25 @@ const team = [...employees].sort((a, b) => {
 
   return a.name.localeCompare(b.name)
 })
+
+const uniqueTeams = new Set(employees.map((employee) => employee.team))
+const uniqueLocations = new Set(employees.map((employee) => employee.location))
+const currentYear = new Date().getFullYear()
+const totalYears = employees.reduce(
+  (sum, employee) => sum + (currentYear - employee.startYear),
+  0
+)
+const averageTenure = Math.max(
+  Math.round(totalYears / Math.max(employees.length, 1)),
+  1
+)
+
+const stats = [
+  { metric: `${employees.length}`, label: "Team members" },
+  { metric: `${uniqueTeams.size}`, label: "Departments" },
+  { metric: `${uniqueLocations.size}`, label: "Locations" },
+  { metric: `${averageTenure}+`, label: "Average tenure (years)" },
+]
 
 export default function AboutPage() {
   return (
@@ -139,7 +152,7 @@ export default function AboutPage() {
       {/* Track Record */}
       <section className="py-16 lg:py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 text-center">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="text-5xl lg:text-6xl font-extralight text-primary tracking-tight">
