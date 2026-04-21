@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { employees } from "@/lib/employees"
 
 const values = [
   {
@@ -23,44 +24,33 @@ const values = [
   },
 ]
 
-const team = [
-  {
-    name: "Morten Mathiasen",
-    role: "CEO & Founder",
-    photo: "/images/team/morten.jpg",
-  },
-  {
-    name: "Kasper Jensen",
-    role: "CTO",
-    photo: "/images/team/kasper.jpg",
-  },
-  {
-    name: "Line Sørensen",
-    role: "Head of Customer Success",
-    photo: "/images/team/line.jpg",
-  },
-  {
-    name: "Anders Holm",
-    role: "Lead Developer",
-    photo: "/images/team/anders.jpg",
-  },
-  {
-    name: "Sara Nielsen",
-    role: "Product Manager",
-    photo: "/images/team/sara.jpg",
-  },
-  {
-    name: "Thomas Berg",
-    role: "Solutions Architect",
-    photo: "/images/team/thomas.jpg",
-  },
-]
-
 const stats = [
   { metric: "10+", label: "Years in industrial operations" },
   { metric: "50+", label: "Factories running on Opticloud" },
   { metric: "15k+", label: "Machines connected" },
 ]
+
+const priorityByRole: Record<string, number> = {
+  "Chief Executive Officer": 1,
+  "Chief Technology Officer": 2,
+  "Head of Projects": 3,
+  "Sales Engineer": 4,
+  "Technical Consultant": 5,
+  "BI Consultant": 6,
+  "IoT Engineer": 7,
+  "Marketing Project Manager": 8,
+}
+
+const team = [...employees].sort((a, b) => {
+  const aPriority = priorityByRole[a.role] ?? 999
+  const bPriority = priorityByRole[b.role] ?? 999
+
+  if (aPriority !== bPriority) {
+    return aPriority - bPriority
+  }
+
+  return a.name.localeCompare(b.name)
+})
 
 export default function AboutPage() {
   return (
@@ -128,13 +118,14 @@ export default function AboutPage() {
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {team.map((person) => (
-              <div key={person.name}>
+              <div key={person.slug}>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-muted mb-4">
                   <Image
                     src={person.photo}
                     alt={person.name}
                     fill
                     className="object-cover"
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                   />
                 </div>
                 <h3 className="text-base font-medium">{person.name}</h3>
