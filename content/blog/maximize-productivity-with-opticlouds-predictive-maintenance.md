@@ -3,14 +3,14 @@ title: "Maximize Productivity with Opticloud's Predictive Maintenance"
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/predictive-maintenance-report.png"
+image: "/images/blog and case/blog/predictive-maintenance-report.png"
 ---
 
 ## Go from Calendar-Based Maintenance to Data-Driven Maintenance
 
 Instead of planning maintenance at fixed intervals, you can use data and schedule work based on production hours, produced units, and telemetry such as temperature, kW, and vibration. That helps reduce unplanned stops while enabling intelligent alarms on email, SMS, and operator panels.
 
-![](/images/blog/predictive-maintenance-report.png)
+![](/images/blog and case/blog/predictive-maintenance-report.png)
 
 ## Stay Ahead with TPM - Total Productive Maintenance
 
@@ -57,7 +57,7 @@ Turn machine maintenance from a chore into a competitive advantage. [Start here]
 
 ## Our Customer Kvik Went from Calendar-Based Maintenance to Data-Driven Maintenance
 
-![](/images/blog/predictive-maintenance-kvik.png)
+![](/images/blog and case/blog/predictive-maintenance-kvik.png)
 
 ## Ready to Optimize Your Production?
 

@@ -3,7 +3,7 @@ title: "Microsoft Power BI Consultancy and Development"
 date: "2022-02-17"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-improvement.png"
+image: "/images/blog and case/blog/oee-improvement.png"
 ---
 
 Microsoft Power BI is a strong tool for data visualization and reporting. It allows manufacturers to present collected data in the exact way they need, across both large and small screens.

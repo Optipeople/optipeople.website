@@ -3,7 +3,7 @@ title: "What is OEE? A Comprehensive Guide with Real-Life Examples"
 date: "2023-01-18"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-calculation.jpg"
+image: "/images/blog and case/blog/oee-calculation.jpg"
 ---
 
 OEE is a crucial metric for assessing the efficiency of production processes. OEE stands for **Overall Equipment Effectiveness** and measures how well a production process is performing. It takes into account machine downtime, quality issues, and production speed, helping identify areas for improvement.

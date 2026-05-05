@@ -3,7 +3,7 @@ title: "What Are the Advantages and Disadvantages of Predictive Maintenance?"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/zero-fault-culture.jpg"
+image: "/images/blog and case/blog/zero-fault-culture.jpg"
 ---
 
 When equipment runs continuously, parts eventually wear down. Predictive maintenance helps organizations identify when intervention is needed before that wear becomes failure.

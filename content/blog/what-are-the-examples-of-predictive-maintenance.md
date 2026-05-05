@@ -3,7 +3,7 @@ title: "What Are the Examples of Predictive Maintenance?"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/part-counter.jpg"
+image: "/images/blog and case/blog/part-counter.jpg"
 ---
 
 Predictive maintenance uses predictive analytics and data science to estimate when a machine or component is likely to fail, so corrective action can be planned before breakdown happens.

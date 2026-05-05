@@ -3,7 +3,7 @@ title: "How Does Predictive Maintenance Work?"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/predictive-maintenance-report.png"
+image: "/images/blog and case/blog/predictive-maintenance-report.png"
 ---
 
 Predictive maintenance assesses the condition of industrial machinery by monitoring it regularly or continuously. Instead of servicing equipment only on a fixed schedule or after failure, it helps organizations act only when maintenance is actually needed.

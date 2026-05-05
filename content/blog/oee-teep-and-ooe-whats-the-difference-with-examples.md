@@ -3,7 +3,7 @@ title: "OEE, TEEP, and OOE, What's the Difference? [With Examples]"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee1-vs-oee2.jpg"
+image: "/images/blog and case/blog/oee1-vs-oee2.jpg"
 ---
 
 OEE, TEEP, and OOE are all ways of evaluating production availability and performance. Each of them compares what production could potentially achieve against what it actually achieves, helping teams identify improvement opportunities without investing in new equipment or facilities.

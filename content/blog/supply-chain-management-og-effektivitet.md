@@ -3,7 +3,7 @@ title: "Supply chain management and efficiency"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/supply-chain-efficiency.jpg"
+image: "/images/blog and case/blog/supply-chain-efficiency.jpg"
 ---
 
 Supply chain management plays a central role in building competitive advantage.

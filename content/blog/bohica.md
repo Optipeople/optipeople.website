@@ -3,7 +3,7 @@ title: "Bohica"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/bohica.jpg"
+image: "/images/blog and case/blog/bohica.jpg"
 ---
 
 The article uses the expression "Bohica" to describe what many employees feel when one more improvement initiative arrives without lasting follow-through.

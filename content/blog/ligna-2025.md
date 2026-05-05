@@ -3,7 +3,7 @@ title: "Empowering Nordic Competitiveness"
 date: "2025-03-27"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/ligna-2025.jpg"
+image: "/images/blog and case/blog/ligna-2025.jpg"
 ---
 
 ### Visit us at LIGNA 2025 - Experience Opticloud in Action
@@ -20,7 +20,7 @@ Opticloud provides real-time insights and actionable data that help manufacturer
 
 We are located in **Hall 11, Stand A06**.
 
-![](/images/blog/ligna-2025-map.avif)
+![](/images/blog and case/blog/ligna-2025-map.avif)
 
 ## Book a Meeting
 

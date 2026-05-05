@@ -3,7 +3,7 @@ title: "Zero-fault culture"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/zero-fault-culture.jpg"
+image: "/images/blog and case/blog/zero-fault-culture.jpg"
 ---
 
 Efficiency and optimization are not only about technology. They also depend on people, culture, and how change is handled inside the factory.

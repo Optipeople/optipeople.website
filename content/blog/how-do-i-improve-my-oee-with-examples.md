@@ -3,7 +3,7 @@ title: "How Do I Improve My OEE? [With Examples]"
 date: "2022-03-23"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-improvement.png"
+image: "/images/blog and case/blog/oee-improvement.png"
 ---
 
 OEE remains one of the most important ways to measure manufacturing efficiency. Improving OEE means improving the balance between production volume, cost, uptime, and quality.

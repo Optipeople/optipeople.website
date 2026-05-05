@@ -3,7 +3,7 @@ title: "What is Industry 4.0?"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/industry-4.jpg"
+image: "/images/blog and case/blog/industry-4.jpg"
 ---
 
 Industry 4.0 describes the current stage of industrial development, where production becomes increasingly digital, connected, and data-driven.

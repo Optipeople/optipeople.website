@@ -3,7 +3,7 @@ title: "How to Increase Manufacturing Efficiency in Your Facility Today"
 date: "2022-06-27"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/manufacturing-efficiency.jpg"
+image: "/images/blog and case/blog/manufacturing-efficiency.jpg"
 ---
 
 Asset operation management is critical to the success of any manufacturing process. By improving production efficiency, manufacturers can save time and money while maintaining consistent product quality.

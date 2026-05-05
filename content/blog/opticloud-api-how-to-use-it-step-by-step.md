@@ -3,7 +3,7 @@ title: "OptiCloud API - How to Use It Step by Step"
 date: "2022-05-11"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/opticloud-api-code.png"
+image: "/images/blog and case/blog/opticloud-api-code.png"
 ---
 
 OptiCloud exposes APIs for data exchange, whether the data is simple uptime and downtime or more advanced information such as orders, vibration, temperature, ERP data, or SCADA-related context.

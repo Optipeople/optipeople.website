@@ -3,7 +3,7 @@ title: "kWh per Produced Unit (v50)"
 date: "2022-11-10"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/kwh-per-produced-unit-v50.png"
+image: "/images/blog and case/blog/kwh-per-produced-unit-v50.png"
 ---
 
 With Opticloud, manufacturers can analyze energy consumption in high detail and with the granularity needed for real production decisions.

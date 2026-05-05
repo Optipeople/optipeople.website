@@ -3,7 +3,7 @@ title: "What Are the 5 Principles of Lean Manufacturing?"
 date: "2022-06-21"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/lean-manufacturing.jpg"
+image: "/images/blog and case/blog/lean-manufacturing.jpg"
 ---
 
 Lean manufacturing is a production methodology focused on reducing waste and maximizing efficiency. By removing activities that do not add value, manufacturers can improve productivity and profitability.

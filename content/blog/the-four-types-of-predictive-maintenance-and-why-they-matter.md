@@ -3,7 +3,7 @@ title: "The Four Types of Predictive Maintenance and Why They Matter"
 date: "2022-09-05"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/bohica.jpg"
+image: "/images/blog and case/blog/bohica.jpg"
 ---
 
 Predictive maintenance uses data and analytics to predict when equipment is likely to fail. That allows maintenance to be planned before failure happens, reducing downtime and the costs that follow.

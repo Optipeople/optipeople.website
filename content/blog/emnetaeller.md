@@ -3,7 +3,7 @@ title: "Part counter"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/part-counter.jpg"
+image: "/images/blog and case/blog/part-counter.jpg"
 ---
 
 Many factories use a part counter to determine whether a machine is running and how many units it produces.

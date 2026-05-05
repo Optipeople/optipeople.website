@@ -3,7 +3,7 @@ title: "Which Operations Would Be Described as Preventive Maintenance?"
 date: "2022-05-30"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/preventive-maintenance.jpg"
+image: "/images/blog and case/blog/preventive-maintenance.jpg"
 ---
 
 Preventive maintenance includes more than just hands-on machine work. It also includes mapping, planning, scheduling, prioritizing, and assigning responsibility.

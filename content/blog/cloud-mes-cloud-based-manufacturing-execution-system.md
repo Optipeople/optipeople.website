@@ -3,7 +3,7 @@ title: "Cloud MES - Cloud-Based Manufacturing Execution System"
 date: "2022-02-16"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-manufacturing.jpg"
+image: "/images/blog and case/blog/oee-manufacturing.jpg"
 ---
 
 Production, resources, waste, shifts, operators, maintenance, machine control, and orders are all difficult to plan when they are disconnected across departments. A cloud MES helps bring these areas together.

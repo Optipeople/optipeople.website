@@ -3,7 +3,7 @@ title: "What Is the Definition or Meaning of Predictive Maintenance?"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/from-e-commerce-to-industry-4.jpg"
+image: "/images/blog and case/blog/from-e-commerce-to-industry-4.jpg"
 ---
 
 In modern industrial operations, predictive maintenance refers to using data to identify and resolve possible issues before they turn into equipment breakdowns, process failures, or service interruptions.

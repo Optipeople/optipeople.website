@@ -3,7 +3,7 @@ title: "CMMS: The Ultimate Guide for Facility Management Professionals and Owner
 date: "2022-09-05"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/preventive-maintenance.jpg"
+image: "/images/blog and case/blog/preventive-maintenance.jpg"
 ---
 
 **Computerized maintenance management systems (CMMS)** are software systems that help facility managers and maintenance professionals track and manage maintenance data.

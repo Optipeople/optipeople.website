@@ -3,7 +3,7 @@ title: "Board Meetings"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/board-meetings.jpg"
+image: "/images/blog and case/blog/board-meetings.jpg"
 ---
 
 Opticloud is positioned here as a support tool for better production board meetings.

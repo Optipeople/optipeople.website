@@ -3,7 +3,7 @@ title: "OEE1 vs OEE2 - What's the Difference?"
 date: "2022-12-13"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee1-vs-oee2.jpg"
+image: "/images/blog and case/blog/oee1-vs-oee2.jpg"
 ---
 
 ## A Quick Introduction to OEE1 and OEE2

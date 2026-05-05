@@ -3,7 +3,7 @@ title: "OEE for Maintenance"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-module-report.png"
+image: "/images/blog and case/blog/oee-module-report.png"
 ---
 
 High-performing manufacturing plants depend on performance, quality, and availability. Since machines and facilities are often the most important capital assets in a plant, maintenance plays a central role in competitiveness and output.

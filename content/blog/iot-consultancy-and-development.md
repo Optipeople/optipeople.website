@@ -3,7 +3,7 @@ title: "IoT Consultancy and Development"
 date: "2022-02-17"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-calculation.jpg"
+image: "/images/blog and case/blog/oee-calculation.jpg"
 ---
 
 OptiPeople works with machine manufacturers, automation companies, and manufacturing companies on digital IoT projects.

@@ -3,7 +3,7 @@ title: "Predictive Maintenance Vs Reactive Maintenance"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/crisis-management-with-oee.jpg"
+image: "/images/blog and case/blog/crisis-management-with-oee.jpg"
 ---
 
 As industrial technology has evolved, maintenance strategies have evolved with it. Traditional reactive maintenance waits until breakdown happens. Predictive maintenance, by contrast, uses data to act before failure occurs.

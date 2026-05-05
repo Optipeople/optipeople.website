@@ -3,7 +3,7 @@ title: "The Six Major Efficiency Areas"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/six-major-efficiency-areas.jpg"
+image: "/images/blog and case/blog/six-major-efficiency-areas.jpg"
 ---
 
 The purpose of measuring efficiency is to understand where production is performing less well. Once that is visible, it becomes easier to identify where optimization should begin.

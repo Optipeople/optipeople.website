@@ -3,7 +3,7 @@ title: "Opticloud Real-Time Dashboard: Powering Decision-Making, Enhancing Effic
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/dashboards-v51.png"
+image: "/images/blog and case/blog/dashboards-v51.png"
 ---
 
 ## Instant Data, Insightful Decisions

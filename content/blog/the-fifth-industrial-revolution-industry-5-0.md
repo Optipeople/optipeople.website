@@ -3,7 +3,7 @@ title: "The Fifth Industrial Revolution (Industry 5.0)"
 date: "2022-06-21"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/industry-5.jpg"
+image: "/images/blog and case/blog/industry-5.jpg"
 ---
 
 We are at the beginning of what is often called **Industry 5.0**. It builds on digital manufacturing but puts more emphasis on how humans and machines work together.

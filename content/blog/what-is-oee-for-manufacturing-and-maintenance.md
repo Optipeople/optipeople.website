@@ -3,7 +3,7 @@ title: "What Is OEE for Manufacturing and Maintenance?"
 date: "2022-03-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-manufacturing.jpg"
+image: "/images/blog and case/blog/oee-manufacturing.jpg"
 ---
 
 Overall Equipment Effectiveness, or **OEE**, is one of the strongest methods for measuring and improving manufacturing performance.

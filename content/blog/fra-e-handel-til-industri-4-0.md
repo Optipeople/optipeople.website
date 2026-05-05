@@ -3,7 +3,7 @@ title: "From e-commerce to Industry 4.0"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/from-e-commerce-to-industry-4.jpg"
+image: "/images/blog and case/blog/from-e-commerce-to-industry-4.jpg"
 ---
 
 The article argues that manufacturing is going through the same kind of disruption that retail experienced when e-commerce changed how businesses competed.

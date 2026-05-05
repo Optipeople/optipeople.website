@@ -3,7 +3,7 @@ title: "Digital transformation and CO2 partnership: It's a necessity"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/digital-transformation-co2-partnership.png"
+image: "/images/blog and case/blog/digital-transformation-co2-partnership.png"
 ---
 
 The article presents green transition as both a business opportunity and a business requirement.

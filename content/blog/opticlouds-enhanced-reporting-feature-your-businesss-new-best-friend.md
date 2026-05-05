@@ -3,7 +3,7 @@ title: "Opticloud's Enhanced Reporting Feature: Your Business's New Best Friend"
 date: "2023-08-03"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-module-report.png"
+image: "/images/blog and case/blog/oee-module-report.png"
 ---
 
 Video: Customizable report templates demo

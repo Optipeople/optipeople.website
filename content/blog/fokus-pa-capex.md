@@ -3,7 +3,7 @@ title: "Focus on CAPEX"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/focus-on-capex.jpg"
+image: "/images/blog and case/blog/focus-on-capex.jpg"
 ---
 
 CAPEX refers to **capital expenditure**, or capital investment.

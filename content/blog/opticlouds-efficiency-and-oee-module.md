@@ -3,14 +3,14 @@ title: "Opticloud's Efficiency and OEE Module"
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-module-report.png"
+image: "/images/blog and case/blog/oee-module-report.png"
 ---
 
 ## Opticloud's OEE Module: A Powerful Tool for Enhanced Efficiency
 
 Understanding Overall Equipment Efficiency, or OEE, is fundamental to manufacturing optimization. Opticloud's OEE Module provides a real-time view of machine performance by combining availability, quality, and performance.
 
-![](/images/blog/oee-module-report.png)
+![](/images/blog and case/blog/oee-module-report.png)
 
 ## Benefits of Using Opticloud's OEE Module
 
@@ -24,7 +24,7 @@ Video: [OEE real-time and historic walkthrough](https://player.vimeo.com/video/6
 
 ## A Case from One of Our Customers
 
-![](/images/blog/oee-module-case.png)
+![](/images/blog and case/blog/oee-module-case.png)
 
 ## A Step-by-Step Guide to Using the Module
 

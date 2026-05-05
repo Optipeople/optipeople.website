@@ -3,7 +3,7 @@ title: "Dashboards (v51)"
 date: "2022-11-11"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/dashboards-v51.png"
+image: "/images/blog and case/blog/dashboards-v51.png"
 ---
 
 Version 51 introduced a new concept in Opticloud: **custom flexible real-time dashboards**.

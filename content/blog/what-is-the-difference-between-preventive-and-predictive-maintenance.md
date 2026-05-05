@@ -3,7 +3,7 @@ title: "What Is the Difference Between Preventive and Predictive Maintenance?"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/manufacturing-efficiency.jpg"
+image: "/images/blog and case/blog/manufacturing-efficiency.jpg"
 ---
 
 Preventive and predictive maintenance both aim to act before failure occurs. The main difference is **how maintenance timing is decided**.

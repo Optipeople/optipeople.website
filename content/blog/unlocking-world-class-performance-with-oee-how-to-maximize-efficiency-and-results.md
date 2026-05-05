@@ -3,7 +3,7 @@ title: "Unlocking World-Class Performance with OEE: How to Maximize Efficiency a
 date: "2023-01-04"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-improvement.png"
+image: "/images/blog and case/blog/oee-improvement.png"
 ---
 
 The term OEE can be a bit of a mystery to many, but it is a practical tool for businesses that want to maximize efficiency and results. OEE stands for **Overall Equipment Effectiveness**, and it is used to measure and optimize how well machines perform in a production process.

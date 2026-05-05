@@ -3,7 +3,7 @@ title: "Efficiency as a Service"
 date: "2022-02-15"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/efficiency-as-a-service.png"
+image: "/images/blog and case/blog/efficiency-as-a-service.png"
 ---
 
 Opticloud began as a tool for improving machine efficiency and productivity, but the broader vision is to support competitive and sustainable local production industries.

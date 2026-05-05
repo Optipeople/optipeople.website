@@ -3,7 +3,7 @@ title: "What Are Predictive Maintenance Tools?"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/industry-4.jpg"
+image: "/images/blog and case/blog/industry-4.jpg"
 ---
 
 Physical assets, equipment, and machinery are the backbone of many industrial operations. Unexpected failures create downtime, cost, and operational disruption. Predictive maintenance tools help organizations reduce that risk by giving better visibility into machine condition and likely future issues.

@@ -3,7 +3,7 @@ title: "Do you know you can have your factory in your pocket?"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/factory-in-your-pocket.jpg"
+image: "/images/blog and case/blog/factory-in-your-pocket.jpg"
 ---
 
 The article positions Opticloud as a way to keep your factory close at hand, even when you are away from the production floor.

@@ -3,7 +3,7 @@ title: "What Are the Effects of OEE?"
 date: "2022-04-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/what-are-the-effects-of-oee.jpg"
+image: "/images/blog and case/blog/what-are-the-effects-of-oee.jpg"
 ---
 
 OEE, or **Overall Equipment Effectiveness**, is a standard used to measure manufacturing productivity. Its main purpose is to help teams understand where production time is being lost and what to improve next.

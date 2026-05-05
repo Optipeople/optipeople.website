@@ -3,7 +3,7 @@ title: "How to Calculate OEE for Manufacturing and Maintenance?"
 date: "2022-04-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/oee-calculation.jpg"
+image: "/images/blog and case/blog/oee-calculation.jpg"
 ---
 
 OEE, short for **Overall Equipment Effectiveness**, is a measure of production efficiency. It evaluates how effectively a manufacturing line, tool, or resource is operating based on three variables:

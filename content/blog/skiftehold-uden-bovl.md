@@ -3,7 +3,7 @@ title: "Shifts Without Hassle"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/shifts-without-hassle.jpg"
+image: "/images/blog and case/blog/shifts-without-hassle.jpg"
 ---
 
 Many companies find that knowledge transfer between shifts is too weak, even though the handover window is short and often full of information.

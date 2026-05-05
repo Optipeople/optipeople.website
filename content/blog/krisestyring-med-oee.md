@@ -3,7 +3,7 @@ title: "Crisis management with OEE"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog/crisis-management-with-oee.jpg"
+image: "/images/blog and case/blog/crisis-management-with-oee.jpg"
 ---
 
 Normal production planning is often not enough when conditions become unstable.
