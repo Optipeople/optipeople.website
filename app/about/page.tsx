@@ -1,5 +1,13 @@
 import Image from "next/image"
 import { employees } from "@/lib/employees"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "About OptiPeople",
+  description:
+    "Meet the team behind OptiPeople and learn how we help manufacturers connect systems, improve shopfloor visibility, and turn operational data into action.",
+  path: "/about",
+})
 
 const values = [
   {

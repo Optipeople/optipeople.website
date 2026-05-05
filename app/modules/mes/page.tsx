@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Monitor,
   Gauge,
@@ -8,6 +9,13 @@ import {
   BarChart3,
   Wrench,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "MES Module",
+  description:
+    "Run manufacturing execution with live OEE dashboards, stop analysis, predictive maintenance, and production reporting in one platform.",
+  path: "/modules/mes",
+})
 
 const features = [
   {

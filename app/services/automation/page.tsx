@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Cpu,
   Cog,
@@ -8,6 +9,13 @@ import {
   ScanLine,
   ShieldCheck,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Automation Services",
+  description:
+    "Design and integrate PLC, HMI, SCADA, and machine control systems for reliable industrial automation and connected production lines.",
+  path: "/services/automation",
+})
 
 const features = [
   {

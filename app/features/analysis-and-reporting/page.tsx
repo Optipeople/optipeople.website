@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Analysis and Reporting | OptiPeople",
   description:
     "Turn production data into clear reports on performance, losses, and cost drivers — without spreadsheets or manual work.",
-}
+  path: "/features/analysis-and-reporting",
+})
 
 const capabilities = [
   {

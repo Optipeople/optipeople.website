@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Activity,
   Gauge,
@@ -8,6 +9,13 @@ import {
   AlertTriangle,
   TrendingUp,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Production Module",
+  description:
+    "Track OEE, downtime, work orders, and shift performance with a production module built for real-time manufacturing visibility.",
+  path: "/modules/production",
+})
 
 const features = [
   {

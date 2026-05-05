@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "AI and Copilots | OptiPeople",
   description:
     "Ask questions, detect patterns, and support decisions using AI trained on your own production data.",
-}
+  path: "/features/ai-and-copilots",
+})
 
 const capabilities = [
   {

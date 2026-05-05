@@ -10,6 +10,7 @@ export type BlogPost = {
   author: string
   category: string
   image?: string
+  summary: string
 }
 
 const postsDirectory = path.join(process.cwd(), "content/blog")
@@ -39,6 +40,28 @@ export function resolveImagePath(image: unknown): string | undefined {
   return undefined
 }
 
+function stripMarkdown(content: string) {
+  return content
+    .replace(/^---[\s\S]*?---/, "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/`[^`]*`/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, " ")
+    .replace(/\[[^\]]*\]\([^)]+\)/g, " ")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/[*_~>-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+function createSummary(content: string, fallbackTitle: string) {
+  const plainText = stripMarkdown(content)
+  if (!plainText) {
+    return fallbackTitle
+  }
+
+  return plainText.slice(0, 157).trimEnd() + (plainText.length > 157 ? "..." : "")
+}
+
 export function getAllPosts(): BlogPost[] {
   const fileNames = fs.readdirSync(postsDirectory)
   const posts = fileNames
@@ -57,6 +80,7 @@ export function getAllPosts(): BlogPost[] {
         author: data.author,
         category: data.category,
         image: resolveImagePath(data.image),
+        summary: createSummary(content, data.title),
       } as BlogPost
     })
 
@@ -77,6 +101,7 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
       author: data.author,
       category: data.category,
       image: resolveImagePath(data.image),
+      summary: createSummary(content, data.title),
     } as BlogPost
   } catch {
     return undefined

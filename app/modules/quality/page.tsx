@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   ClipboardCheck,
   Search,
@@ -8,6 +9,13 @@ import {
   FileText,
   GitBranch,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Quality Module",
+  description:
+    "Digitize inspections, trace deviations, monitor trends, and build quality traceability directly into production workflows.",
+  path: "/modules/quality",
+})
 
 const features = [
   {

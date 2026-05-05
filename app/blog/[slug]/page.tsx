@@ -1,14 +1,37 @@
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getAllSlugs, getPostBySlug, resolveImagePath } from "@/lib/blog-data"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
+import { absoluteUrl, buildMetadata } from "@/lib/seo"
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = getPostBySlug(slug)
+
+  if (!post) {
+    return buildMetadata({
+      title: "Post not found | OptiPeople",
+      description: "The requested OptiPeople article could not be found.",
+      path: `/blog/${slug}`,
+    })
+  }
+
+  return buildMetadata({
+    title: `${post.title} | OptiPeople`,
+    description: post.summary,
+    path: `/blog/${slug}`,
+    image: post.image,
+    type: "article",
+  })
 }
 
 type Props = {
@@ -152,10 +175,34 @@ export default async function BlogPostPage({ params }: Props) {
   const isCaseStudy = post.category === "Cases"
   const backHref = isCaseStudy ? "/cases" : "/blog"
   const backLabel = isCaseStudy ? "Back to cases" : "Back to blog"
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": isCaseStudy ? "Article" : "BlogPosting",
+    headline: post.title,
+    description: post.summary,
+    datePublished: new Date(post.date).toISOString(),
+    author: {
+      "@type": "Organization",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "OptiPeople",
+    },
+    mainEntityOfPage: absoluteUrl(`/blog/${slug}`),
+    articleSection: post.category,
+    ...(post.image ? { image: [absoluteUrl(post.image)] } : {}),
+  }
 
   if (!isCaseStudy) {
     return (
       <main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(articleSchema),
+          }}
+        />
         <article className="py-12 lg:py-16">
           <div className="px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
@@ -217,6 +264,12 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
       <article className="py-12 lg:py-16">
         <div className="px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">

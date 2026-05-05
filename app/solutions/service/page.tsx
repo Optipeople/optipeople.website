@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 import {
   HeartPulse,
   Calendar,
@@ -10,11 +11,12 @@ import {
   FileText,
 } from "lucide-react"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Service Solutions | OptiPeople",
   description:
     "Give your service team real visibility into machine health and usage. Plan maintenance on facts, reduce emergency callouts, and turn service into a competitive advantage with OptiPeople.",
-}
+  path: "/solutions/service",
+})
 
 const features = [
   {

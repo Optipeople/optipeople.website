@@ -3,6 +3,14 @@ import Link from "next/link"
 import { ArrowRight, FileText, Factory } from "lucide-react"
 
 import { getLatestPostsByCategory, getPostsByCategory } from "@/lib/blog-data"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "Insights",
+  description:
+    "Browse OptiPeople articles, explainers, and customer cases about manufacturing efficiency, OEE, predictive maintenance, and digital operations.",
+  path: "/insights",
+})
 
 const sectionCards = [
   {

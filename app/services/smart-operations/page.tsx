@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Activity,
   Gauge,
@@ -8,6 +9,13 @@ import {
   Radio,
   Bell,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Smart Operations Services",
+  description:
+    "Improve shopfloor visibility with real-time monitoring, OEE tracking, stop-cause analysis, and automated production reporting.",
+  path: "/services/smart-operations",
+})
 
 const features = [
   {

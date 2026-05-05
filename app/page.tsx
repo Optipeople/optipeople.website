@@ -8,6 +8,21 @@ import Link from "next/link"
 import Image from "next/image"
 import { getLatestPostsByCategory } from "@/lib/blog-data"
 import { ArrowRight } from "lucide-react"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "OptiPeople | Digital operations platform for manufacturers",
+  description:
+    "Connect machines, track OEE in real time, automate reporting, and give production teams the data they need to improve output and uptime.",
+  path: "/",
+  keywords: [
+    "manufacturing software",
+    "OEE tracking",
+    "production monitoring",
+    "MES platform",
+    "industrial analytics",
+  ],
+})
 
 const tabSlides: SlideData[] = [
   {

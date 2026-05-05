@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   BarChart3,
   PieChart,
@@ -8,6 +9,13 @@ import {
   Users,
   RefreshCw,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Business Intelligence Services",
+  description:
+    "Build better manufacturing reporting with Power BI dashboards, integrated data pipelines, KPI design, and workflow automation.",
+  path: "/services/business-intelligence",
+})
 
 const features = [
   {

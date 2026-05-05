@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Machine Control | OptiPeople",
   description:
     "Integrate with machine control systems to enable feedback, automation, and tighter production loops across the factory.",
-}
+  path: "/features/machine-control",
+})
 
 const capabilities = [
   {

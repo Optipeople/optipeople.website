@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Quality Management | OptiPeople",
   description:
     "Register quality data where it happens. Trace deviations back to machines, batches, and shifts — and build accountability into production.",
-}
+  path: "/features/quality-management",
+})
 
 const capabilities = [
   {

@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Stop Cause Registration | OptiPeople",
   description:
     "Make downtime visible at the source. Operators register stops directly at the machine, giving you clean data you can actually act on.",
-}
+  path: "/features/stop-cause-registration",
+})
 
 const capabilities = [
   {

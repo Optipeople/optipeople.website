@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Bot,
   BrainCircuit,
@@ -8,6 +9,13 @@ import {
   Workflow,
   ShieldCheck,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "AI Solutions Services",
+  description:
+    "Use AI agents for reporting, planning, workflow automation, and data-driven decision support in manufacturing operations.",
+  path: "/services/ai-solutions",
+})
 
 const features = [
   {

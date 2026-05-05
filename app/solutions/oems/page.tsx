@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 import {
   Globe,
   Shield,
@@ -10,11 +11,12 @@ import {
   Plug,
 } from "lucide-react"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "OEM Solutions | OptiPeople",
   description:
     "Ship connected machines with built-in intelligence. Monitor performance in the field, support customers proactively, and build recurring digital revenue with OptiPeople.",
-}
+  path: "/solutions/oems",
+})
 
 const features = [
   {

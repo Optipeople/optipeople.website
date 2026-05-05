@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   BarChart3,
   PieChart,
@@ -8,6 +9,13 @@ import {
   Calculator,
   Target,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Analysis Module",
+  description:
+    "Turn production data into automated reports, cost analysis, loss categorization, and improvement planning for manufacturing teams.",
+  path: "/modules/analysis",
+})
 
 const features = [
   {

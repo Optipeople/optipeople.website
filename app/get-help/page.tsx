@@ -1,5 +1,13 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "Get Help",
+  description:
+    "Find support options, documentation, and contact details for OptiPeople and Opticloud.",
+  path: "/get-help",
+})
 
 const helpOptions = [
   {

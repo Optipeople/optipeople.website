@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Wrench,
   Calendar,
@@ -8,6 +9,13 @@ import {
   History,
   Settings,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Maintenance Module",
+  description:
+    "Plan preventive maintenance, receive predictive alerts, manage tasks, and reduce unplanned downtime with connected maintenance workflows.",
+  path: "/modules/maintenance",
+})
 
 const features = [
   {

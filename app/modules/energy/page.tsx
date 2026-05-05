@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Zap,
   Thermometer,
@@ -8,6 +9,13 @@ import {
   Activity,
   Leaf,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "Energy Module",
+  description:
+    "Track kWh usage, monitor telemetry, detect anomalies, and connect energy performance to production output in real time.",
+  path: "/modules/energy",
+})
 
 const features = [
   {

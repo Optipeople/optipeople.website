@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Production Efficiency | OptiPeople",
   description:
     "Track OEE in real time, see where production time is lost, and understand performance across shifts, lines, and machines — based on real production data.",
-}
+  path: "/features/production-efficiency",
+})
 
 const capabilities = [
   {

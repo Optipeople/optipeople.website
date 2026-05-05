@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Wifi,
   Cpu,
@@ -8,6 +9,13 @@ import {
   RefreshCw,
   Shield,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "IoT Module",
+  description:
+    "Connect industrial equipment with edge gateways, protocol-agnostic ingestion, and real-time machine data streaming.",
+  path: "/modules/iot",
+})
 
 const features = [
   {

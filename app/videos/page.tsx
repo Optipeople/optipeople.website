@@ -1,3 +1,12 @@
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "Videos",
+  description:
+    "Watch OptiPeople demos, tutorials, and customer stories to see how Opticloud works on the shopfloor.",
+  path: "/videos",
+})
+
 export default function VideosPage() {
   return (
     <main className="min-h-screen">

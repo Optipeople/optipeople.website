@@ -1,5 +1,13 @@
 import { PostArchive } from "@/components/post-archive"
 import { getPostsByCategory } from "@/lib/blog-data"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "Cases",
+  description:
+    "See how manufacturers use OptiPeople and Opticloud to improve OEE, reduce downtime, and make better production decisions.",
+  path: "/cases",
+})
 
 interface CasesPageProps {
   searchParams: Promise<{ page?: string }>

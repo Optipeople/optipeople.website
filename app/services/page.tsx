@@ -1,3 +1,12 @@
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "Services",
+  description:
+    "Explore OptiPeople services for smart operations, industrial automation, business intelligence, and AI solutions in manufacturing.",
+  path: "/services",
+})
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen px-6 lg:px-8 pt-16 sm:pt-24 pb-16">
@@ -13,5 +22,4 @@ export default function ServicesPage() {
     </main>
   )
 }
-
 

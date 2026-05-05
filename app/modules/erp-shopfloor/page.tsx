@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { buildMetadata } from "@/lib/seo"
 import {
   Activity,
   Gauge,
@@ -8,6 +9,13 @@ import {
   AlertTriangle,
   ArrowLeftRight,
 } from "lucide-react"
+
+export const metadata = buildMetadata({
+  title: "ERP Shopfloor Module",
+  description:
+    "Connect ERP planning with shopfloor execution through live OEE dashboards, work order tracking, and two-way production data sync.",
+  path: "/modules/erp-shopfloor",
+})
 
 const features = [
   {
