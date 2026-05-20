@@ -58,7 +58,7 @@ export const employees: Employee[] = [
   {
     slug: "mads-wested",
     name: "Mads Wested",
-    role: "IoT Engineer",
+    role: "Senior IoT Engineer",
     email: "mw@optipeople.dk",
     team: "Engineering",
     location: "Denmark",
