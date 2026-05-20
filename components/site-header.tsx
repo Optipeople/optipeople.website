@@ -56,6 +56,7 @@ const dropdownMenus = [
     items: [
       { title: "Insights", href: "/insights" },
       { title: "Videos", href: "/videos" },
+      { title: "Newsletter", href: "/newsletter" },
       { title: "People", href: "/resources/people" },
       { title: "Get Help", href: "/get-help" },
       { title: "Contact", href: "/contact" },

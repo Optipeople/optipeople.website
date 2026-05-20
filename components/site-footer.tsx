@@ -7,6 +7,7 @@ import logo from "@/app/Optipeople-Logo-Vector.svg"
 const footerLinks = {
   company: [
     { title: "About", href: "/about" },
+    { title: "Newsletter", href: "/newsletter" },
     { title: "Contact", href: "/contact" },
   ],
   modules: [
