@@ -2,8 +2,9 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Languages, Mail, MessageCircle } from "lucide-react"
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -12,66 +13,33 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import {
+  getLocaleFromPathname,
+  localizeHref,
+  navigationMenus,
+  shellCopy,
+  switchLocalePath,
+  type Locale,
+} from "@/lib/i18n"
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
 
 const navigationItems: readonly { title: string; href: string }[] = []
 
-const dropdownMenus = [
-  {
-    title: "Modules",
-    items: [
-      { title: "Production", href: "/modules/production" },
-      { title: "Quality", href: "/modules/quality" },
-      { title: "Maintenance", href: "/modules/maintenance" },
-      { title: "Energy", href: "/modules/energy" },
-      { title: "Analysis", href: "/modules/analysis" },
-      { title: "IoT", href: "/modules/iot" },
-      { title: "ERP Shopfloor", href: "/modules/erp-shopfloor" },
-      { title: "MES", href: "/modules/mes" },
-    ],
-  },
-  {
-    title: "Services",
-    items: [
-      { title: "Smart Operations", href: "/services/smart-operations" },
-      { title: "AI Agentic Solutions", href: "/services/ai-solutions" },
-      { title: "Automation", href: "/services/automation" },
-      { title: "Business Intelligence", href: "/services/business-intelligence" },
-    ],
-  },
-  {
-    title: "Customers",
-    items: [
-      { title: "Carl Hansen & Søn", href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai" },
-      { title: "DFI Geisler", href: "/blog/dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights" },
-      { title: "Kvik", href: "/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud" },
-      { title: "Steel Products", href: "/blog/optimizing-machine-performance-and-power-consumption-with-opticloud-at-steel-products" },
-      { title: "Dansk Træemballage", href: "/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud" },
-      { title: "XL-BYG Brejnholt", href: "/blog/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging" },
-    ],
-  },
-  {
-    title: "Resources",
-    items: [
-      { title: "Insights", href: "/insights" },
-      { title: "Videos", href: "/videos" },
-      { title: "Newsletter", href: "/newsletter" },
-      { title: "People", href: "/resources/people" },
-      { title: "Get Help", href: "/get-help" },
-      { title: "Contact", href: "/contact" },
-      { title: "About", href: "/about" },
-    ],
-  },
-] as const
-
 export function SiteHeader() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const pathname = usePathname()
+  const locale = getLocaleFromPathname(pathname)
+  const dropdownMenus = navigationMenus[locale]
+  const copy = shellCopy[locale]
 
   return (
     <header className="w-full bg-background/95 backdrop-blur-md sticky top-0 z-20">
       <div className="h-16 flex items-center justify-between px-6 lg:px-8">
-        <Link href="/" className="cursor-pointer flex items-center gap-3">
+        <Link
+          href={localizeHref("/", locale)}
+          className="cursor-pointer flex items-center gap-3"
+        >
           <Image
             src={logo}
             alt="Optipeople"
@@ -86,14 +54,14 @@ export function SiteHeader() {
         <nav
           className="hidden md:flex items-center gap-2 text-gray-700 font-medium text-sm"
           role="navigation"
-          aria-label="Main navigation"
+          aria-label={copy.navigationLabel}
         >
           {navigationItems.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localizeHref(item.href, locale)}
               className="cursor-pointer px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
-              aria-label={`Navigate to ${item.title} page`}
+              aria-label={copy.linkLabel(item.title)}
             >
               {item.title}
             </Link>
@@ -111,7 +79,7 @@ export function SiteHeader() {
                   className="cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
                   aria-expanded={openDropdown === menu.title}
                   aria-haspopup="true"
-                  aria-label={`${menu.title} menu`}
+                  aria-label={copy.menuLabel(menu.title)}
                 >
                   <span>{menu.title}</span>
                   <ChevronDown
@@ -127,7 +95,7 @@ export function SiteHeader() {
                 align="start"
                 sideOffset={8}
                 className="w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2"
-                aria-label={`${menu.title} submenu`}
+                aria-label={copy.submenuLabel(menu.title)}
               >
                 {menu.items.map((item) => (
                   <DropdownMenuItem
@@ -136,9 +104,9 @@ export function SiteHeader() {
                     className="p-0 focus:bg-transparent"
                   >
                     <Link
-                      href={item.href}
+                      href={localizeHref(item.href, locale)}
                       className="cursor-pointer block w-full px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset rounded-md"
-                      aria-label={`Navigate to ${item.title} page`}
+                      aria-label={copy.linkLabel(item.title)}
                     >
                       {item.title}
                     </Link>
@@ -149,11 +117,31 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Button asChild size="sm">
-          <Link href="/contact" className="cursor-pointer">
-            Talk to us
-          </Link>
-        </Button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher locale={locale} pathname={pathname} />
+          <Button asChild size="sm" variant="outline" className="px-3 md:px-4">
+            <Link
+              href={localizeHref("/newsletter", locale)}
+              className="cursor-pointer"
+              aria-label={copy.newsletterSignUp}
+            >
+              <Mail className="h-4 w-4 md:hidden" aria-hidden="true" />
+              <span className="hidden md:inline">{copy.newsletterSignUp}</span>
+              <span className="sr-only md:hidden">{copy.newsletterSignUp}</span>
+            </Link>
+          </Button>
+          <Button asChild size="sm" className="px-3 md:px-4">
+            <Link
+              href={localizeHref("/contact", locale)}
+              className="cursor-pointer"
+              aria-label={copy.talkToUs}
+            >
+              <MessageCircle className="h-4 w-4 md:hidden" aria-hidden="true" />
+              <span className="hidden md:inline">{copy.talkToUs}</span>
+              <span className="sr-only md:hidden">{copy.talkToUs}</span>
+            </Link>
+          </Button>
+        </div>
       </div>
 
       <div className="flex flex-col">
@@ -171,5 +159,42 @@ export function SiteHeader() {
         />
       </div>
     </header>
+  )
+}
+
+function LanguageSwitcher({
+  locale,
+  pathname,
+}: {
+  locale: Locale
+  pathname: string
+}) {
+  const copy = shellCopy[locale]
+
+  return (
+    <div
+      className="flex items-center gap-1 rounded-full border border-border bg-white p-1"
+      aria-label={copy.languageLabel}
+    >
+      <Languages className="hidden h-4 w-4 text-muted-foreground sm:block" />
+      {(["en", "da"] as const).map((language) => {
+        const isActive = locale === language
+
+        return (
+          <a
+            key={language}
+            href={switchLocalePath(pathname, language)}
+            aria-current={isActive ? "page" : undefined}
+            className={`rounded-full px-2.5 py-1 text-xs font-medium transition-colors ${
+              isActive
+                ? "bg-foreground text-background"
+                : "text-foreground/65 hover:bg-muted hover:text-foreground"
+            }`}
+          >
+            {copy.languages[language]}
+          </a>
+        )
+      })}
+    </div>
   )
 }

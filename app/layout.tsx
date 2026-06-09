@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ClientOnlyHeader } from "@/components/client-only-header";
 import { SiteFooter } from "@/components/site-footer";
-import { CallToAction } from "@/components/call-to-action";
+import { LocalizedCallToAction } from "@/components/localized-call-to-action";
+import { headers } from "next/headers";
 import { absoluteUrl, siteName, siteUrl } from "@/lib/seo";
+import { getLocaleFromPathname } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,11 +38,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headerStore = await headers();
+  const pathname = headerStore.get("x-pathname") ?? "/";
+  const locale = getLocaleFromPathname(pathname);
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -57,7 +62,7 @@ export default function RootLayout({
     "@type": "WebSite",
     name: siteName,
     url: siteUrl,
-    inLanguage: "en",
+    inLanguage: locale,
     publisher: {
       "@type": "Organization",
       name: siteName,
@@ -68,7 +73,7 @@ export default function RootLayout({
     "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap";
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -113,12 +118,7 @@ export default function RootLayout({
       >
         <ClientOnlyHeader />
         <main className="flex-1">{children}</main>
-        <CallToAction
-          title="Turn insight into action"
-          description="Stop guessing. Start running on facts."
-          primaryLabel="Book a talk"
-          primaryHref="/contact"
-        />
+        <LocalizedCallToAction />
         <SiteFooter />
       </body>
     </html>

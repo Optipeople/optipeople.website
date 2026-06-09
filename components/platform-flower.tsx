@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react"
 import { cn } from "@/lib/utils"
+import type { Locale } from "@/lib/i18n"
 
 interface ModuleNode {
   id: string
@@ -17,7 +18,7 @@ interface ModuleNode {
   connections: string[] // ids of connected modules
 }
 
-const modules: ModuleNode[] = [
+const englishModules: ModuleNode[] = [
   {
     id: "opticloud",
     name: "OptiCloud",
@@ -29,7 +30,7 @@ const modules: ModuleNode[] = [
     textColor: "light",
     x: 50,
     y: 50,
-    connections: ["production", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"],
+    connections: ["production", "mes", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"],
   },
   {
     id: "production",
@@ -42,7 +43,20 @@ const modules: ModuleNode[] = [
     textColor: "light",
     x: 50,
     y: 12,
-    connections: ["opticloud", "quality", "iot"],
+    connections: ["opticloud", "quality", "iot", "mes"],
+  },
+  {
+    id: "mes",
+    name: "MES",
+    description: "Run execution in the cloud",
+    pitch: "OptiCloud brings manufacturing execution, live shopfloor visibility, traceability, and reporting into one cloud-based MES layer.",
+    features: ["Manufacturing execution", "Shopfloor dashboards", "Production traceability"],
+    bgVar: "--green-dark2",
+    borderVar: "--green-dark3",
+    textColor: "light",
+    x: 22,
+    y: 22,
+    connections: ["opticloud", "production", "quality", "maintenance", "analysis", "erp-shopfloor", "iot"],
   },
   {
     id: "quality",
@@ -53,9 +67,9 @@ const modules: ModuleNode[] = [
     bgVar: "--yellow-dark2",
     borderVar: "--yellow-dark3",
     textColor: "dark",
-    x: 80,
-    y: 26,
-    connections: ["opticloud", "production", "erp-shopfloor"],
+    x: 78,
+    y: 22,
+    connections: ["opticloud", "production", "erp-shopfloor", "mes"],
   },
   {
     id: "erp-shopfloor",
@@ -66,9 +80,9 @@ const modules: ModuleNode[] = [
     bgVar: "--purple-dark1",
     borderVar: "--purple-dark2",
     textColor: "light",
-    x: 87,
-    y: 59,
-    connections: ["opticloud", "quality", "maintenance"],
+    x: 88,
+    y: 50,
+    connections: ["opticloud", "quality", "maintenance", "mes"],
   },
   {
     id: "maintenance",
@@ -79,9 +93,9 @@ const modules: ModuleNode[] = [
     bgVar: "--orange-dark2",
     borderVar: "--orange-dark3",
     textColor: "light",
-    x: 67,
-    y: 84,
-    connections: ["opticloud", "erp-shopfloor", "energy"],
+    x: 78,
+    y: 78,
+    connections: ["opticloud", "erp-shopfloor", "energy", "mes"],
   },
   {
     id: "energy",
@@ -92,8 +106,8 @@ const modules: ModuleNode[] = [
     bgVar: "--orange-dark3",
     borderVar: "--orange-dark3",
     textColor: "light",
-    x: 34,
-    y: 84,
+    x: 50,
+    y: 88,
     connections: ["opticloud", "maintenance", "analysis"],
   },
   {
@@ -105,9 +119,9 @@ const modules: ModuleNode[] = [
     bgVar: "--green-light2",
     borderVar: "--green-light1",
     textColor: "dark",
-    x: 13,
-    y: 59,
-    connections: ["opticloud", "energy", "iot"],
+    x: 22,
+    y: 78,
+    connections: ["opticloud", "energy", "iot", "mes"],
   },
   {
     id: "iot",
@@ -118,16 +132,164 @@ const modules: ModuleNode[] = [
     bgVar: "--green-dark1",
     borderVar: "--green-dark2",
     textColor: "light",
-    x: 20,
-    y: 26,
-    connections: ["opticloud", "production", "analysis"],
+    x: 12,
+    y: 50,
+    connections: ["opticloud", "production", "analysis", "mes"],
   },
 ]
 
-// Module IDs for auto-rotation (excluding opticloud center)
-const rotationOrder = ["production", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"]
+const danishModules: ModuleNode[] = [
+  {
+    id: "opticloud",
+    name: "OptiCloud",
+    description: "Dit fælles datagrundlag",
+    pitch:
+      "Al produktionsdata samlet ét sted. Forbind maskiner, systemer og mennesker, så beslutninger bygger på fakta i stedet for mavefornemmelser.",
+    features: ["Dataopsamling i realtid", "Sikker cloud-infrastruktur", "Åbne API-integrationer"],
+    bgVar: "--green-dark3",
+    borderVar: "--green-dark3",
+    textColor: "light",
+    x: 50,
+    y: 50,
+    connections: ["production", "mes", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"],
+  },
+  {
+    id: "production",
+    name: "Produktion",
+    description: "Se hvor tiden går tabt",
+    pitch:
+      "Følg OEE i realtid, og forstå præcis hvor produktionstiden forsvinder. Stop med at gætte, og begynd at forbedre.",
+    features: ["Live OEE-dashboards", "Stopårsagsregistrering", "Ordresporing"],
+    bgVar: "--purple-dark2",
+    borderVar: "--purple-dark1",
+    textColor: "light",
+    x: 50,
+    y: 12,
+    connections: ["opticloud", "quality", "iot", "mes"],
+  },
+  {
+    id: "mes",
+    name: "MES",
+    description: "Styr eksekvering i cloud",
+    pitch:
+      "OptiCloud samler manufacturing execution, live shopfloor-overblik, sporbarhed og rapportering i ét cloudbaseret MES-lag.",
+    features: ["Manufacturing execution", "Shopfloor-dashboards", "Produktionssporbarhed"],
+    bgVar: "--green-dark2",
+    borderVar: "--green-dark3",
+    textColor: "light",
+    x: 22,
+    y: 22,
+    connections: ["opticloud", "production", "quality", "maintenance", "analysis", "erp-shopfloor", "iot"],
+  },
+  {
+    id: "quality",
+    name: "Kvalitet",
+    description: "Byg ansvarlighed ind",
+    pitch:
+      "Registrer kvalitetsdata ved kilden, og spor hver afvigelse tilbage til maskiner, batches og skift.",
+    features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelsesregistrering"],
+    bgVar: "--yellow-dark2",
+    borderVar: "--yellow-dark3",
+    textColor: "dark",
+    x: 78,
+    y: 22,
+    connections: ["opticloud", "production", "erp-shopfloor", "mes"],
+  },
+  {
+    id: "erp-shopfloor",
+    name: "ERP Shopfloor",
+    description: "Forbind ERP og gulv",
+    pitch:
+      "ERP kender planen. Maskinerne kender virkeligheden. OptiCloud forbinder de to, så planlæggere får realtidsdata og operatører får den rigtige kontekst.",
+    features: ["Tovejssynk med ERP", "Ordresporing", "Live shopfloor-dashboards"],
+    bgVar: "--purple-dark1",
+    borderVar: "--purple-dark2",
+    textColor: "light",
+    x: 88,
+    y: 50,
+    connections: ["opticloud", "quality", "maintenance", "mes"],
+  },
+  {
+    id: "maintenance",
+    name: "Vedligehold",
+    description: "Løs det før det stopper",
+    pitch:
+      "Gå fra reaktiv brandslukning til planlagt vedligehold. Reducer uplanlagt nedetid, og forlæng udstyrets levetid.",
+    features: ["Forebyggende planlægning", "Prediktive alarmer", "Mobil opgavestyring"],
+    bgVar: "--orange-dark2",
+    borderVar: "--orange-dark3",
+    textColor: "light",
+    x: 78,
+    y: 78,
+    connections: ["opticloud", "erp-shopfloor", "energy", "mes"],
+  },
+  {
+    id: "energy",
+    name: "Energi",
+    description: "Skær spild væk",
+    pitch:
+      "Kobl energiforbrug direkte til produktionen. Find afvigelser og optimeringsmuligheder automatisk.",
+    features: ["Live kWh-sporing", "Sensortelemetri", "Afvigelsesdetektion"],
+    bgVar: "--orange-dark3",
+    borderVar: "--orange-dark3",
+    textColor: "light",
+    x: 50,
+    y: 88,
+    connections: ["opticloud", "maintenance", "analysis"],
+  },
+  {
+    id: "analysis",
+    name: "Analyse",
+    description: "Fra data til beslutning",
+    pitch:
+      "Gør rå produktionsdata til klare rapporter om performance, tab og omkostningsdrivere uden manuelle regneark.",
+    features: ["Automatiske rapporter", "Omkostningsanalyse", "Investeringsgrundlag"],
+    bgVar: "--green-light2",
+    borderVar: "--green-light1",
+    textColor: "dark",
+    x: 22,
+    y: 78,
+    connections: ["opticloud", "energy", "iot", "mes"],
+  },
+  {
+    id: "iot",
+    name: "IoT",
+    description: "Få data fra alt",
+    pitch:
+      "Forbind maskiner, sensorer og systemer til platformen. Hent data fra PLC'er, IoT-gateways og ældre udstyr uanset protokol.",
+    features: ["Plug-and-play forbindelser", "Protokoluafhængig opsamling", "Edge dataopsamling"],
+    bgVar: "--green-dark1",
+    borderVar: "--green-dark2",
+    textColor: "light",
+    x: 12,
+    y: 50,
+    connections: ["opticloud", "production", "analysis", "mes"],
+  },
+]
 
-export function PlatformFlower() {
+const platformIntro = {
+  en: {
+    eyebrow: "Platform",
+    title: "Connected by design",
+    description:
+      "Every module shares data seamlessly, creating a unified view of your operations",
+    centerLabel: "OptiCloud Platform",
+  },
+  da: {
+    eyebrow: "Platform",
+    title: "Forbundet fra starten",
+    description:
+      "Alle moduler deler data på tværs og skaber ét samlet billede af driften",
+    centerLabel: "OptiCloud platform",
+  },
+} as const
+
+// Module IDs for auto-rotation (excluding opticloud center)
+const rotationOrder = ["production", "mes", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"]
+
+export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
+  const modules = locale === "da" ? danishModules : englishModules
+  const intro = platformIntro[locale]
   const [activeModule, setActiveModule] = useState<string | null>(null)
   const [hoveredModule, setHoveredModule] = useState<string | null>(null)
   const [autoRotateIndex, setAutoRotateIndex] = useState(0)
@@ -194,13 +356,13 @@ export function PlatformFlower() {
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-4">
-            Platform
+            {intro.eyebrow}
           </p>
           <h2 className="text-4xl lg:text-6xl font-light text-foreground tracking-tight">
-            Connected by design
+            {intro.title}
           </h2>
           <p className="mt-5 text-xl text-muted-foreground max-w-2xl mx-auto">
-            Every module shares data seamlessly, creating a unified view of your operations
+            {intro.description}
           </p>
         </div>
 
@@ -233,7 +395,7 @@ export function PlatformFlower() {
                 className="px-6 py-3 rounded-full text-white font-semibold text-sm shadow-lg"
                 style={{ backgroundColor: "var(--green-dark3)" }}
               >
-                OptiCloud Platform
+                {intro.centerLabel}
               </div>
             </div>
           </div>

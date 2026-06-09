@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog-data";
 import { absoluteUrl } from "@/lib/seo";
+import { addLocalePrefix } from "@/lib/i18n";
 
 const staticRoutes = [
   "/",
@@ -41,12 +42,25 @@ const staticRoutes = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticEntries = staticRoutes.map((route) => ({
-    url: absoluteUrl(route),
-    lastModified: now,
-    changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : route.startsWith("/contact") ? 0.9 : 0.7,
-  })) satisfies MetadataRoute.Sitemap;
+  const staticEntries = staticRoutes.flatMap((route) => {
+    const changeFrequency = route === "/" ? "weekly" : "monthly";
+    const priority = route === "/" ? 1 : route.startsWith("/contact") ? 0.9 : 0.7;
+
+    return [
+      {
+        url: absoluteUrl(addLocalePrefix(route, "en")),
+        lastModified: now,
+        changeFrequency,
+        priority,
+      },
+      {
+        url: absoluteUrl(addLocalePrefix(route, "da")),
+        lastModified: now,
+        changeFrequency,
+        priority: Math.max(priority - 0.05, 0.5),
+      },
+    ];
+  }) satisfies MetadataRoute.Sitemap;
 
   const blogEntries = getAllPosts().map((post) => ({
     url: absoluteUrl(`/blog/${post.slug}`),

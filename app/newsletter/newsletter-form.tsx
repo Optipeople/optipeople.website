@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react"
 import { ArrowRight, CheckCircle2, Mail } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import type { Locale } from "@/lib/i18n"
 
 type FormStatus = "idle" | "loading" | "success" | "error"
 
@@ -14,9 +15,65 @@ type FormErrors = Partial<{
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-export function NewsletterForm() {
+const formCopy = {
+  en: {
+    errors: {
+      emailRequired: "Please enter your email address",
+      emailInvalid: "Please enter a valid email address",
+      consentRequired: "Please confirm that we can send you the newsletter",
+      submit: "Something went wrong. Please try again or email us directly.",
+    },
+    successTitle: "You're on the list",
+    successBody:
+      "Thanks for signing up. The next OptiPeople update will land in your inbox when it is ready.",
+    title: "Sign up for the newsletter",
+    body:
+      "Get practical ideas about production data, OEE, maintenance, and digital operations.",
+    website: "Website",
+    name: "Name",
+    optional: "(optional)",
+    namePlaceholder: "Your name",
+    company: "Company",
+    companyPlaceholder: "Company name",
+    email: "Email",
+    emailPlaceholder: "you@company.com",
+    consent:
+      "I agree to receive emails from OptiPeople and understand that I can unsubscribe at any time.",
+    loading: "Signing up...",
+    submit: "Subscribe",
+  },
+  da: {
+    errors: {
+      emailRequired: "Indtast din emailadresse",
+      emailInvalid: "Indtast en gyldig emailadresse",
+      consentRequired: "Bekræft, at vi må sende dig nyhedsbrevet",
+      submit: "Noget gik galt. Prøv igen, eller skriv direkte til os.",
+    },
+    successTitle: "Du er på listen",
+    successBody:
+      "Tak for din tilmelding. Næste OptiPeople-opdatering lander i din indbakke, når den er klar.",
+    title: "Tilmeld dig nyhedsbrevet",
+    body:
+      "Få praktiske ideer om produktionsdata, OEE, vedligehold og digital drift.",
+    website: "Website",
+    name: "Navn",
+    optional: "(valgfrit)",
+    namePlaceholder: "Dit navn",
+    company: "Virksomhed",
+    companyPlaceholder: "Virksomhedsnavn",
+    email: "Email",
+    emailPlaceholder: "dig@virksomhed.dk",
+    consent:
+      "Jeg accepterer at modtage emails fra OptiPeople og forstår, at jeg kan afmelde mig når som helst.",
+    loading: "Tilmelder...",
+    submit: "Tilmeld",
+  },
+} as const
+
+export function NewsletterForm({ locale = "en" }: { locale?: Locale }) {
   const [status, setStatus] = useState<FormStatus>("idle")
   const [errors, setErrors] = useState<FormErrors>({})
+  const copy = formCopy[locale]
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -38,13 +95,13 @@ export function NewsletterForm() {
     const nextErrors: FormErrors = {}
 
     if (!email.trim()) {
-      nextErrors.email = "Please enter your email address"
+      nextErrors.email = copy.errors.emailRequired
     } else if (!emailPattern.test(email)) {
-      nextErrors.email = "Please enter a valid email address"
+      nextErrors.email = copy.errors.emailInvalid
     }
 
     if (!consent) {
-      nextErrors.consent = "Please confirm that we can send you the newsletter"
+      nextErrors.consent = copy.errors.consentRequired
     }
 
     if (Object.keys(nextErrors).length > 0) {
@@ -85,11 +142,10 @@ export function NewsletterForm() {
           <CheckCircle2 className="h-6 w-6" aria-hidden="true" />
         </div>
         <h2 className="mt-6 text-2xl font-light tracking-tight text-foreground">
-          You&apos;re on the list
+          {copy.successTitle}
         </h2>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-          Thanks for signing up. The next OptiPeople update will land in your
-          inbox when it is ready.
+          {copy.successBody}
         </p>
       </div>
     )
@@ -106,15 +162,14 @@ export function NewsletterForm() {
       </div>
 
       <h2 className="mt-6 text-2xl font-light tracking-tight text-foreground">
-        Sign up for the newsletter
+        {copy.title}
       </h2>
       <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-        Get practical ideas about production data, OEE, maintenance, and digital
-        operations.
+        {copy.body}
       </p>
 
       <div className="absolute opacity-0 pointer-events-none" aria-hidden="true">
-        <label htmlFor="newsletter-website">Website</label>
+        <label htmlFor="newsletter-website">{copy.website}</label>
         <input
           id="newsletter-website"
           type="text"
@@ -127,35 +182,35 @@ export function NewsletterForm() {
       <div className="mt-8 space-y-5">
         <div className="space-y-2">
           <label htmlFor="newsletter-name" className="text-sm font-medium">
-            Name <span className="font-normal text-muted-foreground">(optional)</span>
+            {copy.name} <span className="font-normal text-muted-foreground">{copy.optional}</span>
           </label>
           <input
             id="newsletter-name"
             name="name"
             type="text"
             className="h-11 w-full rounded-sm border border-input bg-background px-4 text-base text-foreground placeholder:text-muted-foreground transition-colors focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
-            placeholder="Your name"
+            placeholder={copy.namePlaceholder}
             autoComplete="name"
           />
         </div>
 
         <div className="space-y-2">
           <label htmlFor="newsletter-company" className="text-sm font-medium">
-            Company <span className="font-normal text-muted-foreground">(optional)</span>
+            {copy.company} <span className="font-normal text-muted-foreground">{copy.optional}</span>
           </label>
           <input
             id="newsletter-company"
             name="company"
             type="text"
             className="h-11 w-full rounded-sm border border-input bg-background px-4 text-base text-foreground placeholder:text-muted-foreground transition-colors focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
-            placeholder="Company name"
+            placeholder={copy.companyPlaceholder}
             autoComplete="organization"
           />
         </div>
 
         <div className="space-y-2">
           <label htmlFor="newsletter-email" className="text-sm font-medium">
-            Email
+            {copy.email}
           </label>
           <input
             id="newsletter-email"
@@ -163,7 +218,7 @@ export function NewsletterForm() {
             type="email"
             required
             className="h-11 w-full rounded-sm border border-input bg-background px-4 text-base text-foreground placeholder:text-muted-foreground transition-colors focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/50"
-            placeholder="you@company.com"
+            placeholder={copy.emailPlaceholder}
             autoComplete="email"
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? "newsletter-email-error" : undefined}
@@ -187,8 +242,7 @@ export function NewsletterForm() {
               }
             />
             <span>
-              I agree to receive emails from OptiPeople and understand that I can
-              unsubscribe at any time.
+              {copy.consent}
             </span>
           </label>
           {errors.consent && (
@@ -201,7 +255,7 @@ export function NewsletterForm() {
 
       {status === "error" && (
         <p className="mt-5 text-sm text-destructive">
-          Something went wrong. Please try again or email us directly.
+          {copy.errors.submit}
         </p>
       )}
 
@@ -211,7 +265,7 @@ export function NewsletterForm() {
         disabled={status === "loading"}
         className="mt-8 w-full sm:w-auto"
       >
-        {status === "loading" ? "Signing up..." : "Subscribe"}
+        {status === "loading" ? copy.loading : copy.submit}
         <ArrowRight className="h-4 w-4" aria-hidden="true" />
       </Button>
     </form>

@@ -17,6 +17,10 @@ type PostArchiveProps = {
   postsPerPage?: number
   backHref?: string
   backLabel?: string
+  postBasePath?: string
+  paginationLabel?: string
+  previousLabel?: string
+  nextLabel?: string
 }
 
 export function PostArchive({
@@ -31,6 +35,10 @@ export function PostArchive({
   postsPerPage = 10,
   backHref,
   backLabel,
+  postBasePath = "/blog",
+  paginationLabel = "Pagination",
+  previousLabel = "Previous",
+  nextLabel = "Next",
 }: PostArchiveProps) {
   const totalPages = Math.max(1, Math.ceil(posts.length / postsPerPage))
   const validPage = Math.min(currentPage, totalPages)
@@ -71,7 +79,7 @@ export function PostArchive({
           <>
             <div className="grid gap-8 lg:gap-12">
               {featuredPost && (
-                <Link href={`/blog/${featuredPost.slug}`} className="group block">
+                <Link href={`${postBasePath}/${featuredPost.slug}`} className="group block">
                   <article className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div className="relative aspect-[4/3] lg:aspect-[16/10] overflow-hidden rounded-2xl bg-muted border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
                       {featuredPost.image && (
@@ -102,7 +110,7 @@ export function PostArchive({
               {secondaryPosts.length > 0 && (
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 pt-8 border-t border-border/50">
                   {secondaryPosts.map((post) => (
-                    <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+                    <Link key={post.slug} href={`${postBasePath}/${post.slug}`} className="group block">
                       <article className="space-y-4">
                         <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-muted border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
                           {post.image && (
@@ -128,19 +136,19 @@ export function PostArchive({
             </div>
 
             {totalPages > 1 && (
-              <nav className="mt-16 flex items-center justify-center gap-2" aria-label="Pagination">
+              <nav className="mt-16 flex items-center justify-center gap-2" aria-label={paginationLabel}>
                 {validPage > 1 ? (
                   <Link
                     href={pageHref(validPage - 1)}
                     className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
                   >
                     <ChevronLeft className="w-4 h-4" />
-                    Previous
+                    {previousLabel}
                   </Link>
                 ) : (
                   <span className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/30 cursor-not-allowed">
                     <ChevronLeft className="w-4 h-4" />
-                    Previous
+                    {previousLabel}
                   </span>
                 )}
 
@@ -165,12 +173,12 @@ export function PostArchive({
                     href={pageHref(validPage + 1)}
                     className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
                   >
-                    Next
+                    {nextLabel}
                     <ChevronRight className="w-4 h-4" />
                   </Link>
                 ) : (
                   <span className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/30 cursor-not-allowed">
-                    Next
+                    {nextLabel}
                     <ChevronRight className="w-4 h-4" />
                   </span>
                 )}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { addLocalePrefix, removeLocalePrefix, type Locale } from "@/lib/i18n";
 
 export const siteName = "OptiPeople";
 export const siteUrl =
@@ -7,7 +8,6 @@ export const siteUrl =
   "https://optipeople-website.vercel.app";
 
 const defaultOgImage = "/images/dashboard2.png";
-const defaultLocale = "en_US";
 
 type MetadataOptions = {
   title: string;
@@ -16,6 +16,7 @@ type MetadataOptions = {
   image?: string;
   keywords?: string[];
   type?: "website" | "article";
+  locale?: Locale;
 };
 
 export function absoluteUrl(path = "/") {
@@ -29,9 +30,14 @@ export function buildMetadata({
   image = defaultOgImage,
   keywords = [],
   type = "website",
+  locale = "en",
 }: MetadataOptions): Metadata {
-  const canonical = absoluteUrl(path);
+  const unprefixedPath = removeLocalePrefix(path);
+  const localizedPath = addLocalePrefix(unprefixedPath, locale);
+  const canonical = absoluteUrl(localizedPath);
   const socialImage = absoluteUrl(image);
+  const englishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "en"));
+  const danishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "da"));
 
   return {
     title,
@@ -39,6 +45,11 @@ export function buildMetadata({
     keywords,
     alternates: {
       canonical,
+      languages: {
+        en: englishUrl,
+        da: danishUrl,
+        "x-default": englishUrl,
+      },
     },
     openGraph: {
       type,
@@ -46,7 +57,8 @@ export function buildMetadata({
       title,
       description,
       siteName,
-      locale: defaultLocale,
+      locale: locale === "da" ? "da_DK" : "en_US",
+      alternateLocale: [locale === "da" ? "en_US" : "da_DK"],
       images: [
         {
           url: socialImage,

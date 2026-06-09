@@ -1,33 +1,17 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
-
-const footerLinks = {
-  company: [
-    { title: "About", href: "/about" },
-    { title: "Newsletter", href: "/newsletter" },
-    { title: "Contact", href: "/contact" },
-  ],
-  modules: [
-    { title: "Production", href: "/modules/production" },
-    { title: "Quality", href: "/modules/quality" },
-    { title: "Maintenance", href: "/modules/maintenance" },
-    { title: "Energy", href: "/modules/energy" },
-    { title: "Analysis", href: "/modules/analysis" },
-  ],
-  services: [
-    { title: "Smart Operations", href: "/services/smart-operations" },
-    { title: "AI Agentic Solutions", href: "/services/ai-solutions" },
-    { title: "Automation", href: "/services/automation" },
-    { title: "Business Intelligence", href: "/services/business-intelligence" },
-  ],
-  legal: [
-    { title: "Privacy Policy", href: "/privacy" },
-    { title: "Terms of Service", href: "/terms" },
-  ],
-} as const
+import {
+  footerLinks,
+  getLocaleFromPathname,
+  localizeHref,
+  shellCopy,
+} from "@/lib/i18n"
 
 const contactInfo = {
   email: "hej@optipeople.dk",
@@ -49,6 +33,10 @@ const socialLinks = [
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear()
+  const pathname = usePathname()
+  const locale = getLocaleFromPathname(pathname)
+  const links = footerLinks[locale]
+  const copy = shellCopy[locale].footer
 
   return (
     <footer className="w-full bg-[var(--gray-10)] text-white">
@@ -74,7 +62,7 @@ export function SiteFooter() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
             {/* Brand column */}
             <div className="lg:col-span-1">
-              <Link href="/" className="inline-block mb-6">
+              <Link href={localizeHref("/", locale)} className="inline-block mb-6">
                 <Image
                   src={logo}
                   alt="Optipeople"
@@ -85,7 +73,7 @@ export function SiteFooter() {
                 <span className="sr-only">Optipeople</span>
               </Link>
               <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                One platform for production, performance, and connected operations.
+                {copy.brand}
               </p>
 
               {/* Contact info */}
@@ -122,13 +110,13 @@ export function SiteFooter() {
             {/* Company links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                Company
+                {copy.company}
               </h3>
               <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
+                {links.company.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.href}
+                      href={localizeHref(link.href, locale)}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -141,13 +129,13 @@ export function SiteFooter() {
             {/* Modules links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                Modules
+                {copy.modules}
               </h3>
               <ul className="space-y-3">
-                {footerLinks.modules.map((link) => (
+                {links.modules.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.href}
+                      href={localizeHref(link.href, locale)}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -160,13 +148,13 @@ export function SiteFooter() {
             {/* Services links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                Services
+                {copy.services}
               </h3>
               <ul className="space-y-3">
-                {footerLinks.services.map((link) => (
+                {links.services.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.href}
+                      href={localizeHref(link.href, locale)}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -179,13 +167,13 @@ export function SiteFooter() {
             {/* Legal links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                Legal
+                {copy.legal}
               </h3>
               <ul className="space-y-3">
-                {footerLinks.legal.map((link) => (
+                {links.legal.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.href}
+                      href={localizeHref(link.href, locale)}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -197,7 +185,7 @@ export function SiteFooter() {
               {/* Social links */}
               <div className="mt-8">
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                  Connect
+                  {copy.connect}
                 </h3>
                 <div className="flex gap-3">
                   {socialLinks.map((social) => (
@@ -207,7 +195,7 @@ export function SiteFooter() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all duration-200"
-                      aria-label={`Follow us on ${social.title}`}
+                      aria-label={copy.followLabel(social.title)}
                     >
                       <social.icon className="w-5 h-5" aria-hidden="true" />
                     </a>
@@ -221,10 +209,10 @@ export function SiteFooter() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-sm text-gray-500">
-                {currentYear} {contactInfo.companyName}. All rights reserved.
+                {currentYear} {contactInfo.companyName}. {copy.rights}
               </p>
               <p className="text-sm text-gray-500">
-                Connected operations made simple
+                {copy.tagline}
               </p>
             </div>
           </div>
