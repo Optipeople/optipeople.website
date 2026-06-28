@@ -7,10 +7,10 @@ import {
   useState,
   type FormEvent,
 } from "react"
-import { usePathname } from "next/navigation"
 import { ArrowRight, Check, X } from "lucide-react"
+import { useTranslations } from "next-intl"
 
-import { getLocaleFromPathname, shellCopy } from "@/lib/i18n"
+import { usePathname } from "@/i18n/navigation"
 
 type PromptMode = "slide" | "modal"
 type FormStatus = "idle" | "loading" | "success" | "error"
@@ -58,15 +58,33 @@ function remember(status: "dismissed" | "subscribed") {
 }
 
 export function NewsletterPrompt() {
+  // next-intl's usePathname returns the path without the locale prefix.
   const pathname = usePathname()
-  const locale = getLocaleFromPathname(pathname)
-  const copy = shellCopy[locale].newsletterPrompt
+  const t = useTranslations("newsletterPrompt")
+  const copy: Copy = {
+    eyebrow: t("eyebrow"),
+    title: t("title"),
+    body: t("body"),
+    exitTitle: t("exitTitle"),
+    exitBody: t("exitBody"),
+    emailPlaceholder: t("emailPlaceholder"),
+    consent: t("consent"),
+    submit: t("submit"),
+    loading: t("loading"),
+    successTitle: t("successTitle"),
+    successBody: t("successBody"),
+    close: t("close"),
+    noThanks: t("noThanks"),
+    emailInvalid: t("emailInvalid"),
+    consentRequired: t("consentRequired"),
+    errorSubmit: t("errorSubmit"),
+  }
 
   const [mode, setMode] = useState<PromptMode | null>(null)
   const [visible, setVisible] = useState(false)
   const triggered = useRef(false)
 
-  const normalizedPath = (pathname ?? "/").replace(/^\/da(?=\/|$)/, "") || "/"
+  const normalizedPath = pathname || "/"
   const pathSuppressed = SUPPRESSED_PATHS.some(
     (p) => normalizedPath === p || normalizedPath.startsWith(`${p}/`)
   )
@@ -180,7 +198,24 @@ export function NewsletterPrompt() {
   )
 }
 
-type Copy = (typeof shellCopy)[keyof typeof shellCopy]["newsletterPrompt"]
+type Copy = {
+  eyebrow: string
+  title: string
+  body: string
+  exitTitle: string
+  exitBody: string
+  emailPlaceholder: string
+  consent: string
+  submit: string
+  loading: string
+  successTitle: string
+  successBody: string
+  close: string
+  noThanks: string
+  emailInvalid: string
+  consentRequired: string
+  errorSubmit: string
+}
 
 function ModalShell({
   visible,

@@ -1,17 +1,13 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import { Linkedin, Mail, Phone, MapPin } from "lucide-react"
-import { usePathname } from "next/navigation"
+import { useLocale, useTranslations } from "next-intl"
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
-import {
-  footerLinks,
-  getLocaleFromPathname,
-  localizeHref,
-  shellCopy,
-} from "@/lib/i18n"
+import { Link } from "@/i18n/navigation"
+import { footerLinks } from "@/i18n/navigation-data"
+import type { Locale } from "@/i18n/routing"
 
 const contactInfo = {
   email: "hej@optipeople.dk",
@@ -33,10 +29,9 @@ const socialLinks = [
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear()
-  const pathname = usePathname()
-  const locale = getLocaleFromPathname(pathname)
+  const locale = useLocale() as Locale
   const links = footerLinks[locale]
-  const copy = shellCopy[locale].footer
+  const t = useTranslations("chrome.footer")
 
   return (
     <footer className="w-full bg-[var(--gray-10)] text-white">
@@ -62,7 +57,7 @@ export function SiteFooter() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
             {/* Brand column */}
             <div className="lg:col-span-1">
-              <Link href={localizeHref("/", locale)} className="inline-block mb-6">
+              <Link href="/" className="inline-block mb-6">
                 <Image
                   src={logo}
                   alt="Optipeople"
@@ -73,7 +68,7 @@ export function SiteFooter() {
                 <span className="sr-only">Optipeople</span>
               </Link>
               <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                {copy.brand}
+                {t("brand")}
               </p>
 
               {/* Contact info */}
@@ -110,13 +105,13 @@ export function SiteFooter() {
             {/* Company links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                {copy.company}
+                {t("company")}
               </h3>
               <ul className="space-y-3">
                 {links.company.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={localizeHref(link.href, locale)}
+                      href={link.href}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -129,13 +124,13 @@ export function SiteFooter() {
             {/* Modules links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                {copy.modules}
+                {t("modules")}
               </h3>
               <ul className="space-y-3">
                 {links.modules.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={localizeHref(link.href, locale)}
+                      href={link.href}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -148,13 +143,13 @@ export function SiteFooter() {
             {/* Services links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                {copy.services}
+                {t("services")}
               </h3>
               <ul className="space-y-3">
                 {links.services.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={localizeHref(link.href, locale)}
+                      href={link.href}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -167,13 +162,13 @@ export function SiteFooter() {
             {/* Legal links */}
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                {copy.legal}
+                {t("legal")}
               </h3>
               <ul className="space-y-3">
                 {links.legal.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={localizeHref(link.href, locale)}
+                      href={link.href}
                       className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                     >
                       {link.title}
@@ -185,7 +180,7 @@ export function SiteFooter() {
               {/* Social links */}
               <div className="mt-8">
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-300 mb-4">
-                  {copy.connect}
+                  {t("connect")}
                 </h3>
                 <div className="flex gap-3">
                   {socialLinks.map((social) => (
@@ -195,7 +190,7 @@ export function SiteFooter() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all duration-200"
-                      aria-label={copy.followLabel(social.title)}
+                      aria-label={t("followLabel", { title: social.title })}
                     >
                       <social.icon className="w-5 h-5" aria-hidden="true" />
                     </a>
@@ -209,10 +204,10 @@ export function SiteFooter() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-sm text-gray-500">
-                {currentYear} {contactInfo.companyName}. {copy.rights}
+                {currentYear} {contactInfo.companyName}. {t("rights")}
               </p>
               <p className="text-sm text-gray-500">
-                {copy.tagline}
+                {t("tagline")}
               </p>
             </div>
           </div>

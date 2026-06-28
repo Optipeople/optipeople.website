@@ -1,0 +1,107 @@
+{
+  "chrome": {
+    "navigationLabel": "Main navigation",
+    "menuLabel": "{title} menu",
+    "submenuLabel": "{title} submenu",
+    "linkLabel": "Navigate to {title} page",
+    "talkToUs": "Talk to us",
+    "newsletterSignUp": "Newsletter",
+    "login": "Log in",
+    "loginMenu": {
+      "portal": "Portal",
+      "platform": "Platform",
+      "aiAssist": "Opti Assist (AI)"
+    },
+    "languageLabel": "Choose language",
+    "languages": {
+      "en": "EN",
+      "da": "DA"
+    },
+    "footer": {
+      "brand": "One platform for production, performance, and connected operations.",
+      "company": "Company",
+      "modules": "Modules",
+      "services": "Services",
+      "legal": "Legal",
+      "connect": "Connect",
+      "rights": "All rights reserved.",
+      "tagline": "Connected operations made simple",
+      "followLabel": "Follow us on {title}"
+    }
+  },
+  "cta": {
+    "title": "Turn insight into action",
+    "description": "Stop guessing. Start running on facts.",
+    "primaryLabel": "Book a talk"
+  },
+  "newsletterPrompt": {
+    "eyebrow": "Newsletter",
+    "title": "Enjoying the read?",
+    "body": "Practical factory notes — production data, OEE, and maintenance. No noise.",
+    "exitTitle": "Before you go",
+    "exitBody": "Get practical factory notes in your inbox. No noise, unsubscribe anytime.",
+    "emailPlaceholder": "you@company.com",
+    "consent": "By subscribing, you agree to receive emails from OptiPeople. Unsubscribe anytime.",
+    "submit": "Subscribe",
+    "loading": "Signing up…",
+    "successTitle": "You're on the list",
+    "successBody": "Thanks — the next update will land in your inbox.",
+    "close": "Close",
+    "noThanks": "No thanks",
+    "emailInvalid": "Please enter a valid email address",
+    "consentRequired": "Please confirm you'd like to receive the newsletter",
+    "errorSubmit": "Something went wrong. Please try again."
+  },
+  "newsletterForm": {
+    "errorEmailRequired": "Please enter your email address",
+    "errorEmailInvalid": "Please enter a valid email address",
+    "errorConsentRequired": "Please confirm that we can send you the newsletter",
+    "errorSubmit": "Something went wrong. Please try again or email us directly.",
+    "successTitle": "You're on the list",
+    "successBody": "Thanks for signing up. The next OptiPeople update will land in your inbox when it is ready.",
+    "website": "Website",
+    "name": "Name",
+    "optional": "optional",
+    "namePlaceholder": "Your name",
+    "company": "Company",
+    "companyPlaceholder": "Company name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "consent": "I agree to receive emails from OptiPeople and can unsubscribe at any time.",
+    "loading": "Signing up",
+    "submit": "Subscribe",
+    "privacy": "No spam. Unsubscribe anytime."
+  },
+  "contactForm": {
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Phone",
+    "phoneOptional": "(optional)",
+    "phonePlaceholder": "+45 12 34 56 78",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your situation",
+    "send": "Send message",
+    "sending": "Sending...",
+    "errorName": "Please enter your name",
+    "errorEmailRequired": "Please enter your email address",
+    "errorEmailInvalid": "Please enter a valid email address",
+    "errorSubmit": "Something went wrong. Please try again or email us directly.",
+    "successTitle": "Thanks for reaching out",
+    "successBody": "We'll get back to you within one business day."
+  },
+  "pageTemplate": {
+    "bookDemo": "Book a demo",
+    "seeCapabilities": "See capabilities",
+    "seeHow": "See how",
+    "productView": "Product view",
+    "typicalResults": "Typical results",
+    "relatedFeatures": "Related features"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has moved.",
+    "backHome": "Back to home"
+  }
+}

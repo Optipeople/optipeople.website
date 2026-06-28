@@ -1,0 +1,107 @@
+{
+  "chrome": {
+    "navigationLabel": "Hovednavigation",
+    "menuLabel": "{title} menu",
+    "submenuLabel": "{title} undermenu",
+    "linkLabel": "Gå til {title}",
+    "talkToUs": "Tal med os",
+    "newsletterSignUp": "Nyhedsbrev",
+    "login": "Log ind",
+    "loginMenu": {
+      "portal": "Portal",
+      "platform": "Platform",
+      "aiAssist": "Opti Assist (AI)"
+    },
+    "languageLabel": "Vælg sprog",
+    "languages": {
+      "en": "EN",
+      "da": "DA"
+    },
+    "footer": {
+      "brand": "Én platform til produktion, performance og forbundne driftsteams.",
+      "company": "Virksomhed",
+      "modules": "Moduler",
+      "services": "Services",
+      "legal": "Juridisk",
+      "connect": "Følg os",
+      "rights": "Alle rettigheder forbeholdes.",
+      "tagline": "Forbundet drift gjort enkelt",
+      "followLabel": "Følg os på {title}"
+    }
+  },
+  "cta": {
+    "title": "Gør indsigt til handling",
+    "description": "Stop med at gætte. Begynd at styre på fakta.",
+    "primaryLabel": "Book en snak"
+  },
+  "newsletterPrompt": {
+    "eyebrow": "Nyhedsbrev",
+    "title": "Kan du lide det, du læser?",
+    "body": "Praktiske noter fra produktionen — produktionsdata, OEE og vedligehold. Ingen støj.",
+    "exitTitle": "Inden du går",
+    "exitBody": "Få praktiske noter fra produktionen i din indbakke. Ingen støj, afmeld når som helst.",
+    "emailPlaceholder": "dig@virksomhed.dk",
+    "consent": "Ved at tilmelde dig accepterer du at modtage emails fra OptiPeople. Afmeld når som helst.",
+    "submit": "Tilmeld",
+    "loading": "Tilmelder…",
+    "successTitle": "Du er på listen",
+    "successBody": "Tak — næste opdatering lander i din indbakke.",
+    "close": "Luk",
+    "noThanks": "Nej tak",
+    "emailInvalid": "Indtast en gyldig emailadresse",
+    "consentRequired": "Bekræft, at du vil modtage nyhedsbrevet",
+    "errorSubmit": "Noget gik galt. Prøv igen."
+  },
+  "newsletterForm": {
+    "errorEmailRequired": "Indtast din emailadresse",
+    "errorEmailInvalid": "Indtast en gyldig emailadresse",
+    "errorConsentRequired": "Bekræft, at vi må sende dig nyhedsbrevet",
+    "errorSubmit": "Noget gik galt. Prøv igen, eller skriv direkte til os.",
+    "successTitle": "Du er på listen",
+    "successBody": "Tak for din tilmelding. Næste OptiPeople-opdatering lander i din indbakke, når den er klar.",
+    "website": "Website",
+    "name": "Navn",
+    "optional": "valgfrit",
+    "namePlaceholder": "Dit navn",
+    "company": "Virksomhed",
+    "companyPlaceholder": "Virksomhedsnavn",
+    "email": "Email",
+    "emailPlaceholder": "dig@virksomhed.dk",
+    "consent": "Jeg accepterer at modtage emails fra OptiPeople og kan afmelde mig når som helst.",
+    "loading": "Tilmelder",
+    "submit": "Tilmeld",
+    "privacy": "Ingen spam. Afmeld når som helst."
+  },
+  "contactForm": {
+    "name": "Navn",
+    "namePlaceholder": "Dit navn",
+    "email": "Email",
+    "emailPlaceholder": "dig@virksomhed.dk",
+    "phone": "Telefon",
+    "phoneOptional": "(valgfrit)",
+    "phonePlaceholder": "+45 12 34 56 78",
+    "message": "Besked",
+    "messagePlaceholder": "Fortæl os om jeres situation",
+    "send": "Send besked",
+    "sending": "Sender...",
+    "errorName": "Indtast dit navn",
+    "errorEmailRequired": "Indtast din emailadresse",
+    "errorEmailInvalid": "Indtast en gyldig emailadresse",
+    "errorSubmit": "Noget gik galt. Prøv igen, eller skriv direkte til os.",
+    "successTitle": "Tak for din besked",
+    "successBody": "Vi vender tilbage inden for én arbejdsdag."
+  },
+  "pageTemplate": {
+    "bookDemo": "Book en demo",
+    "seeCapabilities": "Se muligheder",
+    "seeHow": "Se hvordan",
+    "productView": "Produktvisning",
+    "typicalResults": "Typiske resultater",
+    "relatedFeatures": "Relaterede funktioner"
+  },
+  "notFound": {
+    "title": "Siden blev ikke fundet",
+    "body": "Siden, du leder efter, findes ikke eller er flyttet.",
+    "backHome": "Tilbage til forsiden"
+  }
+}

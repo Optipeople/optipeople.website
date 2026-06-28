@@ -1,16 +1,9 @@
-import { NextResponse, type NextRequest } from "next/server"
+import createMiddleware from "next-intl/middleware"
+import { routing } from "./i18n/routing"
 
-export function proxy(request: NextRequest) {
-  const requestHeaders = new Headers(request.headers)
-  requestHeaders.set("x-pathname", request.nextUrl.pathname)
-
-  return NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  })
-}
+export default createMiddleware(routing)
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)"],
+  // Skip API routes, Next internals, the static /admin app, and any file with an extension.
+  matcher: ["/((?!api|_next|_vercel|admin|.*\\..*).*)"],
 }

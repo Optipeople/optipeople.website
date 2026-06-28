@@ -1,25 +1,20 @@
 "use client"
 
-import { usePathname } from "next/navigation"
+import { useLocale, useTranslations } from "next-intl"
 
 import { CallToAction } from "@/components/call-to-action"
-import {
-  getLocaleFromPathname,
-  localizeHref,
-  shellCopy,
-} from "@/lib/i18n"
+import { addLocalePrefix, type Locale } from "@/lib/i18n"
 
 export function LocalizedCallToAction() {
-  const pathname = usePathname()
-  const locale = getLocaleFromPathname(pathname)
-  const copy = shellCopy[locale].cta
+  const locale = useLocale() as Locale
+  const t = useTranslations("cta")
 
   return (
     <CallToAction
-      title={copy.title}
-      description={copy.description}
-      primaryLabel={copy.primaryLabel}
-      primaryHref={localizeHref("/contact", locale)}
+      title={t("title")}
+      description={t("description")}
+      primaryLabel={t("primaryLabel")}
+      primaryHref={addLocalePrefix("/contact", locale)}
       className="bg-muted"
     />
   )

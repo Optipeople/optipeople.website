@@ -1,10 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import { ChevronDown, LogIn, MessageCircle } from "lucide-react"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { usePathname } from "next/navigation"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -13,14 +12,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import {
-  getLocaleFromPathname,
-  localizeHref,
-  navigationMenus,
-  shellCopy,
-  switchLocalePath,
-  type Locale,
-} from "@/lib/i18n"
+import { Link, usePathname } from "@/i18n/navigation"
+import { navigationMenus } from "@/i18n/navigation-data"
+import type { Locale } from "@/i18n/routing"
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
 
@@ -32,10 +26,9 @@ const HOVER_CLOSE_DELAY = 120
 
 export function SiteHeader() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const pathname = usePathname()
-  const locale = getLocaleFromPathname(pathname)
+  const locale = useLocale() as Locale
+  const t = useTranslations("chrome")
   const dropdownMenus = navigationMenus[locale]
-  const copy = shellCopy[locale]
 
   // Only drive menus by hover on devices that actually have a hovering pointer
   // (mouse/trackpad). On touch, hover events are unreliable, so we fall back to
@@ -88,16 +81,16 @@ export function SiteHeader() {
     <>
       <div className="border-b border-border/60 bg-muted/40">
         <div className="flex h-7 items-center justify-end gap-4 px-6 lg:px-8">
-          <LoginMenu locale={locale} />
+          <LoginMenu />
           <span className="h-4 w-px bg-border" aria-hidden="true" />
-          <LanguageSwitcher locale={locale} pathname={pathname} />
+          <LanguageSwitcher />
         </div>
       </div>
 
       <header className="w-full sticky top-0 z-20 bg-background/95 backdrop-blur-md">
       <div className="h-16 flex items-center justify-between px-6 lg:px-8">
         <Link
-          href={localizeHref("/", locale)}
+          href="/"
           className="cursor-pointer flex items-center gap-3"
         >
           <Image
@@ -114,14 +107,14 @@ export function SiteHeader() {
         <nav
           className="hidden md:flex items-center gap-2 text-gray-700 font-medium text-sm"
           role="navigation"
-          aria-label={copy.navigationLabel}
+          aria-label={t("navigationLabel")}
         >
           {navigationItems.map((item) => (
             <Link
               key={item.href}
-              href={localizeHref(item.href, locale)}
+              href={item.href}
               className="cursor-pointer px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
-              aria-label={copy.linkLabel(item.title)}
+              aria-label={t("linkLabel", { title: item.title })}
             >
               {item.title}
             </Link>
@@ -138,7 +131,7 @@ export function SiteHeader() {
                 <button
                   type="button"
                   className="cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 data-[state=open]:bg-gray-100 data-[state=open]:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
-                  aria-label={copy.menuLabel(menu.title)}
+                  aria-label={t("menuLabel", { title: menu.title })}
                   {...hoverProps(menu.title)}
                 >
                   <span>{menu.title}</span>
@@ -160,7 +153,7 @@ export function SiteHeader() {
                   if (hoverEnabled) event.preventDefault()
                 }}
                 className="w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2"
-                aria-label={copy.submenuLabel(menu.title)}
+                aria-label={t("submenuLabel", { title: menu.title })}
                 {...hoverProps(menu.title)}
               >
                 {menu.items.map((item) => (
@@ -170,9 +163,9 @@ export function SiteHeader() {
                     className="p-0 focus:bg-transparent"
                   >
                     <Link
-                      href={localizeHref(item.href, locale)}
+                      href={item.href}
                       className="cursor-pointer block w-full px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset rounded-md"
-                      aria-label={copy.linkLabel(item.title)}
+                      aria-label={t("linkLabel", { title: item.title })}
                     >
                       {item.title}
                     </Link>
@@ -186,13 +179,13 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="px-3 md:px-4">
             <Link
-              href={localizeHref("/contact", locale)}
+              href="/contact"
               className="cursor-pointer"
-              aria-label={copy.talkToUs}
+              aria-label={t("talkToUs")}
             >
               <MessageCircle className="h-4 w-4 md:hidden" aria-hidden="true" />
-              <span className="hidden md:inline">{copy.talkToUs}</span>
-              <span className="sr-only md:hidden">{copy.talkToUs}</span>
+              <span className="hidden md:inline">{t("talkToUs")}</span>
+              <span className="sr-only md:hidden">{t("talkToUs")}</span>
             </Link>
           </Button>
         </div>
@@ -217,12 +210,12 @@ export function SiteHeader() {
   )
 }
 
-function LoginMenu({ locale }: { locale: Locale }) {
-  const copy = shellCopy[locale]
+function LoginMenu() {
+  const t = useTranslations("chrome")
   const logins = [
-    { label: copy.loginMenu.portal, href: "https://portal.optipeople.dk/" },
-    { label: copy.loginMenu.platform, href: "https://cloud.optipeople.dk/" },
-    { label: copy.loginMenu.aiAssist, href: "https://ai.optipeople.dk/" },
+    { label: t("loginMenu.portal"), href: "https://portal.optipeople.dk/" },
+    { label: t("loginMenu.platform"), href: "https://cloud.optipeople.dk/" },
+    { label: t("loginMenu.aiAssist"), href: "https://ai.optipeople.dk/" },
   ]
 
   return (
@@ -231,10 +224,10 @@ function LoginMenu({ locale }: { locale: Locale }) {
         <button
           type="button"
           className="cursor-pointer flex items-center gap-1.5 text-xs font-medium text-foreground/65 hover:text-foreground data-[state=open]:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2 rounded"
-          aria-label={copy.login}
+          aria-label={t("login")}
         >
           <LogIn className="h-3.5 w-3.5" aria-hidden="true" />
-          <span>{copy.login}</span>
+          <span>{t("login")}</span>
           <ChevronDown className="h-3 w-3" aria-hidden="true" />
         </button>
       </DropdownMenuTrigger>
@@ -262,19 +255,15 @@ function LoginMenu({ locale }: { locale: Locale }) {
   )
 }
 
-function LanguageSwitcher({
-  locale,
-  pathname,
-}: {
-  locale: Locale
-  pathname: string
-}) {
-  const copy = shellCopy[locale]
+function LanguageSwitcher() {
+  const t = useTranslations("chrome")
+  const locale = useLocale() as Locale
+  const pathname = usePathname()
 
   return (
     <div
       className="flex items-center gap-1.5 text-xs font-medium"
-      aria-label={copy.languageLabel}
+      aria-label={t("languageLabel")}
     >
       {(["en", "da"] as const).map((language, index) => {
         const isActive = locale === language
@@ -286,8 +275,9 @@ function LanguageSwitcher({
                 /
               </span>
             )}
-            <a
-              href={switchLocalePath(pathname, language)}
+            <Link
+              href={pathname}
+              locale={language}
               aria-current={isActive ? "page" : undefined}
               className={`cursor-pointer rounded px-0.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2 ${
                 isActive
@@ -295,8 +285,8 @@ function LanguageSwitcher({
                   : "text-foreground/55 hover:text-foreground"
               }`}
             >
-              {copy.languages[language]}
-            </a>
+              {t(`languages.${language}`)}
+            </Link>
           </span>
         )
       })}
