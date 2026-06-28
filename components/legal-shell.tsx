@@ -1,0 +1,42 @@
+import type { Locale } from "@/i18n/routing"
+
+const lastUpdated: Record<Locale, string> = {
+  en: "Last updated: 28 June 2026",
+  da: "Senest opdateret: 28. juni 2026",
+}
+
+export function LegalShell({
+  eyebrow,
+  title,
+  locale,
+  children,
+}: {
+  eyebrow: string
+  title: string
+  locale: Locale
+  children: React.ReactNode
+}) {
+  return (
+    <main className="min-h-screen">
+      <section className="pt-16 sm:pt-24 pb-10 px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
+            {eyebrow}
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-light text-foreground tracking-tight leading-tight">
+            {title}
+          </h1>
+          <p className="mt-6 text-base text-muted-foreground">
+            {lastUpdated[locale]}
+          </p>
+        </div>
+      </section>
+
+      <section className="pb-20 lg:pb-28 px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl prose prose-slate prose-headings:font-medium prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-p:leading-relaxed prose-a:text-foreground">
+          {children}
+        </div>
+      </section>
+    </main>
+  )
+}

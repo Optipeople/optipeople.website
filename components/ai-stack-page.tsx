@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CapabilityMockup } from "@/components/ai-stack-mockups"
 import { aiCapabilities, getAiCapability } from "@/lib/ai-stack"
-import { localizeHref, type Locale } from "@/lib/i18n"
+import { addLocalePrefix, type Locale } from "@/lib/i18n"
 
 /**
  * Bilingual landing-page template for a single AI capability.
@@ -20,8 +20,8 @@ export function AiStackPage({
   if (!cap) return null
 
   const c = cap.content[locale]
-  const homeHref = localizeHref("/", locale)
-  const contactHref = localizeHref("/contact", locale)
+  const homeHref = addLocalePrefix("/", locale)
+  const contactHref = addLocalePrefix("/contact", locale)
   const aiLabel = "AI"
 
   const related = aiCapabilities.filter((other) => other.slug !== cap.slug)
@@ -151,7 +151,7 @@ export function AiStackPage({
               return (
                 <Link
                   key={other.slug}
-                  href={localizeHref(other.href, locale)}
+                  href={addLocalePrefix(other.href, locale)}
                   className="group flex items-center justify-between rounded-2xl border border-border/60 bg-background p-5 transition-colors hover:border-border"
                 >
                   <div>

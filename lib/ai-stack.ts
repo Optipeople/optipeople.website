@@ -1,4 +1,4 @@
-import { localizeHref, type Locale } from "@/lib/i18n"
+import { addLocalePrefix, type Locale } from "@/lib/i18n"
 import type { SlideData } from "@/components/slide-carousel"
 
 export type AiCapabilitySlug =
@@ -477,7 +477,7 @@ export function aiStackSlides(locale: Locale): SlideData[] {
       title: c.cardTitle,
       description: c.cardSubtitle,
       primaryLabel: c.cardTitle,
-      primaryHref: localizeHref(cap.href, locale),
+      primaryHref: addLocalePrefix(cap.href, locale),
       bgColor: "",
       layout: "ai",
       cardColor: cap.theme.bg,
