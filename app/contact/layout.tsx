@@ -1,24 +1,11 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Contact OptiPeople",
   description:
     "Talk to OptiPeople about production monitoring, OEE, industrial integrations, and digital operations improvements for your factory.",
-  alternates: {
-    canonical: "/contact",
-  },
-  openGraph: {
-    title: "Contact OptiPeople",
-    description:
-      "Talk to OptiPeople about production monitoring, OEE, industrial integrations, and digital operations improvements for your factory.",
-    url: "/contact",
-  },
-  twitter: {
-    title: "Contact OptiPeople",
-    description:
-      "Talk to OptiPeople about production monitoring, OEE, industrial integrations, and digital operations improvements for your factory.",
-  },
-};
+  path: "/contact",
+});
 
 export default function ContactLayout({
   children,

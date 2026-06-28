@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
         destination: "/resources/people",
         permanent: true,
       },
+      {
+        source: "/resources",
+        destination: "/resources/people",
+        permanent: true,
+      },
+      {
+        source: "/da/resources",
+        destination: "/da/resources/people",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

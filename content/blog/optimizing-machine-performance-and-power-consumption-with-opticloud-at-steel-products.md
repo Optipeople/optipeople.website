@@ -4,6 +4,10 @@ date: "2024-11-28"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/stans-lille.jpg"
+customer: "Steel Products"
+metricLabel: "Energy per produced item"
+logo: "/images/logos/Steel-Products.png"
+outcome: "Machine performance and power use are tracked per item, linking energy consumption directly to output."
 ---
 
 ## At a Glance

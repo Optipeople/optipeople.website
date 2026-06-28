@@ -132,15 +132,24 @@
 
   /*
    * Font tokens are used by shadcn/Tailwind (@theme inline).
-   * We point them at IBM Plex (loaded in `app/layout.tsx`).
+   * The IBM Plex families are self-hosted via next/font in `app/layout.tsx`,
+   * which exposes them as the CSS variables referenced below.
    */
-  --font-sans: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "IBM Plex Serif", "Times New Roman", serif;
+  --font-sans: var(--font-ibm-plex-sans), system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-ibm-plex-serif), "Times New Roman", serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 
   --radius: 0.625rem;
+
+  /*
+   * Shared horizontal inset for the homepage sliders and their headings/nav.
+   * The first card, section headings, arrows and dots all line up on this edge,
+   * while the carousel viewports stay full-bleed so cards bleed off both screen
+   * edges as you navigate. Capped on wide screens so cards hug the left edge.
+   */
+  --edge: 1.5rem;
 
   --shadow-x: 0;
   --shadow-y: 1px;
@@ -164,6 +173,17 @@
 
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+}
+
+/*
+ * Slider inset on larger screens: tracks toward the centered max-w-6xl column
+ * but is capped at 9rem so cards sit close to the screen's left edge on wide
+ * monitors rather than drifting far inward.
+ */
+@media (min-width: 1024px) {
+  :root {
+    --edge: clamp(5rem, calc((100vw - 72rem) / 2), 20rem);
+  }
 }
 
 .dark {
@@ -207,8 +227,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-sans);
   }
 }
 

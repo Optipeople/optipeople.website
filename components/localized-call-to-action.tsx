@@ -20,6 +20,7 @@ export function LocalizedCallToAction() {
       description={copy.description}
       primaryLabel={copy.primaryLabel}
       primaryHref={localizeHref("/contact", locale)}
+      className="bg-muted"
     />
   )
 }

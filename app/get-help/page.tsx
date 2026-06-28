@@ -11,21 +11,25 @@ export const metadata = buildMetadata({
 
 const helpOptions = [
   {
-    title: "Documentation",
+    title: "Email support",
     description:
-      "Guides and references for getting the most out of Opticloud.",
+      "Write to us directly for technical issues or questions about your setup.",
+    href: "mailto:hej@optipeople.dk",
+    cta: "hej@optipeople.dk",
   },
   {
-    title: "Contact support",
+    title: "Contact the team",
     description:
-      "Reach our team directly for technical issues or questions about your setup.",
+      "Tell us what you need and we'll get back to you with the next step.",
     href: "/contact",
     cta: "Get in touch",
   },
   {
-    title: "FAQs",
+    title: "Meet the people",
     description:
-      "Answers to the most common questions about Opticloud, integrations, and deployment.",
+      "See who works with sales, projects, and technology at OptiPeople.",
+    href: "/resources/people",
+    cta: "Meet the team",
   },
 ]
 

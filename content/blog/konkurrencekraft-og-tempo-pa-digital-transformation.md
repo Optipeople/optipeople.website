@@ -4,6 +4,11 @@ date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/fiberline-results.png"
+customer: "Fiberline Composites"
+metric: "−41%"
+metricLabel: "unnecessary stops"
+quote: "Now stop reasons are being registered and we have a much better overview of our machines' efficiency."
+outcome: "Software-to-software machine data cut unnecessary stops by 41% and average time per stop by 6%."
 ---
 
 ## At a Glance

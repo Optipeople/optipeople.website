@@ -1,5 +1,5 @@
-import { PostArchive } from "@/components/post-archive"
-import { getPostsByCategory } from "@/lib/blog-data"
+import { CaseArchive } from "@/components/case-archive"
+import { getCaseStudies } from "@/lib/blog-data"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata = buildMetadata({
@@ -9,28 +9,22 @@ export const metadata = buildMetadata({
   path: "/cases",
 })
 
-interface CasesPageProps {
-  searchParams: Promise<{ page?: string }>
-}
-
-export default async function CasesPage({ searchParams }: CasesPageProps) {
-  const params = await searchParams
-  const currentPage = Math.max(1, parseInt(params.page || "1", 10))
-  const posts = getPostsByCategory("Cases")
+export default function CasesPage() {
+  const cases = getCaseStudies()
 
   return (
     <main>
-      <PostArchive
-        posts={posts}
-        basePath="/cases"
-        backHref="/insights"
-        backLabel="Back to insights"
-        eyebrow="Cases"
-        title="Real results from real factories"
+      <CaseArchive
+        cases={cases}
+        postBasePath="/blog"
+        backHref="/"
+        backLabel="Back to home"
+        eyebrow="Customer stories"
+        title="Results from the factory floor"
+        subtitle="How manufacturers use Opticloud to lift OEE, cut downtime, and turn production data into better decisions."
         emptyTitle="No case studies yet"
-        emptyBody="Case studies will appear here as customer stories are published."
-        ctaLabel="Read case study"
-        currentPage={currentPage}
+        emptyBody="Customer stories will appear here as they are published."
+        ctaLabel="Read story"
       />
     </main>
   )

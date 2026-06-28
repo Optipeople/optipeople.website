@@ -4,6 +4,10 @@ date: "2024-11-15"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog and case/dansk træemballage-768x500.jpg"
+customer: "Dansk Træemballage"
+metric: "+5%"
+metricLabel: "OEE in three months"
+outcome: "One production line, live uptime on the floor, and a 5% OEE lift within the first three months."
 ---
 
 ## At a Glance

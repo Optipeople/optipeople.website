@@ -4,6 +4,9 @@ date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/fiberline-ifix.png"
+customer: "Opticloud × iFix"
+metricLabel: "SCADA integration"
+outcome: "Opticloud structures machine and OEE data, then feeds it into a GE iFix SCADA environment for wider monitoring."
 ---
 
 ## At a Glance

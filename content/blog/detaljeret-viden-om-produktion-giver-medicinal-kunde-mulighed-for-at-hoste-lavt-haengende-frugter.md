@@ -4,6 +4,9 @@ date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/medicinal-customer.jpg"
+customer: "Medicinal producer"
+metricLabel: "Low-hanging fruit, made visible"
+outcome: "Real-time stop and uptime data let an animal-medicine producer act on efficiency gains without pressuring staff."
 ---
 
 ## At a Glance

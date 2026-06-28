@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
+import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import { ClientOnlyHeader } from "@/components/client-only-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalizedCallToAction } from "@/components/localized-call-to-action";
+import { NewsletterPrompt } from "@/components/newsletter-prompt";
 import { headers } from "next/headers";
 import { absoluteUrl, siteName, siteUrl } from "@/lib/seo";
 import { getLocaleFromPathname } from "@/lib/i18n";
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-ibm-plex-sans",
+});
+
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  variable: "--font-ibm-plex-serif",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -54,7 +70,7 @@ export default async function RootLayout({
     logo: absoluteUrl("/favicon.ico"),
     email: "hej@optipeople.dk",
     telephone: "+45 23 74 47 05",
-    sameAs: [],
+    sameAs: ["https://www.linkedin.com/company/optipeople-aps/"],
   };
 
   const websiteSchema = {
@@ -69,37 +85,12 @@ export default async function RootLayout({
     },
   };
 
-  const ibmPlexCssHref =
-    "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap";
-
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
-        <link rel="preload" as="style" href={ibmPlexCssHref} />
-        <link
-          id="ibm-plex-fonts"
-          rel="stylesheet"
-          href={ibmPlexCssHref}
-          media="print"
-          suppressHydrationWarning
-        />
-        <script
-          // Non-blocking CSS load pattern: upgrade media once stylesheet is loaded.
-          dangerouslySetInnerHTML={{
-            __html:
-              "(()=>{var l=document.getElementById('ibm-plex-fonts');if(!l)return;function s(){l.media='all'};if(l.sheet){s();return;}l.addEventListener('load',s);})();",
-          }}
-        />
-        <noscript>
-          <link rel="stylesheet" href={ibmPlexCssHref} />
-        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -120,6 +111,7 @@ export default async function RootLayout({
         <main className="flex-1">{children}</main>
         <LocalizedCallToAction />
         <SiteFooter />
+        <NewsletterPrompt />
       </body>
     </html>
   );

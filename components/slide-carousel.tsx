@@ -12,8 +12,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
+import { CapabilityMockup } from "@/components/ai-stack-mockups"
+import type { AiCapabilitySlug } from "@/lib/ai-stack"
 
-export type SlideLayout = "grid" | "overlay" | "vertical"
+export type SlideLayout = "grid" | "overlay" | "vertical" | "ai"
 
 export type SlideData = {
   title: string
@@ -26,6 +28,23 @@ export type SlideData = {
   tab?: string // For tab navigation
   layout?: SlideLayout // Layout type for this slide
   overlay?: "dark" | "light" | "none" // Overlay style (default: "dark")
+  // "ai" layout only: colored card background + code-built product mockup
+  cardColor?: string // Inline background color (hex) for the card
+  textTone?: "light" | "dark" // Text/arrow tone over the card color
+  mockup?: AiCapabilitySlug // Which capability mockup to render
+  // "vertical" layout only: tints the photo gradient with an AI-palette color
+  // instead of pure black (hex). See productSlideAccents in lib/ai-stack.
+  accentColor?: string
+}
+
+// Build an rgba() string from a #rrggbb hex and an alpha — used to tint the
+// vertical slide gradient with an AI-palette color.
+function hexToRgba(hex: string, alpha: number): string {
+  const h = hex.replace("#", "")
+  const r = parseInt(h.slice(0, 2), 16)
+  const g = parseInt(h.slice(2, 4), 16)
+  const b = parseInt(h.slice(4, 6), 16)
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
 
 export type NavigationType = "tabs" | "dots" | "arrows" | ("tabs" | "dots" | "arrows")[]
@@ -37,6 +56,25 @@ type SlideCarouselProps = {
   className?: string
   defaultLayout?: SlideLayout // Default layout if not specified per slide
 }
+
+// ── Shared layout system (Langdock-style) ────────────────────────────────────
+// Every homepage slider lines its first card up with the page's max-w-6xl
+// content column, then bleeds off the right edge of the viewport. These tokens
+// keep that geometry — and the gap, card height, and nav placement — identical
+// across all sliders.
+//
+// The slider inset (`--edge`) is a global token (see globals.css). It is applied
+// as padding on the carousel VIEWPORT, so the first card rests on the inset while
+// cards still bleed off both screen edges as you navigate.
+const VIEWPORT_INSET = "px-[var(--edge)]"
+// Navigation/heading column, left-anchored to the same inset as the first card.
+const COLUMN = "pl-[var(--edge)] pr-6 lg:pr-8"
+// Narrow cards (feature + AI layouts) share a fixed width and peek the next.
+const NARROW_ITEM = "basis-[88%] sm:basis-[420px] lg:basis-[380px]"
+// Wide cards (overlay + grid): centered between equal `--edge` margins on both
+// sides so the hero slider stays centered as the inset grows (rather than
+// bleeding off the right). Width tracks the inset, keeping left == right margin.
+const WIDE_ITEM = "basis-[90%] lg:basis-[calc(100vw-var(--edge)*2)]"
 
 export function SlideCarousel({
   slides,
@@ -56,18 +94,12 @@ export function SlideCarousel({
   const isTabClickRef = useRef(false) // Track if navigation came from tab click
 
   // Normalize navigationType to array
-  const navigationTypes = Array.isArray(navigationType) 
-    ? navigationType 
+  const navigationTypes = Array.isArray(navigationType)
+    ? navigationType
     : [navigationType]
   const hasTabs = navigationTypes.includes("tabs")
   const hasDots = navigationTypes.includes("dots")
   const hasArrows = navigationTypes.includes("arrows")
-  
-  // Check if any slide uses vertical layout
-  const hasVerticalLayout = useMemo(
-    () => slides.some((slide) => (slide.layout ?? defaultLayout) === "vertical"),
-    [slides, defaultLayout]
-  )
 
   const tabIds = useMemo(
     () => slides.map((s, i) => `carousel-tab-${i}-${s.tab?.toLowerCase().replace(/\s+/g, "-") ?? i}`),
@@ -79,11 +111,7 @@ export function SlideCarousel({
 
     const updateCurrent = () => {
       const snapIndex = api.selectedScrollSnap()
-      const actualIndex = Math.max(
-        0,
-        Math.min(snapIndex - 1, slides.length - 1)
-      )
-      setCurrent(actualIndex)
+      setCurrent(Math.max(0, Math.min(snapIndex, slides.length - 1)))
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
     }
@@ -91,7 +119,7 @@ export function SlideCarousel({
     updateCurrent()
     api.on("select", updateCurrent)
     api.on("reInit", updateCurrent)
-    
+
     // Reset tab click flag when carousel settles
     const onSettle = () => {
       isTabClickRef.current = false
@@ -104,73 +132,9 @@ export function SlideCarousel({
     }
   }, [api, slides.length])
 
-  // Ensure first slide is centered on initial load (only for non-vertical layouts)
-  useEffect(() => {
-    if (!api || hasVerticalLayout) return
-
-    let hasScrolled = false
-
-    const scrollToFirst = () => {
-      if (hasScrolled) return
-      // Scroll to first actual slide (index 1, after spacer) to center it
-      const currentIndex = api.selectedScrollSnap()
-      if (currentIndex === 0) {
-        api.scrollTo(1, true)
-        hasScrolled = true
-      }
-    }
-
-    // Wait for carousel to be ready and dimensions calculated
-    const handleReInit = () => {
-      requestAnimationFrame(() => {
-        scrollToFirst()
-      })
-    }
-
-    // Try immediately
-    requestAnimationFrame(scrollToFirst)
-
-    // Also try after a short delay to ensure DOM is ready
-    const timeoutId = setTimeout(scrollToFirst, 50)
-
-    // Listen for reInit events
-    api.on("reInit", handleReInit)
-
-    return () => {
-      clearTimeout(timeoutId)
-      api.off("reInit", handleReInit)
-    }
-  }, [api, hasVerticalLayout])
-
-  // For vertical layouts on mobile, scroll to first real slide (skip spacer)
-  useEffect(() => {
-    if (!api || !hasVerticalLayout) return
-
-    const isMobile = window.matchMedia("(max-width: 1023px)").matches
-    if (!isMobile) return
-
-    let hasScrolled = false
-
-    const scrollToFirst = () => {
-      if (hasScrolled) return
-      const currentIndex = api.selectedScrollSnap()
-      if (currentIndex === 0) {
-        api.scrollTo(1, true)
-        hasScrolled = true
-      }
-    }
-
-    requestAnimationFrame(scrollToFirst)
-    const timeoutId = setTimeout(scrollToFirst, 50)
-
-    return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [api, hasVerticalLayout])
-
   const scrollTo = (index: number, fromTabClick = false) => {
     isTabClickRef.current = fromTabClick
-    api?.scrollTo(index + 1)
+    api?.scrollTo(index)
   }
 
   const updateTabIndicator = () => {
@@ -191,10 +155,10 @@ export function SlideCarousel({
       const navEl = tabNavRef.current
       const indicatorEl = indicatorRef.current
       const wasTabClick = isTabClickRef.current
-      
+
       if (btnEl && navEl && indicatorEl) {
         updateTabIndicator()
-        
+
         // Scroll active tab into view (center it)
         const navRect = navEl.getBoundingClientRect()
         const btnRect = btnEl.getBoundingClientRect()
@@ -289,15 +253,15 @@ export function SlideCarousel({
     if (!hasDots) return null
 
     return (
-      <div className="flex justify-center gap-2.5 mt-6">
+      <div className={`${COLUMN} mt-8 flex gap-2.5`}>
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollTo(index)}
-            className={`cursor-pointer w-3 h-3 rounded-full transition-all ${
+            className={`cursor-pointer h-3 rounded-full transition-all ${
               current === index
                 ? "bg-foreground w-10"
-                : "bg-foreground/30 hover:bg-foreground/50"
+                : "w-3 bg-foreground/30 hover:bg-foreground/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -306,11 +270,34 @@ export function SlideCarousel({
     )
   }
 
-  const verticalItemClass =
-    "basis-[95%] lg:basis-[380px] shrink-0"
-  const verticalSpacerClass =
-    "basis-[95%] lg:basis-[22.5%] shrink-0"
-  const defaultItemClass = "basis-[95%] lg:basis-[55%]"
+  const renderArrows = () => {
+    if (!hasArrows) return null
+
+    return (
+      <div className={`${COLUMN} mt-8 flex items-center gap-3`}>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => api?.scrollPrev()}
+          disabled={!canScrollPrev}
+          className="cursor-pointer size-9 rounded-full border border-[var(--gray-2)] hover:bg-foreground/5"
+          aria-label="Previous slide"
+        >
+          <ChevronRight className="size-4 rotate-180" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => api?.scrollNext()}
+          disabled={!canScrollNext}
+          className="cursor-pointer size-9 rounded-full border border-[var(--gray-2)] hover:bg-foreground/5"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="size-4" />
+        </Button>
+      </div>
+    )
+  }
 
   return (
     <section className={className}>
@@ -321,295 +308,262 @@ export function SlideCarousel({
           setApi={setApi}
           opts={{
             loop: false,
-            align: "center",
-            startIndex: hasVerticalLayout ? 0 : 1,
+            align: "start",
+            containScroll: "trimSnaps",
             slidesToScroll: 1,
             duration: 40,
           }}
           aria-label={ariaLabel}
         >
-          <CarouselContent className="-ml-12">
-            {/* Spacer slide at start for centering */}
-            <CarouselItem
-              className={`pl-12 ${hasVerticalLayout ? verticalSpacerClass : defaultItemClass} flex-shrink-0`}
-              aria-hidden="true"
-            >
-              <div className="w-full" />
-            </CarouselItem>
-
+          <CarouselContent className="-ml-6" viewportClassName={VIEWPORT_INSET}>
             {slides.map((slide, index) => {
               const layout = slide.layout ?? defaultLayout
               const isVertical = layout === "vertical"
-              
-              const itemBasisClass = isVertical ? verticalItemClass : defaultItemClass
+              const isAi = layout === "ai"
+              const isNarrow = isVertical || isAi
+
+              const itemBasisClass = isNarrow ? NARROW_ITEM : WIDE_ITEM
 
               return (
                 <CarouselItem
                   key={slide.title}
-                  className={`pl-12 ${itemBasisClass} flex-shrink-0`}
+                  className={`pl-6 ${itemBasisClass}`}
                 >
-                  <div className="flex w-full justify-center">
-                    <div
-                      onClick={() => scrollTo(index)}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") scrollTo(index)
-                      }}
-                      role="button"
-                      tabIndex={0}
-                      aria-label={`Go to slide ${index + 1}: ${slide.title}`}
-                      className={`relative h-[600px] w-full rounded-4xl mb-5 overflow-hidden ${isVertical ? "" : slide.bgColor} cursor-pointer focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]`}
-                    >
-                      <Card className="p-0 bg-white/0 border-none text-foreground shadow-none w-full h-full">
-                        <CardContent className="h-full p-0">
-                          {layout === "grid" ? (
-                            <div className="grid h-full grid-cols-2 grid-rows-[2fr_1fr] gap-2">
-                              {/* Title block */}
-                              <div className="min-w-0 h-full bg-slate-100 rounded-4xl p-6 flex flex-col justify-center">
-                                <h3 className="text-5xl lg:text-5xl tracking-tight leading-[1.2] font-extralight">
-                                  {slide.title}
-                                </h3>
-                              </div>
-
-                              {/* Image block (spans both rows) */}
-                              <div className="relative row-span-2 overflow-hidden rounded-4xl bg-slate-100 p-6">
-                                <Image
-                                  src={slide.imageSrc ?? "/globe.svg"}
-                                  alt={slide.imageAlt ?? `${slide.title} illustration`}
-                                  fill
-                                  sizes="(min-width: 1024px) 40vw, 60vw"
-                                  className="object-contain p-10"
-                                  priority={index === 0}
-                                />
-
-                                <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-                                  <Button asChild variant="outline">
-                                    <Link
-                                      href={slide.primaryHref}
-                                      className="cursor-pointer"
-                                      onClick={(e) => e.stopPropagation()}
-                                      onKeyDown={(e) => e.stopPropagation()}
-                                    >
-                                      {slide.primaryLabel}
-                                    </Link>
-                                  </Button>
-                                </div>
-                              </div>
-
-                              {/* Subtitle block */}
-                              <div className="min-w-0 h-full bg-slate-100 rounded-4xl p-6 flex flex-col justify-center">
-                                <p className="text-base text-foreground/80">
-                                  {slide.description}
-                                </p>
-                              </div>
+                  <div
+                    onClick={() => scrollTo(index)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") scrollTo(index)
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+                    style={isAi ? { backgroundColor: slide.cardColor } : undefined}
+                    className={`relative h-[600px] w-full rounded-3xl overflow-hidden ${isVertical || isAi ? "" : slide.bgColor} cursor-pointer focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]`}
+                  >
+                    <Card className="p-0 bg-white/0 border-none text-foreground shadow-none w-full h-full">
+                      <CardContent className="h-full p-0">
+                        {layout === "grid" ? (
+                          <div className="grid h-full grid-cols-2 grid-rows-[2fr_1fr] gap-2">
+                            {/* Title block */}
+                            <div className="min-w-0 h-full bg-slate-100 rounded-3xl p-6 flex flex-col justify-center">
+                              <h3 className="text-5xl lg:text-5xl tracking-tight leading-[1.2] font-extralight">
+                                {slide.title}
+                              </h3>
                             </div>
-                          ) : layout === "overlay" ? (
-                            /* Overlay layout */
-                            <div className="relative h-full w-full overflow-hidden rounded-4xl">
-                              {/* Background image - sharp (visible on right) */}
+
+                            {/* Image block (spans both rows) */}
+                            <div className="relative row-span-2 overflow-hidden rounded-3xl bg-slate-100 p-6">
                               <Image
                                 src={slide.imageSrc ?? "/globe.svg"}
                                 alt={slide.imageAlt ?? `${slide.title} illustration`}
                                 fill
-                                sizes="100vw"
-                                className="object-cover"
+                                sizes="(min-width: 1024px) 40vw, 60vw"
+                                className="object-contain p-10"
                                 priority={index === 0}
                               />
-                              
-                              {/* Blurred layer with gradient mask (fades left to right) */}
-                              <div 
-                                className="absolute inset-0 overflow-hidden"
-                                style={{
-                                  maskImage: 'linear-gradient(to right, black 0%, black 15%, transparent 60%)',
-                                  WebkitMaskImage: 'linear-gradient(to right, black 0%, black 15%, transparent 70%)',
-                                }}
-                              >
-                                <div className="absolute -inset-4">
-                                  <Image
-                                    src={slide.imageSrc ?? "/globe.svg"}
-                                    alt=""
-                                    fill
-                                    sizes="100vw"
-                                    className="object-cover blur-md"
-                                    aria-hidden="true"
-                                  />
-                                </div>
-                              </div>
-                              
-                              {/* Color overlay (conditionally rendered) */}
-                              {slide.overlay !== "none" && (
-                                <div 
-                                  className="absolute inset-0"
-                                  style={{
-                                    maskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
-                                    WebkitMaskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
-                                  }}
-                                >
-                                  <div className={`absolute inset-0 ${slide.overlay === "light" ? "bg-white/90" : "bg-black/80"}`} />
-                                </div>
-                              )}
-                              
-                              {/* Content overlay */}
-                              <div className="relative z-10 h-full flex flex-col justify-center p-12 lg:p-20 max-w-[60%]">
-                                <h3 className={`text-4xl lg:text-5xl tracking-tight leading-[1.2] font-extralight mb-4 ${slide.overlay === "light" ? "text-black" : "text-white"}`}>
-                                  {slide.title}
-                                </h3>
-                                <p className={`text-lg lg:text-xl mb-8 ${slide.overlay === "light" ? "text-black/80" : "text-white/90"}`}>
-                                  {slide.description}
-                                </p>
-                                <div>
-                                  <Button asChild variant="green" className={slide.overlay === "light" ? "" : ""}>
-                                    <Link
-                                      href={slide.primaryHref}
-                                      className="cursor-pointer"
-                                      onClick={(e) => e.stopPropagation()}
-                                      onKeyDown={(e) => e.stopPropagation()}
-                                    >
-                                      {slide.primaryLabel}
-                                    </Link>
-                                  </Button>
-                                </div>
-                              </div>
-                            </div>
-                          ) : (
-                            /* Vertical layout */
-                            <div className="absolute inset-0 text-white">
-                              {/* Background image - fills container, positioned below bottom to push image down */}
-                              <div className="absolute inset-0 top-[30%]">
-                                <Image
-                                  src={slide.imageSrc ?? "/globe.svg"}
-                                  alt={slide.imageAlt ?? `${slide.title} illustration`}
-                                  fill
-                                  sizes="(min-width: 1024px) 25vw, 40vw"
-                                  className="object-cover object-top"
-                                  priority={index === 0}
-                                />
-                              </div>
-                              
-                              {/* Gradient overlay - fades image towards top */}
-                              <div 
-                                className="absolute inset-0 pointer-events-none"
-                                style={{
-                                  background: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 25%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.3) 75%, rgba(0,0,0,0) 100%)',
-                                }}
-                              />
-                              
-                              {/* Content overlay */}
-                              <div className="relative z-10 h-full flex flex-col">
-                                {/* Title */}
-                                <div className="px-6 pt-6 pb-2">
-                                  <h3 className="text-sm font-medium text-white/90 uppercase tracking-wide">
-                                    {slide.title}
-                                  </h3>
-                                </div>
-                                
-                                {/* Description */}
-                                <div className="px-6 pb-4">
-                                  <p className="text-xl lg:text-2xl font-light leading-tight">
-                                    {slide.description}
-                                  </p>
-                                </div>
-                                
-                                {/* Spacer to push button to bottom */}
-                                <div className="flex-1" />
-                              </div>
-                              
-                              {/* Angle-right icon button */}
-                              <div className="absolute bottom-6 right-6 z-10">
-                                <Button
-                                  asChild
-                                  size="icon"
-                                  variant="outline"
-                                  className="cursor-pointer rounded-full bg-black border-white/20 text-white hover:bg-white/10 hover:border-white/30"
-                                  onClick={(e) => e.stopPropagation()}
-                                >
+
+                              <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+                                <Button asChild variant="outline">
                                   <Link
                                     href={slide.primaryHref}
                                     className="cursor-pointer"
                                     onClick={(e) => e.stopPropagation()}
                                     onKeyDown={(e) => e.stopPropagation()}
-                                    aria-label={slide.primaryLabel}
                                   >
-                                    <ChevronRight className="size-5" />
+                                    {slide.primaryLabel}
                                   </Link>
                                 </Button>
                               </div>
                             </div>
-                          )}
-                        </CardContent>
-                      </Card>
-                    </div>
+
+                            {/* Subtitle block */}
+                            <div className="min-w-0 h-full bg-slate-100 rounded-3xl p-6 flex flex-col justify-center">
+                              <p className="text-base text-foreground/80">
+                                {slide.description}
+                              </p>
+                            </div>
+                          </div>
+                        ) : layout === "overlay" ? (
+                          /* Overlay layout */
+                          <div className="relative h-full w-full overflow-hidden rounded-3xl">
+                            {/* Background image - sharp (visible on right) */}
+                            <Image
+                              src={slide.imageSrc ?? "/globe.svg"}
+                              alt={slide.imageAlt ?? `${slide.title} illustration`}
+                              fill
+                              sizes="100vw"
+                              className="object-cover"
+                              priority={index === 0}
+                            />
+
+                            {/* Blurred layer with gradient mask (fades left to right) */}
+                            <div
+                              className="absolute inset-0 overflow-hidden"
+                              style={{
+                                maskImage: 'linear-gradient(to right, black 0%, black 15%, transparent 60%)',
+                                WebkitMaskImage: 'linear-gradient(to right, black 0%, black 15%, transparent 70%)',
+                              }}
+                            >
+                              <div className="absolute -inset-4">
+                                <Image
+                                  src={slide.imageSrc ?? "/globe.svg"}
+                                  alt=""
+                                  fill
+                                  sizes="100vw"
+                                  className="object-cover blur-md"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                            </div>
+
+                            {/* Color overlay (conditionally rendered) */}
+                            {slide.overlay !== "none" && (
+                              <div
+                                className="absolute inset-0"
+                                style={{
+                                  maskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
+                                  WebkitMaskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
+                                }}
+                              >
+                                <div className={`absolute inset-0 ${slide.overlay === "light" ? "bg-white/90" : "bg-black/80"}`} />
+                              </div>
+                            )}
+
+                            {/* Content overlay */}
+                            <div className="relative z-10 h-full flex flex-col justify-center p-12 lg:p-20 max-w-[60%]">
+                              <h3 className={`text-4xl lg:text-5xl tracking-tight leading-[1.2] font-extralight mb-4 ${slide.overlay === "light" ? "text-black" : "text-white"}`}>
+                                {slide.title}
+                              </h3>
+                              <p className={`text-lg lg:text-xl mb-8 ${slide.overlay === "light" ? "text-black/80" : "text-white/90"}`}>
+                                {slide.description}
+                              </p>
+                              <div>
+                                <Button asChild variant="green">
+                                  <Link
+                                    href={slide.primaryHref}
+                                    className="cursor-pointer"
+                                    onClick={(e) => e.stopPropagation()}
+                                    onKeyDown={(e) => e.stopPropagation()}
+                                  >
+                                    {slide.primaryLabel}
+                                  </Link>
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
+                        ) : layout === "vertical" ? (
+                          /* Vertical layout */
+                          <div className="absolute inset-0 text-white">
+                            {/* Background image - fills container, positioned below bottom to push image down */}
+                            <div className="absolute inset-0 top-[30%]">
+                              <Image
+                                src={slide.imageSrc ?? "/globe.svg"}
+                                alt={slide.imageAlt ?? `${slide.title} illustration`}
+                                fill
+                                sizes="(min-width: 1024px) 25vw, 40vw"
+                                className="object-cover object-center"
+                                priority={index === 0}
+                              />
+                            </div>
+
+                            {/* Gradient overlay - fades image towards top, tinted
+                                with the slide's AI-palette accent (falls back to black) */}
+                            {(() => {
+                              const tint = slide.accentColor ?? "#000000"
+                              return (
+                                <div
+                                  className="absolute inset-0 pointer-events-none"
+                                  style={{
+                                    background: `linear-gradient(to bottom, ${hexToRgba(tint, 1)} 0%, ${hexToRgba(tint, 0.98)} 25%, ${hexToRgba(tint, 0.7)} 50%, ${hexToRgba(tint, 0.3)} 75%, ${hexToRgba(tint, 0)} 100%)`,
+                                  }}
+                                />
+                              )
+                            })()}
+
+                            {/* Content overlay — AI-slide typographic hierarchy:
+                                prominent feature title + quieter supporting line */}
+                            <div className="relative z-10 h-full flex flex-col">
+                              <div className="px-7 pt-7">
+                                <h3 className="text-2xl font-medium tracking-tight text-white">
+                                  {slide.title}
+                                </h3>
+                                <p className="mt-2 max-w-[18rem] text-sm leading-relaxed text-white/70">
+                                  {slide.description}
+                                </p>
+                              </div>
+
+                              {/* Spacer to push button to bottom */}
+                              <div className="flex-1" />
+                            </div>
+
+                            {/* Angle-right icon button — AI-slide soft ring style */}
+                            <Link
+                              href={slide.primaryHref}
+                              onClick={(e) => e.stopPropagation()}
+                              onKeyDown={(e) => e.stopPropagation()}
+                              aria-label={slide.primaryLabel}
+                              className="absolute bottom-6 right-6 z-10 inline-flex size-10 items-center justify-center rounded-full bg-white text-slate-900 shadow-lg ring-1 ring-black/5 transition-transform hover:scale-105"
+                            >
+                              <ChevronRight className="size-5" />
+                            </Link>
+                          </div>
+                        ) : (
+                          /* AI capability layout */
+                          <div className="absolute inset-0">
+                            <div className="relative z-10 p-7">
+                              <h3
+                                className={`text-2xl font-medium tracking-tight ${
+                                  slide.textTone === "light"
+                                    ? "text-white"
+                                    : "text-slate-900"
+                                }`}
+                              >
+                                {slide.title}
+                              </h3>
+                              <p
+                                className={`mt-2 max-w-[15rem] text-sm leading-relaxed ${
+                                  slide.textTone === "light"
+                                    ? "text-white/70"
+                                    : "text-slate-600"
+                                }`}
+                              >
+                                {slide.description}
+                              </p>
+                              <Link
+                                href={slide.primaryHref}
+                                onClick={(e) => e.stopPropagation()}
+                                onKeyDown={(e) => e.stopPropagation()}
+                                aria-label={slide.primaryLabel}
+                                className={`mt-5 inline-flex size-9 items-center justify-center rounded-full ring-1 transition-colors ${
+                                  slide.textTone === "light"
+                                    ? "bg-white/10 text-white ring-white/20 hover:bg-white/20"
+                                    : "bg-black/5 text-slate-900 ring-black/10 hover:bg-black/10"
+                                }`}
+                              >
+                                <ChevronRight className="size-4" />
+                              </Link>
+                            </div>
+
+                            {/* Floating product mockup, cropped at the card's bottom edge */}
+                            {slide.mockup && (
+                              <div className="pointer-events-none absolute inset-x-7 top-[46%]">
+                                <CapabilityMockup slug={slide.mockup} />
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </CardContent>
+                    </Card>
                   </div>
                 </CarouselItem>
               )
             })}
-
-            {/* Spacer slide at end for centering */}
-            <CarouselItem
-              className={`pl-12 ${hasVerticalLayout ? verticalSpacerClass : defaultItemClass} flex-shrink-0`}
-              aria-hidden="true"
-            >
-              <div className="w-full" />
-            </CarouselItem>
           </CarouselContent>
         </Carousel>
       </div>
 
-      {/* Navigation arrows */}
-      {hasArrows && (
-        <div className="flex items-center justify-center gap-3 mt-8">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => api?.scrollPrev()}
-            disabled={!canScrollPrev}
-            className="cursor-pointer size-8 rounded-full hover:bg-foreground/10"
-            aria-label="Previous slide"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="stroke-foreground"
-            >
-              <path
-                d="M10 12L6 8L10 4"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => api?.scrollNext()}
-            disabled={!canScrollNext}
-            className="cursor-pointer size-8 rounded-full hover:bg-foreground/10"
-            aria-label="Next slide"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="stroke-foreground"
-            >
-              <path
-                d="M6 4L10 8L6 12"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Button>
-        </div>
-      )}
-
-      {hasDots && renderDotsNavigation()}
+      {renderArrows()}
+      {renderDotsNavigation()}
     </section>
   )
 }
-

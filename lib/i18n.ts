@@ -58,8 +58,14 @@ export const shellCopy = {
     menuLabel: (title: string) => `${title} menu`,
     submenuLabel: (title: string) => `${title} submenu`,
     linkLabel: (title: string) => `Navigate to ${title} page`,
-    talkToUs: "Talk to us",
+    talkToUs: "Talk to sales",
     newsletterSignUp: "Newsletter",
+    login: "Log in",
+    loginMenu: {
+      portal: "Portal",
+      platform: "Platform",
+      aiAssist: "Opti Assist (AI)",
+    },
     languageLabel: "Choose language",
     languages: {
       en: "EN",
@@ -69,6 +75,26 @@ export const shellCopy = {
       title: "Turn insight into action",
       description: "Stop guessing. Start running on facts.",
       primaryLabel: "Book a talk",
+    },
+    newsletterPrompt: {
+      eyebrow: "Newsletter",
+      title: "Enjoying the read?",
+      body: "Practical factory notes — production data, OEE, and maintenance. No noise.",
+      exitTitle: "Before you go",
+      exitBody:
+        "Get practical factory notes in your inbox. No noise, unsubscribe anytime.",
+      emailPlaceholder: "you@company.com",
+      consent:
+        "By subscribing, you agree to receive emails from OptiPeople. Unsubscribe anytime.",
+      submit: "Subscribe",
+      loading: "Signing up…",
+      successTitle: "You're on the list",
+      successBody: "Thanks — the next update will land in your inbox.",
+      close: "Close",
+      noThanks: "No thanks",
+      emailInvalid: "Please enter a valid email address",
+      consentRequired: "Please confirm you'd like to receive the newsletter",
+      errorSubmit: "Something went wrong. Please try again.",
     },
     footer: {
       brand:
@@ -88,8 +114,14 @@ export const shellCopy = {
     menuLabel: (title: string) => `${title} menu`,
     submenuLabel: (title: string) => `${title} undermenu`,
     linkLabel: (title: string) => `Gå til ${title}`,
-    talkToUs: "Tal med os",
+    talkToUs: "Tal med salg",
     newsletterSignUp: "Nyhedsbrev",
+    login: "Log ind",
+    loginMenu: {
+      portal: "Portal",
+      platform: "Platform",
+      aiAssist: "Opti Assist (AI)",
+    },
     languageLabel: "Vælg sprog",
     languages: {
       en: "EN",
@@ -99,6 +131,26 @@ export const shellCopy = {
       title: "Gør indsigt til handling",
       description: "Stop med at gætte. Begynd at styre på fakta.",
       primaryLabel: "Book en snak",
+    },
+    newsletterPrompt: {
+      eyebrow: "Nyhedsbrev",
+      title: "Kan du lide det, du læser?",
+      body: "Praktiske noter fra produktionen — produktionsdata, OEE og vedligehold. Ingen støj.",
+      exitTitle: "Inden du går",
+      exitBody:
+        "Få praktiske noter fra produktionen i din indbakke. Ingen støj, afmeld når som helst.",
+      emailPlaceholder: "dig@virksomhed.dk",
+      consent:
+        "Ved at tilmelde dig accepterer du at modtage emails fra OptiPeople. Afmeld når som helst.",
+      submit: "Tilmeld",
+      loading: "Tilmelder…",
+      successTitle: "Du er på listen",
+      successBody: "Tak — næste opdatering lander i din indbakke.",
+      close: "Luk",
+      noThanks: "Nej tak",
+      emailInvalid: "Indtast en gyldig emailadresse",
+      consentRequired: "Bekræft, at du vil modtage nyhedsbrevet",
+      errorSubmit: "Noget gik galt. Prøv igen.",
     },
     footer: {
       brand: "Én platform til produktion, performance og forbundne driftsteams.",
@@ -116,6 +168,16 @@ export const shellCopy = {
 
 export const navigationMenus = {
   en: [
+    {
+      title: "AI",
+      items: [
+        { title: "Chat — Opti Assist", href: "/ai/chat" },
+        { title: "Workflows", href: "/ai/workflows" },
+        { title: "Agents", href: "/ai/agents" },
+        { title: "Integrations", href: "/ai/integrations" },
+        { title: "API", href: "/ai/api" },
+      ],
+    },
     {
       title: "Modules",
       items: [
@@ -184,6 +246,16 @@ export const navigationMenus = {
     },
   ],
   da: [
+    {
+      title: "AI",
+      items: [
+        { title: "Chat — Opti Assist", href: "/ai/chat" },
+        { title: "Workflows", href: "/ai/workflows" },
+        { title: "Agenter", href: "/ai/agents" },
+        { title: "Integrationer", href: "/ai/integrations" },
+        { title: "API", href: "/ai/api" },
+      ],
+    },
     {
       title: "Moduler",
       items: [

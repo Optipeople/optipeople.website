@@ -11,6 +11,13 @@ export type BlogPost = {
   category: string
   image?: string
   summary: string
+  /** Case-study fields (optional, used by the Cases showcase) */
+  customer?: string
+  metric?: string
+  metricLabel?: string
+  logo?: string
+  quote?: string
+  outcome?: string
 }
 
 const postsDirectory = path.join(process.cwd(), "content/blog")
@@ -38,6 +45,29 @@ export function resolveImagePath(image: unknown): string | undefined {
   }
 
   return undefined
+}
+
+/** Resolve any public-relative asset (e.g. a logo) to an encoded URL if it exists. */
+export function resolveAssetPath(asset: unknown): string | undefined {
+  if (typeof asset !== "string" || asset.trim() === "") {
+    return undefined
+  }
+
+  const normalized = asset.trim()
+  const absolutePath = path.join(publicDirectory, normalized.replace(/^\//, ""))
+  return fs.existsSync(absolutePath) ? encodeURI(normalized) : undefined
+}
+
+/** Map case-study frontmatter into the optional BlogPost fields. */
+function caseFields(data: Record<string, unknown>) {
+  return {
+    customer: typeof data.customer === "string" ? data.customer : undefined,
+    metric: typeof data.metric === "string" ? data.metric : undefined,
+    metricLabel: typeof data.metricLabel === "string" ? data.metricLabel : undefined,
+    logo: resolveAssetPath(data.logo),
+    quote: typeof data.quote === "string" ? data.quote : undefined,
+    outcome: typeof data.outcome === "string" ? data.outcome : undefined,
+  }
 }
 
 function stripMarkdown(content: string) {
@@ -81,6 +111,7 @@ export function getAllPosts(): BlogPost[] {
         category: data.category,
         image: resolveImagePath(data.image),
         summary: createSummary(content, data.title),
+        ...caseFields(data),
       } as BlogPost
     })
 
@@ -102,6 +133,7 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
       category: data.category,
       image: resolveImagePath(data.image),
       summary: createSummary(content, data.title),
+      ...caseFields(data),
     } as BlogPost
   } catch {
     return undefined
@@ -123,6 +155,16 @@ export function getCategories(): string[] {
 
 export function getPostsByCategory(category: string): BlogPost[] {
   return getAllPosts().filter((post) => post.category === category)
+}
+
+/**
+ * Case studies ordered for the showcase: stories with a hard metric first
+ * (newest within each group), so the strongest results lead the page.
+ */
+export function getCaseStudies(): BlogPost[] {
+  return getPostsByCategory("Cases").sort(
+    (a, b) => (b.metric ? 1 : 0) - (a.metric ? 1 : 0),
+  )
 }
 
 export function getAllSlugs(): string[] {

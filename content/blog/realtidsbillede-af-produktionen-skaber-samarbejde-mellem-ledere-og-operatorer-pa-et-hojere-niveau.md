@@ -4,6 +4,10 @@ date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/broen.png"
+customer: "Broen"
+metricLabel: "Real-time, shared by all"
+logo: "/images/logos/Broen.png"
+outcome: "A live production picture on key machines brought managers and operators around the same numbers."
 ---
 
 ## At a Glance

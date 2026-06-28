@@ -4,6 +4,9 @@ date: "2024-12-10"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/xl-byg-768x500.jpg"
+customer: "XL-BYG Brejnholt"
+metricLabel: "Toward fossil-free operation"
+outcome: "Smart forklift charging on cheap, solar energy cuts energy costs and supports fossil-free operation."
 ---
 
 ## At a Glance

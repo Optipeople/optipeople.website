@@ -46,6 +46,12 @@ import {
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { AiStackPage } from "@/components/ai-stack-page"
+import {
+  aiStackSlides,
+  aiStackSliderCopy,
+  getAiCapability,
+} from "@/lib/ai-stack"
 import { LogoWall, type LogoItem } from "@/components/logo-wall"
 import { PlatformFlower } from "@/components/platform-flower"
 import { PostArchive } from "@/components/post-archive"
@@ -151,6 +157,9 @@ const staticPaths = [
   "/newsletter",
   "/blog",
   "/cases",
+  "/modules",
+  "/solutions",
+  "/features",
   "/services",
   "/services/smart-operations",
   "/services/automation",
@@ -190,6 +199,7 @@ const customerVideos: VideoData[] = [
 ]
 
 const customerLogos: LogoItem[] = [
+  { name: "Alfix", logoSrc: "/images/logos/Alfix-logo.png" },
   { name: "Broen", logoSrc: "/images/logos/Broen.png" },
   { name: "Carl Hansen og Søn", logoSrc: "/images/logos/Carl Hansen og Søn.png" },
   { name: "CS Wind Offshore", logoSrc: "/images/logos/CS Wind Offshore.png" },
@@ -199,7 +209,9 @@ const customerLogos: LogoItem[] = [
   { name: "Hydro Extrusion", logoSrc: "/images/logos/Hydro.png" },
   { name: "Kvik", logoSrc: "/images/logos/Kvik.png" },
   { name: "Montana", logoSrc: "/images/logos/Montana.png" },
+  { name: "Steel Products", logoSrc: "/images/logos/Steel-Products.png" },
   { name: "TCM-Group", logoSrc: "/images/logos/TCM-Group.png" },
+  { name: "The Whole Company", logoSrc: "/images/logos/The-Whole-Company.png" },
   { name: "Xellia", logoSrc: "/images/logos/Xellia.png" },
 ]
 
@@ -256,6 +268,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/production-efficiency"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#243b2f",
   },
   {
     title: "Stopårsagsregistrering",
@@ -267,6 +280,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/stop-cause-registration"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#163b40",
   },
   {
     title: "Vedligehold og opgaver",
@@ -278,6 +292,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/maintenance-and-tasks"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#1c1f26",
   },
   {
     title: "Kvalitetsstyring",
@@ -289,6 +304,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/quality-management"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#243b2f",
   },
   {
     title: "Analyse og rapportering",
@@ -300,6 +316,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/analysis-and-reporting"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#163b40",
   },
   {
     title: "Energi og telemetri",
@@ -311,6 +328,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/energy-and-telemetry"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#1c1f26",
   },
   {
     title: "AI og copilots",
@@ -322,6 +340,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/ai-and-copilots"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#243b2f",
   },
   {
     title: "Maskinstyring",
@@ -333,6 +352,7 @@ const homeFeatureSlides: SlideData[] = [
     primaryHref: da("/features/machine-control"),
     bgColor: "bg-black",
     layout: "vertical",
+    accentColor: "#163b40",
   },
 ]
 
@@ -1200,12 +1220,12 @@ const standardPages: Record<string, StandardPage> = {
     features: [
       {
         icon: BellRing,
-        title: "Remote diagnostics",
+        title: "Fjerndiagnostik",
         description: "Find årsager og hjælp kunder før et servicebesøg.",
       },
       {
         icon: TrendingUp,
-        title: "Performance analytics",
+        title: "Performanceanalyse",
         description:
           "Giv kunder indsigt i maskinbrug, output og forbedringsmuligheder.",
       },
@@ -1220,7 +1240,7 @@ const standardPages: Record<string, StandardPage> = {
     visualBody:
       "Et portalsetup hvor kunder ser live maskindata, servicehistorik og performance.",
     visualImage: "/images/OpticloudOPSingle.jpg",
-    visualAlt: "White-label maskinportal",
+    visualAlt: "Maskinportal med eget brand",
     metricsTitle: "Hvad forbundne maskinbyggere opnår",
     metrics: [
       { metric: "3x", label: "Vækst i aftermarket-potentiale" },
@@ -1267,7 +1287,7 @@ const standardPages: Record<string, StandardPage> = {
       },
       {
         icon: MapPin,
-        title: "Remote diagnostics",
+        title: "Fjerndiagnostik",
         description:
           "Diagnosticér fejl eksternt og mød op med de rigtige dele.",
       },
@@ -1833,6 +1853,58 @@ const featurePages: Record<string, FeaturePage> = {
 }
 
 const simplePages = {
+  "/modules": {
+    title: "Moduler | OptiPeople",
+    description:
+      "Udforsk OptiPeople-modulerne — produktion, kvalitet, vedligehold, energi, analyse, IoT, ERP shopfloor og MES — på én forbundet platform.",
+    eyebrow: "Moduler",
+    headline: "Én platform til hele produktionen",
+    body:
+      "Hvert modul løser et konkret driftsbehov, og sammen giver de ét forbundet overblik over fabriksgulvet.",
+    links: [
+      { title: "Produktion", href: "/modules/production", description: "Live OEE, nedetid, ordrer og skiftperformance." },
+      { title: "Kvalitet", href: "/modules/quality", description: "Digitale kontroller, afvigelser og fuld sporbarhed." },
+      { title: "Vedligehold", href: "/modules/maintenance", description: "Forebyggende planlægning og mobil opgavestyring." },
+      { title: "Energi", href: "/modules/energy", description: "Energiforbrug koblet til produktionens output." },
+      { title: "Analyse", href: "/modules/analysis", description: "Automatiske rapporter om performance, tab og omkostninger." },
+      { title: "IoT", href: "/modules/iot", description: "Forbind nye og gamle maskiner, sensorer og protokoller." },
+      { title: "ERP Shopfloor", href: "/modules/erp-shopfloor", description: "Tovejssynk mellem ERP-planlægning og gulvet." },
+      { title: "MES", href: "/modules/mes", description: "Et cloudbaseret Manufacturing Execution System." },
+    ],
+  },
+  "/solutions": {
+    title: "Løsninger | OptiPeople",
+    description:
+      "OptiPeople-løsninger til produktionsvirksomheder, OEM'er og maskinbyggere samt service og aftermarket.",
+    eyebrow: "Løsninger",
+    headline: "Bygget til hvordan I producerer og servicerer",
+    body:
+      "Uanset om I driver en fabrik, bygger maskiner eller servicerer en installeret base, giver OptiPeople jer driftsdata til at handle hurtigere.",
+    links: [
+      { title: "Til produktionsvirksomheder", href: "/solutions/manufacturing", description: "Kend din fabrik i realtid med forbundne maskiner, OEE, kvalitet, energi og vedligehold." },
+      { title: "Til OEM'er og maskinbyggere", href: "/solutions/oems", description: "Gør maskiner til forbundne platforme med fjerndiagnostik og digitale serviceindtægter." },
+      { title: "Til service og aftermarket", href: "/solutions/service", description: "Giv serviceholdet indblik i maskinsundhed og løs problemer før kunden mærker dem." },
+    ],
+  },
+  "/features": {
+    title: "Funktioner | OptiPeople",
+    description:
+      "Udforsk OptiPeople-funktioner — fra produktionseffektivitet og stopårsagsregistrering til AI-copilots og maskinstyring.",
+    eyebrow: "Funktioner",
+    headline: "Fra rå maskinsignaler til reel forståelse",
+    body:
+      "Udforsk de funktioner, der gør produktionen synlig, målbar og mulig at forbedre — hver dag.",
+    links: [
+      { title: "Produktionseffektivitet", href: "/features/production-efficiency", description: "Følg OEE live på tværs af skift, linjer og maskiner." },
+      { title: "Stopårsagsregistrering", href: "/features/stop-cause-registration", description: "Opsaml nedetidsårsager ved kilden, på maskinen." },
+      { title: "Vedligehold og opgaver", href: "/features/maintenance-and-tasks", description: "Planlæg forebyggende vedligehold efter brug og tilstand." },
+      { title: "Kvalitetsstyring", href: "/features/quality-management", description: "Registrer kvalitetsdata dér hvor arbejdet sker." },
+      { title: "Analyse og rapportering", href: "/features/analysis-and-reporting", description: "Gør produktionsdata til klare rapporter." },
+      { title: "Energi og telemetri", href: "/features/energy-and-telemetry", description: "Kobl energi-, vibrations-, flow- og temperaturdata sammen." },
+      { title: "AI og copilots", href: "/features/ai-and-copilots", description: "Stil spørgsmål og find mønstre i jeres egne data." },
+      { title: "Maskinstyring", href: "/features/machine-control", description: "Integrer med maskinstyringer for tættere loops." },
+    ],
+  },
   "/services": {
     title: "Services",
     description:
@@ -2024,6 +2096,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     })
   }
 
+  if (route.startsWith("/ai/")) {
+    const cap = getAiCapability(route.replace("/ai/", ""))
+    if (cap) {
+      return buildMetadata({
+        title: cap.content.da.metaTitle,
+        description: cap.content.da.metaDescription,
+        path: cap.href,
+        locale: "da",
+      })
+    }
+  }
+
   const standard = standardPages[route]
   if (standard) {
     return buildMetadata({
@@ -2076,9 +2160,17 @@ export default async function DanishPage({ params, searchParams }: Props) {
   if (route === "/resources/people" || route === "/people") {
     return <DanishPeoplePage />
   }
+  if (route === "/privacy") return <DanishPrivacyPage />
+  if (route === "/terms") return <DanishTermsPage />
+  if (route === "/videos") return <DanishVideosPage />
 
   if (route.startsWith("/blog/")) {
     return <DanishBlogPostPage slug={route.replace("/blog/", "")} />
+  }
+
+  if (route.startsWith("/ai/")) {
+    const slug = route.replace("/ai/", "")
+    if (getAiCapability(slug)) return <AiStackPage slug={slug} locale="da" />
   }
 
   const standard = standardPages[route]
@@ -2113,17 +2205,50 @@ function DanishHomePage() {
 
         <SlideCarousel
           slides={homeTabSlides}
-          navigationType={["tabs", "dots"]}
+          navigationType={["tabs"]}
           ariaLabel="Løsninger til teams"
           className="mt-8"
         />
       </section>
 
       <section className="py-12 lg:py-28">
+        <div className="pl-[var(--edge)] pr-6 lg:pr-8">
+          <p className="mb-3 text-sm font-medium uppercase tracking-wide text-muted-foreground">
+            OptiPeople Platform
+          </p>
+          <h2 className="text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+            Alt du behøver for at drive produktion.
+          </h2>
+          <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
+            Fra live OEE til vedligehold, kvalitet og rapportering — én forbundet platform til hele din drift.
+          </p>
+        </div>
+
         <SlideCarousel
           slides={homeFeatureSlides}
           navigationType={["arrows"]}
           ariaLabel="Platformfunktioner"
+          className="mt-8"
+        />
+      </section>
+
+      <section className="py-12 lg:py-28">
+        <div className="pl-[var(--edge)] pr-6 lg:pr-8">
+          <p className="mb-3 text-sm font-medium uppercase tracking-wide text-muted-foreground">
+            {aiStackSliderCopy.da.eyebrow}
+          </p>
+          <h2 className="text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+            {aiStackSliderCopy.da.title}
+          </h2>
+          <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
+            {aiStackSliderCopy.da.subtitle}
+          </p>
+        </div>
+
+        <SlideCarousel
+          slides={aiStackSlides("da")}
+          navigationType={["arrows"]}
+          ariaLabel="AI-funktioner"
           className="mt-8"
         />
       </section>
@@ -2604,6 +2729,210 @@ function SimpleLandingPage({
   )
 }
 
+function DanishVideosPage() {
+  return (
+    <main className="min-h-screen">
+      <section className="pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-3 text-sm font-medium uppercase tracking-wide text-muted-foreground">
+            Videoer
+          </p>
+          <h1 className="text-4xl font-light leading-tight tracking-tight text-foreground sm:text-5xl">
+            Se Opticloud i aktion
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            Se produktdemoer, kundehistorier og guides, der viser hvordan
+            Opticloud fungerer på fabriksgulvet.
+          </p>
+        </div>
+      </section>
+      <section className="py-12 lg:py-24">
+        <VideoCarousel videos={customerVideos} title="Videohistorier" />
+      </section>
+    </main>
+  )
+}
+
+const LegalProse = "mx-auto max-w-3xl prose prose-slate prose-headings:font-medium prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-p:leading-relaxed prose-a:text-foreground"
+
+function DanishLegalShell({
+  title,
+  children,
+}: {
+  title: string
+  children: React.ReactNode
+}) {
+  return (
+    <main className="min-h-screen">
+      <section className="pt-16 sm:pt-24 pb-10 px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <p className="mb-3 text-sm font-medium uppercase tracking-wide text-muted-foreground">
+            Juridisk
+          </p>
+          <h1 className="text-4xl font-light leading-tight tracking-tight text-foreground sm:text-5xl">
+            {title}
+          </h1>
+          <p className="mt-6 text-base text-muted-foreground">
+            Senest opdateret: 28. juni 2026
+          </p>
+        </div>
+      </section>
+      <section className="pb-20 lg:pb-28 px-6 lg:px-8">
+        <div className={LegalProse}>{children}</div>
+      </section>
+    </main>
+  )
+}
+
+function DanishPrivacyPage() {
+  return (
+    <DanishLegalShell title="Privatlivspolitik">
+      <p>
+        OptiPeople ApS (&quot;OptiPeople&quot;, &quot;vi&quot;, &quot;os&quot;) respekterer dit
+        privatliv og beskytter dine personoplysninger. Denne politik forklarer,
+        hvilke data vi indsamler via dette website, hvorfor vi indsamler dem, og
+        hvilke rettigheder du har efter databeskyttelsesforordningen (GDPR) og
+        dansk databeskyttelseslovgivning.
+      </p>
+      <h2>Dataansvarlig</h2>
+      <p>
+        OptiPeople ApS, Sønderskovvej 17, 8362 Hørning (CVR 32883532) er
+        dataansvarlig for personoplysninger indsamlet via dette website. Du kan
+        kontakte os på <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a>{" "}
+        eller +45 23 74 47 05.
+      </p>
+      <h2>Hvad vi indsamler og hvorfor</h2>
+      <p>Vi indsamler kun de personoplysninger, du selv giver os:</p>
+      <ul>
+        <li>
+          <strong>Kontakthenvendelser.</strong> Når du udfylder
+          kontaktformularen, behandler vi dit navn, din e-mail, dit telefonnummer
+          (valgfrit) og din besked, så vi kan svare dig. Behandlingsgrundlaget er
+          vores legitime interesse i at besvare dig og tage skridt forud for en
+          eventuel aftale (GDPR art. 6, stk. 1, litra b og f).
+        </li>
+        <li>
+          <strong>Nyhedsbrev.</strong> Hvis du tilmelder dig vores nyhedsbrev,
+          behandler vi dit navn, din virksomhed og din e-mail for at sende dig de
+          opdateringer, du har samtykket til. Behandlingsgrundlaget er dit
+          samtykke (GDPR art. 6, stk. 1, litra a), som du til enhver tid kan
+          trække tilbage.
+        </li>
+      </ul>
+      <h2>Hvordan dine data behandles</h2>
+      <p>
+        Formularer håndteres gennem vores CRM-leverandør (monday.com), og vores
+        website hostes af Vercel. Disse leverandører fungerer som databehandlere
+        for os under databehandleraftaler og behandler data inden for EU/EØS
+        eller under passende garantier ved tredjelandsoverførsler.
+      </p>
+      <h2>Opbevaring</h2>
+      <p>
+        Vi opbevarer kun personoplysninger, så længe det er nødvendigt til
+        formålet — typisk under vores dialog med dig og et eventuelt efterfølgende
+        kundeforhold — hvorefter de slettes eller anonymiseres i
+        overensstemmelse med gældende bogføringskrav.
+      </p>
+      <h2>Cookies</h2>
+      <p>
+        Dette website bruger kun den strengt nødvendige tekniske lagring, der
+        kræves for, at sitet kan fungere. Vi bruger ikke reklame- eller
+        sporingscookies. Ændres dette, opdaterer vi politikken og indhenter
+        samtykke, hvor det kræves.
+      </p>
+      <h2>Dine rettigheder</h2>
+      <p>
+        Du har ret til at anmode om indsigt i, berigtigelse eller sletning af
+        dine personoplysninger, til at gøre indsigelse mod eller begrænse
+        behandlingen samt til dataportabilitet. Hvor behandlingen er baseret på
+        samtykke, kan du til enhver tid trække det tilbage. Kontakt{" "}
+        <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> for at gøre brug
+        af dine rettigheder.
+      </p>
+      <p>
+        Du har også ret til at klage til Datatilsynet (
+        <a
+          href="https://www.datatilsynet.dk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          datatilsynet.dk
+        </a>
+        ), hvis du mener, at dine data behandles ulovligt.
+      </p>
+      <h2>Ændringer</h2>
+      <p>
+        Vi kan opdatere denne privatlivspolitik fra tid til anden. Den gældende
+        version findes altid på denne side med datoen for seneste revision angivet
+        ovenfor.
+      </p>
+    </DanishLegalShell>
+  )
+}
+
+function DanishTermsPage() {
+  return (
+    <DanishLegalShell title="Vilkår">
+      <p>
+        Disse vilkår gælder for din brug af OptiPeople ApS&apos; website på dette
+        domæne. Ved at tilgå eller bruge sitet accepterer du vilkårene. Er du
+        ikke enig, bedes du ikke bruge sitet.
+      </p>
+      <h2>Om os</h2>
+      <p>
+        Dette website drives af OptiPeople ApS, Sønderskovvej 17, 8362 Hørning
+        (CVR 32883532). Du kan kontakte os på{" "}
+        <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a>.
+      </p>
+      <h2>Brug af websitet</h2>
+      <p>
+        Indholdet på sitet stilles til rådighed som generel information om
+        OptiPeople og Opticloud-platformen. Du må se og dele det til lovlige,
+        ikke-kommercielle formål. Du må ikke misbruge sitet, forsøge at opnå
+        uautoriseret adgang eller forstyrre driften.
+      </p>
+      <h2>Immaterielle rettigheder</h2>
+      <p>
+        Alle varemærker, logoer, tekster, grafik og øvrigt materiale på sitet
+        tilhører OptiPeople ApS eller selskabets licensgivere og er beskyttet af
+        gældende immaterialret. Materialet må ikke gengives eller genbruges uden
+        vores forudgående skriftlige tilladelse.
+      </p>
+      <h2>Ingen garanti</h2>
+      <p>
+        Websitet og dets indhold stilles til rådighed, som det er og forefindes,
+        uden nogen form for garanti. Vi bestræber os på at holde informationen
+        korrekt og opdateret, men garanterer ikke, at den er fuldstændig, aktuel
+        eller fejlfri.
+      </p>
+      <h2>Ansvarsbegrænsning</h2>
+      <p>
+        I det omfang loven tillader det, er OptiPeople ikke ansvarlig for
+        indirekte tab eller følgeskader, der opstår som følge af din brug af —
+        eller manglende mulighed for at bruge — dette website. Intet i disse
+        vilkår begrænser ansvar, der ikke kan fraskrives efter dansk ret.
+      </p>
+      <h2>Produkter og services</h2>
+      <p>
+        Ethvert kommercielt forhold vedrørende OptiPeoples produkter eller
+        services reguleres af den separate aftale, der indgås mellem dig og
+        OptiPeople. Disse vilkår for websitet udgør ikke en del af den aftale.
+      </p>
+      <h2>Lovvalg</h2>
+      <p>
+        Disse vilkår er underlagt dansk ret, og eventuelle tvister afgøres af de
+        danske domstole.
+      </p>
+      <h2>Ændringer</h2>
+      <p>
+        Vi kan opdatere disse vilkår fra tid til anden. Den gældende version
+        findes altid på denne side med datoen for seneste revision angivet
+        ovenfor.
+      </p>
+    </DanishLegalShell>
+  )
+}
+
 function DanishArchive({
   type,
   page,
@@ -3015,35 +3344,95 @@ function DanishContactPage() {
 
 function DanishNewsletterPage() {
   const topics = [
-    "Praktiske forbedringer i produktionen",
-    "OEE, nedetid og performance",
-    "Vedligehold, energi og datadrevet drift",
-  ]
+    {
+      title: "Produktionsperformance",
+      description:
+        "Find tab, forbedr OEE, og hold forbedringsarbejdet forankret i rigtige produktionsdata.",
+      icon: BarChart3,
+    },
+    {
+      title: "Forbundne fabrikker",
+      description:
+        "Maskindata, integrationer og dashboards — systemerne, der gør driften lettere at styre.",
+      icon: Factory,
+    },
+    {
+      title: "Vedligehold & oppetid",
+      description:
+        "Planlagt vedligehold, tilstande og de små vaner, der stille beskytter oppetiden.",
+      icon: Wrench,
+    },
+  ] as const
 
   return (
-    <main>
-      <section className="px-6 py-16 sm:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_440px] lg:gap-16">
-          <div>
-            <p className="mb-3 text-sm font-medium uppercase tracking-wide text-muted-foreground">
-              Nyhedsbrev
-            </p>
-            <h1 className="text-4xl font-light leading-tight tracking-tight sm:text-5xl">
-              Få praktiske ideer til bedre produktion
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Tilmeld dig for korte opdateringer om produktionsdata, OEE, vedligehold, AI og digital drift.
-            </p>
-            <div className="mt-10 grid gap-4">
-              {topics.map((topic) => (
-                <div key={topic} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" />
-                  <p className="text-base text-muted-foreground">{topic}</p>
+    <main className="relative overflow-hidden">
+      {/* Ambient background wash */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px] bg-[radial-gradient(80%_60%_at_50%_-10%,var(--green-light1)_0%,transparent_60%)] opacity-60"
+      />
+
+      <section className="px-6 pt-20 pb-16 sm:pt-28 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="inline-flex items-center rounded-full border border-border/60 bg-white/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur-sm">
+            Nyhedsbrev
+          </span>
+          <h1 className="mt-6 text-balance text-4xl font-light leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Få praktiske ideer til bedre produktion
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            Korte opdateringer om produktionsdata, OEE, vedligehold, AI og
+            digital drift. Ingen støj — kun brugbare ideer fra gulvet.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-lg">
+          <NewsletterForm locale="da" />
+        </div>
+      </section>
+
+      <section className="px-6 pb-20 pt-8 lg:px-8 lg:pb-28">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-center text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            Hvad du kan forvente
+          </p>
+          <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-3">
+            {topics.map((topic) => {
+              const Icon = topic.icon
+
+              return (
+                <div key={topic.title} className="text-center sm:text-left">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--green-light1)] text-[var(--green-dark3)] sm:mx-0">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">
+                    {topic.title}
+                  </h3>
+                  <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                    {topic.description}
+                  </p>
                 </div>
-              ))}
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-24 lg:px-8 lg:pb-32">
+        <div className="mx-auto max-w-5xl">
+          <div className="relative overflow-hidden rounded-[2rem] border border-border/50 bg-[linear-gradient(135deg,#f4efe6,#f8f6f1)] p-3 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_24px_60px_-28px_rgba(0,0,0,0.22)] sm:p-4">
+            <div className="overflow-hidden rounded-[1.5rem] border border-border/60">
+              <Image
+                src="/images/dashboard2.png"
+                alt="OptiPeople produktionsdashboard"
+                width={1600}
+                height={1000}
+                className="h-auto w-full object-cover"
+                sizes="(min-width: 1024px) 64rem, 100vw"
+                priority
+              />
             </div>
           </div>
-          <NewsletterForm locale="da" />
         </div>
       </section>
     </main>

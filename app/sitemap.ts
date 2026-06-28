@@ -11,6 +11,9 @@ const staticRoutes = [
   "/newsletter",
   "/blog",
   "/cases",
+  "/modules",
+  "/solutions",
+  "/features",
   "/services",
   "/services/smart-operations",
   "/services/automation",
@@ -38,6 +41,8 @@ const staticRoutes = [
   "/resources/people",
   "/videos",
   "/get-help",
+  "/privacy",
+  "/terms",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -62,12 +67,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ];
   }) satisfies MetadataRoute.Sitemap;
 
-  const blogEntries = getAllPosts().map((post) => ({
-    url: absoluteUrl(`/blog/${post.slug}`),
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: post.category === "Cases" ? 0.8 : 0.7,
-  }));
+  const blogEntries = getAllPosts()
+    .filter((post) => post.category !== "Test")
+    .flatMap((post) => {
+      const priority = post.category === "Cases" ? 0.8 : 0.7;
+      return [
+        {
+          url: absoluteUrl(`/blog/${post.slug}`),
+          lastModified: new Date(post.date),
+          changeFrequency: "monthly" as const,
+          priority,
+        },
+        {
+          url: absoluteUrl(addLocalePrefix(`/blog/${post.slug}`, "da")),
+          lastModified: new Date(post.date),
+          changeFrequency: "monthly" as const,
+          priority: Math.max(priority - 0.05, 0.5),
+        },
+      ];
+    });
 
   return [...staticEntries, ...blogEntries];
 }

@@ -4,6 +4,10 @@ date: "2022-04-07"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/expedit.jpg"
+customer: "Expedit"
+metricLabel: "Better flow, fewer errors"
+quote: "With the solution we have been able to analyze what we can do to get a better production flow and minimize errors."
+outcome: "Wood and metal lines share one live view, giving a stronger basis for automation and investment decisions."
 ---
 
 ## At a Glance

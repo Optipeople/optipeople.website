@@ -4,6 +4,11 @@ date: "2022-04-07"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/dansand.jpg"
+customer: "Dansand"
+metric: "3.5M"
+metricLabel: "bags of sand per year"
+quote: "We want to use data to make investment decisions when a machine has to be changed — so we make the right investments."
+outcome: "Uptime and output data on the big-bag handling lines now drive daily follow-up and investment calls."
 ---
 
 ## At a Glance

@@ -22,7 +22,7 @@ export function LogoWall({
 }: LogoWallProps) {
   return (
     <section className={cn("py-12 lg:py-28", className)}>
-      <div className="mx-auto w-full max-w-5xl px-8">
+      <div className="mx-auto w-full max-w-7xl px-8">
         {/* Header - matching hero typography */}
         {title && (
           <h2 className="text-4xl lg:text-5xl font-light text-foreground text-center">
@@ -30,8 +30,15 @@ export function LogoWall({
           </h2>
         )}
 
-        {/* Logo grid */}
-        <div className="mt-16 lg:mt-20 grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16 items-center justify-items-center">
+        {/* Logo grid — two rows of 7 on desktop. First/last in each row align to
+            the container edges so the wall lines up with content above and below. */}
+        <div
+          className={cn(
+            "grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-10 items-center justify-items-center",
+            "lg:[&>*:nth-child(7n+1)]:justify-self-start lg:[&>*:nth-child(7n)]:justify-self-end",
+            title && "mt-16 lg:mt-20",
+          )}
+        >
           {logos.map((logo) => (
             <LogoImage key={logo.name} logo={logo} />
           ))}
@@ -43,13 +50,13 @@ export function LogoWall({
 
 function LogoImage({ logo }: { logo: LogoItem }) {
   const imageElement = (
-    <div className="relative h-16 w-52 lg:h-20 lg:w-64 opacity-50 hover:opacity-80 transition-opacity duration-300">
+    <div className="relative h-12 w-32 lg:h-14 lg:w-40 opacity-50 hover:opacity-80 transition-opacity duration-300">
       <Image
         src={logo.logoSrc}
         alt={logo.name}
         fill
         className="object-contain"
-        sizes="(max-width: 1024px) 208px, 256px"
+        sizes="(max-width: 1024px) 128px, 160px"
       />
     </div>
   )

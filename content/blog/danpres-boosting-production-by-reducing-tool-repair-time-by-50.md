@@ -4,6 +4,10 @@ date: "2025-01-20"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/danpres.jpg"
+customer: "Danpres"
+metric: "−50%"
+metricLabel: "tool-repair time"
+outcome: "Two weeks of Opticloud data showed that halving tool-repair time frees roughly 190,000 items of annual capacity."
 ---
 
 ## At a Glance

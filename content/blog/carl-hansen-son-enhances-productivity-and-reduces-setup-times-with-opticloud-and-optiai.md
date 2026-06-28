@@ -4,6 +4,10 @@ date: "2025-01-02"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/Carl-hansen-768x500.jpg"
+customer: "Carl Hansen & Søn"
+metricLabel: "Cutting setup times with OptiAI"
+logo: "/images/logos/Carl Hansen og Søn.png"
+outcome: "Sharper productivity insight, plus an OptiAI pilot that reduces setup times through smarter order sequencing."
 ---
 
 ## At a Glance

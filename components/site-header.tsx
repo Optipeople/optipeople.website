@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronDown, Languages, Mail, MessageCircle } from "lucide-react"
-import { useState } from "react"
+import { ChevronDown, LogIn, MessageCircle } from "lucide-react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
@@ -26,6 +26,10 @@ import logo from "@/app/Optipeople-Logo-Vector.svg"
 
 const navigationItems: readonly { title: string; href: string }[] = []
 
+// Delay before a hovered menu closes, so crossing the trigger→panel gap or
+// sliding between menus never flickers the dropdown shut.
+const HOVER_CLOSE_DELAY = 120
+
 export function SiteHeader() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const pathname = usePathname()
@@ -33,8 +37,64 @@ export function SiteHeader() {
   const dropdownMenus = navigationMenus[locale]
   const copy = shellCopy[locale]
 
+  // Only drive menus by hover on devices that actually have a hovering pointer
+  // (mouse/trackpad). On touch, hover events are unreliable, so we fall back to
+  // Radix's native click/keyboard behaviour.
+  const [hoverEnabled, setHoverEnabled] = useState(false)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    const query = window.matchMedia("(hover: hover) and (pointer: fine)")
+    const update = () => setHoverEnabled(query.matches)
+    update()
+    query.addEventListener("change", update)
+    return () => query.removeEventListener("change", update)
+  }, [])
+
+  const clearCloseTimer = useCallback(() => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current)
+      closeTimer.current = null
+    }
+  }, [])
+
+  const openMenu = useCallback(
+    (title: string) => {
+      clearCloseTimer()
+      setOpenDropdown(title)
+    },
+    [clearCloseTimer]
+  )
+
+  const scheduleClose = useCallback(() => {
+    clearCloseTimer()
+    closeTimer.current = setTimeout(
+      () => setOpenDropdown(null),
+      HOVER_CLOSE_DELAY
+    )
+  }, [clearCloseTimer])
+
+  useEffect(() => clearCloseTimer, [clearCloseTimer])
+
+  const hoverProps = (title: string) =>
+    hoverEnabled
+      ? {
+          onMouseEnter: () => openMenu(title),
+          onMouseLeave: scheduleClose,
+        }
+      : {}
+
   return (
-    <header className="w-full bg-background/95 backdrop-blur-md sticky top-0 z-20">
+    <>
+      <div className="border-b border-border/60 bg-muted/40">
+        <div className="flex h-7 items-center justify-end gap-4 px-6 lg:px-8">
+          <LoginMenu locale={locale} />
+          <span className="h-4 w-px bg-border" aria-hidden="true" />
+          <LanguageSwitcher locale={locale} pathname={pathname} />
+        </div>
+      </div>
+
+      <header className="w-full sticky top-0 z-20 bg-background/95 backdrop-blur-md">
       <div className="h-16 flex items-center justify-between px-6 lg:px-8">
         <Link
           href={localizeHref("/", locale)}
@@ -72,14 +132,14 @@ export function SiteHeader() {
               key={menu.title}
               open={openDropdown === menu.title}
               onOpenChange={(open) => setOpenDropdown(open ? menu.title : null)}
+              modal={false}
             >
               <DropdownMenuTrigger asChild>
                 <button
                   type="button"
-                  className="cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
-                  aria-expanded={openDropdown === menu.title}
-                  aria-haspopup="true"
+                  className="cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 data-[state=open]:bg-gray-100 data-[state=open]:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
                   aria-label={copy.menuLabel(menu.title)}
+                  {...hoverProps(menu.title)}
                 >
                   <span>{menu.title}</span>
                   <ChevronDown
@@ -94,8 +154,14 @@ export function SiteHeader() {
               <DropdownMenuContent
                 align="start"
                 sideOffset={8}
+                onCloseAutoFocus={(event) => {
+                  // When a hover-opened menu closes we don't want focus yanked
+                  // back to the trigger (it never left on hover).
+                  if (hoverEnabled) event.preventDefault()
+                }}
                 className="w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2"
                 aria-label={copy.submenuLabel(menu.title)}
+                {...hoverProps(menu.title)}
               >
                 {menu.items.map((item) => (
                   <DropdownMenuItem
@@ -118,18 +184,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <LanguageSwitcher locale={locale} pathname={pathname} />
-          <Button asChild size="sm" variant="outline" className="px-3 md:px-4">
-            <Link
-              href={localizeHref("/newsletter", locale)}
-              className="cursor-pointer"
-              aria-label={copy.newsletterSignUp}
-            >
-              <Mail className="h-4 w-4 md:hidden" aria-hidden="true" />
-              <span className="hidden md:inline">{copy.newsletterSignUp}</span>
-              <span className="sr-only md:hidden">{copy.newsletterSignUp}</span>
-            </Link>
-          </Button>
           <Button asChild size="sm" className="px-3 md:px-4">
             <Link
               href={localizeHref("/contact", locale)}
@@ -158,7 +212,53 @@ export function SiteHeader() {
           aria-hidden="true"
         />
       </div>
-    </header>
+      </header>
+    </>
+  )
+}
+
+function LoginMenu({ locale }: { locale: Locale }) {
+  const copy = shellCopy[locale]
+  const logins = [
+    { label: copy.loginMenu.portal, href: "https://portal.optipeople.dk/" },
+    { label: copy.loginMenu.platform, href: "https://cloud.optipeople.dk/" },
+    { label: copy.loginMenu.aiAssist, href: "https://ai.optipeople.dk/" },
+  ]
+
+  return (
+    <DropdownMenu modal={false}>
+      <DropdownMenuTrigger asChild>
+        <button
+          type="button"
+          className="cursor-pointer flex items-center gap-1.5 text-xs font-medium text-foreground/65 hover:text-foreground data-[state=open]:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2 rounded"
+          aria-label={copy.login}
+        >
+          <LogIn className="h-3.5 w-3.5" aria-hidden="true" />
+          <span>{copy.login}</span>
+          <ChevronDown className="h-3 w-3" aria-hidden="true" />
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="end"
+        sideOffset={8}
+        className="w-48 bg-white rounded-lg shadow-lg border border-gray-100 p-2"
+      >
+        {logins.map((item) => (
+          <DropdownMenuItem
+            key={item.href}
+            asChild
+            className="p-0 focus:bg-transparent"
+          >
+            <a
+              href={item.href}
+              className="cursor-pointer block w-full px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset rounded-md"
+            >
+              {item.label}
+            </a>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
 
@@ -173,26 +273,31 @@ function LanguageSwitcher({
 
   return (
     <div
-      className="flex items-center gap-1 rounded-full border border-border bg-white p-1"
+      className="flex items-center gap-1.5 text-xs font-medium"
       aria-label={copy.languageLabel}
     >
-      <Languages className="hidden h-4 w-4 text-muted-foreground sm:block" />
-      {(["en", "da"] as const).map((language) => {
+      {(["en", "da"] as const).map((language, index) => {
         const isActive = locale === language
 
         return (
-          <a
-            key={language}
-            href={switchLocalePath(pathname, language)}
-            aria-current={isActive ? "page" : undefined}
-            className={`rounded-full px-2.5 py-1 text-xs font-medium transition-colors ${
-              isActive
-                ? "bg-foreground text-background"
-                : "text-foreground/65 hover:bg-muted hover:text-foreground"
-            }`}
-          >
-            {copy.languages[language]}
-          </a>
+          <span key={language} className="flex items-center gap-1.5">
+            {index > 0 && (
+              <span className="text-border" aria-hidden="true">
+                /
+              </span>
+            )}
+            <a
+              href={switchLocalePath(pathname, language)}
+              aria-current={isActive ? "page" : undefined}
+              className={`cursor-pointer rounded px-0.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2 ${
+                isActive
+                  ? "text-foreground"
+                  : "text-foreground/55 hover:text-foreground"
+              }`}
+            >
+              {copy.languages[language]}
+            </a>
+          </span>
         )
       })}
     </div>

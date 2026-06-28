@@ -1,8 +1,15 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState } from "react"
 import { cn } from "@/lib/utils"
 import type { Locale } from "@/lib/i18n"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 interface ModuleNode {
   id: string
@@ -284,74 +291,162 @@ const platformIntro = {
   },
 } as const
 
-// Module IDs for auto-rotation (excluding opticloud center)
-const rotationOrder = ["production", "mes", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"]
+// ---------------------------------------------------------------------------
+// Brand palette + geometry for the OptiCloud "flower" — rounded pentagons
+// radiating from an octagonal OptiCloud hub, recreated from the 2024 brand mark
+// (Opticloud-Flower.svg). Colours are sampled from that original SVG.
+// ---------------------------------------------------------------------------
+
+// The data-infrastructure modules (OptiCloud / MES / IoT) share the teal family;
+// functional modules each get a distinct hue, exactly like the original mark.
+const BRAND: Record<string, { fill: string; text: "light" | "dark" }> = {
+  opticloud: { fill: "#024343", text: "light" },
+  mes: { fill: "#015D5D", text: "light" },
+  iot: { fill: "#045050", text: "light" },
+  quality: { fill: "#353F96", text: "light" },
+  "erp-shopfloor": { fill: "#5460C6", text: "light" },
+  production: { fill: "#D4D6EB", text: "dark" },
+  maintenance: { fill: "#E0AC30", text: "dark" },
+  energy: { fill: "#DC5E3C", text: "light" },
+  analysis: { fill: "#A3EEC8", text: "dark" },
+}
+
+// Lighten (amt > 0, toward white) or darken (amt < 0, toward black) a hex colour.
+function shade(hex: string, amt: number): string {
+  const n = parseInt(hex.slice(1), 16)
+  const t = amt < 0 ? 0 : 255
+  const p = Math.abs(amt)
+  const mix = (c: number) => Math.round((t - c) * p + c)
+  const r = mix((n >> 16) & 255)
+  const g = mix((n >> 8) & 255)
+  const b = mix(n & 255)
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+}
+
+// Build an SVG path for a regular polygon with rounded corners
+// (rotationDeg 0 = a vertex pointing straight up).
+function roundedPolygonPath(
+  cx: number,
+  cy: number,
+  R: number,
+  sides: number,
+  rotationDeg: number,
+  cornerR: number,
+): string {
+  const pts: Array<[number, number]> = []
+  for (let k = 0; k < sides; k++) {
+    const a = ((rotationDeg + (k * 360) / sides - 90) * Math.PI) / 180
+    pts.push([cx + R * Math.cos(a), cy + R * Math.sin(a)])
+  }
+  const dist = (p: number[], q: number[]) => Math.hypot(q[0] - p[0], q[1] - p[1])
+  const lerp = (p: number[], q: number[], t: number): [number, number] => [
+    p[0] + (q[0] - p[0]) * t,
+    p[1] + (q[1] - p[1]) * t,
+  ]
+  const f = (n: number) => n.toFixed(2)
+  let d = ""
+  for (let i = 0; i < sides; i++) {
+    const curr = pts[i]
+    const prev = pts[(i - 1 + sides) % sides]
+    const next = pts[(i + 1) % sides]
+    const entry = lerp(curr, prev, Math.min(cornerR, dist(curr, prev) / 2) / dist(curr, prev))
+    const exit = lerp(curr, next, Math.min(cornerR, dist(curr, next) / 2) / dist(curr, next))
+    d += i === 0 ? `M ${f(entry[0])},${f(entry[1])}` : ` L ${f(entry[0])},${f(entry[1])}`
+    d += ` Q ${f(curr[0])},${f(curr[1])} ${f(exit[0])},${f(exit[1])}`
+  }
+  return d + " Z"
+}
+
+// The OptiPeople brand mark (ring + pulse), lifted from Optipeople-Logo-Vector.svg
+// and recoloured to currentColor so it inherits the hub's white text.
+function OptiMark({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="16 3 90 90" fill="none" aria-hidden="true">
+      <defs>
+        <clipPath id="opti-mark-clip">
+          <circle cx="61.64" cy="47.87" r="30.07" />
+        </clipPath>
+      </defs>
+      <g clipPath="url(#opti-mark-clip)">
+        <path
+          fill="currentColor"
+          d="M32.38,40.21s7.68-9.23,14.82,6.55c6.55,14.48,10.77,1.72,10.77,1.72l2.15-6.03,30.93.09h8.53v7.19l-36.06.13s-6.12,21.89-17.28,9.91c0,0-7.84-9-11.72-6.2-3.49,2.52,1.21,11.98,5.51,15.42l-6.38,6.38s-14.3-21.63-1.29-35.16Z"
+        />
+      </g>
+      <circle cx="61.64" cy="47.87" r="36.36" fill="none" stroke="currentColor" strokeWidth="13.07" />
+    </svg>
+  )
+}
+
+// Flower geometry in viewBox units.
+const VB_W = 260
+const VB_H = 240
+const CENTER: [number, number] = [130, 116]
+const CENTER_R = 37
+const PETAL_R = 27
+const ORBIT = 70
+// Petal order around the bloom, starting at the top going clockwise.
+const PETAL_ORDER = ["maintenance", "production", "erp-shopfloor", "energy", "analysis", "iot", "mes", "quality"]
+
+function petalLayout() {
+  return PETAL_ORDER.map((id, k) => {
+    const angleDeg = -90 + (k * 360) / PETAL_ORDER.length
+    const a = (angleDeg * Math.PI) / 180
+    return {
+      id,
+      cx: CENTER[0] + ORBIT * Math.cos(a),
+      cy: CENTER[1] + ORBIT * Math.sin(a),
+      // rotate each pentagon so its apex points outward, away from the hub
+      rotation: angleDeg + 90,
+    }
+  })
+}
 
 export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
   const modules = locale === "da" ? danishModules : englishModules
   const intro = platformIntro[locale]
   const [activeModule, setActiveModule] = useState<string | null>(null)
-  const [hoveredModule, setHoveredModule] = useState<string | null>(null)
-  const [autoRotateIndex, setAutoRotateIndex] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
+  const byId = (id: string) => modules.find((m) => m.id === id)!
+  const dialogModule = activeModule ? byId(activeModule) : null
+  const petals = petalLayout()
 
-  // Auto-rotate through modules when not interacting
-  useEffect(() => {
-    // Don't auto-rotate if user is hovering or has clicked a module
-    if (isPaused || hoveredModule || activeModule) return
+  // Convert a viewBox point to a container percentage for the HTML label overlay.
+  const leftPct = (x: number) => `${(x / VB_W) * 100}%`
+  const topPct = (y: number) => `${(y / VB_H) * 100}%`
 
-    const interval = setInterval(() => {
-      setAutoRotateIndex((prev) => (prev + 1) % rotationOrder.length)
-    }, 5000) // Switch every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [isPaused, hoveredModule, activeModule])
-
-  // The displayed module: hover > click > auto-rotate
-  const currentId = hoveredModule || activeModule || rotationOrder[autoRotateIndex]
-  const currentModule = modules.find(m => m.id === currentId)
-
-  // Pause auto-rotation when user interacts
-  const handleMouseEnter = useCallback((moduleId: string) => {
-    setHoveredModule(moduleId)
-    setIsPaused(true)
-  }, [])
-
-  const handleMouseLeave = useCallback(() => {
-    setHoveredModule(null)
-    // Resume auto-rotation after a short delay
-    setTimeout(() => setIsPaused(false), 500)
-  }, [])
-
-  // Get all connections for the current module
-  const activeConnections = currentModule?.connections || []
-
-  // Check if a connection line should be highlighted
-  const isConnectionActive = (from: string, to: string) => {
-    if (!currentId) return false
-    return (from === currentId && activeConnections.includes(to)) ||
-           (to === currentId && modules.find(m => m.id === from)?.connections.includes(currentId))
+  const Label = ({
+    id,
+    x,
+    y,
+    r,
+    isCenter,
+  }: {
+    id: string
+    x: number
+    y: number
+    r: number
+    isCenter?: boolean
+  }) => {
+    const m = byId(id)
+    const isLight = BRAND[id].text === "light"
+    return (
+      <button
+        onClick={() => setActiveModule(id)}
+        className={cn(
+          "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center leading-tight",
+          isLight ? "text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.22)]" : "text-foreground",
+        )}
+        style={{ left: leftPct(x), top: topPct(y), width: `${((2 * r) / VB_W) * 100}%` }}
+      >
+        {isCenter && <OptiMark className="mb-1.5 h-11 w-11" />}
+        <span className={cn("font-bold tracking-tight", isCenter ? "text-2xl" : "text-lg")}>{m.name}</span>
+        {!isCenter && <span className="mt-1 text-sm font-medium leading-snug opacity-95">{m.description}</span>}
+      </button>
+    )
   }
 
-  // Generate connection lines between modules
-  const connections: Array<{ from: ModuleNode; to: ModuleNode; key: string }> = []
-  const drawnConnections = new Set<string>()
-
-  modules.forEach(module => {
-    module.connections.forEach(targetId => {
-      const connectionKey = [module.id, targetId].sort().join('-')
-      if (!drawnConnections.has(connectionKey)) {
-        const target = modules.find(m => m.id === targetId)
-        if (target) {
-          connections.push({ from: module, to: target, key: connectionKey })
-          drawnConnections.add(connectionKey)
-        }
-      }
-    })
-  })
-
   return (
-    <section className="py-20 lg:py-32 overflow-hidden">
+    <section className="relative overflow-hidden bg-muted/40 py-20 lg:py-32">
       <div className="max-w-[1400px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
@@ -366,23 +461,20 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-8">
+        <div className="flex flex-col items-center justify-center">
           {/* Mobile: Grid layout */}
           <div className="lg:hidden w-full">
             <div className="grid grid-cols-2 gap-3">
               {modules.filter(m => m.id !== "opticloud").map((module) => (
                 <button
                   key={module.id}
-                  onClick={() => setActiveModule(activeModule === module.id ? null : module.id)}
+                  onClick={() => setActiveModule(module.id)}
                   className={cn(
-                    "p-4 rounded-[1.5rem] transition-all duration-300 text-left border-2",
-                    module.textColor === "light" ? "text-white" : "text-foreground",
+                    "p-4 rounded-[1.5rem] transition-all duration-300 text-left",
+                    BRAND[module.id].text === "light" ? "text-white" : "text-foreground",
                     activeModule === module.id && "ring-2 ring-offset-2 ring-primary"
                   )}
-                  style={{
-                    backgroundColor: `var(${module.bgVar})`,
-                    borderColor: `var(${module.borderVar})`,
-                  }}
+                  style={{ backgroundColor: BRAND[module.id].fill }}
                 >
                   <h3 className="font-semibold text-sm">{module.name}</h3>
                   <p className="text-xs opacity-80 mt-1">{module.description}</p>
@@ -400,141 +492,145 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
             </div>
           </div>
 
-          {/* Desktop: Node graph */}
-          <div className="hidden lg:block relative w-full max-w-[850px] aspect-square isolate">
-            {/* SVG for connection lines */}
-            <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
-              {connections.map(({ from, to, key }) => {
-                const isActive = isConnectionActive(from.id, to.id)
-                const isToCenter = from.id === "opticloud" || to.id === "opticloud"
+          {/* Desktop: OptiCloud flower — rounded pentagons around an octagonal hub */}
+          <div
+            className="relative mx-auto hidden w-full max-w-[1100px] lg:block"
+            style={{ aspectRatio: `${VB_W} / ${VB_H}` }}
+          >
+            <svg
+              viewBox={`0 0 ${VB_W} ${VB_H}`}
+              className="absolute inset-0 h-full w-full"
+              style={{ overflow: "visible" }}
+            >
+              {/* subtle top-to-bottom gradient per module — depth without looking gradiented */}
+              <defs>
+                {Object.keys(BRAND).map((id) => (
+                  <linearGradient key={id} id={`pf-grad-${id}`} x1="0" y1="0" x2="0.25" y2="1">
+                    <stop offset="0%" stopColor={shade(BRAND[id].fill, 0.09)} />
+                    <stop offset="100%" stopColor={shade(BRAND[id].fill, -0.06)} />
+                  </linearGradient>
+                ))}
+              </defs>
 
+              {/* connection spokes + animated data flow from each module into the hub */}
+              {petals.map((p, i) => {
+                const a = Math.atan2(p.cy - CENTER[1], p.cx - CENTER[0])
+                const ux = Math.cos(a)
+                const uy = Math.sin(a)
+                const hubEdge = CENTER_R * Math.cos(Math.PI / 8) // octagon inradius
+                const petalBase = ORBIT - PETAL_R * Math.cos(Math.PI / 5) // pentagon inradius from centre
+                const x1 = CENTER[0] + ux * petalBase
+                const y1 = CENTER[1] + uy * petalBase
+                const x2 = CENTER[0] + ux * hubEdge
+                const y2 = CENTER[1] + uy * hubEdge
                 return (
-                  <line
-                    key={key}
-                    x1={`${from.x}%`}
-                    y1={`${from.y}%`}
-                    x2={`${to.x}%`}
-                    y2={`${to.y}%`}
-                    className={cn(
-                      "transition-all duration-300",
-                      isActive && "drop-shadow-sm"
-                    )}
-                    style={{
-                      stroke: isActive ? "var(--green-dark3)" : "var(--gray-2)",
-                      strokeWidth: isActive ? 4 : isToCenter ? 2.5 : 2,
-                      strokeDasharray: isActive ? "none" : isToCenter ? "none" : "6 6",
-                      opacity: isActive ? 1 : currentId ? 0.2 : (isToCenter ? 0.4 : 0.25),
-                    }}
-                  />
+                  <g key={`flow-${p.id}`}>
+                    <line
+                      x1={x1}
+                      y1={y1}
+                      x2={x2}
+                      y2={y2}
+                      stroke="var(--green-dark3)"
+                      strokeWidth="0.7"
+                      strokeLinecap="round"
+                      opacity="0.22"
+                    />
+                    {/* dot starts hidden so it never flashes at the SVG origin before its
+                        staggered begin; the fade also masks the loop's snap-back */}
+                    <circle r="1" fill="var(--green-dark3)" opacity="0">
+                      <animateMotion
+                        dur="1.9s"
+                        begin={`${i * 0.22}s`}
+                        repeatCount="indefinite"
+                        path={`M ${x1},${y1} L ${x2},${y2}`}
+                      />
+                      <animate
+                        attributeName="opacity"
+                        dur="1.9s"
+                        begin={`${i * 0.22}s`}
+                        repeatCount="indefinite"
+                        values="0;1;1;0"
+                        keyTimes="0;0.18;0.82;1"
+                      />
+                    </circle>
+                  </g>
                 )
               })}
 
-              {/* Animated data flow dots on active connections */}
-              {currentId && connections
-                .filter(({ from, to }) => isConnectionActive(from.id, to.id))
-                .map(({ from, to, key }) => (
-                  <circle
-                    key={`dot-${key}`}
-                    r="6"
-                    className="drop-shadow-sm"
-                    style={{ fill: "var(--green-dark3)" }}
-                  >
-                    <animateMotion
-                      dur="2s"
-                      repeatCount="indefinite"
-                      path={`M${from.x * 8.5},${from.y * 8.5} L${to.x * 8.5},${to.y * 8.5}`}
-                    />
-                  </circle>
-                ))
-              }
+              {/* petals */}
+              {petals.map((p) => (
+                <path
+                  key={p.id}
+                  d={roundedPolygonPath(p.cx, p.cy, PETAL_R, 5, p.rotation, 6)}
+                  fill={`url(#pf-grad-${p.id})`}
+                  className="cursor-pointer transition-[filter] duration-200 hover:brightness-105"
+                  onClick={() => setActiveModule(p.id)}
+                />
+              ))}
+
+              {/* hub — octagon so a flat edge faces each of the 8 petals */}
+              <path
+                d={roundedPolygonPath(CENTER[0], CENTER[1], CENTER_R, 8, 22.5, 3.5)}
+                fill="url(#pf-grad-opticloud)"
+                className="cursor-pointer transition-[filter] duration-200 hover:brightness-110"
+                onClick={() => setActiveModule("opticloud")}
+              />
             </svg>
 
-            {/* Module nodes */}
-            {modules.map((module) => {
-              const isCenter = module.id === "opticloud"
-              const isActive = currentId === module.id
-              const isConnected = activeConnections.includes(module.id) || module.connections.includes(currentId || "")
-              const dimmed = currentId && !isActive && !isConnected
-
-              return (
-                <button
-                  key={module.id}
-                  onMouseEnter={() => handleMouseEnter(module.id)}
-                  onMouseLeave={handleMouseLeave}
-                  onClick={() => setActiveModule(activeModule === module.id ? null : module.id)}
-                  className={cn(
-                    "absolute transition-all duration-300 ease-out",
-                    isCenter
-                      ? "w-48 h-48 -ml-24 -mt-24 rounded-[3rem] shadow-xl"
-                      : "w-36 h-36 -ml-18 -mt-18 rounded-[2.5rem] shadow-lg",
-                    module.textColor === "light" ? "text-white" : "text-foreground",
-                    "flex flex-col items-center justify-center text-center",
-                    "hover:scale-110 hover:shadow-xl",
-                    "border-2",
-                    isActive && "scale-110 ring-4 ring-primary/20",
-                    isConnected && !isActive && currentId && "scale-105",
-                    dimmed && "opacity-40 scale-95"
-                  )}
-                  style={{
-                    left: `${module.x}%`,
-                    top: `${module.y}%`,
-                    zIndex: isCenter ? 10 : isActive ? 15 : isConnected ? 12 : 5,
-                    backgroundColor: `var(${module.bgVar})`,
-                    borderColor: `var(${module.borderVar})`,
-                  }}
-                >
-                  {isCenter ? (
-                    <>
-                      <svg className="w-14 h-14 mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                        <path d="M8 12l3 3 5-6" />
-                      </svg>
-                      <span className="font-semibold text-lg">{module.name}</span>
-                      <span className="text-sm opacity-80 mt-1">{module.description}</span>
-                    </>
-                  ) : (
-                    <>
-                      <span className="font-semibold text-base leading-tight">{module.name}</span>
-                      <span className="text-xs opacity-80 mt-1.5 px-3 leading-snug">{module.description}</span>
-                    </>
-                  )}
-                </button>
-              )
-            })}
-          </div>
-
-          {/* Info panel (desktop) */}
-          <div className="hidden lg:block w-80 flex-shrink-0">
-            <div className="p-6 rounded-2xl bg-muted/50 transition-all duration-300">
-              {currentModule ? (
-                <>
-                  <h3 className="text-xl font-semibold text-foreground mb-1">
-                    {currentModule.name}
-                  </h3>
-                  <p className="text-sm font-medium text-muted-foreground mb-3">
-                    {currentModule.description}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-5">
-                    {currentModule.pitch}
-                  </p>
-                  <ul className="space-y-2">
-                    {currentModule.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3 text-sm text-foreground">
-                        <span
-                          className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                          style={{ backgroundColor: `var(${currentModule.bgVar})` }}
-                        />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : null}
+            {/* HTML label overlay (positioned over each pentagon) */}
+            <div className="absolute inset-0">
+              {petals.map((p) => (
+                <Label key={p.id} id={p.id} x={p.cx} y={p.cy} r={PETAL_R} />
+              ))}
+              <Label id="opticloud" x={CENTER[0]} y={CENTER[1]} r={CENTER_R} isCenter />
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
+
+      {/* Module detail dialog */}
+      <Dialog
+        open={!!activeModule}
+        onOpenChange={(open) => {
+          if (!open) setActiveModule(null)
+        }}
+      >
+        <DialogContent className="sm:max-w-md">
+          {dialogModule && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-3">
+                  <span
+                    className="h-11 w-11 flex-shrink-0 rounded-xl"
+                    style={{ backgroundColor: BRAND[dialogModule.id].fill }}
+                  />
+                  <div className="min-w-0">
+                    <DialogTitle>{dialogModule.name}</DialogTitle>
+                    <DialogDescription className="mt-0.5 font-medium text-foreground/70">
+                      {dialogModule.description}
+                    </DialogDescription>
+                  </div>
+                </div>
+              </DialogHeader>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {dialogModule.pitch}
+              </p>
+              <ul className="space-y-2.5">
+                {dialogModule.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-3 text-sm text-foreground">
+                    <span
+                      className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
+                      style={{ backgroundColor: BRAND[dialogModule.id].fill }}
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }

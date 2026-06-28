@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: [
-          "IBM Plex Sans",
+          "var(--font-ibm-plex-sans)",
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -20,7 +20,7 @@ const config: Config = {
           "Arial",
           "sans-serif",
         ],
-        serif: ["IBM Plex Serif", "Times New Roman", "serif"],
+        serif: ["var(--font-ibm-plex-serif)", "Times New Roman", "serif"],
       },
     },
   },

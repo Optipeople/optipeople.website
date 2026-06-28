@@ -1,4 +1,5 @@
 import { buildMetadata } from "@/lib/seo"
+import { VideoCarousel, type VideoData } from "@/components/video-carousel"
 
 export const metadata = buildMetadata({
   title: "Videos",
@@ -6,6 +7,12 @@ export const metadata = buildMetadata({
     "Watch OptiPeople demos, tutorials, and customer stories to see how Opticloud works on the shopfloor.",
   path: "/videos",
 })
+
+const customerVideos: VideoData[] = [
+  { videoId: "3LOknXK4buo" },
+  { videoId: "AgHZcfeu8mQ" },
+  { videoId: "H4HvdRpmHjo" },
+]
 
 export default function VideosPage() {
   return (
@@ -25,12 +32,8 @@ export default function VideosPage() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-lg text-muted-foreground">
-            Videos coming soon.
-          </p>
-        </div>
+      <section className="py-12 lg:py-24">
+        <VideoCarousel videos={customerVideos} title="Customer stories" />
       </section>
     </main>
   )

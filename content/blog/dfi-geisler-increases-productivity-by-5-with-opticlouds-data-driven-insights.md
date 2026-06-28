@@ -4,6 +4,11 @@ date: "2025-01-08"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/geisler-486x500.png"
+customer: "DFI Geisler"
+metric: "+5%"
+metricLabel: "productivity over two years"
+quote: "Accurate data and downtime registration are crucial for us to address the correct issues and take the right actions."
+outcome: "Weekly machine reports on the shopfloor turned production data into a daily improvement habit."
 ---
 
 ## At a Glance
