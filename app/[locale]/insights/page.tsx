@@ -155,7 +155,7 @@ export default async function InsightsPage({
               return (
                 <article
                   key={card.href}
-                  className={`overflow-hidden rounded-[2rem] border border-border/60 ${card.accentClass}`}
+                  className={`overflow-hidden rounded-[1.5rem] border border-border/60 ${card.accentClass}`}
                 >
                   <div className="border-b border-black/5 px-8 py-6 lg:px-10">
                     <div className="flex items-center justify-between gap-4">
@@ -206,7 +206,7 @@ export default async function InsightsPage({
                               href={`/blog/${post.slug}`}
                               className={`group grid grid-cols-[104px_1fr] gap-4 rounded-[1.5rem] border border-black/5 p-3 transition-colors ${card.previewClass}`}
                             >
-                              <div className="relative aspect-[4/3] overflow-hidden rounded-[1rem] bg-black/5">
+                              <div className="relative aspect-[4/3] overflow-hidden rounded-[0.75rem] bg-black/5">
                                 {post.image ? (
                                   <Image
                                     src={post.image}

@@ -4,13 +4,15 @@ import { type Locale } from "@/i18n/routing"
 import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
-import { LogoWall, type LogoItem } from "@/components/logo-wall"
+import { LogoWall } from "@/components/logo-wall"
 import { VideoCarousel, type VideoData } from "@/components/video-carousel"
 import { TestimonialCarousel, type Testimonial } from "@/components/testimonial-carousel"
 import { PlatformFlower } from "@/components/platform-flower"
+import { LeadEmailForm } from "@/components/lead-email-form"
 import { Button } from "@/components/ui/button"
 import { getPostBySlug } from "@/lib/blog-data"
 import { aiStackSlides, aiStackSliderCopy } from "@/lib/ai-stack"
+import { customerLogos } from "@/lib/customers"
 import { buildMetadata } from "@/lib/seo"
 import { ArrowRight } from "lucide-react"
 
@@ -71,6 +73,17 @@ function ComparisonBars({
   )
 }
 
+// Per-card color wash for the image case cards — reuses the AI slider's
+// palette (see aiCapabilities theme in lib/ai-stack.ts): a mix of deep and
+// light brand tones, each paired with the text tone that reads on it. The
+// color is applied near-opaque so the photo recedes to a subtle texture.
+const CASE_IMAGE_ACCENTS: { bg: string; tone: "light" | "dark" }[] = [
+  { bg: "#243b2f", tone: "light" }, // deep green
+  { bg: "#c5d8e8", tone: "dark" }, // light blue
+  { bg: "#d8d4c6", tone: "dark" }, // warm sand
+  { bg: "#163b40", tone: "light" }, // deep teal
+]
+
 const caseDateMonths = [
   "January",
   "February",
@@ -97,23 +110,6 @@ const customerVideos: VideoData[] = [
   { videoId: "3LOknXK4buo" },
   { videoId: "AgHZcfeu8mQ" },
   { videoId: "H4HvdRpmHjo" },
-]
-
-const customerLogos: LogoItem[] = [
-  { name: "Alfix", logoSrc: "/images/logos/Alfix-logo.png" },
-  { name: "Broen", logoSrc: "/images/logos/Broen.png" },
-  { name: "Carl Hansen og Søn", logoSrc: "/images/logos/Carl Hansen og Søn.png" },
-  { name: "CS Wind Offshore", logoSrc: "/images/logos/CS Wind Offshore.png" },
-  { name: "Ege Carpets", logoSrc: "/images/logos/Ege.png" },
-  { name: "Elektro-Isola", logoSrc: "/images/logos/Elektro-Isola.png" },
-  { name: "Gurit", logoSrc: "/images/logos/Gurit.png" },
-  { name: "Hydro Extrusion", logoSrc: "/images/logos/Hydro.png" },
-  { name: "Kvik", logoSrc: "/images/logos/Kvik.png" },
-  { name: "Montana", logoSrc: "/images/logos/Montana.png" },
-  { name: "Steel Products", logoSrc: "/images/logos/Steel-Products.png" },
-  { name: "TCM-Group", logoSrc: "/images/logos/TCM-Group.png" },
-  { name: "The Whole Company", logoSrc: "/images/logos/The-Whole-Company.png" },
-  { name: "Xellia", logoSrc: "/images/logos/Xellia.png" },
 ]
 
 // ── Localized copy ──
@@ -158,8 +154,8 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Know Your Factory. In Real Time.",
         description:
           "OptiPeople connects machines, processes, and people into one live operational view. See bottlenecks as they happen, act faster, and run production with facts instead of gut feeling.",
-        imageSrc: "/images/dashboard2.png",
-        imageAlt: "Opticloud manufacturing dashboard",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
+        imageAlt: "Live OptiPeople operator panel showing real-time machine status, output and production timeline",
         primaryLabel: "Explore manufacturing solutions",
         primaryHref: "/solutions/manufacturing",
         bgColor: "bg-blue-50/0",
@@ -171,8 +167,8 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Turn Machines Into Platforms",
         description:
           "Opticloud lets you ship connected machines with built-in insight. Monitor performance in the field, support customers proactively, and build recurring digital services on top of your equipment.",
-        imageSrc: "/images/report1.png",
-        imageAlt: "Connected machines illustration",
+        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        imageAlt: "OptiPeople efficiency report with live Availability, Performance and OEE for a connected machine",
         primaryLabel: "Learn About OEM Benefits",
         primaryHref: "/solutions/oems",
         bgColor: "bg-blue-50/0",
@@ -184,8 +180,8 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Fix Problems Before Customers Feel Them",
         description:
           "Give service teams real visibility into machine health and usage. Plan maintenance, reduce firefighting, and turn service into a competitive advantage.",
-        imageSrc: "/images/backoffice1.png",
-        imageAlt: "Service documentation illustration",
+        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        imageAlt: "Registered stop log with service-critical tags for proactive maintenance and service",
         primaryLabel: "Optimize Your Service Ops",
         primaryHref: "/solutions/service",
         bgColor: "bg-blue-50/0",
@@ -214,8 +210,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Production Efficiency",
         description:
           "See where production time is lost and why. Track OEE live and understand performance across shifts, lines, and machines based on real production data.",
-        imageSrc: "/images/report-mockup4.png",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile-Dark.png",
         imageAlt: "Production efficiency and OEE dashboard",
+        imageFit: "fill",
         primaryLabel: "See production efficiency",
         primaryHref: "/features/production-efficiency",
         bgColor: "bg-black",
@@ -226,8 +223,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Stop Cause Registration",
         description:
           "Make downtime visible at the source. Operators register stops directly at the machine, giving you clean data you can actually act on.",
-        imageSrc: "/images/Stop-Screen-Select.png",
+        imageSrc: "/images/Mockups/Operator-Panel-Stop-Screen-Mobile.png",
         imageAlt: "Stop cause registration screen",
+        imageFit: "fill",
         primaryLabel: "View stop registration",
         primaryHref: "/features/stop-cause-registration",
         bgColor: "bg-black",
@@ -238,8 +236,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Maintenance and Tasks",
         description:
           "Plan and execute preventive maintenance based on usage and condition. Assign tasks, track completion, and reduce unplanned downtime.",
-        imageSrc: "/images/taskapp2.png",
+        imageSrc: "/images/Mockups/Tasls-Maintenance.png",
         imageAlt: "Maintenance task overview",
+        imageFit: "fill",
         primaryLabel: "Explore maintenance",
         primaryHref: "/features/maintenance-and-tasks",
         bgColor: "bg-black",
@@ -250,8 +249,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Quality Management",
         description:
           "Register quality data where it happens. Trace deviations back to machines, batches, and shifts and build accountability into production.",
-        imageSrc: "/images/backoffice1.png",
+        imageSrc: "/images/Mockups/Lists.png",
         imageAlt: "Quality tracking and traceability",
+        imageFit: "fill",
         primaryLabel: "Improve quality",
         primaryHref: "/features/quality-management",
         bgColor: "bg-black",
@@ -262,8 +262,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Analysis and Reporting",
         description:
           "Turn production data into clear reports on performance, losses, and cost drivers without spreadsheets or manual work.",
-        imageSrc: "/images/report-mockup1.png",
+        imageSrc: "/images/Mockups/Report-Production-Counters-Mobile.png",
         imageAlt: "Production reporting and analysis",
+        imageFit: "fill",
         primaryLabel: "See reporting",
         primaryHref: "/features/analysis-and-reporting",
         bgColor: "bg-black",
@@ -298,8 +299,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Machine Control",
         description:
           "Integrate with machine control systems to enable feedback, automation, and tighter production loops across the factory.",
-        imageSrc: "/images/Start-Machine.png",
+        imageSrc: "/images/Mockups/Machine-Overview-Mobile.png",
         imageAlt: "Machine control integration",
+        imageFit: "fill",
         primaryLabel: "See machine control",
         primaryHref: "/features/machine-control",
         bgColor: "bg-black",
@@ -434,8 +436,8 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Kend din fabrik. I realtid.",
         description:
           "OptiPeople forbinder maskiner, processer og mennesker i ét levende driftsoverblik. Se flaskehalse mens de opstår, reagér hurtigere, og styr produktionen på fakta.",
-        imageSrc: "/images/dashboard2.png",
-        imageAlt: "Opticloud produktionsdashboard",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
+        imageAlt: "Live OptiPeople operatørpanel med maskinstatus, output og produktionstidslinje i realtid",
         primaryLabel: "Udforsk produktionsløsninger",
         primaryHref: "/solutions/manufacturing",
         bgColor: "bg-blue-50/0",
@@ -447,8 +449,8 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Gør maskiner til platforme",
         description:
           "Opticloud gør det muligt at levere forbundne maskiner med indbygget indsigt. Overvåg performance i felten, hjælp kunder proaktivt, og byg digitale services oven på udstyret.",
-        imageSrc: "/images/report1.png",
-        imageAlt: "Illustration af forbundne maskiner",
+        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        imageAlt: "OptiPeople effektivitetsrapport med live tilgængelighed, performance og OEE for en forbundet maskine",
         primaryLabel: "Se OEM-fordele",
         primaryHref: "/solutions/oems",
         bgColor: "bg-blue-50/0",
@@ -460,8 +462,8 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Løs problemer før kunden mærker dem",
         description:
           "Giv serviceholdet indblik i maskinernes sundhed og brug. Planlæg vedligehold, reducer brandslukning, og gør service til en konkurrencefordel.",
-        imageSrc: "/images/backoffice1.png",
-        imageAlt: "Serviceoverblik i Opticloud",
+        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        imageAlt: "Log over registrerede stop med service-kritiske tags til proaktiv vedligehold og service",
         primaryLabel: "Optimer service",
         primaryHref: "/solutions/service",
         bgColor: "bg-blue-50/0",
@@ -490,8 +492,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Produktionseffektivitet",
         description:
           "Se hvor produktionstiden går tabt og hvorfor. Følg OEE live på tværs af skift, linjer og maskiner.",
-        imageSrc: "/images/report-mockup4.png",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile-Dark.png",
         imageAlt: "Dashboard til produktionseffektivitet og OEE",
+        imageFit: "fill",
         primaryLabel: "Se produktionseffektivitet",
         primaryHref: "/features/production-efficiency",
         bgColor: "bg-black",
@@ -502,8 +505,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Stopårsagsregistrering",
         description:
           "Gør nedetid synlig ved kilden. Operatører registrerer stop direkte ved maskinen, så data bliver rent og brugbart.",
-        imageSrc: "/images/Stop-Screen-Select.png",
+        imageSrc: "/images/Mockups/Operator-Panel-Stop-Screen-Mobile.png",
         imageAlt: "Skærm til stopårsagsregistrering",
+        imageFit: "fill",
         primaryLabel: "Se stopregistrering",
         primaryHref: "/features/stop-cause-registration",
         bgColor: "bg-black",
@@ -514,8 +518,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Vedligehold og opgaver",
         description:
           "Planlæg forebyggende vedligehold baseret på brug og tilstand. Tildel opgaver, følg status, og reducer uplanlagt nedetid.",
-        imageSrc: "/images/taskapp2.png",
+        imageSrc: "/images/Mockups/Tasls-Maintenance.png",
         imageAlt: "Opgaveoverblik til vedligehold",
+        imageFit: "fill",
         primaryLabel: "Udforsk vedligehold",
         primaryHref: "/features/maintenance-and-tasks",
         bgColor: "bg-black",
@@ -526,8 +531,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Kvalitetsstyring",
         description:
           "Registrer kvalitetsdata dér hvor arbejdet sker. Spor afvigelser tilbage til maskiner, batches og skift.",
-        imageSrc: "/images/backoffice1.png",
+        imageSrc: "/images/Mockups/Lists.png",
         imageAlt: "Kvalitetssporing og sporbarhed",
+        imageFit: "fill",
         primaryLabel: "Forbedr kvalitet",
         primaryHref: "/features/quality-management",
         bgColor: "bg-black",
@@ -538,8 +544,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Analyse og rapportering",
         description:
           "Gør produktionsdata til tydelige rapporter om performance, tab og omkostningsdrivere uden manuelt regnearksarbejde.",
-        imageSrc: "/images/report-mockup1.png",
+        imageSrc: "/images/Mockups/Report-Production-Counters-Mobile.png",
         imageAlt: "Rapportering og analyse",
+        imageFit: "fill",
         primaryLabel: "Se rapportering",
         primaryHref: "/features/analysis-and-reporting",
         bgColor: "bg-black",
@@ -574,8 +581,9 @@ const copy: Record<Locale, HomeCopy> = {
         title: "Maskinstyring",
         description:
           "Integrer med maskinstyringer for feedback, automatisering og tættere loops mellem system og fabriksgulv.",
-        imageSrc: "/images/Start-Machine.png",
+        imageSrc: "/images/Mockups/Machine-Overview-Mobile.png",
         imageAlt: "Integration til maskinstyring",
+        imageFit: "fill",
         primaryLabel: "Se maskinstyring",
         primaryHref: "/features/machine-control",
         bgColor: "bg-black",
@@ -721,19 +729,15 @@ export default async function Home({
   return (
     <main>
       <section className="py-12 lg:py-16">
-        <div className="mx-auto w-full max-w-5xl px-8 py-22">
+        <div className="w-full px-[var(--edge)] py-22">
           <h1 className="text-6xl font-light text-foreground text-center">
             {t.hero.title}
           </h1>
           <p className="mt-6 text-xl text-foreground/70 text-center">
             {t.hero.subtitle}
           </p>
-          <div className="mt-8 flex items-center justify-center">
-            <Button asChild size="lg" variant="outline" className="rounded-full">
-              <Link href="/contact" className="cursor-pointer">
-                {t.hero.ctaLabel}
-              </Link>
-            </Button>
+          <div className="mt-8 flex justify-center">
+            <LeadEmailForm className="w-full max-w-md" />
           </div>
         </div>
 
@@ -750,7 +754,7 @@ export default async function Home({
 
       {/* Trust band — pairs the logo wall with social proof */}
       <section className="pt-20 pb-12 lg:pt-32 lg:pb-28">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-8 lg:grid-cols-2 lg:gap-16">
+        <div className="grid w-full grid-cols-1 gap-12 px-[var(--edge)] lg:grid-cols-2 lg:gap-16">
           {/* Left — headline + customer stories link */}
           <div>
             <h2 className="text-3xl font-light tracking-tight text-foreground lg:text-4xl">
@@ -842,7 +846,7 @@ export default async function Home({
       {/* Negative bottom margin cancels the CTA's top margin so the two
           backgrounds meet flush instead of leaving an empty white band. */}
       <section className="-mb-16 bg-[var(--gray-1)] py-24 lg:-mb-24 lg:py-32">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="px-[var(--edge)]">
           {/* Header */}
           <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-xl">
@@ -867,7 +871,19 @@ export default async function Home({
 
           {/* Bento grid */}
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-5">
-            {t.bento.caseCards.map((card) => {
+            {(() => {
+              // Assign each image card a color from the palette, cycling in the
+              // order they appear so adjacent cards stay visually distinct.
+              const imageAccents: Record<string, (typeof CASE_IMAGE_ACCENTS)[number]> = {}
+              let imageIndex = 0
+              for (const c of t.bento.caseCards) {
+                if (c.kind === "image") {
+                  imageAccents[c.slug] =
+                    CASE_IMAGE_ACCENTS[imageIndex % CASE_IMAGE_ACCENTS.length]
+                  imageIndex++
+                }
+              }
+              return t.bento.caseCards.map((card) => {
               const wide = card.span === "wide"
               const spanClass = wide ? "sm:col-span-2 lg:col-span-3" : "lg:col-span-2"
 
@@ -942,11 +958,15 @@ export default async function Home({
 
               // ── Image card (full-bleed photo + overlay) ──
               const image = getPostBySlug(card.slug)?.image
+              const accent = imageAccents[card.slug]
+              const light = accent.tone === "light"
               return (
                 <Link
                   key={card.slug}
                   href={`/blog/${card.slug}`}
-                  className={`group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-3xl text-white ${spanClass}`}
+                  className={`group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-3xl ${spanClass} ${
+                    light ? "text-white" : "text-slate-900"
+                  }`}
                 >
                   {image && (
                     <Image
@@ -957,32 +977,52 @@ export default async function Home({
                       className="object-cover transition-transform duration-700 ease-out motion-reduce:transition-none group-hover:scale-105"
                     />
                   )}
-                  {/* brand color wash — tones the photo toward OptiPeople teal */}
+                  {/* color wash — AI-slider palette, near-opaque so the photo
+                      recedes to a subtle texture under the brand color. */}
                   <div
                     aria-hidden
-                    className="absolute inset-0 opacity-60 mix-blend-multiply"
-                    style={{ backgroundColor: "var(--green-dark3)" }}
+                    className="absolute inset-0 opacity-90"
+                    style={{ backgroundColor: accent.bg }}
                   />
-                  {/* legibility gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+                  {/* legibility gradient toward the content at the bottom */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t to-transparent ${
+                      light ? "from-black/60 via-black/15" : "from-white/65 via-white/20"
+                    }`}
+                  />
 
-                  <span className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors group-hover:bg-white/30">
+                  <span
+                    className={`absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-sm transition-colors ${
+                      light
+                        ? "bg-white/15 text-white group-hover:bg-white/30"
+                        : "bg-black/10 text-slate-900 group-hover:bg-black/20"
+                    }`}
+                  >
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </span>
 
                   <div className="relative p-7 lg:p-8">
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
+                    <p
+                      className={`text-xs font-semibold uppercase tracking-[0.2em] ${
+                        light ? "text-white/90" : "text-slate-900/90"
+                      }`}
+                    >
                       {card.company}
                     </p>
-                    <h3 className="mt-3 text-5xl font-light leading-none tracking-tight tabular-nums lg:text-6xl">
+                    <h3 className="mt-3 text-5xl font-normal leading-none tracking-tight tabular-nums lg:text-6xl">
                       {card.value}
                     </h3>
-                    <p className="mt-2 text-sm text-white/80">{card.unit}</p>
-                    <p className="mt-3 max-w-sm text-sm leading-snug text-white/65">{card.note}</p>
+                    <p className={`mt-2 text-sm font-medium ${light ? "text-white" : "text-slate-900"}`}>
+                      {card.unit}
+                    </p>
+                    <p className={`mt-3 max-w-sm text-sm leading-snug ${light ? "text-white/85" : "text-slate-900/85"}`}>
+                      {card.note}
+                    </p>
                   </div>
                 </Link>
               )
-            })}
+              })
+            })()}
           </div>
 
           {/* Mobile all-cases */}

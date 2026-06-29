@@ -107,7 +107,7 @@ function FeaturedCase({
         </div>
 
         <div
-          className={`relative order-first aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--gray-2)] bg-muted lg:order-last lg:aspect-[16/11] ${CARD_SHADOW}`}
+          className={`relative order-first aspect-[4/3] overflow-hidden rounded-xl border border-[var(--gray-2)] bg-muted lg:order-last lg:aspect-[16/11] ${CARD_SHADOW}`}
         >
           {post.image && (
             <Image

@@ -44,7 +44,7 @@ export function FeaturePageTemplate({ page }: { page: FeaturePage }) {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
               <Image
                 src={page.heroImage}
                 alt={page.heroImageAlt}
@@ -94,7 +94,7 @@ export function FeaturePageTemplate({ page }: { page: FeaturePage }) {
                     {capability.description}
                   </p>
                 </div>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
                   <Image
                     src={capability.image}
                     alt={capability.imageAlt}

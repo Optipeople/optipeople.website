@@ -70,7 +70,7 @@ export default async function PeoplePage({ params }: PageProps) {
         <div className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {employees.map((person) => (
             <article key={person.slug}>
-              <div className="relative mb-4 aspect-[3/4] overflow-hidden rounded-2xl bg-muted">
+              <div className="relative mb-4 aspect-[3/4] overflow-hidden rounded-xl bg-muted">
                 <Image
                   src={person.photo}
                   alt={person.name}

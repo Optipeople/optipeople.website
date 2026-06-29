@@ -35,6 +35,10 @@ export type SlideData = {
   // "vertical" layout only: tints the photo gradient with an AI-palette color
   // instead of pure black (hex). See productSlideAccents in lib/ai-stack.
   accentColor?: string
+  // "vertical" layout only: image sizing. Default keeps the photo in the lower
+  // portion of the card; "fill" covers the whole card so the image bleeds edge
+  // to edge (cropping as needed) regardless of aspect ratio.
+  imageFit?: "cover" | "fill"
 }
 
 // Build an rgba() string from a #rrggbb hex and an alpha — used to tint the
@@ -69,11 +73,13 @@ type SlideCarouselProps = {
 const VIEWPORT_INSET = "px-[var(--edge)]"
 // Navigation/heading column, left-anchored to the same inset as the first card.
 const COLUMN = "pl-[var(--edge)] pr-6 lg:pr-8"
+// Arrow navigation column, right-anchored to the same inset as the cards' right edge.
+const ARROW_COLUMN = "pr-[var(--edge)] pl-6 lg:pl-8"
 // Narrow cards (feature + AI layouts) share a fixed width and peek the next.
 const NARROW_ITEM = "basis-[88%] sm:basis-[420px] lg:basis-[380px]"
-// Wide cards (overlay + grid): centered between equal `--edge` margins on both
-// sides so the hero slider stays centered as the inset grows (rather than
-// bleeding off the right). Width tracks the inset, keeping left == right margin.
+// Wide cards (overlay + grid): width is `100vw - 2*--edge`, which the `--edge`
+// token caps at the centered 1200px column (see globals.css). With the viewport
+// padded by `--edge` on both sides, the card sits centered on that same column.
 const WIDE_ITEM = "basis-[90%] lg:basis-[calc(100vw-var(--edge)*2)]"
 
 export function SlideCarousel({
@@ -216,7 +222,7 @@ export function SlideCarousel({
             <div
               ref={indicatorRef}
               aria-hidden="true"
-              className="absolute left-0 top-0 bottom-0 rounded-full bg-primary transition-[transform,width] duration-300 ease-out pointer-events-none"
+              className="absolute left-0 top-0 bottom-0 rounded-full bg-primary transition-[transform,width] duration-200 ease-out pointer-events-none"
               style={{
                 width: tabIndicator.width,
                 transform: `translateX(${tabIndicator.left}px)`,
@@ -274,7 +280,7 @@ export function SlideCarousel({
     if (!hasArrows) return null
 
     return (
-      <div className={`${COLUMN} mt-8 flex items-center gap-3`}>
+      <div className={`${ARROW_COLUMN} mt-8 flex items-center justify-end gap-3`}>
         <Button
           variant="ghost"
           size="icon"
@@ -311,11 +317,12 @@ export function SlideCarousel({
             align: "start",
             containScroll: "trimSnaps",
             slidesToScroll: 1,
-            duration: 40,
+            skipSnaps: true,
+            duration: 18,
           }}
           aria-label={ariaLabel}
         >
-          <CarouselContent className="-ml-6" viewportClassName={VIEWPORT_INSET}>
+          <CarouselContent className="-ml-6 select-none" viewportClassName={VIEWPORT_INSET}>
             {slides.map((slide, index) => {
               const layout = slide.layout ?? defaultLayout
               const isVertical = layout === "vertical"
@@ -338,21 +345,21 @@ export function SlideCarousel({
                     tabIndex={0}
                     aria-label={`Go to slide ${index + 1}: ${slide.title}`}
                     style={isAi ? { backgroundColor: slide.cardColor } : undefined}
-                    className={`relative h-[600px] w-full rounded-3xl overflow-hidden ${isVertical || isAi ? "" : slide.bgColor} cursor-pointer focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]`}
+                    className={`relative h-[600px] w-full rounded-2xl overflow-hidden ${isVertical || isAi ? "" : slide.bgColor} cursor-pointer focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]`}
                   >
                     <Card className="p-0 bg-white/0 border-none text-foreground shadow-none w-full h-full">
                       <CardContent className="h-full p-0">
                         {layout === "grid" ? (
                           <div className="grid h-full grid-cols-2 grid-rows-[2fr_1fr] gap-2">
                             {/* Title block */}
-                            <div className="min-w-0 h-full bg-slate-100 rounded-3xl p-6 flex flex-col justify-center">
+                            <div className="min-w-0 h-full bg-slate-100 rounded-2xl p-6 flex flex-col justify-center">
                               <h3 className="text-5xl lg:text-5xl tracking-tight leading-[1.2] font-extralight">
                                 {slide.title}
                               </h3>
                             </div>
 
                             {/* Image block (spans both rows) */}
-                            <div className="relative row-span-2 overflow-hidden rounded-3xl bg-slate-100 p-6">
+                            <div className="relative row-span-2 overflow-hidden rounded-2xl bg-slate-100 p-6">
                               <Image
                                 src={slide.imageSrc ?? "/globe.svg"}
                                 alt={slide.imageAlt ?? `${slide.title} illustration`}
@@ -377,7 +384,7 @@ export function SlideCarousel({
                             </div>
 
                             {/* Subtitle block */}
-                            <div className="min-w-0 h-full bg-slate-100 rounded-3xl p-6 flex flex-col justify-center">
+                            <div className="min-w-0 h-full bg-slate-100 rounded-2xl p-6 flex flex-col justify-center">
                               <p className="text-base text-foreground/80">
                                 {slide.description}
                               </p>
@@ -385,7 +392,7 @@ export function SlideCarousel({
                           </div>
                         ) : layout === "overlay" ? (
                           /* Overlay layout */
-                          <div className="relative h-full w-full overflow-hidden rounded-3xl">
+                          <div className="relative h-full w-full overflow-hidden rounded-2xl">
                             {/* Background image - sharp (visible on right) */}
                             <Image
                               src={slide.imageSrc ?? "/globe.svg"}
@@ -430,11 +437,11 @@ export function SlideCarousel({
                             )}
 
                             {/* Content overlay */}
-                            <div className="relative z-10 h-full flex flex-col justify-center p-12 lg:p-20 max-w-[60%]">
-                              <h3 className={`text-4xl lg:text-5xl tracking-tight leading-[1.2] font-extralight mb-4 ${slide.overlay === "light" ? "text-black" : "text-white"}`}>
+                            <div className="relative z-10 h-full flex flex-col justify-center p-6 sm:p-12 lg:p-20 max-w-[85%] sm:max-w-[60%]">
+                              <h3 className={`text-2xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.2] font-extralight mb-3 sm:mb-4 ${slide.overlay === "light" ? "text-black" : "text-white"}`}>
                                 {slide.title}
                               </h3>
-                              <p className={`text-lg lg:text-xl mb-8 ${slide.overlay === "light" ? "text-black/80" : "text-white/90"}`}>
+                              <p className={`text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 ${slide.overlay === "light" ? "text-black/80" : "text-white/90"}`}>
                                 {slide.description}
                               </p>
                               <div>
@@ -454,8 +461,11 @@ export function SlideCarousel({
                         ) : layout === "vertical" ? (
                           /* Vertical layout */
                           <div className="absolute inset-0 text-white">
-                            {/* Background image - fills container, positioned below bottom to push image down */}
-                            <div className="absolute inset-0 top-[30%]">
+                            {/* Background image. Default photos sit in the lower
+                                portion of the card; "fill" slides cover the whole
+                                card so the image bleeds edge to edge regardless of
+                                aspect ratio (cropping as needed). */}
+                            <div className={slide.imageFit === "fill" ? "absolute inset-0" : "absolute inset-0 top-[30%]"}>
                               <Image
                                 src={slide.imageSrc ?? "/globe.svg"}
                                 alt={slide.imageAlt ?? `${slide.title} illustration`}

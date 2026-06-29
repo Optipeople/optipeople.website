@@ -81,7 +81,7 @@ export function PostArchive({
               {featuredPost && (
                 <Link href={`${postBasePath}/${featuredPost.slug}`} className="group block">
                   <article className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                    <div className="relative aspect-[4/3] lg:aspect-[16/10] overflow-hidden rounded-2xl bg-muted border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
+                    <div className="relative aspect-[4/3] lg:aspect-[16/10] overflow-hidden rounded-xl bg-muted border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
                       {featuredPost.image && (
                         <Image
                           src={featuredPost.image}
@@ -112,7 +112,7 @@ export function PostArchive({
                   {secondaryPosts.map((post) => (
                     <Link key={post.slug} href={`${postBasePath}/${post.slug}`} className="group block">
                       <article className="space-y-4">
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-muted border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
+                        <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
                           {post.image && (
                             <Image
                               src={post.image}

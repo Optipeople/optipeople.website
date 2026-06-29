@@ -91,6 +91,16 @@
     "successTitle": "Tak for din besked",
     "successBody": "Vi vender tilbage inden for én arbejdsdag."
   },
+  "leadForm": {
+    "placeholder": "Indtast din arbejdsemail",
+    "submit": "Kom i gang",
+    "loading": "Sender…",
+    "successTitle": "Tak for din henvendelse",
+    "successBody": "Vi vender tilbage inden for én arbejdsdag.",
+    "fineprint": "Vi vender tilbage inden for én arbejdsdag. Eller <link>send en fuld besked</link>.",
+    "errorEmailInvalid": "Indtast en gyldig emailadresse",
+    "errorSubmit": "Noget gik galt. Prøv igen, eller skriv direkte til os."
+  },
   "pageTemplate": {
     "bookDemo": "Book en demo",
     "seeCapabilities": "Se muligheder",

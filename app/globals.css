@@ -176,13 +176,15 @@
 }
 
 /*
- * Slider inset on larger screens: tracks toward the centered max-w-6xl column
- * but is capped at 9rem so cards sit close to the screen's left edge on wide
- * monitors rather than drifting far inward.
+ * Slider/content inset on larger screens. This is the single source of truth
+ * for the page's left line: any block padded with `px-[var(--edge)]` resolves
+ * to a centered 1140px column (100vw - 2*edge == 1140 once the column fits),
+ * and every slider's first card lines up on the same left edge. Below ~1220px
+ * it pins to a 2.5rem gutter so content never touches the screen edge.
  */
 @media (min-width: 1024px) {
   :root {
-    --edge: clamp(5rem, calc((100vw - 72rem) / 2), 20rem);
+    --edge: max(2.5rem, calc((100vw - 1140px) / 2));
   }
 }
 

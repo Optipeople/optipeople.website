@@ -219,7 +219,7 @@ export default async function AboutPage({ params }: PageProps) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {team.map((person) => (
               <div key={person.slug}>
-                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-muted mb-4">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted mb-4">
                   <Image
                     src={person.photo}
                     alt={person.name}

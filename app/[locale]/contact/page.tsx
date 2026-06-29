@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { setRequestLocale } from "next-intl/server"
 
 import { ContactForm } from "@/components/contact-form"
+import { LeadEmailForm } from "@/components/lead-email-form"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
 
@@ -17,6 +18,8 @@ const copy: Record<
     phoneLabel: string
     officeLabel: string
     officeLine2: string
+    quickIntro: string
+    orDivider: string
   }
 > = {
   en: {
@@ -27,6 +30,8 @@ const copy: Record<
     phoneLabel: "Phone",
     officeLabel: "Office",
     officeLine2: "8362 Hørning, Denmark",
+    quickIntro: "Leave your email and we'll reach out — no form required.",
+    orDivider: "or",
   },
   da: {
     eyebrow: "Kontakt",
@@ -36,6 +41,8 @@ const copy: Record<
     phoneLabel: "Telefon",
     officeLabel: "Kontor",
     officeLine2: "8362 Hørning, Danmark",
+    quickIntro: "Læg din email, så kontakter vi dig — ingen formular nødvendig.",
+    orDivider: "eller",
   },
 }
 
@@ -86,7 +93,22 @@ export default async function ContactPage({ params }: Props) {
           </div>
 
           {/* Right — Form */}
-          <div>
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <LeadEmailForm showFineprint={false} />
+              <p className="px-1 text-sm text-muted-foreground/80">
+                {t.quickIntro}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-4" aria-hidden="true">
+              <span className="h-px flex-1 bg-border/60" />
+              <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground/70">
+                {t.orDivider}
+              </span>
+              <span className="h-px flex-1 bg-border/60" />
+            </div>
+
             <ContactForm />
           </div>
         </div>

@@ -91,6 +91,16 @@
     "successTitle": "Thanks for reaching out",
     "successBody": "We'll get back to you within one business day."
   },
+  "leadForm": {
+    "placeholder": "Enter your work email",
+    "submit": "Get started",
+    "loading": "Sending…",
+    "successTitle": "Thanks for reaching out",
+    "successBody": "We'll be in touch within one business day.",
+    "fineprint": "We'll get back to you within one business day. Or <link>send a full message</link>.",
+    "errorEmailInvalid": "Please enter a valid email address",
+    "errorSubmit": "Something went wrong. Please try again or email us directly."
+  },
   "pageTemplate": {
     "bookDemo": "Book a demo",
     "seeCapabilities": "See capabilities",

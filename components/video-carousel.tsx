@@ -27,6 +27,8 @@ type VideoCarouselProps = {
 // Shared global slider inset (`--edge`, see globals.css) keeps this in lock-step
 // with SlideCarousel: first card on the inset, cards bleed off both screen edges.
 const COLUMN = "pl-[var(--edge)] pr-6 lg:pr-8"
+// Arrow navigation column, right-anchored to the cards' right inset.
+const ARROW_COLUMN = "pr-[var(--edge)] pl-6 lg:pl-8"
 const VIDEO_ITEM = "basis-[88%] sm:basis-[70%] lg:basis-[55%]"
 const VIEWPORT_INSET = "px-[var(--edge)]"
 
@@ -89,11 +91,12 @@ export function VideoCarousel({
             align: "start",
             containScroll: "trimSnaps",
             slidesToScroll: 1,
-            duration: 40,
+            skipSnaps: true,
+            duration: 18,
           }}
           aria-label="Video testimonials"
         >
-          <CarouselContent className="-ml-6" viewportClassName={VIEWPORT_INSET}>
+          <CarouselContent className="-ml-6 select-none" viewportClassName={VIEWPORT_INSET}>
             {videos.map((video, index) => {
               const videoId = extractYouTubeId(video.videoId)
 
@@ -102,7 +105,7 @@ export function VideoCarousel({
                   key={videoId}
                   className={`pl-6 ${VIDEO_ITEM}`}
                 >
-                  <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-black border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
+                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
                     <iframe
                       src={`https://www.youtube.com/embed/${videoId}?rel=0`}
                       title={video.title ?? `Video ${index + 1}`}
@@ -118,8 +121,8 @@ export function VideoCarousel({
         </Carousel>
       </div>
 
-      {/* Navigation arrows — anchored to the content column's left edge */}
-      <div className={`${COLUMN} mt-8 flex items-center gap-3`}>
+      {/* Navigation arrows — anchored to the content column's right edge */}
+      <div className={`${ARROW_COLUMN} mt-8 flex items-center justify-end gap-3`}>
         <Button
           variant="ghost"
           size="icon"

@@ -2,41 +2,30 @@ import { NextResponse } from "next/server"
 
 const MONDAY_API_URL = "https://api.monday.com/v2"
 const BOARD_ID = "5978901066"
+// Same group as the full contact form — all website leads land together.
 const GROUP_ID = "group_mm13rdh1"
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-type NewsletterPayload = {
-  name?: unknown
-  company?: unknown
+type LeadPayload = {
   email?: unknown
-  consent?: unknown
   website?: unknown
 }
 
 export async function POST(request: Request) {
   try {
-    const payload = (await request.json()) as NewsletterPayload
+    const payload = (await request.json()) as LeadPayload
     const website = getString(payload.website)
 
+    // Honeypot — silently accept bots without creating an item.
     if (website.trim()) {
       return NextResponse.json({ success: true })
     }
 
-    const name = getString(payload.name).trim()
-    const company = getString(payload.company).trim()
     const email = getString(payload.email).trim()
-    const consent = payload.consent === true
 
     if (!email || !emailPattern.test(email)) {
       return NextResponse.json(
         { error: "A valid email address is required" },
-        { status: 400 }
-      )
-    }
-
-    if (!consent) {
-      return NextResponse.json(
-        { error: "Consent is required" },
         { status: 400 }
       )
     }
@@ -49,19 +38,8 @@ export async function POST(request: Request) {
       )
     }
 
-    const subscriberDetails = [
-      name || "Newsletter signup",
-      company ? `Company: ${company}` : "",
-    ]
-      .filter(Boolean)
-      .join(" | ")
-
-    const columnValues: Record<string, unknown> = {
-      text: subscriberDetails,
-    }
-
-    const query = `mutation ($boardId: ID!, $groupId: String!, $itemName: String!, $columnValues: JSON!) {
-      create_item (board_id: $boardId, group_id: $groupId, item_name: $itemName, column_values: $columnValues) {
+    const query = `mutation ($boardId: ID!, $groupId: String!, $itemName: String!) {
+      create_item (board_id: $boardId, group_id: $groupId, item_name: $itemName) {
         id
       }
     }`
@@ -70,7 +48,6 @@ export async function POST(request: Request) {
       boardId: BOARD_ID,
       groupId: GROUP_ID,
       itemName: email,
-      columnValues: JSON.stringify(columnValues),
     }
 
     const response = await fetch(MONDAY_API_URL, {
@@ -107,7 +84,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, id: data.data.create_item.id })
   } catch (error) {
-    console.error("Newsletter API error:", error)
+    console.error("Lead API error:", error)
 
     return NextResponse.json(
       { error: "Internal error", details: String(error) },

@@ -118,7 +118,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </Link>
               </Button>
 
-              <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-border/60 bg-[linear-gradient(135deg,#f4efe6,#f8f6f1)]">
+              <div className="mx-auto max-w-5xl overflow-hidden rounded-[1.5rem] border border-border/60 bg-[linear-gradient(135deg,#f4efe6,#f8f6f1)]">
                 <div className="px-8 py-10 lg:px-12 lg:py-14">
                   <div className="max-w-3xl">
                     <p className="text-sm font-medium uppercase tracking-[0.16em] text-foreground/55">
@@ -135,7 +135,7 @@ export default async function BlogPostPage({ params }: Props) {
 
                 {post.image && (
                   <div className="px-8 pb-8 lg:px-12 lg:pb-12">
-                    <div className="overflow-hidden rounded-[1.75rem] border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
+                    <div className="overflow-hidden rounded-[1.25rem] border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
                       <Image
                         src={post.image}
                         alt={post.title}
