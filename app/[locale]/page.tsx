@@ -5,10 +5,9 @@ import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
 import { LogoWall } from "@/components/logo-wall"
-import { VideoCarousel, type VideoData } from "@/components/video-carousel"
 import { TestimonialCarousel, type Testimonial } from "@/components/testimonial-carousel"
-import { PlatformFlower } from "@/components/platform-flower"
 import { LeadEmailForm } from "@/components/lead-email-form"
+import { RotatingWord } from "@/components/rotating-word"
 import { Button } from "@/components/ui/button"
 import { getPostBySlug } from "@/lib/blog-data"
 import { aiStackSlides, aiStackSliderCopy } from "@/lib/ai-stack"
@@ -105,16 +104,16 @@ function formatCaseDate(date: string): string {
   return `${caseDateMonths[parsed.getMonth()]} ${parsed.getFullYear()}`
 }
 
-// ── Language-agnostic data (shared across locales) ──
-const customerVideos: VideoData[] = [
-  { videoId: "3LOknXK4buo" },
-  { videoId: "AgHZcfeu8mQ" },
-  { videoId: "H4HvdRpmHjo" },
-]
-
 // ── Localized copy ──
 type HomeCopy = {
-  hero: { title: string; subtitle: string; ctaLabel: string }
+  hero: {
+    /** Line 1: a static lead-in plus terms that cycle in place. */
+    rotating: { prefix: string; words: string[] }
+    /** Line 2: static lead-in plus an emphasized summary of the field offering. */
+    tagline: { prefix: string; emphasis: string }
+    subtitle: string
+    ctaLabel: string
+  }
   tabSlides: SlideData[]
   logoWallTitle: string
   trust: {
@@ -127,7 +126,6 @@ type HomeCopy = {
   platform: { eyebrow: string; title: string; subtitle: string; ariaLabel: string }
   verticalSlides: SlideData[]
   ai: { ariaLabel: string }
-  videoTitle: string
   testimonials: Testimonial[]
   testimonialTitle: string
   bento: {
@@ -143,7 +141,14 @@ type HomeCopy = {
 const copy: Record<Locale, HomeCopy> = {
   en: {
     hero: {
-      title: "Digital Operations Platform",
+      rotating: {
+        prefix: "For your own factory:",
+        words: ["MES", "IoT", "OEE", "EMS", "QMS", "Document management", "Planning", "AI agents"],
+      },
+      tagline: {
+        prefix: "For your machines at customer sites:",
+        emphasis: "remote monitoring, service & AI agents",
+      },
       subtitle: "One platform for production, performance, and connected operations.",
       ctaLabel: "Talk to sales",
     },
@@ -310,7 +315,6 @@ const copy: Record<Locale, HomeCopy> = {
       },
     ],
     ai: { ariaLabel: "AI capabilities" },
-    videoTitle: "Video stories",
     testimonials: [
       {
         quote:
@@ -425,7 +429,14 @@ const copy: Record<Locale, HomeCopy> = {
   },
   da: {
     hero: {
-      title: "Digital driftsplatform",
+      rotating: {
+        prefix: "Til din egen fabrik:",
+        words: ["MES", "IoT", "OEE", "EMS", "QMS", "Dokumentstyring", "Planlægning", "AI-agenter"],
+      },
+      tagline: {
+        prefix: "Til dine maskiner ude hos kunderne:",
+        emphasis: "fjernovervågning, service og AI-agenter",
+      },
       subtitle: "Én platform til produktion, performance og forbundne driftsteams.",
       ctaLabel: "Tal med salg",
     },
@@ -592,7 +603,6 @@ const copy: Record<Locale, HomeCopy> = {
       },
     ],
     ai: { ariaLabel: "AI-funktioner" },
-    videoTitle: "Videohistorier",
     testimonials: [
       {
         quote:
@@ -730,8 +740,18 @@ export default async function Home({
     <main>
       <section className="py-12 lg:py-16">
         <div className="w-full px-[var(--edge)] py-22">
-          <h1 className="text-6xl font-light text-foreground text-center">
-            {t.hero.title}
+          <h1 className="text-3xl font-light leading-tight text-foreground text-center sm:text-4xl lg:text-5xl">
+            <span className="block">
+              {t.hero.rotating.prefix}{" "}
+              <RotatingWord
+                words={t.hero.rotating.words}
+                className="font-normal text-foreground"
+              />
+            </span>
+            <span className="mt-3 block">
+              {t.hero.tagline.prefix}{" "}
+              <span className="font-normal text-foreground">{t.hero.tagline.emphasis}</span>
+            </span>
           </h1>
           <p className="mt-6 text-xl text-foreground/70 text-center">
             {t.hero.subtitle}
@@ -827,20 +847,12 @@ export default async function Home({
         />
       </section>
 
-      {/* Customer Video Testimonials */}
-      <section className="py-12 lg:py-28">
-        <VideoCarousel videos={customerVideos} title={t.videoTitle} />
-      </section>
-
       {/* Testimonial Carousel */}
       <TestimonialCarousel
         testimonials={t.testimonials}
         title={t.testimonialTitle}
         className="py-12 lg:py-28"
       />
-
-      {/* Platform Overview - Interactive Flower */}
-      <PlatformFlower locale={loc} />
 
       {/* Customer Results — Scandinavian bento of measured outcomes */}
       {/* Negative bottom margin cancels the CTA's top margin so the two

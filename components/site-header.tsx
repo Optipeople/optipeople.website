@@ -13,12 +13,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Link, usePathname } from "@/i18n/navigation"
-import { navigationMenus } from "@/i18n/navigation-data"
+import { navigationLinks, navigationMenus } from "@/i18n/navigation-data"
 import type { Locale } from "@/i18n/routing"
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
-
-const navigationItems: readonly { title: string; href: string }[] = []
 
 // Delay before a hovered menu closes, so crossing the trigger→panel gap or
 // sliding between menus never flickers the dropdown shut.
@@ -29,6 +27,7 @@ export function SiteHeader() {
   const locale = useLocale() as Locale
   const t = useTranslations("chrome")
   const dropdownMenus = navigationMenus[locale]
+  const navigationItems = navigationLinks[locale]
 
   // Only drive menus by hover on devices that actually have a hovering pointer
   // (mouse/trackpad). On touch, hover events are unreliable, so we fall back to
@@ -109,17 +108,6 @@ export function SiteHeader() {
           role="navigation"
           aria-label={t("navigationLabel")}
         >
-          {navigationItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="cursor-pointer px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
-              aria-label={t("linkLabel", { title: item.title })}
-            >
-              {item.title}
-            </Link>
-          ))}
-
           {dropdownMenus.map((menu) => (
             <DropdownMenu
               key={menu.title}
@@ -173,6 +161,17 @@ export function SiteHeader() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+          ))}
+
+          {navigationItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="cursor-pointer px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-offset-2"
+              aria-label={t("linkLabel", { title: item.title })}
+            >
+              {item.title}
+            </Link>
           ))}
         </nav>
 

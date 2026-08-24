@@ -74,7 +74,6 @@ export const navigationMenus = {
       title: "Resources",
       items: [
         { title: "Insights", href: "/insights" },
-        { title: "Videos", href: "/videos" },
         { title: "Newsletter", href: "/newsletter" },
         { title: "People", href: "/resources/people" },
         { title: "Get Help", href: "/get-help" },
@@ -152,7 +151,6 @@ export const navigationMenus = {
       title: "Ressourcer",
       items: [
         { title: "Indsigter", href: "/insights" },
-        { title: "Videoer", href: "/videos" },
         { title: "Nyhedsbrev", href: "/newsletter" },
         { title: "Mennesker", href: "/resources/people" },
         { title: "Få hjælp", href: "/get-help" },
@@ -163,6 +161,12 @@ export const navigationMenus = {
   ],
 } as const
 
+// Flat top-level nav links rendered alongside the dropdown menus.
+export const navigationLinks = {
+  en: [{ title: "Videos", href: "/videos" }],
+  da: [{ title: "Videoer", href: "/videos" }],
+} as const
+
 export const footerLinks = {
   en: {
     company: [
@@ -171,6 +175,7 @@ export const footerLinks = {
       { title: "Contact", href: "/contact" },
     ],
     modules: [
+      { title: "Platform overview", href: "/platform" },
       { title: "Production", href: "/modules/production" },
       { title: "Quality", href: "/modules/quality" },
       { title: "Maintenance", href: "/modules/maintenance" },
@@ -198,6 +203,7 @@ export const footerLinks = {
       { title: "Kontakt", href: "/contact" },
     ],
     modules: [
+      { title: "Platformoverblik", href: "/platform" },
       { title: "Produktion", href: "/modules/production" },
       { title: "Kvalitet", href: "/modules/quality" },
       { title: "Vedligehold", href: "/modules/maintenance" },

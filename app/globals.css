@@ -223,6 +223,18 @@
   --sidebar-ring: oklch(0.4390 0 0);
 }
 
+/* Hero rotating word — incoming term rises into place. */
+@keyframes word-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.6em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -231,22 +243,4 @@
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
   }
-}
-
-/* Infinite scroll animation for testimonial carousel */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(var(--scroll-width, -50%) * -1));
-  }
-}
-
-.animate-scroll-left {
-  animation: scroll-left 30s linear infinite;
-}
-
-.animate-scroll-left:hover {
-  animation-play-state: paused;
 }
