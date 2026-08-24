@@ -13,6 +13,9 @@ import { useEffect, useState } from "react"
 export type VideoData = {
   videoId: string
   title?: string
+  description?: string
+  /** Spoken language of the video, shown as a small tag on the caption. */
+  languageLabel?: string
 }
 
 type VideoCarouselProps = {
@@ -114,6 +117,26 @@ export function VideoCarousel({
                       className="absolute inset-0 w-full h-full"
                     />
                   </div>
+
+                  {video.title && (
+                    <div className="mt-5">
+                      <div className="flex items-baseline gap-3">
+                        <h3 className="text-lg font-medium text-foreground">
+                          {video.title}
+                        </h3>
+                        {video.languageLabel && (
+                          <span className="shrink-0 rounded-full border border-[var(--gray-2)] px-2 py-0.5 text-xs text-muted-foreground">
+                            {video.languageLabel}
+                          </span>
+                        )}
+                      </div>
+                      {video.description && (
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                          {video.description}
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </CarouselItem>
               )
             })}

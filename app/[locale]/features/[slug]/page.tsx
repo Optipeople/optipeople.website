@@ -31,5 +31,7 @@ export default async function FeaturePage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const entry = getFeature(slug)
   if (!entry) notFound()
-  return <FeaturePageTemplate page={entry.content[locale as Locale]} />
+  return (
+    <FeaturePageTemplate page={entry.content[locale as Locale]} slug={entry.slug} />
+  )
 }

@@ -111,7 +111,6 @@ type HomeCopy = {
     rotating: { prefix: string; words: string[] }
     /** Line 2: static lead-in plus an emphasized summary of the field offering. */
     tagline: { prefix: string; emphasis: string }
-    subtitle: string
     ctaLabel: string
   }
   tabSlides: SlideData[]
@@ -143,13 +142,12 @@ const copy: Record<Locale, HomeCopy> = {
     hero: {
       rotating: {
         prefix: "For your own factory:",
-        words: ["MES", "IoT", "OEE", "EMS", "QMS", "Document management", "Planning", "AI agents"],
+        words: ["MES", "IoT", "OEE", "EMS", "QMS", "DMS", "Planning", "AI agents"],
       },
       tagline: {
         prefix: "For your machines at customer sites:",
         emphasis: "remote monitoring, service & AI agents",
       },
-      subtitle: "One platform for production, performance, and connected operations.",
       ctaLabel: "Talk to sales",
     },
     tabsAriaLabel: "Team solutions",
@@ -431,13 +429,12 @@ const copy: Record<Locale, HomeCopy> = {
     hero: {
       rotating: {
         prefix: "Til din egen fabrik:",
-        words: ["MES", "IoT", "OEE", "EMS", "QMS", "Dokumentstyring", "Planlægning", "AI-agenter"],
+        words: ["MES", "IoT", "OEE", "EMS", "QMS", "DMS", "Planlægning", "AI-agenter"],
       },
       tagline: {
         prefix: "Til dine maskiner ude hos kunderne:",
         emphasis: "fjernovervågning, service og AI-agenter",
       },
-      subtitle: "Én platform til produktion, performance og forbundne driftsteams.",
       ctaLabel: "Tal med salg",
     },
     tabsAriaLabel: "Løsninger til teams",
@@ -748,13 +745,9 @@ export default async function Home({
                 className="font-normal text-foreground"
               />
             </span>
-            <span className="mt-3 block">
-              {t.hero.tagline.prefix}{" "}
-              <span className="font-normal text-foreground">{t.hero.tagline.emphasis}</span>
-            </span>
           </h1>
-          <p className="mt-6 text-xl text-foreground/70 text-center">
-            {t.hero.subtitle}
+          <p className="mt-4 text-lg font-light leading-snug text-foreground/70 text-center sm:text-xl">
+            {t.hero.tagline.prefix} {t.hero.tagline.emphasis}
           </p>
           <div className="mt-8 flex justify-center">
             <LeadEmailForm className="w-full max-w-md" />

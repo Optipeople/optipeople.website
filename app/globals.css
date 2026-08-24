@@ -223,15 +223,48 @@
   --sidebar-ring: oklch(0.4390 0 0);
 }
 
-/* Hero rotating word — incoming term rises into place. */
-@keyframes word-rise {
+/* Hero rotating word — slot-machine roll: the outgoing term exits through the
+   top of the masked slot as the incoming one enters from the bottom. */
+@keyframes word-roll-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes word-roll-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Scroll-linked reveal for large panels (feature pages).
+   Pure CSS via a view() timeline: no JS, no hydration cost, and browsers
+   without `animation-timeline` simply render the panels in place. Motion is
+   skipped entirely when the visitor asks for reduced motion. */
+@keyframes panel-reveal {
   from {
     opacity: 0;
-    transform: translateY(0.6em);
+    transform: translateY(28px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: panel-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 8% cover 24%;
+    }
   }
 }
 

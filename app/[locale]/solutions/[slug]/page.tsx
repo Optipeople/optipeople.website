@@ -31,5 +31,11 @@ export default async function SolutionPage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const entry = getSolution(slug)
   if (!entry) notFound()
-  return <StandardPageTemplate page={entry.content[locale as Locale]} />
+  return (
+    <StandardPageTemplate
+      page={entry.content[locale as Locale]}
+      family="solutions"
+      slug={entry.slug}
+    />
+  )
 }

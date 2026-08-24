@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 
-import { SimpleLandingPage } from "@/components/templates/simple-page"
+import { LinkIndexPage } from "@/components/templates/link-index"
 import { getSimplePage } from "@/content/pages/simple"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
@@ -27,5 +27,11 @@ export default async function FeaturesIndex({ params }: Props) {
   setRequestLocale(locale as Locale)
   const page = getSimplePage(PATH, locale as Locale)
   if (!page) notFound()
-  return <SimpleLandingPage page={page} />
+  return (
+    <LinkIndexPage
+      page={page}
+      family="features"
+      locale={locale as Locale}
+    />
+  )
 }

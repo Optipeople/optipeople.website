@@ -5,15 +5,23 @@ const lastUpdated: Record<Locale, string> = {
   da: "Senest opdateret: 28. juni 2026",
 }
 
+const updatedPrefix: Record<Locale, string> = {
+  en: "Last updated: ",
+  da: "Senest opdateret: ",
+}
+
 export function LegalShell({
   eyebrow,
   title,
   locale,
+  /** Per-page date, already localized (e.g. "24 August 2026"). Falls back to the shared date. */
+  updated,
   children,
 }: {
   eyebrow: string
   title: string
   locale: Locale
+  updated?: string
   children: React.ReactNode
 }) {
   return (
@@ -27,7 +35,7 @@ export function LegalShell({
             {title}
           </h1>
           <p className="mt-6 text-base text-muted-foreground">
-            {lastUpdated[locale]}
+            {updated ? `${updatedPrefix[locale]}${updated}` : lastUpdated[locale]}
           </p>
         </div>
       </section>

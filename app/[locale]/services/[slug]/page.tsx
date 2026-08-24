@@ -31,5 +31,11 @@ export default async function ServicePage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const entry = getService(slug)
   if (!entry) notFound()
-  return <StandardPageTemplate page={entry.content[locale as Locale]} />
+  return (
+    <StandardPageTemplate
+      page={entry.content[locale as Locale]}
+      family="services"
+      slug={entry.slug}
+    />
+  )
 }

@@ -85,6 +85,10 @@ export type SimplePage = {
   headline: string
   body: string
   links: RelatedLink[]
+  /** Heading rendered above the link grid. */
+  linksTitle?: string
+  /** Prose sections rendered below the link grid. */
+  sections?: { title: string; body: string }[]
   note?: string
 }
 

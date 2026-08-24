@@ -31,5 +31,11 @@ export default async function ModulePage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const entry = getModule(slug)
   if (!entry) notFound()
-  return <StandardPageTemplate page={entry.content[locale as Locale]} />
+  return (
+    <StandardPageTemplate
+      page={entry.content[locale as Locale]}
+      family="modules"
+      slug={entry.slug}
+    />
+  )
 }
