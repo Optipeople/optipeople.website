@@ -17,6 +17,10 @@ type CasesCopy = {
   eyebrow: string
   title: string
   subtitle: string
+  storiesLabel: string
+  measuredLabel: string
+  customersLabel: string
+  moreLabel: string
   emptyTitle: string
   emptyBody: string
   ctaLabel: string
@@ -27,11 +31,15 @@ const copy: Record<Locale, CasesCopy> = {
     metaTitle: "Cases",
     metaDescription:
       "See how manufacturers use OptiPeople and Opticloud to improve OEE, reduce downtime, and make better production decisions.",
-    backLabel: "Back to home",
+    backLabel: "Home",
     eyebrow: "Customer stories",
     title: "Results from the factory floor",
     subtitle:
       "How manufacturers use Opticloud to lift OEE, cut downtime, and turn production data into better decisions.",
+    storiesLabel: "published customer stories",
+    measuredLabel: "with a measured result on the line",
+    customersLabel: "Manufacturers in these stories",
+    moreLabel: "More stories",
     emptyTitle: "No case studies yet",
     emptyBody: "Customer stories will appear here as they are published.",
     ctaLabel: "Read story",
@@ -40,11 +48,15 @@ const copy: Record<Locale, CasesCopy> = {
     metaTitle: "Cases | OptiPeople",
     metaDescription:
       "Se hvordan produktionsvirksomheder bruger OptiPeople og Opticloud til at forbedre OEE, oppetid og beslutninger.",
-    backLabel: "Tilbage til forsiden",
+    backLabel: "Forsiden",
     eyebrow: "Cases",
     title: "Virkelige resultater fra virkelige fabrikker",
     subtitle:
       "Sådan bruger produktionsvirksomheder Opticloud til at løfte OEE, reducere nedetid og omsætte produktionsdata til bedre beslutninger.",
+    storiesLabel: "publicerede kundehistorier",
+    measuredLabel: "med et målt resultat på linjen",
+    customersLabel: "Virksomhederne i historierne",
+    moreLabel: "Flere historier",
     emptyTitle: "Ingen cases endnu",
     emptyBody: "Cases vises her, når kundehistorier bliver publiceret.",
     ctaLabel: "Læs case",
@@ -71,19 +83,21 @@ export default async function CasesPage({ params }: Props) {
   const prefix = locale === "da" ? "/da" : ""
 
   return (
-    <main>
-      <CaseArchive
-        cases={cases}
-        postBasePath={`${prefix}/blog`}
-        backHref={`${prefix}/`}
-        backLabel={t.backLabel}
-        eyebrow={t.eyebrow}
-        title={t.title}
-        subtitle={t.subtitle}
-        emptyTitle={t.emptyTitle}
-        emptyBody={t.emptyBody}
-        ctaLabel={t.ctaLabel}
-      />
-    </main>
+    <CaseArchive
+      cases={cases}
+      postBasePath={`${prefix}/blog`}
+      backHref={`${prefix}/`}
+      backLabel={t.backLabel}
+      eyebrow={t.eyebrow}
+      title={t.title}
+      subtitle={t.subtitle}
+      storiesLabel={t.storiesLabel}
+      measuredLabel={t.measuredLabel}
+      customersLabel={t.customersLabel}
+      moreLabel={t.moreLabel}
+      emptyTitle={t.emptyTitle}
+      emptyBody={t.emptyBody}
+      ctaLabel={t.ctaLabel}
+    />
   )
 }

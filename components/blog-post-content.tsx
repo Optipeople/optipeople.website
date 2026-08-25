@@ -44,16 +44,16 @@ export function TableOfContents({
   if (headings.length === 0) return null
 
   return (
-    <nav className="sticky top-24">
-      <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-4">
+    <nav className="sticky top-28">
+      <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
         {label}
       </h2>
-      <ul className="space-y-2">
+      <ul className="mt-5 space-y-3 border-l border-black/[0.08] pl-5">
         {headings.map((heading) => (
           <li key={heading.slug}>
             <a
               href={`#${heading.slug}`}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="block text-sm leading-snug text-foreground/55 transition-colors duration-200 hover:text-foreground"
             >
               {heading.text}
             </a>
@@ -111,7 +111,7 @@ export function MarkdownContent({ content }: { content: string }) {
               alt={alt || ""}
               width={800}
               height={450}
-              className="rounded-lg my-6"
+              className="my-8 rounded-xl ring-1 ring-black/[0.08]"
             />
           )
         },

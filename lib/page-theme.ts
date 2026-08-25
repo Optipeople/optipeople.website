@@ -36,7 +36,7 @@ const SURFACES = {
   slate: { tint: "oklch(0.957 0.008 265)", deep: "#1c1f26" },
 } as const satisfies Record<string, PageTheme>
 
-type SurfaceName = keyof typeof SURFACES
+export type SurfaceName = keyof typeof SURFACES
 
 /**
  * Surface per page. Related pages across families share a hue on purpose —
@@ -90,4 +90,34 @@ const ASSIGNMENTS: Record<PageFamily, Record<string, SurfaceName>> = {
 export function getPageTheme(family: PageFamily, slug: string): PageTheme {
   const surface = ASSIGNMENTS[family]?.[slug]
   return SURFACES[surface ?? "green"]
+}
+
+/**
+ * Surface lookup for the bespoke pages: /insights, /blog, /cases, /videos and
+ * /contact. They are not built from a template, so they have no family/slug to
+ * be assigned from, but they must draw from the same eight brand surfaces as
+ * everything else or the site stops reading as one design.
+ */
+export function getSurface(name: SurfaceName): PageTheme {
+  return SURFACES[name]
+}
+
+/**
+ * Deterministic surface for the nth item in a list, used by the cases archive.
+ * Each story gets its own colour so a grid of them reads as a set of distinct
+ * stories rather than one card repeated.
+ */
+const ROTATION: SurfaceName[] = [
+  "green",
+  "blue",
+  "sand",
+  "purple",
+  "teal",
+  "clay",
+  "sage",
+  "slate",
+]
+
+export function rotateSurface(index: number): PageTheme {
+  return SURFACES[ROTATION[index % ROTATION.length]]
 }

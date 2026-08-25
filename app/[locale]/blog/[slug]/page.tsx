@@ -1,12 +1,13 @@
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { Link } from "@/i18n/navigation"
 import { type Locale } from "@/i18n/routing"
-import { getAllSlugs, getPostBySlug } from "@/lib/blog-data"
-import { Button } from "@/components/ui/button"
+import { getAllSlugs, getPostBySlug, getPostsByCategory } from "@/lib/blog-data"
+import { formatPostDate, formatPostYear } from "@/lib/format-date"
+import { getSurface } from "@/lib/page-theme"
 import {
   MarkdownContent,
   TableOfContents,
@@ -22,18 +23,30 @@ type PostCopy = {
   backToBlog: string
   backToCases: string
   tableOfContents: string
+  relatedPosts: string
+  relatedCases: string
+  readMore: string
+  by: string
 }
 
 const copy: Record<Locale, PostCopy> = {
   en: {
-    backToBlog: "Back to blog",
-    backToCases: "Back to cases",
-    tableOfContents: "Table of Contents",
+    backToBlog: "Blog",
+    backToCases: "Cases",
+    tableOfContents: "Contents",
+    relatedPosts: "Keep reading",
+    relatedCases: "More customer stories",
+    readMore: "Read",
+    by: "by",
   },
   da: {
-    backToBlog: "Tilbage til blog",
-    backToCases: "Tilbage til cases",
-    tableOfContents: "Indholdsfortegnelse",
+    backToBlog: "Blog",
+    backToCases: "Cases",
+    tableOfContents: "Indhold",
+    relatedPosts: "Læs videre",
+    relatedCases: "Flere kundehistorier",
+    readMore: "Læs",
+    by: "af",
   },
 }
 
@@ -65,8 +78,22 @@ export async function generateMetadata({ params }: Props) {
   })
 }
 
+/**
+ * Article and case-study reader.
+ *
+ * Both variants share the design language of the rest of the site: the
+ * `--edge` column, `font-light` display type, hairlines, and images floating
+ * on a tint with a ring rather than sitting in a bordered box.
+ *
+ * The two differ where they should. An article opens on the sand tint and
+ * leads with its headline. A case study opens on the deep brand surface and
+ * leads with its number, because the number is the reason to read it. Both
+ * close on related reading, so the article is never a dead end. The conversion
+ * CTA comes from app/[locale]/layout.tsx.
+ */
 export default async function BlogPostPage({ params }: Props) {
-  const { locale, slug } = await params
+  const { locale } = await params
+  const { slug } = await params
   setRequestLocale(locale as Locale)
   const post = getPostBySlug(slug)
 
@@ -77,8 +104,13 @@ export default async function BlogPostPage({ params }: Props) {
   const t = copy[locale as Locale] ?? copy.en
   const headings = extractHeadings(post.content)
   const isCaseStudy = post.category === "Cases"
+  const theme = getSurface(isCaseStudy ? "green" : "sand")
   const backHref = isCaseStudy ? "/cases" : "/blog"
   const backLabel = isCaseStudy ? t.backToCases : t.backToBlog
+
+  const related = getPostsByCategory(post.category)
+    .filter((item) => item.slug !== post.slug)
+    .slice(0, 3)
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -99,130 +131,186 @@ export default async function BlogPostPage({ params }: Props) {
     ...(post.image ? { image: [absoluteUrl(post.image)] } : {}),
   }
 
-  if (!isCaseStudy) {
-    return (
-      <main>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(articleSchema),
-          }}
-        />
-        <article className="py-12 lg:py-16">
-          <div className="px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <Button asChild variant="ghost" size="sm" className="mb-8">
-                <Link href={backHref}>
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  {backLabel}
-                </Link>
-              </Button>
-
-              <div className="mx-auto max-w-5xl overflow-hidden rounded-[1.5rem] border border-border/60 bg-[linear-gradient(135deg,#f4efe6,#f8f6f1)]">
-                <div className="px-8 py-10 lg:px-12 lg:py-14">
-                  <div className="max-w-3xl">
-                    <p className="text-sm font-medium uppercase tracking-[0.16em] text-foreground/55">
-                      {post.category}
-                    </p>
-                    <h1 className="mt-4 text-4xl font-light tracking-tight text-foreground lg:text-6xl">
-                      {post.title}
-                    </h1>
-                    <p className="mt-6 text-sm text-foreground/55">
-                      {post.date} &middot; {post.author}
-                    </p>
-                  </div>
-                </div>
-
-                {post.image && (
-                  <div className="px-8 pb-8 lg:px-12 lg:pb-12">
-                    <div className="overflow-hidden rounded-[1.25rem] border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        width={1200}
-                        height={675}
-                        className="w-full h-auto object-cover"
-                        priority
-                      />
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[200px_1fr]">
-                <aside className="hidden lg:block">
-                  <TableOfContents headings={headings} label={t.tableOfContents} />
-                </aside>
-
-                <div className="min-w-0">
-                  <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground/80 prose-strong:text-foreground prose-a:text-primary prose-code:text-foreground prose-pre:bg-muted prose-blockquote:border-primary prose-blockquote:text-foreground/70 prose-li:text-foreground/80 prose-th:text-foreground prose-td:text-foreground/80">
-                    <MarkdownContent content={post.content} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </main>
-    )
-  }
-
   return (
-    <main>
+    <article className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(articleSchema),
         }}
       />
-      <article className="py-12 lg:py-16">
-        <div className="px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <Button asChild variant="ghost" size="sm" className="mb-8">
-              <Link href={backHref}>
-                <ArrowLeft className="mr-2 h-4 w-4" />
+
+      {isCaseStudy ? (
+        /* Case study: the deep surface, leading with the measured result. */
+        <header
+          className="pb-14 pt-8 text-white lg:pb-20 lg:pt-12"
+          style={{ backgroundColor: theme.deep }}
+        >
+          <div className="px-[var(--edge)]">
+            <nav className="flex items-center gap-2 text-sm text-white/50">
+              <Link
+                href={backHref}
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" />
                 {backLabel}
               </Link>
-            </Button>
+              <span aria-hidden>/</span>
+              <span className="text-white/80">
+                {post.customer ?? formatPostYear(post.date)}
+              </span>
+            </nav>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-12">
-              {/* Table of Contents - Left sidebar */}
-              <aside className="hidden lg:block">
-                <TableOfContents headings={headings} label={t.tableOfContents} />
-              </aside>
-
-              {/* Main content - Right side */}
+            <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-16">
               <div>
-                <header className="mb-8">
-                  <p className="text-sm text-muted-foreground">
-                    {post.category} &middot; {post.date} &middot; {post.author}
+                {post.customer && (
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/55">
+                    {post.customer}
                   </p>
-                  <h1 className="mt-2 text-4xl font-light text-foreground">
-                    {post.title}
-                  </h1>
-                </header>
-
-                {post.image && (
-                  <div className="mb-8 overflow-hidden rounded-lg border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      width={800}
-                      height={450}
-                      className="w-full h-auto max-h-[600px] object-cover"
-                      priority
-                    />
-                  </div>
                 )}
+                <h1 className="mt-5 max-w-3xl text-3xl font-light leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl">
+                  {post.title}
+                </h1>
+                <p className="mt-6 text-sm tabular-nums text-white/50">
+                  {formatPostDate(post.date, locale)}
+                  {post.author ? ` · ${t.by} ${post.author}` : ""}
+                </p>
+              </div>
 
-                <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground/80 prose-strong:text-foreground prose-a:text-primary prose-code:text-foreground prose-pre:bg-muted prose-blockquote:border-primary prose-blockquote:text-foreground/70 prose-li:text-foreground/80 prose-th:text-foreground prose-td:text-foreground/80">
-                  <MarkdownContent content={post.content} />
-                </div>
+              <div className="lg:pt-2">
+                {post.metric && (
+                  <p className="text-6xl font-extralight leading-none tracking-tight tabular-nums lg:text-7xl">
+                    {post.metric}
+                  </p>
+                )}
+                {post.metricLabel && (
+                  <p
+                    className={`max-w-[26ch] text-base leading-relaxed text-white/60 ${
+                      post.metric ? "mt-4" : ""
+                    }`}
+                  >
+                    {post.metricLabel}
+                  </p>
+                )}
+                {post.quote && (
+                  <p className="mt-8 border-l border-white/20 pl-5 font-serif text-lg italic leading-relaxed text-white/70">
+                    {post.quote}
+                  </p>
+                )}
               </div>
             </div>
           </div>
+        </header>
+      ) : (
+        /* Article: the tint wash, leading with the headline. */
+        <header className="relative isolate overflow-hidden pb-12 pt-8 lg:pb-16 lg:pt-12">
+          <div
+            aria-hidden
+            className="absolute inset-x-0 top-0 -z-10 h-full"
+            style={{
+              background: `linear-gradient(180deg, ${theme.tint} 0%, ${theme.tint} 60%, transparent 100%)`,
+            }}
+          />
+
+          <div className="px-[var(--edge)]">
+            <nav className="flex items-center gap-2 text-sm text-foreground/50">
+              <Link
+                href={backHref}
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" />
+                {backLabel}
+              </Link>
+              <span aria-hidden>/</span>
+              <span className="text-foreground/80">
+                {formatPostYear(post.date)}
+              </span>
+            </nav>
+
+            <div className="mt-10 max-w-4xl lg:mt-14">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/50">
+                {post.category}
+              </p>
+              <h1 className="mt-5 text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                {post.title}
+              </h1>
+              <p className="mt-7 text-sm tabular-nums text-foreground/50">
+                {formatPostDate(post.date, locale)}
+                {post.author ? ` · ${t.by} ${post.author}` : ""}
+              </p>
+            </div>
+          </div>
+        </header>
+      )}
+
+      {/* Lead image, floating rather than boxed. On the case variant it laps
+          up over the edge of the deep header. */}
+      {post.image && (
+        <div className={isCaseStudy ? "-mt-8 lg:-mt-12" : "mt-2"}>
+          <div className="px-[var(--edge)]">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-white shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08]">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                sizes="(min-width: 1024px) 1140px, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
-      </article>
-    </main>
+      )}
+
+      {/* Body: contents rail on the left, one readable measure on the right. */}
+      <div className="px-[var(--edge)] py-16 lg:py-24">
+        <div className="grid gap-12 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16">
+          <aside className="hidden lg:block">
+            <TableOfContents headings={headings} label={t.tableOfContents} />
+          </aside>
+
+          <div className="min-w-0 max-w-[70ch]">
+            <div className="prose prose-lg max-w-none prose-headings:font-light prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-foreground/75 prose-a:text-primary prose-strong:text-foreground prose-code:text-foreground prose-pre:bg-[var(--gray-1)] prose-blockquote:border-primary prose-blockquote:font-serif prose-blockquote:not-italic prose-blockquote:text-foreground/70 prose-li:text-foreground/75 prose-th:text-foreground prose-td:text-foreground/75 prose-img:rounded-xl">
+              <MarkdownContent content={post.content} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Related reading, on the hairline grid. */}
+      {related.length > 0 && (
+        <section className="px-[var(--edge)] pb-20 lg:pb-28">
+          <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+            {isCaseStudy ? t.relatedCases : t.relatedPosts}
+          </h2>
+          <div className="mt-8 grid gap-px overflow-hidden rounded-[1.5rem] bg-black/[0.08] sm:grid-cols-3">
+            {related.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/blog/${item.slug}`}
+                className="group flex flex-col justify-between gap-8 bg-background p-7 transition-colors hover:bg-[var(--gray-1)] lg:p-8"
+              >
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/40">
+                    {formatPostDate(item.date, locale)}
+                  </p>
+                  <h3 className="mt-4 text-lg font-medium leading-snug tracking-tight text-foreground">
+                    {item.outcome ?? item.title}
+                  </h3>
+                  {item.metric && (
+                    <p className="mt-3 text-2xl font-extralight tabular-nums text-foreground/70">
+                      {item.metric}
+                    </p>
+                  )}
+                </div>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 text-foreground transition-colors group-hover:border-black/25">
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+    </article>
   )
 }

@@ -80,7 +80,7 @@ export function VideoCarousel({
     <section className={className}>
       {title && (
         <div className={`${COLUMN} mb-10`}>
-          <h2 className="text-4xl lg:text-5xl font-light text-foreground">
+          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
             {title}
           </h2>
         </div>
@@ -108,7 +108,7 @@ export function VideoCarousel({
                   key={videoId}
                   className={`pl-6 ${VIDEO_ITEM}`}
                 >
-                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-[0_24px_60px_-28px_rgba(0,0,0,0.5)] ring-1 ring-black/[0.08]">
                     <iframe
                       src={`https://www.youtube.com/embed/${videoId}?rel=0`}
                       title={video.title ?? `Video ${index + 1}`}
@@ -121,17 +121,17 @@ export function VideoCarousel({
                   {video.title && (
                     <div className="mt-5">
                       <div className="flex items-baseline gap-3">
-                        <h3 className="text-lg font-medium text-foreground">
+                        <h3 className="text-lg font-medium tracking-tight text-foreground">
                           {video.title}
                         </h3>
                         {video.languageLabel && (
-                          <span className="shrink-0 rounded-full border border-[var(--gray-2)] px-2 py-0.5 text-xs text-muted-foreground">
+                          <span className="shrink-0 rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/55">
                             {video.languageLabel}
                           </span>
                         )}
                       </div>
                       {video.description && (
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        <p className="mt-2 text-sm leading-relaxed text-foreground/60">
                           {video.description}
                         </p>
                       )}
@@ -151,7 +151,7 @@ export function VideoCarousel({
           size="icon"
           onClick={() => api?.scrollPrev()}
           disabled={!canScrollPrev}
-          className="cursor-pointer size-9 rounded-full border border-[var(--gray-2)] hover:bg-foreground/5"
+          className="size-9 cursor-pointer rounded-full border border-black/10 hover:border-black/25 hover:bg-foreground/5"
           aria-label="Previous video"
         >
           <ChevronRight className="size-4 rotate-180" />
@@ -161,7 +161,7 @@ export function VideoCarousel({
           size="icon"
           onClick={() => api?.scrollNext()}
           disabled={!canScrollNext}
-          className="cursor-pointer size-9 rounded-full border border-[var(--gray-2)] hover:bg-foreground/5"
+          className="size-9 cursor-pointer rounded-full border border-black/10 hover:border-black/25 hover:bg-foreground/5"
           aria-label="Next video"
         >
           <ChevronRight className="size-4" />

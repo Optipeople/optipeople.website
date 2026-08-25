@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 import { Link } from "@/i18n/navigation"
 import { VideoCarousel, type VideoData } from "@/components/video-carousel"
+import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
 
@@ -13,6 +14,8 @@ type VideosCopy = {
   eyebrow: string
   headline: string
   body: string
+  watchLabel: string
+  countLabel: (count: number) => string
   carouselTitle: string
   carouselBody: string
   videos: VideoData[]
@@ -28,9 +31,11 @@ const copy: Record<Locale, VideosCopy> = {
     eyebrow: "Videos",
     headline: "See Opticloud in action",
     body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place. The videos are recorded in Danish, and every story below is also written up in full on the site.",
+    watchLabel: "Watch the stories",
+    countLabel: (count) => `${count} videos, recorded in Danish`,
     carouselTitle: "Customer stories",
     carouselBody:
-      "Manufacturers describing the work in their own words — what they measured before, what they connected, and what they do differently now.",
+      "Manufacturers describing the work in their own words: what they measured before, what they connected, and what they do differently now.",
     videos: [
       {
         videoId: "3LOknXK4buo",
@@ -50,7 +55,7 @@ const copy: Record<Locale, VideosCopy> = {
         videoId: "H4HvdRpmHjo",
         title: "OptiPeople & Omron: turning data into a competitive advantage",
         description:
-          "A joint talk with Omron on how production data becomes a real advantage — what to measure, and how to turn it into decisions.",
+          "A joint talk with Omron on how production data becomes a real advantage: what to measure, and how to turn it into decisions.",
         languageLabel: "Danish",
       },
     ],
@@ -61,7 +66,7 @@ const copy: Record<Locale, VideosCopy> = {
       {
         title: "All customer cases",
         description:
-          "Results from the factory floor — OEE lifts, downtime reductions, and what it took to get there.",
+          "Results from the factory floor: OEE lifts, downtime reductions, and what it took to get there.",
         href: "/cases",
       },
       {
@@ -82,9 +87,11 @@ const copy: Record<Locale, VideosCopy> = {
     eyebrow: "Videoer",
     headline: "Se Opticloud i aktion",
     body: "Kundesamtaler og partneroplæg om, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret ét sted. Alle historier findes også skrevet i fuld længde her på sitet.",
+    watchLabel: "Se historierne",
+    countLabel: (count) => `${count} videoer, optaget på dansk`,
     carouselTitle: "Kundehistorier",
     carouselBody:
-      "Produktionsvirksomheder fortæller med egne ord — hvad de målte før, hvad de fik forbundet, og hvad de gør anderledes i dag.",
+      "Produktionsvirksomheder fortæller med egne ord: hvad de målte før, hvad de fik forbundet, og hvad de gør anderledes i dag.",
     videos: [
       {
         videoId: "3LOknXK4buo",
@@ -97,7 +104,7 @@ const copy: Record<Locale, VideosCopy> = {
         videoId: "AgHZcfeu8mQ",
         title: "Partnerskabet med OptiPeople (CASE: Nicholaisen)",
         description:
-          "Nicholaisen om, hvordan samarbejdet ser ud i hverdagen — fra den første maskine bliver forbundet, til data bliver brugt i den daglige drift.",
+          "Nicholaisen om, hvordan samarbejdet ser ud i hverdagen, fra den første maskine bliver forbundet, til data bliver brugt i den daglige drift.",
         languageLabel: "Dansk",
       },
       {
@@ -105,18 +112,18 @@ const copy: Record<Locale, VideosCopy> = {
         title:
           "OptiPeople & Omron: Sådan udnytter du data til at skabe en konkurrencefordel",
         description:
-          "Fælles oplæg med Omron om, hvordan produktionsdata bliver til en reel konkurrencefordel — hvad man skal måle, og hvordan det bliver til beslutninger.",
+          "Fælles oplæg med Omron om, hvordan produktionsdata bliver til en reel konkurrencefordel: hvad man skal måle, og hvordan det bliver til beslutninger.",
         languageLabel: "Dansk",
       },
     ],
     moreTitle: "Læs historierne i stedet",
     moreBody:
-      "Foretrækker du tekst — eller vil du have tallene? De skrevne cases går mere i dybden.",
+      "Foretrækker du tekst, eller vil du have tallene? De skrevne cases går mere i dybden.",
     moreLinks: [
       {
         title: "Alle kundecases",
         description:
-          "Resultater fra fabriksgulvet — løft i OEE, mindre nedetid, og hvad der skulle til.",
+          "Resultater fra fabriksgulvet: løft i OEE, mindre nedetid, og hvad der skulle til.",
         href: "/cases",
       },
       {
@@ -158,66 +165,120 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
+/**
+ * Videos page.
+ *
+ * Same design language as the deep-dive templates: the `--edge` column,
+ * `font-light` display type, arrow-in-circle affordances, and one full-bleed
+ * deep band as the closing rhythm break.
+ *
+ * The carousel keeps its own full-bleed track (cards bleed off both screen
+ * edges), so the section heading and lead-in are rendered here on the edge
+ * column instead of inside the carousel. That way the reader knows what the
+ * videos are before the first embed loads.
+ */
 export default async function VideosPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale as Locale)
   const t = copy[locale as Locale] ?? copy.en
+  const theme = getSurface("teal")
 
   return (
-    <main className="min-h-screen">
-      <section className="pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
+    <div className="min-h-screen">
+      {/* Hero, on a tint that fades out before the first embed. */}
+      <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 -z-10 h-full"
+          style={{
+            background: `linear-gradient(180deg, ${theme.tint} 0%, ${theme.tint} 55%, transparent 100%)`,
+          }}
+        />
+
+        <div className="px-[var(--edge)]">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
             {t.eyebrow}
           </p>
-          <h1 className="text-4xl sm:text-5xl font-light text-foreground tracking-tight leading-tight">
+          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t.headline}
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
             {t.body}
           </p>
-        </div>
-      </section>
 
-      <section className="py-12 lg:py-24">
-        <VideoCarousel videos={t.videos} title={t.carouselTitle} />
-        <div className="px-[var(--edge)] mt-10 max-w-2xl">
-          <p className="text-base leading-relaxed text-muted-foreground">
-            {t.carouselBody}
-          </p>
-        </div>
-      </section>
-
-      <section className="pb-24 lg:pb-32 px-[var(--edge)]">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl lg:text-4xl font-light tracking-tight text-foreground">
-            {t.moreTitle}
-          </h2>
-          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            {t.moreBody}
-          </p>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {t.moreLinks.map((link) => (
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link
-              key={link.href}
-              href={link.href}
-              className="group rounded-2xl border border-[var(--gray-2)] p-6 transition-colors hover:bg-foreground/[0.02]"
+              href="#stories"
+              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
             >
-              <div className="flex items-center justify-between gap-4">
-                <h3 className="text-lg font-medium text-foreground">
-                  {link.title}
-                </h3>
-                <ArrowRight className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {link.description}
-              </p>
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </span>
+              {t.watchLabel}
             </Link>
-          ))}
+            <p className="text-sm tabular-nums text-foreground/50">
+              {t.countLabel(t.videos.length)}
+            </p>
+          </div>
         </div>
       </section>
-    </main>
+
+      {/* Carousel. Heading on the edge column, track full-bleed. */}
+      <section id="stories" className="scroll-mt-24 pb-20 lg:pb-28">
+        <div className="mb-10 px-[var(--edge)] lg:mb-14">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+              {t.carouselTitle}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-foreground/60">
+              {t.carouselBody}
+            </p>
+          </div>
+        </div>
+
+        <VideoCarousel videos={t.videos} />
+      </section>
+
+      {/* Closing deep band: the written versions of the same stories. */}
+      <section
+        className="py-20 text-white lg:py-28"
+        style={{ backgroundColor: theme.deep }}
+      >
+        <div className="px-[var(--edge)]">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+              {t.moreTitle}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+              {t.moreBody}
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 border-t border-white/[0.14] sm:grid-cols-3 lg:mt-16">
+            {t.moreLinks.map((link, i) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`group flex flex-col justify-between gap-10 border-b border-white/[0.14] py-8 transition-colors hover:bg-white/[0.04] lg:py-10 ${
+                  i > 0 ? "sm:border-l sm:border-white/[0.14] sm:pl-8 lg:pl-10" : ""
+                } ${i < t.moreLinks.length - 1 ? "sm:pr-8 lg:pr-10" : ""}`}
+              >
+                <div>
+                  <h3 className="text-xl font-light tracking-tight lg:text-2xl">
+                    {link.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/60">
+                    {link.description}
+                  </p>
+                </div>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 transition-colors group-hover:border-white/50 group-hover:bg-white/10">
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }

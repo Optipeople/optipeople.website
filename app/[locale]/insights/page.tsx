@@ -1,69 +1,126 @@
 import Image from "next/image"
-import { ArrowRight, FileText, Factory } from "lucide-react"
+import { ArrowRight, Factory, FileText, Mail, PlayCircle } from "lucide-react"
+import { setRequestLocale } from "next-intl/server"
 
 import { Link } from "@/i18n/navigation"
 import { type Locale } from "@/i18n/routing"
-import { setRequestLocale } from "next-intl/server"
-import { getLatestPostsByCategory, getPostsByCategory } from "@/lib/blog-data"
+import {
+  getAllPosts,
+  getLatestPostsByCategory,
+  getPostsByCategory,
+} from "@/lib/blog-data"
+import { formatPostDate } from "@/lib/format-date"
+import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 
-const copy: Record<
-  Locale,
-  {
-    eyebrow: string
-    title: string
-    intro: string
-    examples: string
-    postLabel: (count: number) => string
-    cards: {
-      blog: { title: string; description: string; cta: string }
-      cases: { title: string; description: string; cta: string }
+type InsightsCopy = {
+  eyebrow: string
+  title: string
+  intro: string
+  latestLabel: string
+  latestTitle: string
+  browseLabel: string
+  typeLabels: Record<string, string>
+  cards: {
+    blog: {
+      title: string
+      description: string
+      countLabel: string
+      cta: string
+    }
+    cases: {
+      title: string
+      description: string
+      countLabel: string
+      cta: string
     }
   }
-> = {
+  moreTitle: string
+  more: { title: string; description: string; href: string }[]
+}
+
+const copy: Record<Locale, InsightsCopy> = {
   en: {
     eyebrow: "Insights",
     title: "One place for ideas and proof",
     intro:
-      "Use the blog for broader thinking and practical guidance. Use cases for concrete customer outcomes and implementation examples.",
-    examples: "Examples",
-    postLabel: (count) => (count === 1 ? "post" : "posts"),
+      "The blog is for broader thinking and practical guidance. Cases are for concrete customer outcomes and implementation examples. Both are written by the people doing the work.",
+    latestLabel: "Recent",
+    latestTitle: "Latest across both",
+    browseLabel: "Newest first",
+    typeLabels: { Cases: "Case", Insights: "Article" },
     cards: {
       blog: {
         title: "Blog posts",
         description:
           "Editorial articles, explainers, and thought pieces about manufacturing, data, and digital operations.",
+        countLabel: "articles",
         cta: "Browse blog posts",
       },
       cases: {
         title: "Cases",
         description:
           "Customer stories and concrete examples of how factories use Opticloud to improve output, uptime, and decision-making.",
+        countLabel: "customer stories",
         cta: "Browse case studies",
       },
     },
+    moreTitle: "Other ways to follow along",
+    more: [
+      {
+        title: "Videos",
+        description:
+          "Customer conversations and partner talks, recorded on the floor.",
+        href: "/videos",
+      },
+      {
+        title: "Newsletter",
+        description:
+          "A short note when something worth reading gets published.",
+        href: "/newsletter",
+      },
+    ],
   },
   da: {
     eyebrow: "Indsigter",
     title: "Ét sted til ideer og beviser",
     intro:
-      "Brug bloggen til perspektiver og praktisk viden. Brug cases til konkrete kundeeffekter og implementeringseksempler.",
-    examples: "Eksempler",
-    postLabel: () => "indlæg",
+      "Bloggen er til perspektiver og praktisk viden. Cases er til konkrete kundeeffekter og implementeringseksempler. Begge er skrevet af dem, der arbejder med det.",
+    latestLabel: "Nyeste",
+    latestTitle: "Nyeste fra begge",
+    browseLabel: "Nyeste først",
+    typeLabels: { Cases: "Case", Insights: "Artikel" },
     cards: {
       blog: {
         title: "Blogindlæg",
         description:
           "Artikler, forklaringer og praktiske perspektiver om produktion, data og digital drift.",
+        countLabel: "artikler",
         cta: "Se blogindlæg",
       },
       cases: {
         title: "Cases",
         description:
           "Kundehistorier og konkrete eksempler på hvordan fabrikker bruger Opticloud til output, oppetid og beslutninger.",
+        countLabel: "kundehistorier",
         cta: "Se cases",
       },
     },
+    moreTitle: "Andre måder at følge med",
+    more: [
+      {
+        title: "Videoer",
+        description:
+          "Kundesamtaler og partneroplæg, optaget ude på gulvet.",
+        href: "/videos",
+      },
+      {
+        title: "Nyhedsbrev",
+        description:
+          "En kort besked, når der bliver publiceret noget værd at læse.",
+        href: "/newsletter",
+      },
+    ],
   },
 }
 
@@ -94,6 +151,18 @@ export async function generateMetadata({
   })
 }
 
+/**
+ * Insights hub.
+ *
+ * A hub in the same language as the family hubs (components/templates/
+ * link-index.tsx): a neutral hero, because the destination panels below carry
+ * the colour, then tinted surfaces rather than bordered cards.
+ *
+ * Each panel previews what it points at, using the real archive counts and the
+ * two newest entries, so the page is a route into the writing rather than two
+ * boxes describing it. The mixed hairline list underneath answers the question
+ * the two panels cannot: what went up most recently.
+ */
 export default async function InsightsPage({
   params,
 }: {
@@ -104,143 +173,213 @@ export default async function InsightsPage({
 
   const t = copy[locale as Locale] ?? copy.en
 
-  const sectionCards = [
+  const panels = [
     {
       key: "blog" as const,
       href: "/blog",
       icon: FileText,
       category: "Insights",
-      accentClass: "bg-[linear-gradient(135deg,#f4efe6,#f8f6f1)]",
-      badgeClass: "bg-[#efe1cf] text-[#8c5a2b]",
-      buttonClass:
-        "border-[#c96f4a]/20 bg-[#c96f4a] text-[#2f160a] hover:bg-[#b85f3a]",
-      previewClass: "bg-white/80 hover:bg-white",
+      theme: getSurface("sand"),
     },
     {
       key: "cases" as const,
       href: "/cases",
       icon: Factory,
       category: "Cases",
-      accentClass: "bg-[linear-gradient(135deg,#e7efe8,#f5f7f3)]",
-      badgeClass: "bg-[#d7e7d8] text-[#234131]",
-      buttonClass:
-        "border-[#234131]/20 bg-[#234131] text-[#eef5ef] hover:bg-[#1b3327]",
-      previewClass: "bg-[#f7faf7] hover:bg-[#eef5ef]",
+      theme: getSurface("green"),
     },
-  ] as const
+  ]
+
+  const latest = getAllPosts().slice(0, 5)
+  const moreIcons = [PlayCircle, Mail]
 
   return (
-    <main>
-      <section className="py-24 lg:py-32">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
-              {t.eyebrow}
-            </p>
-            <h1 className="text-4xl lg:text-5xl font-light text-foreground tracking-tight">
-              {t.title}
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              {t.intro}
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-6 lg:grid-cols-2">
-            {sectionCards.map((card) => {
-              const posts = getPostsByCategory(card.category)
-              const latest = getLatestPostsByCategory(card.category, 2)
-              const Icon = card.icon
-              const card_copy = t.cards[card.key]
-
-              return (
-                <article
-                  key={card.href}
-                  className={`overflow-hidden rounded-[1.5rem] border border-border/60 ${card.accentClass}`}
-                >
-                  <div className="border-b border-black/5 px-8 py-6 lg:px-10">
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-3">
-                        <div
-                          className={`flex h-11 w-11 items-center justify-center rounded-full ${card.badgeClass}`}
-                        >
-                          <Icon className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium tracking-wide text-foreground/80">
-                            {card_copy.title}
-                          </p>
-                          <p className="text-sm text-foreground/55">
-                            {posts.length} {t.postLabel(posts.length)}
-                          </p>
-                        </div>
-                      </div>
-
-                      <Link
-                        href={card.href}
-                        className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-medium transition-colors ${card.buttonClass}`}
-                      >
-                        {card_copy.cta}
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  <div className="px-8 py-8 lg:px-10 lg:py-10">
-                    <h2 className="text-3xl font-light tracking-tight text-foreground">
-                      {card_copy.title}
-                    </h2>
-                    <p className="mt-4 max-w-xl text-base leading-relaxed text-foreground/70">
-                      {card_copy.description}
-                    </p>
-
-                    {latest.length > 0 && (
-                      <div className="mt-8">
-                        <p className="text-sm font-medium uppercase tracking-[0.14em] text-foreground/45">
-                          {t.examples}
-                        </p>
-
-                        <div className="mt-5 space-y-4">
-                          {latest.map((post) => (
-                            <Link
-                              key={post.slug}
-                              href={`/blog/${post.slug}`}
-                              className={`group grid grid-cols-[104px_1fr] gap-4 rounded-[1.5rem] border border-black/5 p-3 transition-colors ${card.previewClass}`}
-                            >
-                              <div className="relative aspect-[4/3] overflow-hidden rounded-[0.75rem] bg-black/5">
-                                {post.image ? (
-                                  <Image
-                                    src={post.image}
-                                    alt={post.title}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                  />
-                                ) : (
-                                  <div className="flex h-full items-center justify-center bg-black/5 text-foreground/45">
-                                    <Icon className="h-5 w-5" />
-                                  </div>
-                                )}
-                              </div>
-
-                              <div className="flex min-w-0 flex-col justify-center">
-                                <p className="text-xs uppercase tracking-[0.12em] text-foreground/45">
-                                  {post.date}
-                                </p>
-                                <p className="mt-2 line-clamp-2 text-base font-medium leading-snug text-foreground/85 transition-colors group-hover:text-foreground">
-                                  {post.title}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </article>
-              )
-            })}
-          </div>
+    <div className="min-h-screen">
+      {/* Neutral hero: the panels below hold the colour. */}
+      <section className="bg-[var(--gray-1)] pb-20 pt-12 lg:pb-28 lg:pt-16">
+        <div className="px-[var(--edge)]">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+            {t.eyebrow}
+          </p>
+          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            {t.title}
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+            {t.intro}
+          </p>
         </div>
       </section>
-    </main>
+
+      {/* Destination panels */}
+      <section className="px-[var(--edge)] py-16 lg:py-24">
+        <div className="grid gap-5 lg:grid-cols-2 lg:gap-6">
+          {panels.map((panel) => {
+            const posts = getPostsByCategory(panel.category)
+            const preview = getLatestPostsByCategory(panel.category, 2)
+            const Icon = panel.icon
+            const card = t.cards[panel.key]
+
+            return (
+              <article
+                key={panel.href}
+                className="reveal flex flex-col rounded-[1.75rem] p-8 lg:rounded-[2rem] lg:p-10"
+                style={{ backgroundColor: panel.theme.tint }}
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/70">
+                  <Icon className="h-5 w-5 text-foreground/70" />
+                </span>
+
+                <h2 className="mt-7 text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+                  {card.title}
+                </h2>
+                <p className="mt-4 max-w-md text-base leading-relaxed text-foreground/60">
+                  {card.description}
+                </p>
+
+                <p className="mt-8 flex items-baseline gap-3">
+                  <span className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+                    {posts.length}
+                  </span>
+                  <span className="text-sm text-foreground/50">
+                    {card.countLabel}
+                  </span>
+                </p>
+
+                {preview.length > 0 && (
+                  <div className="mt-8 overflow-hidden rounded-[1.25rem] bg-white/60">
+                    <p className="px-5 pt-5 text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
+                      {t.latestLabel}
+                    </p>
+                    <div className="mt-3 divide-y divide-black/[0.06]">
+                      {preview.map((post) => (
+                        <Link
+                          key={post.slug}
+                          href={`/blog/${post.slug}`}
+                          className="group grid grid-cols-[5.5rem_minmax(0,1fr)] items-center gap-4 p-4 transition-colors hover:bg-white/70"
+                        >
+                          <span className="relative block aspect-[4/3] overflow-hidden rounded-[0.65rem] bg-black/[0.05]">
+                            {post.image ? (
+                              <Image
+                                src={post.image}
+                                alt=""
+                                aria-hidden
+                                fill
+                                sizes="88px"
+                                className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                              />
+                            ) : (
+                              <span className="flex h-full items-center justify-center text-foreground/35">
+                                <Icon className="h-4 w-4" />
+                              </span>
+                            )}
+                          </span>
+                          <span className="min-w-0">
+                            <span className="block text-xs tabular-nums text-foreground/45">
+                              {formatPostDate(post.date, locale)}
+                            </span>
+                            <span className="mt-1.5 line-clamp-2 block text-sm font-medium leading-snug text-foreground/80 transition-colors group-hover:text-foreground">
+                              {post.title}
+                            </span>
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <Link
+                  href={panel.href}
+                  className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+                >
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                  {card.cta}
+                </Link>
+              </article>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* Mixed recency list: what actually went up last, regardless of type. */}
+      {latest.length > 0 && (
+        <section className="px-[var(--edge)] pb-20 lg:pb-28">
+          <div className="flex flex-wrap items-baseline justify-between gap-4">
+            <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+              {t.latestTitle}
+            </h2>
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
+              {t.browseLabel}
+            </p>
+          </div>
+
+          <ul className="mt-8 border-t border-black/[0.08]">
+            {latest.map((post) => (
+              <li key={post.slug}>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="group grid gap-x-8 gap-y-2 border-b border-black/[0.08] py-6 transition-colors hover:bg-[var(--gray-1)] sm:grid-cols-[9rem_minmax(0,1fr)_2.25rem] sm:items-center"
+                >
+                  <span className="flex items-baseline gap-3">
+                    <span className="text-sm tabular-nums text-foreground/45">
+                      {formatPostDate(post.date, locale)}
+                    </span>
+                    <span className="shrink-0 rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/50">
+                      {t.typeLabels[post.category] ?? post.category}
+                    </span>
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-lg font-light leading-snug tracking-tight text-foreground lg:text-xl">
+                      {post.title}
+                    </span>
+                    <span className="mt-1.5 line-clamp-1 block text-sm leading-relaxed text-foreground/50">
+                      {post.outcome ?? post.summary}
+                    </span>
+                  </span>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 text-foreground transition-colors group-hover:border-black/25">
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Adjacent formats, on the hairline grid rather than as loose links. */}
+      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+        <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+          {t.moreTitle}
+        </h2>
+        <div className="mt-8 grid gap-px overflow-hidden rounded-[1.5rem] bg-black/[0.08] sm:grid-cols-2">
+          {t.more.map((item, i) => {
+            const Icon = moreIcons[i] ?? PlayCircle
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group flex items-start justify-between gap-6 bg-background p-8 transition-colors hover:bg-[var(--gray-1)] lg:p-10"
+              >
+                <div>
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--gray-1)]">
+                    <Icon className="h-5 w-5 text-foreground/60" />
+                  </span>
+                  <h3 className="mt-6 text-lg font-medium tracking-tight text-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/60">
+                    {item.description}
+                  </p>
+                </div>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 text-foreground transition-colors group-hover:border-black/25">
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            )
+          })}
+        </div>
+      </section>
+    </div>
   )
 }

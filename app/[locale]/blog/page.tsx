@@ -16,6 +16,9 @@ type ArchiveCopy = {
   backLabel: string
   eyebrow: string
   title: string
+  subtitle: string
+  countLabel: (count: number) => string
+  listLabel: string
   emptyTitle: string
   emptyBody: string
   ctaLabel: string
@@ -29,9 +32,13 @@ const copy: Record<Locale, ArchiveCopy> = {
     metaTitle: "Blog",
     metaDescription:
       "Read OptiPeople articles on manufacturing efficiency, OEE, predictive maintenance, industrial data, and digital operations.",
-    backLabel: "Back to insights",
+    backLabel: "Insights",
     eyebrow: "Blog",
     title: "Articles and insight pieces",
+    subtitle:
+      "Practical guidance on OEE, maintenance, and industrial data, plus what actually changes on the floor once production is measured.",
+    countLabel: (count) => `${count} articles`,
+    listLabel: "All articles",
     emptyTitle: "No blog posts yet",
     emptyBody:
       "This archive is reserved for editorial blog posts and insight articles. Case studies live in the separate cases archive.",
@@ -44,9 +51,13 @@ const copy: Record<Locale, ArchiveCopy> = {
     metaTitle: "Blog | OptiPeople",
     metaDescription:
       "Læs artikler om produktionseffektivitet, OEE, vedligehold og digital drift.",
-    backLabel: "Tilbage til indsigter",
+    backLabel: "Indsigter",
     eyebrow: "Blog",
     title: "Artikler og indsigter",
+    subtitle:
+      "Praktisk viden om OEE, vedligehold og industriel data, og hvad der reelt ændrer sig på gulvet, når produktionen bliver målt.",
+    countLabel: (count) => `${count} artikler`,
+    listLabel: "Alle artikler",
     emptyTitle: "Ingen blogindlæg endnu",
     emptyBody:
       "Artikler og indsigter vises her, når de bliver publiceret.",
@@ -79,23 +90,25 @@ export default async function BlogPage({ params, searchParams }: Props) {
   const prefix = locale === "da" ? "/da" : ""
 
   return (
-    <main>
-      <PostArchive
-        posts={posts}
-        basePath={`${prefix}/blog`}
-        postBasePath={`${prefix}/blog`}
-        backHref={`${prefix}/insights`}
-        backLabel={t.backLabel}
-        eyebrow={t.eyebrow}
-        title={t.title}
-        emptyTitle={t.emptyTitle}
-        emptyBody={t.emptyBody}
-        ctaLabel={t.ctaLabel}
-        currentPage={currentPage}
-        paginationLabel={t.paginationLabel}
-        previousLabel={t.previousLabel}
-        nextLabel={t.nextLabel}
-      />
-    </main>
+    <PostArchive
+      posts={posts}
+      basePath={`${prefix}/blog`}
+      postBasePath={`${prefix}/blog`}
+      backHref={`${prefix}/insights`}
+      backLabel={t.backLabel}
+      eyebrow={t.eyebrow}
+      title={t.title}
+      subtitle={t.subtitle}
+      countLabel={t.countLabel(posts.length)}
+      listLabel={t.listLabel}
+      locale={locale}
+      emptyTitle={t.emptyTitle}
+      emptyBody={t.emptyBody}
+      ctaLabel={t.ctaLabel}
+      currentPage={currentPage}
+      paginationLabel={t.paginationLabel}
+      previousLabel={t.previousLabel}
+      nextLabel={t.nextLabel}
+    />
   )
 }
