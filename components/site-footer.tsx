@@ -51,8 +51,11 @@ export function SiteFooter() {
         />
       </div>
 
-      <div className="px-6 lg:px-8 py-12 lg:py-16">
-        <div className="max-w-6xl mx-auto">
+      {/* Padded to --edge, the same token every redesigned page uses, so the
+          footer's brand column starts on the page's left line rather than
+          ~26px inboard of it. */}
+      <div className="px-[var(--edge)] py-12 lg:py-16">
+        <div>
           {/* Main footer content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
             {/* Brand column */}

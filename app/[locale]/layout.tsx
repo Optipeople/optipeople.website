@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import "../globals.css";
-import { ClientOnlyHeader } from "@/components/client-only-header";
+import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalizedCallToAction } from "@/components/localized-call-to-action";
 import { NewsletterPrompt } from "@/components/newsletter-prompt";
@@ -93,7 +93,7 @@ export default async function LocaleLayout({
       </head>
       <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
         <NextIntlClientProvider>
-          <ClientOnlyHeader />
+          <SiteHeader />
           <main className="flex-1">{children}</main>
           <LocalizedCallToAction />
           <SiteFooter />

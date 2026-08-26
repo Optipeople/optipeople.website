@@ -64,6 +64,10 @@ const ASSIGNMENTS: Record<PageFamily, Record<string, SurfaceName>> = {
     iot: "slate",
     "erp-shopfloor": "clay",
     mes: "sage",
+    // Both ship in the module catalog but had no surface, so they fell through
+    // to the green default and read as duplicates of the Production module.
+    planning: "blue",
+    documents: "sand",
   },
   services: {
     "smart-operations": "green",
@@ -90,6 +94,30 @@ const ASSIGNMENTS: Record<PageFamily, Record<string, SurfaceName>> = {
 export function getPageTheme(family: PageFamily, slug: string): PageTheme {
   const surface = ASSIGNMENTS[family]?.[slug]
   return SURFACES[surface ?? "green"]
+}
+
+const FAMILIES = new Set<string>([
+  "features",
+  "modules",
+  "services",
+  "solutions",
+  "ai",
+])
+
+/**
+ * Resolve a theme from an unprefixed canonical href ("/modules/production").
+ *
+ * Link grids built from the nav catalogs carry hrefs, not family/slug pairs,
+ * and those catalogs mix families, the module catalog's "AI agents" entry
+ * points at /ai/agents. Splitting the href keeps a card's colour matched to
+ * the page it actually opens.
+ */
+export function getThemeForHref(href: string): PageTheme {
+  const [, family, slug] = href.split("/")
+  if (slug && FAMILIES.has(family)) {
+    return getPageTheme(family as PageFamily, slug)
+  }
+  return SURFACES.green
 }
 
 /**

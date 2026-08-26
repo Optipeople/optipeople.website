@@ -393,17 +393,20 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
   }
 
   return (
-    <section className="relative overflow-hidden bg-muted/40 py-20 lg:py-32">
-      <div className="max-w-[1400px] mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16 lg:mb-20">
-          <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-4">
+    <section className="relative overflow-hidden bg-[var(--gray-1)] py-20 lg:py-32">
+      {/* Keeps its own wide canvas — the diagram needs more room than the
+          1140px content column — but the heading type matches the rest of the
+          redesigned pages. */}
+      <div className="mx-auto max-w-[1400px] px-6">
+        {/* Header. Centred on purpose: it sits above a radial diagram. */}
+        <div className="mb-16 text-center lg:mb-20">
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
             {intro.eyebrow}
           </p>
-          <h2 className="text-4xl lg:text-6xl font-light text-foreground tracking-tight">
+          <h2 className="text-3xl font-light leading-[1.1] tracking-tight text-foreground lg:text-5xl">
             {intro.title}
           </h2>
-          <p className="mt-5 text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="mx-auto mt-5 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
             {intro.description}
           </p>
         </div>

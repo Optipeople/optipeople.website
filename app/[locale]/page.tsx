@@ -218,7 +218,7 @@ const copy: Record<Locale, HomeCopy> = {
       modulePrompt: "What do you want to run better?",
       moduleRows: [
         ["mes", "oee", "qms", "ems", "maintenance"],
-        ["planning", "iot", "documents", "aftersales", "ai-agents"],
+        ["planning", "iot", "documents", "ai-agents"],
       ],
     },
     tabsAriaLabel: "Team solutions",
@@ -284,9 +284,8 @@ const copy: Record<Locale, HomeCopy> = {
       mes: {
         description:
           "The cloud MES the other modules run on. Start with one line, add modules as the next question comes up, same data foundation, no re-implementation.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile.png",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
         imageAlt: "Opticloud MES operator panel",
-        imageFit: "fill",
       },
       oee: {
         description:
@@ -488,7 +487,7 @@ const copy: Record<Locale, HomeCopy> = {
       modulePrompt: "Hvad vil du gøre bedre?",
       moduleRows: [
         ["mes", "oee", "qms", "ems", "maintenance"],
-        ["planning", "iot", "documents", "aftersales", "ai-agents"],
+        ["planning", "iot", "documents", "ai-agents"],
       ],
     },
     tabsAriaLabel: "Løsninger til teams",
@@ -554,9 +553,8 @@ const copy: Record<Locale, HomeCopy> = {
       mes: {
         description:
           "Det cloudbaserede MES, de øvrige moduler kører på. Start med én linje og tilføj moduler, når næste spørgsmål melder sig, samme datagrundlag hele vejen.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile.png",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
         imageAlt: "Opticloud MES-operatørpanel",
-        imageFit: "fill",
       },
       oee: {
         description:
