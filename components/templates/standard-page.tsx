@@ -14,13 +14,13 @@ import { getPageTheme, type PageFamily } from "@/lib/page-theme"
  * feature-page.tsx): the `--edge` column, `font-light` display type, oversized
  * tabular metrics, and tinted surfaces instead of bordered cards on white.
  * Where the feature page leads with a screenshot, this one leads with an
- * editorial statement — these pages sell a scope, not a screen.
+ * editorial statement, these pages sell a scope, not a screen.
  *
  * Section flow: hero, proof strip, intro, capabilities, steps, visual.
  * The conversion CTA is appended globally by app/[locale]/layout.tsx, so the
  * template deliberately does not repeat it.
  *
- * `page.darkHero` opens on the deep brand surface rather than the tint — used
+ * `page.darkHero` opens on the deep brand surface rather than the tint, used
  * by the solution pages, which need more weight up top.
  */
 export function StandardPageTemplate({
@@ -38,7 +38,7 @@ export function StandardPageTemplate({
 
   return (
     <main className="min-h-screen">
-      {/* Hero — a wide editorial statement rather than a centred column. */}
+      {/* Hero, a wide editorial statement rather than a centred column. */}
       <section
         className={`relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20 ${
           dark ? "text-white" : ""
@@ -106,7 +106,7 @@ export function StandardPageTemplate({
         </div>
       </section>
 
-      {/* Proof strip — the numbers used to sit two thirds down the page. */}
+      {/* Proof strip, the numbers used to sit two thirds down the page. */}
       <section className="px-[var(--edge)] pt-16 lg:pt-20">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
           {page.metricsTitle}
@@ -132,7 +132,7 @@ export function StandardPageTemplate({
         </dl>
       </section>
 
-      {/* Intro — asymmetric: the statement holds the left line, the argument
+      {/* Intro, asymmetric: the statement holds the left line, the argument
           runs beside it. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
@@ -145,7 +145,7 @@ export function StandardPageTemplate({
         </div>
       </section>
 
-      {/* Capabilities — tinted cards carrying the page's colour. */}
+      {/* Capabilities, tinted cards carrying the page's colour. */}
       <section
         id="capabilities"
         className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-28"
@@ -174,7 +174,7 @@ export function StandardPageTemplate({
         </div>
       </section>
 
-      {/* Steps — a numbered rail on hairlines instead of centred columns. */}
+      {/* Steps, a numbered rail on hairlines instead of centred columns. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {page.stepsTitle}
@@ -201,7 +201,7 @@ export function StandardPageTemplate({
         </ol>
       </section>
 
-      {/* Visual — full-bleed deep surface, the one hard rhythm break. */}
+      {/* Visual, full-bleed deep surface, the one hard rhythm break. */}
       <section
         className="py-20 text-white lg:py-32"
         style={{ backgroundColor: theme.deep }}

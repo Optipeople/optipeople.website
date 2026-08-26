@@ -1,6 +1,6 @@
 # Employee Landing Page Design Guide
 
-This document defines the design patterns for OptiPeople employee landing pages — dedicated pages that present the full team in a structured, searchable, trust-building format.
+This document defines the design patterns for OptiPeople employee landing pages, dedicated pages that present the full team in a structured, searchable, trust-building format.
 
 Inherits the [design philosophy](homepage.md#design-philosophy) from the homepage guide.
 

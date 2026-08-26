@@ -12,10 +12,10 @@ The entire OptiPeople site draws from Apple product pages and Scandinavian desig
 
 - **Remove before you add.** If an element doesn't directly help the visitor understand or convert, it doesn't belong. No decorative filler, no "nice to have" sections.
 - **One idea per viewport.** Each scroll-stop should communicate exactly one thing. Don't stack competing messages in the same visual space.
-- **Let whitespace do the work.** Generous padding isn't empty — it's directing attention. Sections breathe. Content doesn't crowd.
-- **Typography is the design.** Light font weights, large sizes, tight tracking. The type itself creates hierarchy and visual interest — not borders, backgrounds, or decoration.
+- **Let whitespace do the work.** Generous padding isn't empty, it's directing attention. Sections breathe. Content doesn't crowd.
+- **Typography is the design.** Light font weights, large sizes, tight tracking. The type itself creates hierarchy and visual interest, not borders, backgrounds, or decoration.
 - **Restrained color.** Pages are predominantly white/neutral. Color appears only with purpose: brand accents for CTAs and key data, module colors for identity, and nothing more.
-- **Show, don't decorate.** Visuals are product screenshots, real UI, or meaningful diagrams — never stock photos or abstract illustrations.
+- **Show, don't decorate.** Visuals are product screenshots, real UI, or meaningful diagrams, never stock photos or abstract illustrations.
 - **Functional beauty.** Every element serves a purpose. Three thin accent stripes are branding. Subtle shadows create depth. Hover states signal interactivity. Nothing is ornamental.
 
 These principles apply across all page types. Individual design guides may add page-specific guidance, but the philosophy is universal.
@@ -24,7 +24,7 @@ These principles apply across all page types. Individual design guides may add p
 
 ## Page Archetype: Marketing Landing Page
 
-**Purpose:** Convert visitors by communicating what OptiPeople does, who it's for, and why it matters — through a sequence of progressively deeper sections.
+**Purpose:** Convert visitors by communicating what OptiPeople does, who it's for, and why it matters, through a sequence of progressively deeper sections.
 
 **Tone:** Premium industrial. Light typography, generous whitespace, subtle shadows, restrained color.
 
@@ -83,7 +83,7 @@ Mobile-first. Three breakpoints matter:
 ### Font Families
 
 - **Primary:** IBM Plex Sans (weights: 200, 300, 400, 500, 600)
-- **Serif:** IBM Plex Serif (weights: 400, 500, 600) — used sparingly for emphasis
+- **Serif:** IBM Plex Serif (weights: 400, 500, 600), used sparingly for emphasis
 - Loaded via Google Fonts with preconnect + non-blocking CSS pattern
 
 ### Type Scale
@@ -99,7 +99,7 @@ Mobile-first. Three breakpoints matter:
 | Section label | `text-sm font-medium tracking-wide uppercase` | "Cases", "Platform" |
 | Meta / small | `text-xs` or `text-sm` | Timestamps, attribution |
 
-**Design rule:** Main headings use `font-light` or `font-extralight` — never bold. This creates the premium industrial feel. Only labels and small UI text use `font-medium`.
+**Design rule:** Main headings use `font-light` or `font-extralight`, never bold. This creates the premium industrial feel. Only labels and small UI text use `font-medium`.
 
 ---
 
@@ -122,7 +122,7 @@ Mobile-first. Three breakpoints matter:
 
 | Variable | Hex Approx | Usage |
 |----------|-----------|-------|
-| `--green-dark3` | Deep teal | **Primary brand color** — buttons, accents |
+| `--green-dark3` | Deep teal | **Primary brand color**, buttons, accents |
 | `--green-dark1` | Medium teal | Sidebar, secondary UI |
 | `--green-light1` | Pale mint | Light backgrounds |
 | `--green-light2` | Light green | Analysis module, dark-mode primary |
@@ -169,7 +169,7 @@ Used on testimonial cards and lighter contexts:
 shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.15),0_0_0_0.5px_rgba(0,0,0,0.05)]
 ```
 
-**Design rule:** Shadows are always subtle — low offset, low spread, low opacity. No heavy drop shadows anywhere.
+**Design rule:** Shadows are always subtle, low offset, low spread, low opacity. No heavy drop shadows anywhere.
 
 ---
 
@@ -187,7 +187,7 @@ shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.15),0_0_0_0.5px_rgba(0,0,0,0.05)]
 
 ### Border Colors
 
-- Default: `border-[var(--gray-2)]` — subtle light gray
+- Default: `border-[var(--gray-2)]`, subtle light gray
 - On dark: `border-white/20`, hover `border-white/30`
 
 **Design rule:** Borders are minimal. Prefer shadow + radius over visible borders where possible.
@@ -223,9 +223,9 @@ The most reused component on the homepage. Three layout variants:
 
 #### Navigation Types
 
-- **Tabs:** Horizontal tab buttons with animated underline indicator — used for the hero "Who It's For" section
+- **Tabs:** Horizontal tab buttons with animated underline indicator, used for the hero "Who It's For" section
 - **Dots:** Animated dot indicators below carousel
-- **Arrows:** Prev/Next chevron buttons — used for vertical and video carousels
+- **Arrows:** Prev/Next chevron buttons, used for vertical and video carousels
 
 ### LogoWall
 
@@ -252,7 +252,7 @@ The most reused component on the homepage. Three layout variants:
 
 ### PlatformFlower
 
-- Desktop: Interactive SVG node graph — center hub with 6 connected modules
+- Desktop: Interactive SVG node graph, center hub with 6 connected modules
 - Mobile: 2-column grid of module buttons
 - Auto-rotates through modules every 5s
 - Hover/click pauses rotation and highlights connections
@@ -292,7 +292,7 @@ These stripes are a signature branding element. They appear at the bottom of the
 ### Hover Effects
 
 - Buttons: `hover:opacity-90` (primary), `hover:bg-accent` (outline/ghost)
-- Images: `hover:scale-105` with `duration-500` — always inside an `overflow-hidden` container
+- Images: `hover:scale-105` with `duration-500`, always inside an `overflow-hidden` container
 - Links: `hover:text-white` (footer), color transitions
 - Logos: `hover:opacity-80` from `opacity-50`
 - Cards: Border color shifts on dark backgrounds
@@ -335,7 +335,7 @@ When building a new marketing landing page, follow this structural template:
 export default function NewPage() {
   return (
     <main>
-      {/* 1. Hero — py-12 lg:py-16, max-w-5xl */}
+      {/* 1. Hero, py-12 lg:py-16, max-w-5xl */}
       <section className="py-12 lg:py-16">
         <div className="mx-auto w-full max-w-5xl px-8 lg:px-6">
           {/* text-6xl font-light heading */}
@@ -344,7 +344,7 @@ export default function NewPage() {
         </div>
       </section>
 
-      {/* 2–N. Content Sections — ascending py tiers */}
+      {/* 2–N. Content Sections, ascending py tiers */}
       <section className="py-12 lg:py-28">
         <div className="mx-auto w-full max-w-5xl px-8 lg:px-6">
           {/* text-4xl lg:text-5xl font-light section heading */}
@@ -354,7 +354,7 @@ export default function NewPage() {
 
       {/* Social proof section(s) */}
       {/* Platform / product detail section */}
-      {/* Blog / cases section — py-24 lg:py-32 */}
+      {/* Blog / cases section, py-24 lg:py-32 */}
 
       {/* CTA is added by layout.tsx automatically */}
     </main>
@@ -362,7 +362,7 @@ export default function NewPage() {
 }
 ```
 
-**Note:** The `SiteHeader`, `CallToAction`, and `SiteFooter` are rendered by `layout.tsx` — do not include them in individual pages.
+**Note:** The `SiteHeader`, `CallToAction`, and `SiteFooter` are rendered by `layout.tsx`, do not include them in individual pages.
 
 ---
 
@@ -382,8 +382,8 @@ export default function NewPage() {
 
 | File | Purpose |
 |------|---------|
-| [app/page.tsx](app/page.tsx) | Homepage — section composition and data |
-| [app/layout.tsx](app/layout.tsx) | Root layout — header, footer, CTA wrapper |
+| [app/page.tsx](app/page.tsx) | Homepage, section composition and data |
+| [app/layout.tsx](app/layout.tsx) | Root layout, header, footer, CTA wrapper |
 | [app/globals.css](app/globals.css) | Color system, fonts, animations, shadows |
 | [components/slide-carousel.tsx](components/slide-carousel.tsx) | Multi-layout carousel component |
 | [components/logo-wall.tsx](components/logo-wall.tsx) | Customer logo grid |

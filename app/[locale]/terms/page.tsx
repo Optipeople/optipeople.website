@@ -8,7 +8,7 @@ import { LegalShell } from "@/components/legal-shell"
 const PATH = "/terms"
 type Props = { params: Promise<{ locale: string }> }
 
-// DRAFT — needs legal review before publishing.
+// DRAFT, needs legal review before publishing.
 // Intended "Last updated" date for this draft: 24 August 2026. The date shown
 // on the page is rendered by components/legal-shell.tsx (shared with /privacy)
 // and must be updated there when this draft is approved.
@@ -65,14 +65,14 @@ export default async function TermsPage({ params }: Props) {
             OptiPeople ApS&apos; website på dette domæne, herunder alt indhold, der
             stilles til rådighed via sitet. Ved at tilgå eller bruge websitet
             accepterer du vilkårene. Er du ikke enig i dem, bedes du undlade at
-            bruge sitet. Vilkårene gælder alene for websitet — ikke for
+            bruge sitet. Vilkårene gælder alene for websitet, ikke for
             Opticloud-platformen eller andre ydelser, jf. afsnittet om
             abonnementer og services nedenfor.
           </p>
           <h2>Hvem vi er</h2>
           <p>
             Websitet drives af OptiPeople ApS, Sønderskovvej 17, 8362 Hørning
-            (CVR 32883532) — et dansk anpartsselskab, der udvikler software til
+            (CVR 32883532), et dansk anpartsselskab, der udvikler software til
             industrien, herunder Opticloud-platformen. Du kan kontakte os på{" "}
             <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> eller
             +45 23 74 47 05.
@@ -163,8 +163,8 @@ export default async function TermsPage({ params }: Props) {
           <h2>Ansvarsbegrænsning</h2>
           <p>
             I det omfang gældende dansk ret tillader det, er OptiPeople ikke
-            ansvarlig for tab — herunder indirekte tab, følgeskader, driftstab,
-            tabt fortjeneste eller tab af data — der opstår som følge af din brug
+            ansvarlig for tab, herunder indirekte tab, følgeskader, driftstab,
+            tabt fortjeneste eller tab af data, der opstår som følge af din brug
             af, eller manglende mulighed for at bruge, websitet eller din tillid
             til indholdet på det. Intet i disse vilkår begrænser ansvar, der ikke
             kan fraskrives efter ufravigelig dansk ret, herunder ansvar for grov
@@ -201,14 +201,14 @@ export default async function TermsPage({ params }: Props) {
             the OptiPeople ApS website at this domain, including all content made
             available through it. By accessing or using the website you agree to
             these terms. If you do not agree, please do not use the site. These
-            terms apply to the website only — not to the Opticloud platform or
+            terms apply to the website only, not to the Opticloud platform or
             other services, as explained in the section on subscriptions and
             services below.
           </p>
           <h2>Who we are</h2>
           <p>
             This website is operated by OptiPeople ApS, Sønderskovvej 17,
-            8362 Hørning, Denmark (CVR 32883532) — a Danish limited company that
+            8362 Hørning, Denmark (CVR 32883532), a Danish limited company that
             develops software for industry, including the Opticloud platform.
             You can contact us at{" "}
             <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> or
@@ -301,8 +301,8 @@ export default async function TermsPage({ params }: Props) {
           <h2>Limitation of liability</h2>
           <p>
             To the extent permitted by applicable Danish law, OptiPeople is not
-            liable for any loss — including indirect or consequential loss, loss
-            of business, loss of profits, or loss of data — arising from your use
+            liable for any loss, including indirect or consequential loss, loss
+            of business, loss of profits, or loss of data, arising from your use
             of, or inability to use, the website, or from your reliance on its
             content. Nothing in these terms limits liability that cannot be
             excluded under mandatory Danish law, including liability for gross

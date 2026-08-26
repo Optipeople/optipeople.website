@@ -30,22 +30,22 @@ const copy: Record<
     eyebrow: "About",
     title: "We make industrial operations work",
     intro:
-      "OptiPeople is a digital operations company. We build software, connect systems, and help industrial teams turn data into better decisions — from the shopfloor to the boardroom.",
+      "OptiPeople is a digital operations company. We build software, connect systems, and help industrial teams turn data into better decisions, from the shopfloor to the boardroom.",
     missionHeading: "Built for the space between shopfloor and ERP",
     missionBody:
-      "Most factories have machines that produce data and ERP systems that need it — but nothing useful in between. OptiPeople fills that gap. Our platform, Opticloud, captures real-time production data, makes it visible to operators and managers, and turns it into actions that improve performance, reduce waste, and keep operations running.",
+      "Most factories have machines that produce data and ERP systems that need it, but nothing useful in between. OptiPeople fills that gap. Our platform, Opticloud, captures real-time production data, makes it visible to operators and managers, and turns it into actions that improve performance, reduce waste, and keep operations running.",
     valuesHeading: "How we work",
     teamHeading: "The team",
     values: [
       {
         title: "Start with the problem",
         description:
-          "We don't lead with technology. We start by understanding how your operations actually work — the workarounds, the blind spots, the things that fall between systems. The solution follows from there.",
+          "We don't lead with technology. We start by understanding how your operations actually work, the workarounds, the blind spots, the things that fall between systems. The solution follows from there.",
       },
       {
         title: "Make it usable",
         description:
-          "Software that operators won't use is software that doesn't work. Everything we build is designed for the people on the floor — fast, clear, no training manual required.",
+          "Software that operators won't use is software that doesn't work. Everything we build is designed for the people on the floor, fast, clear, no training manual required.",
       },
       {
         title: "Own the outcome",
@@ -55,7 +55,7 @@ const copy: Record<
       {
         title: "Earn trust with data",
         description:
-          "We avoid buzzwords and vague promises. When we say a system will improve OEE, we show how, by how much, and what it takes. Decisions should be based on facts — including the decision to work with us.",
+          "We avoid buzzwords and vague promises. When we say a system will improve OEE, we show how, by how much, and what it takes. Decisions should be based on facts, including the decision to work with us.",
       },
     ],
     stats: [

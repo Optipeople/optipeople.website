@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { ChevronDown, LogIn, MessageCircle } from "lucide-react"
+import { ArrowRight, ChevronDown, LogIn, MessageCircle } from "lucide-react"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Link, usePathname } from "@/i18n/navigation"
 import { navigationLinks, navigationMenus } from "@/i18n/navigation-data"
+import type { NavMenu } from "@/i18n/navigation-data"
 import type { Locale } from "@/i18n/routing"
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
@@ -135,30 +136,39 @@ export function SiteHeader() {
               <DropdownMenuContent
                 align="start"
                 sideOffset={8}
+                collisionPadding={16}
                 onCloseAutoFocus={(event) => {
                   // When a hover-opened menu closes we don't want focus yanked
                   // back to the trigger (it never left on hover).
                   if (hoverEnabled) event.preventDefault()
                 }}
-                className="w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2"
+                className={
+                  menu.layout === "mega"
+                    ? "w-[44rem] bg-white rounded-lg shadow-lg border border-gray-100 p-3"
+                    : "w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2"
+                }
                 aria-label={t("submenuLabel", { title: menu.title })}
                 {...hoverProps(menu.title)}
               >
-                {menu.items.map((item) => (
-                  <DropdownMenuItem
-                    key={item.href}
-                    asChild
-                    className="p-0 focus:bg-transparent"
-                  >
-                    <Link
-                      href={item.href}
-                      className="cursor-pointer block w-full px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset rounded-md"
-                      aria-label={t("linkLabel", { title: item.title })}
+                {menu.layout === "mega" ? (
+                  <MegaMenuPanel menu={menu} />
+                ) : (
+                  menu.items.map((item) => (
+                    <DropdownMenuItem
+                      key={item.href}
+                      asChild
+                      className="p-0 focus:bg-transparent"
                     >
-                      {item.title}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
+                      <Link
+                        href={item.href}
+                        className="cursor-pointer block w-full px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset rounded-md"
+                        aria-label={t("linkLabel", { title: item.title })}
+                      >
+                        {item.title}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))
+                )}
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
@@ -205,6 +215,118 @@ export function SiteHeader() {
         />
       </div>
       </header>
+    </>
+  )
+}
+
+const MEGA_COLUMNS = 2
+
+function MegaMenuPanel({ menu }: { menu: NavMenu }) {
+  const t = useTranslations("chrome")
+
+  // A single grid that flows column-major: DOM order runs down column one, then
+  // down column two, so Radix's arrow-key roving focus walks a column the way
+  // the eye does, while the shared grid rows keep the two columns aligned.
+  const rows = Math.ceil(menu.items.length / MEGA_COLUMNS)
+
+  return (
+    <>
+      <div
+        className="grid grid-flow-col gap-x-6"
+        style={{
+          gridTemplateColumns: `repeat(${MEGA_COLUMNS}, minmax(0, 1fr))`,
+          gridTemplateRows: `repeat(${rows}, auto)`,
+        }}
+      >
+        {menu.items.map((item) => (
+          <DropdownMenuItem
+            key={item.href}
+            asChild
+            className="p-0 focus:bg-transparent"
+          >
+            <Link
+              href={item.href}
+              className="cursor-pointer rounded-md px-3 py-2 hover:bg-gray-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset"
+              aria-label={t("linkLabel", { title: item.title })}
+            >
+              {/* One child element: the base item class carries `flex
+                  items-center gap-2`, which Radix's Slot concatenates rather
+                  than merges, so stacking happens in here instead. */}
+              <span className="block">
+                <span className="block text-sm font-medium text-gray-900">
+                  {item.title}
+                </span>
+                {item.description && (
+                  <span className="mt-0.5 block text-xs leading-snug text-gray-500">
+                    {item.description}
+                  </span>
+                )}
+              </span>
+            </Link>
+          </DropdownMenuItem>
+        ))}
+      </div>
+
+      {menu.secondary && (
+        <div className="mt-3 border-t border-gray-100 pt-3">
+          <div className="flex items-baseline justify-between gap-4 px-3">
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+              {menu.secondary.title}
+            </p>
+            {menu.secondary.overview && (
+              <DropdownMenuItem
+                asChild
+                className="p-0 focus:bg-transparent"
+              >
+                <Link
+                  href={menu.secondary.overview.href}
+                  className="cursor-pointer rounded-md px-1.5 py-0.5 text-xs font-medium text-[var(--green-dark3)] hover:bg-gray-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset"
+                  aria-label={t("linkLabel", { title: menu.secondary.overview.title })}
+                >
+                  <span>{menu.secondary.overview.title}</span>
+                  <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                </Link>
+              </DropdownMenuItem>
+            )}
+          </div>
+
+          {/* Titles only, three across: Danish capability names are long single
+              compounds that cannot wrap, so narrower columns would overflow. */}
+          <div className="mt-1 grid grid-cols-3 gap-x-2">
+            {menu.secondary.items.map((item) => (
+              <DropdownMenuItem
+                key={item.href}
+                asChild
+                className="p-0 focus:bg-transparent"
+              >
+                <Link
+                  href={item.href}
+                  className="cursor-pointer rounded-md px-3 py-1.5 text-xs leading-snug text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset"
+                  aria-label={t("linkLabel", { title: item.title })}
+                >
+                  {item.title}
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {menu.overview && (
+        <DropdownMenuItem
+          asChild
+          className="mt-2 border-t border-gray-100 p-0 pt-2 focus:bg-transparent"
+        >
+          <Link
+            href={menu.overview.href}
+            className="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-[var(--green-dark3)] hover:bg-gray-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--green-dark3)] focus:ring-inset"
+            aria-label={t("linkLabel", { title: menu.overview.title })}
+          >
+            <span>{menu.overview.title}</span>
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+          </Link>
+        </DropdownMenuItem>
+      )}
     </>
   )
 }

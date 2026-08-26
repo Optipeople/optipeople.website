@@ -223,7 +223,7 @@
   --sidebar-ring: oklch(0.4390 0 0);
 }
 
-/* Hero rotating word — slot-machine roll: the outgoing term exits through the
+/* Hero rotating word, slot-machine roll: the outgoing term exits through the
    top of the masked slot as the incoming one enters from the bottom. */
 @keyframes word-roll-in {
   from {

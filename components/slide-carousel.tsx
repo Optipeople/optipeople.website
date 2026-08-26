@@ -41,7 +41,7 @@ export type SlideData = {
   imageFit?: "cover" | "fill"
 }
 
-// Build an rgba() string from a #rrggbb hex and an alpha — used to tint the
+// Build an rgba() string from a #rrggbb hex and an alpha, used to tint the
 // vertical slide gradient with an AI-palette color.
 function hexToRgba(hex: string, alpha: number): string {
   const h = hex.replace("#", "")
@@ -64,7 +64,7 @@ type SlideCarouselProps = {
 // ── Shared layout system (Langdock-style) ────────────────────────────────────
 // Every homepage slider lines its first card up with the page's max-w-6xl
 // content column, then bleeds off the right edge of the viewport. These tokens
-// keep that geometry — and the gap, card height, and nav placement — identical
+// keep that geometry, and the gap, card height, and nav placement, identical
 // across all sliders.
 //
 // The slider inset (`--edge`) is a global token (see globals.css). It is applied
@@ -490,7 +490,7 @@ export function SlideCarousel({
                               )
                             })()}
 
-                            {/* Content overlay — AI-slide typographic hierarchy:
+                            {/* Content overlay, AI-slide typographic hierarchy:
                                 prominent feature title + quieter supporting line */}
                             <div className="relative z-10 h-full flex flex-col">
                               <div className="px-7 pt-7">
@@ -506,7 +506,7 @@ export function SlideCarousel({
                               <div className="flex-1" />
                             </div>
 
-                            {/* Angle-right icon button — AI-slide soft ring style */}
+                            {/* Angle-right icon button, AI-slide soft ring style */}
                             <Link
                               href={slide.primaryHref}
                               onClick={(e) => e.stopPropagation()}

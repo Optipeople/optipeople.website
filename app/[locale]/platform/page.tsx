@@ -5,6 +5,7 @@ import { type Locale } from "@/i18n/routing"
 import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 import { PlatformFlower } from "@/components/platform-flower"
+import { moduleIndexLinks } from "@/content/modules-catalog"
 import { buildMetadata } from "@/lib/seo"
 
 type PageProps = { params: Promise<{ locale: string }> }
@@ -13,12 +14,12 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "Platform | OptiPeople",
     description:
-      "Explore the OptiCloud platform — connected modules for production, quality, maintenance, energy, and analysis, sharing data in one unified view of your operations.",
+      "Explore the OptiCloud platform, modular MES, OEE, QMS, EMS, maintenance, planning, orders, IoT, documents, analysis, and AI agents, sharing data in one unified view of your operations.",
   },
   da: {
     title: "Platform | OptiPeople",
     description:
-      "Udforsk OptiCloud-platformen — forbundne moduler til produktion, kvalitet, vedligehold, energi og analyse, der deler data i ét samlet billede af driften.",
+      "Udforsk OptiCloud-platformen, modulært MES, OEE, QMS, EMS, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter i ét samlet billede af driften.",
   },
 }
 
@@ -50,7 +51,7 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "One platform for the whole operation",
-      lede: "OptiCloud connects production, quality, maintenance, energy, and analysis on a single data foundation. Every module works from the same live data — so what one team registers, every team can use.",
+      lede: "OptiCloud connects production, quality, maintenance, energy, and analysis on a single data foundation. Every module works from the same live data, so what one team registers, every team can use.",
     },
     steps: {
       title: "How it fits together",
@@ -60,17 +61,17 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Connect",
           description:
-            "Connect machines, sensors, and systems through the IoT module — PLCs, gateways, and legacy equipment, regardless of protocol or age.",
+            "Connect machines, sensors, and systems through the IoT module: PLCs, gateways, and legacy equipment, regardless of protocol or age.",
         },
         {
           title: "Collect",
           description:
-            "Data lands in one structured foundation, tied to machines, orders, batches, and shifts — not scattered across systems and spreadsheets.",
+            "Data lands in one structured foundation, tied to machines, orders, batches, and shifts, not scattered across systems and spreadsheets.",
         },
         {
           title: "Analyze",
           description:
-            "Follow OEE in real time and get automated reports on performance, losses, quality, and energy — the same numbers for everyone.",
+            "Follow OEE in real time and get automated reports on performance, losses, quality, and energy: the same numbers for everyone.",
         },
         {
           title: "Act",
@@ -83,16 +84,7 @@ const copy: Record<Locale, PlatformCopy> = {
       title: "The modules",
       subtitle:
         "Each module solves a specific operational need, and together they give you a single, connected view of the shopfloor.",
-      cards: [
-        { title: "Production", href: "/modules/production", description: "Live OEE, downtime, orders, and shift performance." },
-        { title: "Quality", href: "/modules/quality", description: "Digital checks, deviations, and full traceability." },
-        { title: "Maintenance", href: "/modules/maintenance", description: "Preventive planning and mobile task management." },
-        { title: "Energy", href: "/modules/energy", description: "Energy consumption connected to production output." },
-        { title: "Analysis", href: "/modules/analysis", description: "Automated reports on performance, loss, and cost." },
-        { title: "IoT", href: "/modules/iot", description: "Connect new and legacy machines, sensors, and protocols." },
-        { title: "ERP Shopfloor", href: "/modules/erp-shopfloor", description: "Two-way sync between ERP planning and the floor." },
-        { title: "MES", href: "/modules/mes", description: "A cloud-based Manufacturing Execution System." },
-      ],
+      cards: moduleIndexLinks("en"),
     },
     cta: {
       title: "Ready to see it in practice?",
@@ -104,7 +96,7 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "Én platform til hele driften",
-      lede: "OptiCloud forbinder produktion, kvalitet, vedligehold, energi og analyse på ét fælles datagrundlag. Alle moduler arbejder på de samme live data — så det, ét team registrerer, kan alle teams bruge.",
+      lede: "OptiCloud forbinder produktion, kvalitet, vedligehold, energi og analyse på ét fælles datagrundlag. Alle moduler arbejder på de samme live data, så det, ét team registrerer, kan alle teams bruge.",
     },
     steps: {
       title: "Sådan hænger det sammen",
@@ -114,17 +106,17 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Forbind",
           description:
-            "Forbind maskiner, sensorer og systemer via IoT-modulet — PLC'er, gateways og ældre udstyr, uanset protokol og alder.",
+            "Forbind maskiner, sensorer og systemer via IoT-modulet: PLC'er, gateways og ældre udstyr, uanset protokol og alder.",
         },
         {
           title: "Opsaml",
           description:
-            "Data lander i ét struktureret grundlag, koblet til maskiner, ordrer, batches og skift — ikke spredt ud over systemer og regneark.",
+            "Data lander i ét struktureret grundlag, koblet til maskiner, ordrer, batches og skift, ikke spredt ud over systemer og regneark.",
         },
         {
           title: "Analysér",
           description:
-            "Følg OEE i realtid, og få automatiske rapporter om performance, tab, kvalitet og energi — de samme tal for alle.",
+            "Følg OEE i realtid, og få automatiske rapporter om performance, tab, kvalitet og energi: de samme tal for alle.",
         },
         {
           title: "Handl",
@@ -137,16 +129,7 @@ const copy: Record<Locale, PlatformCopy> = {
       title: "Modulerne",
       subtitle:
         "Hvert modul løser et konkret driftsbehov, og sammen giver de ét forbundet overblik over fabriksgulvet.",
-      cards: [
-        { title: "Produktion", href: "/modules/production", description: "Live OEE, nedetid, ordrer og skiftperformance." },
-        { title: "Kvalitet", href: "/modules/quality", description: "Digitale kontroller, afvigelser og fuld sporbarhed." },
-        { title: "Vedligehold", href: "/modules/maintenance", description: "Forebyggende planlægning og mobil opgavestyring." },
-        { title: "Energi", href: "/modules/energy", description: "Energiforbrug koblet til produktionens output." },
-        { title: "Analyse", href: "/modules/analysis", description: "Automatiske rapporter om performance, tab og omkostninger." },
-        { title: "IoT", href: "/modules/iot", description: "Forbind nye og gamle maskiner, sensorer og protokoller." },
-        { title: "ERP Shopfloor", href: "/modules/erp-shopfloor", description: "Tovejssynk mellem ERP-planlægning og gulvet." },
-        { title: "MES", href: "/modules/mes", description: "Et cloudbaseret Manufacturing Execution System." },
-      ],
+      cards: moduleIndexLinks("da"),
     },
     cta: {
       title: "Klar til at se det i praksis?",

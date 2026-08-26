@@ -6,9 +6,9 @@ import Image from "next/image"
 import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
 import { LogoWall } from "@/components/logo-wall"
 import { TestimonialCarousel, type Testimonial } from "@/components/testimonial-carousel"
-import { LeadEmailForm } from "@/components/lead-email-form"
-import { RotatingWord } from "@/components/rotating-word"
+import { HeroModulePicker } from "@/components/hero-module-picker"
 import { Button } from "@/components/ui/button"
+import { moduleCatalog, moduleChipRows } from "@/content/modules-catalog"
 import { getPostBySlug } from "@/lib/blog-data"
 import { aiStackSlides, aiStackSliderCopy } from "@/lib/ai-stack"
 import { customerLogos } from "@/lib/customers"
@@ -72,7 +72,7 @@ function ComparisonBars({
   )
 }
 
-// Per-card color wash for the image case cards — reuses the AI slider's
+// Per-card color wash for the image case cards, reuses the AI slider's
 // palette (see aiCapabilities theme in lib/ai-stack.ts): a mix of deep and
 // light brand tones, each paired with the text tone that reads on it. The
 // color is applied near-opaque so the photo recedes to a subtle texture.
@@ -107,11 +107,19 @@ function formatCaseDate(date: string): string {
 // ── Localized copy ──
 type HomeCopy = {
   hero: {
-    /** Line 1: a static lead-in plus terms that cycle in place. */
-    rotating: { prefix: string; words: string[] }
-    /** Line 2: static lead-in plus an emphasized summary of the field offering. */
-    tagline: { prefix: string; emphasis: string }
-    ctaLabel: string
+    /**
+     * Three headline directions still under review. Once one is picked, collapse
+     * this to a single `heading` / `subheading` pair and drop `heroVariant`.
+     */
+    variants: Record<HeroVariant, { heading: string; subheading: string }>
+    /** Line above the module chips, explaining what picking one does. */
+    modulePrompt: string
+    /**
+     * Module ids grouped into the chip rows they render on. Ids only, labels
+     * come from the catalog. Rows stay per-locale because Danish labels run
+     * longer, so the tidy break lands in a different place per language.
+     */
+    moduleRows: string[][]
   }
   tabSlides: SlideData[]
   logoWallTitle: string
@@ -123,7 +131,10 @@ type HomeCopy = {
     cite: string
   }
   platform: { eyebrow: string; title: string; subtitle: string; ariaLabel: string }
-  verticalSlides: SlideData[]
+  /** Per-module carousel copy, keyed by module id in content/modules-catalog.ts. */
+  moduleSlides: Record<string, ModuleSlideCopy>
+  /** CTA on each module slide. "{module}" is replaced with the module name. */
+  moduleCta: string
   ai: { ariaLabel: string }
   testimonials: Testimonial[]
   testimonialTitle: string
@@ -137,18 +148,78 @@ type HomeCopy = {
   tabsAriaLabel: string
 }
 
+/**
+ * Carousel copy for one module. The title, the link, and the CTA come from
+ * content/modules-catalog.ts, so only the pitch and the image live here.
+ */
+type ModuleSlideCopy = {
+  description: string
+  imageSrc: string
+  imageAlt: string
+  imageFit?: "fill"
+}
+
+/** Card backgrounds, cycled so neighbouring module slides stay distinct. */
+const MODULE_SLIDE_ACCENTS = ["#243b2f", "#163b40", "#1c1f26"] as const
+
+/**
+ * Builds the module carousel by walking the catalog, so the slides are always
+ * the modules the hero chips and the nav offer, in the same order. A module
+ * with no copy yet still gets a slide, falling back to its catalog blurb.
+ */
+function buildModuleSlides(
+  locale: Locale,
+  copyById: Record<string, ModuleSlideCopy>,
+  ctaTemplate: string
+): SlideData[] {
+  return moduleCatalog.map((entry, index) => {
+    const label = entry.label[locale]
+    const slide = copyById[entry.id]
+    return {
+      title: label,
+      description: slide?.description ?? entry.blurb[locale],
+      imageSrc: slide?.imageSrc ?? "/images/dashboard1.png",
+      imageAlt: slide?.imageAlt ?? label,
+      imageFit: slide?.imageFit,
+      primaryLabel: ctaTemplate.replace("{module}", label),
+      primaryHref: entry.href,
+      bgColor: "bg-black",
+      layout: "vertical",
+      accentColor:
+        MODULE_SLIDE_ACCENTS[index % MODULE_SLIDE_ACCENTS.length],
+    }
+  })
+}
+
+/** Which of the three hero headline directions renders. */
+type HeroVariant = "product" | "category" | "outcome"
+const heroVariant: HeroVariant = "product"
+
+/** Chips picked before the visitor touches anything. Locale-independent. */
+const heroDefaultModules = ["mes"]
+
 const copy: Record<Locale, HomeCopy> = {
   en: {
     hero: {
-      rotating: {
-        prefix: "For your own factory:",
-        words: ["MES", "IoT", "OEE", "EMS", "QMS", "DMS", "Planning", "AI agents"],
+      variants: {
+        product: {
+          heading: "Run production and operations on live data",
+          subheading: "One data foundation. Every team on the same numbers.",
+        },
+        category: {
+          heading: "One platform to run your whole production",
+          subheading: "Every machine, every module, one data foundation.",
+        },
+        outcome: {
+          heading: "Know your factory. In real time.",
+          subheading: "Live OEE, quality and maintenance in one place.",
+        },
       },
-      tagline: {
-        prefix: "For your machines at customer sites:",
-        emphasis: "remote monitoring, service & AI agents",
-      },
-      ctaLabel: "Talk to sales",
+      modulePrompt: "What do you want to run better?",
+      moduleRows: [
+        ["mes", "oee", "qms", "ems", "maintenance"],
+        ["planning", "iot", "documents", "aftersales", "ai-agents"],
+      ],
     },
     tabsAriaLabel: "Team solutions",
     tabSlides: [
@@ -199,119 +270,92 @@ const copy: Record<Locale, HomeCopy> = {
       storiesLabel: "Customer stories",
       quote:
         "Comparing our OEE to previous data before Opticloud, we’ve seen an average increase of 5% within just three months.",
-      cite: "Kasper Kielgast Poulsen, Fabrikschef — Dansk Træemballage",
+      cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
-      eyebrow: "OptiPeople Platform",
-      title: "Everything you need to run production.",
+      eyebrow: "Platform modules",
+      title: "One module at a time. One data foundation.",
       subtitle:
-        "From live OEE to maintenance, quality, and reporting — one connected platform for your whole operation.",
-      ariaLabel: "Platform features",
+        "Each module answers a specific operational question, and they all read from the same machine signals, so a stop registered on the floor lands in OEE, in the maintenance history, and in the monthly report without anyone re-entering it.",
+      ariaLabel: "Platform modules",
     },
-    verticalSlides: [
-      {
-        title: "Production Efficiency",
+    moduleCta: "Explore {module}",
+    moduleSlides: {
+      mes: {
         description:
-          "See where production time is lost and why. Track OEE live and understand performance across shifts, lines, and machines based on real production data.",
+          "The cloud MES the other modules run on. Start with one line, add modules as the next question comes up, same data foundation, no re-implementation.",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile.png",
+        imageAlt: "Opticloud MES operator panel",
+        imageFit: "fill",
+      },
+      oee: {
+        description:
+          "See where production time is lost and why. Track availability, performance, and quality live across shifts, lines, and machines, built from real machine signals.",
         imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile-Dark.png",
-        imageAlt: "Production efficiency and OEE dashboard",
+        imageAlt: "Live OEE dashboard",
         imageFit: "fill",
-        primaryLabel: "See production efficiency",
-        primaryHref: "/features/production-efficiency",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#243b2f",
       },
-      {
-        title: "Stop Cause Registration",
+      qms: {
         description:
-          "Make downtime visible at the source. Operators register stops directly at the machine, giving you clean data you can actually act on.",
-        imageSrc: "/images/Mockups/Operator-Panel-Stop-Screen-Mobile.png",
-        imageAlt: "Stop cause registration screen",
+          "Register quality data where it happens. Trace deviations back to machine, batch, and shift, and turn checks into documentation instead of paperwork.",
+        imageSrc: "/images/Mockups/Lists.png",
+        imageAlt: "Quality checks and traceability",
         imageFit: "fill",
-        primaryLabel: "View stop registration",
-        primaryHref: "/features/stop-cause-registration",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#163b40",
       },
-      {
-        title: "Maintenance and Tasks",
+      ems: {
         description:
-          "Plan and execute preventive maintenance based on usage and condition. Assign tasks, track completion, and reduce unplanned downtime.",
+          "Connect energy, vibration, flow, and temperature directly to production. See kWh per produced unit and find the waste a monthly utility bill hides.",
+        imageSrc: "/images/Telemetry-Chart.png",
+        imageAlt: "Energy and telemetry monitoring",
+      },
+      maintenance: {
+        description:
+          "Plan preventive maintenance on usage and condition rather than the calendar. Assign tasks, track completion, and cut unplanned downtime.",
         imageSrc: "/images/Mockups/Tasls-Maintenance.png",
         imageAlt: "Maintenance task overview",
         imageFit: "fill",
-        primaryLabel: "Explore maintenance",
-        primaryHref: "/features/maintenance-and-tasks",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#1c1f26",
       },
-      {
-        title: "Quality Management",
+      planning: {
         description:
-          "Register quality data where it happens. Trace deviations back to machines, batches, and shifts and build accountability into production.",
-        imageSrc: "/images/Mockups/Lists.png",
-        imageAlt: "Quality tracking and traceability",
-        imageFit: "fill",
-        primaryLabel: "Improve quality",
-        primaryHref: "/features/quality-management",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#243b2f",
+          "Sequence orders against the capacity you actually have. Plans built on measured run rates and real machine availability instead of spreadsheet assumptions.",
+        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        imageAlt: "Production planning and sequencing",
       },
-      {
-        title: "Analysis and Reporting",
+      orders: {
         description:
-          "Turn production data into clear reports on performance, losses, and cost drivers without spreadsheets or manual work.",
+          "Two-way sync between ERP and the floor. Orders reach the machine, and progress, scrap, and time flow straight back without anyone re-typing them.",
         imageSrc: "/images/Mockups/Report-Production-Counters-Mobile.png",
-        imageAlt: "Production reporting and analysis",
+        imageAlt: "Production orders and counters",
         imageFit: "fill",
-        primaryLabel: "See reporting",
-        primaryHref: "/features/analysis-and-reporting",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#163b40",
       },
-      {
-        title: "Energy and Telemetry",
+      iot: {
         description:
-          "Connect energy, vibration, flow, and temperature directly to production. Identify waste, anomalies, and optimization opportunities.",
-        imageSrc: "/images/report-mockrup-3.png",
-        imageAlt: "Energy and telemetry monitoring",
-        primaryLabel: "Explore energy data",
-        primaryHref: "/features/energy-and-telemetry",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#1c1f26",
-      },
-      {
-        title: "AI and Copilots",
-        description:
-          "Ask questions, detect patterns, and support decisions using AI trained on your own production data.",
-        imageSrc: "/images/report-mockup4.png",
-        imageAlt: "AI assistant for production data",
-        primaryLabel: "Explore AI features",
-        primaryHref: "/features/ai-and-copilots",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#243b2f",
-      },
-      {
-        title: "Machine Control",
-        description:
-          "Integrate with machine control systems to enable feedback, automation, and tighter production loops across the factory.",
+          "Get data from anything, modern controls over standard industrial protocols, and older machines through sensors that measure the signal directly.",
         imageSrc: "/images/Mockups/Machine-Overview-Mobile.png",
-        imageAlt: "Machine control integration",
+        imageAlt: "Connected machine overview",
         imageFit: "fill",
-        primaryLabel: "See machine control",
-        primaryHref: "/features/machine-control",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#163b40",
       },
-    ],
+      documents: {
+        description:
+          "Work instructions, drawings, and certificates at the machine, always in the current version. The operator sees what applies to the order in front of them.",
+        imageSrc: "/images/Mockups/Tasks-Maintenance-Lists.png",
+        imageAlt: "Documents and instructions at the machine",
+        imageFit: "fill",
+      },
+      analysis: {
+        description:
+          "Turn production data into clear reports on performance, losses, and cost drivers, automatically, without spreadsheets or manual work.",
+        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        imageAlt: "Production reporting and analysis",
+      },
+      "ai-agents": {
+        description:
+          "Ask questions in plain language and let agents watch for patterns in your own production data, grounded in the same numbers everyone else sees.",
+        imageSrc: "/images/report-mockup4.png",
+        imageAlt: "AI agents working on production data",
+      },
+    },
+
     ai: { ariaLabel: "AI capabilities" },
     testimonials: [
       {
@@ -368,7 +412,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Fiberline Composites",
           value: "−41%",
           unit: "unnecessary stops",
-          note: "Fewer machine stops — and 6% less time lost per stop.",
+          note: "Fewer machine stops, and 6% less time lost per stop.",
           slug: "konkurrencekraft-og-tempo-pa-digital-transformation",
           span: "wide",
           kind: "chart",
@@ -399,7 +443,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Kvik",
           value: "−50%",
           unit: "service hours",
-          note: "Usage-based maintenance — plus 40 extra production hours a year.",
+          note: "Usage-based maintenance, plus 40 extra production hours a year.",
           slug: "kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud",
           span: "wide",
           kind: "image",
@@ -427,15 +471,25 @@ const copy: Record<Locale, HomeCopy> = {
   },
   da: {
     hero: {
-      rotating: {
-        prefix: "Til din egen fabrik:",
-        words: ["MES", "IoT", "OEE", "EMS", "QMS", "DMS", "Planlægning", "AI-agenter"],
+      variants: {
+        product: {
+          heading: "Styr produktion og drift på live data",
+          subheading: "Ét datagrundlag. Alle teams på de samme tal.",
+        },
+        category: {
+          heading: "Én platform til at drive hele produktionen",
+          subheading: "Alle maskiner, alle moduler, ét datagrundlag.",
+        },
+        outcome: {
+          heading: "Kend din fabrik. I realtid.",
+          subheading: "Live OEE, kvalitet og vedligehold på ét sted.",
+        },
       },
-      tagline: {
-        prefix: "Til dine maskiner ude hos kunderne:",
-        emphasis: "fjernovervågning, service og AI-agenter",
-      },
-      ctaLabel: "Tal med salg",
+      modulePrompt: "Hvad vil du gøre bedre?",
+      moduleRows: [
+        ["mes", "oee", "qms", "ems", "maintenance"],
+        ["planning", "iot", "documents", "aftersales", "ai-agents"],
+      ],
     },
     tabsAriaLabel: "Løsninger til teams",
     tabSlides: [
@@ -486,119 +540,92 @@ const copy: Record<Locale, HomeCopy> = {
       storiesLabel: "Kundehistorier",
       quote:
         "Sammenlignet med vores OEE før Opticloud har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
-      cite: "Kasper Kielgast Poulsen, Fabrikschef — Dansk Træemballage",
+      cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
-      eyebrow: "OptiPeople Platform",
-      title: "Alt du behøver for at drive produktion.",
+      eyebrow: "Platformmoduler",
+      title: "Ét modul ad gangen. Ét datagrundlag.",
       subtitle:
-        "Fra live OEE til vedligehold, kvalitet og rapportering — én forbundet platform til hele din drift.",
-      ariaLabel: "Platformfunktioner",
+        "Hvert modul svarer på et konkret driftsspørgsmål, og de læser alle fra de samme maskinsignaler, et stop registreret på gulvet slår igennem i OEE, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
+      ariaLabel: "Platformmoduler",
     },
-    verticalSlides: [
-      {
-        title: "Produktionseffektivitet",
+    moduleCta: "Udforsk {module}",
+    moduleSlides: {
+      mes: {
         description:
-          "Se hvor produktionstiden går tabt og hvorfor. Følg OEE live på tværs af skift, linjer og maskiner.",
+          "Det cloudbaserede MES, de øvrige moduler kører på. Start med én linje og tilføj moduler, når næste spørgsmål melder sig, samme datagrundlag hele vejen.",
+        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile.png",
+        imageAlt: "Opticloud MES-operatørpanel",
+        imageFit: "fill",
+      },
+      oee: {
+        description:
+          "Se hvor produktionstiden går tabt og hvorfor. Følg tilgængelighed, performance og kvalitet live på tværs af skift, linjer og maskiner.",
         imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile-Dark.png",
-        imageAlt: "Dashboard til produktionseffektivitet og OEE",
+        imageAlt: "Live OEE-dashboard",
         imageFit: "fill",
-        primaryLabel: "Se produktionseffektivitet",
-        primaryHref: "/features/production-efficiency",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#243b2f",
       },
-      {
-        title: "Stopårsagsregistrering",
+      qms: {
         description:
-          "Gør nedetid synlig ved kilden. Operatører registrerer stop direkte ved maskinen, så data bliver rent og brugbart.",
-        imageSrc: "/images/Mockups/Operator-Panel-Stop-Screen-Mobile.png",
-        imageAlt: "Skærm til stopårsagsregistrering",
+          "Registrer kvalitetsdata dér hvor arbejdet sker. Spor afvigelser tilbage til maskine, batch og skift, og gør kontroller til dokumentation i stedet for papirarbejde.",
+        imageSrc: "/images/Mockups/Lists.png",
+        imageAlt: "Kvalitetskontroller og sporbarhed",
         imageFit: "fill",
-        primaryLabel: "Se stopregistrering",
-        primaryHref: "/features/stop-cause-registration",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#163b40",
       },
-      {
-        title: "Vedligehold og opgaver",
+      ems: {
         description:
-          "Planlæg forebyggende vedligehold baseret på brug og tilstand. Tildel opgaver, følg status, og reducer uplanlagt nedetid.",
+          "Kobl energi, vibration, flow og temperatur direkte til produktionen. Se kWh pr. produceret enhed og find det spild, elregningen skjuler.",
+        imageSrc: "/images/Telemetry-Chart.png",
+        imageAlt: "Energi- og telemetriovervågning",
+      },
+      maintenance: {
+        description:
+          "Planlæg forebyggende vedligehold efter brug og tilstand i stedet for kalenderen. Tildel opgaver, følg status og reducer uplanlagt nedetid.",
         imageSrc: "/images/Mockups/Tasls-Maintenance.png",
         imageAlt: "Opgaveoverblik til vedligehold",
         imageFit: "fill",
-        primaryLabel: "Udforsk vedligehold",
-        primaryHref: "/features/maintenance-and-tasks",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#1c1f26",
       },
-      {
-        title: "Kvalitetsstyring",
+      planning: {
         description:
-          "Registrer kvalitetsdata dér hvor arbejdet sker. Spor afvigelser tilbage til maskiner, batches og skift.",
-        imageSrc: "/images/Mockups/Lists.png",
-        imageAlt: "Kvalitetssporing og sporbarhed",
-        imageFit: "fill",
-        primaryLabel: "Forbedr kvalitet",
-        primaryHref: "/features/quality-management",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#243b2f",
+          "Planlæg ordrer efter den kapacitet I faktisk har. Planer bygget på målte kørehastigheder og reel maskintilgængelighed, ikke regnearksantagelser.",
+        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        imageAlt: "Produktionsplanlægning og sekvensering",
       },
-      {
-        title: "Analyse og rapportering",
+      orders: {
         description:
-          "Gør produktionsdata til tydelige rapporter om performance, tab og omkostningsdrivere uden manuelt regnearksarbejde.",
+          "Tovejssynk mellem ERP og gulvet. Ordrer kommer ud på maskinen, og status, spild og tid går direkte tilbage uden manuel indtastning.",
         imageSrc: "/images/Mockups/Report-Production-Counters-Mobile.png",
-        imageAlt: "Rapportering og analyse",
+        imageAlt: "Produktionsordrer og tællere",
         imageFit: "fill",
-        primaryLabel: "Se rapportering",
-        primaryHref: "/features/analysis-and-reporting",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#163b40",
       },
-      {
-        title: "Energi og telemetri",
+      iot: {
         description:
-          "Kobl energi, vibration, flow og temperatur direkte til produktionen, og find spild, afvigelser og optimeringsmuligheder.",
-        imageSrc: "/images/report-mockrup-3.png",
-        imageAlt: "Energi- og telemetriovervågning",
-        primaryLabel: "Udforsk energidata",
-        primaryHref: "/features/energy-and-telemetry",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#1c1f26",
-      },
-      {
-        title: "AI og copilots",
-        description:
-          "Stil spørgsmål, find mønstre og understøt beslutninger med AI trænet på jeres egne produktionsdata.",
-        imageSrc: "/images/report-mockup4.png",
-        imageAlt: "AI-assistent til produktionsdata",
-        primaryLabel: "Udforsk AI",
-        primaryHref: "/features/ai-and-copilots",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#243b2f",
-      },
-      {
-        title: "Maskinstyring",
-        description:
-          "Integrer med maskinstyringer for feedback, automatisering og tættere loops mellem system og fabriksgulv.",
+          "Få data fra alt, moderne styringer over gængse industrielle protokoller, og ældre maskiner via sensorer, der måler signalet direkte.",
         imageSrc: "/images/Mockups/Machine-Overview-Mobile.png",
-        imageAlt: "Integration til maskinstyring",
+        imageAlt: "Overblik over forbundne maskiner",
         imageFit: "fill",
-        primaryLabel: "Se maskinstyring",
-        primaryHref: "/features/machine-control",
-        bgColor: "bg-black",
-        layout: "vertical",
-        accentColor: "#163b40",
       },
-    ],
+      documents: {
+        description:
+          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den gældende version. Operatøren ser det, der gælder for ordren foran sig.",
+        imageSrc: "/images/Mockups/Tasks-Maintenance-Lists.png",
+        imageAlt: "Dokumenter og instruktioner ved maskinen",
+        imageFit: "fill",
+      },
+      analysis: {
+        description:
+          "Gør produktionsdata til tydelige rapporter om performance, tab og omkostningsdrivere, automatisk og uden regnearksarbejde.",
+        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        imageAlt: "Rapportering og analyse",
+      },
+      "ai-agents": {
+        description:
+          "Stil spørgsmål i almindeligt sprog, og lad agenter holde øje med mønstre i jeres egne produktionsdata, på de samme tal, som alle andre ser.",
+        imageSrc: "/images/report-mockup4.png",
+        imageAlt: "AI-agenter der arbejder på produktionsdata",
+      },
+    },
+
     ai: { ariaLabel: "AI-funktioner" },
     testimonials: [
       {
@@ -634,7 +661,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Fiberline Composites",
           value: "−41%",
           unit: "unødvendige stop",
-          note: "Færre maskinstop — og 6% mindre tid tabt per stop.",
+          note: "Færre maskinstop, og 6% mindre tid tabt per stop.",
           slug: "konkurrencekraft-og-tempo-pa-digital-transformation",
           span: "wide",
           kind: "chart",
@@ -665,7 +692,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Kvik",
           value: "−50%",
           unit: "servicetimer",
-          note: "Brugsbaseret vedligehold — plus 40 ekstra produktionstimer om året.",
+          note: "Brugsbaseret vedligehold, plus 40 ekstra produktionstimer om året.",
           slug: "kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud",
           span: "wide",
           kind: "image",
@@ -731,27 +758,26 @@ export default async function Home({
   setRequestLocale(locale as Locale)
   const loc = (locale as Locale) in copy ? (locale as Locale) : "en"
   const t = copy[loc]
+  const hero = t.hero.variants[heroVariant]
+  const moduleSlides = buildModuleSlides(loc, t.moduleSlides, t.moduleCta)
   const ai = aiStackSliderCopy[loc]
 
   return (
     <main>
       <section className="py-12 lg:py-16">
         <div className="w-full px-[var(--edge)] py-22">
-          <h1 className="text-3xl font-light leading-tight text-foreground text-center sm:text-4xl lg:text-5xl">
-            <span className="block">
-              {t.hero.rotating.prefix}{" "}
-              <RotatingWord
-                words={t.hero.rotating.words}
-                className="font-normal text-foreground"
-              />
-            </span>
+          <h1 className="mx-auto max-w-3xl text-balance text-center text-4xl font-light leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            {hero.heading}
           </h1>
-          <p className="mt-4 text-lg font-light leading-snug text-foreground/70 text-center sm:text-xl">
-            {t.hero.tagline.prefix} {t.hero.tagline.emphasis}
+          <p className="mx-auto mt-6 max-w-xl text-balance text-center text-lg font-light leading-snug text-foreground/70 sm:text-xl">
+            {hero.subheading}
           </p>
-          <div className="mt-8 flex justify-center">
-            <LeadEmailForm className="w-full max-w-md" />
-          </div>
+          <HeroModulePicker
+            moduleRows={moduleChipRows(loc, t.hero.moduleRows)}
+            prompt={t.hero.modulePrompt}
+            defaultSelectedIds={heroDefaultModules}
+            className="mt-10"
+          />
         </div>
 
         <SlideCarousel
@@ -765,10 +791,10 @@ export default async function Home({
       {/* Customer Logo Wall */}
       <LogoWall logos={customerLogos} className="pb-0 lg:pb-0" />
 
-      {/* Trust band — pairs the logo wall with social proof */}
+      {/* Trust band, pairs the logo wall with social proof */}
       <section className="pt-20 pb-12 lg:pt-32 lg:pb-28">
         <div className="grid w-full grid-cols-1 gap-12 px-[var(--edge)] lg:grid-cols-2 lg:gap-16">
-          {/* Left — headline + customer stories link */}
+          {/* Left, headline + customer stories link */}
           <div>
             <h2 className="text-3xl font-light tracking-tight text-foreground lg:text-4xl">
               {t.trust.heading}
@@ -785,7 +811,7 @@ export default async function Home({
             </Link>
           </div>
 
-          {/* Right — featured testimonial */}
+          {/* Right, featured testimonial */}
           <figure className="flex flex-col">
             <blockquote className="text-xl font-light leading-relaxed text-foreground/90 lg:text-2xl">
               &ldquo;{t.trust.quote}&rdquo;
@@ -811,7 +837,7 @@ export default async function Home({
         </div>
 
         <SlideCarousel
-          slides={t.verticalSlides}
+          slides={moduleSlides}
           navigationType={["arrows"]}
           ariaLabel={t.platform.ariaLabel}
           className="mt-8"
@@ -847,7 +873,7 @@ export default async function Home({
         className="py-12 lg:py-28"
       />
 
-      {/* Customer Results — Scandinavian bento of measured outcomes */}
+      {/* Customer Results, Scandinavian bento of measured outcomes */}
       {/* Negative bottom margin cancels the CTA's top margin so the two
           backgrounds meet flush instead of leaving an empty white band. */}
       <section className="-mb-16 bg-[var(--gray-1)] py-24 lg:-mb-24 lg:py-32">
@@ -982,7 +1008,7 @@ export default async function Home({
                       className="object-cover transition-transform duration-700 ease-out motion-reduce:transition-none group-hover:scale-105"
                     />
                   )}
-                  {/* color wash — AI-slider palette, near-opaque so the photo
+                  {/* color wash, AI-slider palette, near-opaque so the photo
                       recedes to a subtle texture under the brand color. */}
                   <div
                     aria-hidden

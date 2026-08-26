@@ -1,6 +1,6 @@
 # Module Landing Page Design Guide
 
-This document defines the design patterns for OptiPeople module landing pages — dedicated pages for individual platform modules like Smart Operations, AI Solutions, Maintenance, etc.
+This document defines the design patterns for OptiPeople module landing pages, dedicated pages for individual platform modules like Smart Operations, AI Solutions, Maintenance, etc.
 
 ---
 
@@ -12,16 +12,16 @@ Every module landing page should feel like an Apple product page crossed with Sc
 
 - **Remove before you add.** If an element doesn't directly help the visitor understand or convert, it doesn't belong. No decorative filler, no "nice to have" sections.
 - **One idea per viewport.** Each scroll-stop should communicate exactly one thing. Don't stack competing messages in the same visual space.
-- **Let whitespace do the work.** Generous padding isn't empty — it's directing attention. Sections breathe. Content doesn't crowd.
-- **Typography is the design.** Light font weights, large sizes, tight tracking. The type itself creates hierarchy and visual interest — not borders, backgrounds, or decoration.
+- **Let whitespace do the work.** Generous padding isn't empty, it's directing attention. Sections breathe. Content doesn't crowd.
+- **Typography is the design.** Light font weights, large sizes, tight tracking. The type itself creates hierarchy and visual interest, not borders, backgrounds, or decoration.
 - **Restrained color.** The page is predominantly white/neutral. Color appears only with purpose: the module's accent color, primary brand for CTAs, and nothing more.
-- **Show, don't decorate.** Visuals are product screenshots, real UI, or meaningful diagrams — never stock photos or abstract illustrations.
+- **Show, don't decorate.** Visuals are product screenshots, real UI, or meaningful diagrams, never stock photos or abstract illustrations.
 
 ---
 
 ## Page Archetype: Module Landing Page
 
-**Purpose:** Convince a visitor who already knows OptiPeople (or arrived via search) that this specific module solves their problem — and get them to request a demo or explore further.
+**Purpose:** Convince a visitor who already knows OptiPeople (or arrived via search) that this specific module solves their problem, and get them to request a demo or explore further.
 
 **Difference from homepage:** The homepage is a broad overview answering "What is OptiPeople?" Module pages go deep on one capability, answering "How does this specific thing work and why should I care?"
 
@@ -50,7 +50,7 @@ The page follows a conversion-focused narrative. Each section builds on the last
 
 ### Container
 
-- Primary content: `max-w-4xl` (narrower than homepage — focused reading)
+- Primary content: `max-w-4xl` (narrower than homepage, focused reading)
 - Wide sections (grids, visuals): `max-w-5xl` or `max-w-6xl`
 - Horizontal padding: `px-6 lg:px-8`
 - Centering: `mx-auto`
@@ -71,9 +71,9 @@ More generous than the homepage to achieve the Apple-style "one idea per viewpor
 Alternate between white and subtle tinted backgrounds to create visual rhythm without hard borders:
 
 - Default: `bg-background` (white)
-- Muted: `bg-muted/30` — subtle gray for feature grids, details
-- Accent: `bg-primary/5` — very faint brand tint for CTA or highlight sections
-- Dark: `bg-foreground text-background` — inverted, use sparingly (max once per page)
+- Muted: `bg-muted/30`, subtle gray for feature grids, details
+- Accent: `bg-primary/5`, very faint brand tint for CTA or highlight sections
+- Dark: `bg-foreground text-background`, inverted, use sparingly (max once per page)
 
 **Rule:** Never place two tinted sections back to back. Always separate with a white section.
 
@@ -93,7 +93,7 @@ Title:    text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-tig
 Subtitle: text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto
 ```
 
-The hero title should be **short and benefit-driven** — not a feature description. Think Apple:
+The hero title should be **short and benefit-driven**, not a feature description. Think Apple:
 - "See Your Factory in Real Time" (benefit)
 - NOT "Real-Time Production Monitoring Module" (feature label)
 
@@ -115,7 +115,7 @@ Small:     text-sm text-muted-foreground
 ```
 
 **Copywriting rules:**
-- Short paragraphs — 2–3 sentences max
+- Short paragraphs, 2–3 sentences max
 - No jargon unless the audience expects it (they're industrial, some is fine)
 - Lead with the outcome, follow with the mechanism
 - Active voice, present tense
@@ -126,7 +126,7 @@ Small:     text-sm text-muted-foreground
 
 ### 1. Hero
 
-Centered layout with a full-bleed background image. The default background is `/images/default-hero-bg.png` — use this unless a page-specific image is available.
+Centered layout with a full-bleed background image. The default background is `/images/default-hero-bg.png`, use this unless a page-specific image is available.
 
 ```tsx
 <section className="relative overflow-hidden pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8 bg-primary">
@@ -163,10 +163,10 @@ Centered layout with a full-bleed background image. The default background is `/
 **Guidelines:**
 - **Background image is required.** Default: `/images/default-hero-bg.png`. Add `priority` for above-the-fold loading. Use `alt=""` since the image is decorative.
 - **Fallback color:** `bg-primary` on the section serves as the background while the image loads and behind any transparent areas. This matches the brand's deep green.
-- **Overlay:** `bg-black/70` ensures text readability over busy background images. Use 70% minimum — the image should be felt, not read.
+- **Overlay:** `bg-black/70` ensures text readability over busy background images. Use 70% minimum, the image should be felt, not read.
 - **Text is white:** `text-white` for the title, `text-white/90` for eyebrow, `text-white/80` for subtitle
 - **Outline button on dark:** Override with `bg-white/10 border-white/30 text-white shadow-none hover:bg-white/20 hover:text-white`. The frosted glass effect (`bg-white/10` + `border-white/30`) makes the button clearly visible on dark backgrounds. `shadow-none` removes the default outline shadow.
-- Title is the largest text on the page — one line on desktop if possible
+- Title is the largest text on the page, one line on desktop if possible
 - Description fills in context without repeating the title
 - Two CTAs: primary (demo/contact) + secondary (scroll or navigate)
 - `mt-10` on the button group gives breathing room from the text
@@ -242,7 +242,7 @@ The core of the page. Show what the module does.
 **Guidelines:**
 - 2 columns for 4 features, 3 columns for 5–6 features
 - Icons from lucide-react, wrapped in `bg-primary/10 rounded-xl`
-- No card borders or shadows on feature items — the background section provides containment
+- No card borders or shadows on feature items, the background section provides containment
 - If features need more depth, use the alternating rows pattern instead (see below)
 
 **Alternating rows (deep-dive pattern):**
@@ -277,7 +277,7 @@ For modules where each capability needs a visual or longer explanation, alternat
 ```
 
 **Guidelines:**
-- `space-y-20 lg:space-y-32` between rows — Apple-level breathing room
+- `space-y-20 lg:space-y-32` between rows, Apple-level breathing room
 - Alternate layout direction with `order-2` on odd items
 - Images are always `rounded-2xl`, `aspect-[4/3]` or `aspect-[3/2]`
 - This pattern works best for 3–4 features. More than that gets repetitive.
@@ -305,10 +305,10 @@ A full-width (or near-full-width) product screenshot or interactive demo. This i
 ```
 
 **Guidelines:**
-- Use `max-w-6xl` — this should feel expansive compared to the text sections
+- Use `max-w-6xl`, this should feel expansive compared to the text sections
 - `rounded-4xl` with the standard card shadow matches homepage carousel cards
 - `aspect-[16/9]` for dashboard screenshots, `aspect-[4/3]` for other UI
-- If no real screenshot exists yet, use a `bg-muted/30` placeholder — never stock photos
+- If no real screenshot exists yet, use a `bg-muted/30` placeholder, never stock photos
 
 ### 5. Results / Proof
 
@@ -339,9 +339,9 @@ Hard numbers or customer validation. Two patterns:
 ```
 
 **Guidelines:**
-- Metrics are large — `text-5xl lg:text-6xl font-extralight` in `text-primary`
+- Metrics are large, `text-5xl lg:text-6xl font-extralight` in `text-primary`
 - 3 metrics is ideal. 4 max (switch to `sm:grid-cols-2 lg:grid-cols-4`)
-- Labels are short — one line, `text-sm`
+- Labels are short, one line, `text-sm`
 - Apple-style: let the numbers be the visual. No icons, no cards, no decoration.
 
 **Testimonial (single quote):**
@@ -390,11 +390,11 @@ Reduce friction by showing the process is simple. Three steps is ideal.
 ```
 
 **Guidelines:**
-- Step numbers displayed as `01`, `02`, `03` — large, light, in primary color
+- Step numbers displayed as `01`, `02`, `03`, large, light, in primary color
 - Keep descriptions to 1–2 sentences
 - 3 steps is the sweet spot. If you need more, the process is too complex for a landing page.
 
-### CTA — Handled by Layout
+### CTA, Handled by Layout
 
 The root layout (`layout.tsx`) renders a global `CallToAction` component on every page, directly above the footer. **Do not add an in-page CTA section to module landing pages.** This avoids duplication and keeps conversion messaging consistent site-wide.
 
@@ -418,11 +418,11 @@ How It Works    → white
 ```
 
 **Rules:**
-- **The last section on the page must always have a white background.** The global `CallToAction` from layout.tsx uses a tinted background — placing `bg-muted/30` directly above it creates two grey sections back-to-back, which looks off.
+- **The last section on the page must always have a white background.** The global `CallToAction` from layout.tsx uses a tinted background, placing `bg-muted/30` directly above it creates two grey sections back-to-back, which looks off.
 - Maximum one dark (`bg-foreground`) section per page, and only if it adds real value
-- `bg-muted/30` sections contain multiple items (grids, cards) — they group content visually
+- `bg-muted/30` sections contain multiple items (grids, cards), they group content visually
 - White sections are for focused content (hero, big visuals, single quotes)
-- The global `CallToAction` from layout.tsx handles conversion — no in-page CTA section needed
+- The global `CallToAction` from layout.tsx handles conversion, no in-page CTA section needed
 
 ---
 
@@ -453,7 +453,7 @@ How It Works    → white
 
 ## Icons
 
-- Source: `lucide-react` — consistent with the existing codebase
+- Source: `lucide-react`, consistent with the existing codebase
 - Size: `h-5 w-5` inside feature cards
 - Container: `p-2.5 rounded-xl bg-primary/10 w-fit`
 - Color: `text-primary`
@@ -614,7 +614,7 @@ export default function ModuleNamePage() {
         </div>
       </section>
 
-      {/* No in-page CTA — the global CallToAction from layout.tsx renders below */}
+      {/* No in-page CTA, the global CallToAction from layout.tsx renders below */}
     </main>
   )
 }
@@ -627,14 +627,14 @@ export default function ModuleNamePage() {
 - [ ] Hero headline is benefit-driven, not feature-descriptive
 - [ ] No more than 7 sections total
 - [ ] Section backgrounds alternate correctly (no two tinted sections adjacent)
-- [ ] All headings use `font-light` — nothing is bold
+- [ ] All headings use `font-light`, nothing is bold
 - [ ] `max-w-4xl` for text, `max-w-5xl`/`6xl` for grids and visuals
 - [ ] Buttons follow the variant/size table above
 - [ ] Images have `alt` text and use `rounded-2xl`+ with overflow-hidden
 - [ ] Responsive: stacks to single column on mobile
-- [ ] Page feels spacious — when in doubt, add more padding, not more content
-- [ ] No in-page CTA section — layout.tsx already provides the global CallToAction
-- [ ] Layout.tsx already provides SiteHeader, CallToAction, and SiteFooter — don't duplicate any of them
+- [ ] Page feels spacious, when in doubt, add more padding, not more content
+- [ ] No in-page CTA section, layout.tsx already provides the global CallToAction
+- [ ] Layout.tsx already provides SiteHeader, CallToAction, and SiteFooter, don't duplicate any of them
 
 ---
 
@@ -643,7 +643,7 @@ export default function ModuleNamePage() {
 | File | Purpose |
 |------|---------|
 | [app/modules/smart-operations/page.tsx](app/modules/smart-operations/page.tsx) | Existing module page (reference implementation) |
-| [app/layout.tsx](app/layout.tsx) | Root layout — header, global CTA, footer |
+| [app/layout.tsx](app/layout.tsx) | Root layout, header, global CTA, footer |
 | [app/globals.css](app/globals.css) | Color system, shadows, animations |
 | [components/ui/button.tsx](components/ui/button.tsx) | Button variants |
 | [components/call-to-action.tsx](components/call-to-action.tsx) | Global CTA component |

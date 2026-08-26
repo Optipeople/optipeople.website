@@ -1,6 +1,6 @@
 # Contact Page Design Guide
 
-This document defines the design patterns for the OptiPeople contact page — the page where visitors reach out, request a demo, or start a conversation.
+This document defines the design patterns for the OptiPeople contact page, the page where visitors reach out, request a demo, or start a conversation.
 
 Inherits the [design philosophy](homepage.md#design-philosophy) from the homepage guide.
 
@@ -8,9 +8,9 @@ Inherits the [design philosophy](homepage.md#design-philosophy) from the homepag
 
 ## Page Archetype: Conversion Endpoint
 
-**Purpose:** Make it effortless to get in touch. Remove every possible barrier between intent and action. The visitor has already decided they're interested — don't make them work for it.
+**Purpose:** Make it effortless to get in touch. Remove every possible barrier between intent and action. The visitor has already decided they're interested, don't make them work for it.
 
-**Tone:** Welcoming, low-pressure, direct. Not a form wall. Scandinavian warmth — functional, approachable, no friction.
+**Tone:** Welcoming, low-pressure, direct. Not a form wall. Scandinavian warmth, functional, approachable, no friction.
 
 ---
 
@@ -38,7 +38,7 @@ That's it. Two sections. The contact page is the shortest page on the site. Ever
 
 ### Container
 
-- Width: `max-w-5xl` — accommodates the two-column form layout
+- Width: `max-w-5xl`, accommodates the two-column form layout
 - Padding: `px-6 lg:px-8`
 
 ### Section Spacing
@@ -59,7 +59,7 @@ Two columns: context on the left, form on the right.
 ```tsx
 <section className="pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8">
   <div className="mx-auto max-w-5xl grid lg:grid-cols-2 gap-12 lg:gap-16">
-    {/* Left — Context */}
+    {/* Left, Context */}
     <div>
       <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
         Contact
@@ -72,7 +72,7 @@ Two columns: context on the left, form on the right.
       </p>
     </div>
 
-    {/* Right — Form */}
+    {/* Right, Form */}
     <div>
       <form className="space-y-6">
         {/* Form fields */}
@@ -84,9 +84,9 @@ Two columns: context on the left, form on the right.
 
 **Guidelines:**
 - Two-column on desktop (`lg:grid-cols-2`), stacked on mobile (text above, form below)
-- Left column: eyebrow + title + description — same typography as other page heroes
+- Left column: eyebrow + title + description, same typography as other page heroes
 - Right column: the form, vertically aligned with the title
-- No background color on the form — it sits directly on white. The grid gap provides separation.
+- No background color on the form, it sits directly on white. The grid gap provides separation.
 - `gap-12 lg:gap-16` between columns
 
 ### Form Fields
@@ -148,11 +148,11 @@ Two columns: context on the left, form on the right.
 
 **Field styling rules:**
 - Height: `h-11` for inputs (matches button `size="default"`)
-- Border: `border border-input` — uses the semantic border token
-- Radius: `rounded-lg` — consistent with the card/UI component scale
-- Focus: `focus:ring-2 focus:ring-ring/50 focus:border-ring` — green focus ring matching the design system
+- Border: `border border-input`, uses the semantic border token
+- Radius: `rounded-lg`, consistent with the card/UI component scale
+- Focus: `focus:ring-2 focus:ring-ring/50 focus:border-ring`, green focus ring matching the design system
 - Placeholder: `placeholder:text-muted-foreground`
-- Labels: `text-sm font-medium` — always above the field, never floating or inline
+- Labels: `text-sm font-medium`, always above the field, never floating or inline
 - Spacing: `space-y-6` between fields, `space-y-2` between label and input
 
 **Required fields only:**
@@ -166,14 +166,14 @@ Two columns: context on the left, form on the right.
 - Company name field (they'll mention it in the message)
 - Phone number field (they'll share it if relevant)
 - Dropdown selects ("What are you interested in?")
-- Checkboxes ("I agree to the privacy policy" — handle via submission text)
+- Checkboxes ("I agree to the privacy policy", handle via submission text)
 - CAPTCHA (use honeypot or server-side protection instead)
 
 **Submit button:**
 - `size="lg"` to be prominent
-- `w-full sm:w-auto` — full width on mobile, natural width on desktop
-- Label: "Send message" — clear, direct, lowercase
-- No arrow icon — the action is final, not navigational
+- `w-full sm:w-auto`, full width on mobile, natural width on desktop
+- Label: "Send message", clear, direct, lowercase
+- No arrow icon, the action is final, not navigational
 
 ### 2. Alternative Contact
 
@@ -210,12 +210,12 @@ Below the form, provide direct contact methods.
 ```
 
 **Guidelines:**
-- Separated from the form by `border-t border-border/50` — not a background change, just a quiet line
+- Separated from the form by `border-t border-border/50`, not a background change, just a quiet line
 - 3-column grid: email, phone, office
-- Labels: `text-sm font-medium` — same as form labels
-- Contact info: `text-base text-muted-foreground` — clickable where appropriate (`mailto:`, `tel:`)
+- Labels: `text-sm font-medium`, same as form labels
+- Contact info: `text-base text-muted-foreground`, clickable where appropriate (`mailto:`, `tel:`)
 - Hover: `hover:text-foreground transition-colors`
-- No icons — the labels are clear enough
+- No icons, the labels are clear enough
 
 ---
 
@@ -245,7 +245,7 @@ Display errors inline below the relevant field:
 <p className="text-sm text-destructive mt-1">Please enter a valid email address</p>
 ```
 
-- Use `text-destructive` — maps to the design system's red
+- Use `text-destructive`, maps to the design system's red
 - Position directly below the field (`mt-1`)
 - Be specific: "Please enter a valid email address" not "Invalid input"
 
@@ -259,7 +259,7 @@ Disable the submit button and show a loading state:
 </Button>
 ```
 
-- Disabled button with text change — no spinners needed for a simple form
+- Disabled button with text change, no spinners needed for a simple form
 
 ---
 
@@ -331,7 +331,7 @@ export default function ContactPage() {
 - [ ] Email and phone are clickable (`mailto:`, `tel:`)
 - [ ] No CAPTCHA visible (use honeypot if needed)
 - [ ] No dropdown selects, checkboxes, or unnecessary fields
-- [ ] The global `CallToAction` from layout.tsx still appears — that's fine, it reinforces
+- [ ] The global `CallToAction` from layout.tsx still appears, that's fine, it reinforces
 
 ---
 

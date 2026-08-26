@@ -7,7 +7,7 @@ image: "/images/blog/fra-data-til-effektivitet.jpg"
 customer: "Anonymised case"
 metric: "21→41%"
 metricLabel: "OEE, nearly doubled"
-outcome: "Analysing OEE by series size justified a second machine — and lifted OEE from 21% to 41%."
+outcome: "Analysing OEE by series size justified a second machine, and lifted OEE from 21% to 41%."
 ---
 
 ## At a Glance

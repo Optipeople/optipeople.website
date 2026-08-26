@@ -1,6 +1,6 @@
 # Blog Listing Page Design Guide
 
-This document defines the design patterns for the OptiPeople blog listing page — the index page where visitors browse all published posts.
+This document defines the design patterns for the OptiPeople blog listing page, the index page where visitors browse all published posts.
 
 Inherits the [design philosophy](homepage.md#design-philosophy) from the homepage guide.
 
@@ -8,7 +8,7 @@ Inherits the [design philosophy](homepage.md#design-philosophy) from the homepag
 
 ## Page Archetype: Content Index
 
-**Purpose:** Let visitors scan and find relevant case studies, articles, and stories quickly. The page is a browsing surface — minimal friction, maximum scannability.
+**Purpose:** Let visitors scan and find relevant case studies, articles, and stories quickly. The page is a browsing surface, minimal friction, maximum scannability.
 
 **Tone:** Clean editorial. The content (images and titles) does the talking. The page frame stays invisible.
 
@@ -18,7 +18,7 @@ Inherits the [design philosophy](homepage.md#design-philosophy) from the homepag
 
 ### Container
 
-- Width: `max-w-6xl` — wider than content pages to accommodate the grid
+- Width: `max-w-6xl`, wider than content pages to accommodate the grid
 - Padding: `px-6 lg:px-8`
 - Centering: `mx-auto`
 
@@ -59,10 +59,10 @@ The page has three distinct zones:
 ```
 
 **Guidelines:**
-- Eyebrow: `text-sm font-medium tracking-wide uppercase text-muted-foreground` — categorizes the page
-- Title: `text-4xl lg:text-5xl font-light tracking-tight` — consistent with homepage section headings
+- Eyebrow: `text-sm font-medium tracking-wide uppercase text-muted-foreground`, categorizes the page
+- Title: `text-4xl lg:text-5xl font-light tracking-tight`, consistent with homepage section headings
 - `mb-16` separates header from content grid
-- No description paragraph — the title is self-explanatory, keep it minimal
+- No description paragraph, the title is self-explanatory, keep it minimal
 
 ### Featured Post
 
@@ -91,9 +91,9 @@ The first post on each page gets a prominent 2-column layout:
 - Image on left, text on right (`lg:grid-cols-2`)
 - Image aspect: `aspect-[4/3]` mobile, `lg:aspect-[16/10]` desktop
 - Image: `rounded-2xl` with standard card shadow and border
-- Title uses `font-medium` (exception to the font-light heading rule — post titles need weight for scannability)
-- "Read case study" link with arrow that translates on hover — subtle call to action
-- Entire card is a link (`group block`) — the hover state is on the group
+- Title uses `font-medium` (exception to the font-light heading rule, post titles need weight for scannability)
+- "Read case study" link with arrow that translates on hover, subtle call to action
+- Entire card is a link (`group block`), the hover state is on the group
 
 ### Secondary Posts Grid
 
@@ -123,7 +123,7 @@ All posts after the featured one, separated by a subtle divider:
 - Separated from featured post by `border-t border-border/50 pt-8`
 - Image: `aspect-[4/3]`, `rounded-xl` (slightly smaller radius than featured)
 - Title: `text-lg font-medium`, `line-clamp-2` to prevent long titles from breaking layout
-- No description text, no date — just image + title. Nordic simplicity.
+- No description text, no date, just image + title. Nordic simplicity.
 - Same hover pattern: image scales, title fades
 
 ### Image Treatment
@@ -204,7 +204,7 @@ Posts are sorted by date descending (newest first).
 - [ ] Hover effects work on both image (scale) and title (opacity)
 - [ ] Pagination only appears when needed
 - [ ] `aria-label` on pagination nav
-- [ ] No unnecessary metadata on cards — image + title only
+- [ ] No unnecessary metadata on cards, image + title only
 
 ---
 

@@ -41,7 +41,7 @@ const services: LocalizedPage<StandardPage>[] = [
         eyebrow: "Smart Operations",
         heroTitle: "See Your Factory in Real Time",
         heroBody:
-          "Connect machines, capture production data automatically, and give your team the visibility they need to make better decisions — faster.",
+          "Connect machines, capture production data automatically, and give your team the visibility they need to make better decisions, faster.",
         primaryLabel: "Request a Demo",
         introTitle: "Your production data shouldn't live in spreadsheets",
         introBody:
@@ -76,7 +76,7 @@ const services: LocalizedPage<StandardPage>[] = [
             icon: Radio,
             title: "Machine Connectivity",
             description:
-              "Connect any machine — new or legacy — through OPC-UA, Modbus, IO-Link, or simple sensor kits. No rip-and-replace.",
+              "Connect any machine, new or legacy, through OPC-UA, Modbus, IO-Link, or simple sensor kits. No rip-and-replace.",
           },
           {
             icon: Bell,
@@ -87,7 +87,7 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One dashboard for your entire operation",
         visualBody:
-          "From individual machines to plant-wide KPIs — drill into the data that matters, at any level.",
+          "From individual machines to plant-wide KPIs, drill into the data that matters, at any level.",
         visualImage: "/images/dashboard2.png",
         visualAlt: "Smart operations dashboard",
         metricsTitle: "Typical Results",
@@ -101,12 +101,12 @@ const services: LocalizedPage<StandardPage>[] = [
           {
             title: "Connect",
             description:
-              "We integrate with your existing machines and PLCs — no production disruption, no hardware overhaul.",
+              "We integrate with your existing machines and PLCs, no production disruption, no hardware overhaul.",
           },
           {
             title: "Visualize",
             description:
-              "Your team gets a live dashboard from day one. Real-time OEE, stop causes, and shift performance — all in one place.",
+              "Your team gets a live dashboard from day one. Real-time OEE, stop causes, and shift performance all in one place.",
           },
           {
             title: "Improve",
@@ -191,18 +191,18 @@ const services: LocalizedPage<StandardPage>[] = [
         eyebrow: "Automation",
         heroTitle: "Automation and Control, Built for Production",
         heroBody:
-          "We design, program, and commission automation systems — from PLC logic and machine control to full production line integration.",
+          "We design, program, and commission automation systems, from PLC logic and machine control to full production line integration.",
         primaryLabel: "Discuss Your Project",
-        introTitle: "Machines should work for you — not against you",
+        introTitle: "Machines should work for you, not against you",
         introBody:
-          "Whether you're building a new machine, upgrading an aging control system, or integrating equipment into a production line — getting automation right is critical. Poor control logic, unreliable wiring, or disconnected systems cost you uptime, quality, and throughput. We bring the engineering discipline to get it right the first time.",
+          "Whether you're building a new machine, upgrading an aging control system, or integrating equipment into a production line, getting automation right is critical. Poor control logic, unreliable wiring, or disconnected systems cost you uptime, quality, and throughput. We bring the engineering discipline to get it right the first time.",
         capabilitiesTitle: "Full-scope automation engineering",
         features: [
           {
             icon: Cpu,
             title: "PLC Programming",
             description:
-              "Custom PLC development for Siemens, Allen-Bradley, Beckhoff, and more. From new builds to retrofits — we write the logic that keeps your machines running.",
+              "Custom PLC development for Siemens, Allen-Bradley, Beckhoff, and more. From new builds to retrofits. We write the logic that keeps your machines running.",
           },
           {
             icon: Cog,
@@ -220,7 +220,7 @@ const services: LocalizedPage<StandardPage>[] = [
             icon: Cable,
             title: "Electrical Design & Panel Build",
             description:
-              "Complete electrical schematics, control panel design, and build — fully documented and compliant with relevant standards.",
+              "Complete electrical schematics, control panel design, and build fully documented and compliant with relevant standards.",
           },
           {
             icon: ScanLine,
@@ -237,7 +237,7 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "From concept to commissioned system",
         visualBody:
-          "We handle the full lifecycle — electrical design, PLC programming, panel builds, HMI screens, and on-site commissioning.",
+          "We handle the full lifecycle, electrical design, PLC programming, panel builds, HMI screens, and on-site commissioning.",
         metricsTitle: "Typical Results",
         metrics: [
           { metric: "30%", label: "Faster cycle times after automation upgrades" },
@@ -249,12 +249,12 @@ const services: LocalizedPage<StandardPage>[] = [
           {
             title: "Scope",
             description:
-              "We assess your current setup, define requirements, and design an automation solution that fits your process — not the other way around.",
+              "We assess your current setup, define requirements, and design an automation solution that fits your process, not the other way around.",
           },
           {
             title: "Build",
             description:
-              "PLC programming, electrical design, panel build, and HMI development — all handled in-house with full documentation and factory acceptance testing.",
+              "PLC programming, electrical design, panel build, and HMI development all handled in-house with full documentation and factory acceptance testing.",
           },
           {
             title: "Commission",
@@ -339,16 +339,16 @@ const services: LocalizedPage<StandardPage>[] = [
         heroBody:
           "Hire us to build Power BI dashboards, automate your reporting, and turn scattered data into clear, actionable insights.",
         primaryLabel: "Get in Touch",
-        introTitle: "Data is everywhere — insight is not",
+        introTitle: "Data is everywhere. Insight is not",
         introBody:
-          "Your organization generates more data than ever, but it sits locked in ERP systems, spreadsheets, and disconnected tools. Getting a clear answer still means hours of manual work. Our BI consultancy brings it all together — so your team spends time acting on data, not hunting for it.",
+          "Your organization generates more data than ever, but it sits locked in ERP systems, spreadsheets, and disconnected tools. Getting a clear answer still means hours of manual work. Our BI consultancy brings it all together, so your team spends time acting on data, not hunting for it.",
         capabilitiesTitle: "What we deliver",
         features: [
           {
             icon: BarChart3,
             title: "Power BI Dashboards",
             description:
-              "Custom-built Power BI reports tailored to your business. From executive overviews to operational deep-dives — designed to answer the questions that matter.",
+              "Custom-built Power BI reports tailored to your business. From executive overviews to operational deep-dives, designed to answer the questions that matter.",
           },
           {
             icon: Database,
@@ -378,7 +378,7 @@ const services: LocalizedPage<StandardPage>[] = [
             icon: Users,
             title: "Training and Enablement",
             description:
-              "We train your team to use, maintain, and extend the reports we build. Self-sufficiency is the goal — not dependency.",
+              "We train your team to use, maintain, and extend the reports we build. Self-sufficiency is the goal, not dependency.",
           },
         ],
         visualTitle: "From raw data to boardroom-ready reports",
@@ -482,24 +482,24 @@ const services: LocalizedPage<StandardPage>[] = [
         eyebrow: "AI Agentic Solutions",
         heroTitle: "AI Agents That Run Your Operations",
         heroBody:
-          "We build autonomous AI agents that automate processes, generate reports, optimize planning, and deliver business intelligence — so your team can focus on what matters.",
+          "We build autonomous AI agents that automate processes, generate reports, optimize planning, and deliver business intelligence, so your team can focus on what matters.",
         primaryLabel: "Talk to Us",
         introTitle: "Your team shouldn't be the bottleneck",
         introBody:
-          "Production operations generate a constant stream of tasks that demand attention — pulling reports, updating schedules, chasing data across systems, flagging quality issues. These tasks are critical, but they don't need a human in the loop. AI agents handle them autonomously, accurately, and around the clock — freeing your people to focus on decisions that actually require judgment.",
+          "Production operations generate a constant stream of tasks that demand attention, pulling reports, updating schedules, chasing data across systems, flagging quality issues. These tasks are critical, but they don't need a human in the loop. AI agents handle them autonomously, accurately, and around the clock, freeing your people to focus on decisions that actually require judgment.",
         capabilitiesTitle: "Agents built for production operations",
         features: [
           {
             icon: Bot,
             title: "Process Automation Agents",
             description:
-              "AI agents that handle repetitive operational tasks end-to-end — from data entry and order processing to inventory updates — without human intervention.",
+              "AI agents that handle repetitive operational tasks end-to-end, from data entry and order processing to inventory updates, without human intervention.",
           },
           {
             icon: FileBarChart,
             title: "Automated Reporting",
             description:
-              "Agents that collect data from multiple sources, generate production reports, shift summaries, and KPI dashboards — delivered on schedule, every time.",
+              "Agents that collect data from multiple sources, generate production reports, shift summaries, and KPI dashboards delivered on schedule, every time.",
           },
           {
             icon: BrainCircuit,
@@ -517,18 +517,18 @@ const services: LocalizedPage<StandardPage>[] = [
             icon: Workflow,
             title: "Workflow Orchestration",
             description:
-              "Connect agents across systems — ERP, MES, SCADA, and more. Build multi-step workflows where agents hand off tasks to each other autonomously.",
+              "Connect agents across systems, ERP, MES, SCADA, and more. Build multi-step workflows where agents hand off tasks to each other autonomously.",
           },
           {
             icon: ShieldCheck,
             title: "Quality & Compliance Agents",
             description:
-              "Automate quality checks, flag deviations before they escalate, and keep audit trails complete — reducing risk and rework.",
+              "Automate quality checks, flag deviations before they escalate, and keep audit trails complete, reducing risk and rework.",
           },
         ],
         visualTitle: "Agents that work across your entire stack",
         visualBody:
-          "From ERP and MES to email and spreadsheets — AI agents connect to your systems and act on data in real time.",
+          "From ERP and MES to email and spreadsheets, AI agents connect to your systems and act on data in real time.",
         visualImage: "/images/report1.png",
         visualAlt: "AI-analyse på produktionsrapport",
         metricsTitle: "Typical Results",

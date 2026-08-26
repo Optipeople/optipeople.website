@@ -7,7 +7,7 @@ interface RotatingWordProps {
   words: string[]
   /** How long each word stays on screen. */
   intervalMs?: number
-  /** Extra delay before the first swap — lets multiple instances rotate out of sync. */
+  /** Extra delay before the first swap, lets multiple instances rotate out of sync. */
   startDelayMs?: number
   className?: string
 }

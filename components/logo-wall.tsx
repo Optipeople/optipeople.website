@@ -30,7 +30,7 @@ export function LogoWall({
           </h2>
         )}
 
-        {/* Logo grid — two rows of 7 on desktop. First/last in each row align to
+        {/* Logo grid, two rows of 7 on desktop. First/last in each row align to
             the container edges so the wall lines up with content above and below. */}
         <div
           className={cn(

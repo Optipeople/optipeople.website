@@ -19,7 +19,7 @@ import type { AiCapabilitySlug } from "@/lib/ai-stack"
 
 /**
  * Lightweight, code-built UI mockups for each AI capability.
- * Purely decorative — they illustrate the product without needing screenshots.
+ * Purely decorative, they illustrate the product without needing screenshots.
  * Used both inside the homepage slider cards and as the hero visual on the
  * `/ai/[slug]` landing pages.
  */

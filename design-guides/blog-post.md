@@ -1,6 +1,6 @@
 # Blog Post Design Guide
 
-This document defines the design patterns for individual OptiPeople blog post pages — the detail view for case studies, articles, and stories.
+This document defines the design patterns for individual OptiPeople blog post pages, the detail view for case studies, articles, and stories.
 
 Inherits the [design philosophy](homepage.md#design-philosophy) from the homepage guide.
 
@@ -8,7 +8,7 @@ Inherits the [design philosophy](homepage.md#design-philosophy) from the homepag
 
 ## Page Archetype: Long-Form Content
 
-**Purpose:** Let the reader focus on the content. The page frame disappears — typography, spacing, and a quiet sidebar carry the experience.
+**Purpose:** Let the reader focus on the content. The page frame disappears, typography, spacing, and a quiet sidebar carry the experience.
 
 **Tone:** Editorial, readable, unhurried. Like a well-set book page with a clean margin.
 
@@ -29,13 +29,13 @@ lg:grid-cols-[200px_1fr]  gap-12
 | Left (200px) | Table of Contents | `sticky top-24`, hidden on mobile |
 | Right (1fr) | Post content | Full article flow |
 
-On mobile, the layout collapses to single column — the table of contents is hidden entirely (`hidden lg:block`).
+On mobile, the layout collapses to single column, the table of contents is hidden entirely (`hidden lg:block`).
 
 ### Container
 
-- Width: `max-w-6xl` — accommodates the sidebar + wide content area
+- Width: `max-w-6xl`, accommodates the sidebar + wide content area
 - Padding: `px-6 lg:px-8`
-- Section padding: `py-12 lg:py-16` — lighter than landing pages, appropriate for reading
+- Section padding: `py-12 lg:py-16`, lighter than landing pages, appropriate for reading
 
 ---
 
@@ -61,7 +61,7 @@ On mobile, the layout collapses to single column — the table of contents is hi
 ```
 
 **Guidelines:**
-- `variant="ghost"` — minimal, doesn't compete with content
+- `variant="ghost"`, minimal, doesn't compete with content
 - Positioned above the grid, before the two-column layout begins
 - `mb-8` separates it from the article
 
@@ -88,11 +88,11 @@ On mobile, the layout collapses to single column — the table of contents is hi
 ```
 
 **Guidelines:**
-- Only H2 headings are extracted — keeps the TOC concise
-- `sticky top-24` — sticks below the header (header is ~h-16 + accent stripes + buffer)
+- Only H2 headings are extracted, keeps the TOC concise
+- `sticky top-24`, sticks below the header (header is ~h-16 + accent stripes + buffer)
 - Hidden on mobile (`hidden lg:block` on the `<aside>`)
 - Heading slugs are auto-generated: lowercase, non-alphanumeric replaced with hyphens
-- Links use `text-muted-foreground hover:text-foreground` — quiet until hovered
+- Links use `text-muted-foreground hover:text-foreground`, quiet until hovered
 
 ### Post Header
 
@@ -109,8 +109,8 @@ On mobile, the layout collapses to single column — the table of contents is hi
 
 **Guidelines:**
 - Meta line first: date + author, separated by middot, `text-sm text-muted-foreground`
-- Title: `text-4xl font-light` — consistent with the site's heading style
-- No eyebrow label (unlike landing pages) — the back link provides context
+- Title: `text-4xl font-light`, consistent with the site's heading style
+- No eyebrow label (unlike landing pages), the back link provides context
 - `mb-8` before the hero image
 
 ### Hero Image
@@ -129,11 +129,11 @@ On mobile, the layout collapses to single column — the table of contents is hi
 ```
 
 **Guidelines:**
-- `rounded-lg` — slightly smaller radius than landing page visuals, fits the editorial context
+- `rounded-lg`, slightly smaller radius than landing page visuals, fits the editorial context
 - Standard card shadow and border
 - `max-h-[600px]` prevents overly tall images from dominating
-- `priority` loading — this is above the fold
-- Image is optional — not all posts need a hero image
+- `priority` loading, this is above the fold
+- Image is optional, not all posts need a hero image
 
 ---
 
@@ -189,12 +189,12 @@ h2: ({ children }) => {
 
 When writing blog posts in Markdown:
 
-- **H1** — Never use in post content. The post title is already an H1.
-- **H2** — Main sections. These appear in the table of contents.
-- **H3** — Subsections within an H2 block.
-- **Images** — Use absolute paths from `/public`: `/images/blog/filename.jpg`
-- **Tables** — Use standard GFM table syntax. They scroll horizontally on mobile.
-- **Code blocks** — Use fenced code blocks with language identifiers for syntax highlighting.
+- **H1**, Never use in post content. The post title is already an H1.
+- **H2**, Main sections. These appear in the table of contents.
+- **H3**, Subsections within an H2 block.
+- **Images**, Use absolute paths from `/public`: `/images/blog/filename.jpg`
+- **Tables**, Use standard GFM table syntax. They scroll horizontally on mobile.
+- **Code blocks**, Use fenced code blocks with language identifiers for syntax highlighting.
 
 ---
 
@@ -204,7 +204,7 @@ When writing blog posts in Markdown:
 |---------|--------|---------|
 | Layout | Single column | 200px sidebar + content |
 | Table of Contents | Hidden | Sticky sidebar |
-| Title | `text-4xl` | `text-4xl` (same — reading context) |
+| Title | `text-4xl` | `text-4xl` (same, reading context) |
 | Hero image | Full width | Full width within content column |
 | Prose | `prose-lg` | `prose-lg` (same) |
 

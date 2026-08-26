@@ -1,15 +1,53 @@
+import { moduleNavItems } from "@/content/modules-catalog"
+import { featureNavItems } from "@/content/pages/features"
+
 import type { Locale } from "./routing"
 
 // Structured navigation data (hrefs + titles). Kept as typed per-locale objects
 // rather than flat i18n messages because the shape (nested menus, links) matters.
-// Hrefs are written unprefixed — the next-intl <Link> localizes them per locale.
+// Hrefs are written unprefixed, the next-intl <Link> localizes them per locale.
+//
+// The Modules menu and the footer's module column are generated from
+// content/modules-catalog.ts, so the module vocabulary here can never drift
+// from the hero chips or the homepage carousel.
 
-export const navigationMenus = {
+export type NavItem = {
+  title: string
+  href: string
+  /** Optional second line, only rendered by the mega-menu layout. */
+  description?: string
+}
+
+export type NavMenu = {
+  title: string
+  items: NavItem[]
+  /**
+   * Panel layout. "list" (the default) is the narrow single-column dropdown;
+   * "mega" is a wide two-column panel that also renders item descriptions,
+   * used where the item count outgrows a comfortable list.
+   */
+  layout?: "list" | "mega"
+  /** Optional full-width link pinned to the bottom of a mega panel. */
+  overview?: NavItem
+  /**
+   * A second, denser group inside a mega panel, for pages that sit one level
+   * below the menu's own items, rendered under a heading beneath the main
+   * grid, titles only.
+   */
+  secondary?: {
+    title: string
+    items: NavItem[]
+    /** Link to the group's index, shown beside the heading. */
+    overview?: NavItem
+  }
+}
+
+export const navigationMenus: Record<Locale, NavMenu[]> = {
   en: [
     {
       title: "AI",
       items: [
-        { title: "Chat — Opti Assist", href: "/ai/chat" },
+        { title: "Opti Assist Chat", href: "/ai/chat" },
         { title: "Workflows", href: "/ai/workflows" },
         { title: "Agents", href: "/ai/agents" },
         { title: "Integrations", href: "/ai/integrations" },
@@ -18,19 +56,19 @@ export const navigationMenus = {
     },
     {
       title: "Modules",
-      items: [
-        { title: "Production", href: "/modules/production" },
-        { title: "Quality", href: "/modules/quality" },
-        { title: "Maintenance", href: "/modules/maintenance" },
-        { title: "Energy", href: "/modules/energy" },
-        { title: "Analysis", href: "/modules/analysis" },
-        { title: "IoT", href: "/modules/iot" },
-        { title: "ERP Shopfloor", href: "/modules/erp-shopfloor" },
-        { title: "MES", href: "/modules/mes" },
-      ],
+      layout: "mega",
+      items: moduleNavItems("en"),
+      // The capability pages live here: each one is a deep-dive on part of a
+      // module, so they belong under Modules rather than in a menu of their own.
+      secondary: {
+        title: "Features",
+        items: featureNavItems("en"),
+        overview: { title: "All features", href: "/features" },
+      },
+      overview: { title: "See the whole platform", href: "/platform" },
     },
     {
-      title: "Services",
+      title: "Services & Advisory",
       items: [
         { title: "Smart Operations", href: "/services/smart-operations" },
         { title: "AI Agentic Solutions", href: "/services/ai-solutions" },
@@ -86,7 +124,7 @@ export const navigationMenus = {
     {
       title: "AI",
       items: [
-        { title: "Chat — Opti Assist", href: "/ai/chat" },
+        { title: "Opti Assist Chat", href: "/ai/chat" },
         { title: "Workflows", href: "/ai/workflows" },
         { title: "Agenter", href: "/ai/agents" },
         { title: "Integrationer", href: "/ai/integrations" },
@@ -95,19 +133,17 @@ export const navigationMenus = {
     },
     {
       title: "Moduler",
-      items: [
-        { title: "Produktion", href: "/modules/production" },
-        { title: "Kvalitet", href: "/modules/quality" },
-        { title: "Vedligehold", href: "/modules/maintenance" },
-        { title: "Energi", href: "/modules/energy" },
-        { title: "Analyse", href: "/modules/analysis" },
-        { title: "IoT", href: "/modules/iot" },
-        { title: "ERP Shopfloor", href: "/modules/erp-shopfloor" },
-        { title: "MES", href: "/modules/mes" },
-      ],
+      layout: "mega",
+      items: moduleNavItems("da"),
+      secondary: {
+        title: "Funktioner",
+        items: featureNavItems("da"),
+        overview: { title: "Alle funktioner", href: "/features" },
+      },
+      overview: { title: "Se hele platformen", href: "/platform" },
     },
     {
-      title: "Services",
+      title: "Services & rådgivning",
       items: [
         { title: "Smart Operations", href: "/services/smart-operations" },
         { title: "AI-agentløsninger", href: "/services/ai-solutions" },
@@ -159,15 +195,22 @@ export const navigationMenus = {
       ],
     },
   ],
-} as const
+}
 
 // Flat top-level nav links rendered alongside the dropdown menus.
-export const navigationLinks = {
+export const navigationLinks: Record<Locale, NavItem[]> = {
   en: [{ title: "Videos", href: "/videos" }],
   da: [{ title: "Videoer", href: "/videos" }],
-} as const
+}
 
-export const footerLinks = {
+export type FooterColumns = {
+  company: NavItem[]
+  modules: NavItem[]
+  services: NavItem[]
+  legal: NavItem[]
+}
+
+export const footerLinks: Record<Locale, FooterColumns> = {
   en: {
     company: [
       { title: "About", href: "/about" },
@@ -176,11 +219,7 @@ export const footerLinks = {
     ],
     modules: [
       { title: "Platform overview", href: "/platform" },
-      { title: "Production", href: "/modules/production" },
-      { title: "Quality", href: "/modules/quality" },
-      { title: "Maintenance", href: "/modules/maintenance" },
-      { title: "Energy", href: "/modules/energy" },
-      { title: "Analysis", href: "/modules/analysis" },
+      ...moduleNavItems("en"),
     ],
     services: [
       { title: "Smart Operations", href: "/services/smart-operations" },
@@ -204,11 +243,7 @@ export const footerLinks = {
     ],
     modules: [
       { title: "Platformoverblik", href: "/platform" },
-      { title: "Produktion", href: "/modules/production" },
-      { title: "Kvalitet", href: "/modules/quality" },
-      { title: "Vedligehold", href: "/modules/maintenance" },
-      { title: "Energi", href: "/modules/energy" },
-      { title: "Analyse", href: "/modules/analysis" },
+      ...moduleNavItems("da"),
     ],
     services: [
       { title: "Smart Operations", href: "/services/smart-operations" },
@@ -224,6 +259,6 @@ export const footerLinks = {
       { title: "Vilkår", href: "/terms" },
     ],
   },
-} as const
+}
 
 export type NavLocale = Locale

@@ -28,7 +28,7 @@ const copy: Record<
     badge: "Newsletter",
     title: "Practical notes for better factory operations",
     intro:
-      "Short updates for people working with production, maintenance, reporting, and industrial data. No noise — just useful ideas from the field.",
+      "Short updates for people working with production, maintenance, reporting, and industrial data. No noise, just useful ideas from the field.",
     perks: [
       "Monthly, never spammy",
       "Written from the factory floor",
@@ -49,7 +49,7 @@ const copy: Record<
       {
         title: "Connected factories",
         description:
-          "Machine data, integrations, and dashboards — the systems that make operations easier to run.",
+          "Machine data, integrations, and dashboards: the systems that make operations easier to run.",
       },
       {
         title: "Maintenance & uptime",
@@ -62,7 +62,7 @@ const copy: Record<
     badge: "Nyhedsbrev",
     title: "Få praktiske ideer til bedre produktion",
     intro:
-      "Korte opdateringer om produktionsdata, OEE, vedligehold, AI og digital drift. Ingen støj — kun brugbare ideer fra gulvet.",
+      "Korte opdateringer om produktionsdata, OEE, vedligehold, AI og digital drift. Ingen støj, kun brugbare ideer fra gulvet.",
     perks: [
       "Månedligt, aldrig spam",
       "Skrevet fra fabriksgulvet",
@@ -83,7 +83,7 @@ const copy: Record<
       {
         title: "Forbundne fabrikker",
         description:
-          "Maskindata, integrationer og dashboards — systemerne, der gør driften lettere at styre.",
+          "Maskindata, integrationer og dashboards: systemerne, der gør driften lettere at styre.",
       },
       {
         title: "Vedligehold & oppetid",
@@ -147,7 +147,7 @@ export default async function NewsletterPage({
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[720px] bg-[radial-gradient(75%_55%_at_50%_-8%,var(--green-light1)_0%,transparent_62%)] opacity-60"
       />
 
-      {/* Hero — copy alongside the signup form */}
+      {/* Hero, copy alongside the signup form */}
       <section className="px-[var(--edge)] pt-20 pb-16 sm:pt-28 lg:pb-24">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="max-w-xl">
@@ -185,7 +185,7 @@ export default async function NewsletterPage({
         </div>
       </section>
 
-      {/* Social proof — same logo wall as the homepage */}
+      {/* Social proof, same logo wall as the homepage */}
       <section className="px-[var(--edge)] pt-8 lg:pt-12">
         <p className="text-center text-sm font-medium uppercase tracking-wide text-muted-foreground">
           {t.logosTitle}
@@ -193,7 +193,7 @@ export default async function NewsletterPage({
       </section>
       <LogoWall logos={customerLogos} className="pt-10 pb-16 lg:pt-12 lg:pb-24" />
 
-      {/* What to expect — bento-style topic cards */}
+      {/* What to expect, bento-style topic cards */}
       <section className="px-[var(--edge)] py-12 lg:py-20">
         <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
           {t.expectEyebrow}

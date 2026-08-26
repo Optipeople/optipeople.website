@@ -1,7 +1,7 @@
 import type { LogoItem } from "@/components/logo-wall"
 
 /**
- * Shared customer logo wall — used on the homepage and the newsletter page so
+ * Shared customer logo wall, used on the homepage and the newsletter page so
  * the social proof stays in sync across the site.
  */
 export const customerLogos: LogoItem[] = [

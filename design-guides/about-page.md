@@ -1,6 +1,6 @@
 # About Page Design Guide
 
-This document defines the design patterns for the OptiPeople about page — the page that tells visitors who the company is, what it stands for, and why it exists.
+This document defines the design patterns for the OptiPeople about page, the page that tells visitors who the company is, what it stands for, and why it exists.
 
 Inherits the [design philosophy](homepage.md#design-philosophy) from the homepage guide.
 
@@ -10,16 +10,16 @@ Inherits the [design philosophy](homepage.md#design-philosophy) from the homepag
 
 **Purpose:** Build trust and credibility. Answer "Who are these people?" for visitors who are evaluating whether to work with OptiPeople.
 
-**Tone:** Honest, grounded, human. Less salesy than the homepage — more substance, less pitch. The Scandinavian approach: let quality speak, don't oversell.
+**Tone:** Honest, grounded, human. Less salesy than the homepage, more substance, less pitch. The Scandinavian approach: let quality speak, don't oversell.
 
 ---
 
 ## Design Principles (About-Specific)
 
 - **People over product.** This is the one page where humans come first. Team photos, founder perspective, company values.
-- **Earned confidence.** Show expertise through track record, not adjectives. Numbers, years, industries — not "world-class" or "cutting-edge."
+- **Earned confidence.** Show expertise through track record, not adjectives. Numbers, years, industries, not "world-class" or "cutting-edge."
 - **Readable, not scannable.** Unlike landing pages, visitors here are willing to read. Longer text blocks are fine when the content earns it.
-- **No hard sell.** The CTA at the bottom is soft — "Let's talk" not "Request a demo." The global `CallToAction` from `layout.tsx` handles conversion.
+- **No hard sell.** The CTA at the bottom is soft, "Let's talk" not "Request a demo." The global `CallToAction` from `layout.tsx` handles conversion.
 
 ---
 
@@ -41,7 +41,7 @@ Inherits the [design philosophy](homepage.md#design-philosophy) from the homepag
 
 ### Container
 
-- Primary content: `max-w-4xl` — reading-focused, same as blog posts
+- Primary content: `max-w-4xl`, reading-focused, same as blog posts
 - Wider sections (team grid, metrics): `max-w-5xl`
 - Padding: `px-6 lg:px-8`
 
@@ -52,7 +52,7 @@ Hero:     pt-16 sm:pt-24 pb-16 lg:pb-24
 Sections: py-16 lg:py-24
 ```
 
-Consistent with the module landing page rhythm. Not as dramatic as the homepage — this is a content page, not a conversion page.
+Consistent with the module landing page rhythm. Not as dramatic as the homepage, this is a content page, not a conversion page.
 
 ---
 
@@ -60,7 +60,7 @@ Consistent with the module landing page rhythm. Not as dramatic as the homepage 
 
 ### 1. Hero
 
-Left-aligned. Text-only. No image, no visual — confidence through restraint.
+Left-aligned. Text-only. No image, no visual, confidence through restraint.
 
 ```tsx
 <section className="pt-16 sm:pt-24 pb-16 lg:pb-24 px-6 lg:px-8">
@@ -80,11 +80,11 @@ Left-aligned. Text-only. No image, no visual — confidence through restraint.
 ```
 
 **Guidelines:**
-- Left-aligned (not centered) — editorial feel, different from landing pages
-- Eyebrow: `uppercase tracking-wide text-muted-foreground` — simple page identifier
-- Title: `text-4xl sm:text-5xl font-light tracking-tight` — standard heading scale
+- Left-aligned (not centered), editorial feel, different from landing pages
+- Eyebrow: `uppercase tracking-wide text-muted-foreground`, simple page identifier
+- Title: `text-4xl sm:text-5xl font-light tracking-tight`, standard heading scale
 - Description: 1–2 sentences, `text-lg text-muted-foreground`, `max-w-3xl` for comfortable line length
-- No buttons in the hero — this isn't a conversion section
+- No buttons in the hero, this isn't a conversion section
 
 ### 2. Mission / What We Do
 
@@ -127,9 +127,9 @@ Explain the company's area of expertise. Can use centered text or a two-column l
 
 ### 3. Values / Approach
 
-Show the principles behind the work. Use a simple list or a minimal grid — no heavy card components.
+Show the principles behind the work. Use a simple list or a minimal grid, no heavy card components.
 
-**Value list (preferred — Scandinavian minimal):**
+**Value list (preferred, Scandinavian minimal):**
 
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
@@ -153,9 +153,9 @@ Show the principles behind the work. Use a simple list or a minimal grid — no 
 
 **Guidelines:**
 - Title-description pairs in a simple definition-list style layout
-- `sm:grid-cols-[200px_1fr]` — title on left, description on right (stacked on mobile)
-- `space-y-12` between items — generous, lets each value breathe
-- No icons, no cards, no colored backgrounds — the content is the design
+- `sm:grid-cols-[200px_1fr]`, title on left, description on right (stacked on mobile)
+- `space-y-12` between items, generous, lets each value breathe
+- No icons, no cards, no colored backgrounds, the content is the design
 - 3–5 values. More than 5 means they're not actually core values.
 
 ### 4. Team
@@ -185,11 +185,11 @@ People with faces. Grid of team members.
 
 **Guidelines:**
 - Portrait photos: `aspect-[3/4]`, `rounded-2xl`
-- Grid: `sm:grid-cols-2 lg:grid-cols-3` — adapts gracefully
-- Name: `text-base font-medium` — no larger than that
+- Grid: `sm:grid-cols-2 lg:grid-cols-3`, adapts gracefully
+- Name: `text-base font-medium`, no larger than that
 - Role: `text-sm text-muted-foreground`
-- No hover effects on team photos — these are people, not products
-- No social links or bios in the grid — keep it clean. Add a detail page later if needed.
+- No hover effects on team photos, these are people, not products
+- No social links or bios in the grid, keep it clean. Add a detail page later if needed.
 - `bg-muted/30` background groups the team visually
 
 ### 5. Track Record
@@ -216,9 +216,9 @@ Hard numbers that prove credibility. Same pattern as the metrics row in the [mod
 ```
 
 **Guidelines:**
-- 3 metrics: years in business, customers served, installations running — whatever is real and impressive
+- 3 metrics: years in business, customers served, installations running, whatever is real and impressive
 - Large numbers in `text-primary` with `font-extralight`
-- No heading for this section — the numbers speak for themselves
+- No heading for this section, the numbers speak for themselves
 - Can be positioned before or after the team section depending on content flow
 
 ---
@@ -255,10 +255,10 @@ Track Record     → white
 - [ ] All headings use `font-light`
 - [ ] Team photos use portrait aspect ratio (`3/4`), `rounded-2xl`
 - [ ] Metrics use `text-primary font-extralight`
-- [ ] No heavy decoration — no cards, no icons, no gradients
+- [ ] No heavy decoration, no cards, no icons, no gradients
 - [ ] Section backgrounds alternate correctly
 - [ ] Content reads well at `max-w-4xl` line length
-- [ ] The global `CallToAction` from layout.tsx handles the conversion — no duplicate CTA
+- [ ] The global `CallToAction` from layout.tsx handles the conversion, no duplicate CTA
 
 ---
 

@@ -5,16 +5,16 @@
  * gets its own surface pair so pages built from the same template read as a
  * family without looking like one page with the words swapped:
  *
- *   `tint` — a near-white wash used for hero backdrops and content panels.
+ *   `tint`, a near-white wash used for hero backdrops and content panels.
  *            Dark ink stays readable on it.
- *   `deep` — the saturated brand surface used for full-bleed showcase and
+ *   `deep`, the saturated brand surface used for full-bleed showcase and
  *            closing bands. Light ink only.
  *
  * The hues are the same brand family used by the homepage bento and the AI
  * slider (see CASE_IMAGE_ACCENTS in app/[locale]/page.tsx and the `theme`
  * field in lib/ai-stack.ts), pulled up to panel-scale lightness.
  *
- * Slugs are namespaced by family because they collide across families —
+ * Slugs are namespaced by family because they collide across families,
  * "production" is a module, "production-efficiency" is a feature.
  */
 export type PageTheme = {
@@ -39,7 +39,7 @@ const SURFACES = {
 export type SurfaceName = keyof typeof SURFACES
 
 /**
- * Surface per page. Related pages across families share a hue on purpose —
+ * Surface per page. Related pages across families share a hue on purpose,
  * the Production module, the Production Efficiency feature, and the
  * Manufacturing solution all read green, so moving between them feels like
  * moving around one subject rather than between unrelated pages.

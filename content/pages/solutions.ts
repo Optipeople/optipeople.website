@@ -73,7 +73,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
             icon: Radio,
             title: "Machine Connectivity",
             description:
-              "Connect any machine — new or legacy — through OPC-UA, Modbus, IO-Link, or simple sensor kits. No rip-and-replace required.",
+              "Connect any machine, new or legacy, through OPC-UA, Modbus, IO-Link, or simple sensor kits. No rip-and-replace required.",
           },
           {
             icon: Bell,
@@ -84,7 +84,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One dashboard for your entire operation",
         visualBody:
-          "From individual machines to plant-wide KPIs — drill into the data that matters, at any level.",
+          "From individual machines to plant-wide KPIs, drill into the data that matters, at any level.",
         visualImage: "/images/dashboard2.png",
         visualAlt:
           "OptiPeople manufacturing dashboard showing production monitoring, OEE gauges, and machine status across multiple views",

@@ -88,8 +88,8 @@ export default async function PrivacyPage({ params }: Props) {
           <h2>Opbevaring</h2>
           <p>
             Vi opbevarer kun personoplysninger, så længe det er nødvendigt til
-            formålet — typisk under vores dialog med dig og et eventuelt efterfølgende
-            kundeforhold — hvorefter de slettes eller anonymiseres i
+            formålet, typisk under vores dialog med dig og et eventuelt efterfølgende
+            kundeforhold, hvorefter de slettes eller anonymiseres i
             overensstemmelse med gældende bogføringskrav.
           </p>
           <h2>Cookies</h2>
@@ -171,7 +171,7 @@ export default async function PrivacyPage({ params }: Props) {
           <h2>Retention</h2>
           <p>
             We keep personal data only as long as necessary for the purpose it
-            was collected — typically for the duration of our dialogue with you
+            was collected, typically for the duration of our dialogue with you
             and any resulting business relationship, after which it is deleted
             or anonymised in line with applicable bookkeeping requirements.
           </p>

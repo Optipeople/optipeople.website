@@ -1,4 +1,5 @@
 import { buildLookup, type FeaturePage, type LocalizedPage } from "@/content/shared/types"
+import type { Locale } from "@/i18n/routing"
 
 const features: LocalizedPage<FeaturePage>[] = [
   {
@@ -8,19 +9,19 @@ const features: LocalizedPage<FeaturePage>[] = [
       en: {
         metaTitle: "Production Efficiency | OptiPeople",
         metaDescription:
-          "Track OEE in real time, see where production time is lost, and understand performance across shifts, lines, and machines — based on real production data.",
-        parentLabel: "Production",
+          "Track OEE in real time, see where production time is lost, and understand performance across shifts, lines, and machines, based on real production data.",
+        parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Production Efficiency",
         heroTitle: "See Where Production Time Is Lost",
         heroBody:
-          "Track OEE live and understand performance across shifts, lines, and machines — based on real production data, not guesswork.",
+          "Track OEE live and understand performance across shifts, lines, and machines, based on real production data, not guesswork.",
         heroImage: "/images/report-mockup4.png",
         heroImageAlt:
           "Four OptiPeople dashboard views showing OEE tracking, production reports, and real-time monitoring",
         valueTitle: "Your production data should work as hard as your team",
         valueBody:
-          "Most factories still piece together performance from shift handover notes, spreadsheets, and end-of-day reports. By the time someone sees the numbers, the moment to act has passed. Production Efficiency gives you a live, accurate picture — so decisions happen while they still matter.",
+          "Most factories still piece together performance from shift handover notes, spreadsheets, and end-of-day reports. By the time someone sees the numbers, the moment to act has passed. Production Efficiency gives you a live, accurate picture, so decisions happen while they still matter.",
         capabilitiesTitle: "From raw signals to real understanding",
         capabilitiesBody:
           "Every machine tells a story. Production Efficiency translates it into numbers, timelines, and comparisons your team can act on.",
@@ -28,7 +29,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Live OEE in One View",
             description:
-              "Availability, performance, and quality — calculated automatically from machine signals. Your OEE score updates as production runs, with drill-down by machine, line, or area. No spreadsheets. No waiting for the shift report.",
+              "Availability, performance, and quality calculated automatically from machine signals. Your OEE score updates as production runs, with drill-down by machine, line, or area. No spreadsheets. No waiting for the shift report.",
             image: "/images/report-mockup1.png",
             imageAlt:
               "OptiPeople OEE dashboard showing availability gauge, unit counter, and parts per hour chart",
@@ -36,7 +37,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "See What Happened, Hour by Hour",
             description:
-              "Color-coded timelines show running, stopped, setup, and idle states for every machine. Spot patterns that shift reports miss — like the 20 minutes lost to changeover every morning that nobody talks about.",
+              "Color-coded timelines show running, stopped, setup, and idle states for every machine. Spot patterns that shift reports miss, like the 20 minutes lost to changeover every morning that nobody talks about.",
             image: "/images/dashboard1.png",
             imageAlt:
               "Production timeline showing machine status and unit per hour chart across a shift",
@@ -86,7 +87,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Produktionseffektivitet | OptiPeople",
         metaDescription:
           "Følg OEE i realtid, se hvor produktionstiden går tabt, og forstå performance på tværs af skift, linjer og maskiner.",
-        parentLabel: "Produktion",
+        parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Produktionseffektivitet",
         heroTitle: "Se hvor produktionstiden går tabt",
@@ -161,18 +162,18 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Stop Cause Registration | OptiPeople",
         metaDescription:
           "Make downtime visible at the source. Operators register stops directly at the machine, giving you clean data you can actually act on.",
-        parentLabel: "Production",
+        parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Stop Cause Registration",
         heroTitle: "Make Downtime Visible at the Source",
         heroBody:
-          "Operators register stops directly at the machine — while the context is fresh. You get clean, structured data you can actually act on.",
+          "Operators register stops directly at the machine, while the context is fresh. You get clean, structured data you can actually act on.",
         heroImage: "/images/Stop-Screen-Select.png",
         heroImageAlt:
           "Operator panel showing stop cause selection screen with predefined reason categories",
         valueTitle: "You can't fix what you can't see",
         valueBody:
-          "Most downtime goes unrecorded or gets lumped into vague categories after the fact. Without clean stop data, improvement projects are based on gut feeling instead of evidence. Stop Cause Registration captures every stop, every reason, every time — so you know exactly where to focus.",
+          "Most downtime goes unrecorded or gets lumped into vague categories after the fact. Without clean stop data, improvement projects are based on gut feeling instead of evidence. Stop Cause Registration captures every stop, every reason, every time, so you know exactly where to focus.",
         capabilitiesTitle: "From machine stop to structured data in seconds",
         capabilitiesBody:
           "A three-step flow that turns every downtime event into data your team can learn from.",
@@ -180,7 +181,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "The Machine Tells You First",
             description:
-              "When a machine stops, the operator panel turns red immediately. No ambiguity, no delay. The operator taps the screen to acknowledge the stop and begin registration — right there, right then, while the context is fresh.",
+              "When a machine stops, the operator panel turns red immediately. No ambiguity, no delay. The operator taps the screen to acknowledge the stop and begin registration, right there, right then, while the context is fresh.",
             image: "/images/Stop-Screen-Red.png",
             imageAlt:
               "Operator panel showing red alert screen with the message the machine is stopped",
@@ -188,7 +189,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Every Stop Gets a Reason",
             description:
-              "Operators pick from a predefined list of stop causes — tailored to each machine. Setup, tool change, material wait, malfunction. Each entry captures the reason, duration, and optional notes. The result is structured data, not free-text guesswork.",
+              "Operators pick from a predefined list of stop causes, tailored to each machine. Setup, tool change, material wait, malfunction. Each entry captures the reason, duration, and optional notes. The result is structured data, not free-text guesswork.",
             image: "/images/operatorpanel2.png",
             imageAlt:
               "Detailed stop log showing stop reasons, telemetry data, and operator notes across shifts",
@@ -196,7 +197,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "A Complete Picture of Every Shift",
             description:
-              "All stops appear on a color-coded timeline — filterable by shift, machine, and severity. Hover over any block to see exactly what happened, when, and for how long. Patterns that were invisible in shift handover notes become obvious at a glance.",
+              "All stops appear on a color-coded timeline, filterable by shift, machine, and severity. Hover over any block to see exactly what happened, when, and for how long. Patterns that were invisible in shift handover notes become obvious at a glance.",
             image: "/images/Stop-Screen-Timeline.png",
             imageAlt:
               "Color-coded stop timeline showing all stops across a shift with details on hover",
@@ -204,7 +205,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
         showcaseTitle: "Stop data feeds the bigger picture",
         showcaseBody:
-          "Every registered stop flows into your production dashboard. Machine status, timelines, and performance metrics update in real time — giving the full story behind the numbers.",
+          "Every registered stop flows into your production dashboard. Machine status, timelines, and performance metrics update in real time, giving the full story behind the numbers.",
         showcaseImage: "/images/dashboard1.png",
         showcaseAlt:
           "Live production status dashboard showing machine states, timeline, and unit per hour chart",
@@ -238,7 +239,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Stopårsagsregistrering | OptiPeople",
         metaDescription:
           "Gør nedetid synlig ved kilden med operatørregistrering direkte ved maskinen.",
-        parentLabel: "Produktion",
+        parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Stopårsagsregistrering",
         heroTitle: "Gør nedetid synlig ved kilden",
@@ -313,8 +314,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Maintenance and Tasks | OptiPeople",
         metaDescription:
           "Plan and execute preventive maintenance based on usage and condition. Assign tasks, track completion, and reduce unplanned downtime.",
-        parentLabel: "Production",
-        parentHref: "/modules/production",
+        parentLabel: "Maintenance",
+        parentHref: "/modules/maintenance",
         eyebrow: "Maintenance and Tasks",
         heroTitle: "Fix Things Before They Break",
         heroBody:
@@ -324,15 +325,15 @@ const features: LocalizedPage<FeaturePage>[] = [
           "OptiPeople task management interface showing filterable task list with progress tracking",
         valueTitle: "Unplanned stops are the most expensive kind",
         valueBody:
-          "Every unplanned stop costs more than a planned one — in lost production, emergency parts, and scrambled schedules. Most factories know this but still run maintenance off spreadsheets and memory. OptiPeople puts every task in one place, triggered by real machine data, tracked to completion.",
+          "Every unplanned stop costs more than a planned one, in lost production, emergency parts, and scrambled schedules. Most factories know this but still run maintenance off spreadsheets and memory. OptiPeople puts every task in one place, triggered by real machine data, tracked to completion.",
         capabilitiesTitle: "From condition signal to completed task",
         capabilitiesBody:
-          "A maintenance workflow that starts with the machine and ends with a verified fix — no paper, no guesswork.",
+          "A maintenance workflow that starts with the machine and ends with a verified fix, no paper, no guesswork.",
         capabilities: [
           {
             title: "One List for Every Task on the Floor",
             description:
-              "Search, filter, and prioritize across all open tasks — by machine, urgency, or type. Operators see exactly what needs doing and how much time is left. No more whiteboards, no more forgotten follow-ups.",
+              "Search, filter, and prioritize across all open tasks, by machine, urgency, or type. Operators see exactly what needs doing and how much time is left. No more whiteboards, no more forgotten follow-ups.",
             image: "/images/taskapp2.png",
             imageAlt:
               "Task list showing open maintenance tasks with search, filters, and remaining time for each task",
@@ -340,7 +341,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Maintenance Driven by Data, Not Calendars",
             description:
-              "Schedule maintenance based on actual machine usage, run hours, and condition signals — not fixed intervals. When a threshold is reached, the task appears automatically. You maintain what needs it, when it needs it.",
+              "Schedule maintenance based on actual machine usage, run hours, and condition signals, not fixed intervals. When a threshold is reached, the task appears automatically. You maintain what needs it, when it needs it.",
             image: "/images/report1.png",
             imageAlt:
               "OEE report showing availability, performance, and timeline chart used to plan maintenance windows",
@@ -453,9 +454,9 @@ const features: LocalizedPage<FeaturePage>[] = [
       en: {
         metaTitle: "Quality Management | OptiPeople",
         metaDescription:
-          "Register quality data where it happens. Trace deviations back to machines, batches, and shifts — and build accountability into production.",
-        parentLabel: "Production",
-        parentHref: "/modules/production",
+          "Register quality data where it happens. Trace deviations back to machines, batches, and shifts, and build accountability into production.",
+        parentLabel: "QMS",
+        parentHref: "/modules/quality",
         eyebrow: "Quality Management",
         heroTitle: "Catch Quality Issues Where They Start",
         heroBody:
@@ -465,7 +466,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           "OptiPeople quality tracking interface showing audit trail and device management",
         valueTitle: "Quality problems found late cost ten times more",
         valueBody:
-          "When quality data lives in paper forms and disconnected systems, deviations surface too late to prevent waste. By the time the report reaches quality management, the batch is finished and the damage is done. OptiPeople captures quality events in real time — linked to the machine, the shift, and the conditions that caused them.",
+          "When quality data lives in paper forms and disconnected systems, deviations surface too late to prevent waste. By the time the report reaches quality management, the batch is finished and the damage is done. OptiPeople captures quality events in real time, linked to the machine, the shift, and the conditions that caused them.",
         capabilitiesTitle: "From floor event to traceable record",
         capabilitiesBody:
           "Quality data captured at the source, structured for analysis, and always audit-ready.",
@@ -473,7 +474,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Register Quality Events at the Machine",
             description:
-              "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine, order, and shift — so nothing gets lost between the floor and the office.",
+              "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine, order, and shift, so nothing gets lost between the floor and the office.",
             image: "/images/operatorpanel2.png",
             imageAlt:
               "Operator panel showing detailed event log with quality notes, telemetry data, and shift information",
@@ -481,7 +482,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Trace Every Deviation to Its Source",
             description:
-              "When quality drops, you need to know why — fast. Filter by machine, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
+              "When quality drops, you need to know why, fast. Filter by machine, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
             image: "/images/report1.png",
             imageAlt:
               "OptiPeople report showing OEE breakdown with availability, performance, and quality metrics alongside a timeline chart",
@@ -504,7 +505,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Production Efficiency",
             description:
-              "Track OEE live — quality is one of the three pillars of overall equipment effectiveness.",
+              "Track OEE live. Quality is one of the three pillars of overall equipment effectiveness.",
             href: "/features/production-efficiency",
           },
           {
@@ -525,7 +526,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Kvalitetsstyring | OptiPeople",
         metaDescription:
           "Registrer kvalitetsdata ved kilden og spor afvigelser til maskiner, batches og skift.",
-        parentLabel: "Kvalitet",
+        parentLabel: "QMS",
         parentHref: "/modules/quality",
         eyebrow: "Kvalitetsstyring",
         heroTitle: "Gør kvalitet til en del af flowet",
@@ -591,19 +592,19 @@ const features: LocalizedPage<FeaturePage>[] = [
       en: {
         metaTitle: "Analysis and Reporting | OptiPeople",
         metaDescription:
-          "Turn production data into clear reports on performance, losses, and cost drivers — without spreadsheets or manual work.",
-        parentLabel: "Production",
-        parentHref: "/modules/production",
+          "Turn production data into clear reports on performance, losses, and cost drivers, without spreadsheets or manual work.",
+        parentLabel: "Analysis",
+        parentHref: "/modules/analysis",
         eyebrow: "Analysis and Reporting",
         heroTitle: "Reports That Write Themselves",
         heroBody:
-          "Turn production data into clear reports on performance, losses, and cost drivers — without spreadsheets or manual work.",
+          "Turn production data into clear reports on performance, losses, and cost drivers, without spreadsheets or manual work.",
         heroImage: "/images/report-mockup1.png",
         heroImageAlt:
           "OptiPeople reporting dashboard showing OEE gauge, unit counter, and parts per hour trend",
-        valueTitle: "The data exists — it just needs a better format",
+        valueTitle: "The data exists. It just needs a better format",
         valueBody:
-          "Your machines generate thousands of data points every day. But if turning that into a useful report takes a person, a spreadsheet, and half a morning, the data stays locked up. OptiPeople generates production reports automatically — accurate, consistent, and ready when you are.",
+          "Your machines generate thousands of data points every day. But if turning that into a useful report takes a person, a spreadsheet, and half a morning, the data stays locked up. OptiPeople generates production reports automatically, accurate, consistent, and ready when you are.",
         capabilitiesTitle: "From machine signal to management report",
         capabilitiesBody:
           "Every report is built from live production data. No manual entry, no copy-paste, no version confusion.",
@@ -611,7 +612,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "OEE Reports That Build Themselves",
             description:
-              "Availability, performance, and quality — broken down by machine, line, shift, or time period. Reports generate automatically from live production data. Pick a week, pick a machine, and the numbers are there.",
+              "Availability, performance, and quality broken down by machine, line, shift, or time period. Reports generate automatically from live production data. Pick a week, pick a machine, and the numbers are there.",
             image: "/images/report1.png",
             imageAlt:
               "OptiPeople report showing OEE gauges for availability, performance, and quality with a color-coded timeline chart",
@@ -635,7 +636,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
         showcaseTitle: "Every angle of your production, one system",
         showcaseBody:
-          "OEE dashboards, stop analysis, shift comparisons, and energy reports — all generated from the same live data source.",
+          "OEE dashboards, stop analysis, shift comparisons, and energy reports all generated from the same live data source.",
         showcaseImage: "/images/report-mockup4.png",
         showcaseAlt:
           "Four OptiPeople dashboard views showing OEE tracking, performance comparisons, and production reports",
@@ -648,7 +649,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Production Efficiency",
             description:
-              "The live OEE data that feeds into your reports — track it in real time.",
+              "The live OEE data that feeds into your reports, track it in real time.",
             href: "/features/production-efficiency",
           },
           {
@@ -736,8 +737,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Energy and Telemetry | OptiPeople",
         metaDescription:
           "Connect energy, vibration, flow, and temperature directly to production. Identify waste, anomalies, and optimization opportunities.",
-        parentLabel: "Production",
-        parentHref: "/modules/production",
+        parentLabel: "EMS",
+        parentHref: "/modules/energy",
         eyebrow: "Energy and Telemetry",
         heroTitle: "Know What Your Machines Are Feeling",
         heroBody:
@@ -747,15 +748,15 @@ const features: LocalizedPage<FeaturePage>[] = [
           "OptiPeople energy dashboard showing temperature, kWh readings, and OEE performance gauges",
         valueTitle: "Energy and condition data without a separate system",
         valueBody:
-          "Most factories monitor energy in one system, production in another, and machine health in a third — if at all. That separation makes it impossible to connect cause and effect. OptiPeople brings sensor data into the same platform as your production data, so every reading has context.",
+          "Most factories monitor energy in one system, production in another, and machine health in a third, if at all. That separation makes it impossible to connect cause and effect. OptiPeople brings sensor data into the same platform as your production data, so every reading has context.",
         capabilitiesTitle: "Every sensor signal, connected to production",
         capabilitiesBody:
-          "Temperature, energy, vibration, flow — captured at the machine and linked to the production events that explain them.",
+          "Temperature, energy, vibration, and flow captured at the machine and linked to the production events that explain them.",
         capabilities: [
           {
             title: "Live Sensor Readings, Right at the Machine",
             description:
-              "Temperature, humidity, pressure, vibration — displayed in real time on the operator panel. No separate monitoring system, no switching between screens. The operator sees what the machine feels.",
+              "Temperature, humidity, pressure, and vibration displayed in real time on the operator panel. No separate monitoring system, no switching between screens. The operator sees what the machine feels.",
             image: "/images/Telemetry-Numbers.png",
             imageAlt:
               "Operator panel showing live temperature at 182 degrees and humidity at 41 percent for a Homag machine",
@@ -763,7 +764,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Energy Consumption by Machine, by Hour",
             description:
-              "Track kWh for every connected machine over time. See exactly when energy spikes happen and correlate them with production events. Identify machines that consume more than they should — idle, in setup, or under load.",
+              "Track kWh for every connected machine over time. See exactly when energy spikes happen and correlate them with production events. Identify machines that consume more than they should, idle, in setup, or under load.",
             image: "/images/Telemetry-Chart.png",
             imageAlt:
               "Energy chart showing kWh consumption over 48 hours for a Felder sliding table saw",
@@ -771,7 +772,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Sensor Data Meets Production Data",
             description:
-              "Energy and telemetry don't live in isolation. OptiPeople connects sensor readings directly to OEE, stop events, and shift data — so you can answer questions like: how much energy did that unplanned stop cost? Which shift runs most efficiently?",
+              "Energy and telemetry don't live in isolation. OptiPeople connects sensor readings directly to OEE, stop events, and shift data, so you can answer questions like: how much energy did that unplanned stop cost? Which shift runs most efficiently?",
             image: "/images/report-mockrup-3.png",
             imageAlt:
               "Dashboard combining telemetry readings with OEE gauges and production performance metrics",
@@ -807,7 +808,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Energi og telemetri | OptiPeople",
         metaDescription:
           "Kobl energi, vibration, flow og temperatur til produktionens output og status.",
-        parentLabel: "Energi",
+        parentLabel: "EMS",
         parentHref: "/modules/energy",
         eyebrow: "Energi og telemetri",
         heroTitle: "Se hvad maskinerne bruger og fortæller",
@@ -874,8 +875,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "AI and Copilots | OptiPeople",
         metaDescription:
           "Ask questions, detect patterns, and support decisions using AI trained on your own production data.",
-        parentLabel: "Production",
-        parentHref: "/modules/production",
+        parentLabel: "AI agents",
+        parentHref: "/ai/agents",
         eyebrow: "AI and Copilots",
         heroTitle: "AI Trained on Your Factory",
         heroBody:
@@ -885,15 +886,15 @@ const features: LocalizedPage<FeaturePage>[] = [
           "Four OptiPeople dashboard views representing the breadth of production data available to AI analysis",
         valueTitle: "Your best analyst can't look at everything at once",
         valueBody:
-          "Production generates more data than any person can review. The patterns that matter — a gradual cycle time drift, a correlation between humidity and scrap rate, a shift that quietly outperforms — get buried in volume. AI doesn't get overwhelmed. It watches everything, all the time, and tells you what matters.",
+          "Production generates more data than any person can review. The patterns that matter get buried in volume: a gradual cycle time drift, a correlation between humidity and scrap rate, a shift that quietly outperforms. AI doesn't get overwhelmed. It watches everything, all the time, and tells you what matters.",
         capabilitiesTitle: "Intelligence that earns trust through transparency",
         capabilitiesBody:
-          "Every recommendation is traceable. Every insight links to real data. No black boxes — just evidence.",
+          "Every recommendation is traceable. Every insight links to real data. No black boxes, just evidence.",
         capabilities: [
           {
             title: "Ask Your Data a Question",
             description:
-              "Type a question in plain language and get an answer drawn from your production data. \"What caused the most downtime last week?\" \"Which line had the best OEE this month?\" No query language, no analyst needed — just the answer.",
+              "Type a question in plain language and get an answer drawn from your production data. \"What caused the most downtime last week?\" \"Which line had the best OEE this month?\" No query language, no analyst needed, just the answer.",
             image: "/images/report1.png",
             imageAlt:
               "OptiPeople report showing OEE breakdown and timeline that AI can analyze and summarize",
@@ -918,13 +919,13 @@ const features: LocalizedPage<FeaturePage>[] = [
         metrics: [
           { metric: "10x", label: "Faster time from question to insight" },
           { metric: "24/7", label: "Continuous pattern detection" },
-          { metric: "100%", label: "Traceable — every insight links to source data" },
+          { metric: "100%", label: "Traceable: every insight links to source data" },
         ],
         related: [
           {
             title: "Analysis and Reporting",
             description:
-              "AI enhances the reports you already generate — adding summaries, anomalies, and recommendations.",
+              "AI enhances the reports you already generate, adding summaries, anomalies, and recommendations.",
             href: "/features/analysis-and-reporting",
           },
           {
@@ -945,8 +946,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "AI og copilots | OptiPeople",
         metaDescription:
           "Stil spørgsmål, find mønstre og understøt beslutninger med AI trænet på jeres produktionsdata.",
-        parentLabel: "Produktion",
-        parentHref: "/modules/production",
+        parentLabel: "AI-agenter",
+        parentHref: "/ai/agents",
         eyebrow: "AI og copilots",
         heroTitle: "AI trænet på jeres fabrik",
         heroBody:
@@ -1014,8 +1015,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Machine Control | OptiPeople",
         metaDescription:
           "Integrate with machine control systems to enable feedback, automation, and tighter production loops across the factory.",
-        parentLabel: "Production",
-        parentHref: "/modules/production",
+        parentLabel: "IoT",
+        parentHref: "/modules/iot",
         eyebrow: "Machine Control",
         heroTitle: "Close the Loop Between System and Floor",
         heroBody:
@@ -1023,9 +1024,9 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroImage: "/images/Start-Machine.png",
         heroImageAlt:
           "OptiPeople machine control panel showing the start machine interface for a Homag machine",
-        valueTitle: "Data collection starts at the machine — control should too",
+        valueTitle: "Data collection starts at the machine. Control should too",
         valueBody:
-          "When your production system and your machine control live in separate worlds, gaps appear. Operators work without feedback. Events go unrecorded. Start and stop times drift from reality. OptiPeople connects directly to the machine control layer — so the digital system and the physical factory move together.",
+          "When your production system and your machine control live in separate worlds, gaps appear. Operators work without feedback. Events go unrecorded. Start and stop times drift from reality. OptiPeople connects directly to the machine control layer, so the digital system and the physical factory move together.",
         capabilitiesTitle: "From machine signal to operator action and back",
         capabilitiesBody:
           "A two-way connection between your production system and every machine on the floor.",
@@ -1033,7 +1034,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Secure Machine Authentication",
             description:
-              "Every operator authenticates at the machine with a unique key before starting production. You know who is running what, when, and on which machine — creating accountability and traceability from the first moment of a shift.",
+              "Every operator authenticates at the machine with a unique key before starting production. You know who is running what, when, and on which machine, creating accountability and traceability from the first moment of a shift.",
             image: "/images/Login-Machine-Key.png",
             imageAlt:
               "Machine key authentication screen where operators enter their unique key to access the machine",
@@ -1041,7 +1042,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Start, Stop, and Status in One Place",
             description:
-              "Operators control machine start and stop directly from the panel. The system confirms the machine is ready, the operator is authenticated, and all prerequisites are met. One tap to start production — with a full digital trail.",
+              "Operators control machine start and stop directly from the panel. The system confirms the machine is ready, the operator is authenticated, and all prerequisites are met. One tap to start production, with a full digital trail.",
             image: "/images/Start-Machine.png",
             imageAlt:
               "Operator panel showing the start machine button with green indicator for a Homag machine",
@@ -1049,7 +1050,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Real-Time Feedback to the Floor",
             description:
-              "Machine status flows back to the operator in real time. Green means everything checks out. When conditions change — a sensor threshold, a quality alert, a maintenance trigger — the operator sees it immediately. No surprises, no lag between event and awareness.",
+              "Machine status flows back to the operator in real time. Green means everything checks out. When conditions change, a sensor threshold, a quality alert or a maintenance trigger, the operator sees it immediately. No surprises, no lag between event and awareness.",
             image: "/images/Everything-is-okay.png",
             imageAlt:
               "Operator panel showing green checkmark with everything is okay confirmation for a Homag machine",
@@ -1085,8 +1086,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Maskinstyring | OptiPeople",
         metaDescription:
           "Integrer med maskinstyring for feedback, automatisering og tættere loops mellem system og gulv.",
-        parentLabel: "Produktion",
-        parentHref: "/modules/production",
+        parentLabel: "IoT",
+        parentHref: "/modules/iot",
         eyebrow: "Maskinstyring",
         heroTitle: "Luk loopet mellem system og gulv",
         heroBody:
@@ -1148,6 +1149,18 @@ const features: LocalizedPage<FeaturePage>[] = [
     },
   },
 ]
+
+/**
+ * Nav entries for the capability pages, in file order. The eyebrow doubles as
+ * the short label, it is what each page already calls itself in its header, so
+ * the nav and the page can never disagree.
+ */
+export function featureNavItems(locale: Locale) {
+  return features.map((entry) => ({
+    title: entry.content[locale].eyebrow,
+    href: entry.href,
+  }))
+}
 
 export const { slugs: featureSlugs, get: getFeature } = buildLookup(features)
 export { features }

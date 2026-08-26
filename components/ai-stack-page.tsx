@@ -13,8 +13,8 @@ import { addLocalePrefix, type Locale } from "@/lib/i18n"
  * Shares the design language of the feature and overview templates (see
  * components/templates/feature-page.tsx): the `--edge` column, `font-light`
  * display type, tinted surfaces, arrow-in-circle affordances. The hero mockup
- * keeps `cap.theme.bg` — the exact colour its card carries on the homepage
- * slider — so arriving here feels like the card opened up.
+ * keeps `cap.theme.bg`, the exact colour its card carries on the homepage
+ * slider, so arriving here feels like the card opened up.
  */
 export function AiStackPage({
   slug,
@@ -104,7 +104,7 @@ export function AiStackPage({
         </div>
       </section>
 
-      {/* Value proposition — asymmetric two-column. */}
+      {/* Value proposition, asymmetric two-column. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
@@ -116,7 +116,7 @@ export function AiStackPage({
         </div>
       </section>
 
-      {/* Capabilities — numbered cells inside one tinted panel. */}
+      {/* Capabilities, numbered cells inside one tinted panel. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {c.capabilitiesTitle}
@@ -141,7 +141,7 @@ export function AiStackPage({
         </div>
       </section>
 
-      {/* Use cases — tinted cards. */}
+      {/* Use cases, tinted cards. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {c.useCasesTitle}
@@ -164,7 +164,7 @@ export function AiStackPage({
         </div>
       </section>
 
-      {/* Capability CTA — deep brand surface. Bespoke per-capability copy,
+      {/* Capability CTA, deep brand surface. Bespoke per-capability copy,
           and the only place the secondary action (API reference) is offered,
           so it stays despite the global CTA further down. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
@@ -205,7 +205,7 @@ export function AiStackPage({
         </div>
       </section>
 
-      {/* Related capabilities — each row keeps its own colour. */}
+      {/* Related capabilities, each row keeps its own colour. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
         <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
           {relatedLabel}

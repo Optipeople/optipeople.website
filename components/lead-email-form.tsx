@@ -19,10 +19,13 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 export function LeadEmailForm({
   className,
   showFineprint = true,
+  modules,
 }: {
   className?: string
   /** Hide the "or send a full message" line where it would be redundant. */
   showFineprint?: boolean
+  /** Labels of any modules the visitor picked, sent along as lead context. */
+  modules?: string[]
 }) {
   const t = useTranslations("leadForm")
   const [status, setStatus] = useState<FormStatus>("idle")
@@ -35,7 +38,7 @@ export function LeadEmailForm({
     const email = String(data.get("email") ?? "").trim()
     const website = String(data.get("website") ?? "")
 
-    // Honeypot — pretend success without hitting the API.
+    // Honeypot, pretend success without hitting the API.
     if (website.trim()) {
       setStatus("success")
       form.reset()
@@ -54,7 +57,7 @@ export function LeadEmailForm({
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, modules: modules ?? [] }),
       })
       if (!res.ok) throw new Error("Failed to submit")
       form.reset()
@@ -92,7 +95,7 @@ export function LeadEmailForm({
   return (
     <div className={className}>
       <form onSubmit={handleSubmit} noValidate>
-        {/* Honeypot — hidden from real users, catches naive bots. */}
+        {/* Honeypot, hidden from real users, catches naive bots. */}
         <div className="absolute opacity-0 pointer-events-none" aria-hidden="true">
           <label htmlFor="lead-website">Website</label>
           <input

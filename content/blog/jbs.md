@@ -7,7 +7,7 @@ image: "/images/blog/jbs.png"
 customer: "Gurit"
 metricLabel: "Capacity, fully in view"
 logo: "/images/logos/Gurit.png"
-quote: "When we run optimization projects we can measure them — that is key to making the right decisions."
+quote: "When we run optimization projects we can measure them. That is key to making the right decisions."
 outcome: "CNC- and ERP-integrated data give a clear capacity overview and avoid unnecessary machine investment."
 ---
 

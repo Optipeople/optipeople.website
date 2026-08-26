@@ -1,6 +1,6 @@
 # Feature Page Design Guide
 
-This document defines the design patterns for OptiPeople feature pages — dedicated pages for individual features like Production Efficiency, Stop Cause Registration, Quality Management, etc.
+This document defines the design patterns for OptiPeople feature pages, dedicated pages for individual features like Production Efficiency, Stop Cause Registration, Quality Management, etc.
 
 Inherits the [design philosophy](homepage.md#design-philosophy) from the homepage guide.
 
@@ -8,11 +8,11 @@ Inherits the [design philosophy](homepage.md#design-philosophy) from the homepag
 
 ## Page Archetype: Feature Deep Dive
 
-**Purpose:** Take a visitor who saw a feature in the homepage vertical slider and give them the full picture — what it does, how it looks, why it matters, and how it fits into their workflow. Convert curiosity into conviction.
+**Purpose:** Take a visitor who saw a feature in the homepage vertical slider and give them the full picture, what it does, how it looks, why it matters, and how it fits into their workflow. Convert curiosity into conviction.
 
-**Difference from module landing pages:** Module pages answer "What does Smart Operations do?" with a broad overview of many capabilities. Feature pages answer "How exactly does Production Efficiency work?" with depth on a single capability — more screenshots, more detail, more specificity.
+**Difference from module landing pages:** Module pages answer "What does Smart Operations do?" with a broad overview of many capabilities. Feature pages answer "How exactly does Production Efficiency work?" with depth on a single capability, more screenshots, more detail, more specificity.
 
-**Tone:** Confident and specific. This is the "zoom-in" page. The visitor already knows OptiPeople exists — they clicked to learn more about one thing. Reward that intent with substance, not fluff.
+**Tone:** Confident and specific. This is the "zoom-in" page. The visitor already knows OptiPeople exists, they clicked to learn more about one thing. Reward that intent with substance, not fluff.
 
 ---
 
@@ -75,8 +75,8 @@ The page follows a "show, then tell" narrative. Screenshots lead; text supports.
 ### Section Backgrounds
 
 - Default: `bg-background` (white)
-- Muted: `bg-muted/30` — subtle gray for capability sections, related features
-- Dark: `bg-foreground text-background` — use at most once, only if high-impact
+- Muted: `bg-muted/30`, subtle gray for capability sections, related features
+- Dark: `bg-foreground text-background`, use at most once, only if high-impact
 
 **Rule:** Never place two tinted sections back to back. Always separate with white.
 
@@ -88,7 +88,7 @@ Follows the homepage type system, with these feature-page patterns:
 
 ### Hero
 
-The feature page hero uses a product-forward layout — the screenshot is the visual anchor, not a background image.
+The feature page hero uses a product-forward layout, the screenshot is the visual anchor, not a background image.
 
 ```
 Eyebrow:  text-sm font-medium tracking-wide text-muted-foreground uppercase
@@ -118,9 +118,9 @@ Small:     text-sm text-muted-foreground
 ```
 
 **Copywriting rules:**
-- Short paragraphs — 2–3 sentences max
+- Short paragraphs, 2–3 sentences max
 - Lead with the outcome, follow with the mechanism
-- Be specific to this feature — no generic platform language
+- Be specific to this feature, no generic platform language
 - Active voice, present tense
 
 ---
@@ -129,7 +129,7 @@ Small:     text-sm text-muted-foreground
 
 ### 1. Hero
 
-Product-forward layout. The feature name and benefit headline sit on the left; a product screenshot anchors the right. This is different from module pages (which use a full-bleed background image) — here the product UI is the hero visual.
+Product-forward layout. The feature name and benefit headline sit on the left; a product screenshot anchors the right. This is different from module pages (which use a full-bleed background image), here the product UI is the hero visual.
 
 **Two-column variant (primary):**
 
@@ -163,17 +163,17 @@ Product-forward layout. The feature name and benefit headline sit on the left; a
 ```
 
 **Guidelines:**
-- Left-aligned text, not centered — this is a detail page, not a billboard
+- Left-aligned text, not centered, this is a detail page, not a billboard
 - Screenshot on the right is the first product visual the visitor sees. Use the best, most representative screenshot available
-- `aspect-[4/3]` for the hero image — taller than a dashboard ratio, works well at this size
-- `rounded-2xl` with the standard card shadow — matches product visuals throughout the site
+- `aspect-[4/3]` for the hero image, taller than a dashboard ratio, works well at this size
+- `rounded-2xl` with the standard card shadow, matches product visuals throughout the site
 - `priority` on the hero image for above-the-fold loading
 - Two CTAs: primary (demo/contact) + secondary (scroll to capabilities)
 - On mobile, text stacks above the image naturally
 
 **Full-bleed variant (alternative):**
 
-If the feature has a particularly striking full-width screenshot, use the module-page hero pattern instead (background image + dark overlay + centered white text). See [module-landing-page.md](module-landing-page.md) for that pattern. Choose one or the other — never both.
+If the feature has a particularly striking full-width screenshot, use the module-page hero pattern instead (background image + dark overlay + centered white text). See [module-landing-page.md](module-landing-page.md) for that pattern. Choose one or the other, never both.
 
 ### 2. Value Proposition
 
@@ -193,13 +193,13 @@ A focused text section that frames the problem and positions the feature as the 
 ```
 
 **Guidelines:**
-- `max-w-3xl` — narrower than other sections for focused reading
+- `max-w-3xl`, narrower than other sections for focused reading
 - One headline + one paragraph. That's it. If you need more, you're overexplaining.
 - This section is optional. If the hero already conveys the value clearly, skip it and go straight to capabilities.
 
 ### 3. Capabilities Deep Dive
 
-The core of the feature page. This uses the **alternating rows pattern** — image-left/text-right, then text-left/image-right — to walk through 3–4 key aspects of the feature with product screenshots.
+The core of the feature page. This uses the **alternating rows pattern**, image-left/text-right, then text-left/image-right, to walk through 3–4 key aspects of the feature with product screenshots.
 
 ```tsx
 <section id="capabilities" className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
@@ -239,8 +239,8 @@ The core of the feature page. This uses the **alternating rows pattern** — ima
 ```
 
 **Guidelines:**
-- **3–4 capabilities is the sweet spot.** More than 4 gets repetitive — combine or cut.
-- `space-y-16 lg:space-y-24` between rows — generous but not as extreme as module pages since there's a section background grouping them
+- **3–4 capabilities is the sweet spot.** More than 4 gets repetitive, combine or cut.
+- `space-y-16 lg:space-y-24` between rows, generous but not as extreme as module pages since there's a section background grouping them
 - Alternate layout direction with `order-2` on odd items
 - Every capability **must** have a product screenshot. No icons-only, no text-only. This is the "show me" page.
 - Images are `rounded-2xl`, `aspect-[4/3]` with the standard card shadow
@@ -249,11 +249,11 @@ The core of the feature page. This uses the **alternating rows pattern** — ima
 
 **When to use card grid instead:**
 
-If the feature has 5–6 shorter capabilities that don't each warrant a screenshot, fall back to the card grid pattern from [module-landing-page.md](module-landing-page.md). But prefer alternating rows — feature pages should be visual.
+If the feature has 5–6 shorter capabilities that don't each warrant a screenshot, fall back to the card grid pattern from [module-landing-page.md](module-landing-page.md). But prefer alternating rows, feature pages should be visual.
 
 ### 4. Product Showcase
 
-A full-width screenshot that shows the feature in context — the dashboard view, the complete workflow, or the main interface. This is the "money shot."
+A full-width screenshot that shows the feature in context, the dashboard view, the complete workflow, or the main interface. This is the "money shot."
 
 ```tsx
 <section className="py-20 lg:py-32 px-6 lg:px-8">
@@ -274,11 +274,11 @@ A full-width screenshot that shows the feature in context — the dashboard view
 ```
 
 **Guidelines:**
-- `max-w-6xl` — the widest section on the page. It should feel expansive.
+- `max-w-6xl`, the widest section on the page. It should feel expansive.
 - `rounded-4xl` matches homepage carousel cards
 - `aspect-[16/9]` for dashboard/full-screen views
 - This section is optional but strongly recommended. If you have a good full-width screenshot, use it.
-- If no screenshot exists yet, use a `bg-muted/30` placeholder — never a stock photo
+- If no screenshot exists yet, use a `bg-muted/30` placeholder, never a stock photo
 
 ### 5. Results / Proof
 
@@ -361,13 +361,13 @@ Help the visitor explore further. Show 2–3 sibling features from the same doma
 ```
 
 **Guidelines:**
-- 2–3 related features. Don't list all 8 — pick the most relevant siblings.
+- 2–3 related features. Don't list all 8, pick the most relevant siblings.
 - Cards are minimal: title + short description, clickable as a whole
-- `rounded-xl` cards with subtle border, no shadow — lighter weight than the main content
+- `rounded-xl` cards with subtle border, no shadow, lighter weight than the main content
 - Hover: border becomes more visible + title shifts to primary color
 - `bg-muted/30` background groups the cards visually
 
-**Important:** This must NOT be the last section on the page if it uses `bg-muted/30`. The global `CallToAction` from layout.tsx uses a tinted background — two gray sections back-to-back looks wrong. If Related Features is the last section, use a white background instead.
+**Important:** This must NOT be the last section on the page if it uses `bg-muted/30`. The global `CallToAction` from layout.tsx uses a tinted background, two gray sections back-to-back looks wrong. If Related Features is the last section, use a white background instead.
 
 ---
 
@@ -419,9 +419,9 @@ Results / Proof     → white
 
 Feature pages are the most screenshot-heavy pages on the site. Every feature page should have at minimum:
 
-1. **Hero screenshot** — the most recognizable view of the feature
-2. **3–4 capability screenshots** — one per alternating row
-3. **Full-width showcase** (optional) — the complete dashboard or workflow
+1. **Hero screenshot**, the most recognizable view of the feature
+2. **3–4 capability screenshots**, one per alternating row
+3. **Full-width showcase** (optional), the complete dashboard or workflow
 
 ### Image Containers
 
@@ -437,8 +437,8 @@ All image containers include: `overflow-hidden border border-[var(--gray-2)]`
 
 ### Screenshot Guidance
 
-- Use **real product UI** — actual OptiPeople screens, not mockups or wireframes
-- Crop to show the relevant part of the interface — don't show the full browser chrome
+- Use **real product UI**, actual OptiPeople screens, not mockups or wireframes
+- Crop to show the relevant part of the interface, don't show the full browser chrome
 - If a screenshot doesn't exist yet, use a `bg-muted/30` placeholder with centered text: "Screenshot coming soon"
 - Never use stock photos, abstract illustrations, or decorative images
 
@@ -450,11 +450,11 @@ All image containers include: `overflow-hidden border border-[var(--gray-2)]`
 |----------|---------|------|---------|
 | Hero primary | `default` | `lg` | "Request a Demo" |
 | Hero secondary | `outline` | `lg` | "See How It Works" |
-| Related feature card | n/a (whole card is link) | n/a | No button — card hover state |
+| Related feature card | n/a (whole card is link) | n/a | No button, card hover state |
 
 **Rules:**
 - Maximum 2 buttons, only in the hero
-- No scattered CTAs throughout the page — the global CallToAction handles conversion
+- No scattered CTAs throughout the page, the global CallToAction handles conversion
 - Related feature cards use the whole-card-as-link pattern, not internal buttons
 
 ---
@@ -476,7 +476,7 @@ Feature pages should provide navigation context back to the parent module:
 ```
 
 **Guidelines:**
-- Simple text breadcrumb, not a full component — `text-sm text-muted-foreground`
+- Simple text breadcrumb, not a full component, `text-sm text-muted-foreground`
 - Placed inside the hero section, above the main grid, within the same `max-w-6xl` container
 - Parent link is clickable, current page is plain text
 - Only one level deep: `Module Name / Feature Name`
@@ -685,7 +685,7 @@ export default function FeatureNamePage() {
         </div>
       </section>
 
-      {/* Related Features (optional — use white bg if this is the last section) */}
+      {/* Related Features (optional, use white bg if this is the last section) */}
       <section className="py-12 lg:py-16 px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-2xl lg:text-3xl font-light text-center mb-12">
@@ -710,7 +710,7 @@ export default function FeatureNamePage() {
         </div>
       </section>
 
-      {/* No in-page CTA — the global CallToAction from layout.tsx renders below */}
+      {/* No in-page CTA, the global CallToAction from layout.tsx renders below */}
     </main>
   )
 }
@@ -725,16 +725,16 @@ export default function FeatureNamePage() {
 - [ ] Breadcrumb links back to the correct parent module
 - [ ] Capabilities section has 3–4 items, each with a real screenshot
 - [ ] Alternating rows alternate correctly (image-left, image-right, image-left...)
-- [ ] All headings use `font-light` — nothing is bold
+- [ ] All headings use `font-light`, nothing is bold
 - [ ] `max-w-4xl` for text, `max-w-5xl` for capability rows, `max-w-6xl` for hero + showcase
 - [ ] Images have `alt` text and use `rounded-2xl` + `overflow-hidden`
 - [ ] Section backgrounds alternate correctly (no two tinted sections adjacent)
 - [ ] Last section before CallToAction has a white background
 - [ ] Responsive: stacks to single column on mobile
 - [ ] Homepage vertical slider `primaryHref` updated to point to this feature page
-- [ ] No in-page CTA section — layout.tsx already provides the global CallToAction
-- [ ] Layout.tsx already provides SiteHeader, CallToAction, and SiteFooter — don't duplicate any of them
-- [ ] Page feels spacious — when in doubt, add more padding, not more content
+- [ ] No in-page CTA section, layout.tsx already provides the global CallToAction
+- [ ] Layout.tsx already provides SiteHeader, CallToAction, and SiteFooter, don't duplicate any of them
+- [ ] Page feels spacious, when in doubt, add more padding, not more content
 
 ---
 
@@ -743,8 +743,8 @@ export default function FeatureNamePage() {
 | File | Purpose |
 |------|---------|
 | `app/features/[feature-name]/page.tsx` | Feature pages (to be created) |
-| [app/page.tsx](app/page.tsx) | Homepage — vertical slider links to feature pages |
-| [app/layout.tsx](app/layout.tsx) | Root layout — header, global CTA, footer |
+| [app/page.tsx](app/page.tsx) | Homepage, vertical slider links to feature pages |
+| [app/layout.tsx](app/layout.tsx) | Root layout, header, global CTA, footer |
 | [app/globals.css](app/globals.css) | Color system, shadows, animations |
 | [components/ui/button.tsx](components/ui/button.tsx) | Button variants |
 | [components/call-to-action.tsx](components/call-to-action.tsx) | Global CTA component |

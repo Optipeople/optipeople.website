@@ -8,7 +8,7 @@ customer: "Kvik"
 metric: "+5%"
 metricLabel: "uptime"
 logo: "/images/logos/Kvik.png"
-quote: "We now perform maintenance based on desired operating hours instead of fixed time intervals — much more efficient."
+quote: "We now perform maintenance based on desired operating hours instead of fixed time intervals, much more efficient."
 outcome: "Usage-based maintenance raised uptime 5% and removed around four unnecessary services a year on 24/7 machines."
 ---
 

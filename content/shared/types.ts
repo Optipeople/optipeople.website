@@ -30,7 +30,7 @@ export type RelatedLink = {
   href: string
 }
 
-/** "Standard" marketing page — modules, services, solutions. */
+/** "Standard" marketing page, modules, services, solutions. */
 export type StandardPage = {
   metaTitle: string
   metaDescription: string
@@ -53,7 +53,7 @@ export type StandardPage = {
   darkHero?: boolean
 }
 
-/** Feature deep-dive page — alternating image/text capabilities. */
+/** Feature deep-dive page, alternating image/text capabilities. */
 export type FeaturePage = {
   metaTitle: string
   metaDescription: string
@@ -77,7 +77,7 @@ export type FeaturePage = {
   related: RelatedLink[]
 }
 
-/** Simple landing / index page — eyebrow, headline, body, link grid. */
+/** Simple landing / index page, eyebrow, headline, body, link grid. */
 export type SimplePage = {
   metaTitle: string
   metaDescription: string

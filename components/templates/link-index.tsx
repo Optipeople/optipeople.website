@@ -11,7 +11,7 @@ import { getPageTheme, type PageFamily } from "@/lib/page-theme"
 import type { Locale } from "@/i18n/routing"
 
 /**
- * Hub page for a family of deep-dives — /features, /modules, /services,
+ * Hub page for a family of deep-dives, /features, /modules, /services,
  * /solutions.
  *
  * Reads the same `SimplePage` content as the generic template, so there is no
@@ -20,7 +20,7 @@ import type { Locale } from "@/i18n/routing"
  * hub previews its destinations instead of listing identical boxes.
  *
  * Replaces the former SimpleLandingPage, which backed exactly these four
- * routes and nothing else. Pages like /get-help and /videos were never on it —
+ * routes and nothing else. Pages like /get-help and /videos were never on it, 
  * they carry their own bespoke layouts and are untouched.
  */
 export function LinkIndexPage({
@@ -36,7 +36,7 @@ export function LinkIndexPage({
 
   return (
     <main className="min-h-screen">
-      {/* Hero — neutral, because the cards below carry the colour. */}
+      {/* Hero, neutral, because the cards below carry the colour. */}
       <section className="bg-[var(--gray-1)] pb-20 pt-12 lg:pb-28 lg:pt-16">
         <div className="px-[var(--edge)]">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
@@ -113,7 +113,7 @@ export function LinkIndexPage({
         </div>
       </section>
 
-      {/* Editorial sections — hairline grid rather than loose paragraphs. */}
+      {/* Editorial sections, hairline grid rather than loose paragraphs. */}
       {page.sections && page.sections.length > 0 && (
         <section className="px-[var(--edge)] pb-20 lg:pb-28">
           <div className="grid gap-px overflow-hidden rounded-[1.5rem] bg-black/[0.08] sm:grid-cols-2">

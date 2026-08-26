@@ -32,7 +32,7 @@ export function FeaturePageTemplate({
 
   return (
     <main className="min-h-screen">
-      {/* Hero — the tint washes down from behind the header and fades out
+      {/* Hero, the tint washes down from behind the header and fades out
           before the proof strip, so the page opens on colour, not on white. */}
       <section className="relative isolate overflow-hidden pb-16 pt-8 lg:pb-24 lg:pt-12">
         <div
@@ -97,7 +97,7 @@ export function FeaturePageTemplate({
         </div>
       </section>
 
-      {/* Proof strip — numbers move up out of the page tail so the visitor
+      {/* Proof strip, numbers move up out of the page tail so the visitor
           meets the evidence while the claim is still on screen. */}
       <section className="px-[var(--edge)]">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
@@ -124,7 +124,7 @@ export function FeaturePageTemplate({
         </dl>
       </section>
 
-      {/* Value proposition — asymmetric two-column: the statement holds the
+      {/* Value proposition, asymmetric two-column: the statement holds the
           left line while the argument runs beside it. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
@@ -137,7 +137,7 @@ export function FeaturePageTemplate({
         </div>
       </section>
 
-      {/* Capabilities — numbered tinted panels. Each is a single surface
+      {/* Capabilities, numbered tinted panels. Each is a single surface
           holding both the copy and the screenshot, alternating sides. */}
       <section
         id="capabilities"
@@ -194,7 +194,7 @@ export function FeaturePageTemplate({
         </div>
       </section>
 
-      {/* Showcase — full-bleed deep surface, the one hard rhythm break. */}
+      {/* Showcase, full-bleed deep surface, the one hard rhythm break. */}
       {page.showcaseTitle && page.showcaseBody && page.showcaseImage && (
         <section
           className="py-20 text-white lg:py-32"
@@ -225,7 +225,7 @@ export function FeaturePageTemplate({
         </section>
       )}
 
-      {/* Related — hairline grid instead of detached bordered cards.
+      {/* Related, hairline grid instead of detached bordered cards.
           The page closes here: the conversion CTA is rendered globally by
           app/[locale]/layout.tsx, so the template must not repeat it. */}
       <section className="px-[var(--edge)] py-20 lg:py-28">

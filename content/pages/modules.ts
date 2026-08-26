@@ -95,7 +95,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One dashboard for your entire production",
         visualBody:
-          "From individual machines to plant-wide KPIs — drill into the data that matters, at any level.",
+          "From individual machines to plant-wide KPIs, drill into the data that matters, at any level.",
         visualImage: "/images/dashboard2.png",
         visualAlt: "Opticloud production dashboard",
         metricsTitle: "Typical Results",
@@ -109,12 +109,12 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Connect",
             description:
-              "We integrate with your existing machines and PLCs — no production disruption, no hardware overhaul.",
+              "We integrate with your existing machines and PLCs, no production disruption, no hardware overhaul.",
           },
           {
             title: "Visualize",
             description:
-              "Your team gets a live dashboard from day one. Real-time OEE, stop causes, and shift performance — all in one place.",
+              "Your team gets a live dashboard from day one. Real-time OEE, stop causes, and shift performance all in one place.",
           },
           {
             title: "Improve",
@@ -240,7 +240,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: FileText,
             title: "Quality Reports",
             description:
-              "Generate quality reports automatically — by product, line, or time period. Share insights with customers and auditors instantly.",
+              "Generate quality reports automatically, by product, line, or time period. Share insights with customers and auditors instantly.",
           },
         ],
         visualTitle: "Quality data connected to production",
@@ -395,7 +395,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Maintenance planning made visible",
         visualBody:
-          "See upcoming tasks, overdue items, and machine health status at a glance — across your entire facility.",
+          "See upcoming tasks, overdue items, and machine health status at a glance across your entire facility.",
         visualImage: "/images/taskapp2.png",
         visualAlt: "Maintenance tasks in Opticloud",
         metricsTitle: "Typical Results",
@@ -503,14 +503,14 @@ const modules: LocalizedPage<StandardPage>[] = [
         primaryLabel: "Request a Demo",
         introTitle: "You can't reduce what you can't see",
         introBody:
-          "Energy is often the second-largest cost in manufacturing — yet most factories have no visibility into where it goes. Monthly utility bills tell you nothing about which machines waste energy or when consumption spikes. The Energy module connects real-time consumption data directly to your production.",
+          "Energy is often the second-largest cost in manufacturing, yet most factories have no visibility into where it goes. Monthly utility bills tell you nothing about which machines waste energy or when consumption spikes. The Energy module connects real-time consumption data directly to your production.",
         capabilitiesTitle: "Everything you need for energy transparency",
         features: [
           {
             icon: Zap,
             title: "Real-Time kWh Tracking",
             description:
-              "Monitor energy consumption per machine, line, or facility in real time. Understand exactly where energy is used — and wasted.",
+              "Monitor energy consumption per machine, line, or facility in real time. Understand exactly where energy is used, and wasted.",
           },
           {
             icon: Thermometer,
@@ -649,11 +649,11 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Analysis Module",
         heroTitle: "From Data to Decisions",
         heroBody:
-          "Turn raw production data into clear reports on performance, losses, and cost drivers — without spreadsheets or manual work.",
+          "Turn raw production data into clear reports on performance, losses, and cost drivers, without spreadsheets or manual work.",
         primaryLabel: "Request a Demo",
         introTitle: "Data is only valuable if it drives action",
         introBody:
-          "Collecting production data is one thing — turning it into decisions is another. When reporting takes hours of manual work and insights arrive too late, the data loses its value. The Analysis module transforms live production data into actionable reports that reach the right people at the right time.",
+          "Collecting production data is one thing. Turning it into decisions is another. When reporting takes hours of manual work and insights arrive too late, the data loses its value. The Analysis module transforms live production data into actionable reports that reach the right people at the right time.",
         capabilitiesTitle: "Everything you need for production intelligence",
         features: [
           {
@@ -678,7 +678,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: PieChart,
             title: "Loss Categorization",
             description:
-              "Break down losses by type — availability, performance, quality. Prioritize improvements based on actual impact.",
+              "Break down losses by type, availability, performance, quality. Prioritize improvements based on actual impact.",
           },
           {
             icon: TrendingUp,
@@ -690,12 +690,12 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: BarChart3,
             title: "Custom Dashboards",
             description:
-              "Build dashboards for different roles — from operators to management. Everyone sees the data relevant to their decisions.",
+              "Build dashboards for different roles, from operators to management. Everyone sees the data relevant to their decisions.",
           },
         ],
         visualTitle: "Reports that write themselves",
         visualBody:
-          "From shift summaries to monthly management reports — automated, accurate, and always up to date.",
+          "From shift summaries to monthly management reports, automated, accurate, and always up to date.",
         visualImage: "/images/report-mockup1.png",
         visualAlt: "Reporting in Opticloud",
         metricsTitle: "Typical Results",
@@ -714,7 +714,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Analyze",
             description:
-              "Turn raw data into clear insights with automated reports, loss analysis, and trend tracking — no spreadsheets needed.",
+              "Turn raw data into clear insights with automated reports, loss analysis, and trend tracking. No spreadsheets needed.",
           },
           {
             title: "Decide",
@@ -799,11 +799,11 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "IoT Module",
         heroTitle: "Get Data from Anything",
         heroBody:
-          "Connect any machine, sensor, or system to your platform. Ingest data from PLCs, IoT gateways, and legacy equipment — no matter the protocol or age.",
+          "Connect any machine, sensor, or system to your platform. Ingest data from PLCs, IoT gateways, and legacy equipment, no matter the protocol or age.",
         primaryLabel: "Request a Demo",
         introTitle: "Data collection shouldn't be the hard part",
         introBody:
-          "Most factories run dozens of machines from different manufacturers, generations, and protocols. Getting reliable data from all of them into one place is the biggest barrier to digitalization. The IoT module removes that barrier — so you can focus on insights, not infrastructure.",
+          "Most factories run dozens of machines from different manufacturers, generations, and protocols. Getting reliable data from all of them into one place is the biggest barrier to digitalization. The IoT module removes that barrier, so you can focus on insights, not infrastructure.",
         capabilitiesTitle: "Everything you need to get machines online",
         features: [
           {
@@ -816,13 +816,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Cpu,
             title: "Protocol-Agnostic Ingestion",
             description:
-              "Speak every machine language. Whether it's Modbus, Profinet, EtherNet/IP, or a proprietary protocol — we handle translation.",
+              "Speak every machine language. Whether it's Modbus, Profinet, EtherNet/IP, or a proprietary protocol. We handle translation.",
           },
           {
             icon: Wifi,
             title: "Edge Data Collection",
             description:
-              "Deploy lightweight edge gateways that collect, buffer, and forward data — even when connectivity is intermittent.",
+              "Deploy lightweight edge gateways that collect, buffer, and forward data, even when connectivity is intermittent.",
           },
           {
             icon: Layers,
@@ -845,7 +845,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One gateway, every machine",
         visualBody:
-          "See all connected equipment, data streams, and signal health in a single overview — from CNC machines to packaging lines.",
+          "See all connected equipment, data streams, and signal health in a single overview, from CNC machines to packaging lines.",
         visualImage: "/images/Telemetry-Numbers.png",
         visualAlt: "Telemetry overview",
         metricsTitle: "Typical Results",
@@ -864,12 +864,12 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Ingest",
             description:
-              "Machine signals, sensor readings, and system data flow into OptiCloud automatically — structured and ready to use.",
+              "Machine signals, sensor readings, and system data flow into OptiCloud automatically, structured and ready to use.",
           },
           {
             title: "Activate",
             description:
-              "With data flowing, activate any OptiCloud module — Production, Quality, Maintenance, Energy, or Analysis — instantly.",
+              "With data flowing, activate any OptiCloud module instantly: Production, Quality, Maintenance, Energy, or Analysis.",
           },
         ],
         darkHero: true,
@@ -950,11 +950,11 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "ERP Shopfloor Module",
         heroTitle: "Bridge the Gap Between ERP and Floor",
         heroBody:
-          "Your ERP knows the plan. Your machines know reality. OptiCloud connects the two — giving planners real-time actuals and operators the context they need.",
+          "Your ERP knows the plan. Your machines know reality. OptiCloud connects the two, giving planners real-time actuals and operators the context they need.",
         primaryLabel: "Request a Demo",
         introTitle: "Your ERP can't see the shopfloor",
         introBody:
-          "ERP systems are built for planning — not for real-time production monitoring. The result is a gap: planners work with outdated numbers, operators work without context, and nobody has a live picture of what's actually happening. The ERP Shopfloor module closes that gap by becoming the real-time interface between your ERP and your production floor.",
+          "ERP systems are built for planning, not for real-time production monitoring. The result is a gap: planners work with outdated numbers, operators work without context, and nobody has a live picture of what's actually happening. The ERP Shopfloor module closes that gap by becoming the real-time interface between your ERP and your production floor.",
         capabilitiesTitle: "Everything you need for shopfloor–ERP integration",
         features: [
           {
@@ -996,7 +996,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One dashboard for your entire production",
         visualBody:
-          "From ERP work orders to machine-level OEE — drill into the data that matters, at any level.",
+          "From ERP work orders to machine-level OEE, drill into the data that matters, at any level.",
         visualImage: "/images/dashboard1.png",
         visualAlt: "Shopfloor dashboard",
         metricsTitle: "Typical Results",
@@ -1010,12 +1010,12 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Connect",
             description:
-              "We connect to your ERP and your machines. Work orders flow down to the floor, actuals flow back up — automatically.",
+              "We connect to your ERP and your machines. Work orders flow down to the floor, actuals flow back up, automatically.",
           },
           {
             title: "Visualize",
             description:
-              "Your team gets a live shopfloor dashboard from day one. Real-time OEE, order progress, and stop causes — all in one place.",
+              "Your team gets a live shopfloor dashboard from day one. Real-time OEE, order progress, and stop causes all in one place.",
           },
           {
             title: "Improve",
@@ -1099,12 +1099,12 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "MES Module",
         heroTitle: "Your Cloud MES Platform",
         heroBody:
-          "A complete Manufacturing Execution System in the cloud. Collect efficiency, telemetry, and energy data — and turn it into actionable insight for every level of your organization.",
+          "A complete Manufacturing Execution System in the cloud. Collect efficiency, telemetry, and energy data, and turn it into actionable insight for every level of your organization.",
         primaryLabel: "Request a Demo",
         introTitle: "Manufacturing needs more than machines",
         introBody:
-          "Industry 5.0 puts people back at the center. Your operators, managers, and directors need accessible, actionable data — not more complexity. OptiCloud bridges the gap between technology and human decision-making, giving every level of your organization the visibility to act with confidence.",
-        capabilitiesTitle: "A complete MES — built for the cloud",
+          "Industry 5.0 puts people back at the center. Your operators, managers, and directors need accessible, actionable data, not more complexity. OptiCloud bridges the gap between technology and human decision-making, giving every level of your organization the visibility to act with confidence.",
+        capabilitiesTitle: "A complete MES, built for the cloud",
         features: [
           {
             icon: Gauge,
@@ -1116,7 +1116,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Monitor,
             title: "Customizable Dashboards",
             description:
-              "Give operators, managers, and directors the view they need. From shopfloor screens to boardroom reports — one platform, every perspective.",
+              "Give operators, managers, and directors the view they need. From shopfloor screens to boardroom reports, one platform, every perspective.",
           },
           {
             icon: Video,
@@ -1145,7 +1145,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One platform, every perspective",
         visualBody:
-          "From the operator at the machine to the director in the boardroom — everyone sees the data they need, in the format that works for them.",
+          "From the operator at the machine to the director in the boardroom, everyone sees the data they need, in the format that works for them.",
         visualImage: "/images/OpticloudOPSingle.jpg",
         visualAlt: "Opticloud MES platform",
         metricsTitle: "Typical Results",
@@ -1159,12 +1159,12 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Connect",
             description:
-              "Integrate your machines, sensors, and existing systems into a single cloud-based MES. No rip-and-replace — we build on what you have.",
+              "Integrate your machines, sensors, and existing systems into a single cloud-based MES. No rip-and-replace. We build on what you have.",
           },
           {
             title: "Visualize",
             description:
-              "Operators, managers, and directors each get accessible, actionable data — from live shopfloor dashboards to strategic KPI overviews.",
+              "Operators, managers, and directors each get accessible, actionable data, from live shopfloor dashboards to strategic KPI overviews.",
           },
           {
             title: "Optimize",
@@ -1233,6 +1233,306 @@ const modules: LocalizedPage<StandardPage>[] = [
             title: "Optimér",
             description:
               "Brug realtidsdata til at fjerne gætteri og drive løbende forbedringer.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "planning",
+    href: "/modules/planning",
+    content: {
+      en: {
+        metaTitle: "Planning Module",
+        metaDescription:
+          "Plan and sequence production against measured capacity, real run rates, real machine availability, and one plan the floor can actually see.",
+        eyebrow: "Planning Module",
+        heroTitle: "Plan Against the Capacity You Actually Have",
+        heroBody:
+          "Schedules built on measured run rates and real machine availability instead of spreadsheet assumptions, and visible to everyone who has to deliver them.",
+        primaryLabel: "Request a Demo",
+        introTitle: "A plan is only as good as the numbers under it",
+        introBody:
+          "Most production plans are built from standard times that were set years ago and a capacity figure nobody has re-measured since. The plan looks fine on Monday and has drifted by Wednesday. When planning reads from the same data as the shopfloor, the numbers underneath it are the ones the machines actually produced, so the plan starts realistic and stays that way.",
+        capabilitiesTitle: "Planning that stays connected to the floor",
+        features: [
+          {
+            icon: Calendar,
+            title: "Capacity-Based Scheduling",
+            description:
+              "Schedule against real available hours per machine and line, planned maintenance, shift patterns, and known downtime already accounted for.",
+          },
+          {
+            icon: Gauge,
+            title: "Run Rates From Real Data",
+            description:
+              "Standard times come from what the machine has actually produced, per item and per setup, instead of an estimate someone typed in once.",
+          },
+          {
+            icon: ArrowLeftRight,
+            title: "Sequencing and Changeovers",
+            description:
+              "Order the queue to cut setup time. See what a resequence costs in changeover minutes before you commit to it.",
+          },
+          {
+            icon: AlertTriangle,
+            title: "Conflicts Surface Early",
+            description:
+              "Overloaded machines, colliding orders, and missing capacity show up while there is still time to move something.",
+          },
+          {
+            icon: RefreshCw,
+            title: "Replan Without Rebuilding",
+            description:
+              "A breakdown or a rush order does not mean starting the plan over. Adjust the affected window and see the knock-on effects immediately.",
+          },
+          {
+            icon: Monitor,
+            title: "One Plan, Visible on the Floor",
+            description:
+              "Operators see the same sequence the planner sees, on the panel at the machine, no printed plan from the morning meeting going stale in a folder.",
+          },
+        ],
+        visualTitle: "Planning and production, same data",
+        visualBody:
+          "The plan reads the machine signals, and progress flows straight back. What is behind, what is ahead, and what it costs to reshuffle are all visible in one place.",
+        visualImage: "/images/report-mockup2.png",
+        visualAlt: "Production planning overview in Opticloud",
+        metricsTitle: "What Changes",
+        metrics: [
+          { metric: "Measured", label: "Capacity from real output, not estimates" },
+          { metric: "One plan", label: "Shared by planning and the shopfloor" },
+          { metric: "Same day", label: "Replan when reality changes" },
+        ],
+        stepsTitle: "How It Works",
+        steps: [
+          {
+            title: "Measure",
+            description:
+              "The platform builds run rates and available hours per machine from production data you are already collecting.",
+          },
+          {
+            title: "Plan",
+            description:
+              "Sequence orders against that capacity, with setup time and planned maintenance in the same picture.",
+          },
+          {
+            title: "Adjust",
+            description:
+              "Progress reports itself from the floor. When something slips, you see the consequence and replan the affected window.",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Planlægningsmodul | OptiPeople",
+        metaDescription:
+          "Planlæg og sekvensér produktionen efter målt kapacitet, reelle kørehastigheder, reel maskintilgængelighed og én plan, gulvet kan se.",
+        eyebrow: "Planlægningsmodul",
+        heroTitle: "Planlæg efter den kapacitet I faktisk har",
+        heroBody:
+          "Planer bygget på målte kørehastigheder og reel maskintilgængelighed i stedet for regnearksantagelser, og synlige for dem, der skal levere dem.",
+        primaryLabel: "Book en demo",
+        introTitle: "En plan er kun så god som tallene under den",
+        introBody:
+          "De fleste planer bygger på standardtider, der blev sat for år tilbage, og en kapacitet, ingen har målt siden. Når planlægningen læser fra samme data som gulvet, er tallene under planen dem, maskinerne faktisk har produceret.",
+        capabilitiesTitle: "Planlægning der hænger sammen med gulvet",
+        features: [
+          {
+            icon: Calendar,
+            title: "Planlægning på reel kapacitet",
+            description:
+              "Planlæg efter reelle tilgængelige timer pr. maskine, skiftplaner, planlagt vedligehold og kendt nedetid er regnet med.",
+          },
+          {
+            icon: Gauge,
+            title: "Kørehastigheder fra virkelige data",
+            description:
+              "Standardtider kommer fra det, maskinen faktisk har produceret, pr. vare og pr. opstilling.",
+          },
+          {
+            icon: RefreshCw,
+            title: "Omplanlæg uden at starte forfra",
+            description:
+              "Et nedbrud eller en hasteordre kræver ikke en ny plan. Justér det berørte vindue og se effekten med det samme.",
+          },
+        ],
+        visualTitle: "Planlægning og produktion på samme data",
+        visualBody:
+          "Planen læser maskinsignalerne, og fremdriften går direkte tilbage. Hvad der er bagud, og hvad en omrokering koster, står i samme billede.",
+        visualImage: "/images/report-mockup2.png",
+        visualAlt: "Overblik over produktionsplanlægning i Opticloud",
+        metricsTitle: "Hvad ændrer sig",
+        metrics: [
+          { metric: "Målt", label: "Kapacitet fra reelt output" },
+          { metric: "Én plan", label: "Delt mellem planlægning og gulv" },
+          { metric: "Samme dag", label: "Omplanlægning når virkeligheden ændrer sig" },
+        ],
+        stepsTitle: "Sådan virker det",
+        steps: [
+          {
+            title: "Mål",
+            description:
+              "Platformen bygger kørehastigheder og tilgængelige timer pr. maskine ud fra de produktionsdata, I allerede opsamler.",
+          },
+          {
+            title: "Planlæg",
+            description:
+              "Sekvensér ordrer efter den kapacitet, med opstillingstid og planlagt vedligehold i samme billede.",
+          },
+          {
+            title: "Justér",
+            description:
+              "Fremdriften melder sig selv fra gulvet. Skrider noget, ser I konsekvensen og omplanlægger det berørte vindue.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "documents",
+    href: "/modules/documents",
+    content: {
+      en: {
+        metaTitle: "Documents Module",
+        metaDescription:
+          "Work instructions, drawings, and certificates at the machine, always the current version, tied to the order and the operator in front of it.",
+        eyebrow: "Documents Module",
+        heroTitle: "The Right Instruction, at the Right Machine",
+        heroBody:
+          "Work instructions, drawings, and certificates where the work happens, in the version that applies to the order in front of the operator.",
+        primaryLabel: "Request a Demo",
+        introTitle: "Documentation on the floor goes stale quietly",
+        introBody:
+          "Instructions live in binders by the machine, in a shared drive nobody trusts, and in the head of whoever set the job up last time. When a drawing is revised, the old print stays on the floor until someone notices. Tying documents to the machine and the order means the operator opens what applies right now, and the revision reaches the floor the moment it is approved.",
+        capabilitiesTitle: "Documentation that follows the work",
+        features: [
+          {
+            icon: FileText,
+            title: "Instructions at the Machine",
+            description:
+              "Open the setup sheet, drawing, or work instruction from the panel at the machine, filtered to the order being run.",
+          },
+          {
+            icon: History,
+            title: "Versions That Cannot Drift",
+            description:
+              "One current version, one history. Approve a revision and the floor has it immediately, no printed copy outliving it.",
+          },
+          {
+            icon: Search,
+            title: "Find It by Machine or Order",
+            description:
+              "Documents are linked to machines, items, and orders, so finding the right one does not depend on knowing a folder structure.",
+          },
+          {
+            icon: ClipboardCheck,
+            title: "Read and Understood",
+            description:
+              "Ask for confirmation on the documents that need it, and see who acknowledged which version and when.",
+          },
+          {
+            icon: ShieldCheck,
+            title: "Audit-Ready by Default",
+            description:
+              "Certificates, calibration records, and signed-off instructions sit with the production data they belong to, ready when an auditor asks.",
+          },
+          {
+            icon: Smartphone,
+            title: "Panel, Tablet, or Phone",
+            description:
+              "The same document set on the operator panel, on a tablet at the line, and on a phone in maintenance.",
+          },
+        ],
+        visualTitle: "Documents next to the data they describe",
+        visualBody:
+          "The instruction for a job, the stops registered on it, and the quality checks that followed all sit on the same order, so a question about what happened has one place to go.",
+        visualImage: "/images/taskapp1.png",
+        visualAlt: "Work instructions and documents on an operator panel",
+        metricsTitle: "What Changes",
+        metrics: [
+          { metric: "Current", label: "One approved version, everywhere" },
+          { metric: "Paperless", label: "Binders off the shopfloor" },
+          { metric: "Traceable", label: "Who read what, and when" },
+        ],
+        stepsTitle: "How It Works",
+        steps: [
+          {
+            title: "Upload",
+            description:
+              "Bring in instructions, drawings, and certificates, and link them to the machines, items, and orders they apply to.",
+          },
+          {
+            title: "Publish",
+            description:
+              "Approve a version and it becomes the one the floor sees. Earlier versions stay in the history, not on the machine.",
+          },
+          {
+            title: "Confirm",
+            description:
+              "Operators open what applies to the job and acknowledge the documents that require it, logged with the production record.",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Dokumentmodul | OptiPeople",
+        metaDescription:
+          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den gældende version, knyttet til ordren foran operatøren.",
+        eyebrow: "Dokumentmodul",
+        heroTitle: "Den rigtige instruktion ved den rigtige maskine",
+        heroBody:
+          "Arbejdsinstruktioner, tegninger og certifikater dér hvor arbejdet sker, i den version, der gælder for ordren foran operatøren.",
+        primaryLabel: "Book en demo",
+        introTitle: "Dokumentation på gulvet bliver forældet i stilhed",
+        introBody:
+          "Instruktioner ligger i mapper ved maskinen, på et fællesdrev ingen stoler på, og i hovedet på den, der sidst stillede op. Når dokumenter er knyttet til maskine og ordre, åbner operatøren det, der gælder nu, og en ny revision er på gulvet, så snart den er godkendt.",
+        capabilitiesTitle: "Dokumentation der følger arbejdet",
+        features: [
+          {
+            icon: FileText,
+            title: "Instruktioner ved maskinen",
+            description:
+              "Åbn opstillingsark, tegning eller arbejdsinstruktion fra panelet ved maskinen, filtreret til den kørende ordre.",
+          },
+          {
+            icon: History,
+            title: "Versioner der ikke skrider",
+            description:
+              "Én gældende version og én historik. Godkend en revision, og gulvet har den med det samme.",
+          },
+          {
+            icon: ShieldCheck,
+            title: "Klar til audit",
+            description:
+              "Certifikater, kalibreringer og godkendte instruktioner ligger sammen med de produktionsdata, de hører til.",
+          },
+        ],
+        visualTitle: "Dokumenter ved siden af de data, de beskriver",
+        visualBody:
+          "Instruktionen til en opgave, de stop der blev registreret på den, og kvalitetskontrollerne bagefter ligger på samme ordre.",
+        visualImage: "/images/taskapp1.png",
+        visualAlt: "Arbejdsinstruktioner og dokumenter på et operatørpanel",
+        metricsTitle: "Hvad ændrer sig",
+        metrics: [
+          { metric: "Gældende", label: "Én godkendt version overalt" },
+          { metric: "Papirløst", label: "Mapperne væk fra gulvet" },
+          { metric: "Sporbart", label: "Hvem læste hvad, og hvornår" },
+        ],
+        stepsTitle: "Sådan virker det",
+        steps: [
+          {
+            title: "Læg ind",
+            description:
+              "Hent instruktioner, tegninger og certifikater ind, og knyt dem til de maskiner, varer og ordrer de gælder for.",
+          },
+          {
+            title: "Udgiv",
+            description:
+              "Godkend en version, og den bliver den, gulvet ser. Tidligere versioner bliver i historikken, ikke på maskinen.",
+          },
+          {
+            title: "Bekræft",
+            description:
+              "Operatøren åbner det, der gælder for opgaven, og bekræfter de dokumenter, der kræver det.",
           },
         ],
       },

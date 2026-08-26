@@ -1,3 +1,4 @@
+import { moduleIndexLinks } from "@/content/modules-catalog"
 import type { SimplePage } from "@/content/shared/types"
 
 type Locale = "en" | "da"
@@ -7,10 +8,10 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
     en: {
       metaTitle: "Modules",
       metaDescription:
-        "Explore the OptiPeople modules — production, quality, maintenance, energy, analysis, IoT, ERP shopfloor, and MES — on one connected platform.",
+        "Explore the OptiPeople modules on one connected platform: modular MES, OEE, QMS, EMS, maintenance, planning, orders, IoT, documents, analysis, and AI agents.",
       eyebrow: "Modules",
       headline: "One platform, every part of production",
-      body: "Each module solves a specific operational need, and together they give you a single, connected view of the shopfloor. You do not have to take all of them at once — most factories start with production monitoring on one line, then add the modules that answer the next question.",
+      body: "Each module solves a specific operational need, and together they give you a single, connected view of the shopfloor. You do not have to take all of them at once. Most factories start with production monitoring on one line, then add the modules that answer the next question.",
       linksTitle: "Explore the modules",
       sections: [
         {
@@ -30,24 +31,15 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
           body: "Everything the platform collects is available through the API and can be published over MQTT, so your production data can feed Power BI, a data warehouse, or your own systems. The platform is a place your data works, not a place it gets locked in.",
         },
       ],
-      links: [
-        { title: "Production", href: "/modules/production", description: "Live OEE, downtime, orders, and shift performance." },
-        { title: "Quality", href: "/modules/quality", description: "Digital checks, deviations, and full traceability." },
-        { title: "Maintenance", href: "/modules/maintenance", description: "Preventive planning and mobile task management." },
-        { title: "Energy", href: "/modules/energy", description: "Energy consumption connected to production output." },
-        { title: "Analysis", href: "/modules/analysis", description: "Automated reports on performance, loss, and cost." },
-        { title: "IoT", href: "/modules/iot", description: "Connect new and legacy machines, sensors, and protocols." },
-        { title: "ERP Shopfloor", href: "/modules/erp-shopfloor", description: "Two-way sync between ERP planning and the floor." },
-        { title: "MES", href: "/modules/mes", description: "A cloud-based Manufacturing Execution System." },
-      ],
+      links: moduleIndexLinks("en"),
     },
     da: {
       metaTitle: "Moduler | OptiPeople",
       metaDescription:
-        "Udforsk OptiPeople-modulerne — produktion, kvalitet, vedligehold, energi, analyse, IoT, ERP shopfloor og MES — på én forbundet platform.",
+        "Udforsk OptiPeople-modulerne på én forbundet platform: modulært MES, OEE, QMS, EMS, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter.",
       eyebrow: "Moduler",
       headline: "Én platform til hele produktionen",
-      body: "Hvert modul løser et konkret driftsbehov, og sammen giver de ét forbundet overblik over fabriksgulvet. I behøver ikke tage dem alle på én gang — de fleste starter med produktionsovervågning på én linje og tilføjer så de moduler, der svarer på det næste spørgsmål.",
+      body: "Hvert modul løser et konkret driftsbehov, og sammen giver de ét forbundet overblik over fabriksgulvet. I behøver ikke tage dem alle på én gang, de fleste starter med produktionsovervågning på én linje og tilføjer så de moduler, der svarer på det næste spørgsmål.",
       linksTitle: "Udforsk modulerne",
       sections: [
         {
@@ -56,7 +48,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Start dér hvor det gør ondt",
-          body: "Der er ingen fast rækkefølge. Er nedetid problemet, så start med produktion og stopårsagsregistrering. Er det uplanlagte nedbrud, så start med vedligehold. Er energiforbruget under lup, så start dér. Hvert modul giver værdi alene — og mere værdi sammen med de andre.",
+          body: "Der er ingen fast rækkefølge. Er nedetid problemet, så start med produktion og stopårsagsregistrering. Er det uplanlagte nedbrud, så start med vedligehold. Er energiforbruget under lup, så start dér. Hvert modul giver værdi alene, og mere værdi sammen med de andre.",
         },
         {
           title: "Også de gamle maskiner",
@@ -64,29 +56,20 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Data I kan tage med jer",
-          body: "Alt, hvad platformen opsamler, er tilgængeligt via API'et og kan publiceres over MQTT. Jeres produktionsdata kan derfor fodre Power BI, et datawarehouse eller jeres egne systemer. Platformen er et sted, hvor jeres data arbejder — ikke et sted, hvor de bliver låst inde.",
+          body: "Alt, hvad platformen opsamler, er tilgængeligt via API'et og kan publiceres over MQTT. Jeres produktionsdata kan derfor fodre Power BI, et datawarehouse eller jeres egne systemer. Platformen er et sted, hvor jeres data arbejder, ikke et sted, hvor de bliver låst inde.",
         },
       ],
-      links: [
-        { title: "Produktion", href: "/modules/production", description: "Live OEE, nedetid, ordrer og skiftperformance." },
-        { title: "Kvalitet", href: "/modules/quality", description: "Digitale kontroller, afvigelser og fuld sporbarhed." },
-        { title: "Vedligehold", href: "/modules/maintenance", description: "Forebyggende planlægning og mobil opgavestyring." },
-        { title: "Energi", href: "/modules/energy", description: "Energiforbrug koblet til produktionens output." },
-        { title: "Analyse", href: "/modules/analysis", description: "Automatiske rapporter om performance, tab og omkostninger." },
-        { title: "IoT", href: "/modules/iot", description: "Forbind nye og gamle maskiner, sensorer og protokoller." },
-        { title: "ERP Shopfloor", href: "/modules/erp-shopfloor", description: "Tovejssynk mellem ERP-planlægning og gulvet." },
-        { title: "MES", href: "/modules/mes", description: "Et cloudbaseret Manufacturing Execution System." },
-      ],
+      links: moduleIndexLinks("da"),
     },
   },
   "/features": {
     en: {
       metaTitle: "Features",
       metaDescription:
-        "Explore OptiPeople features — from production efficiency and stop-cause registration to AI copilots and machine control.",
+        "Explore OptiPeople features, from production efficiency and stop-cause registration to AI copilots and machine control.",
       eyebrow: "Features",
       headline: "From raw machine signals to real understanding",
-      body: "Explore the capabilities that make production visible, measurable, and improvable — every day. Each one starts from something a machine or an operator actually records, and ends in a number someone can act on.",
+      body: "Explore the capabilities that make production visible, measurable, and improvable, every day. Each one starts from something a machine or an operator actually records, and ends in a number someone can act on.",
       linksTitle: "Explore the features",
       sections: [
         {
@@ -95,7 +78,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Registered where the work happens",
-          body: "Stop causes, quality checks, and maintenance tasks are captured at the machine, on a panel or a phone, in the seconds after they happen. Data collected at the source is data people trust — and it does not depend on anyone remembering to fill in a spreadsheet at the end of a shift.",
+          body: "Stop causes, quality checks, and maintenance tasks are captured at the machine, on a panel or a phone, in the seconds after they happen. Data collected at the source is data people trust, and it does not depend on anyone remembering to fill in a spreadsheet at the end of a shift.",
         },
         {
           title: "The same numbers for everyone",
@@ -103,7 +86,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Useful on day one, better over time",
-          body: "A connected line tells you something immediately: how much it ran, when it stopped, how long the changeovers took. As history builds, the same data supports patterns — recurring stop causes, machines drifting off pace, energy per unit creeping up.",
+          body: "A connected line tells you something immediately: how much it ran, when it stopped, how long the changeovers took. As history builds, the same data supports patterns: recurring stop causes, machines drifting off pace, energy per unit creeping up.",
         },
       ],
       links: [
@@ -120,19 +103,19 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
     da: {
       metaTitle: "Funktioner | OptiPeople",
       metaDescription:
-        "Udforsk OptiPeople-funktioner — fra produktionseffektivitet og stopårsagsregistrering til AI-copilots og maskinstyring.",
+        "Udforsk OptiPeople-funktioner, fra produktionseffektivitet og stopårsagsregistrering til AI-copilots og maskinstyring.",
       eyebrow: "Funktioner",
       headline: "Fra rå maskinsignaler til reel forståelse",
-      body: "Udforsk de funktioner, der gør produktionen synlig, målbar og mulig at forbedre — hver dag. Hver enkelt tager udgangspunkt i noget, en maskine eller en operatør rent faktisk registrerer, og ender i et tal, nogen kan handle på.",
+      body: "Udforsk de funktioner, der gør produktionen synlig, målbar og mulig at forbedre, hver dag. Hver enkelt tager udgangspunkt i noget, en maskine eller en operatør rent faktisk registrerer, og ender i et tal, nogen kan handle på.",
       linksTitle: "Udforsk funktionerne",
       sections: [
         {
           title: "Målt, ikke skønnet",
-          body: "En maskine kørte enten eller også gjorde den ikke, og signalet siger hvad. Opticloud bygger sine tal på det, udstyret rapporterer, og det operatørerne registrerer ved maskinen. OEE-tallet på mandagsmødet kan derfor føres tilbage til konkrete minutter på en konkret linje — ikke til nogens erindring om ugen.",
+          body: "En maskine kørte enten eller også gjorde den ikke, og signalet siger hvad. Opticloud bygger sine tal på det, udstyret rapporterer, og det operatørerne registrerer ved maskinen. OEE-tallet på mandagsmødet kan derfor føres tilbage til konkrete minutter på en konkret linje, ikke til nogens erindring om ugen.",
         },
         {
           title: "Registreret dér hvor arbejdet sker",
-          body: "Stopårsager, kvalitetskontroller og vedligeholdsopgaver bliver registreret ved maskinen, på en panel eller en telefon, i sekunderne efter de sker. Data opsamlet ved kilden er data, folk stoler på — og det afhænger ikke af, at nogen husker at udfylde et regneark ved vagtens slutning.",
+          body: "Stopårsager, kvalitetskontroller og vedligeholdsopgaver bliver registreret ved maskinen, på en panel eller en telefon, i sekunderne efter de sker. Data opsamlet ved kilden er data, folk stoler på, og det afhænger ikke af, at nogen husker at udfylde et regneark ved vagtens slutning.",
         },
         {
           title: "De samme tal for alle",
@@ -140,7 +123,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Nyttigt fra dag ét, bedre med tiden",
-          body: "En forbundet linje fortæller jer noget med det samme: hvor meget den kørte, hvornår den stoppede, hvor lang tid omstillingerne tog. Efterhånden som historikken vokser, understøtter de samme data mønstre — gentagne stopårsager, maskiner der sakker bagud, energi pr. enhed der kryber opad.",
+          body: "En forbundet linje fortæller jer noget med det samme: hvor meget den kørte, hvornår den stoppede, hvor lang tid omstillingerne tog. Efterhånden som historikken vokser, understøtter de samme data mønstre: gentagne stopårsager, maskiner der sakker bagud, energi pr. enhed der kryber opad.",
         },
       ],
       links: [
@@ -171,7 +154,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "We start with what you already have",
-          body: "Most manufacturers already own more data than they use — in the ERP, in the controls, in a decade of spreadsheets. A project usually starts by finding out what is already there and what is genuinely missing, rather than by replacing systems that work.",
+          body: "Most manufacturers already own more data than they use, in the ERP, in the controls, in a decade of spreadsheets. A project usually starts by finding out what is already there and what is genuinely missing, rather than by replacing systems that work.",
         },
         {
           title: "Scoped to a first result",
@@ -204,7 +187,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Vi starter med det, I allerede har",
-          body: "De fleste produktionsvirksomheder ejer flere data, end de bruger — i ERP'et, i styringerne, i ti års regneark. Et projekt starter typisk med at finde ud af, hvad der allerede findes, og hvad der reelt mangler, frem for at udskifte systemer, der fungerer.",
+          body: "De fleste produktionsvirksomheder ejer flere data, end de bruger, i ERP'et, i styringerne, i ti års regneark. Et projekt starter typisk med at finde ud af, hvad der allerede findes, og hvad der reelt mangler, frem for at udskifte systemer, der fungerer.",
         },
         {
           title: "Skåret til et første resultat",
@@ -230,7 +213,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         "OptiPeople solutions for manufacturers, OEMs and machine builders, and service and aftermarket teams.",
       eyebrow: "Solutions",
       headline: "Built for how you make and service products",
-      body: "Whether you run a factory, build machines, or service an installed base, OptiPeople gives you the operational data to act faster. The platform is the same in all three cases — what changes is whose machines you are watching and what you need to decide.",
+      body: "Whether you run a factory, build machines, or service an installed base, OptiPeople gives you the operational data to act faster. The platform is the same in all three cases, what changes is whose machines you are watching and what you need to decide.",
       linksTitle: "Find your starting point",
       sections: [
         {
@@ -243,7 +226,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "From reporting to service revenue",
-          body: "For machine builders, connected equipment changes what you can sell. Uptime commitments, condition-based service agreements, and remote diagnostics all depend on knowing how the machine is actually running — which is a data problem before it is a commercial one.",
+          body: "For machine builders, connected equipment changes what you can sell. Uptime commitments, condition-based service agreements, and remote diagnostics all depend on knowing how the machine is actually running, which is a data problem before it is a commercial one.",
         },
         {
           title: "Not sure which one you are?",
@@ -262,7 +245,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         "OptiPeople-løsninger til produktionsvirksomheder, OEM'er og maskinbyggere samt service og aftermarket.",
       eyebrow: "Løsninger",
       headline: "Bygget til hvordan I producerer og servicerer",
-      body: "Uanset om I driver en fabrik, bygger maskiner eller servicerer en installeret base, giver OptiPeople jer driftsdata til at handle hurtigere. Platformen er den samme i alle tre tilfælde — det, der ændrer sig, er, hvis maskiner I kigger på, og hvad I skal beslutte.",
+      body: "Uanset om I driver en fabrik, bygger maskiner eller servicerer en installeret base, giver OptiPeople jer driftsdata til at handle hurtigere. Platformen er den samme i alle tre tilfælde, det, der ændrer sig, er, hvis maskiner I kigger på, og hvad I skal beslutte.",
       linksTitle: "Find jeres udgangspunkt",
       sections: [
         {
@@ -271,15 +254,15 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Maskiner I ejer, maskiner I har leveret",
-          body: "Producerer I både selv og sælger udstyr, behøver I ikke to systemer. Den samme platform kan dække jeres egen produktion og den installerede base hos jeres kunder — hvor hver kunde kun ser sine egne data.",
+          body: "Producerer I både selv og sælger udstyr, behøver I ikke to systemer. Den samme platform kan dække jeres egen produktion og den installerede base hos jeres kunder, hvor hver kunde kun ser sine egne data.",
         },
         {
           title: "Fra rapportering til serviceindtægter",
-          body: "For maskinbyggere ændrer forbundet udstyr, hvad I kan sælge. Oppetidsgarantier, tilstandsbaserede serviceaftaler og fjerndiagnostik hviler alle på at vide, hvordan maskinen faktisk kører — og det er et dataspørgsmål, før det er et kommercielt.",
+          body: "For maskinbyggere ændrer forbundet udstyr, hvad I kan sælge. Oppetidsgarantier, tilstandsbaserede serviceaftaler og fjerndiagnostik hviler alle på at vide, hvordan maskinen faktisk kører, og det er et dataspørgsmål, før det er et kommercielt.",
         },
         {
           title: "I tvivl om, hvad I er?",
-          body: "Mange virksomheder er mere end én af delene. Er grænserne uklare, så tag udgangspunkt i det problem, I gerne vil have løst, frem for kategorien — så finder vi ud af, hvilke dele af platformen der betyder mest først.",
+          body: "Mange virksomheder er mere end én af delene. Er grænserne uklare, så tag udgangspunkt i det problem, I gerne vil have løst, frem for kategorien, så finder vi ud af, hvilke dele af platformen der betyder mest først.",
         },
       ],
       links: [

@@ -17,12 +17,8 @@ interface ModuleNode {
   description: string
   pitch: string
   features: string[]
-  bgVar: string // CSS variable name for background
-  borderVar: string // CSS variable name for border
-  textColor: "light" | "dark" // whether to use light or dark text
-  x: number // percentage
-  y: number // percentage
-  connections: string[] // ids of connected modules
+  // Colour comes from BRAND (keyed by id) and position from PETAL_ORDER, so a
+  // new module needs an entry in both of those plus one block here.
 }
 
 const englishModules: ModuleNode[] = [
@@ -32,64 +28,34 @@ const englishModules: ModuleNode[] = [
     description: "Your single source of truth",
     pitch: "All your production data in one place. Connect machines, systems, and people to make decisions based on facts, not gut feeling.",
     features: ["Real-time data collection", "Secure cloud infrastructure", "Open API integrations"],
-    bgVar: "--green-dark3",
-    borderVar: "--green-dark3",
-    textColor: "light",
-    x: 50,
-    y: 50,
-    connections: ["production", "mes", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"],
   },
   {
     id: "production",
-    name: "Production",
+    name: "OEE",
     description: "See where time is lost",
     pitch: "Track OEE in real-time and understand exactly where production time disappears. Stop guessing, start improving.",
     features: ["Live OEE dashboards", "Stop cause registration", "Work order tracking"],
-    bgVar: "--purple-dark2",
-    borderVar: "--purple-dark1",
-    textColor: "light",
-    x: 50,
-    y: 12,
-    connections: ["opticloud", "quality", "iot", "mes"],
   },
   {
     id: "mes",
-    name: "MES",
+    name: "Modular MES",
     description: "Run execution in the cloud",
     pitch: "OptiCloud brings manufacturing execution, live shopfloor visibility, traceability, and reporting into one cloud-based MES layer.",
     features: ["Manufacturing execution", "Shopfloor dashboards", "Production traceability"],
-    bgVar: "--green-dark2",
-    borderVar: "--green-dark3",
-    textColor: "light",
-    x: 22,
-    y: 22,
-    connections: ["opticloud", "production", "quality", "maintenance", "analysis", "erp-shopfloor", "iot"],
   },
   {
     id: "quality",
-    name: "Quality",
+    name: "QMS",
     description: "Build in accountability",
     pitch: "Register quality data at the source and trace every deviation back to machines, batches, and shifts.",
     features: ["Digital inspections", "Full traceability", "Deviation tracking"],
-    bgVar: "--yellow-dark2",
-    borderVar: "--yellow-dark3",
-    textColor: "dark",
-    x: 78,
-    y: 22,
-    connections: ["opticloud", "production", "erp-shopfloor", "mes"],
   },
   {
     id: "erp-shopfloor",
-    name: "ERP Shopfloor",
+    name: "Orders",
     description: "Bridge ERP and floor",
-    pitch: "Your ERP knows the plan. Your machines know reality. OptiCloud connects the two — giving planners real-time actuals and operators the context they need.",
+    pitch: "Your ERP knows the plan. Your machines know reality. OptiCloud connects the two, giving planners real-time actuals and operators the context they need.",
     features: ["Two-way ERP sync", "Work order tracking", "Live shopfloor dashboards"],
-    bgVar: "--purple-dark1",
-    borderVar: "--purple-dark2",
-    textColor: "light",
-    x: 88,
-    y: 50,
-    connections: ["opticloud", "quality", "maintenance", "mes"],
   },
   {
     id: "maintenance",
@@ -97,54 +63,50 @@ const englishModules: ModuleNode[] = [
     description: "Fix it before it breaks",
     pitch: "Move from reactive firefighting to planned maintenance. Reduce unplanned downtime and extend equipment life.",
     features: ["Preventive scheduling", "Predictive alerts", "Mobile task management"],
-    bgVar: "--orange-dark2",
-    borderVar: "--orange-dark3",
-    textColor: "light",
-    x: 78,
-    y: 78,
-    connections: ["opticloud", "erp-shopfloor", "energy", "mes"],
   },
   {
     id: "energy",
-    name: "Energy",
+    name: "EMS",
     description: "Cut waste, not corners",
     pitch: "Connect energy consumption directly to production output. Find anomalies and optimization opportunities automatically.",
     features: ["Real-time kWh tracking", "Sensor telemetry", "Anomaly detection"],
-    bgVar: "--orange-dark3",
-    borderVar: "--orange-dark3",
-    textColor: "light",
-    x: 50,
-    y: 88,
-    connections: ["opticloud", "maintenance", "analysis"],
   },
   {
     id: "analysis",
     name: "Analysis",
     description: "From data to decisions",
-    pitch: "Turn raw production data into clear reports on performance, losses, and cost drivers—without spreadsheets.",
+    pitch: "Turn raw production data into clear reports on performance, losses, and cost drivers, without spreadsheets.",
     features: ["Automated reporting", "Cost analysis", "Investment planning"],
-    bgVar: "--green-light2",
-    borderVar: "--green-light1",
-    textColor: "dark",
-    x: 22,
-    y: 78,
-    connections: ["opticloud", "energy", "iot", "mes"],
   },
   {
     id: "iot",
     name: "IoT",
     description: "Get data from anything",
-    pitch: "Connect any machine, sensor, or system to your platform. Ingest data from PLCs, IoT gateways, and legacy equipment — no matter the protocol or age.",
+    pitch: "Connect any machine, sensor, or system to your platform. Ingest data from PLCs, IoT gateways, and legacy equipment, no matter the protocol or age.",
     features: ["Plug-and-play connectors", "Protocol-agnostic ingestion", "Edge data collection"],
-    bgVar: "--green-dark1",
-    borderVar: "--green-dark2",
-    textColor: "light",
-    x: 12,
-    y: 50,
-    connections: ["opticloud", "production", "analysis", "mes"],
+  },
+  {
+    id: "planning",
+    name: "Planning",
+    description: "Plan on real capacity",
+    pitch: "Schedule against measured run rates and the hours a machine actually has available, and let the floor see the same sequence the planner does.",
+    features: ["Capacity-based scheduling", "Run rates from real data", "Replan without rebuilding"],
+  },
+  {
+    id: "documents",
+    name: "Documents",
+    description: "Right version, right machine",
+    pitch: "Work instructions, drawings, and certificates at the machine, in the version that applies to the order in front of the operator.",
+    features: ["Instructions at the machine", "One current version", "Audit-ready records"],
+  },
+  {
+    id: "ai-agents",
+    name: "AI agents",
+    description: "Ask your own data",
+    pitch: "Agents and copilots that work on your production data, answering questions in plain language and watching for the patterns nobody has time to look for.",
+    features: ["Plain-language answers", "Pattern and anomaly alerts", "Grounded in your own data"],
   },
 ]
-
 const danishModules: ModuleNode[] = [
   {
     id: "opticloud",
@@ -153,68 +115,38 @@ const danishModules: ModuleNode[] = [
     pitch:
       "Al produktionsdata samlet ét sted. Forbind maskiner, systemer og mennesker, så beslutninger bygger på fakta i stedet for mavefornemmelser.",
     features: ["Dataopsamling i realtid", "Sikker cloud-infrastruktur", "Åbne API-integrationer"],
-    bgVar: "--green-dark3",
-    borderVar: "--green-dark3",
-    textColor: "light",
-    x: 50,
-    y: 50,
-    connections: ["production", "mes", "quality", "erp-shopfloor", "maintenance", "energy", "analysis", "iot"],
   },
   {
     id: "production",
-    name: "Produktion",
+    name: "OEE",
     description: "Se hvor tiden går tabt",
     pitch:
       "Følg OEE i realtid, og forstå præcis hvor produktionstiden forsvinder. Stop med at gætte, og begynd at forbedre.",
     features: ["Live OEE-dashboards", "Stopårsagsregistrering", "Ordresporing"],
-    bgVar: "--purple-dark2",
-    borderVar: "--purple-dark1",
-    textColor: "light",
-    x: 50,
-    y: 12,
-    connections: ["opticloud", "quality", "iot", "mes"],
   },
   {
     id: "mes",
-    name: "MES",
+    name: "Modulært MES",
     description: "Styr eksekvering i cloud",
     pitch:
       "OptiCloud samler manufacturing execution, live shopfloor-overblik, sporbarhed og rapportering i ét cloudbaseret MES-lag.",
     features: ["Manufacturing execution", "Shopfloor-dashboards", "Produktionssporbarhed"],
-    bgVar: "--green-dark2",
-    borderVar: "--green-dark3",
-    textColor: "light",
-    x: 22,
-    y: 22,
-    connections: ["opticloud", "production", "quality", "maintenance", "analysis", "erp-shopfloor", "iot"],
   },
   {
     id: "quality",
-    name: "Kvalitet",
+    name: "QMS",
     description: "Byg ansvarlighed ind",
     pitch:
       "Registrer kvalitetsdata ved kilden, og spor hver afvigelse tilbage til maskiner, batches og skift.",
     features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelsesregistrering"],
-    bgVar: "--yellow-dark2",
-    borderVar: "--yellow-dark3",
-    textColor: "dark",
-    x: 78,
-    y: 22,
-    connections: ["opticloud", "production", "erp-shopfloor", "mes"],
   },
   {
     id: "erp-shopfloor",
-    name: "ERP Shopfloor",
+    name: "Ordrer",
     description: "Forbind ERP og gulv",
     pitch:
       "ERP kender planen. Maskinerne kender virkeligheden. OptiCloud forbinder de to, så planlæggere får realtidsdata og operatører får den rigtige kontekst.",
     features: ["Tovejssynk med ERP", "Ordresporing", "Live shopfloor-dashboards"],
-    bgVar: "--purple-dark1",
-    borderVar: "--purple-dark2",
-    textColor: "light",
-    x: 88,
-    y: 50,
-    connections: ["opticloud", "quality", "maintenance", "mes"],
   },
   {
     id: "maintenance",
@@ -223,26 +155,14 @@ const danishModules: ModuleNode[] = [
     pitch:
       "Gå fra reaktiv brandslukning til planlagt vedligehold. Reducer uplanlagt nedetid, og forlæng udstyrets levetid.",
     features: ["Forebyggende planlægning", "Prediktive alarmer", "Mobil opgavestyring"],
-    bgVar: "--orange-dark2",
-    borderVar: "--orange-dark3",
-    textColor: "light",
-    x: 78,
-    y: 78,
-    connections: ["opticloud", "erp-shopfloor", "energy", "mes"],
   },
   {
     id: "energy",
-    name: "Energi",
+    name: "EMS",
     description: "Skær spild væk",
     pitch:
       "Kobl energiforbrug direkte til produktionen. Find afvigelser og optimeringsmuligheder automatisk.",
     features: ["Live kWh-sporing", "Sensortelemetri", "Afvigelsesdetektion"],
-    bgVar: "--orange-dark3",
-    borderVar: "--orange-dark3",
-    textColor: "light",
-    x: 50,
-    y: 88,
-    connections: ["opticloud", "maintenance", "analysis"],
   },
   {
     id: "analysis",
@@ -251,12 +171,6 @@ const danishModules: ModuleNode[] = [
     pitch:
       "Gør rå produktionsdata til klare rapporter om performance, tab og omkostningsdrivere uden manuelle regneark.",
     features: ["Automatiske rapporter", "Omkostningsanalyse", "Investeringsgrundlag"],
-    bgVar: "--green-light2",
-    borderVar: "--green-light1",
-    textColor: "dark",
-    x: 22,
-    y: 78,
-    connections: ["opticloud", "energy", "iot", "mes"],
   },
   {
     id: "iot",
@@ -265,15 +179,29 @@ const danishModules: ModuleNode[] = [
     pitch:
       "Forbind maskiner, sensorer og systemer til platformen. Hent data fra PLC'er, IoT-gateways og ældre udstyr uanset protokol.",
     features: ["Plug-and-play forbindelser", "Protokoluafhængig opsamling", "Edge dataopsamling"],
-    bgVar: "--green-dark1",
-    borderVar: "--green-dark2",
-    textColor: "light",
-    x: 12,
-    y: 50,
-    connections: ["opticloud", "production", "analysis", "mes"],
+  },
+  {
+    id: "planning",
+    name: "Planlægning",
+    description: "Planlæg på reel kapacitet",
+    pitch: "Planlæg efter målte kørehastigheder og de timer, maskinen faktisk har til rådighed, og lad gulvet se samme sekvens som planlæggeren.",
+    features: ["Planlægning på reel kapacitet", "Kørehastigheder fra virkelige data", "Omplanlæg uden at starte forfra"],
+  },
+  {
+    id: "documents",
+    name: "Dokumenter",
+    description: "Rette version ved maskinen",
+    pitch: "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, i den version, der gælder for ordren foran operatøren.",
+    features: ["Instruktioner ved maskinen", "Én gældende version", "Klar til audit"],
+  },
+  {
+    id: "ai-agents",
+    name: "AI-agenter",
+    description: "Spørg jeres egne data",
+    pitch: "Agenter og copilots, der arbejder på jeres produktionsdata, svarer i almindeligt sprog og holder øje med de mønstre, ingen har tid til at lede efter.",
+    features: ["Svar i almindeligt sprog", "Mønstre og afvigelser", "Bygget på jeres egne data"],
   },
 ]
-
 const platformIntro = {
   en: {
     eyebrow: "Platform",
@@ -292,7 +220,7 @@ const platformIntro = {
 } as const
 
 // ---------------------------------------------------------------------------
-// Brand palette + geometry for the OptiCloud "flower" — rounded pentagons
+// Brand palette + geometry for the OptiCloud "flower", rounded pentagons
 // radiating from an octagonal OptiCloud hub, recreated from the 2024 brand mark
 // (Opticloud-Flower.svg). Colours are sampled from that original SVG.
 // ---------------------------------------------------------------------------
@@ -309,6 +237,9 @@ const BRAND: Record<string, { fill: string; text: "light" | "dark" }> = {
   maintenance: { fill: "#E0AC30", text: "dark" },
   energy: { fill: "#DC5E3C", text: "light" },
   analysis: { fill: "#A3EEC8", text: "dark" },
+  planning: { fill: "#7C86D3", text: "light" },
+  documents: { fill: "#EFD9A6", text: "dark" },
+  "ai-agents": { fill: "#0A7A6B", text: "light" },
 }
 
 // Lighten (amt > 0, toward white) or darken (amt < 0, toward black) a hex colour.
@@ -379,14 +310,30 @@ function OptiMark({ className }: { className?: string }) {
 }
 
 // Flower geometry in viewBox units.
-const VB_W = 260
-const VB_H = 240
-const CENTER: [number, number] = [130, 116]
-const CENTER_R = 37
+const VB_W = 270
+const VB_H = 270
+const CENTER: [number, number] = [135, 135]
+const CENTER_R = 62
 const PETAL_R = 27
-const ORBIT = 70
-// Petal order around the bloom, starting at the top going clockwise.
-const PETAL_ORDER = ["maintenance", "production", "erp-shopfloor", "energy", "analysis", "iot", "mes", "quality"]
+const ORBIT = 96
+// The hub is a polygon with one flat edge facing each petal, so its side count
+// tracks the petal count and it is rotated half a step to line the edges up.
+const HUB_SIDES = 11
+// Petal order around the bloom, starting at the top going clockwise. Ordered so
+// the four pale modules land at intervals instead of bunching on one side.
+const PETAL_ORDER = [
+  "maintenance",
+  "mes",
+  "quality",
+  "production",
+  "energy",
+  "documents",
+  "erp-shopfloor",
+  "analysis",
+  "iot",
+  "planning",
+  "ai-agents",
+]
 
 function petalLayout() {
   return PETAL_ORDER.map((id, k) => {
@@ -492,7 +439,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
             </div>
           </div>
 
-          {/* Desktop: OptiCloud flower — rounded pentagons around an octagonal hub */}
+          {/* Desktop: OptiCloud flower, rounded pentagons around an octagonal hub */}
           <div
             className="relative mx-auto hidden w-full max-w-[1100px] lg:block"
             style={{ aspectRatio: `${VB_W} / ${VB_H}` }}
@@ -502,7 +449,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
               className="absolute inset-0 h-full w-full"
               style={{ overflow: "visible" }}
             >
-              {/* subtle top-to-bottom gradient per module — depth without looking gradiented */}
+              {/* subtle top-to-bottom gradient per module, depth without looking gradiented */}
               <defs>
                 {Object.keys(BRAND).map((id) => (
                   <linearGradient key={id} id={`pf-grad-${id}`} x1="0" y1="0" x2="0.25" y2="1">
@@ -517,7 +464,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
                 const a = Math.atan2(p.cy - CENTER[1], p.cx - CENTER[0])
                 const ux = Math.cos(a)
                 const uy = Math.sin(a)
-                const hubEdge = CENTER_R * Math.cos(Math.PI / 8) // octagon inradius
+                const hubEdge = CENTER_R * Math.cos(Math.PI / HUB_SIDES) // hub inradius
                 const petalBase = ORBIT - PETAL_R * Math.cos(Math.PI / 5) // pentagon inradius from centre
                 const x1 = CENTER[0] + ux * petalBase
                 const y1 = CENTER[1] + uy * petalBase
@@ -568,9 +515,9 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
                 />
               ))}
 
-              {/* hub — octagon so a flat edge faces each of the 8 petals */}
+              {/* hub, one flat edge facing each petal */}
               <path
-                d={roundedPolygonPath(CENTER[0], CENTER[1], CENTER_R, 8, 22.5, 3.5)}
+                d={roundedPolygonPath(CENTER[0], CENTER[1], CENTER_R, HUB_SIDES, 180 / HUB_SIDES, 3.5)}
                 fill="url(#pf-grad-opticloud)"
                 className="cursor-pointer transition-[filter] duration-200 hover:brightness-110"
                 onClick={() => setActiveModule("opticloud")}

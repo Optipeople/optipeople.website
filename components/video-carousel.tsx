@@ -24,7 +24,7 @@ type VideoCarouselProps = {
   className?: string
 }
 
-// Shared layout tokens — keep this slider in lock-step with SlideCarousel:
+// Shared layout tokens, keep this slider in lock-step with SlideCarousel:
 // first card lines up with the max-w-6xl content column, then the track bleeds
 // off the right edge of the viewport.
 // Shared global slider inset (`--edge`, see globals.css) keeps this in lock-step
@@ -144,7 +144,7 @@ export function VideoCarousel({
         </Carousel>
       </div>
 
-      {/* Navigation arrows — anchored to the content column's right edge */}
+      {/* Navigation arrows, anchored to the content column's right edge */}
       <div className={`${ARROW_COLUMN} mt-8 flex items-center justify-end gap-3`}>
         <Button
           variant="ghost"

@@ -52,7 +52,7 @@ function remember(status: "dismissed" | "subscribed") {
       JSON.stringify({ status, at: Date.now() })
     )
   } catch {
-    // Ignore storage failures (private mode, quota) — worst case the prompt
+    // Ignore storage failures (private mode, quota), worst case the prompt
     // simply reappears on a future visit.
   }
 }
