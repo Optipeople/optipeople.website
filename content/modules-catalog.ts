@@ -12,6 +12,13 @@ import type { Locale } from "@/i18n/routing"
  * /modules/production, Orders at /modules/erp-shopfloor). The labels are the
  * product vocabulary; the URLs stay put so existing links and search results
  * keep working.
+ *
+ * The order is deliberate and reads as an argument: the foundation, how the
+ * data arrives, the number people came for, the assistant that reads all of
+ * it, then shopfloor to office. It also alternates the mockup silhouettes on
+ * the homepage carousel, where three or four cards are visible at once, so no
+ * two neighbours look alike. Reordering here moves the carousel, the header
+ * dropdown, the footer column and the /modules index together.
  */
 export type ModuleEntry = {
   /** Stable, locale-independent key. Used for React keys and hero chip state. */
@@ -34,6 +41,15 @@ export const moduleCatalog: ModuleEntry[] = [
     },
   },
   {
+    id: "iot",
+    href: "/modules/iot",
+    label: { en: "IoT", da: "IoT" },
+    blurb: {
+      en: "Connect new and legacy machines, sensors, and protocols.",
+      da: "Forbind nye og gamle maskiner, sensorer og protokoller.",
+    },
+  },
+  {
     id: "oee",
     href: "/modules/production",
     label: { en: "OEE", da: "OEE" },
@@ -43,21 +59,12 @@ export const moduleCatalog: ModuleEntry[] = [
     },
   },
   {
-    id: "qms",
-    href: "/modules/quality",
-    label: { en: "QMS", da: "QMS" },
+    id: "ai-agents",
+    href: "/ai/agents",
+    label: { en: "AI agents", da: "AI-agenter" },
     blurb: {
-      en: "Digital checks, deviations, and full traceability.",
-      da: "Digitale kontroller, afvigelser og fuld sporbarhed.",
-    },
-  },
-  {
-    id: "ems",
-    href: "/modules/energy",
-    label: { en: "EMS", da: "EMS" },
-    blurb: {
-      en: "Energy consumption connected to production output.",
-      da: "Energiforbrug koblet til produktionens output.",
+      en: "Agents and copilots that work on your own production data.",
+      da: "Agenter og copilots, der arbejder på jeres egne produktionsdata.",
     },
   },
   {
@@ -70,12 +77,21 @@ export const moduleCatalog: ModuleEntry[] = [
     },
   },
   {
-    id: "planning",
-    href: "/modules/planning",
-    label: { en: "Planning", da: "Planlægning" },
+    id: "ems",
+    href: "/modules/energy",
+    label: { en: "EMS", da: "EMS" },
     blurb: {
-      en: "Sequence production against the capacity you actually have.",
-      da: "Planlæg produktionen efter den kapacitet I faktisk har.",
+      en: "Energy consumption connected to production output.",
+      da: "Energiforbrug koblet til produktionens output.",
+    },
+  },
+  {
+    id: "qms",
+    href: "/modules/quality",
+    label: { en: "QMS", da: "QMS" },
+    blurb: {
+      en: "Digital checks, deviations, and full traceability.",
+      da: "Digitale kontroller, afvigelser og fuld sporbarhed.",
     },
   },
   {
@@ -88,12 +104,12 @@ export const moduleCatalog: ModuleEntry[] = [
     },
   },
   {
-    id: "iot",
-    href: "/modules/iot",
-    label: { en: "IoT", da: "IoT" },
+    id: "planning",
+    href: "/modules/planning",
+    label: { en: "Planning", da: "Planlægning" },
     blurb: {
-      en: "Connect new and legacy machines, sensors, and protocols.",
-      da: "Forbind nye og gamle maskiner, sensorer og protokoller.",
+      en: "Sequence production against the capacity you actually have.",
+      da: "Planlæg produktionen efter den kapacitet I faktisk har.",
     },
   },
   {
@@ -112,15 +128,6 @@ export const moduleCatalog: ModuleEntry[] = [
     blurb: {
       en: "Automated reports on performance, loss, and cost.",
       da: "Automatiske rapporter om performance, tab og omkostninger.",
-    },
-  },
-  {
-    id: "ai-agents",
-    href: "/ai/agents",
-    label: { en: "AI agents", da: "AI-agenter" },
-    blurb: {
-      en: "Agents and copilots that work on your own production data.",
-      da: "Agenter og copilots, der arbejder på jeres egne produktionsdata.",
     },
   },
 ]

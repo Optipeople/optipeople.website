@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
+import { DocumentsVisual, MesVisual } from "@/components/module-mockups"
 import type { StandardPage } from "@/content/shared/types"
 import { getPageTheme, type PageFamily } from "@/lib/page-theme"
 
@@ -219,13 +220,23 @@ export function StandardPageTemplate({
             </p>
           </div>
           <div className="reveal relative mt-12 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
-            {page.visualImage ? (
+            {page.visualDrawn === "documents" ? (
+              <DocumentsVisual />
+            ) : page.visualDrawn === "mes" ? (
+              <MesVisual />
+            ) : page.visualImage ? (
               <Image
                 src={page.visualImage}
                 alt={page.visualAlt ?? page.visualTitle}
                 fill
                 sizes="(min-width: 1024px) 1140px, 100vw"
-                className="object-cover"
+                className={`object-cover ${
+                  page.visualImagePosition === "top"
+                    ? "object-top"
+                    : page.visualImagePosition === "bottom"
+                      ? "object-bottom"
+                      : "object-center"
+                }`}
               />
             ) : (
               <p className="text-sm text-white/50">{t("productView")}</p>

@@ -7,6 +7,7 @@ import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
 import { LogoWall } from "@/components/logo-wall"
 import { TestimonialCarousel, type Testimonial } from "@/components/testimonial-carousel"
 import { HeroModulePicker } from "@/components/hero-module-picker"
+import { hasModuleMockup } from "@/components/module-mockups"
 import { Button } from "@/components/ui/button"
 import { moduleCatalog, moduleChipRows } from "@/content/modules-catalog"
 import { getPostBySlug } from "@/lib/blog-data"
@@ -151,16 +152,53 @@ type HomeCopy = {
 /**
  * Carousel copy for one module. The title, the link, and the CTA come from
  * content/modules-catalog.ts, so only the pitch and the image live here.
+ *
+ * Modules with a code-built graphic (see components/module-mockups.tsx) leave
+ * the image fields off, the slide draws its visual instead of loading a photo.
  */
 type ModuleSlideCopy = {
   description: string
-  imageSrc: string
-  imageAlt: string
+  imageSrc?: string
+  imageAlt?: string
   imageFit?: "fill"
+  imagePosition?: SlideData["imagePosition"]
 }
 
-/** Card backgrounds, cycled so neighbouring module slides stay distinct. */
-const MODULE_SLIDE_ACCENTS = ["#243b2f", "#163b40", "#1c1f26"] as const
+/**
+ * One card colour per module. The family is the AI section's, deep greens and
+ * teals against a charcoal, a pale blue and a warm sand, because that section
+ * is the better looking of the two. It is extended rather than cycled: eleven
+ * slides over five colours meant the same card turned up three times, and the
+ * sequence is deliberately not the AI section's own, since both carousels sit
+ * on the same page and should not read as the same run of colour twice.
+ *
+ * Keyed by module id, not by position, so a module keeps its colour when the
+ * catalog is reordered. The alternation of light and dark is tuned for the
+ * current order in content/modules-catalog.ts, so a reorder is worth a look
+ * here. `tone` decides the title, the supporting line and the arrow button.
+ *
+ * Two placements are load-bearing rather than decorative: AI agents sits on a
+ * light card because its mockup is the only dark one, and OEE sits on the
+ * deepest green because its gauges carry the most colour of any slide.
+ */
+type ModuleAccent = { bg: string; tone: "light" | "dark" }
+
+const MODULE_SLIDE_ACCENTS: Record<string, ModuleAccent> = {
+  mes: { bg: "#163b40", tone: "light" },
+  iot: { bg: "#c7d9cd", tone: "dark" },
+  oee: { bg: "#243b2f", tone: "light" },
+  "ai-agents": { bg: "#d8d4c6", tone: "dark" },
+  maintenance: { bg: "#2a3446", tone: "light" },
+  ems: { bg: "#0f2f33", tone: "light" },
+  qms: { bg: "#c5d8e8", tone: "dark" },
+  orders: { bg: "#1c1f26", tone: "light" },
+  planning: { bg: "#2f5140", tone: "light" },
+  documents: { bg: "#e4ded4", tone: "dark" },
+  analysis: { bg: "#3d4436", tone: "light" },
+}
+
+/** A module added to the catalog before it is given a colour still gets a card. */
+const MODULE_SLIDE_FALLBACK: ModuleAccent = { bg: "#243b2f", tone: "light" }
 
 /**
  * Builds the module carousel by walking the catalog, so the slides are always
@@ -172,21 +210,26 @@ function buildModuleSlides(
   copyById: Record<string, ModuleSlideCopy>,
   ctaTemplate: string
 ): SlideData[] {
-  return moduleCatalog.map((entry, index) => {
+  return moduleCatalog.map((entry) => {
     const label = entry.label[locale]
     const slide = copyById[entry.id]
+    // Modules we have no presentable screenshot for draw their visual in code.
+    const mockup = hasModuleMockup(entry.id) ? entry.id : undefined
+    const accent = MODULE_SLIDE_ACCENTS[entry.id] ?? MODULE_SLIDE_FALLBACK
     return {
       title: label,
       description: slide?.description ?? entry.blurb[locale],
-      imageSrc: slide?.imageSrc ?? "/images/dashboard1.png",
-      imageAlt: slide?.imageAlt ?? label,
+      moduleMockup: mockup,
+      imageSrc: mockup ? undefined : slide?.imageSrc ?? "/images/dashboard1.png",
+      imageAlt: mockup ? undefined : slide?.imageAlt ?? label,
       imageFit: slide?.imageFit,
+      imagePosition: slide?.imagePosition,
       primaryLabel: ctaTemplate.replace("{module}", label),
       primaryHref: entry.href,
       bgColor: "bg-black",
       layout: "vertical",
-      accentColor:
-        MODULE_SLIDE_ACCENTS[index % MODULE_SLIDE_ACCENTS.length],
+      accentColor: accent.bg,
+      textTone: accent.tone,
     }
   })
 }
@@ -280,78 +323,52 @@ const copy: Record<Locale, HomeCopy> = {
       ariaLabel: "Platform modules",
     },
     moduleCta: "Explore {module}",
+    // No slide takes a screenshot any more: every module draws its
+    // visual in code, see components/module-mockups.tsx
     moduleSlides: {
       mes: {
         description:
           "The cloud MES the other modules run on. Start with one line, add modules as the next question comes up, same data foundation, no re-implementation.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
-        imageAlt: "Opticloud MES operator panel",
       },
       oee: {
         description:
           "See where production time is lost and why. Track availability, performance, and quality live across shifts, lines, and machines, built from real machine signals.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile-Dark.png",
-        imageAlt: "Live OEE dashboard",
-        imageFit: "fill",
       },
       qms: {
         description:
           "Register quality data where it happens. Trace deviations back to machine, batch, and shift, and turn checks into documentation instead of paperwork.",
-        imageSrc: "/images/Mockups/Lists.png",
-        imageAlt: "Quality checks and traceability",
-        imageFit: "fill",
       },
       ems: {
         description:
           "Connect energy, vibration, flow, and temperature directly to production. See kWh per produced unit and find the waste a monthly utility bill hides.",
-        imageSrc: "/images/Telemetry-Chart.png",
-        imageAlt: "Energy and telemetry monitoring",
       },
       maintenance: {
         description:
           "Plan preventive maintenance on usage and condition rather than the calendar. Assign tasks, track completion, and cut unplanned downtime.",
-        imageSrc: "/images/Mockups/Tasls-Maintenance.png",
-        imageAlt: "Maintenance task overview",
-        imageFit: "fill",
       },
       planning: {
         description:
           "Sequence orders against the capacity you actually have. Plans built on measured run rates and real machine availability instead of spreadsheet assumptions.",
-        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
-        imageAlt: "Production planning and sequencing",
       },
       orders: {
         description:
           "Two-way sync between ERP and the floor. Orders reach the machine, and progress, scrap, and time flow straight back without anyone re-typing them.",
-        imageSrc: "/images/Mockups/Report-Production-Counters-Mobile.png",
-        imageAlt: "Production orders and counters",
-        imageFit: "fill",
       },
       iot: {
         description:
           "Get data from anything, modern controls over standard industrial protocols, and older machines through sensors that measure the signal directly.",
-        imageSrc: "/images/Mockups/Machine-Overview-Mobile.png",
-        imageAlt: "Connected machine overview",
-        imageFit: "fill",
       },
       documents: {
         description:
           "Work instructions, drawings, and certificates at the machine, always in the current version. The operator sees what applies to the order in front of them.",
-        imageSrc: "/images/Mockups/Tasks-Maintenance-Lists.png",
-        imageAlt: "Documents and instructions at the machine",
-        imageFit: "fill",
       },
       analysis: {
         description:
           "Turn production data into clear reports on performance, losses, and cost drivers, automatically, without spreadsheets or manual work.",
-        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
-        imageAlt: "Production reporting and analysis",
       },
       "ai-agents": {
         description:
           "Ask questions in plain language and let agents watch for patterns in your own production data, grounded in the same numbers everyone else sees.",
-        imageSrc: "/images/report-mockup4.png",
-        imageAlt: "AI agents working on production data",
       },
     },
 
@@ -549,78 +566,52 @@ const copy: Record<Locale, HomeCopy> = {
       ariaLabel: "Platformmoduler",
     },
     moduleCta: "Udforsk {module}",
+    // Ingen slides bruger screenshots: hvert modul tegner sit visuelle
+    // udtryk i kode, se components/module-mockups.tsx
     moduleSlides: {
       mes: {
         description:
           "Det cloudbaserede MES, de øvrige moduler kører på. Start med én linje og tilføj moduler, når næste spørgsmål melder sig, samme datagrundlag hele vejen.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
-        imageAlt: "Opticloud MES-operatørpanel",
       },
       oee: {
         description:
           "Se hvor produktionstiden går tabt og hvorfor. Følg tilgængelighed, performance og kvalitet live på tværs af skift, linjer og maskiner.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Mobile-Dark.png",
-        imageAlt: "Live OEE-dashboard",
-        imageFit: "fill",
       },
       qms: {
         description:
           "Registrer kvalitetsdata dér hvor arbejdet sker. Spor afvigelser tilbage til maskine, batch og skift, og gør kontroller til dokumentation i stedet for papirarbejde.",
-        imageSrc: "/images/Mockups/Lists.png",
-        imageAlt: "Kvalitetskontroller og sporbarhed",
-        imageFit: "fill",
       },
       ems: {
         description:
           "Kobl energi, vibration, flow og temperatur direkte til produktionen. Se kWh pr. produceret enhed og find det spild, elregningen skjuler.",
-        imageSrc: "/images/Telemetry-Chart.png",
-        imageAlt: "Energi- og telemetriovervågning",
       },
       maintenance: {
         description:
           "Planlæg forebyggende vedligehold efter brug og tilstand i stedet for kalenderen. Tildel opgaver, følg status og reducer uplanlagt nedetid.",
-        imageSrc: "/images/Mockups/Tasls-Maintenance.png",
-        imageAlt: "Opgaveoverblik til vedligehold",
-        imageFit: "fill",
       },
       planning: {
         description:
           "Planlæg ordrer efter den kapacitet I faktisk har. Planer bygget på målte kørehastigheder og reel maskintilgængelighed, ikke regnearksantagelser.",
-        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
-        imageAlt: "Produktionsplanlægning og sekvensering",
       },
       orders: {
         description:
           "Tovejssynk mellem ERP og gulvet. Ordrer kommer ud på maskinen, og status, spild og tid går direkte tilbage uden manuel indtastning.",
-        imageSrc: "/images/Mockups/Report-Production-Counters-Mobile.png",
-        imageAlt: "Produktionsordrer og tællere",
-        imageFit: "fill",
       },
       iot: {
         description:
           "Få data fra alt, moderne styringer over gængse industrielle protokoller, og ældre maskiner via sensorer, der måler signalet direkte.",
-        imageSrc: "/images/Mockups/Machine-Overview-Mobile.png",
-        imageAlt: "Overblik over forbundne maskiner",
-        imageFit: "fill",
       },
       documents: {
         description:
           "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den gældende version. Operatøren ser det, der gælder for ordren foran sig.",
-        imageSrc: "/images/Mockups/Tasks-Maintenance-Lists.png",
-        imageAlt: "Dokumenter og instruktioner ved maskinen",
-        imageFit: "fill",
       },
       analysis: {
         description:
           "Gør produktionsdata til tydelige rapporter om performance, tab og omkostningsdrivere, automatisk og uden regnearksarbejde.",
-        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
-        imageAlt: "Rapportering og analyse",
       },
       "ai-agents": {
         description:
           "Stil spørgsmål i almindeligt sprog, og lad agenter holde øje med mønstre i jeres egne produktionsdata, på de samme tal, som alle andre ser.",
-        imageSrc: "/images/report-mockup4.png",
-        imageAlt: "AI-agenter der arbejder på produktionsdata",
       },
     },
 

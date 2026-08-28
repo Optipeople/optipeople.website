@@ -246,8 +246,8 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Quality data connected to production",
         visualBody:
           "Every inspection, deviation, and corrective action linked to the machine, batch, and operator that produced it.",
-        visualImage: "/images/backoffice1.png",
-        visualAlt: "Quality overview in Opticloud",
+        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        visualAlt: "Quality checks and deviations registered in Opticloud",
         metricsTitle: "Typical Results",
         metrics: [
           { metric: "60%", label: "Reduction in quality-related rework" },
@@ -309,8 +309,8 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Kvalitetsdata forbundet med produktionen",
         visualBody:
           "Hver kontrol, afvigelse og handling bindes til den maskine, batch og operatør der skabte konteksten.",
-        visualImage: "/images/backoffice1.png",
-        visualAlt: "Kvalitetsoverblik i Opticloud",
+        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        visualAlt: "Kvalitetskontroller og afvigelser registreret i Opticloud",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "60%", label: "Mindre kvalitetsrelateret omarbejde" },
@@ -396,7 +396,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Maintenance planning made visible",
         visualBody:
           "See upcoming tasks, overdue items, and machine health status at a glance across your entire facility.",
-        visualImage: "/images/taskapp2.png",
+        visualImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
         visualAlt: "Maintenance tasks in Opticloud",
         metricsTitle: "Typical Results",
         metrics: [
@@ -459,7 +459,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Ét sted for opgaver, udstyr og historik",
         visualBody:
           "Samlet overblik over kommende service, aktuelle opgaver og maskinernes historik.",
-        visualImage: "/images/taskapp2.png",
+        visualImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
         visualAlt: "Vedligeholdsopgaver i Opticloud",
         metricsTitle: "Typiske resultater",
         metrics: [
@@ -997,8 +997,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "One dashboard for your entire production",
         visualBody:
           "From ERP work orders to machine-level OEE, drill into the data that matters, at any level.",
-        visualImage: "/images/dashboard1.png",
-        visualAlt: "Shopfloor dashboard",
+        visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
+        visualImagePosition: "top",
+        visualAlt: "Work orders in Opticloud",
         metricsTitle: "Typical Results",
         metrics: [
           { metric: "15–25%", label: "OEE improvement in first year" },
@@ -1060,8 +1061,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Fra ERP-ordre til maskindata",
         visualBody:
           "Planen, udførelsen og afvigelserne vises i samme dashboard.",
-        visualImage: "/images/dashboard1.png",
-        visualAlt: "Shopfloor-dashboard",
+        visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
+        visualImagePosition: "top",
+        visualAlt: "Arbejdsordrer i Opticloud",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "Live", label: "Faktiske tal tilbage til planlægning" },
@@ -1146,8 +1148,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "One platform, every perspective",
         visualBody:
           "From the operator at the machine to the director in the boardroom, everyone sees the data they need, in the format that works for them.",
-        visualImage: "/images/OpticloudOPSingle.jpg",
-        visualAlt: "Opticloud MES platform",
+        visualDrawn: "mes",
         metricsTitle: "Typical Results",
         metrics: [
           { metric: "Real-time", label: "Visibility across all operations" },
@@ -1209,8 +1210,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Én platform, alle perspektiver",
         visualBody:
           "Operatører ser deres maskine. Ledere ser linjen. Direktører ser fabrikken.",
-        visualImage: "/images/OpticloudOPSingle.jpg",
-        visualAlt: "Opticloud MES-platform",
+        visualDrawn: "mes",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "Realtid", label: "Synlighed på tværs" },
@@ -1296,7 +1296,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Planning and production, same data",
         visualBody:
           "The plan reads the machine signals, and progress flows straight back. What is behind, what is ahead, and what it costs to reshuffle are all visible in one place.",
-        visualImage: "/images/report-mockup2.png",
+        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.png",
         visualAlt: "Production planning overview in Opticloud",
         metricsTitle: "What Changes",
         metrics: [
@@ -1359,7 +1359,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Planlægning og produktion på samme data",
         visualBody:
           "Planen læser maskinsignalerne, og fremdriften går direkte tilbage. Hvad der er bagud, og hvad en omrokering koster, står i samme billede.",
-        visualImage: "/images/report-mockup2.png",
+        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.png",
         visualAlt: "Overblik over produktionsplanlægning i Opticloud",
         metricsTitle: "Hvad ændrer sig",
         metrics: [
@@ -1446,8 +1446,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Documents next to the data they describe",
         visualBody:
           "The instruction for a job, the stops registered on it, and the quality checks that followed all sit on the same order, so a question about what happened has one place to go.",
-        visualImage: "/images/taskapp1.png",
-        visualAlt: "Work instructions and documents on an operator panel",
+        visualDrawn: "documents",
         metricsTitle: "What Changes",
         metrics: [
           { metric: "Current", label: "One approved version, everywhere" },
@@ -1509,8 +1508,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Dokumenter ved siden af de data, de beskriver",
         visualBody:
           "Instruktionen til en opgave, de stop der blev registreret på den, og kvalitetskontrollerne bagefter ligger på samme ordre.",
-        visualImage: "/images/taskapp1.png",
-        visualAlt: "Arbejdsinstruktioner og dokumenter på et operatørpanel",
+        visualDrawn: "documents",
         metricsTitle: "Hvad ændrer sig",
         metrics: [
           { metric: "Gældende", label: "Én godkendt version overalt" },

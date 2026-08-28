@@ -11,8 +11,16 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
+import {
+  type CSSProperties,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react"
 import { CapabilityMockup } from "@/components/ai-stack-mockups"
+import { ModuleMockup, type ModuleMockupSlug } from "@/components/module-mockups"
 import type { AiCapabilitySlug } from "@/lib/ai-stack"
 
 export type SlideLayout = "grid" | "overlay" | "vertical" | "ai"
@@ -39,6 +47,27 @@ export type SlideData = {
   // portion of the card; "fill" covers the whole card so the image bleeds edge
   // to edge (cropping as needed) regardless of aspect ratio.
   imageFit?: "cover" | "fill"
+  // "vertical" layout only: which part of the image survives the crop. The card
+  // is much taller than it is wide, so a wide screenshot loses a lot of its
+  // sides; anchor it where the content that matters sits. Default "center".
+  imagePosition?: "center" | "left" | "right" | "top"
+  // "vertical" layout only: draw a code-built graphic instead of a screenshot.
+  // Used for modules we have no presentable screen capture for. The card then
+  // fills with `accentColor` and the graphic floats on it, the way the "ai"
+  // layout cards do. Takes precedence over imageSrc.
+  moduleMockup?: ModuleMockupSlug
+}
+
+// Tailwind needs whole class names, so the crop anchors are mapped rather than
+// interpolated.
+const OBJECT_POSITION: Record<
+  NonNullable<SlideData["imagePosition"]>,
+  string
+> = {
+  center: "object-center",
+  left: "object-left",
+  right: "object-right",
+  top: "object-top",
 }
 
 // Build an rgba() string from a #rrggbb hex and an alpha, used to tint the
@@ -328,6 +357,9 @@ export function SlideCarousel({
               const isVertical = layout === "vertical"
               const isAi = layout === "ai"
               const isNarrow = isVertical || isAi
+              // Vertical slide that draws its visual in code instead of using a
+              // screenshot. The accent colour becomes the card fill.
+              const isDrawnVertical = isVertical && Boolean(slide.moduleMockup)
 
               const itemBasisClass = isNarrow ? NARROW_ITEM : WIDE_ITEM
 
@@ -344,7 +376,13 @@ export function SlideCarousel({
                     role="button"
                     tabIndex={0}
                     aria-label={`Go to slide ${index + 1}: ${slide.title}`}
-                    style={isAi ? { backgroundColor: slide.cardColor } : undefined}
+                    style={
+                      isAi
+                        ? { backgroundColor: slide.cardColor }
+                        : isDrawnVertical
+                          ? { backgroundColor: slide.accentColor }
+                          : undefined
+                    }
                     className={`relative h-[600px] w-full rounded-2xl overflow-hidden ${isVertical || isAi ? "" : slide.bgColor} cursor-pointer focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-[var(--gray-2)] shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]`}
                   >
                     <Card className="p-0 bg-white/0 border-none text-foreground shadow-none w-full h-full">
@@ -461,43 +499,104 @@ export function SlideCarousel({
                         ) : layout === "vertical" ? (
                           /* Vertical layout */
                           <div className="absolute inset-0 text-white">
-                            {/* Background image. Default photos sit in the lower
-                                portion of the card; "fill" slides cover the whole
-                                card so the image bleeds edge to edge regardless of
-                                aspect ratio (cropping as needed). */}
-                            <div className={slide.imageFit === "fill" ? "absolute inset-0" : "absolute inset-0 top-[30%]"}>
-                              <Image
-                                src={slide.imageSrc ?? "/globe.svg"}
-                                alt={slide.imageAlt ?? `${slide.title} illustration`}
-                                fill
-                                sizes="(min-width: 1024px) 25vw, 40vw"
-                                className="object-cover object-center"
-                                priority={index === 0}
-                              />
-                            </div>
+                            {slide.moduleMockup ? (
+                              /* Code-built graphic instead of a screenshot. It
+                                 floats on the accent fill and runs off the
+                                 bottom edge, the same crop the "ai" cards use,
+                                 then dissolves back into the card colour so the
+                                 arrow button stays readable over it. The mockups
+                                 are sized against the `top-[36%]` start, see the
+                                 note in components/module-mockups.tsx. */
+                              (() => {
+                                const tint = slide.accentColor ?? "#000000"
+                                return (
+                                  <>
+                                    {/* Slight lift at the top so the flat fill
+                                        does not read as dead space */}
+                                    <div
+                                      className="absolute inset-0 pointer-events-none"
+                                      style={{
+                                        background:
+                                          slide.textTone === "dark"
+                                            ? "linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 45%)"
+                                            : "linear-gradient(to bottom, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 45%)",
+                                      }}
+                                    />
+                                    <div
+                                      className="pointer-events-none absolute inset-x-7 top-[36%]"
+                                      style={
+                                        {
+                                          "--mockup-shadow":
+                                            slide.textTone === "dark"
+                                              ? "rgba(0,0,0,0.14)"
+                                              : "rgba(0,0,0,0.38)",
+                                        } as CSSProperties & Record<string, string>
+                                      }
+                                    >
+                                      <ModuleMockup slug={slide.moduleMockup} />
+                                    </div>
+                                    <div
+                                      className="absolute inset-x-0 bottom-0 h-40 pointer-events-none"
+                                      style={{
+                                        background: `linear-gradient(to bottom, ${hexToRgba(tint, 0)} 0%, ${hexToRgba(tint, 0.45)} 50%, ${hexToRgba(tint, 0.92)} 80%, ${hexToRgba(tint, 1)} 100%)`,
+                                      }}
+                                    />
+                                  </>
+                                )
+                              })()
+                            ) : (
+                              <>
+                                {/* Background image. Default photos sit in the lower
+                                    portion of the card; "fill" slides cover the whole
+                                    card so the image bleeds edge to edge regardless of
+                                    aspect ratio (cropping as needed). */}
+                                <div className={slide.imageFit === "fill" ? "absolute inset-0" : "absolute inset-0 top-[30%]"}>
+                                  <Image
+                                    src={slide.imageSrc ?? "/globe.svg"}
+                                    alt={slide.imageAlt ?? `${slide.title} illustration`}
+                                    fill
+                                    sizes="(min-width: 1024px) 25vw, 40vw"
+                                    className={`object-cover ${OBJECT_POSITION[slide.imagePosition ?? "center"]}`}
+                                    priority={index === 0}
+                                  />
+                                </div>
 
-                            {/* Gradient overlay - fades image towards top, tinted
-                                with the slide's AI-palette accent (falls back to black) */}
-                            {(() => {
-                              const tint = slide.accentColor ?? "#000000"
-                              return (
-                                <div
-                                  className="absolute inset-0 pointer-events-none"
-                                  style={{
-                                    background: `linear-gradient(to bottom, ${hexToRgba(tint, 1)} 0%, ${hexToRgba(tint, 0.98)} 25%, ${hexToRgba(tint, 0.7)} 50%, ${hexToRgba(tint, 0.3)} 75%, ${hexToRgba(tint, 0)} 100%)`,
-                                  }}
-                                />
-                              )
-                            })()}
+                                {/* Gradient overlay - fades image towards top, tinted
+                                    with the slide's AI-palette accent (falls back to black) */}
+                                {(() => {
+                                  const tint = slide.accentColor ?? "#000000"
+                                  return (
+                                    <div
+                                      className="absolute inset-0 pointer-events-none"
+                                      style={{
+                                        background: `linear-gradient(to bottom, ${hexToRgba(tint, 1)} 0%, ${hexToRgba(tint, 0.98)} 25%, ${hexToRgba(tint, 0.7)} 50%, ${hexToRgba(tint, 0.3)} 75%, ${hexToRgba(tint, 0)} 100%)`,
+                                      }}
+                                    />
+                                  )
+                                })()}
+                              </>
+                            )}
 
                             {/* Content overlay, AI-slide typographic hierarchy:
                                 prominent feature title + quieter supporting line */}
                             <div className="relative z-10 h-full flex flex-col">
                               <div className="px-7 pt-7">
-                                <h3 className="text-2xl font-medium tracking-tight text-white">
+                                <h3
+                                  className={`text-2xl font-medium tracking-tight ${
+                                    slide.textTone === "dark"
+                                      ? "text-slate-900"
+                                      : "text-white"
+                                  }`}
+                                >
                                   {slide.title}
                                 </h3>
-                                <p className="mt-2 max-w-[18rem] text-sm leading-relaxed text-white/70">
+                                <p
+                                  className={`mt-2 max-w-[18rem] text-sm leading-relaxed ${
+                                    slide.textTone === "dark"
+                                      ? "text-slate-900/70"
+                                      : "text-white/70"
+                                  }`}
+                                >
                                   {slide.description}
                                 </p>
                               </div>
@@ -512,7 +611,11 @@ export function SlideCarousel({
                               onClick={(e) => e.stopPropagation()}
                               onKeyDown={(e) => e.stopPropagation()}
                               aria-label={slide.primaryLabel}
-                              className="absolute bottom-6 right-6 z-10 inline-flex size-10 items-center justify-center rounded-full bg-white text-slate-900 shadow-lg ring-1 ring-black/5 transition-transform hover:scale-105"
+                              className={`absolute bottom-6 right-6 z-10 inline-flex size-10 items-center justify-center rounded-full shadow-lg ring-1 transition-transform hover:scale-105 ${
+                                slide.textTone === "dark"
+                                  ? "bg-slate-900 text-white ring-white/10"
+                                  : "bg-white text-slate-900 ring-black/5"
+                              }`}
                             >
                               <ChevronRight className="size-5" />
                             </Link>
