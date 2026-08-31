@@ -6,7 +6,7 @@ category: "Insights"
 image: "/images/blog and case/blog/dashboards-v51.png"
 ---
 
-Version 51 introduced a new concept in Opticloud: **custom flexible real-time dashboards**.
+Version 51 introduced a new concept in OptiPeople Data Platform: **custom flexible real-time dashboards**.
 
 The concept was created to solve two problems:
 
@@ -15,7 +15,7 @@ The concept was created to solve two problems:
 
 ## Solving the First Problem
 
-Opticloud is used by many kinds of roles:
+OptiPeople Data Platform is used by many kinds of roles:
 
 - operators
 - technicians

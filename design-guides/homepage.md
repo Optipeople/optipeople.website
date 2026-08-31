@@ -39,9 +39,9 @@ The homepage follows a deliberate narrative arc. Each section answers a visitor 
 | 1 | Hero | "What is this?" | Inline (text + SlideCarousel tabs) |
 | 2 | Who It's For | "Is this for me?" | SlideCarousel (overlay layout) |
 | 3 | What You Can Do | "What does it solve?" | SlideCarousel (vertical layout) |
-| 4 | Social Proof – Logos | "Who else uses it?" | LogoWall |
-| 5 | Social Proof – Videos | "Show me proof" | VideoCarousel |
-| 6 | Social Proof – Quotes | "What do people say?" | TestimonialCarousel |
+| 4 | Social Proof: Logos | "Who else uses it?" | LogoWall |
+| 5 | Social Proof: Videos | "Show me proof" | VideoCarousel |
+| 6 | Social Proof: Quotes | "What do people say?" | TestimonialCarousel |
 | 7 | Platform Overview | "How does it work?" | PlatformFlower |
 | 8 | Blog / Cases | "Tell me more" | Inline blog grid |
 | 9 | CTA | "I'm interested" | CallToAction |
@@ -73,7 +73,7 @@ Three tiers of vertical padding, chosen by section weight:
 Mobile-first. Three breakpoints matter:
 
 - **Base** (< 768px): Single column, tighter spacing, simplified components
-- **md** (768px): 2–4 column grids, tablet adjustments
+- **md** (768px): 2-4 column grids, tablet adjustments
 - **lg** (1024px): Full desktop layouts, larger typography, SVG-based components
 
 ---
@@ -344,7 +344,7 @@ export default function NewPage() {
         </div>
       </section>
 
-      {/* 2–N. Content Sections, ascending py tiers */}
+      {/* 2 to N. Content Sections, ascending py tiers */}
       <section className="py-12 lg:py-28">
         <div className="mx-auto w-full max-w-5xl px-8 lg:px-6">
           {/* text-4xl lg:text-5xl font-normal section heading */}

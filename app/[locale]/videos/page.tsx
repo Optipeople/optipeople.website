@@ -29,7 +29,7 @@ type VideosCopy = {
 const copy: Record<Locale, VideosCopy> = {
   en: {
     eyebrow: "Videos",
-    headline: "See Opticloud in action",
+    headline: "See OptiPeople Data Platform in action",
     body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place. The videos are recorded in Danish, and every story below is also written up in full on the site.",
     watchLabel: "Watch the stories",
     countLabel: (count) => `${count} videos, recorded in Danish`,
@@ -85,7 +85,7 @@ const copy: Record<Locale, VideosCopy> = {
   },
   da: {
     eyebrow: "Videoer",
-    headline: "Se Opticloud i aktion",
+    headline: "Se OptiPeople Data Platform i aktion",
     body: "Kundesamtaler og partneroplæg om, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret ét sted. Alle historier findes også skrevet i fuld længde her på sitet.",
     watchLabel: "Se historierne",
     countLabel: (count) => `${count} videoer, optaget på dansk`,

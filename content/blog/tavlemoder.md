@@ -6,11 +6,11 @@ category: "Insights"
 image: "/images/blog and case/blog/board-meetings.jpg"
 ---
 
-Opticloud is positioned here as a support tool for better production board meetings.
+OptiPeople Data Platform is positioned here as a support tool for better production board meetings.
 
 The core idea is simple: production data should be visible and discussable so that improvement becomes a shared process rather than a vague conversation.
 
-## How Opticloud Supports Board Meetings
+## How OptiPeople Data Platform Supports Board Meetings
 
 Data can be:
 

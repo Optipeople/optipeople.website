@@ -60,7 +60,7 @@ const copy: Record<Locale, InsightsCopy> = {
       cases: {
         title: "Cases",
         description:
-          "Customer stories and concrete examples of how factories use Opticloud to improve output, uptime, and decision-making.",
+          "Customer stories and concrete examples of how factories use OptiPeople Data Platform to improve output, uptime, and decision-making.",
         countLabel: "customer stories",
         cta: "Browse case studies",
       },
@@ -101,7 +101,7 @@ const copy: Record<Locale, InsightsCopy> = {
       cases: {
         title: "Cases",
         description:
-          "Kundehistorier og konkrete eksempler på, hvordan fabrikker bruger Opticloud til at producere mere, holde maskinerne kørende og træffe beslutninger.",
+          "Kundehistorier og konkrete eksempler på, hvordan fabrikker bruger OptiPeople Data Platform til at producere mere, holde maskinerne kørende og træffe beslutninger.",
         countLabel: "kundehistorier",
         cta: "Se cases",
       },

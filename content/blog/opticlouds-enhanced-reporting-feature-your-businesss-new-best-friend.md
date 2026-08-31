@@ -1,5 +1,5 @@
 ---
-title: "Opticloud's Enhanced Reporting Feature: Your Business's New Best Friend"
+title: "OptiPeople Data Platform’s Enhanced Reporting Feature: Your Business's New Best Friend"
 date: "2023-08-03"
 author: "OptiPeople Team"
 category: "Insights"
@@ -8,7 +8,7 @@ image: "/images/blog and case/blog/oee-module-report.png"
 
 Video: Customizable report templates demo
 
-Welcome to the future of efficient reporting with Opticloud's new and enhanced feature, the Customizable Report Templates. This feature allows you to focus on the data that matters by personalizing your reports.
+Welcome to the future of efficient reporting with OptiPeople Data Platform’s new and enhanced feature, the Customizable Report Templates. This feature allows you to focus on the data that matters by personalizing your reports.
 
 ## One Feature, Unlimited Possibilities
 
@@ -32,6 +32,6 @@ This feature is designed to make data more understandable regardless of technica
 
 ## The First Step to Efficient Reporting
 
-This feature is designed to change how teams manage data and make decisions. To get started, log into your Opticloud account and try the customizable templates.
+This feature is designed to change how teams manage data and make decisions. To get started, log into your OptiPeople Data Platform account and try the customizable templates.
 
 We look forward to your feedback as we continue improving the experience.

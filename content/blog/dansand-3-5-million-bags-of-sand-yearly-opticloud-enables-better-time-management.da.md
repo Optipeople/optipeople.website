@@ -1,5 +1,5 @@
 ---
-title: "Dansand: 3,5 millioner sække sand om året, og Opticloud giver bedre styring af tiden"
+title: "Dansand: 3,5 millioner sække sand om året, og OptiPeople Data Platform giver bedre styring af tiden"
 metricLabel: "sække sand om året"
 quote: "Vi vil bruge data til at træffe investeringsbeslutninger, når en maskine skal skiftes, så vi investerer rigtigt."
 outcome: "Oppetids- og produktionsdata på big bag-linjerne driver nu den daglige opfølgning og investeringsbeslutningerne."
@@ -7,7 +7,7 @@ outcome: "Oppetids- og produktionsdata på big bag-linjerne driver nu den daglig
 
 ## Kort fortalt
 
-Dansand bruger Opticloud på håndteringslinjerne til big bags med sand som støtte til den daglige opfølgning og til bedre beslutninger om drift og investeringer.
+Dansand bruger OptiPeople Data Platform på håndteringslinjerne til big bags med sand som støtte til den daglige opfølgning og til bedre beslutninger om drift og investeringer.
 
 ## Situationen
 
@@ -17,9 +17,9 @@ Virksomheden ville have stærkere data til at vurdere processerne og til at træ
 
 > "Vi vil gerne bruge data til at træffe investeringsbeslutninger, når en maskine helt eller delvist skal skiftes. Det sikrer, at vi investerer rigtigt."
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Opticloud måler:
+OptiPeople Data Platform måler:
 
 - oppetid på maskinlinjerne
 - producerede mængder
@@ -28,7 +28,7 @@ Data bruges direkte i den løbende opfølgning på driften.
 
 ## Resultatet
 
-Hos Dansand bruges Opticloud-data til at:
+Hos Dansand bruges data fra OptiPeople Data Platform til at:
 
 - skabe grundlaget for produktionsmøderne
 - styrke samarbejdet på tværs af teamet

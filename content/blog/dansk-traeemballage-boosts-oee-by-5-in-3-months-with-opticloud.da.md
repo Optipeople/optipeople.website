@@ -1,16 +1,16 @@
 ---
-title: "DANSK TRÆEMBALLAGE løfter OEE med 5% på 3 måneder med Opticloud"
+title: "DANSK TRÆEMBALLAGE løfter OEE med 5% på 3 måneder med OptiPeople Data Platform"
 metricLabel: "OEE på tre måneder"
 outcome: "Én produktionslinje, live oppetid på gulvet, og et OEE-løft på 5% inden for de første tre måneder."
 ---
 
 ## Kort fortalt
 
-Dansk Træemballage satte Opticloud i drift på én produktionslinje i 2024 og så en gennemsnitlig **stigning i OEE på 5% inden for tre måneder**.
+Dansk Træemballage satte OptiPeople Data Platform i drift på én produktionslinje i 2024 og så en gennemsnitlig **stigning i OEE på 5% inden for tre måneder**.
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Opticloud bruges til at indsamle:
+OptiPeople Data Platform bruges til at indsamle:
 
 - oppetidsdata
 - OEE-data

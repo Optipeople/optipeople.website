@@ -1,5 +1,5 @@
 ---
-title: "DANSK TRÆEMBALLAGE – Boosts OEE by 5% in 3 Months with Opticloud"
+title: "DANSK TRÆEMBALLAGE: Boosts OEE by 5% in 3 Months with OptiPeople Data Platform"
 date: "2024-11-15"
 author: "OptiPeople Team"
 category: "Cases"
@@ -12,11 +12,11 @@ outcome: "One production line, live uptime on the floor, and a 5% OEE lift withi
 
 ## At a Glance
 
-Dansk Træemballage implemented Opticloud on one production line in 2024 and saw an average **5% increase in OEE within three months**.
+Dansk Træemballage implemented OptiPeople Data Platform on one production line in 2024 and saw an average **5% increase in OEE within three months**.
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Opticloud is used to collect:
+OptiPeople Data Platform is used to collect:
 
 - uptime data
 - OEE data

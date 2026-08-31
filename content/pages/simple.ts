@@ -24,7 +24,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Old machines included",
-          body: "Connecting a factory rarely means connecting only new equipment. Opticloud reads modern controls over standard industrial protocols, and for older machines without a usable interface, sensors measure the signals directly. Age is not what decides whether a machine can be measured.",
+          body: "Connecting a factory rarely means connecting only new equipment. OptiPeople Data Platform reads modern controls over standard industrial protocols, and for older machines without a usable interface, sensors measure the signals directly. Age is not what decides whether a machine can be measured.",
         },
         {
           title: "Data you can take with you",
@@ -52,7 +52,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Også de gamle maskiner",
-          body: "At koble en fabrik på handler sjældent kun om det nye udstyr. Opticloud læser de nyere styringer over de protokoller, maskiner taler i forvejen. På de ældre maskiner, hvor der ikke er noget at læse fra, sætter vi sensorer på og måler signalet direkte. Alderen afgør ikke, om en maskine kan måles.",
+          body: "At koble en fabrik på handler sjældent kun om det nye udstyr. OptiPeople Data Platform læser de nyere styringer over de protokoller, maskiner taler i forvejen. På de ældre maskiner, hvor der ikke er noget at læse fra, sætter vi sensorer på og måler signalet direkte. Alderen afgør ikke, om en maskine kan måles.",
         },
         {
           title: "Data, I kan tage med jer",
@@ -74,7 +74,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       sections: [
         {
           title: "Measured, not estimated",
-          body: "A machine either ran or it did not, and the signal says which. Opticloud builds its numbers from what equipment reports and what operators register at the machine, so the OEE figure in a Monday meeting traces back to specific minutes on a specific line rather than to someone's recollection of the week.",
+          body: "A machine either ran or it did not, and the signal says which. OptiPeople Data Platform builds its numbers from what equipment reports and what operators register at the machine, so the OEE figure in a Monday meeting traces back to specific minutes on a specific line rather than to someone's recollection of the week.",
         },
         {
           title: "Registered where the work happens",
@@ -111,7 +111,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       sections: [
         {
           title: "Målt, ikke gættet",
-          body: "Enten kørte maskinen, eller også gjorde den ikke. Signalet siger hvad. Opticloud bygger tallene på det, udstyret melder, og det, operatørerne registrerer ved maskinen. OEE-tallet på mandagsmødet kan følges hele vejen tilbage til bestemte minutter på en bestemt linje, i stedet for til hvad nogen kan huske om ugen.",
+          body: "Enten kørte maskinen, eller også gjorde den ikke. Signalet siger hvad. OptiPeople Data Platform bygger tallene på det, udstyret melder, og det, operatørerne registrerer ved maskinen. OEE-tallet på mandagsmødet kan følges hele vejen tilbage til bestemte minutter på en bestemt linje, i stedet for til hvad nogen kan huske om ugen.",
         },
         {
           title: "Registreret dér, hvor arbejdet sker",

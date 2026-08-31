@@ -12,7 +12,7 @@ outcome: "Analysing OEE by series size justified a second machine, and lifted OE
 
 ## At a Glance
 
-This anonymized case shows how a factory used Opticloud data to uncover efficiency opportunities, improve OEE, and make a better-informed equipment investment.
+This anonymized case shows how a factory used OptiPeople Data Platform data to uncover efficiency opportunities, improve OEE, and make a better-informed equipment investment.
 
 The core result was an increase in OEE from **21%** to **41%**.
 
@@ -22,7 +22,7 @@ The machine in focus produced both small and large series sizes.
 
 Because changeovers were expensive, the factory suspected there was room for improvement, but lacked the data needed to make confident decisions.
 
-Opticloud was introduced to create that decision basis.
+OptiPeople Data Platform was introduced to create that decision basis.
 
 ## What the Data Showed
 

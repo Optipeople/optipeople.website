@@ -6,9 +6,9 @@ outcome: "Intelligent truckopladning på billig solenergi sænker energiomkostni
 
 ## Kort fortalt
 
-XL-BYG Brejnholt bruger Opticloud til at reducere energiforbruget og understøtte vejen mod helt fossilfri drift.
+XL-BYG Brejnholt bruger OptiPeople Data Platform til at reducere energiforbruget og understøtte vejen mod helt fossilfri drift.
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
 Opsætningen skal optimere opladningen af trucks og give virksomheden et stærkere overblik over energiforbruget.
 

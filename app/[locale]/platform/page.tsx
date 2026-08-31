@@ -19,12 +19,12 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "Platform | OptiPeople",
     description:
-      "Explore the OptiCloud platform — modular MES, OEE, QMS, EMS, maintenance, planning, orders, IoT, documents, analysis, and AI agents, sharing data in one unified view of your operations.",
+      "Explore the OptiPeople Data Platform: a modular MES with OEE, QMS, EMS, maintenance, planning, orders, IoT, documents, analysis, and AI agents, sharing data in one unified view of your operations.",
   },
   da: {
     title: "Platform | OptiPeople",
     description:
-      "Se OptiCloud-platformen: MES, OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter i ét samlet billede af driften.",
+      "Se OptiPeople Data Platform: MES, OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter i ét samlet billede af driften.",
   },
 }
 
@@ -42,8 +42,8 @@ const copy: Record<Locale, PlatformCopy> = {
   en: {
     hero: {
       eyebrow: "Platform",
-      title: "One platform for the whole operation",
-      lede: "OptiCloud connects production, quality, maintenance, energy, and analysis on a single data foundation. Every module works from the same live data — so what one team registers, every team can use.",
+      title: "One modular platform for all your manufacturing operations",
+      lede: "The OptiPeople Data Platform connects production, planning, quality, maintenance, energy, and analysis on a single data foundation. Take one module or ten: every module works from the same live data, so what one team registers, every team can use.",
       cta: "Book a demo",
       jump: "See the modules",
     },
@@ -52,12 +52,12 @@ const copy: Record<Locale, PlatformCopy> = {
       items: [
         { metric: "11", label: "Modules sharing one data foundation, switched on as you need them" },
         { metric: "1", label: "Structured record per machine, order, batch, and shift" },
-        { metric: "Any", label: "Protocol or machine age — new PLCs and legacy equipment alike" },
+        { metric: "Any", label: "Protocol or machine age, new PLCs and legacy equipment alike" },
       ],
     },
     intro: {
       title: "Most factories don't have a data problem. They have a data-in-pieces problem.",
-      body: "The OEE numbers live in one system, the maintenance log in another, quality in a binder, and energy on a bill that arrives a month late. Nobody is wrong, but nobody can see the whole picture either. OptiCloud puts every one of those records on the same foundation, tied to the same machines, orders, and shifts — so the argument moves from whose number is right to what to do about it.",
+      body: "The OEE numbers live in one system, the maintenance log in another, quality in a binder, and energy on a bill that arrives a month late. Nobody is wrong, but nobody can see the whole picture either. OptiPeople Data Platform puts every one of those records on the same foundation, tied to the same machines, orders, and shifts. So the argument moves from whose number is right to what to do about it.",
     },
     steps: {
       title: "How it fits together",
@@ -65,17 +65,17 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Connect",
           description:
-            "Connect machines, sensors, and systems through the IoT module — PLCs, gateways, and legacy equipment, regardless of protocol or age.",
+            "Connect machines, sensors, and systems through the IoT module: PLCs, gateways, and legacy equipment, regardless of protocol or age.",
         },
         {
           title: "Collect",
           description:
-            "Data lands in one structured foundation, tied to machines, orders, batches, and shifts — not scattered across systems and spreadsheets.",
+            "Data lands in one structured foundation, tied to machines, orders, batches, and shifts, instead of scattered across systems and spreadsheets.",
         },
         {
           title: "Analyze",
           description:
-            "Follow OEE in real time and get automated reports on performance, losses, quality, and energy — the same numbers for everyone.",
+            "Follow the numbers that matter to you as they happen, and get automated reports on output, losses, quality, and cost. The same numbers for everyone.",
         },
         {
           title: "Act",
@@ -93,15 +93,15 @@ const copy: Record<Locale, PlatformCopy> = {
     visual: {
       eyebrow: "Product view",
       title: "The same live data, wherever the decision gets made",
-      body: "On the floor it's an operator panel. In the office it's a report. In a meeting it's the number nobody disputes — because it all comes from the same record.",
+      body: "On the floor it's an operator panel. In the office it's a report. In a meeting it's the number nobody disputes, because it all comes from the same record.",
     },
-    logos: "Trusted by manufacturers across the Nordics",
+    logos: "Trusted by manufacturers across the Nordics and internationally",
   },
   da: {
     hero: {
       eyebrow: "Platform",
-      title: "Én platform til hele driften",
-      lede: "OptiCloud kobler produktion, kvalitet, vedligehold, energi og analyse sammen på ét fælles datagrundlag. Alle moduler arbejder på de samme data, så det, ét team registrerer, kan de andre bruge.",
+      title: "Én modulopbygget platform til hele produktionen",
+      lede: "OptiPeople Data Platform kobler produktion, planlægning, kvalitet, vedligehold, energi og analyse sammen på ét fælles datagrundlag. Tag ét modul eller ti: alle moduler arbejder på de samme data, så det, ét team registrerer, kan de andre bruge.",
       cta: "Book en demo",
       jump: "Se modulerne",
     },
@@ -115,7 +115,7 @@ const copy: Record<Locale, PlatformCopy> = {
     },
     intro: {
       title: "De fleste fabrikker har ikke et dataproblem. De har et data-i-stumper-problem.",
-      body: "OEE-tallene ligger i ét system, vedligeholdsloggen i et andet, kvaliteten i et ringbind, og energien på en regning, der kommer en måned for sent. Ingen tager fejl, men ingen kan se hele billedet. OptiCloud lægger det hele på det samme fundament, koblet til de samme maskiner, ordrer og skift. Så flytter diskussionen sig fra, hvis tal der er rigtigt, til hvad I gør ved det.",
+      body: "OEE-tallene ligger i ét system, vedligeholdsloggen i et andet, kvaliteten i et ringbind, og energien på en regning, der kommer en måned for sent. Ingen tager fejl, men ingen kan se hele billedet. OptiPeople Data Platform lægger det hele på det samme fundament, koblet til de samme maskiner, ordrer og skift. Så flytter diskussionen sig fra, hvis tal der er rigtigt, til hvad I gør ved det.",
     },
     steps: {
       title: "Sådan hænger det sammen",
@@ -133,7 +133,7 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Analysér",
           description:
-            "Følg OEE i realtid, og få rapporter om drift, tab, kvalitet og energi, der laver sig selv. De samme tal for alle.",
+            "Følg de tal, der betyder noget hos jer, mens det sker, og få rapporter om produktion, tab, kvalitet og omkostninger, der laver sig selv. De samme tal for alle.",
         },
         {
           title: "Handl",
@@ -153,7 +153,7 @@ const copy: Record<Locale, PlatformCopy> = {
       title: "De samme tal, dér hvor beslutningen bliver truffet",
       body: "På gulvet er det et operatørpanel. På kontoret er det en rapport. På mødet er det tallet, ingen sætter spørgsmålstegn ved, fordi det hele kommer fra den samme registrering.",
     },
-    logos: "Brugt af produktionsvirksomheder i hele Norden",
+    logos: "Brugt af produktionsvirksomheder i Norden og resten af verden",
   },
 }
 
@@ -180,7 +180,7 @@ export default async function PlatformPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen">
-      {/* Hero — the wide editorial statement the deep-dive pages open on,
+      {/* Hero: the wide editorial statement the deep-dive pages open on,
           rather than the centred column this page used to lead with. */}
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">
         <div
@@ -243,7 +243,7 @@ export default async function PlatformPage({ params }: PageProps) {
         </dl>
       </section>
 
-      {/* Intro — the argument the page was previously missing entirely. */}
+      {/* Intro: the argument the page was previously missing entirely. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
@@ -258,7 +258,7 @@ export default async function PlatformPage({ params }: PageProps) {
       {/* Interactive platform diagram */}
       <PlatformFlower locale={loc} />
 
-      {/* Steps — numbered rail on hairlines, replacing the centred 01–04 row. */}
+      {/* Steps: numbered rail on hairlines, replacing the centred 01 to 04 row. */}
       <section className="px-[var(--edge)] py-20 lg:py-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.steps.title}
@@ -294,11 +294,15 @@ export default async function PlatformPage({ params }: PageProps) {
           and what is isolated per customer. */}
       <PlatformArchitecture locale={loc} />
 
-      {/* Modules — each card wears the colour of the page it opens, so this
+      {/* Modules: each card wears the colour of the page it opens, so this
           grid previews its destinations instead of repeating one grey box. */}
       <section
         id="modules"
-        className="scroll-mt-24 px-[var(--edge)] py-20 lg:py-28"
+        /* Deliberately more top padding than the standard rhythm: this section
+           follows the architecture band, and a band's bottom padding sits
+           inside the band, so the standard py-20 left this heading reading as
+           flush with the coloured edge above it. */
+        className="scroll-mt-24 px-[var(--edge)] pb-20 pt-28 lg:pb-28 lg:pt-40"
       >
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.modules.title}
@@ -330,7 +334,7 @@ export default async function PlatformPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Visual — full-bleed deep surface, the one hard rhythm break. */}
+      {/* Visual: full-bleed deep surface, the one hard rhythm break. */}
       <section
         className="py-20 text-white lg:py-32"
         style={{ backgroundColor: theme.deep }}

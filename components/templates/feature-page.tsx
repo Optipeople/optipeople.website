@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
+import { RoutesVisual } from "@/components/module-mockups"
 import type { FeaturePage } from "@/content/shared/types"
 import { getPageTheme } from "@/lib/page-theme"
 
@@ -194,36 +195,43 @@ export function FeaturePageTemplate({
         </div>
       </section>
 
-      {/* Showcase, full-bleed deep surface, the one hard rhythm break. */}
-      {page.showcaseTitle && page.showcaseBody && page.showcaseImage && (
-        <section
-          className="py-20 text-white lg:py-32"
-          style={{ backgroundColor: theme.deep }}
-        >
-          <div className="px-[var(--edge)]">
-            <div className="max-w-2xl">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
-                {t("productView")}
-              </p>
-              <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
-                {page.showcaseTitle}
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
-                {page.showcaseBody}
-              </p>
+      {/* Showcase, full-bleed deep surface, the one hard rhythm break. The
+          panel is either a screenshot or a code-built graphic. */}
+      {page.showcaseTitle &&
+        page.showcaseBody &&
+        (page.showcaseImage || page.showcaseDrawn) && (
+          <section
+            className="py-20 text-white lg:py-32"
+            style={{ backgroundColor: theme.deep }}
+          >
+            <div className="px-[var(--edge)]">
+              <div className="max-w-2xl">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
+                  {t("productView")}
+                </p>
+                <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
+                  {page.showcaseTitle}
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
+                  {page.showcaseBody}
+                </p>
+              </div>
+              <div className="reveal relative mt-12 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
+                {page.showcaseDrawn === "routes" ? (
+                  <RoutesVisual />
+                ) : page.showcaseImage ? (
+                  <Image
+                    src={page.showcaseImage}
+                    alt={page.showcaseAlt ?? page.showcaseTitle}
+                    fill
+                    sizes="(min-width: 1024px) 1140px, 100vw"
+                    className="object-cover"
+                  />
+                ) : null}
+              </div>
             </div>
-            <div className="reveal relative mt-12 aspect-[16/9] overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
-              <Image
-                src={page.showcaseImage}
-                alt={page.showcaseAlt ?? page.showcaseTitle}
-                fill
-                sizes="(min-width: 1024px) 1140px, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
       {/* Related, hairline grid instead of detached bordered cards.
           The page closes here: the conversion CTA is rendered globally by

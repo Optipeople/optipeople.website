@@ -48,7 +48,7 @@ The page follows a "show, then tell" narrative. Screenshots lead; text supports.
 | 5 | Results / Proof | Hard numbers or testimonial | "It delivers real results" |
 | 6 | Related Features | Link to sibling features | "There's more I should explore" |
 
-**5–6 sections is the target.** The hero and capabilities deep dive are mandatory. The rest flex based on available content. If no metrics exist yet, skip Results. If the feature is standalone, skip Related Features.
+**5-6 sections is the target.** The hero and capabilities deep dive are mandatory. The rest flex based on available content. If no metrics exist yet, skip Results. If the feature is standalone, skip Related Features.
 
 **No in-page CTA section.** The root layout (`layout.tsx`) already renders a global `CallToAction` component between every page and the footer.
 
@@ -118,7 +118,7 @@ Small:     text-sm text-muted-foreground
 ```
 
 **Copywriting rules:**
-- Short paragraphs, 2–3 sentences max
+- Short paragraphs, 2-3 sentences max
 - Lead with the outcome, follow with the mechanism
 - Be specific to this feature, no generic platform language
 - Active voice, present tense
@@ -199,7 +199,7 @@ A focused text section that frames the problem and positions the feature as the 
 
 ### 3. Capabilities Deep Dive
 
-The core of the feature page. This uses the **alternating rows pattern**, image-left/text-right, then text-left/image-right, to walk through 3–4 key aspects of the feature with product screenshots.
+The core of the feature page. This uses the **alternating rows pattern**, image-left/text-right, then text-left/image-right, to walk through 3-4 key aspects of the feature with product screenshots.
 
 ```tsx
 <section id="capabilities" className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
@@ -239,7 +239,7 @@ The core of the feature page. This uses the **alternating rows pattern**, image-
 ```
 
 **Guidelines:**
-- **3–4 capabilities is the sweet spot.** More than 4 gets repetitive, combine or cut.
+- **3-4 capabilities is the sweet spot.** More than 4 gets repetitive, combine or cut.
 - `space-y-16 lg:space-y-24` between rows, generous but not as extreme as module pages since there's a section background grouping them
 - Alternate layout direction with `order-2` on odd items
 - Every capability **must** have a product screenshot. No icons-only, no text-only. This is the "show me" page.
@@ -249,7 +249,7 @@ The core of the feature page. This uses the **alternating rows pattern**, image-
 
 **When to use card grid instead:**
 
-If the feature has 5–6 shorter capabilities that don't each warrant a screenshot, fall back to the card grid pattern from [module-landing-page.md](module-landing-page.md). But prefer alternating rows, feature pages should be visual.
+If the feature has 5-6 shorter capabilities that don't each warrant a screenshot, fall back to the card grid pattern from [module-landing-page.md](module-landing-page.md). But prefer alternating rows, feature pages should be visual.
 
 ### 4. Product Showcase
 
@@ -332,7 +332,7 @@ Hard numbers or a focused customer testimonial. Choose one pattern, not both (un
 
 ### 6. Related Features
 
-Help the visitor explore further. Show 2–3 sibling features from the same domain.
+Help the visitor explore further. Show 2-3 sibling features from the same domain.
 
 ```tsx
 <section className="py-12 lg:py-16 px-6 lg:px-8 bg-muted/30">
@@ -361,7 +361,7 @@ Help the visitor explore further. Show 2–3 sibling features from the same doma
 ```
 
 **Guidelines:**
-- 2–3 related features. Don't list all 8, pick the most relevant siblings.
+- 2-3 related features. Don't list all 8, pick the most relevant siblings.
 - Cards are minimal: title + short description, clickable as a whole
 - `rounded-xl` cards with subtle border, no shadow, lighter weight than the main content
 - Hover: border becomes more visible + title shifts to primary color
@@ -420,7 +420,7 @@ Results / Proof     → white
 Feature pages are the most screenshot-heavy pages on the site. Every feature page should have at minimum:
 
 1. **Hero screenshot**, the most recognizable view of the feature
-2. **3–4 capability screenshots**, one per alternating row
+2. **3-4 capability screenshots**, one per alternating row
 3. **Full-width showcase** (optional), the complete dashboard or workflow
 
 ### Image Containers
@@ -723,7 +723,7 @@ export default function FeatureNamePage() {
 - [ ] Hero headline is benefit-driven, not a feature label
 - [ ] Hero includes a product screenshot (not a background image or stock photo)
 - [ ] Breadcrumb links back to the correct parent module
-- [ ] Capabilities section has 3–4 items, each with a real screenshot
+- [ ] Capabilities section has 3-4 items, each with a real screenshot
 - [ ] Alternating rows alternate correctly (image-left, image-right, image-left...)
 - [ ] All headings use `font-normal`, nothing is bold
 - [ ] `max-w-4xl` for text, `max-w-5xl` for capability rows, `max-w-6xl` for hero + showcase

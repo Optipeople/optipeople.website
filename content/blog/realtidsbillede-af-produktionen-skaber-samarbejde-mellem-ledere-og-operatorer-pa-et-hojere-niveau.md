@@ -1,5 +1,5 @@
 ---
-title: "Broen - Opticloud enables increased collaboration"
+title: "Broen: OptiPeople Data Platform enables increased collaboration"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
@@ -14,7 +14,7 @@ outcome: "A live production picture on key machines brought managers and operato
 
 Broen wanted better visibility into stop causes and a real-time production picture that managers and operators could use together.
 
-Opticloud helped create that shared operational view.
+OptiPeople Data Platform helped create that shared operational view.
 
 ## The Situation
 
@@ -31,9 +31,9 @@ That visibility was important for:
 - strengthening competitiveness
 - supporting digital transformation across the factory
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Opticloud was installed on selected key machines.
+OptiPeople Data Platform was installed on selected key machines.
 
 The platform collects data from those machines while operators can register stop causes directly. Managers can then get a quick overview of production status and performance.
 

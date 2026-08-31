@@ -1,5 +1,5 @@
 ---
-title: "Kvik – Maximizing Uptime and Efficiency with Usage-Based Maintenance Through Opticloud"
+title: "Kvik: Maximizing Uptime and Efficiency with Usage-Based Maintenance Through OptiPeople Data Platform"
 date: "2024-12-18"
 author: "OptiPeople Team"
 category: "Cases"
@@ -14,7 +14,7 @@ outcome: "Usage-based maintenance raised uptime 5% and removed around four unnec
 
 ## At a Glance
 
-Kvik uses Opticloud to move from time-based maintenance to usage-based maintenance, increasing uptime while reducing unnecessary service work.
+Kvik uses OptiPeople Data Platform to move from time-based maintenance to usage-based maintenance, increasing uptime while reducing unnecessary service work.
 
 ## The Challenge
 
@@ -32,9 +32,9 @@ Kvik faced two related problems.
 - manual entry of downtime reasons
 - invalid data
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Kvik uses the Opticloud service module to trigger maintenance notifications based on desired operating hours instead of fixed time intervals.
+Kvik uses the OptiPeople Data Platform service module to trigger maintenance notifications based on desired operating hours instead of fixed time intervals.
 
 The module sends an email to a dedicated Outlook calendar. A day is automatically booked seven days ahead, giving the service team time to plan the exact maintenance date.
 
@@ -56,9 +56,9 @@ Kvik also reports:
 - microstop tracking
 - fewer interruptions
 
-> "We use the Opticloud service module to send notifications. We now perform maintenance based on desired operating hours instead of fixed time intervals. This makes us much more efficient and saves us unnecessary maintenance and downtime."
+> "We use the OptiPeople Data Platform service module to send notifications. We now perform maintenance based on desired operating hours instead of fixed time intervals. This makes us much more efficient and saves us unnecessary maintenance and downtime."
 
-> "The Opticloud service module sends an email to a dedicated Outlook calendar. A day is automatically booked 7 days ahead in the calendar. The service team then has 7 days to plan the exact day for performing maintenance on the machine."
+> "The OptiPeople Data Platform service module sends an email to a dedicated Outlook calendar. A day is automatically booked 7 days ahead in the calendar. The service team then has 7 days to plan the exact day for performing maintenance on the machine."
 
 Stefan Lindell  
 Lean Project Manager, Kvik

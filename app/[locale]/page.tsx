@@ -222,7 +222,7 @@ function buildModuleSlides(
       title: label,
       description: slide?.description ?? entry.blurb[locale],
       moduleMockup: mockup,
-      imageSrc: mockup ? undefined : slide?.imageSrc ?? "/images/dashboard1.png",
+      imageSrc: mockup ? undefined : slide?.imageSrc ?? "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
       imageAlt: mockup ? undefined : slide?.imageAlt ?? label,
       imageFit: slide?.imageFit,
       imagePosition: slide?.imagePosition,
@@ -285,7 +285,7 @@ const copy: Record<Locale, HomeCopy> = {
         tab: "OEMs and machine builders",
         title: "Turn Machines Into Platforms",
         description:
-          "Opticloud lets you ship connected machines with built-in insight. Monitor performance in the field, support customers proactively, and build recurring digital services on top of your equipment.",
+          "OptiPeople Data Platform lets you ship connected machines with built-in insight. Monitor performance in the field, support customers proactively, and build recurring digital services on top of your equipment.",
         imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         imageAlt: "OptiPeople efficiency report with live Availability, Performance and OEE for a connected machine",
         primaryLabel: "Learn About OEM Benefits",
@@ -314,7 +314,7 @@ const copy: Record<Locale, HomeCopy> = {
       headingSub: "See how they run production on data with OptiPeople.",
       storiesLabel: "Customer stories",
       quote:
-        "Comparing our OEE to previous data before Opticloud, we’ve seen an average increase of 5% within just three months.",
+        "Comparing our OEE to previous data before OptiPeople Data Platform, we’ve seen an average increase of 5% within just three months.",
       cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
@@ -378,14 +378,14 @@ const copy: Record<Locale, HomeCopy> = {
     testimonials: [
       {
         quote:
-          "Comparing our OEE to previous data before Opticloud, we've seen an average increase of 5% within just three months.",
+          "Comparing our OEE to previous data before OptiPeople Data Platform, we've seen an average increase of 5% within just three months.",
         author: "Kasper Kielgast Poulsen",
         title: "Fabrikschef",
         company: "Dansk Træemballage",
       },
       {
         quote:
-          "Over the past two years, Opticloud has helped us increase productivity by approximately 5%. Data collection combined with continuous improvements is key.",
+          "Over the past two years, OptiPeople Data Platform has helped us increase productivity by approximately 5%. Data collection combined with continuous improvements is key.",
         author: "Tommy Andersen",
         title: "Production Manager",
         company: "DFI Geisler",
@@ -399,7 +399,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       {
         quote:
-          "Opticloud provides us with valuable management information that was previously unavailable. Our operators monitor uptime on tablets, which has encouraged quicker recovery times.",
+          "OptiPeople Data Platform provides us with valuable management information that was previously unavailable. Our operators monitor uptime on tablets, which has encouraged quicker recovery times.",
         author: "Kasper Kielgast Poulsen",
         title: "Fabrikschef",
         company: "Dansk Træemballage",
@@ -529,7 +529,7 @@ const copy: Record<Locale, HomeCopy> = {
         tab: "OEM'er og maskinbyggere",
         title: "Gør maskiner til platforme",
         description:
-          "Med Opticloud kan I levere maskiner, der er koblet på, med indblikket bygget ind. Hold øje med, hvordan de kører ude hos kunderne, hjælp før de ringer, og byg service oven på udstyret.",
+          "Med OptiPeople Data Platform kan I levere maskiner, der er koblet på, med indblikket bygget ind. Hold øje med, hvordan de kører ude hos kunderne, hjælp før de ringer, og byg service oven på udstyret.",
         imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         imageAlt: "OptiPeople effektivitetsrapport med live tilgængelighed, performance og OEE for en forbundet maskine",
         primaryLabel: "Se løsningen til maskinbyggere",
@@ -558,7 +558,7 @@ const copy: Record<Locale, HomeCopy> = {
       headingSub: "Se hvordan de bruger tallene i den daglige drift.",
       storiesLabel: "Kundehistorier",
       quote:
-        "Sammenlignet med vores OEE før Opticloud har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
+        "Sammenlignet med vores OEE før OptiPeople Data Platform har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
       cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
@@ -622,14 +622,14 @@ const copy: Record<Locale, HomeCopy> = {
     testimonials: [
       {
         quote:
-          "Sammenlignet med vores OEE før Opticloud har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
+          "Sammenlignet med vores OEE før OptiPeople Data Platform har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
         author: "Kasper Kielgast Poulsen",
         title: "Fabrikschef",
         company: "Dansk Træemballage",
       },
       {
         quote:
-          "Opticloud har hjulpet os med at øge produktiviteten med cirka 5%. Dataindsamling kombineret med løbende forbedringer er nøglen.",
+          "OptiPeople Data Platform har hjulpet os med at øge produktiviteten med cirka 5%. Dataindsamling kombineret med løbende forbedringer er nøglen.",
         author: "Tommy Andersen",
         title: "Production Manager",
         company: "DFI Geisler",

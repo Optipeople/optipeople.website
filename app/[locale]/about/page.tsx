@@ -39,7 +39,7 @@ const copy: Record<
       "OptiPeople is a digital operations company. We build software, connect systems, and help industrial teams turn data into better decisions, from the shopfloor to the boardroom.",
     missionHeading: "Built for the space between shopfloor and ERP",
     missionBody:
-      "Most factories have machines that produce data and ERP systems that need it, but nothing useful in between. OptiPeople fills that gap. Our platform, Opticloud, captures real-time production data, makes it visible to operators and managers, and turns it into actions that improve performance, reduce waste, and keep operations running.",
+      "Most factories have machines that produce data and ERP systems that need it, but nothing useful in between. OptiPeople fills that gap. The OptiPeople Data Platform captures real-time production data, makes it visible to operators and managers, and turns it into actions that improve performance, reduce waste, and keep operations running.",
     valuesHeading: "How we work",
     teamHeading: "The team",
     values: [

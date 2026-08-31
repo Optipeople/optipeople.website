@@ -33,9 +33,9 @@ A cloud MES helps organizations answer questions such as:
 
 Instead of relying on intuition alone, teams can base these decisions on operational data.
 
-## OptiCloud as a Cloud MES
+## OptiPeople Data Platform as a Cloud MES
 
-The article positions Opticloud as a cloud MES that can be introduced step by step, without requiring a large all-at-once IT project.
+The article positions OptiPeople Data Platform as a cloud MES that can be introduced step by step, without requiring a large all-at-once IT project.
 
 That makes it possible to start with one clear goal, for example:
 

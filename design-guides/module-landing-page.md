@@ -40,7 +40,7 @@ The page follows a conversion-focused narrative. Each section builds on the last
 | 5 | Results / Proof | Build confidence | "It works for others like me" |
 | 6 | How It Works | Reduce uncertainty | "I understand the process" |
 
-**Not every section is mandatory.** A module page should have 4–6 sections total. Pick what's relevant. The hero is always present; the middle sections flex based on what the module needs to communicate.
+**Not every section is mandatory.** A module page should have 4-6 sections total. Pick what's relevant. The hero is always present; the middle sections flex based on what the module needs to communicate.
 
 **No in-page CTA section.** The root layout (`layout.tsx`) already renders a global `CallToAction` component between every page and the footer. Module pages should **not** duplicate this with their own CTA section.
 
@@ -115,7 +115,7 @@ Small:     text-sm text-muted-foreground
 ```
 
 **Copywriting rules:**
-- Short paragraphs, 2–3 sentences max
+- Short paragraphs, 2-3 sentences max
 - No jargon unless the audience expects it (they're industrial, some is fine)
 - Lead with the outcome, follow with the mechanism
 - Active voice, present tense
@@ -240,7 +240,7 @@ The core of the page. Show what the module does.
 ```
 
 **Guidelines:**
-- 2 columns for 4 features, 3 columns for 5–6 features
+- 2 columns for 4 features, 3 columns for 5-6 features
 - Icons from lucide-react, wrapped in `bg-primary/10 rounded-xl`
 - No card borders or shadows on feature items, the background section provides containment
 - If features need more depth, use the alternating rows pattern instead (see below)
@@ -280,7 +280,7 @@ For modules where each capability needs a visual or longer explanation, alternat
 - `space-y-20 lg:space-y-32` between rows, Apple-level breathing room
 - Alternate layout direction with `order-2` on odd items
 - Images are always `rounded-2xl`, `aspect-[4/3]` or `aspect-[3/2]`
-- This pattern works best for 3–4 features. More than that gets repetitive.
+- This pattern works best for 3-4 features. More than that gets repetitive.
 
 ### 4. Visual / Product Section
 
@@ -391,7 +391,7 @@ Reduce friction by showing the process is simple. Three steps is ideal.
 
 **Guidelines:**
 - Step numbers displayed as `01`, `02`, `03`, large, light, in primary color
-- Keep descriptions to 1–2 sentences
+- Keep descriptions to 1-2 sentences
 - 3 steps is the sweet spot. If you need more, the process is too complex for a landing page.
 
 ### CTA, Handled by Layout

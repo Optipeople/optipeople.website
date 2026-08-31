@@ -17,7 +17,7 @@ OptiCloud gives industrial teams real-time insight, control, and coordination ac
 
 ### Built for industrial teams with real operations
 
-### Slide 1 – Manufacturing companies
+### Slide 1: Manufacturing companies
 
 Connect production, quality, maintenance, and energy into one operational view.  
 Get real time insight from the shopfloor and turn it into better planning, higher efficiency, and stable operations.
@@ -26,7 +26,7 @@ Get real time insight from the shopfloor and turn it into better planning, highe
 
 ---
 
-### Slide 2 – OEMs and machine builders
+### Slide 2: OEMs and machine builders
 
 Connect machines in the field, enable data driven aftersales, and support customers proactively.  
 From machine monitoring to service workflows and long term performance insight.
@@ -35,7 +35,7 @@ From machine monitoring to service workflows and long term performance insight.
 
 ---
 
-### Slide 3 – Service and aftermarket teams
+### Slide 3: Service and aftermarket teams
 
 Monitor assets, prevent downtime, and deliver proactive service across customers and sites.  
 One platform for visibility, tasks, and documentation.

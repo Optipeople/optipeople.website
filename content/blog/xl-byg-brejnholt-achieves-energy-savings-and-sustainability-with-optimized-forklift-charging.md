@@ -11,9 +11,9 @@ outcome: "Smart forklift charging on cheap, solar energy cuts energy costs and s
 
 ## At a Glance
 
-XL-BYG Brejnholt uses Opticloud to reduce energy consumption and support its move toward full fossil-free operation.
+XL-BYG Brejnholt uses OptiPeople Data Platform to reduce energy consumption and support its move toward full fossil-free operation.
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
 The setup is designed to optimize forklift charging and give the business a stronger energy overview.
 

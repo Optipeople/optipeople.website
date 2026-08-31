@@ -54,10 +54,18 @@ export type StandardPage = {
   visualImagePosition?: "top" | "center" | "bottom"
   /**
    * Draw the visual in code instead of shipping a screenshot, for modules
-   * whose screen we have no usable capture of. Takes precedence over
-   * `visualImage`. See components/module-mockups.tsx.
+   * whose screen we have no usable capture of, or whose capture is a poor
+   * ambassador for it. Takes precedence over `visualImage`.
+   * See components/module-mockups.tsx.
    */
-  visualDrawn?: "documents" | "mes"
+  visualDrawn?: "documents" | "mes" | "oee" | "routes"
+  /**
+   * Replace the closing deep-surface visual band with a section of its own.
+   * "architecture" renders <PlatformArchitecture>, which is the honest answer
+   * to "show me the picture" on the IoT page: there, the diagram *is* the
+   * product view. Takes precedence over `visualDrawn` and `visualImage`.
+   */
+  visualSection?: "architecture"
   metricsTitle: string
   metrics: Metric[]
   stepsTitle: string
@@ -85,6 +93,11 @@ export type FeaturePage = {
   showcaseBody?: string
   showcaseImage?: string
   showcaseAlt?: string
+  /**
+   * Draw the showcase panel in code instead of shipping a screenshot. Takes
+   * precedence over `showcaseImage`. See components/module-mockups.tsx.
+   */
+  showcaseDrawn?: "routes"
   metrics: Metric[]
   related: RelatedLink[]
 }

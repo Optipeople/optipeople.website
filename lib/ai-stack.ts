@@ -88,7 +88,7 @@ export const aiCapabilities: AiCapability[] = [
           "Opti Assist gives every team a single, model-agnostic chat, grounded in your production data, documents and company knowledge. Ask about last night's OEE, a recurring stop cause on line 3 or the right changeover procedure, and get an answer with sources, in plain language.",
         valueTitle: "One assistant for the whole company",
         valueBody:
-          "Operators, planners and managers shouldn't need a data analyst to get an answer. Most of the knowledge in a factory is spread across dashboards, SOPs, maintenance logs and the heads of a few experienced people. Opti Assist puts it in one place. It connects your documented knowledge with your live operations in Opticloud, so anyone can ask a question, see where the answer came from and act on it, whether they sit in the office or stand at the machine.",
+          "Operators, planners and managers shouldn't need a data analyst to get an answer. Most of the knowledge in a factory is spread across dashboards, SOPs, maintenance logs and the heads of a few experienced people. Opti Assist puts it in one place. It connects your documented knowledge with your live operations in the OptiPeople Data Platform, so anyone can ask a question, see where the answer came from and act on it, whether they sit in the office or stand at the machine.",
         capabilitiesTitle: "What Opti Assist can do",
         capabilities: [
           {
@@ -104,7 +104,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Connected to live operations",
             description:
-              "Ask about OEE, downtime causes or shift performance and get answers from your real production data in Opticloud, not last week's spreadsheet. The numbers you get are the numbers on the floor.",
+              "Ask about OEE, downtime causes or shift performance and get answers from your real production data in the platform, not last week's spreadsheet. The numbers you get are the numbers on the floor.",
           },
           {
             title: "Built for the shopfloor",
@@ -157,7 +157,7 @@ export const aiCapabilities: AiCapability[] = [
           "Opti Assist er én chat til hele huset. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, I selv har skrevet ned. Spørg om nattens OEE, om den stopårsag, der bliver ved med at komme igen på linje 3, eller om hvordan omstillingen skal laves. Du får svaret i almindeligt sprog, og du kan se, hvor det kommer fra.",
         valueTitle: "Én assistent til hele virksomheden",
         valueBody:
-          "Ingen skal have en dataanalytiker ved siden af sig for at få et svar. Det meste af det, en fabrik ved, ligger spredt: i dashboards, i arbejdsbeskrivelser, i vedligeholdsloggen og i hovedet på et par erfarne kolleger. Når spørgsmålet kommer midt i et skift, er der ikke tid til at lede fire steder. Opti Assist samler det ét sted. Den kobler det, I har skrevet ned, sammen med det, der sker i Opticloud lige nu. Så kan alle spørge, se hvor svaret kommer fra og handle på det. Også dem, der står ude ved maskinen.",
+          "Ingen skal have en dataanalytiker ved siden af sig for at få et svar. Det meste af det, en fabrik ved, ligger spredt: i dashboards, i arbejdsbeskrivelser, i vedligeholdsloggen og i hovedet på et par erfarne kolleger. Når spørgsmålet kommer midt i et skift, er der ikke tid til at lede fire steder. Opti Assist samler det ét sted. Den kobler det, I har skrevet ned, sammen med det, der sker i OptiPeople Data Platform lige nu. Så kan alle spørge, se hvor svaret kommer fra og handle på det. Også dem, der står ude ved maskinen.",
         capabilitiesTitle: "Det kan Opti Assist",
         capabilities: [
           {
@@ -173,7 +173,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Tallene er dem fra i dag",
             description:
-              "Spørg om OEE, stopårsager eller hvordan skiftet gik, og få svar fra de data, der ligger i Opticloud lige nu. Ikke fra sidste uges regneark. Tallene i svaret er tallene på gulvet.",
+              "Spørg om OEE, stopårsager eller hvordan skiftet gik, og få svar fra de data, der ligger i platformen lige nu. Ikke fra sidste uges regneark. Tallene i svaret er tallene på gulvet.",
           },
           {
             title: "Lavet til gulvet",
@@ -233,7 +233,7 @@ export const aiCapabilities: AiCapability[] = [
           "Turn production events into action with visual AI workflows. A stop on a line, a finished shift, an incoming document: each can trigger a chain of steps that gathers data, applies AI where it helps and delivers a result. Chain steps, branch on conditions, loop over items, no code required.",
         valueTitle: "From event to action, automatically",
         valueBody:
-          "Most operational work is repetitive: a stop happens, a report is needed, a task gets created, someone gets notified. Today those patterns run on habit and memory, which means they run late, or not at all, on a busy shift. Workflows let you wire the pattern once and let it run every time: pull the data from Opticloud, let AI summarize or classify it, and push the result to the people and systems that need it. Your team keeps the judgment calls; the workflow keeps the routine.",
+          "Most operational work is repetitive: a stop happens, a report is needed, a task gets created, someone gets notified. Today those patterns run on habit and memory, which means they run late, or not at all, on a busy shift. Workflows let you wire the pattern once and let it run every time: pull the data from the OptiPeople Data Platform, let AI summarize or classify it, and push the result to the people and systems that need it. Your team keeps the judgment calls; the workflow keeps the routine.",
         capabilitiesTitle: "Building blocks for any process",
         capabilities: [
           {
@@ -264,7 +264,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Connected to your systems",
             description:
-              "Workflows read from your live Opticloud data and reach the systems around it through integrations, so the result lands in ERP, email or the tools your team already checks.",
+              "Workflows read from your live platform data and reach the systems around it through integrations, so the result lands in ERP, email or the tools your team already checks.",
           },
         ],
         useCasesTitle: "How teams use it",
@@ -302,7 +302,7 @@ export const aiCapabilities: AiCapability[] = [
           "Når der sker noget i produktionen, kan et workflow gå i gang af sig selv. En linje står stille, et skift slutter, et dokument lander i indbakken. Så henter workflowet de tal, der skal bruges, lader AI klare det, den er god til, og sender resultatet videre til dem, der skal handle på det. I sætter trinnene sammen på en skærm og trækker linjer imellem dem. Der skal ikke skrives kode.",
         valueTitle: "Det, I gør hver dag, kan køre af sig selv",
         valueBody:
-          "Meget af arbejdet i en drift gentager sig. En maskine stopper, en rapport skal skrives, en opgave skal oprettes, og nogen skal have besked. I dag kører det på vaner og hukommelse, og på et travlt skift betyder det for sent eller slet ikke. Med et workflow sætter I fremgangsmåden op én gang, og så sker den hver gang: tallene hentes i Opticloud, AI skriver sammendraget eller sætter stoppet i den rigtige kasse, og resultatet ryger videre til de folk og systemer, der skal bruge det. Beslutningerne bliver hos jer. Rutinen tager workflowet.",
+          "Meget af arbejdet i en drift gentager sig. En maskine stopper, en rapport skal skrives, en opgave skal oprettes, og nogen skal have besked. I dag kører det på vaner og hukommelse, og på et travlt skift betyder det for sent eller slet ikke. Med et workflow sætter I fremgangsmåden op én gang, og så sker den hver gang: tallene hentes i OptiPeople Data Platform, AI skriver sammendraget eller sætter stoppet i den rigtige kasse, og resultatet ryger videre til de folk og systemer, der skal bruge det. Beslutningerne bliver hos jer. Rutinen tager workflowet.",
         capabilitiesTitle: "Byggeklodserne, I sætter sammen",
         capabilities: [
           {
@@ -333,7 +333,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Hænger sammen med jeres systemer",
             description:
-              "Et workflow læser jeres tal i Opticloud og kan nå de andre systemer gennem integrationer. Så lander resultatet i ERP'et, i mailen eller i det værktøj, teamet alligevel sidder i.",
+              "Et workflow læser jeres tal i platformen og kan nå de andre systemer gennem integrationer. Så lander resultatet i ERP'et, i mailen eller i det værktøj, teamet alligevel sidder i.",
           },
         ],
         useCasesTitle: "Sådan bruger teams det",
@@ -404,7 +404,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Tools, not just text",
             description:
-              "An agent isn't limited to writing. It can query your Opticloud data, search documents and reach connected systems, so the result reflects the state of your operation, not a guess.",
+              "An agent isn't limited to writing. It can query your platform data, search documents and reach connected systems, so the result reflects the state of your operation, not a guess.",
           },
           {
             title: "Tuned by the people who own the task",
@@ -473,7 +473,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Den kan mere end at skrive",
             description:
-              "En agent kan slå op i jeres tal i Opticloud, søge i dokumenterne og nå de systemer, den er koblet på. Så svarer den ud fra, hvordan det faktisk står til i driften, ikke ud fra et gæt.",
+              "En agent kan slå op i jeres tal i platformen, søge i dokumenterne og nå de systemer, den er koblet på. Så svarer den ud fra, hvordan det faktisk står til i driften, ikke ud fra et gæt.",
           },
           {
             title: "Dem, der kender opgaven, retter den til",
@@ -523,7 +523,7 @@ export const aiCapabilities: AiCapability[] = [
           "OptiPeople plugs into the big ERP systems, speaks the machine protocols on your floor, MQTT and OPC-UA, and offers a REST API for everything else. Production data, orders and documents flow between systems without manual re-keying.",
         valueTitle: "Your AI is only as good as its connections",
         valueBody:
-          "An assistant that can't see your ERP is just a chatbot, and a dashboard that can't hear your machines is just a picture. Real operational AI needs both ends connected: the business systems that hold orders, items and plans, and the machines that produce them. We connect to the systems of record in your back office and to the PLCs and sensors on your floor, so Opticloud, and every AI capability built on it, works from the same data your business already trusts. One integration, maintained once, feeding everything.",
+          "An assistant that can't see your ERP is just a chatbot, and a dashboard that can't hear your machines is just a picture. Real operational AI needs both ends connected: the business systems that hold orders, items and plans, and the machines that produce them. We connect to the systems of record in your back office and to the PLCs and sensors on your floor, so the OptiPeople Data Platform, and every AI capability built on it, works from the same data your business already trusts. One integration, maintained once, feeding everything.",
         capabilitiesTitle: "Built to fit your stack",
         capabilities: [
           {
@@ -534,7 +534,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Machine data over MQTT",
             description:
-              "Send machine states, part counters and telemetry to Opticloud over MQTT with a documented JSON schema. Signals from PLCs and sensors land as structured events, timestamped and tied to the right machine.",
+              "Send machine states, part counters and telemetry to the platform over MQTT with a documented JSON schema. Signals from PLCs and sensors land as structured events, timestamped and tied to the right machine.",
           },
           {
             title: "OPC-UA on the floor",
@@ -562,7 +562,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Orders from ERP, results back",
             description:
-              "Production orders flow from the ERP into Opticloud, operators run them on the floor, and progress and quantities are reported back, nobody re-keys an order number twice.",
+              "Production orders flow from the ERP into the platform, operators run them on the floor, and progress and quantities are reported back, nobody re-keys an order number twice.",
           },
           {
             title: "Machines onto the platform",
@@ -592,7 +592,7 @@ export const aiCapabilities: AiCapability[] = [
           "OptiPeople kobler sig på de store ERP-systemer og taler med maskinerne på gulvet over MQTT og OPC-UA. Resten klarer et REST API. Produktionsdata, ordrer og dokumenter flytter sig mellem systemerne, uden at nogen skal taste dem ind igen.",
         valueTitle: "AI er ikke bedre end det, den er koblet på",
         valueBody:
-          "En assistent, der ikke kan se jeres ERP, er bare en chatbot. Et dashboard, der ikke kan høre maskinerne, er bare et billede. Skal AI kunne bruges i driften, skal begge ender være koblet på: systemerne med ordrer, varer og planer, og maskinerne der laver dem. Vi kobler os på begge steder, både i backoffice og ude ved PLC'er og sensorer. Så arbejder Opticloud, og al den AI der ligger ovenpå, ud fra de samme tal, som resten af forretningen bruger. Ingen taster det samme to gange, og der ligger ikke fire kopier, som ikke passer sammen. Én kobling, passet ét sted, som alt det andet henter fra.",
+          "En assistent, der ikke kan se jeres ERP, er bare en chatbot. Et dashboard, der ikke kan høre maskinerne, er bare et billede. Skal AI kunne bruges i driften, skal begge ender være koblet på: systemerne med ordrer, varer og planer, og maskinerne der laver dem. Vi kobler os på begge steder, både i backoffice og ude ved PLC'er og sensorer. Så arbejder OptiPeople Data Platform, og al den AI der ligger ovenpå, ud fra de samme tal, som resten af forretningen bruger. Ingen taster det samme to gange, og der ligger ikke fire kopier, som ikke passer sammen. Én kobling, passet ét sted, som alt det andet henter fra.",
         capabilitiesTitle: "Passer ind, hvor I er i forvejen",
         capabilities: [
           {
@@ -603,7 +603,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Maskindata over MQTT",
             description:
-              "Send maskinstatus, emnetællere og målinger til Opticloud over MQTT. JSON-formatet er dokumenteret. Signaler fra PLC'er og sensorer lander med tidsstempel på den rigtige maskine.",
+              "Send maskinstatus, emnetællere og målinger til platformen over MQTT. JSON-formatet er dokumenteret. Signaler fra PLC'er og sensorer lander med tidsstempel på den rigtige maskine.",
           },
           {
             title: "OPC-UA på gulvet",
@@ -631,7 +631,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Ordrer fra ERP, resultater tilbage",
             description:
-              "Produktionsordrerne kommer fra ERP ind i Opticloud. Operatørerne kører dem på gulvet, og fremdrift og antal går tilbage. Ingen taster et ordrenummer to gange.",
+              "Produktionsordrerne kommer fra ERP ind i platformen. Operatørerne kører dem på gulvet, og fremdrift og antal går tilbage. Ingen taster et ordrenummer to gange.",
           },
           {
             title: "Maskinerne på platformen",
@@ -665,10 +665,10 @@ export const aiCapabilities: AiCapability[] = [
         eyebrow: "API",
         heroTitle: "A public REST API to build on your data",
         heroBody:
-          "Everything you see in Opticloud is available programmatically. Pull OEE, machines, stops, shifts and telemetry into your own apps, dashboards and automations with a documented REST API, plain JSON over HTTPS, authenticated with an access key you create in the portal.",
+          "Everything you see in the OptiPeople Data Platform is available programmatically. Pull OEE, machines, stops, shifts and telemetry into your own apps, dashboards and automations with a documented REST API, plain JSON over HTTPS, authenticated with an access key you create in the portal.",
         valueTitle: "Your data, on your terms",
         valueBody:
-          "Sometimes the value is in your own system: a BI model your controllers maintain, a shopfloor screen your operators watch, an internal app your IT team owns. The Opticloud REST API gives developers direct, authenticated access to production data, so you can extend the platform however your business needs. The data flows both ways, export what Opticloud has collected, or send machine states, part counters and telemetry in from your own systems over MQTT with a documented JSON schema. No black-box lock-in: the data is yours, and the API proves it.",
+          "Sometimes the value is in your own system: a BI model your controllers maintain, a shopfloor screen your operators watch, an internal app your IT team owns. The platform REST API gives developers direct, authenticated access to production data, so you can extend the platform however your business needs. The data flows both ways, export what OptiPeople Data Platform has collected, or send machine states, part counters and telemetry in from your own systems over MQTT with a documented JSON schema. No black-box lock-in: the data is yours, and the API proves it.",
         capabilitiesTitle: "Developer-ready",
         capabilities: [
           {
@@ -712,12 +712,12 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Your own screens and apps",
             description:
-              "IT builds a shopfloor display or an internal app on live production data, the API serves the same numbers Opticloud shows, so the two never disagree.",
+              "IT builds a shopfloor display or an internal app on live production data, the API serves the same numbers the platform shows, so the two never disagree.",
           },
           {
             title: "Feeding data in",
             description:
-              "A line with its own control system publishes states and counters over MQTT. The data lands in Opticloud alongside everything else, in the same structure.",
+              "A line with its own control system publishes states and counters over MQTT. The data lands in the platform alongside everything else, in the same structure.",
           },
         ],
         ctaTitle: "Start building on OptiPeople",
@@ -736,10 +736,10 @@ export const aiCapabilities: AiCapability[] = [
         eyebrow: "API",
         heroTitle: "Et åbent REST API til at bygge på jeres data",
         heroBody:
-          "Alt det, I kan se i Opticloud, kan I også hente med kode. Træk OEE, maskiner, stop, skift og målinger ind i jeres egne apps, dashboards og automatiseringer gennem et dokumenteret REST API. Almindelig JSON over HTTPS, med en nøgle, I selv opretter i portalen.",
+          "Alt det, I kan se i OptiPeople Data Platform, kan I også hente med kode. Træk OEE, maskiner, stop, skift og målinger ind i jeres egne apps, dashboards og automatiseringer gennem et dokumenteret REST API. Almindelig JSON over HTTPS, med en nøgle, I selv opretter i portalen.",
         valueTitle: "Jeres data, på jeres måde",
         valueBody:
-          "Nogle gange skal værdien opstå i jeres eget system: i BI-modellen, controllerne passer, på skærmen ude på gulvet, i den interne app IT ejer. REST API'et giver udviklere direkte adgang til produktionsdata, så I kan bygge det, forretningen har brug for. Det går begge veje. Hent det, Opticloud har samlet, eller send maskinstatus, emnetællere og målinger ind fra jeres egne systemer over MQTT i et dokumenteret JSON-format. I skal bruge en konto i portalen, en maskine, en enhed og en nøgle, så er I i gang. Data er jeres, og API'et er beviset på, at de ikke er låst inde.",
+          "Nogle gange skal værdien opstå i jeres eget system: i BI-modellen, controllerne passer, på skærmen ude på gulvet, i den interne app IT ejer. REST API'et giver udviklere direkte adgang til produktionsdata, så I kan bygge det, forretningen har brug for. Det går begge veje. Hent det, platformen har samlet, eller send maskinstatus, emnetællere og målinger ind fra jeres egne systemer over MQTT i et dokumenteret JSON-format. I skal bruge en konto i portalen, en maskine, en enhed og en nøgle, så er I i gang. Data er jeres, og API'et er beviset på, at de ikke er låst inde.",
         capabilitiesTitle: "Klar til udviklere",
         capabilities: [
           {
@@ -783,12 +783,12 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Jeres egne skærme og apps",
             description:
-              "IT bygger en skærm til gulvet eller en intern app på data fra i dag. API'et svarer med de samme tal, som Opticloud viser, så de to aldrig siger noget forskelligt.",
+              "IT bygger en skærm til gulvet eller en intern app på data fra i dag. API'et svarer med de samme tal, som platformen viser, så de to aldrig siger noget forskelligt.",
           },
           {
             title: "Data den anden vej",
             description:
-              "En linje med sit eget styresystem sender status og tællere ind over MQTT. Data lander i Opticloud sammen med alt det andet, i den samme struktur.",
+              "En linje med sit eget styresystem sender status og tællere ind over MQTT. Data lander i platformen sammen med alt det andet, i den samme struktur.",
           },
         ],
         ctaTitle: "Begynd at bygge på OptiPeople",

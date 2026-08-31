@@ -1,5 +1,5 @@
 ---
-title: "Optimizing Machine Performance and Power Consumption with Opticloud at Steel Products"
+title: "Optimizing Machine Performance and Power Consumption with OptiPeople Data Platform at Steel Products"
 date: "2024-11-28"
 author: "OptiPeople Team"
 category: "Cases"
@@ -12,9 +12,9 @@ outcome: "Machine performance and power use are tracked per item, linking energy
 
 ## At a Glance
 
-Steel Products uses Opticloud to improve visibility into machine performance while also tracking power consumption per produced item.
+Steel Products uses OptiPeople Data Platform to improve visibility into machine performance while also tracking power consumption per produced item.
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
 Operators play an important role in the setup by logging downtime reasons on multiple machines and helping maintain data accuracy.
 

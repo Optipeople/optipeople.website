@@ -1,5 +1,5 @@
 ---
-title: "Broen: Opticloud styrker samarbejdet"
+title: "Broen: OptiPeople Data Platform styrker samarbejdet"
 metricLabel: "Realtid, delt af alle"
 outcome: "Et live-billede af produktionen på nøglemaskinerne samlede ledere og operatører om de samme tal."
 ---
@@ -8,7 +8,7 @@ outcome: "Et live-billede af produktionen på nøglemaskinerne samlede ledere og
 
 Broen ville have bedre indsigt i stopårsager og et realtidsbillede af produktionen, som ledere og operatører kunne bruge sammen.
 
-Opticloud var med til at skabe det fælles driftsbillede.
+OptiPeople Data Platform var med til at skabe det fælles driftsbillede.
 
 ## Situationen
 
@@ -25,9 +25,9 @@ Overblikket var vigtigt for at:
 - styrke konkurrencekraften
 - understøtte den digitale transformation på hele fabrikken
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Opticloud blev installeret på udvalgte nøglemaskiner.
+OptiPeople Data Platform blev installeret på udvalgte nøglemaskiner.
 
 Platformen indsamler data fra maskinerne, mens operatørerne kan registrere stopårsager direkte. Ledere kan derefter få et hurtigt overblik over produktionsstatus og performance.
 

@@ -1,14 +1,14 @@
 ---
-title: "Sammenspillet mellem Opticloud og iFix fra General Electric"
+title: "Sammenspillet mellem OptiPeople Data Platform og iFix fra General Electric"
 metricLabel: "SCADA-integration"
-outcome: "Opticloud strukturerer maskin- og OEE-data og sender dem videre til et GE iFix SCADA-miljø til bredere overvågning."
+outcome: "OptiPeople Data Platform strukturerer maskin- og OEE-data og sender dem videre til et GE iFix SCADA-miljø til bredere overvågning."
 ---
 
 ## Kort fortalt
 
-Denne case viser, hvordan Opticloud kan arbejde sammen med iFix fra General Electric og skabe en bredere overvågning af fabrikken.
+Denne case viser, hvordan OptiPeople Data Platform kan arbejde sammen med iFix fra General Electric og skabe en bredere overvågning af fabrikken.
 
-Opticloud står for indsamling og strukturering af data, mens iFix kan bruge de data som en del af et større SCADA-miljø.
+OptiPeople Data Platform står for indsamling og strukturering af data, mens iFix kan bruge de data som en del af et større SCADA-miljø.
 
 ## Situationen
 
@@ -18,9 +18,9 @@ Det kan være nyttigt, men det skaber ikke automatisk et samlet overblik på tv�
 
 I projekter, hvor OEE-data skal ind i et større overvågningsmiljø, kan et SCADA-system som iFix allerede være på plads.
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Opticloud håndterer laget med dataindsamling.
+OptiPeople Data Platform håndterer laget med dataindsamling.
 
 Det omfatter:
 
@@ -28,11 +28,11 @@ Det omfatter:
 - en grænseflade, hvor operatørerne kan angive stopårsager, noter og logbogsindførsler
 - aggregering af maskindata til et konsistent format, der kan bruges videre
 
-Opsætningen er også designet til mere komplekse miljøer. Opticloud kan for eksempel håndtere, at en maskine har flere spor, at forskellige varenumre kører samtidig, eller at nogle maskiner har egen PLC, mens andre ikke har.
+Opsætningen er også designet til mere komplekse miljøer. OptiPeople Data Platform kan for eksempel håndtere, at en maskine har flere spor, at forskellige varenumre kører samtidig, eller at nogle maskiner har egen PLC, mens andre ikke har.
 
 ## Sådan fungerer integrationen
 
-Når Opticloud integreres med iFix eller et tilsvarende system, sendes de strukturerede produktionsdata videre til brug i SCADA-laget.
+Når OptiPeople Data Platform integreres med iFix eller et tilsvarende system, sendes de strukturerede produktionsdata videre til brug i SCADA-laget.
 
 iFix kan derefter kombinere de data med andre datakilder, der ikke har med OEE-måling at gøre.
 

@@ -1,18 +1,18 @@
 ---
-title: "OptiCloud API - How to Use It Step by Step"
+title: "OptiPeople Data Platform API: How to Use It Step by Step"
 date: "2022-05-11"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/opticloud-api-code.png"
 ---
 
-OptiCloud exposes APIs for data exchange, whether the data is simple uptime and downtime or more advanced information such as orders, vibration, temperature, ERP data, or SCADA-related context.
+OptiPeople Data Platform exposes APIs for data exchange, whether the data is simple uptime and downtime or more advanced information such as orders, vibration, temperature, ERP data, or SCADA-related context.
 
 All APIs are REST-based and use JSON.
 
 ## How to Get Data and Test Connection
 
-To get data from OptiCloud, the original guide lists four prerequisites:
+To get data from OptiPeople Data Platform, the original guide lists four prerequisites:
 
 1. Have an account set up in `portal.optipeople.dk`
 2. Add a machine and a device

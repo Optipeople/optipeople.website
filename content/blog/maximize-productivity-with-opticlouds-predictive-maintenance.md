@@ -1,5 +1,5 @@
 ---
-title: "Maximize Productivity with Opticloud's Predictive Maintenance"
+title: "Maximize Productivity with OptiPeople Data Platform’s Predictive Maintenance"
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"
@@ -14,15 +14,15 @@ Instead of planning maintenance at fixed intervals, you can use data and schedul
 
 ## Stay Ahead with TPM - Total Productive Maintenance
 
-Say goodbye to reactive maintenance and unnecessary costs. Opticloud's TPM feature provides a proactive approach that saves time and strengthens your bottom line.
+Say goodbye to reactive maintenance and unnecessary costs. OptiPeople Data Platform’s TPM feature provides a proactive approach that saves time and strengthens your bottom line.
 
 ### Plan, Prevent, Perform
 
-- **Plan:** Use the predictive maintenance module in your Opticloud dashboard to schedule tasks based on production hours, unit counts, or telemetry such as temperature and voltage.
+- **Plan:** Use the predictive maintenance module in your OptiPeople Data Platform dashboard to schedule tasks based on production hours, unit counts, or telemetry such as temperature and voltage.
 - **Prevent:** Avoid unplanned downtime and costly repairs by setting alerts before machine issues create production losses.
 - **Perform:** Use TPM as the basis for preventive and predictive maintenance so machine performance stays consistent.
 
-### Why Opticloud's TPM?
+### Why OptiPeople Data Platform’s TPM?
 
 Go from calendar-based maintenance to data-driven maintenance.
 
@@ -51,7 +51,7 @@ When the alarm triggers based on the conditions you set, you receive an alarm on
 
 Video: [Predictive maintenance overview](https://player.vimeo.com/video/678151551?dnt=1&app_id=122963)
 
-## Join Opticloud's TPM Revolution Today
+## Join OptiPeople Data Platform’s TPM Revolution Today
 
 Turn machine maintenance from a chore into a competitive advantage. [Start here](/contact).
 
@@ -61,4 +61,4 @@ Turn machine maintenance from a chore into a competitive advantage. [Start here]
 
 ## Ready to Optimize Your Production?
 
-Join the manufacturers using Opticloud to improve maintenance strategies and take the first step toward predictive maintenance and higher efficiency.
+Join the manufacturers using OptiPeople Data Platform to improve maintenance strategies and take the first step toward predictive maintenance and higher efficiency.

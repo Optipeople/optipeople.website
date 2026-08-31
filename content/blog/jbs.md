@@ -1,5 +1,5 @@
 ---
-title: "Gurit - Opticloud enables overview of capacity"
+title: "Gurit: OptiPeople Data Platform enables overview of capacity"
 date: "2022-02-17"
 author: "OptiPeople Team"
 category: "Cases"
@@ -13,7 +13,7 @@ outcome: "CNC- and ERP-integrated data give a clear capacity overview and avoid 
 
 ## At a Glance
 
-Gurit uses Opticloud in its core material kitting business to create a clearer overview of production capacity and support better operational decisions.
+Gurit uses OptiPeople Data Platform in its core material kitting business to create a clearer overview of production capacity and support better operational decisions.
 
 ## The Situation
 
@@ -23,9 +23,9 @@ The need was not only to see what was happening, but to measure improvement effo
 
 > "When we are doing optimization projects, we can measure them - that is key to being able to make the right decisions for effective and streamlined production."
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Opticloud is set up around the production environment with:
+OptiPeople Data Platform is set up around the production environment with:
 
 - connection to CNC machines
 - full ERP integration

@@ -9,7 +9,7 @@ outcome: "Realtidsdata på stop og oppetid gav en producent af dyremedicin mulig
 
 En producent af dyremedicin havde brug for mere detaljeret og rettidig indsigt i produktionen for at kunne effektivisere uden at øge presset på medarbejderne.
 
-Opticloud leverede de realtidsdata, der skulle til for at understøtte det skift.
+OptiPeople Data Platform leverede de realtidsdata, der skulle til for at understøtte det skift.
 
 ## Situationen
 
@@ -30,9 +30,9 @@ Det manglende overblik omfattede:
 
 For at holde konkurrencekraften ville kunden effektivisere produktionen og samtidig holde fokus på de praktiske forbedringer, der kunne gennemføres med lille indsats først.
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Opticloud indsamler data fra hver maskinlinje i produktionen, mens medarbejderne bruger platformen til at registrere stopårsager.
+OptiPeople Data Platform indsamler data fra hver maskinlinje i produktionen, mens medarbejderne bruger platformen til at registrere stopårsager.
 
 Det giver et stærkere driftsbillede for både ledelse og operatører.
 

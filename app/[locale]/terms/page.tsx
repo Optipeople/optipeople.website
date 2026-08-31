@@ -66,21 +66,21 @@ export default async function TermsPage({ params }: Props) {
             stilles til rådighed via sitet. Ved at tilgå eller bruge websitet
             accepterer du vilkårene. Er du ikke enig i dem, bedes du undlade at
             bruge sitet. Vilkårene gælder alene for websitet, ikke for
-            Opticloud-platformen eller andre ydelser, jf. afsnittet om
+            OptiPeople Data Platform eller andre ydelser, jf. afsnittet om
             abonnementer og services nedenfor.
           </p>
           <h2>Hvem vi er</h2>
           <p>
             Websitet drives af OptiPeople ApS, Sønderskovvej 17, 8362 Hørning
             (CVR 32883532), et dansk anpartsselskab, der udvikler software til
-            industrien, herunder Opticloud-platformen. Du kan kontakte os på{" "}
+            industrien, herunder OptiPeople Data Platform. Du kan kontakte os på{" "}
             <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> eller
             +45 23 74 47 05.
           </p>
           <h2>Brug af websitet og licens til indholdet</h2>
           <p>
             Indholdet på sitet stilles til rådighed som generel information om
-            OptiPeople, Opticloud og vores øvrige aktiviteter. Vi giver dig en
+            OptiPeople, OptiPeople Data Platform og vores øvrige aktiviteter. Vi giver dig en
             begrænset, genkaldelig og ikke-eksklusiv ret til at se, downloade og
             udskrive indhold fra sitet til personlig brug og intern brug i din
             virksomhed. Indholdet må ikke videresælges, offentliggøres eller på
@@ -100,7 +100,7 @@ export default async function TermsPage({ params }: Props) {
             vores licensgivere og er beskyttet af gældende immaterialret. Intet i
             disse vilkår overdrager rettigheder til dig ud over den begrænsede
             brugsret, der er beskrevet ovenfor. Navnene og logoerne
-            &quot;OptiPeople&quot; og &quot;Opticloud&quot; må ikke anvendes uden vores
+            &quot;OptiPeople&quot; og &quot;OptiPeople Data Platform&quot; må ikke anvendes uden vores
             skriftlige samtykke.
           </p>
           <h2>Acceptabel brug</h2>
@@ -136,9 +136,9 @@ export default async function TermsPage({ params }: Props) {
             behandling af personoplysninger er beskrevet i vores{" "}
             <Link href="/privacy">privatlivspolitik</Link>.
           </p>
-          <h2>Opticloud-abonnementer og -services</h2>
+          <h2>Abonnementer og services på OptiPeople Data Platform</h2>
           <p>
-            Brug af Opticloud-platformen samt prøveforløb, abonnementer, support
+            Brug af OptiPeople Data Platform samt prøveforløb, abonnementer, support
             og andre kommercielle ydelser reguleres udelukkende af de separate
             skriftlige aftaler, der indgås mellem din virksomhed og OptiPeople.
             Disse websitevilkår gælder ikke for platformen, og intet på websitet
@@ -201,7 +201,7 @@ export default async function TermsPage({ params }: Props) {
             the OptiPeople ApS website at this domain, including all content made
             available through it. By accessing or using the website you agree to
             these terms. If you do not agree, please do not use the site. These
-            terms apply to the website only, not to the Opticloud platform or
+            terms apply to the website only, not to the OptiPeople Data Platform or
             other services, as explained in the section on subscriptions and
             services below.
           </p>
@@ -209,7 +209,7 @@ export default async function TermsPage({ params }: Props) {
           <p>
             This website is operated by OptiPeople ApS, Sønderskovvej 17,
             8362 Hørning, Denmark (CVR 32883532), a Danish limited company that
-            develops software for industry, including the Opticloud platform.
+            develops software for industry, including the OptiPeople Data Platform.
             You can contact us at{" "}
             <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> or
             +45 23 74 47 05.
@@ -217,7 +217,7 @@ export default async function TermsPage({ params }: Props) {
           <h2>Use of the website and content licence</h2>
           <p>
             The content on this site is provided as general information about
-            OptiPeople, Opticloud, and our other activities. We grant you a
+            OptiPeople, the OptiPeople Data Platform, and our other activities. We grant you a
             limited, revocable, non-exclusive right to view, download, and print
             content from the site for your personal use and for internal use
             within your organisation. You may not resell, republish, or otherwise
@@ -237,7 +237,7 @@ export default async function TermsPage({ params }: Props) {
             ApS or our licensors and are protected by applicable
             intellectual-property laws. Nothing in these terms transfers any
             rights to you beyond the limited licence described above. The
-            &quot;OptiPeople&quot; and &quot;Opticloud&quot; names and logos may not be used
+            &quot;OptiPeople&quot; and &quot;OptiPeople Data Platform&quot; names and logos may not be used
             without our written consent.
           </p>
           <h2>Acceptable use</h2>
@@ -273,9 +273,9 @@ export default async function TermsPage({ params }: Props) {
             unsubscribe at any time. How we handle personal data is described in
             our <Link href="/privacy">privacy policy</Link>.
           </p>
-          <h2>Opticloud subscriptions and services</h2>
+          <h2>OptiPeople Data Platform subscriptions and services</h2>
           <p>
-            Use of the Opticloud platform, as well as trials, subscriptions,
+            Use of the OptiPeople Data Platform, as well as trials, subscriptions,
             support, and other commercial services, is governed exclusively by
             the separate written agreements entered into between your
             organisation and OptiPeople. These website terms do not apply to the

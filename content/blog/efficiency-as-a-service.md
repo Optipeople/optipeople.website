@@ -6,13 +6,13 @@ category: "Insights"
 image: "/images/blog and case/blog/efficiency-as-a-service.png"
 ---
 
-Opticloud began as a tool for improving machine efficiency and productivity, but the broader vision is to support competitive and sustainable local production industries.
+OptiPeople Data Platform began as a tool for improving machine efficiency and productivity, but the broader vision is to support competitive and sustainable local production industries.
 
-The platform may be called Opticloud, but the article frames it more accurately as a service and partnership built to support the journey toward production excellence.
+The platform may be called OptiPeople Data Platform, but the article frames it more accurately as a service and partnership built to support the journey toward production excellence.
 
 ## Efficiency for Both Automatic and Manual Processes
 
-Opticloud can collect data from both:
+OptiPeople Data Platform can collect data from both:
 
 - automatic processes
 - manual processes
@@ -28,7 +28,7 @@ Manual processes include activities such as:
 - sanding
 - drilling
 
-In these cases, operators can use the Opticloud operator panel to register start and stop times, number of units, and related process information.
+In these cases, operators can use the OptiPeople Data Platform operator panel to register start and stop times, number of units, and related process information.
 
 ## Calculating OEE
 
@@ -79,4 +79,4 @@ That makes it possible to connect output, speed, and quality in the same operati
 
 ## The Main Idea
 
-The article positions Opticloud less as a single software feature and more as an ongoing service model: a modular system that supports better production decisions across different process types.
+The article positions OptiPeople Data Platform less as a single software feature and more as an ongoing service model: a modular system that supports better production decisions across different process types.

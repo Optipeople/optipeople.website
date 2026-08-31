@@ -20,9 +20,9 @@ Many OptiPeople customers use Power BI to:
 
 Instead of downloading data from multiple systems into Excel and manually merging it, Power BI can automate that process and make reports available with little manual work.
 
-## How It Fits with OptiCloud
+## How It Fits with OptiPeople Data Platform
 
-Opticloud reporting supports Microsoft Power BI and includes a free reporting template.
+OptiPeople Data Platform reporting supports Microsoft Power BI and includes a free reporting template.
 
 That means customers can build on existing operational data and extend it into broader reporting and analytics workflows.
 
@@ -34,4 +34,4 @@ The point is not to force one delivery model, but to make the data usable in the
 
 ## Beyond Power BI
 
-The original article also notes that OptiPeople supports other BI tools such as Tableau and similar platforms, so Opticloud data is not limited to a single analytics environment.
+The original article also notes that OptiPeople supports other BI tools such as Tableau and similar platforms, so OptiPeople Data Platform data is not limited to a single analytics environment.

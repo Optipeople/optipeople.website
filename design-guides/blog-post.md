@@ -173,7 +173,7 @@ The article content is rendered from Markdown using `react-markdown` with `remar
 
 ### Heading Anchors
 
-All headings (H1–H3) get auto-generated `id` attributes and `scroll-mt-24` to account for the sticky header when navigating via anchor links:
+All headings (H1 to H3) get auto-generated `id` attributes and `scroll-mt-24` to account for the sticky header when navigating via anchor links:
 
 ```tsx
 h2: ({ children }) => {

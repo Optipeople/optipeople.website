@@ -1,5 +1,5 @@
 ---
-title: "Gurit: Opticloud giver overblik over kapaciteten"
+title: "Gurit: OptiPeople Data Platform giver overblik over kapaciteten"
 metricLabel: "Fuldt overblik over kapaciteten"
 quote: "Når vi kører optimeringsprojekter, kan vi måle dem. Det er nøglen til at træffe de rigtige beslutninger."
 outcome: "Data fra CNC-maskiner og ERP giver et klart kapacitetsoverblik og sparer unødvendige maskininvesteringer."
@@ -7,7 +7,7 @@ outcome: "Data fra CNC-maskiner og ERP giver et klart kapacitetsoverblik og spar
 
 ## Kort fortalt
 
-Gurit bruger Opticloud i sin kerneforretning med kitting af kernematerialer til at skabe et klarere overblik over produktionskapaciteten og understøtte bedre beslutninger i driften.
+Gurit bruger OptiPeople Data Platform i sin kerneforretning med kitting af kernematerialer til at skabe et klarere overblik over produktionskapaciteten og understøtte bedre beslutninger i driften.
 
 ## Situationen
 
@@ -17,9 +17,9 @@ Behovet var ikke kun at se, hvad der skete, men at kunne måle forbedringsindsat
 
 > "Når vi kører optimeringsprojekter, kan vi måle dem. Det er nøglen til at kunne træffe de rigtige beslutninger for en effektiv og strømlinet produktion."
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Opticloud er sat op omkring produktionsmiljøet med:
+OptiPeople Data Platform er sat op omkring produktionsmiljøet med:
 
 - forbindelse til CNC-maskiner
 - fuld ERP-integration

@@ -1,12 +1,12 @@
 ---
-title: "OptiCloud MQTT JSON Schema"
+title: "OptiPeople Data Platform MQTT JSON Schema"
 date: "2022-06-15"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/opticloud-api-code.png"
 ---
 
-This is a guide to the JSON schema used when sending data to OptiCloud over MQTT.
+This is a guide to the JSON schema used when sending data to OptiPeople Data Platform over MQTT.
 
 ## Basic Message Structure
 
@@ -48,7 +48,7 @@ The `functions` array holds the actual payload. One message can contain one or s
 
 ### `deviceId`
 
-`deviceId` is the unique ID connecting the physical device to the machine in OptiCloud.
+`deviceId` is the unique ID connecting the physical device to the machine in OptiPeople Data Platform.
 
 Typical values look like:
 
@@ -184,4 +184,4 @@ The `type` field can be:
 }
 ```
 
-`PartRejection` works like a counter but subtracts from counted output in OptiCloud.
+`PartRejection` works like a counter but subtracts from counted output in OptiPeople Data Platform.

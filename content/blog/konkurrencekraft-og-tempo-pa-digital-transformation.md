@@ -15,7 +15,7 @@ outcome: "Software-to-software machine data cut unnecessary stops by 41% and ave
 
 Fiberline Composites wanted better visibility into when and why machines were stopping.
 
-With Opticloud, the company gained that insight and achieved a **41% reduction in unnecessary stops** and a **6% reduction in average time per stop**.
+With OptiPeople Data Platform, the company gained that insight and achieved a **41% reduction in unnecessary stops** and a **6% reduction in average time per stop**.
 
 > "Now stop reasons are being registered and we have gotten a much better overview of our machines' efficiency, including downtime, stop reasons and breakdowns."
 
@@ -30,9 +30,9 @@ Fiberline wanted to:
 - increase competitiveness
 - speed up digital transformation
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Data is collected from the machines through a software-to-software integration and sent to the Opticloud platform.
+Data is collected from the machines through a software-to-software integration and sent to the OptiPeople Data Platform platform.
 
 That creates a stronger basis for tracking stops, downtime, and breakdown patterns.
 
@@ -42,6 +42,6 @@ Fiberline achieved:
 
 - a **6% reduction** in average time per stop
 - a **41% reduction** in unnecessary stops
-- better decision-making based on Opticloud data
+- better decision-making based on OptiPeople Data Platform data
 
 Website: [fiberlinecomposites.com](http://fiberlinecomposites.com)

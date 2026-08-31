@@ -6,15 +6,15 @@ category: "Insights"
 image: "/images/blog and case/blog/ligna-2025.jpg"
 ---
 
-### Visit us at LIGNA 2025 - Experience Opticloud in Action
+### Visit us at LIGNA 2025 - Experience OptiPeople Data Platform in Action
 
-We're bringing **Opticloud** to LIGNA 2025, our intelligent MES platform that helps manufacturers improve **production efficiency**, implement **predictive maintenance**, and ensure **consistent quality**.
+We're bringing **OptiPeople Data Platform** to LIGNA 2025, our intelligent MES platform that helps manufacturers improve **production efficiency**, implement **predictive maintenance**, and ensure **consistent quality**.
 
 We will be there together with our partners [**NichoMachines**](https://nichomachines.com/ligna-2025/) and [**Nicholaisen**](https://www.nicholaisen.dk/ligna-2025/), united by our shared mission of **Empowering Nordic Competitiveness**.
 
-Opticloud provides real-time insights and actionable data that help manufacturers eliminate downtime, optimize performance, and stay competitive in a fast-moving industry.
+OptiPeople Data Platform provides real-time insights and actionable data that help manufacturers eliminate downtime, optimize performance, and stay competitive in a fast-moving industry.
 
-**Join us at LIGNA 2025 and see how Opticloud can transform your production.**
+**Join us at LIGNA 2025 and see how OptiPeople Data Platform can transform your production.**
 
 ## How to Find Optipeople at LIGNA 2025
 

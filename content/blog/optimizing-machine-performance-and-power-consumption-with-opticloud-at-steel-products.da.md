@@ -1,14 +1,14 @@
 ---
-title: "Optimering af maskinperformance og strømforbrug med Opticloud hos Steel Products"
+title: "Optimering af maskinperformance og strømforbrug med OptiPeople Data Platform hos Steel Products"
 metricLabel: "Energi per produceret emne"
 outcome: "Maskinperformance og strømforbrug følges per emne, så energiforbruget kobles direkte til produktionen."
 ---
 
 ## Kort fortalt
 
-Steel Products bruger Opticloud til at få bedre indsigt i maskinernes performance og samtidig følge strømforbruget per produceret emne.
+Steel Products bruger OptiPeople Data Platform til at få bedre indsigt i maskinernes performance og samtidig følge strømforbruget per produceret emne.
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
 Operatørerne spiller en vigtig rolle i opsætningen ved at registrere stopårsager på flere maskiner og hjælpe med at holde datakvaliteten oppe.
 

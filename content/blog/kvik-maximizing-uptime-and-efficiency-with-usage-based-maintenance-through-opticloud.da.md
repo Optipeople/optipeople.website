@@ -1,5 +1,5 @@
 ---
-title: "Kvik: maksimal oppetid og effektivitet med brugsbaseret vedligehold via Opticloud"
+title: "Kvik: maksimal oppetid og effektivitet med brugsbaseret vedligehold via OptiPeople Data Platform"
 metricLabel: "oppetid"
 quote: "Vi vedligeholder nu efter ønskede driftstimer i stedet for faste tidsintervaller, og det er langt mere effektivt."
 outcome: "Brugsbaseret vedligehold løftede oppetiden 5% og fjernede omkring fire unødvendige services om året på 24/7-maskiner."
@@ -7,7 +7,7 @@ outcome: "Brugsbaseret vedligehold løftede oppetiden 5% og fjernede omkring fir
 
 ## Kort fortalt
 
-Kvik bruger Opticloud til at gå fra tidsbaseret til brugsbaseret vedligehold. Det øger oppetiden og fjerner samtidig unødvendigt servicearbejde.
+Kvik bruger OptiPeople Data Platform til at gå fra tidsbaseret til brugsbaseret vedligehold. Det øger oppetiden og fjerner samtidig unødvendigt servicearbejde.
 
 ## Udfordringen
 
@@ -25,9 +25,9 @@ Kvik stod med to problemer, der hang sammen.
 - manuel indtastning af stopårsager
 - ugyldige data
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Kvik bruger servicemodulet i Opticloud til at udløse vedligeholdsvarsler ud fra ønskede driftstimer i stedet for faste tidsintervaller.
+Kvik bruger servicemodulet i OptiPeople Data Platform til at udløse vedligeholdsvarsler ud fra ønskede driftstimer i stedet for faste tidsintervaller.
 
 Modulet sender en mail til en dedikeret Outlook-kalender. En dag bookes automatisk syv dage frem, så serviceteamet har tid til at planlægge den præcise dato for vedligeholdet.
 
@@ -49,9 +49,9 @@ Kvik oplever desuden:
 - sporing af mikrostop
 - færre afbrydelser
 
-> "Vi bruger servicemodulet i Opticloud til at sende varsler. Vi vedligeholder nu efter ønskede driftstimer i stedet for faste tidsintervaller. Det gør os langt mere effektive og sparer os for unødvendigt vedligehold og nedetid."
+> "Vi bruger servicemodulet i OptiPeople Data Platform til at sende varsler. Vi vedligeholder nu efter ønskede driftstimer i stedet for faste tidsintervaller. Det gør os langt mere effektive og sparer os for unødvendigt vedligehold og nedetid."
 
-> "Servicemodulet i Opticloud sender en mail til en dedikeret Outlook-kalender. En dag bookes automatisk 7 dage frem i kalenderen. Serviceteamet har derefter 7 dage til at planlægge den præcise dag for vedligeholdet af maskinen."
+> "Servicemodulet i OptiPeople Data Platform sender en mail til en dedikeret Outlook-kalender. En dag bookes automatisk 7 dage frem i kalenderen. Serviceteamet har derefter 7 dage til at planlægge den præcise dag for vedligeholdet af maskinen."
 
 Stefan Lindell  
 Lean Project Manager, Kvik

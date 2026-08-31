@@ -1,5 +1,5 @@
 ---
-title: "Dansand - 3.5 million bags of sand yearly - Opticloud enables better time management"
+title: "Dansand: 3.5 million bags of sand yearly, and the OptiPeople Data Platform enables better time management"
 date: "2022-04-07"
 author: "OptiPeople Team"
 category: "Cases"
@@ -13,7 +13,7 @@ outcome: "Uptime and output data on the big-bag handling lines now drive daily f
 
 ## At a Glance
 
-Dansand uses Opticloud on handling lines for big bags of sand to support daily follow-up and better decision-making around operations and investment.
+Dansand uses OptiPeople Data Platform on handling lines for big bags of sand to support daily follow-up and better decision-making around operations and investment.
 
 ## The Situation
 
@@ -23,9 +23,9 @@ The company wanted stronger data for evaluating processes and for making better 
 
 > "We would like to use data to make investment decisions when a machine partly or fully has to be changed. That will make sure we are making the right investments."
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Opticloud measures:
+OptiPeople Data Platform measures:
 
 - uptime on the machine lines
 - produced output amounts
@@ -34,7 +34,7 @@ The resulting data is used directly in ongoing operational follow-up.
 
 ## The Result
 
-At Dansand, Opticloud data is used to:
+At Dansand, OptiPeople Data Platform data is used to:
 
 - provide the basis for production meetings
 - strengthen collaboration across the team

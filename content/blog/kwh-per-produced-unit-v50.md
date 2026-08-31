@@ -6,7 +6,7 @@ category: "Insights"
 image: "/images/blog and case/blog/kwh-per-produced-unit-v50.png"
 ---
 
-With Opticloud, manufacturers can analyze energy consumption in high detail and with the granularity needed for real production decisions.
+With OptiPeople Data Platform, manufacturers can analyze energy consumption in high detail and with the granularity needed for real production decisions.
 
 No matter how fast output is, the platform can show how much energy is used to create each part. That creates a stronger basis for optimizing both production and energy demand.
 
@@ -18,7 +18,7 @@ So how do customers use this metric to optimize both energy and efficiency at th
 
 By looking at energy consumption directly, teams can identify the best hours for production and plan output when electricity prices are lowest.
 
-Opticloud can also include kWh prices in the platform, even up to 24 hours ahead. Combined with production-order data, this makes it possible to see which orders have:
+OptiPeople Data Platform can also include kWh prices in the platform, even up to 24 hours ahead. Combined with production-order data, this makes it possible to see which orders have:
 
 - the highest energy demand
 - the lowest efficiency
@@ -37,7 +37,7 @@ There are several ways to reduce energy cost per produced unit.
 
 ### Turn Off Equipment When It's Not Needed
 
-Opticloud can help control things on both factory and machine level, for example:
+OptiPeople Data Platform can help control things on both factory and machine level, for example:
 
 - truck charging
 - lights

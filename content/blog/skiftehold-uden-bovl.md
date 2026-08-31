@@ -8,7 +8,7 @@ image: "/images/blog and case/blog/shifts-without-hassle.jpg"
 
 Many companies find that knowledge transfer between shifts is too weak, even though the handover window is short and often full of information.
 
-The article presents the Opticloud operator panel as a tool to make shift handover easier.
+The article presents the OptiPeople Data Platform operator panel as a tool to make shift handover easier.
 
 ## What the Operator Panel Helps With
 

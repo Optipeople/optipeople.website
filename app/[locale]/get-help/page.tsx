@@ -48,10 +48,10 @@ const copy: Record<Locale, HelpCopy> = {
   en: {
     metaTitle: "Get Help",
     metaDescription:
-      "Support for OptiPeople and Opticloud: how to reach us, response times, and answers to common questions about machine connections, OEE, data, and the API.",
+      "Support for the OptiPeople Data Platform: how to reach us, response times, and answers to common questions about machine connections, OEE, data, and the API.",
     eyebrow: "Get Help",
     headline: "How can we help?",
-    body: "Whether you are running Opticloud today or still working out whether it fits your production, you can reach a person here. We answer support requests on business days, and for anything urgent on a running installation, the phone is faster than email.",
+    body: "Whether you are running the OptiPeople Data Platform today or still working out whether it fits your production, you can reach a person here. We answer support requests on business days, and for anything urgent on a running installation, the phone is faster than email.",
     jumpLabel: "Common questions",
     channelsTitle: "Reach us",
     channels: [
@@ -87,7 +87,7 @@ const copy: Record<Locale, HelpCopy> = {
       {
         question: "Can you connect our older machines?",
         answer:
-          "Usually yes. Opticloud reads from modern controls over standard industrial protocols, and for older equipment without a usable interface we add sensors that measure the signals directly: cycle counts, run state, current draw. A machine does not need to be new to be measurable.",
+          "Usually yes. The platform reads from modern controls over standard industrial protocols, and for older equipment without a usable interface we add sensors that measure the signals directly: cycle counts, run state, current draw. A machine does not need to be new to be measurable.",
         linkLabel: "See the IoT module",
         linkHref: "/modules/iot",
       },
@@ -99,7 +99,7 @@ const copy: Record<Locale, HelpCopy> = {
         linkHref: "/platform",
       },
       {
-        question: "How is OEE calculated in Opticloud?",
+        question: "How is OEE calculated in the platform?",
         answer:
           "Availability, performance, and quality are calculated from actual machine signals and registered stops, not from manual estimates. If you want to understand the arithmetic and the choices behind it, the calculation is written up in full with worked examples.",
         linkLabel: "How to calculate OEE",
@@ -108,14 +108,14 @@ const copy: Record<Locale, HelpCopy> = {
       {
         question: "Can we get our data out?",
         answer:
-          "Yes. Opticloud has a REST API, and machines and integrations can publish over MQTT with a documented JSON schema. Your production data stays yours, and you can pull it into Power BI, a data warehouse, or your own systems.",
+          "Yes. The platform has a REST API, and machines and integrations can publish over MQTT with a documented JSON schema. Your production data stays yours, and you can pull it into Power BI, a data warehouse, or your own systems.",
         linkLabel: "API step by step",
         linkHref: "/blog/opticloud-api-how-to-use-it-step-by-step",
       },
       {
         question: "Does it work with our ERP?",
         answer:
-          "Opticloud syncs both ways with ERP planning, so orders and production feedback move between the floor and the planning system instead of being typed in twice.",
+          "The platform syncs both ways with ERP planning, so orders and production feedback move between the floor and the planning system instead of being typed in twice.",
         linkLabel: "See ERP Shopfloor",
         linkHref: "/modules/erp-shopfloor",
       },
@@ -135,10 +135,10 @@ const copy: Record<Locale, HelpCopy> = {
   da: {
     metaTitle: "Få hjælp | OptiPeople",
     metaDescription:
-      "Support til OptiPeople og Opticloud: hvordan du får fat i os, svartider og svar på de spørgsmål vi oftest får om maskinopkobling, OEE, data og API.",
+      "Support til OptiPeople Data Platform: hvordan du får fat i os, svartider og svar på de spørgsmål vi oftest får om maskinopkobling, OEE, data og API.",
     eyebrow: "Få hjælp",
     headline: "Vi hjælper jer videre",
-    body: "Uanset om I kører Opticloud i dag eller stadig er ved at finde ud af, om det passer til jeres produktion, kan I få fat i et rigtigt menneske her. Vi besvarer supporthenvendelser på hverdage, og haster det på en kørende installation, går det hurtigere på telefonen end på mail.",
+    body: "Uanset om I kører OptiPeople Data Platform i dag eller stadig er ved at finde ud af, om det passer til jeres produktion, kan I få fat i et rigtigt menneske her. Vi besvarer supporthenvendelser på hverdage, og haster det på en kørende installation, går det hurtigere på telefonen end på mail.",
     jumpLabel: "Spørgsmål vi ofte får",
     channelsTitle: "Sådan får I fat i os",
     channels: [
@@ -174,7 +174,7 @@ const copy: Record<Locale, HelpCopy> = {
       {
         question: "Kan I forbinde vores ældre maskiner?",
         answer:
-          "Som regel ja. Opticloud læser fra de nyere styringer over de protokoller, maskiner taler, og på gammelt udstyr, hvor der ikke er noget at læse fra, sætter vi sensorer op, der måler signalet direkte: emnetæller, kørestatus og strømforbrug. En maskine skal ikke være ny for at kunne måles.",
+          "Som regel ja. Platformen læser fra de nyere styringer over de protokoller, maskiner taler, og på gammelt udstyr, hvor der ikke er noget at læse fra, sætter vi sensorer op, der måler signalet direkte: emnetæller, kørestatus og strømforbrug. En maskine skal ikke være ny for at kunne måles.",
         linkLabel: "Se IoT-modulet",
         linkHref: "/modules/iot",
       },
@@ -186,7 +186,7 @@ const copy: Record<Locale, HelpCopy> = {
         linkHref: "/platform",
       },
       {
-        question: "Hvordan beregnes OEE i Opticloud?",
+        question: "Hvordan beregnes OEE i platformen?",
         answer:
           "Tilgængelighed, ydelse og kvalitet bliver regnet ud af maskinernes egne signaler og de stop, der er registreret. Ikke af skøn. Vil I se hele regnestykket og valgene bag, er det gennemgået med eksempler.",
         linkLabel: "Sådan beregnes OEE",
@@ -195,14 +195,14 @@ const copy: Record<Locale, HelpCopy> = {
       {
         question: "Kan vi få vores data ud?",
         answer:
-          "Ja. Opticloud har et REST API, og maskiner og koblinger kan sende over MQTT i et dokumenteret JSON-format. Jeres produktionsdata er jeres, og I kan hente dem ind i Power BI, et datawarehouse eller jeres egne systemer.",
+          "Ja. Platformen har et REST API, og maskiner og koblinger kan sende over MQTT i et dokumenteret JSON-format. Jeres produktionsdata er jeres, og I kan hente dem ind i Power BI, et datawarehouse eller jeres egne systemer.",
         linkLabel: "API trin for trin",
         linkHref: "/blog/opticloud-api-how-to-use-it-step-by-step",
       },
       {
         question: "Virker det sammen med vores ERP?",
         answer:
-          "Opticloud synkroniserer begge veje med ERP-planlægningen, så ordrer og produktionstilbagemeldinger bevæger sig mellem gulvet og planlægningssystemet i stedet for at blive tastet ind to gange.",
+          "Platformen synkroniserer begge veje med ERP-planlægningen, så ordrer og produktionstilbagemeldinger bevæger sig mellem gulvet og planlægningssystemet i stedet for at blive tastet ind to gange.",
         linkLabel: "Se ERP Shopfloor",
         linkHref: "/modules/erp-shopfloor",
       },

@@ -1,20 +1,20 @@
 ---
-title: "Carl Hansen & Søn styrker produktiviteten og reducerer omstillingstider med Opticloud og OptiAI"
+title: "Carl Hansen & Søn styrker produktiviteten og reducerer omstillingstider med OptiPeople Data Platform og OptiAI"
 metricLabel: "Kortere omstillingstider med OptiAI"
 outcome: "Skarpere indsigt i produktiviteten, plus et OptiAI-pilotprojekt der reducerer omstillingstider gennem smartere ordresekvensering."
 ---
 
 ## Kort fortalt
 
-Carl Hansen & Søn bruger Opticloud til at skabe mere præcis indsigt i produktionen og kører samtidig et pilotprojekt med OptiAI, der skal reducere omstillingstider gennem bedre sekvensering af produktionen.
+Carl Hansen & Søn bruger OptiPeople Data Platform til at skabe mere præcis indsigt i produktionen og kører samtidig et pilotprojekt med OptiAI, der skal reducere omstillingstider gennem bedre sekvensering af produktionen.
 
-## Sådan bruges Opticloud
+## Sådan bruges OptiPeople Data Platform
 
-Opticloud giver pålidelige data på maskinernes performance, og det giver virksomheden et stærkere grundlag for strategiske beslutninger og driftsanalyse.
+OptiPeople Data Platform giver pålidelige data på maskinernes performance, og det giver virksomheden et stærkere grundlag for strategiske beslutninger og driftsanalyse.
 
 Operatørerne understøtter arbejdet ved at registrere stopårsager, så det bliver lettere at se, hvor produktiviteten kan løftes.
 
-Operatørerne vælger også det konkrete emne, der produceres, så cyklustiderne kan justeres tilsvarende i Opticloud. Det giver mere præcise produktionsdata og en mere nøjagtig opfølgning i driften.
+Operatørerne vælger også det konkrete emne, der produceres, så cyklustiderne kan justeres tilsvarende i OptiPeople Data Platform. Det giver mere præcise produktionsdata og en mere nøjagtig opfølgning i driften.
 
 ## OptiAI-pilotprojektet
 

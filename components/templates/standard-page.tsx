@@ -1,11 +1,18 @@
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
-import { DocumentsVisual, MesVisual } from "@/components/module-mockups"
+import {
+  DocumentsVisual,
+  MesVisual,
+  OeeVisual,
+  RoutesVisual,
+} from "@/components/module-mockups"
+import { PlatformArchitecture } from "@/components/platform-architecture"
 import type { StandardPage } from "@/content/shared/types"
+import type { Locale } from "@/i18n/routing"
 import { getPageTheme, type PageFamily } from "@/lib/page-theme"
 
 /**
@@ -23,6 +30,11 @@ import { getPageTheme, type PageFamily } from "@/lib/page-theme"
  *
  * `page.darkHero` opens on the deep brand surface rather than the tint, used
  * by the solution pages, which need more weight up top.
+ *
+ * The closing visual has three sources, in precedence order:
+ * `page.visualSection` swaps the whole band for a section of its own,
+ * `page.visualDrawn` renders a code-built graphic inside the 16/9 frame, and
+ * `page.visualImage` falls back to a screenshot.
  */
 export function StandardPageTemplate({
   page,
@@ -34,6 +46,7 @@ export function StandardPageTemplate({
   slug: string
 }) {
   const t = useTranslations("pageTemplate")
+  const locale = useLocale() as Locale
   const theme = getPageTheme(family, slug)
   const dark = page.darkHero === true
 
@@ -202,48 +215,57 @@ export function StandardPageTemplate({
         </ol>
       </section>
 
-      {/* Visual, full-bleed deep surface, the one hard rhythm break. */}
-      <section
-        className="py-20 text-white lg:py-32"
-        style={{ backgroundColor: theme.deep }}
-      >
-        <div className="px-[var(--edge)]">
-          <div className="max-w-2xl">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
-              {t("productView")}
-            </p>
-            <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
-              {page.visualTitle}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
-              {page.visualBody}
-            </p>
+      {/* Visual. Either a section in its own right, or the full-bleed deep
+          surface that is otherwise the page's one hard rhythm break. */}
+      {page.visualSection === "architecture" ? (
+        <PlatformArchitecture locale={locale} />
+      ) : (
+        <section
+          className="py-20 text-white lg:py-32"
+          style={{ backgroundColor: theme.deep }}
+        >
+          <div className="px-[var(--edge)]">
+            <div className="max-w-2xl">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
+                {t("productView")}
+              </p>
+              <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
+                {page.visualTitle}
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
+                {page.visualBody}
+              </p>
+            </div>
+            <div className="reveal relative mt-12 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
+              {page.visualDrawn === "documents" ? (
+                <DocumentsVisual />
+              ) : page.visualDrawn === "mes" ? (
+                <MesVisual />
+              ) : page.visualDrawn === "oee" ? (
+                <OeeVisual />
+              ) : page.visualDrawn === "routes" ? (
+                <RoutesVisual />
+              ) : page.visualImage ? (
+                <Image
+                  src={page.visualImage}
+                  alt={page.visualAlt ?? page.visualTitle}
+                  fill
+                  sizes="(min-width: 1024px) 1140px, 100vw"
+                  className={`object-cover ${
+                    page.visualImagePosition === "top"
+                      ? "object-top"
+                      : page.visualImagePosition === "bottom"
+                        ? "object-bottom"
+                        : "object-center"
+                  }`}
+                />
+              ) : (
+                <p className="text-sm text-white/65">{t("productView")}</p>
+              )}
+            </div>
           </div>
-          <div className="reveal relative mt-12 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
-            {page.visualDrawn === "documents" ? (
-              <DocumentsVisual />
-            ) : page.visualDrawn === "mes" ? (
-              <MesVisual />
-            ) : page.visualImage ? (
-              <Image
-                src={page.visualImage}
-                alt={page.visualAlt ?? page.visualTitle}
-                fill
-                sizes="(min-width: 1024px) 1140px, 100vw"
-                className={`object-cover ${
-                  page.visualImagePosition === "top"
-                    ? "object-top"
-                    : page.visualImagePosition === "bottom"
-                      ? "object-bottom"
-                      : "object-center"
-                }`}
-              />
-            ) : (
-              <p className="text-sm text-white/65">{t("productView")}</p>
-            )}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
     </main>
   )
 }

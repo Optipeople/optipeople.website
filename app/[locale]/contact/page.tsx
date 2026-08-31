@@ -38,7 +38,7 @@ const copy: Record<Locale, ContactCopy> = {
       {
         title: "We read it the same day",
         description:
-          "Your message goes to the team behind Opticloud, not into a queue.",
+          "Your message goes to the team behind OptiPeople Data Platform, not into a queue.",
       },
       {
         title: "A short call",
@@ -68,7 +68,7 @@ const copy: Record<Locale, ContactCopy> = {
       {
         title: "Vi læser den samme dag",
         description:
-          "Din besked går til teamet bag Opticloud, ikke ind i en kø.",
+          "Din besked går til teamet bag OptiPeople Data Platform, ikke ind i en kø.",
       },
       {
         title: "En kort snak",

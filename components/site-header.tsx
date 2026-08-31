@@ -403,8 +403,8 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
 
   // Radix keeps the dialog mounted when a link inside it navigates, so the
   // drawer would stay open over the new page. One delegated handler on the
-  // panel closes it for any anchor — the ~40 nav links, the CTA, the login
-  // targets and the language switcher — instead of 40 individual onClicks.
+  // panel closes it for any anchor: the ~40 nav links, the CTA, the login
+  // targets and the language switcher, instead of 40 individual onClicks.
   const closeOnLinkClick = (event: React.MouseEvent<HTMLElement>) => {
     if ((event.target as HTMLElement).closest("a")) setOpen(false)
   }
@@ -511,7 +511,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
 
 /**
  * One collapsible menu inside the drawer. Uses `<details>` so open/closed state
- * is the browser's job — no per-section React state, and the sections still
+ * is the browser's job: no per-section React state, and the sections still
  * expand if hydration is slow or fails.
  */
 function MobileNavSection({ menu }: { menu: NavMenu }) {

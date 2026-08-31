@@ -6,13 +6,13 @@ category: "Insights"
 image: "/images/blog and case/blog/factory-in-your-pocket.jpg"
 ---
 
-The article positions Opticloud as a way to keep your factory close at hand, even when you are away from the production floor.
+The article positions OptiPeople Data Platform as a way to keep your factory close at hand, even when you are away from the production floor.
 
 Instead of relying on delayed reports or physical presence, teams can access live production information from a computer or mobile phone.
 
 ## Real-Time Production Data Anywhere
 
-The central idea is that Opticloud can collect the production data a company wants to monitor, as long as the required signals can be captured technically.
+The central idea is that OptiPeople Data Platform can collect the production data a company wants to monitor, as long as the required signals can be captured technically.
 
 That data can then be used to:
 

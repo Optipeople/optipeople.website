@@ -6,7 +6,7 @@ category: "Insights"
 image: "/images/blog and case/blog/units-produced-per-hour-v51.png"
 ---
 
-Version 51 of Opticloud introduced a new graph for **units produced per hour**.
+Version 51 of OptiPeople Data Platform introduced a new graph for **units produced per hour**.
 
 This graph aggregates output over time and makes it easy to visualize production speed at the right level of detail.
 

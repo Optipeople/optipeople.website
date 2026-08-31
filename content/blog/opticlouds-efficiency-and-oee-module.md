@@ -1,18 +1,18 @@
 ---
-title: "Opticloud's Efficiency and OEE Module"
+title: "OptiPeople Data Platform’s Efficiency and OEE Module"
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/oee-module-report.png"
 ---
 
-## Opticloud's OEE Module: A Powerful Tool for Enhanced Efficiency
+## OptiPeople Data Platform’s OEE Module: A Powerful Tool for Enhanced Efficiency
 
-Understanding Overall Equipment Efficiency, or OEE, is fundamental to manufacturing optimization. Opticloud's OEE Module provides a real-time view of machine performance by combining availability, quality, and performance.
+Understanding Overall Equipment Efficiency, or OEE, is fundamental to manufacturing optimization. OptiPeople Data Platform’s OEE Module provides a real-time view of machine performance by combining availability, quality, and performance.
 
 ![](/images/blog and case/blog/oee-module-report.png)
 
-## Benefits of Using Opticloud's OEE Module
+## Benefits of Using OptiPeople Data Platform’s OEE Module
 
 **Accurate real-time data:** Get live updates from the factory floor and act quickly on changes that affect productivity.
 
@@ -30,7 +30,7 @@ Video: [OEE real-time and historic walkthrough](https://player.vimeo.com/video/6
 
 **Step 1: Deploy and monitor**
 
-- Deploy Opticloud's OEE module to capture real-time data from your factory floor. It integrates with existing machinery so live updates start without extensive hardware changes.
+- Deploy OptiPeople Data Platform’s OEE module to capture real-time data from your factory floor. It integrates with existing machinery so live updates start without extensive hardware changes.
 
 **Step 2: Understand your OEE score**
 
@@ -51,4 +51,4 @@ Video: [OEE real-time and historic walkthrough](https://player.vimeo.com/video/6
 
 - Track changes over time, measure the impact of your actions, and continue iterating with data.
 
-**Opticloud's OEE module is not just a reporting tool. It is a practical way to improve productivity and quality across the factory.**
+**OptiPeople Data Platform’s OEE module is not just a reporting tool. It is a practical way to improve productivity and quality across the factory.**

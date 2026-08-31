@@ -36,8 +36,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/mes",
     label: { en: "Modular MES", da: "Modulært MES" },
     blurb: {
-      en: "The cloud MES foundation every other module plugs into.",
-      da: "Fundamentet i skyen, som alle de andre moduler bygger på.",
+      en: "The modular MES foundation every other module plugs into.",
+      da: "Det modulære MES-fundament, alle de andre moduler bygger på.",
     },
   },
   {
@@ -45,8 +45,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/iot",
     label: { en: "IoT", da: "IoT" },
     blurb: {
-      en: "Connect new and legacy machines, sensors, and protocols.",
-      da: "Få nye og gamle maskiner, sensorer og protokoller koblet på.",
+      en: "Consolidate the machines, hardware, and systems you already run.",
+      da: "Saml de maskiner, det hardware og de systemer, I allerede har.",
     },
   },
   {
@@ -54,8 +54,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/production",
     label: { en: "OEE", da: "OEE" },
     blurb: {
-      en: "Live OEE, downtime, orders, and shift performance.",
-      da: "Live OEE, nedetid, ordrer og hvordan skiftene kører.",
+      en: "Live OEE, downtime, losses, and shift performance.",
+      da: "Live OEE, nedetid, tab og hvordan skiftene kører.",
     },
   },
   {
@@ -72,8 +72,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/maintenance",
     label: { en: "Maintenance", da: "Vedligehold" },
     blurb: {
-      en: "Preventive planning and mobile task management.",
-      da: "Forebyggende planlægning og opgaverne på mobilen.",
+      en: "Preventive and predictive planning, driven by IoT data.",
+      da: "Forebyggende og forudsigende planlægning på IoT-data.",
     },
   },
   {
@@ -99,8 +99,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/erp-shopfloor",
     label: { en: "Orders", da: "Ordrer" },
     blurb: {
-      en: "Two-way sync between ERP planning and the floor.",
-      da: "Ordrer begge veje mellem ERP og gulvet.",
+      en: "Start, stop, and report at the machine. ERP optional.",
+      da: "Start, stop og meld tilbage ved maskinen. ERP er en mulighed.",
     },
   },
   {
@@ -108,8 +108,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/planning",
     label: { en: "Planning", da: "Planlægning" },
     blurb: {
-      en: "Sequence production against the capacity you actually have.",
-      da: "Planlæg produktionen efter den kapacitet, I faktisk har.",
+      en: "Routes, timelines, and the capacity you actually have.",
+      da: "Ruter, tidslinjer og den kapacitet, I faktisk har.",
     },
   },
   {
@@ -117,8 +117,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/documents",
     label: { en: "Documents", da: "Dokumenter" },
     blurb: {
-      en: "Work instructions, drawings, and certificates at the machine.",
-      da: "Arbejdsinstruktioner, tegninger og certifikater ved maskinen.",
+      en: "Work instructions, drawings, and certificates, wherever the work happens.",
+      da: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker.",
     },
   },
   {

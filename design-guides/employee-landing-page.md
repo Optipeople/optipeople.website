@@ -46,7 +46,7 @@ Use one canonical URL for SEO consistency.
 | 4 | Employee Directory Grid | Display all employees clearly | "I can browse everyone without friction" |
 | 5 | Hiring / Culture Note (optional) | Add human context and momentum | "This is a place with a clear culture" |
 
-4–5 sections is the target. Hero, filter/search, and directory grid are mandatory.
+4-5 sections is the target. Hero, filter/search, and directory grid are mandatory.
 
 **No in-page CTA section.** The root layout (`layout.tsx`) already renders a global `CallToAction` component between every page and the footer.
 

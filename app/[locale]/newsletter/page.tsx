@@ -238,7 +238,7 @@ export default async function NewsletterPage({
           <div className="relative overflow-hidden rounded-[2rem] border border-border/50 bg-[linear-gradient(135deg,#f4efe6,#f8f6f1)] p-3 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_24px_60px_-28px_rgba(0,0,0,0.22)] sm:p-4">
             <div className="overflow-hidden rounded-[1.5rem] border border-border/60">
               <Image
-                src="/images/dashboard2.png"
+                src="/images/Mockups/Report-OEE-Efficiency-With-Filter.png"
                 alt={t.dashboardAlt}
                 width={1600}
                 height={1000}

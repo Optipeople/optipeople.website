@@ -26,7 +26,7 @@ Another benefit is safety. By tracking machine performance over time, businesses
 
 According to a study from the Association for Manufacturing Excellence, the average OEE score for manufacturers is around `75%`. That means many production environments are still operating below their full potential.
 
-In Opticloud, it is also common to see OEE values in the `30-40%` range for factories that are just beginning to work systematically with OEE.
+In OptiPeople Data Platform, it is also common to see OEE values in the `30-40%` range for factories that are just beginning to work systematically with OEE.
 
 Production losses caused by inefficiency can often range from `10-30%`, which means companies may be losing a substantial share of profit due to avoidable issues.
 

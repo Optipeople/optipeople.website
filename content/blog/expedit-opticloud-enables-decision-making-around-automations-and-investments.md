@@ -1,5 +1,5 @@
 ---
-title: "Expedit - Opticloud enables decision making around automations and investments"
+title: "Expedit: OptiPeople Data Platform enables decision making around automations and investments"
 date: "2022-04-07"
 author: "OptiPeople Team"
 category: "Cases"
@@ -12,13 +12,13 @@ outcome: "Wood and metal lines share one live view, giving a stronger basis for 
 
 ## At a Glance
 
-Expedit uses Opticloud to understand production flow better, reduce errors, and create a stronger basis for automation and investment decisions.
+Expedit uses OptiPeople Data Platform to understand production flow better, reduce errors, and create a stronger basis for automation and investment decisions.
 
 > "With the solution we have been able to analyze what we can do to get a better production flow and minimize errors."
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Opticloud is connected to wood and metal lines at Expedit's manufacturing facility in Hadsten, Denmark.
+OptiPeople Data Platform is connected to wood and metal lines at Expedit's manufacturing facility in Hadsten, Denmark.
 
 That gives operators and managers a shared view of machine status and production performance.
 

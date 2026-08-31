@@ -1,5 +1,5 @@
 ---
-title: "DFI Geisler – Increases Productivity by 5% with Opticloud's Data-Driven Insights"
+title: "DFI Geisler: Increases Productivity by 5% with OptiPeople Data Platform’s Data-Driven Insights"
 date: "2025-01-08"
 author: "OptiPeople Team"
 category: "Cases"
@@ -13,7 +13,7 @@ outcome: "Weekly machine reports on the shopfloor turned production data into a 
 
 ## At a Glance
 
-DFI Geisler uses Opticloud to track performance on seven selected processing machines in its countertop production on Mors.
+DFI Geisler uses OptiPeople Data Platform to track performance on seven selected processing machines in its countertop production on Mors.
 
 Over the past two years, that systematic use of production data has helped the company increase productivity by approximately **5%**.
 
@@ -29,9 +29,9 @@ The team needed a shared way to follow:
 
 That visibility had to support both managers and operators, not just reporting after the fact.
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Opticloud is used as part of the daily operating rhythm around the seven machines.
+OptiPeople Data Platform is used as part of the daily operating rhythm around the seven machines.
 
 Department production managers print weekly machine reports and place them on boards by each machine. Those reports create a concrete starting point for conversations on the shopfloor.
 
@@ -43,7 +43,7 @@ Two elements stand out in the DFI Geisler setup.
 
 ### 1. Accurate downtime registration
 
-Operators were trained thoroughly in Opticloud and were involved actively in the implementation.
+Operators were trained thoroughly in OptiPeople Data Platform and were involved actively in the implementation.
 
 That helped create ownership around data quality and made downtime registration more consistent.
 
@@ -63,13 +63,13 @@ The result has been a measurable productivity improvement of around **5%** over 
 
 The company sees that better data alone is not enough. The value comes from combining reliable data collection with continuous improvement and regular dialogue on the shopfloor.
 
-> "We use Opticloud systematically on a daily basis with these seven machines."
+> "We use OptiPeople Data Platform systematically on a daily basis with these seven machines."
 
 > "For some of our operators, recording accurate data has become a kind of competition to maximize productivity."
 
 ## Key Takeaway
 
-At DFI Geisler, Opticloud works because the data is visible, discussed regularly, and tied directly to action.
+At DFI Geisler, OptiPeople Data Platform works because the data is visible, discussed regularly, and tied directly to action.
 
 That turns production reporting from a passive metric into an active improvement tool.
 

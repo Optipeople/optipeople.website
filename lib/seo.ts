@@ -7,7 +7,7 @@ export const siteUrl =
   process.env.SITE_URL ||
   "https://optipeople-website.vercel.app";
 
-const defaultOgImage = "/images/dashboard2.png";
+const defaultOgImage = "/images/Mockups/Report-OEE-Efficiency-With-Filter.png";
 
 type MetadataOptions = {
   title: string;

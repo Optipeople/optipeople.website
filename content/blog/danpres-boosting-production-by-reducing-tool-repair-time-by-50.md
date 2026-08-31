@@ -7,18 +7,18 @@ image: "/images/blog/danpres.jpg"
 customer: "Danpres"
 metric: "−50%"
 metricLabel: "tool-repair time"
-outcome: "Two weeks of Opticloud data showed that halving tool-repair time frees roughly 190,000 items of annual capacity."
+outcome: "Two weeks of OptiPeople Data Platform data showed that halving tool-repair time frees roughly 190,000 items of annual capacity."
 ---
 
 ## At a Glance
 
-Danpres used Opticloud data from two weeks of production to quantify the effect of reducing tool repair time.
+Danpres used OptiPeople Data Platform data from two weeks of production to quantify the effect of reducing tool repair time.
 
 The analysis showed that cutting tool repair time by **50%** could release meaningful production capacity within the existing schedule.
 
 ## The Situation
 
-During weeks 35 and 36, operators at Danpres entered stop reasons for tool repair into Opticloud.
+During weeks 35 and 36, operators at Danpres entered stop reasons for tool repair into OptiPeople Data Platform.
 
 The recorded tool-repair time over those two weeks was **17 hours**.
 
@@ -31,7 +31,7 @@ If tool repair time is reduced by **50%**, then:
 - **8.5 production hours** are freed up every other week
 - **17 production hours** are freed up per month
 
-Because Opticloud also tracks produced output, the time recovery can be linked directly to production volume.
+Because OptiPeople Data Platform also tracks produced output, the time recovery can be linked directly to production volume.
 
 Using the average number of items produced per effective hour in weeks 35 and 36:
 

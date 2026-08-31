@@ -23,7 +23,7 @@ import { cn } from "@/lib/utils"
 import type { Locale } from "@/i18n/routing"
 
 /**
- * Opticloud platform architecture, drawn as markup rather than shipped as the
+ * The platform architecture, drawn as markup rather than shipped as the
  * PDF it was designed as.
  *
  * Three zones read left to right from `xl` up and top to bottom below it (the
@@ -86,7 +86,7 @@ const NODE_ICONS: Record<string, LucideIcon> = {
 const copy: Record<Locale, ArchitectureCopy> = {
   en: {
     eyebrow: "Data platform",
-    title: "Opticloud platform architecture",
+    title: "OptiPeople Data Platform architecture",
     lede: "Data leaves your production site over encrypted connections, gets tied to orders, shifts, machines and operators on the way in, and lands in a data container dedicated to your company. Your team, your systems, and your AI assistants all read from that same record.",
     site: {
       label: "Production site",
@@ -114,7 +114,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
       ],
     },
     platform: {
-      label: "Opticloud platform",
+      label: "OptiPeople Data Platform",
       host: "Microsoft Azure",
       stages: [
         {
@@ -224,7 +224,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
   },
   da: {
     eyebrow: "Dataplatform",
-    title: "Opticloud-platformens arkitektur",
+    title: "Arkitekturen bag OptiPeople Data Platform",
     lede: "Data forlader produktionen over krypterede forbindelser, bliver koblet til ordrer, skift, maskiner og operatører på vejen ind, og lander i en datacontainer, der kun er jeres. Jeres team, jeres systemer og jeres AI-assistenter læser alle det samme.",
     site: {
       label: "Produktionssted",
@@ -252,7 +252,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
       ],
     },
     platform: {
-      label: "Opticloud-platformen",
+      label: "OptiPeople Data Platform",
       host: "Microsoft Azure",
       stages: [
         {

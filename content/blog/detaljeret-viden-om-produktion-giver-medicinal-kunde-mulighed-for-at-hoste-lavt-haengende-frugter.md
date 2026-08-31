@@ -13,7 +13,7 @@ outcome: "Real-time stop and uptime data let an animal-medicine producer act on 
 
 An animal medicine producer needed more detailed and timely production insight to improve efficiency without increasing pressure on employees.
 
-Opticloud provided the real-time operational data needed to support that shift.
+OptiPeople Data Platform provided the real-time operational data needed to support that shift.
 
 ## The Situation
 
@@ -34,9 +34,9 @@ The missing visibility included:
 
 To remain competitive, the customer wanted to improve production efficiency while keeping the focus on practical, low-effort improvements first.
 
-## How Opticloud Is Used
+## How OptiPeople Data Platform Is Used
 
-Opticloud collects data from each machine line in production, while employees use the platform to enter stop causes.
+OptiPeople Data Platform collects data from each machine line in production, while employees use the platform to enter stop causes.
 
 That creates a stronger operational picture for both management and operators.
 

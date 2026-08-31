@@ -83,7 +83,7 @@ Left-aligned. Text-only. No image, no visual, confidence through restraint.
 - Left-aligned (not centered), editorial feel, different from landing pages
 - Eyebrow: `uppercase tracking-wide text-muted-foreground`, simple page identifier
 - Title: `text-4xl sm:text-5xl font-normal tracking-tight`, standard heading scale
-- Description: 1–2 sentences, `text-lg text-muted-foreground`, `max-w-3xl` for comfortable line length
+- Description: 1-2 sentences, `text-lg text-muted-foreground`, `max-w-3xl` for comfortable line length
 - No buttons in the hero, this isn't a conversion section
 
 ### 2. Mission / What We Do
@@ -156,7 +156,7 @@ Show the principles behind the work. Use a simple list or a minimal grid, no hea
 - `sm:grid-cols-[200px_1fr]`, title on left, description on right (stacked on mobile)
 - `space-y-12` between items, generous, lets each value breathe
 - No icons, no cards, no colored backgrounds, the content is the design
-- 3–5 values. More than 5 means they're not actually core values.
+- 3-5 values. More than 5 means they're not actually core values.
 
 ### 4. Team
 

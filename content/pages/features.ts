@@ -16,9 +16,9 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "See Where Production Time Is Lost",
         heroBody:
           "Track OEE live and understand performance across shifts, lines, and machines, based on real production data, not guesswork.",
-        heroImage: "/images/report-mockup4.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         heroImageAlt:
-          "Four OptiPeople dashboard views showing OEE tracking, production reports, and real-time monitoring",
+          "OptiPeople efficiency report with live availability, performance and OEE gauges against target",
         valueTitle: "Your production data should work as hard as your team",
         valueBody:
           "Most factories still piece together performance from shift handover notes, spreadsheets, and end-of-day reports. By the time someone sees the numbers, the moment to act has passed. Production Efficiency gives you a live, accurate picture, so decisions happen while they still matter.",
@@ -38,9 +38,9 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "See What Happened, Hour by Hour",
             description:
               "Color-coded timelines show running, stopped, setup, and idle states for every machine. Spot patterns that shift reports miss, like the 20 minutes lost to changeover every morning that nobody talks about.",
-            image: "/images/dashboard1.png",
+            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
             imageAlt:
-              "Production timeline showing machine status and unit per hour chart across a shift",
+              "Timeline chart showing running, stopped, setup and idle states across a full shift",
           },
           {
             title: "Compare Shifts, Lines, and Machines",
@@ -54,11 +54,11 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "The full picture, from floor to management",
         showcaseBody:
           "Operators see their machine. Team leads see their line. Managers see the plant. Same data, right level of detail.",
-        showcaseImage: "/images/report-mockup5.png",
+        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
         showcaseAlt:
-          "Two OptiPeople report views showing production blocks and OEE gauges side by side",
+          "OptiPeople production counter report with produced and rejected totals and an hourly output trend",
         metrics: [
-          { metric: "15–25%", label: "OEE improvement in the first year" },
+          { metric: "15-25%", label: "OEE improvement in the first year" },
           { metric: "2 hrs", label: "Saved daily on manual reporting" },
           { metric: "< 1 min", label: "From machine event to dashboard" },
         ],
@@ -93,8 +93,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Se hvor produktionstiden går tabt",
         heroBody:
           "Følg OEE live, og se hvordan det går på tværs af skift, linjer og maskiner. Det bygger på rigtige tal fra produktionen, ikke på fornemmelser.",
-        heroImage: "/images/report-mockup4.png",
-        heroImageAlt: "OptiPeople dashboards til OEE og produktion",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImageAlt: "OptiPeople effektivitetsrapport med tilgængelighed, ydelse og OEE mod målet",
         valueTitle: "Jeres tal skal arbejde lige så hårdt som jeres folk",
         valueBody:
           "Bliver tallene først samlet, når dagen er slut, er det for sent at gøre noget ved dem. Her kan I se, hvordan det går lige nu, mens I stadig kan nå at rette op.",
@@ -113,8 +113,8 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Se hvad der skete, time for time",
             description:
               "Farvekodede tidslinjer viser, hvornår hver maskine kørte, stod stille, blev stillet om eller ventede.",
-            image: "/images/dashboard1.png",
-            imageAlt: "Produktionstidslinje",
+            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+            imageAlt: "Tidslinje med kørsel, stop, omstilling og tomgang hen over et helt skift",
           },
           {
             title: "Sammenlign skift, linjer og maskiner",
@@ -127,8 +127,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "Hele billedet, fra gulvet til ledelsen",
         showcaseBody:
           "Operatøren ser sin maskine. Teamlederen ser sin linje. Ledelsen ser fabrikken. De samme tal, bare i det niveau, man har brug for.",
-        showcaseImage: "/images/report-mockup5.png",
-        showcaseAlt: "Rapportoverblik med OEE",
+        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
+        showcaseAlt: "Rapport med producerede og kasserede emner samt output pr. time",
         metrics: [
           { metric: "15-25%", label: "Bedre OEE det første år" },
           { metric: "2 timer", label: "Sparet på rapportering hver dag" },
@@ -206,7 +206,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "Stop data feeds the bigger picture",
         showcaseBody:
           "Every registered stop flows into your production dashboard. Machine status, timelines, and performance metrics update in real time, giving the full story behind the numbers.",
-        showcaseImage: "/images/dashboard1.png",
+        showcaseImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
         showcaseAlt:
           "Live production status dashboard showing machine states, timeline, and unit per hour chart",
         metrics: [
@@ -279,7 +279,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "Stopdata bliver til det store billede",
         showcaseBody:
           "Hver registrering går videre til produktionsdashboardet, så I ser tallene og årsagerne samlet ét sted.",
-        showcaseImage: "/images/dashboard1.png",
+        showcaseImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
         showcaseAlt: "Dashboard med stopdata",
         metrics: [
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
@@ -556,8 +556,8 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Sporbarhed",
             description: "Knyt kvalitetstjek og afvigelser til batch, maskine og skift.",
-            image: "/images/report-mockup5.png",
-            imageAlt: "Sporbarhedsrapport",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            imageAlt: "Sporbarhedsrapport med de enkelte registreringer pr. ordre og skift",
           },
         ],
         metrics: [
@@ -629,17 +629,17 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "From Raw Data to Shared Insight",
             description:
               "Save report templates, schedule automatic delivery, and share with stakeholders who need the numbers but not the system. Management gets a weekly summary. Team leads get daily shift reports. Same data, right format.",
-            image: "/images/report-mockup5.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
             imageAlt:
-              "Two OptiPeople report views showing production blocks overview and OEE dashboard gauges side by side",
+              "OptiPeople event report listing individual registered stops with cause, duration and shift",
           },
         ],
         showcaseTitle: "Every angle of your production, one system",
         showcaseBody:
           "OEE dashboards, stop analysis, shift comparisons, and energy reports all generated from the same live data source.",
-        showcaseImage: "/images/report-mockup4.png",
+        showcaseImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
         showcaseAlt:
-          "Four OptiPeople dashboard views showing OEE tracking, performance comparisons, and production reports",
+          "OptiPeople OEE report with availability, performance and quality broken down over a week",
         metrics: [
           { metric: "2 hrs", label: "Saved daily on manual reporting" },
           { metric: "0", label: "Spreadsheets needed for production reports" },
@@ -700,8 +700,8 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Klik dig ned i tallene",
             description: "Gå fra hele fabrikken ned til den enkelte maskine, det enkelte skift og det enkelte stop.",
-            image: "/images/report-mockup5.png",
-            imageAlt: "Rapport man kan klikke sig ned i",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            imageAlt: "Rapport med de enkelte registrerede stop, årsag, varighed og skift",
           },
         ],
         metrics: [
@@ -881,9 +881,9 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "AI Trained on Your Factory",
         heroBody:
           "Ask questions, detect patterns, and support decisions using AI that knows your machines, your shifts, and your production history.",
-        heroImage: "/images/report-mockup4.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         heroImageAlt:
-          "Four OptiPeople dashboard views representing the breadth of production data available to AI analysis",
+          "Live OptiPeople efficiency report of the kind the AI assistant answers questions from",
         valueTitle: "Your best analyst can't look at everything at once",
         valueBody:
           "Production generates more data than any person can review. The patterns that matter get buried in volume: a gradual cycle time drift, a correlation between humidity and scrap rate, a shift that quietly outperforms. AI doesn't get overwhelmed. It watches everything, all the time, and tells you what matters.",
@@ -903,15 +903,15 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Patterns Humans Miss",
             description:
               "AI scans across machines, shifts, and time periods to surface correlations that are invisible in manual review. A slow drift in cycle time that predicts a breakdown. An energy pattern that signals a worn tool. The system flags it before it becomes a problem.",
-            image: "/images/report-mockup5.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
             imageAlt:
-              "Two report views showing production data patterns that AI uses to detect anomalies and trends",
+              "Event report showing the recurring stop causes a pattern analysis is built from",
           },
           {
             title: "Decisions Backed by Evidence",
             description:
               "Every AI insight links back to the underlying data. No black boxes. When the copilot suggests focusing on a specific machine or shift, you can drill into the exact numbers and timeline that support the recommendation.",
-            image: "/images/dashboard2.png",
+            image: "/images/Mockups/Report-Production-Counters-Desktop.png",
             imageAlt:
               "Production status dashboard showing real-time machine states and performance data backing AI recommendations",
           },
@@ -952,8 +952,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "AI, der kender jeres fabrik",
         heroBody:
           "Stil spørgsmål, find mønstre og få hjælp til beslutningerne af en AI, der kender jeres maskiner, jeres skift og jeres historik.",
-        heroImage: "/images/report-mockup4.png",
-        heroImageAlt: "AI på produktionsdata",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImageAlt: "Live effektivitetsrapport, som AI-assistenten svarer ud fra",
         valueTitle: "Selv den bedste analytiker kan ikke se det hele på én gang",
         valueBody:
           "AI kan holde øje med store mængder data, fange de små signaler og pege på det, der skal gøres noget ved.",
@@ -971,14 +971,14 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Mønstre, mennesker overser",
             description:
               "Find sammenhænge mellem cyklustid, energi, kassation og nedetid på tværs af kilder.",
-            image: "/images/report-mockup5.png",
-            imageAlt: "Datamønstre",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            imageAlt: "Rapport med de gentagne stopårsager, mønstrene bygger på",
           },
           {
             title: "Beslutninger med belæg",
             description:
               "Hvert forslag linker tilbage til de tal og tidslinjer, det bygger på.",
-            image: "/images/dashboard2.png",
+            image: "/images/Mockups/Report-Production-Counters-Desktop.png",
             imageAlt: "Dashboard med tallene bag",
           },
         ],
@@ -1056,6 +1056,10 @@ const features: LocalizedPage<FeaturePage>[] = [
               "Operator panel showing green checkmark with everything is okay confirmation for a Homag machine",
           },
         ],
+        showcaseTitle: "The route step being run, and the files that go with it",
+        showcaseBody:
+          "An order does not arrive at a machine on its own. It arrives as one step on a production route, with the NC program, the setup sheet, and the drawing revision that belong to that step, on the machine the operator is authenticated at.",
+        showcaseDrawn: "routes",
         metrics: [
           { metric: "100%", label: "Digital traceability of operator-machine sessions" },
           { metric: "< 1s", label: "Machine event to operator notification" },
@@ -1123,6 +1127,10 @@ const features: LocalizedPage<FeaturePage>[] = [
             imageAlt: "Alt er ok skærm",
           },
         ],
+        showcaseTitle: "Det rutetrin, der kører, og filerne der hører til",
+        showcaseBody:
+          "En ordre lander ikke ved maskinen af sig selv. Den lander som ét trin på en produktionsrute, med det NC-program, det opstillingsark og den tegningsversion, der hører til netop det trin, på den maskine operatøren er logget ind ved.",
+        showcaseDrawn: "routes",
         metrics: [
           { metric: "100%", label: "Digital sporbarhed på hver session" },
           { metric: "< 1s", label: "Fra det sker på maskinen, til beskeden er ude" },

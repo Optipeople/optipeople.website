@@ -1,18 +1,18 @@
 ---
 title: "Danpres øger produktionen ved at halvere tiden til værktøjsreparation"
 metricLabel: "tid til værktøjsreparation"
-outcome: "To uger med Opticloud-data viste, at en halvering af tiden til værktøjsreparation frigiver omkring 190.000 emners årlig kapacitet."
+outcome: "To uger med data fra OptiPeople Data Platform viste, at en halvering af tiden til værktøjsreparation frigiver omkring 190.000 emners årlig kapacitet."
 ---
 
 ## Kort fortalt
 
-Danpres brugte Opticloud-data fra to ugers produktion til at sætte tal på, hvad en reduktion af tiden til værktøjsreparation er værd.
+Danpres brugte data fra OptiPeople Data Platform fra to ugers produktion til at sætte tal på, hvad en reduktion af tiden til værktøjsreparation er værd.
 
 Analysen viste, at en reduktion på **50%** kan frigive betydelig produktionskapacitet inden for den eksisterende plan.
 
 ## Situationen
 
-I uge 35 og 36 registrerede operatørerne hos Danpres stopårsager for værktøjsreparation i Opticloud.
+I uge 35 og 36 registrerede operatørerne hos Danpres stopårsager for værktøjsreparation i OptiPeople Data Platform.
 
 Den registrerede tid til værktøjsreparation over de to uger var **17 timer**.
 
@@ -25,7 +25,7 @@ Hvis tiden til værktøjsreparation reduceres med **50%**, så:
 - frigives **8,5 produktionstimer** hver anden uge
 - frigives **17 produktionstimer** om måneden
 
-Fordi Opticloud også følger den producerede mængde, kan den frigjorte tid kobles direkte til produktionsvolumen.
+Fordi OptiPeople Data Platform også følger den producerede mængde, kan den frigjorte tid kobles direkte til produktionsvolumen.
 
 Med det gennemsnitlige antal producerede emner per effektiv time i uge 35 og 36:
 

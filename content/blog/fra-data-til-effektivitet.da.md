@@ -7,7 +7,7 @@ outcome: "En analyse af OEE per seriestørrelse begrundede maskine nummer to og 
 
 ## Kort fortalt
 
-Denne anonymiserede case viser, hvordan en fabrik brugte Opticloud-data til at finde effektiviseringsmuligheder, forbedre OEE og træffe en bedre funderet investeringsbeslutning.
+Denne anonymiserede case viser, hvordan en fabrik brugte data fra OptiPeople Data Platform til at finde effektiviseringsmuligheder, forbedre OEE og træffe en bedre funderet investeringsbeslutning.
 
 Kerneresultatet var en stigning i OEE fra **21%** til **41%**.
 
@@ -17,7 +17,7 @@ Maskinen i fokus producerede både små og store serier.
 
 Fordi omstillinger var dyre, havde fabrikken en mistanke om, at der var noget at hente, men manglede de data, der skulle til for at træffe beslutninger med sikkerhed.
 
-Opticloud blev sat i drift for at skabe det beslutningsgrundlag.
+OptiPeople Data Platform blev sat i drift for at skabe det beslutningsgrundlag.
 
 ## Hvad data viste
 

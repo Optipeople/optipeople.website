@@ -24,7 +24,7 @@ interface ModuleNode {
 const englishModules: ModuleNode[] = [
   {
     id: "opticloud",
-    name: "OptiCloud",
+    name: "OptiPeople Data Platform",
     description: "Your single source of truth",
     pitch: "All your production data in one place. Connect machines, systems, and people to make decisions based on facts, not gut feeling.",
     features: ["Real-time data collection", "Secure cloud infrastructure", "Open API integrations"],
@@ -34,14 +34,14 @@ const englishModules: ModuleNode[] = [
     name: "OEE",
     description: "See where time is lost",
     pitch: "Track OEE in real-time and understand exactly where production time disappears. Stop guessing, start improving.",
-    features: ["Live OEE dashboards", "Stop cause registration", "Work order tracking"],
+    features: ["Live OEE dashboards", "Stop cause registration", "Performance and quality losses"],
   },
   {
     id: "mes",
     name: "Modular MES",
-    description: "Run execution in the cloud",
-    pitch: "OptiCloud brings manufacturing execution, live shopfloor visibility, traceability, and reporting into one cloud-based MES layer.",
-    features: ["Manufacturing execution", "Shopfloor dashboards", "Production traceability"],
+    description: "One module at a time",
+    pitch: "The modular MES the other ten plug into. Start with the module that answers the question you have now, and add the next one against data you are already collecting.",
+    features: ["Start with one module", "Shared data foundation", "No re-entry between modules"],
   },
   {
     id: "quality",
@@ -53,16 +53,16 @@ const englishModules: ModuleNode[] = [
   {
     id: "erp-shopfloor",
     name: "Orders",
-    description: "Bridge ERP and floor",
-    pitch: "Your ERP knows the plan. Your machines know reality. OptiCloud connects the two, giving planners real-time actuals and operators the context they need.",
-    features: ["Two-way ERP sync", "Work order tracking", "Live shopfloor dashboards"],
+    description: "Run them at the machine",
+    pitch: "The orders to run, on the screen at the machine. Operators start, stop, and report quantities and scrap where the work happens. It runs on its own, and connects to your ERP if you want it to.",
+    features: ["Start, stop and report at the machine", "Runs with or without an ERP", "Two-way ERP sync when you want it"],
   },
   {
     id: "maintenance",
     name: "Maintenance",
     description: "Fix it before it breaks",
-    pitch: "Move from reactive firefighting to planned maintenance. Reduce unplanned downtime and extend equipment life.",
-    features: ["Preventive scheduling", "Predictive alerts", "Mobile task management"],
+    pitch: "Move from reactive firefighting to preventive maintenance, and to predictive where the machine signals support it. Less unplanned downtime, longer equipment life.",
+    features: ["Preventive and predictive", "Triggered by connected IoT data", "Mobile task management"],
   },
   {
     id: "energy",
@@ -82,22 +82,22 @@ const englishModules: ModuleNode[] = [
     id: "iot",
     name: "IoT",
     description: "Get data from anything",
-    pitch: "Connect any machine, sensor, or system to your platform. Ingest data from PLCs, IoT gateways, and legacy equipment, no matter the protocol or age.",
-    features: ["Plug-and-play connectors", "Protocol-agnostic ingestion", "Edge data collection"],
+    pitch: "Consolidate the machines, hardware, and data systems you already run into one foundation. PLCs, existing sensor setups, historians, and supplier portals, whatever the protocol or age. New hardware only where a machine has nothing to read from.",
+    features: ["Consolidate existing hardware", "Consolidate existing systems", "A gateway only where it earns one"],
   },
   {
     id: "planning",
     name: "Planning",
-    description: "Plan on real capacity",
-    pitch: "Schedule against measured run rates and the hours a machine actually has available, and let the floor see the same sequence the planner does.",
-    features: ["Capacity-based scheduling", "Run rates from real data", "Replan without rebuilding"],
+    description: "Routes and timelines",
+    pitch: "Sequence orders across the entities of each production route, not on one flat timeline, against measured run rates and the hours a machine actually has available.",
+    features: ["Routes, not one flat timeline", "Run rates from real data", "Replan without rebuilding"],
   },
   {
     id: "documents",
     name: "Documents",
-    description: "Right version, right machine",
-    pitch: "Work instructions, drawings, and certificates at the machine, in the version that applies to the order in front of the operator.",
-    features: ["Instructions at the machine", "One current version", "Audit-ready records"],
+    description: "Right version, right place",
+    pitch: "Work instructions, drawings, and certificates where the work happens: at a machine, a station, a line, a warehouse, or a lab, in the version that applies to the job in front of the person doing it.",
+    features: ["Wherever the work happens", "One current version", "Audit-ready records"],
   },
   {
     id: "ai-agents",
@@ -110,7 +110,7 @@ const englishModules: ModuleNode[] = [
 const danishModules: ModuleNode[] = [
   {
     id: "opticloud",
-    name: "OptiCloud",
+    name: "OptiPeople Data Platform",
     description: "Dit fælles datagrundlag",
     pitch:
       "Alle jeres produktionsdata ét sted. Kobl maskiner, systemer og mennesker sammen, så beslutningerne bygger på fakta i stedet for mavefornemmelser.",
@@ -122,15 +122,15 @@ const danishModules: ModuleNode[] = [
     description: "Se hvor tiden går tabt",
     pitch:
       "Følg OEE i realtid, og se præcis hvor produktionstiden forsvinder. Så er gætteriet slut, og forbedringerne kan begynde.",
-    features: ["Live OEE på skærmen", "Stopårsager", "Følg ordren"],
+    features: ["Live OEE på skærmen", "Stopårsager", "Tab på fart og kvalitet"],
   },
   {
     id: "mes",
     name: "Modulært MES",
-    description: "Styr produktionen i skyen",
+    description: "Ét modul ad gangen",
     pitch:
-      "OptiCloud samler styringen af produktionen, overblikket over gulvet, sporbarheden og rapporteringen i ét MES i skyen.",
-    features: ["Styring af produktionen", "Dashboards til gulvet", "Sporbarhed hele vejen"],
+      "Det modulære MES, de andre ti kobler sig på. Start med det modul, der svarer på spørgsmålet nu, og tag det næste på data, I allerede samler op.",
+    features: ["Start med ét modul", "Fælles datagrundlag", "Ingen dobbeltregistrering"],
   },
   {
     id: "quality",
@@ -143,18 +143,18 @@ const danishModules: ModuleNode[] = [
   {
     id: "erp-shopfloor",
     name: "Ordrer",
-    description: "Forbind ERP og gulv",
+    description: "Kør dem ved maskinen",
     pitch:
-      "ERP kender planen. Maskinerne kender virkeligheden. OptiCloud kobler de to sammen, så planlæggeren får tal fra i dag, og operatøren ved, hvad der er vigtigst.",
-    features: ["Ordrer begge veje", "Følg ordren", "Live overblik på gulvet"],
+      "Ordrerne står på skærmen ved maskinen. Operatøren starter, stopper og melder antal og kassation, dér hvor arbejdet sker. Det kører alene, og kan kobles på ERP, hvis I vil.",
+    features: ["Start, stop og meld ved maskinen", "Kører med eller uden ERP", "Ordrer begge veje, når I vil"],
   },
   {
     id: "maintenance",
     name: "Vedligehold",
     description: "Løs det, før det stopper",
     pitch:
-      "Gå fra brandslukning til planlagt vedligehold. Færre uplanlagte stop, og maskinerne holder længere.",
-    features: ["Forebyggende planlægning", "Alarm før nedbruddet", "Opgaverne på mobilen"],
+      "Gå fra brandslukning til forebyggende vedligehold, og til forudsigende dér hvor maskinsignalerne rækker til det. Færre uplanlagte stop, og maskinerne holder længere.",
+    features: ["Forebyggende og forudsigende", "Udløst af IoT-data", "Opgaverne på mobilen"],
   },
   {
     id: "energy",
@@ -177,22 +177,22 @@ const danishModules: ModuleNode[] = [
     name: "IoT",
     description: "Få data fra alt",
     pitch:
-      "Kobl maskiner, sensorer og systemer på platformen. Hent data fra PLC'er, IoT-gateways og gammelt udstyr, uanset protokol.",
-    features: ["Nem opkobling", "Uanset protokol", "Opsamling ude ved maskinen"],
+      "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, sensorer der er sat op, historians og leverandørportaler, uanset protokol og alder.",
+    features: ["Brug det hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun hvor der mangler noget"],
   },
   {
     id: "planning",
     name: "Planlægning",
-    description: "Planlæg på reel kapacitet",
-    pitch: "Planlæg efter målte kørehastigheder og de timer, maskinen faktisk er ledig. Gulvet ser den samme rækkefølge som planlæggeren.",
-    features: ["Planlæg efter reel kapacitet", "Kørehastigheder fra virkeligheden", "Læg om uden at starte forfra"],
+    description: "Ruter og tidslinjer",
+    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, og ikke bare på én flad tidslinje. Efter målte kørehastigheder og reel ledig tid.",
+    features: ["Ruter, ikke én flad tidslinje", "Kørehastigheder fra virkeligheden", "Læg om uden at starte forfra"],
   },
   {
     id: "documents",
     name: "Dokumenter",
-    description: "Rette version ved maskinen",
-    pitch: "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, i den version, der gælder for ordren foran operatøren.",
-    features: ["Instruktioner ved maskinen", "Én gældende version", "Klar til audit"],
+    description: "Rette version, rette sted",
+    pitch: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen, på stationen, på lageret eller i laboratoriet, i den version, der gælder for opgaven.",
+    features: ["Dér hvor arbejdet sker", "Én gældende version", "Klar til audit"],
   },
   {
     id: "ai-agents",
@@ -205,27 +205,27 @@ const danishModules: ModuleNode[] = [
 const platformIntro = {
   en: {
     eyebrow: "Platform",
-    title: "Connected by design",
+    title: "One modular platform, eleven modules",
     description:
-      "Every module shares data seamlessly, creating a unified view of your operations",
-    centerLabel: "OptiCloud Platform",
+      "Take one module or ten. Every module shares the same live data, so what one team registers, every team can use",
+    centerLabel: "OptiPeople Data Platform",
   },
   da: {
     eyebrow: "Platform",
-    title: "Forbundet fra starten",
+    title: "Én modulopbygget platform, elleve moduler",
     description:
-      "Modulerne deler data med hinanden og giver ét samlet billede af driften",
-    centerLabel: "OptiCloud platform",
+      "Tag ét modul eller ti. Modulerne deler de samme data, så det, ét team registrerer, kan de andre bruge",
+    centerLabel: "OptiPeople Data Platform",
   },
 } as const
 
 // ---------------------------------------------------------------------------
-// Brand palette + geometry for the OptiCloud "flower", rounded pentagons
-// radiating from an octagonal OptiCloud hub, recreated from the 2024 brand mark
+// Brand palette + geometry for the platform "flower", rounded pentagons
+// radiating from an octagonal platform hub, recreated from the 2024 brand mark
 // (Opticloud-Flower.svg). Colours are sampled from that original SVG.
 // ---------------------------------------------------------------------------
 
-// The data-infrastructure modules (OptiCloud / MES / IoT) share the teal family;
+// The data-infrastructure modules (the hub / MES / IoT) share the teal family;
 // functional modules each get a distinct hue, exactly like the original mark.
 const BRAND: Record<string, { fill: string; text: "light" | "dark" }> = {
   opticloud: { fill: "#024343", text: "light" },
@@ -335,16 +335,59 @@ const PETAL_ORDER = [
   "ai-agents",
 ]
 
+/** The five corners of a petal, in viewBox units. */
+function petalVertices(cx: number, cy: number, rotationDeg: number) {
+  return Array.from({ length: 5 }, (_, k) => {
+    const a = ((rotationDeg + (k * 360) / 5 - 90) * Math.PI) / 180
+    return [cx + PETAL_R * Math.cos(a), cy + PETAL_R * Math.sin(a)] as const
+  })
+}
+
+/**
+ * Horizontal midpoint of the petal at a given height.
+ *
+ * A pentagon rotated to point its apex outward is only left-right symmetric at
+ * multiples of 36 degrees, so for most petals the shape at label height sits
+ * off to one side of the circumcentre. Centring the label on `cx` then reads as
+ * text crowding one edge, which is exactly what the Documents petal was doing.
+ * Scanning the polygon at the label's own height and centring on that chord
+ * fixes every petal rather than nudging one of them by hand.
+ */
+function chordCenterX(
+  verts: readonly (readonly [number, number])[],
+  y: number,
+  fallback: number,
+) {
+  const xs: number[] = []
+  for (let i = 0; i < verts.length; i++) {
+    const [x1, y1] = verts[i]
+    const [x2, y2] = verts[(i + 1) % verts.length]
+    if (y1 === y2) continue
+    const t = (y - y1) / (y2 - y1)
+    if (t < 0 || t > 1) continue
+    xs.push(x1 + t * (x2 - x1))
+  }
+  if (xs.length < 2) return fallback
+  return (Math.min(...xs) + Math.max(...xs)) / 2
+}
+
 function petalLayout() {
   return PETAL_ORDER.map((id, k) => {
     const angleDeg = -90 + (k * 360) / PETAL_ORDER.length
     const a = (angleDeg * Math.PI) / 180
+    const cx = CENTER[0] + ORBIT * Math.cos(a)
+    const cy = CENTER[1] + ORBIT * Math.sin(a)
+    // rotate each pentagon so its apex points outward, away from the hub
+    const rotation = angleDeg + 90
+    const verts = petalVertices(cx, cy, rotation)
     return {
       id,
-      cx: CENTER[0] + ORBIT * Math.cos(a),
-      cy: CENTER[1] + ORBIT * Math.sin(a),
-      // rotate each pentagon so its apex points outward, away from the hub
-      rotation: angleDeg + 90,
+      cx,
+      cy,
+      rotation,
+      // Where the two-line label should actually sit: the average of the
+      // shape's midpoint at the top and bottom of the text block.
+      labelX: (chordCenterX(verts, cy - 4, cx) + chordCenterX(verts, cy + 4, cx)) / 2,
     }
   })
 }
@@ -394,8 +437,8 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
 
   return (
     <section className="relative overflow-hidden bg-[var(--gray-1)] py-20 lg:py-32">
-      {/* Keeps its own wide canvas — the diagram needs more room than the
-          1140px content column — but the heading type matches the rest of the
+      {/* Keeps its own wide canvas: the diagram needs more room than the
+          1140px content column, but the heading type matches the rest of the
           redesigned pages. */}
       <div className="mx-auto max-w-[1400px] px-6">
         {/* Header. Centred on purpose: it sits above a radial diagram. */}
@@ -442,7 +485,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
             </div>
           </div>
 
-          {/* Desktop: OptiCloud flower, rounded pentagons around an octagonal hub */}
+          {/* Desktop: the platform flower, rounded pentagons around an octagonal hub */}
           <div
             className="relative mx-auto hidden w-full max-w-[1100px] lg:block"
             style={{ aspectRatio: `${VB_W} / ${VB_H}` }}
@@ -530,7 +573,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
             {/* HTML label overlay (positioned over each pentagon) */}
             <div className="absolute inset-0">
               {petals.map((p) => (
-                <Label key={p.id} id={p.id} x={p.cx} y={p.cy} r={PETAL_R} />
+                <Label key={p.id} id={p.id} x={p.labelX} y={p.cy} r={PETAL_R} />
               ))}
               <Label id="opticloud" x={CENTER[0]} y={CENTER[1]} r={CENTER_R} isCenter />
             </div>

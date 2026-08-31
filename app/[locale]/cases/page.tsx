@@ -30,12 +30,12 @@ const copy: Record<Locale, CasesCopy> = {
   en: {
     metaTitle: "Cases",
     metaDescription:
-      "See how manufacturers use OptiPeople and Opticloud to improve OEE, reduce downtime, and make better production decisions.",
+      "See how manufacturers use OptiPeople and OptiPeople Data Platform to improve OEE, reduce downtime, and make better production decisions.",
     backLabel: "Home",
     eyebrow: "Customer stories",
     title: "Results from the factory floor",
     subtitle:
-      "How manufacturers use Opticloud to lift OEE, cut downtime, and turn production data into better decisions.",
+      "How manufacturers use OptiPeople Data Platform to lift OEE, cut downtime, and turn production data into better decisions.",
     storiesLabel: "published customer stories",
     measuredLabel: "with a measured result on the line",
     customersLabel: "Manufacturers in these stories",
@@ -47,12 +47,12 @@ const copy: Record<Locale, CasesCopy> = {
   da: {
     metaTitle: "Cases | OptiPeople",
     metaDescription:
-      "Se hvordan produktionsvirksomheder bruger OptiPeople og Opticloud til at forbedre OEE, oppetid og beslutninger.",
+      "Se hvordan produktionsvirksomheder bruger OptiPeople og OptiPeople Data Platform til at forbedre OEE, oppetid og beslutninger.",
     backLabel: "Forsiden",
     eyebrow: "Cases",
     title: "Virkelige resultater fra virkelige fabrikker",
     subtitle:
-      "Sådan bruger produktionsvirksomheder Opticloud til at løfte OEE, skære nedetiden ned og bruge tallene til bedre beslutninger.",
+      "Sådan bruger produktionsvirksomheder OptiPeople Data Platform til at løfte OEE, skære nedetiden ned og bruge tallene til bedre beslutninger.",
     storiesLabel: "publicerede kundehistorier",
     measuredLabel: "med et målt resultat på linjen",
     customersLabel: "Virksomhederne i historierne",

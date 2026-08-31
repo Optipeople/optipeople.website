@@ -38,7 +38,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         eyebrow: "For Manufacturing Companies",
         heroTitle: "Know Your Factory. In Real Time.",
         heroBody:
-          "Connect every machine, capture production data automatically, and give your team the visibility to act on problems while they still matter.",
+          "Connect every machine, capture manufacturing data automatically, and give your team the visibility to act on problems while they still matter.",
         primaryLabel: "Request a Demo",
         introTitle: "Most factories still run on yesterday's numbers",
         introBody:
@@ -85,12 +85,12 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "One dashboard for your entire operation",
         visualBody:
           "From individual machines to plant-wide KPIs, drill into the data that matters, at any level.",
-        visualImage: "/images/dashboard2.png",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
         visualAlt:
-          "OptiPeople manufacturing dashboard showing production monitoring, OEE gauges, and machine status across multiple views",
+          "OptiPeople manufacturing report showing OEE gauges, a shift timeline and stop distribution",
         metricsTitle: "Typical Results",
         metrics: [
-          { metric: "15–25%", label: "OEE improvement in first year" },
+          { metric: "15-25%", label: "OEE improvement in first year" },
           { metric: "40%", label: "Reduction in unplanned downtime" },
           { metric: "2 hrs", label: "Saved daily on manual reporting" },
         ],
@@ -146,9 +146,9 @@ const solutions: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Fra maskinsignal til forbedring",
         visualBody:
-          "Opticloud samler tallene og viser dem på dashboards, i rapporter og i det daglige arbejde.",
-        visualImage: "/images/dashboard2.png",
-        visualAlt: "Produktionsdashboard",
+          "OptiPeople Data Platform samler tallene og viser dem på dashboards, i rapporter og i det daglige arbejde.",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
+        visualAlt: "Produktionsrapport med OEE, skiftets tidslinje og stopfordeling",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "15-25%", label: "Bedre OEE" },
@@ -251,7 +251,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
           {
             title: "Deploy",
             description:
-              "Ship machines with Opticloud built in. Customers access a branded portal from day one.",
+              "Ship machines with OptiPeople Data Platform built in. Customers access a branded portal from day one.",
           },
           {
             title: "Monetize",
@@ -312,7 +312,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
           },
           {
             title: "Lever",
-            description: "Maskinerne bliver leveret med Opticloud som det digitale lag.",
+            description: "Maskinerne bliver leveret med OptiPeople Data Platform som det digitale lag.",
           },
           {
             title: "Tjen på det",

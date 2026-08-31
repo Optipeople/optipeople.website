@@ -712,6 +712,171 @@ function OeeMockup() {
   )
 }
 
+/** Hour marks under the shift band. Six is what survives at this width. */
+const OEE_HOURS = ["05:30", "07:30", "09:30", "11:30", "13:30", "15:58"]
+
+/**
+ * OEE at 16/9, for the closing band of /modules/production.
+ *
+ * Replaces a 2022 screenshot whose timeline was pure #00FF00 with 6px white
+ * labels on it: unreadable, and loud enough to be the first thing anyone
+ * mentioned about the page. The drawn version keeps the module's argument
+ * (what the number is, when the time went, what took it) and uses the same
+ * muted stop palette as the carousel mockup, so a band in the shift and a bar
+ * in the distribution are visibly one event without a legend.
+ *
+ * Scales off the container, like MesVisual: one `cqw`-based font size drives
+ * every `em` inside, so the panel is legible at any frame width.
+ */
+export function OeeVisual() {
+  return (
+    <div className="@container absolute inset-0 flex items-center justify-center">
+      <div
+        className="w-[93%] overflow-hidden rounded-[0.85em] bg-white text-left text-slate-700 shadow-[0_1.5em_3em_-1.4em_rgba(0,0,0,0.65)] ring-1 ring-black/10"
+        style={{ fontSize: "clamp(6px, 1.5cqw, 18px)" }}
+      >
+        <div className="flex items-baseline gap-[0.6em] border-b border-slate-200 bg-slate-50 px-[1.3em] py-[0.85em]">
+          <span
+            className="shrink-0 text-[0.95em] font-semibold"
+            style={{ color: "var(--green-dark3)" }}
+          >
+            OEE
+          </span>
+          <span className="truncate text-[0.85em] text-slate-400">
+            Availability, performance and quality, off the machine signal
+          </span>
+          <span className="ml-auto shrink-0 rounded-full bg-slate-100 px-[0.7em] py-[0.2em] text-[0.75em] font-medium text-slate-600">
+            CNC Drilling · Day shift
+          </span>
+        </div>
+
+        {/* The shift, full width: it is the one element that needs the whole
+            frame, and it is where the old screenshot was illegible. */}
+        <div className="px-[1.3em] pt-[1.2em]">
+          <div className="flex items-baseline gap-[0.6em]">
+            <p className="text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
+              Shift timeline
+            </p>
+            <span className="ml-auto text-[0.7em] text-slate-400">
+              18 stops · 44 min lost
+            </span>
+          </div>
+          <div className="mt-[0.6em] flex h-[2.1em] overflow-hidden rounded-[0.25em]">
+            {OEE_SHIFT.map((seg, i) => (
+              <span
+                key={i}
+                className="flex items-center justify-center overflow-hidden"
+                style={{ width: seg.w + "%", backgroundColor: seg.tone }}
+              >
+                {seg.label && (
+                  <span className="truncate px-[0.2em] text-[0.7em] font-medium leading-none text-white">
+                    {seg.label}
+                  </span>
+                )}
+              </span>
+            ))}
+          </div>
+          <div className="mt-[0.35em] flex justify-between text-[0.68em] leading-none text-slate-400">
+            {OEE_HOURS.map((h) => (
+              <span key={h}>{h}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)_minmax(0,1.1fr)] gap-[1.5em] px-[1.3em] pb-[1.3em] pt-[1.2em]">
+          {/* The number people came for. */}
+          <div>
+            <p className="text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
+              Against target
+            </p>
+            <div className="mt-[0.6em] grid grid-cols-3 gap-[0.45em]">
+              {OEE_GAUGES.map(({ label, value, target, tone }, i) => (
+                <div
+                  key={label}
+                  className="rounded-[0.55em] border border-slate-200 px-[0.35em] pb-[0.45em] pt-[0.45em]"
+                >
+                  <p className="truncate text-center text-[0.7em] leading-none text-slate-500">
+                    {label}
+                  </p>
+                  <div className="relative mt-[0.3em]">
+                    <OeeGauge value={value} tone={tone} delay={i * 0.18} />
+                    <div className="absolute inset-x-0 bottom-0 text-center">
+                      <p
+                        className="text-[0.95em] font-semibold leading-none"
+                        style={{ color: tone }}
+                      >
+                        {value}%
+                      </p>
+                      <p className="mt-[0.2em] text-[0.65em] leading-none text-slate-500">
+                        target {target}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* What took it, aggregated. */}
+          <div>
+            <p className="text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
+              Stop distribution
+            </p>
+            <div className="mt-[0.6em] flex h-[4.2em] items-end gap-[0.3em] border-b border-slate-200">
+              {OEE_DISTRIBUTION.map(({ label, times, tone }) => (
+                <span
+                  key={label}
+                  className="flex-1 rounded-t-[0.15em]"
+                  style={{ height: times * 45 + "%", backgroundColor: tone }}
+                />
+              ))}
+            </div>
+            <div className="mt-[0.3em] flex gap-[0.3em]">
+              {OEE_DISTRIBUTION.map(({ label }) => (
+                <span
+                  key={label}
+                  className="min-w-0 flex-1 truncate text-center text-[0.62em] leading-none text-slate-400"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* And the stops themselves, one after the other. */}
+          <div>
+            <p className="text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
+              Stop log
+            </p>
+            <div className="mt-[0.3em]">
+              {OEE_LOG.map(({ at, reason, took, tone }) => (
+                <div
+                  key={at}
+                  className="flex items-center gap-[0.5em] border-b border-slate-50 py-[0.24em] last:border-b-0"
+                >
+                  <span
+                    className="size-[0.45em] shrink-0 rounded-[0.08em]"
+                    style={{ backgroundColor: tone }}
+                  />
+                  <span className="shrink-0 text-[0.72em] tabular-nums leading-none text-slate-400">
+                    {at}
+                  </span>
+                  <span className="min-w-0 flex-1 truncate text-[0.75em] leading-none text-slate-700">
+                    {reason}
+                  </span>
+                  <span className="shrink-0 text-[0.72em] font-medium leading-none text-slate-500">
+                    {took}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 /* ── QMS ────────────────────────────────────────────────
    Quality control as it is started at the machine. Three stacked blocks each
    carrying their own button read as three things to do; the panel only ever
@@ -1513,6 +1678,171 @@ function PlanningMockup() {
   )
 }
 
+/* ── Routes and files ───────────────────────────────────
+   The one thing neither the planning board nor the documents list shows on its
+   own: an order moving through the entities of its route, with the file set for
+   the step the operator is standing at. The board says when, the document list
+   says which version, and this says "and here is the step being run right now,
+   with its files, on this machine". Used as the machine-control showcase and
+   available to the planning module. */
+
+type RouteStep = {
+  entity: string
+  state: "done" | "running" | "next" | "planned"
+  /** What the step is holding: files first, because that is the point here. */
+  files: string
+  at: string
+}
+
+const ROUTE_STEPS: RouteStep[] = [
+  { entity: "Wood Saw", state: "done", files: "Cut list CL-77 · Rev 3", at: "06:12" },
+  { entity: "Planer", state: "done", files: "Setup sheet · Rev 4", at: "07:48" },
+  { entity: "Door Press", state: "running", files: "NC program DP-88-204 · Rev 12", at: "09:20" },
+  { entity: "Hinge Router", state: "next", files: "NC program HR-88-204 · Rev 7", at: "11:05" },
+  { entity: "Sanding", state: "planned", files: "Work instruction · Rev 2", at: "12:40" },
+  { entity: "Final QC", state: "planned", files: "Control plan · Rev 9", at: "14:10" },
+]
+
+const ROUTE_STATE = {
+  done: { dot: "var(--green-dark2)", label: "Done", text: "text-slate-400" },
+  running: { dot: "#e8b23a", label: "Running", text: "text-slate-800" },
+  next: { dot: "#7cb8ec", label: "Next", text: "text-slate-600" },
+  planned: { dot: "#cbd5e1", label: "Planned", text: "text-slate-400" },
+} as const
+
+/** The files pushed to the machine for the step being run. */
+const ROUTE_FILES = [
+  { name: "DP-88-204.nc", meta: "NC program · Rev 12", icon: Cpu, state: "Sent to control" },
+  { name: "Setup 88-204", meta: "Setup sheet · Rev 4", icon: ClipboardCheck, state: "Open on panel" },
+  { name: "Drawing 88-204", meta: "Rev 12 · supersedes Rev 11", icon: PencilRuler, state: "Current" },
+  { name: "Torque record", meta: "Signed at 09:24", icon: BadgeCheck, state: "Logged" },
+]
+
+export function RoutesVisual() {
+  return (
+    <div className="@container absolute inset-0 flex items-center justify-center">
+      <div
+        className="w-[93%] overflow-hidden rounded-[0.85em] bg-white text-left text-slate-700 shadow-[0_1.5em_3em_-1.4em_rgba(0,0,0,0.65)] ring-1 ring-black/10"
+        style={{ fontSize: "clamp(6px, 1.5cqw, 18px)" }}
+      >
+        <div className="flex items-baseline gap-[0.6em] border-b border-slate-200 bg-slate-50 px-[1.3em] py-[0.85em]">
+          <span
+            className="shrink-0 text-[0.95em] font-semibold"
+            style={{ color: "var(--green-dark3)" }}
+          >
+            WO-10487
+          </span>
+          <span className="truncate text-[0.85em] text-slate-400">
+            Sliding door SD-2 · 6 pcs · route: Timber door line
+          </span>
+          <span className="ml-auto shrink-0 rounded-full bg-slate-100 px-[0.7em] py-[0.2em] text-[0.75em] font-medium text-slate-600">
+            Step 3 of 6
+          </span>
+        </div>
+
+        <div className="grid grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] gap-[1.5em] px-[1.3em] py-[1.2em]">
+          {/* The route: every entity the order passes through, in order. */}
+          <div>
+            <p className="text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
+              Route · entity
+            </p>
+            <div className="mt-[0.55em]">
+              {ROUTE_STEPS.map((step) => {
+                const tone = ROUTE_STATE[step.state]
+                const running = step.state === "running"
+                return (
+                  <div
+                    key={step.entity}
+                    className={`flex items-center gap-[0.6em] rounded-[0.4em] px-[0.5em] py-[0.4em] ${
+                      running ? "ring-1 ring-amber-300/70" : ""
+                    }`}
+                    style={running ? { backgroundColor: "#fdf6e6" } : undefined}
+                  >
+                    <span
+                      className="size-[0.5em] shrink-0 rounded-full"
+                      style={{ backgroundColor: tone.dot }}
+                    />
+                    <span className="flex min-w-0 flex-1 flex-col">
+                      <span
+                        className={`truncate text-[0.8em] font-medium leading-tight ${tone.text}`}
+                      >
+                        {step.entity}
+                      </span>
+                      <span className="truncate text-[0.7em] leading-tight text-slate-400">
+                        {step.files}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-[0.7em] tabular-nums text-slate-400">
+                      {step.at}
+                    </span>
+                    <span
+                      className={`shrink-0 rounded-full px-[0.5em] py-[0.12em] text-[0.65em] font-medium ${
+                        running ? "text-white" : "text-slate-500 ring-1 ring-slate-200"
+                      }`}
+                      style={running ? { backgroundColor: "#c98f12" } : undefined}
+                    >
+                      {tone.label}
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* The step being executed, and the files that went with it. */}
+          <div className="flex flex-col">
+            <p className="text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
+              Executing on Door Press
+            </p>
+
+            <div className="mt-[0.55em] flex items-center gap-[0.6em] rounded-[0.55em] px-[0.9em] py-[0.7em]"
+              style={{ backgroundColor: "var(--green-dark3)" }}
+            >
+              <Power className="size-[1em] shrink-0 text-white/82" />
+              <span className="flex min-w-0 flex-1 flex-col">
+                <span className="truncate text-[0.8em] font-semibold text-white">
+                  Running since 09:20
+                </span>
+                <span className="truncate text-[0.7em] leading-tight text-white/70">
+                  Operator authenticated · 4 of 6 pcs reported
+                </span>
+              </span>
+              <span className="shrink-0 rounded-full bg-white/15 px-[0.6em] py-[0.15em] text-[0.68em] font-medium text-white">
+                Stop
+              </span>
+            </div>
+
+            <p className="mt-[0.9em] text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
+              Files for this step
+            </p>
+            <div className="mt-[0.35em] flex-1">
+              {ROUTE_FILES.map(({ name, meta, icon: Icon, state }) => (
+                <div
+                  key={name}
+                  className="flex items-center gap-[0.55em] border-b border-slate-50 py-[0.32em] last:border-b-0"
+                >
+                  <Icon className="size-[0.85em] shrink-0 text-slate-400" />
+                  <span className="flex min-w-0 flex-1 flex-col">
+                    <span className="truncate text-[0.78em] font-medium leading-tight text-slate-700">
+                      {name}
+                    </span>
+                    <span className="truncate text-[0.68em] leading-tight text-slate-400">
+                      {meta}
+                    </span>
+                  </span>
+                  <span className="shrink-0 rounded-full bg-slate-100 px-[0.5em] py-[0.12em] text-[0.65em] text-slate-500">
+                    {state}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 /* ── Orders ─────────────────────────────────────────────
    The work order list. Nine columns will not survive the width, so the ones an
    order is actually judged on stay (number, product, due, status) and priority
@@ -2057,7 +2387,7 @@ export function DocumentsVisual() {
           <span className="text-[0.95em] font-semibold text-slate-700">
             Documents
           </span>
-          <span className="text-[0.9em] text-slate-400">- Opticloud Demo</span>
+          <span className="text-[0.9em] text-slate-400">- OptiPeople Demo</span>
         </div>
 
         <div className="px-[1.3em] py-[1.2em]">
