@@ -20,10 +20,10 @@ export type HeroModule = {
  * came for before the first call. Everything stays optional: an empty selection
  * submits exactly like the plain form always did.
  *
- * A chip carries no icon until it's picked, then grows a check. Width and
- * padding are transitioned together so the row settles into its new wrap
- * instead of snapping; the prompt line above carries the affordance that the
- * chips would otherwise have to signal themselves.
+ * Every chip carries a circle, empty until it's picked and then filled with a
+ * check, so the row reads as a set of choices before anyone clicks. Keeping the
+ * circle at a fixed size means a selection only changes colour, the chips never
+ * shift or re-wrap under the cursor.
  */
 export function HeroModulePicker({
   moduleRows,
@@ -89,23 +89,23 @@ export function HeroModulePicker({
                   aria-pressed={isSelected}
                   onClick={() => toggle(module.id)}
                   className={cn(
-                    "group inline-flex items-center rounded-full border py-2 pr-4 text-sm transition-all duration-200 motion-reduce:transition-none",
+                    "group inline-flex cursor-pointer items-center rounded-full border py-2 pl-3 pr-4 text-sm transition-colors duration-200 motion-reduce:transition-none",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-system)] focus-visible:ring-offset-2",
                     isSelected
-                      ? "border-[var(--green-dark3)]/25 bg-[var(--green-light1)] pl-3 font-medium text-[var(--green-dark3)]"
-                      : "border-border/70 bg-white pl-4 text-foreground/70 hover:border-border hover:bg-[var(--gray-1)] hover:text-foreground"
+                      ? "border-[var(--green-dark3)]/25 bg-[var(--green-light1)] font-medium text-[var(--green-dark3)]"
+                      : "border-border/70 bg-white text-foreground/70 hover:border-border hover:bg-[var(--gray-1)] hover:text-foreground"
                   )}
                 >
-                  {/* Collapsed to nothing until picked, so an idle chip is just
-                      a label. overflow-hidden keeps the glyph from spilling out
-                      while the slot is mid-transition. */}
+                  {/* Always present, so every chip reads as pickable and the row
+                      keeps its widths when a selection changes. Idle it's an
+                      empty ring; picked it fills and the check fades in. */}
                   <span
                     aria-hidden="true"
                     className={cn(
-                      "flex h-4 shrink-0 items-center justify-center overflow-hidden rounded-full transition-all duration-200 motion-reduce:transition-none",
+                      "mr-2 flex size-4 shrink-0 items-center justify-center rounded-full border transition-colors duration-200 motion-reduce:transition-none",
                       isSelected
-                        ? "mr-2 w-4 bg-[var(--green-dark3)] text-white"
-                        : "mr-0 w-0"
+                        ? "border-[var(--green-dark3)] bg-[var(--green-dark3)] text-white"
+                        : "border-border/80 bg-white text-transparent group-hover:border-foreground/30"
                     )}
                   >
                     <Check className="h-2.5 w-2.5 shrink-0" strokeWidth={3.5} />

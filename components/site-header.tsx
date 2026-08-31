@@ -154,7 +154,7 @@ export function SiteHeader() {
           </Link>
 
           <nav
-            className="hidden items-center gap-2 text-sm font-medium text-foreground/75 md:flex"
+            className="hidden items-center gap-0.5 text-sm font-medium text-foreground/75 lg:flex xl:gap-2"
             role="navigation"
             aria-label={t("navigationLabel")}
           >
@@ -170,7 +170,7 @@ export function SiteHeader() {
                 <DropdownMenuTrigger asChild>
                   <button
                     type="button"
-                    className={`flex cursor-pointer items-center gap-2 rounded-lg px-3 py-2 transition-colors duration-200 ease-out data-[state=open]:bg-foreground/[0.055] data-[state=open]:text-foreground ${HOVER_WASH} ${FOCUS_RING}`}
+                    className={`flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-2 transition-colors duration-200 ease-out data-[state=open]:bg-foreground/[0.055] data-[state=open]:text-foreground xl:gap-2 xl:px-3 ${HOVER_WASH} ${FOCUS_RING}`}
                     aria-label={t("menuLabel", { title: menu.title })}
                     {...hoverProps(menu.title)}
                   >
@@ -228,7 +228,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`cursor-pointer rounded-lg px-3 py-2 transition-colors duration-200 ease-out ${HOVER_WASH} ${FOCUS_RING}`}
+                className={`cursor-pointer rounded-lg px-2 py-2 transition-colors duration-200 ease-out xl:px-3 ${HOVER_WASH} ${FOCUS_RING}`}
                 aria-label={t("linkLabel", { title: item.title })}
               >
                 {item.title}
@@ -389,10 +389,12 @@ function MegaMenuPanel({ menu }: { menu: NavMenu }) {
 /**
  * Mobile navigation drawer.
  *
- * The desktop `<nav>` is `hidden md:flex`, so without this the site has no
- * navigation at all below 768px — only the logo and the "Talk to us" button.
+ * The desktop `<nav>` is `hidden lg:flex`: six top-level items, one of them
+ * three words long, stop fitting in the header below that. Without this the
+ * site would have no navigation at all under 1024px, only the logo and the
+ * "Talk to us" button.
  * This carries the full tree: every dropdown menu as a collapsible section
- * (including the Modules panel's Features sub-list and overview link), the flat
+ * (including the platform panel's Features sub-list and overview link), the flat
  * links, the login targets, and the language switcher.
  */
 function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
@@ -412,7 +414,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
       <DialogPrimitive.Trigger asChild>
         <button
           type="button"
-          className={`-mr-1 flex size-10 cursor-pointer items-center justify-center rounded-lg text-foreground/75 transition-colors md:hidden ${HOVER_WASH} ${FOCUS_RING}`}
+          className={`-mr-1 flex size-10 cursor-pointer items-center justify-center rounded-lg text-foreground/75 transition-colors lg:hidden ${HOVER_WASH} ${FOCUS_RING}`}
           aria-label={t("openMenu")}
         >
           <Menu className="size-5" aria-hidden="true" />

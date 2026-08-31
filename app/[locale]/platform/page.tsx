@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react"
 import { type Locale } from "@/i18n/routing"
 import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
+import { PlatformArchitecture } from "@/components/platform-architecture"
 import { PlatformFlower } from "@/components/platform-flower"
 import { LogoWall } from "@/components/logo-wall"
 import { customerLogos } from "@/lib/customers"
@@ -287,6 +288,11 @@ export default async function PlatformPage({ params }: PageProps) {
           ))}
         </ol>
       </section>
+
+      {/* Architecture: the same flow the steps above describe in words, at
+          the depth an IT reviewer asks for. Where data goes, who hosts it,
+          and what is isolated per customer. */}
+      <PlatformArchitecture locale={loc} />
 
       {/* Modules — each card wears the colour of the page it opens, so this
           grid previews its destinations instead of repeating one grey box. */}

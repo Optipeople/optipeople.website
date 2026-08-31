@@ -7,9 +7,9 @@ import type { Locale } from "./routing"
 // rather than flat i18n messages because the shape (nested menus, links) matters.
 // Hrefs are written unprefixed, the next-intl <Link> localizes them per locale.
 //
-// The Modules menu and the footer's module column are generated from
-// content/modules-catalog.ts, so the module vocabulary here can never drift
-// from the hero chips or the homepage carousel.
+// The Platform and Modules menu and the footer's module column are generated
+// from content/modules-catalog.ts, so the module vocabulary here can never
+// drift from the hero chips or the homepage carousel.
 
 export type NavItem = {
   title: string
@@ -55,17 +55,18 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
-      title: "Modules",
+      title: "Platform and Modules",
       layout: "mega",
       items: moduleNavItems("en"),
       // The capability pages live here: each one is a deep-dive on part of a
-      // module, so they belong under Modules rather than in a menu of their own.
+      // module, so they belong under Platform and Modules rather than in a menu
+      // of their own.
       secondary: {
         title: "Features",
         items: featureNavItems("en"),
         overview: { title: "All features", href: "/features" },
       },
-      overview: { title: "See the whole platform", href: "/platform" },
+      overview: { title: "See the whole data platform", href: "/platform" },
     },
     {
       title: "Services & Advisory",
@@ -132,7 +133,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
-      title: "Moduler",
+      title: "Platform og moduler",
       layout: "mega",
       items: moduleNavItems("da"),
       secondary: {
@@ -140,7 +141,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
         items: featureNavItems("da"),
         overview: { title: "Alle funktioner", href: "/features" },
       },
-      overview: { title: "Se hele platformen", href: "/platform" },
+      overview: { title: "Se hele dataplatformen", href: "/platform" },
     },
     {
       title: "Services & rådgivning",

@@ -246,7 +246,7 @@ const copy: Record<Locale, HomeCopy> = {
     hero: {
       variants: {
         product: {
-          heading: "Run production and operations on live data",
+          heading: "Run manufacturing and operations on live data",
           subheading: "One data foundation. Every team on the same numbers.",
         },
         category: {

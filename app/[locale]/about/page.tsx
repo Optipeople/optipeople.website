@@ -21,7 +21,7 @@ const copy: Record<
     valuesHeading: string
     teamHeading: string
     values: { title: string; description: string }[]
-    stats: { metric: string; label: string }[]
+    stats: { metric: string; label: string; detail?: string }[]
     statsTitle: string
     cta: string
     visual: { eyebrow: string; title: string; body: string }
@@ -65,23 +65,21 @@ const copy: Record<
       },
     ],
     stats: [
-      { metric: `${employees.length}`, label: "Team members" },
+      { metric: "100+", label: "Factories" },
+      { metric: "10+", label: "Years of experience" },
       {
-        metric: `${new Set(employees.map((employee) => employee.team)).size}`,
-        label: "Departments",
+        metric: "5",
+        label: "Disciplines",
+        detail:
+          "Automation, IoT, software, operations implementation, operations consulting",
       },
-      {
-        metric: `${new Set(employees.map((employee) => employee.location)).size}`,
-        label: "Locations",
-      },
-      { metric: "2024", label: "On the OptiPeople journey together" },
     ],
     statsTitle: "Who we are",
     cta: "Talk to us",
     visual: {
       eyebrow: "What we build",
       title: "Software that earns its place on the floor",
-      body: "Every screen we ship gets used by someone mid-shift, with gloves on, under time pressure. That constraint shapes everything — if it needs a manual, we got it wrong.",
+      body: "Every screen we ship gets used by someone mid-shift, with gloves on, under time pressure. That constraint shapes everything. If it needs a manual, we got it wrong.",
     },
   },
   da: {
@@ -122,23 +120,21 @@ const copy: Record<
       },
     ],
     stats: [
-      { metric: `${employees.length}`, label: "Teammedlemmer" },
+      { metric: "100+", label: "Fabrikker" },
+      { metric: "10+", label: "Års erfaring" },
       {
-        metric: `${new Set(employees.map((employee) => employee.team)).size}`,
+        metric: "5",
         label: "Fagområder",
+        detail:
+          "Automation, IoT, software, operations implementering, operations consulting",
       },
-      {
-        metric: `${new Set(employees.map((employee) => employee.location)).size}`,
-        label: "Lokationer",
-      },
-      { metric: "2024", label: "Fælles OptiPeople-rejse" },
     ],
     statsTitle: "Hvem vi er",
     cta: "Tal med os",
     visual: {
       eyebrow: "Det, vi bygger",
       title: "Software, der gør sig fortjent til pladsen på gulvet",
-      body: "Hver eneste skærm, vi sender ud, bliver brugt midt i et skift, med handsker på og under tidspres. Det vilkår former alt — skal der en manual til, har vi gjort det forkert.",
+      body: "Hver eneste skærm, vi sender ud, bliver brugt midt i et skift, med handsker på og under tidspres. Det vilkår former alt. Skal der en manual til, har vi gjort det forkert.",
     },
   },
 }
@@ -217,7 +213,7 @@ export default async function AboutPage({ params }: PageProps) {
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
           {t.statsTitle}
         </p>
-        <dl className="mt-6 grid grid-cols-2 border-y border-black/[0.08] sm:grid-cols-4">
+        <dl className="mt-6 grid grid-cols-1 divide-y divide-black/[0.08] border-y border-black/[0.08] sm:grid-cols-3 sm:divide-y-0">
           {t.stats.map((stat, i) => (
             <div
               key={stat.label}
@@ -228,15 +224,20 @@ export default async function AboutPage({ params }: PageProps) {
               <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                 {stat.metric}
               </dt>
-              <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/55">
+              <dd className="mt-3 max-w-[26ch] text-sm leading-relaxed text-foreground/55">
                 {stat.label}
+                {stat.detail ? (
+                  <span className="mt-1 block text-foreground/40">
+                    {stat.detail}
+                  </span>
+                ) : null}
               </dd>
             </div>
           ))}
         </dl>
       </section>
 
-      {/* Mission — asymmetric, replacing the centred max-w-3xl block. */}
+      {/* Mission: asymmetric, replacing the centred max-w-3xl block. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
@@ -248,7 +249,7 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Values — numbered rail on hairlines. */}
+      {/* Values: numbered rail on hairlines. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.valuesHeading}
@@ -277,7 +278,7 @@ export default async function AboutPage({ params }: PageProps) {
         </ol>
       </section>
 
-      {/* Team — tinted cards rather than bare photos on a grey band. */}
+      {/* Team: tinted cards rather than bare photos on a grey band. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.teamHeading}
@@ -309,7 +310,7 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Closing statement — full-bleed deep surface. */}
+      {/* Closing statement: full-bleed deep surface. */}
       <section
         className="py-20 text-white lg:py-32"
         style={{ backgroundColor: theme.deep }}
