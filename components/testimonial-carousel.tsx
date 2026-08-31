@@ -1,6 +1,9 @@
 "use client"
 
 import React from "react"
+import { ArrowRight } from "lucide-react"
+
+import { Link } from "@/i18n/navigation"
 
 export type Testimonial = {
   quote: string
@@ -8,11 +11,18 @@ export type Testimonial = {
   title: string
   company: string
   avatarSrc?: string
+  /**
+   * Path to this customer's case study. Only set when a published story exists,
+   * so a quote without one stays a plain card instead of a dead link.
+   */
+  href?: string
 }
 
 type TestimonialCarouselProps = {
   testimonials: Testimonial[]
   title?: string
+  /** Label on the case link inside each card, e.g. "Read the case". */
+  caseLabel?: string
   className?: string
 }
 
@@ -45,33 +55,81 @@ function highlightNumbers(text: string): React.ReactNode[] {
   return result.length > 0 ? result : [text]
 }
 
-function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
-  return (
-    <div className="flex-shrink-0 w-[380px] h-[320px] p-8 bg-card rounded-[20px] ring-1 ring-black/[0.04] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] flex flex-col transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_16px_40px_-16px_rgba(0,0,0,0.18)]">
-      <span
-        aria-hidden
-        className="font-serif text-5xl leading-none text-primary/15 select-none"
-      >
-        &ldquo;
-      </span>
-      <p className="-mt-3 text-[17px] font-light leading-[1.6] tracking-[-0.01em] text-foreground/85 flex-1">
+/** Shared between the linked and unlinked card so both read identically. */
+const CARD_CLASS =
+  "group flex h-[320px] w-[380px] flex-shrink-0 flex-col rounded-[20px] bg-card p-8 ring-1 ring-black/[0.04] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_16px_40px_-16px_rgba(0,0,0,0.18)]"
+
+function TestimonialCard({
+  testimonial,
+  caseLabel,
+  duplicate = false,
+}: {
+  testimonial: Testimonial
+  caseLabel: string
+  /** Cards in the cloned set repeat the first, so keep them out of the a11y tree. */
+  duplicate?: boolean
+}) {
+  const body = (
+    <>
+      {/* Quote mark left, case affordance right, so linking costs no height */}
+      <div className="flex items-start justify-between gap-4">
+        <span
+          aria-hidden
+          className="select-none font-serif text-5xl leading-none text-primary/15"
+        >
+          &ldquo;
+        </span>
+        {testimonial.href && (
+          <span className="flex items-center gap-2">
+            <span className="text-[13px] font-medium text-foreground/72 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+              {caseLabel}
+            </span>
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 text-foreground/82 transition-colors group-hover:border-black/20 group-hover:text-foreground">
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </span>
+        )}
+      </div>
+      <p className="-mt-3 flex-1 text-[17px] font-normal leading-[1.6] tracking-[-0.01em] text-foreground/90">
         {highlightNumbers(testimonial.quote)}
       </p>
-      <div className="mt-auto pt-5 border-t border-black/[0.06]">
-        <p className="font-medium text-foreground text-[15px] tracking-[-0.01em]">
+      <div className="mt-auto border-t border-black/[0.06] pt-5">
+        <p className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
           {testimonial.author}
         </p>
-        <p className="mt-0.5 text-muted-foreground text-[13px]">
+        <p className="mt-0.5 text-[13px] text-muted-foreground">
           {testimonial.title}, {testimonial.company}
         </p>
       </div>
-    </div>
+    </>
+  )
+
+  if (!testimonial.href) {
+    return (
+      <div className={CARD_CLASS} aria-hidden={duplicate || undefined}>
+        {body}
+      </div>
+    )
+  }
+
+  return (
+    <Link
+      href={testimonial.href}
+      className={`${CARD_CLASS} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40`}
+      aria-hidden={duplicate || undefined}
+      tabIndex={duplicate ? -1 : undefined}
+    >
+      {body}
+    </Link>
   )
 }
 
 const CARD_WIDTH = 380
 const GAP = 32
 const STEP = CARD_WIDTH + GAP
+// Widest viewport the track is built to fill. The set is repeated until it
+// covers this plus one full set, so the wrap point always sits off-screen.
+const MAX_TRACK_WIDTH = 2560
 // Matches the previous CSS animation pace: one full set every 30s
 const AUTO_SPEED_FACTOR = 1 / 30 // fraction of set width per second
 // How long auto-scroll stays paused after using the arrows
@@ -91,7 +149,7 @@ function ArrowButton({
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-card ring-1 ring-black/[0.06] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] text-foreground/70 transition-all duration-300 hover:text-foreground hover:-translate-y-0.5 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_16px_40px_-16px_rgba(0,0,0,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+      className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-card ring-1 ring-black/[0.06] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] text-foreground/82 transition-all duration-300 hover:text-foreground hover:-translate-y-0.5 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_16px_40px_-16px_rgba(0,0,0,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
     >
       <svg
         width="18"
@@ -117,10 +175,15 @@ function ArrowButton({
 export function TestimonialCarousel({
   testimonials,
   title,
+  caseLabel = "Read the case",
   className = "",
 }: TestimonialCarouselProps) {
   // Exact width of one set of testimonials (the loop period)
   const setWidth = testimonials.length * STEP
+  // Two sets only cover a wide screen when the set itself is wide. With few
+  // quotes the track ran dry and left an empty band on the right.
+  const setCount =
+    setWidth > 0 ? Math.max(2, 1 + Math.ceil(MAX_TRACK_WIDTH / setWidth)) : 1
 
   const trackRef = React.useRef<HTMLDivElement>(null)
   // Unbounded scroll position in px; only wrapped when applied as a transform
@@ -128,7 +191,20 @@ export function TestimonialCarousel({
   // When set, the rAF loop eases toward this position instead of auto-scrolling
   const targetRef = React.useRef<number | null>(null)
   const hoveredRef = React.useRef(false)
+  // Cards are links, so keyboard focus has to hold the track still too
+  const focusedRef = React.useRef(false)
   const resumeAtRef = React.useRef(0)
+  const reducedMotionRef = React.useRef(false)
+
+  React.useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)")
+    const sync = () => {
+      reducedMotionRef.current = query.matches
+    }
+    sync()
+    query.addEventListener("change", sync)
+    return () => query.removeEventListener("change", sync)
+  }, [])
 
   React.useEffect(() => {
     const autoSpeed = setWidth * AUTO_SPEED_FACTOR // px per second
@@ -142,14 +218,19 @@ export function TestimonialCarousel({
       const target = targetRef.current
       if (target !== null) {
         const diff = target - offsetRef.current
-        if (Math.abs(diff) < 0.5) {
+        if (reducedMotionRef.current || Math.abs(diff) < 0.5) {
           offsetRef.current = target
           targetRef.current = null
         } else {
           // Exponential ease-out, frame-rate independent
           offsetRef.current += diff * Math.min(1, dt * 8)
         }
-      } else if (!hoveredRef.current && time >= resumeAtRef.current) {
+      } else if (
+        !reducedMotionRef.current &&
+        !hoveredRef.current &&
+        !focusedRef.current &&
+        time >= resumeAtRef.current
+      ) {
         offsetRef.current += autoSpeed * dt
       }
 
@@ -180,7 +261,7 @@ export function TestimonialCarousel({
     <section className={className}>
       {title && (
         <div className="text-center mb-14">
-          <h2 className="text-4xl lg:text-5xl font-light tracking-[-0.02em] text-foreground text-center">
+          <h2 className="text-4xl lg:text-5xl font-normal tracking-[-0.02em] text-foreground text-center">
             {title}
           </h2>
         </div>
@@ -190,16 +271,25 @@ export function TestimonialCarousel({
         className="relative overflow-hidden"
         onMouseEnter={() => (hoveredRef.current = true)}
         onMouseLeave={() => (hoveredRef.current = false)}
+        // Touch has no hover, so freeze on first contact. Without this the card
+        // slides between finger down and up and the tap misses its link.
+        onPointerDown={() => {
+          resumeAtRef.current = performance.now() + RESUME_DELAY_MS
+        }}
+        onFocus={() => (focusedRef.current = true)}
+        onBlur={() => (focusedRef.current = false)}
       >
-        {/* Fade edges - aggressive fade so only 2-3 cards visible from center */}
+        {/* Fade edges - aggressive fade so only 2-3 cards visible from center.
+            Narrower below sm, where 35% of the viewport washed out the whole
+            card and left the quote and its link barely readable. */}
         <div
-          className="absolute left-0 top-0 bottom-0 w-[35%] z-10 pointer-events-none"
+          className="absolute left-0 top-0 bottom-0 w-[16%] sm:w-[35%] z-10 pointer-events-none"
           style={{
             background: "linear-gradient(to right, var(--background) 0%, var(--background) 40%, transparent 100%)",
           }}
         />
         <div
-          className="absolute right-0 top-0 bottom-0 w-[35%] z-10 pointer-events-none"
+          className="absolute right-0 top-0 bottom-0 w-[16%] sm:w-[35%] z-10 pointer-events-none"
           style={{
             background: "linear-gradient(to left, var(--background) 0%, var(--background) 40%, transparent 100%)",
           }}
@@ -223,20 +313,17 @@ export function TestimonialCarousel({
 
         {/* Scrolling track - transform driven by rAF loop for seamless infinite loop */}
         <div ref={trackRef} className="flex gap-8 py-10 will-change-transform">
-          {/* First set */}
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={`first-${testimonial.author}-${index}`}
-              testimonial={testimonial}
-            />
-          ))}
-          {/* Second set (duplicate for seamless loop) */}
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={`second-${testimonial.author}-${index}`}
-              testimonial={testimonial}
-            />
-          ))}
+          {/* First set is the real one, the rest are clones for the loop */}
+          {Array.from({ length: setCount }, (_, set) =>
+            testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={`${set}-${testimonial.author}-${index}`}
+                testimonial={testimonial}
+                caseLabel={caseLabel}
+                duplicate={set > 0}
+              />
+            )),
+          )}
         </div>
       </div>
     </section>

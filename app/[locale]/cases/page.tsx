@@ -52,7 +52,7 @@ const copy: Record<Locale, CasesCopy> = {
     eyebrow: "Cases",
     title: "Virkelige resultater fra virkelige fabrikker",
     subtitle:
-      "Sådan bruger produktionsvirksomheder Opticloud til at løfte OEE, reducere nedetid og omsætte produktionsdata til bedre beslutninger.",
+      "Sådan bruger produktionsvirksomheder Opticloud til at løfte OEE, skære nedetiden ned og bruge tallene til bedre beslutninger.",
     storiesLabel: "publicerede kundehistorier",
     measuredLabel: "med et målt resultat på linjen",
     customersLabel: "Virksomhederne i historierne",
@@ -79,7 +79,7 @@ export default async function CasesPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale as Locale)
   const t = copy[locale as Locale] ?? copy.en
-  const cases = getCaseStudies()
+  const cases = getCaseStudies(locale as Locale)
   const prefix = locale === "da" ? "/da" : ""
 
   return (

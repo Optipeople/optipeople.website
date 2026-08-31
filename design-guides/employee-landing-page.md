@@ -84,22 +84,22 @@ Use one canonical URL for SEO consistency.
 
 ```
 Eyebrow:  text-sm font-medium tracking-wide text-muted-foreground uppercase
-Title:    text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-tight
+Title:    text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-tight
 Subtitle: text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl
 ```
 
 ### Section Headings
 
 ```
-Primary:   text-3xl lg:text-4xl font-light tracking-tight
-Secondary: text-2xl font-light
+Primary:   text-3xl lg:text-4xl font-normal tracking-tight
+Secondary: text-2xl font-normal
 ```
 
 ### Body Text
 
 ```
 Primary:   text-lg text-muted-foreground leading-relaxed
-Secondary: text-base text-foreground/70
+Secondary: text-base text-foreground/82
 Small:     text-sm text-muted-foreground
 ```
 
@@ -117,7 +117,7 @@ Simple, left-aligned introduction.
     <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
       People
     </p>
-    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-tight">
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-tight">
       Meet the team behind OptiPeople
     </h1>
     <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl">
@@ -141,7 +141,7 @@ A compact metrics row to give immediate context.
   <div className="mx-auto max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
     {stats.map(stat => (
       <div key={stat.label}>
-        <p className="text-4xl lg:text-5xl font-extralight text-primary tracking-tight">
+        <p className="text-4xl lg:text-5xl font-light text-primary tracking-tight">
           {stat.value}
         </p>
         <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
@@ -228,7 +228,7 @@ Use if you want to combine directory utility with brand personality.
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
   <div className="mx-auto max-w-4xl text-center">
-    <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+    <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
       Built by people who care about the real factory floor
     </h2>
     <p className="mt-6 text-lg text-muted-foreground leading-relaxed">

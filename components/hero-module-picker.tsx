@@ -93,7 +93,7 @@ export function HeroModulePicker({
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-system)] focus-visible:ring-offset-2",
                     isSelected
                       ? "border-[var(--green-dark3)]/25 bg-[var(--green-light1)] font-medium text-[var(--green-dark3)]"
-                      : "border-border/70 bg-white text-foreground/70 hover:border-border hover:bg-[var(--gray-1)] hover:text-foreground"
+                      : "border-border/70 bg-white text-foreground/82 hover:border-border hover:bg-[var(--gray-1)] hover:text-foreground"
                   )}
                 >
                   {/* Always present, so every chip reads as pickable and the row

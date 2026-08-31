@@ -174,28 +174,28 @@ const copy: Record<Locale, HelpCopy> = {
       {
         question: "Kan I forbinde vores ældre maskiner?",
         answer:
-          "Som regel ja. Opticloud læser fra moderne styringer over gængse industrielle protokoller, og på ældre udstyr uden brugbar grænseflade sætter vi sensorer op, der måler signalerne direkte: emnetæller, kørestatus, strømforbrug. En maskine behøver ikke være ny for at kunne måles.",
+          "Som regel ja. Opticloud læser fra de nyere styringer over de protokoller, maskiner taler, og på gammelt udstyr, hvor der ikke er noget at læse fra, sætter vi sensorer op, der måler signalet direkte: emnetæller, kørestatus og strømforbrug. En maskine skal ikke være ny for at kunne måles.",
         linkLabel: "Se IoT-modulet",
         linkHref: "/modules/iot",
       },
       {
         question: "Hvor lang tid tager det at komme i gang?",
         answer:
-          "Den første linje er typisk forbundet og rapporterer inden for uger, ikke måneder. Det meste af arbejdet ligger i at blive enige om, hvad der skal måles, og hvordan stopårsager skal struktureres. Selve opkoblingen er den mindste del.",
+          "Den første linje er typisk koblet på og sender data inden for uger, ikke måneder. Det meste af arbejdet ligger i at blive enige om, hvad der skal måles, og hvordan stopårsagerne skal deles op. Selve opkoblingen er den mindste del.",
         linkLabel: "Se platformen",
         linkHref: "/platform",
       },
       {
         question: "Hvordan beregnes OEE i Opticloud?",
         answer:
-          "Tilgængelighed, ydeevne og kvalitet beregnes ud fra faktiske maskinsignaler og registrerede stop, ikke ud fra manuelle skøn. Vil I forstå regnestykket og valgene bag det, er beregningen gennemgået i fuld længde med eksempler.",
+          "Tilgængelighed, ydelse og kvalitet bliver regnet ud af maskinernes egne signaler og de stop, der er registreret. Ikke af skøn. Vil I se hele regnestykket og valgene bag, er det gennemgået med eksempler.",
         linkLabel: "Sådan beregnes OEE",
         linkHref: "/blog/how-to-calculate-oee-for-manufacturing-and-maintenance",
       },
       {
         question: "Kan vi få vores data ud?",
         answer:
-          "Ja. Opticloud har et REST API, og maskiner og integrationer kan publicere over MQTT med et dokumenteret JSON-skema. Jeres produktionsdata er jeres, og I kan trække dem ind i Power BI, et datawarehouse eller jeres egne systemer.",
+          "Ja. Opticloud har et REST API, og maskiner og koblinger kan sende over MQTT i et dokumenteret JSON-format. Jeres produktionsdata er jeres, og I kan hente dem ind i Power BI, et datawarehouse eller jeres egne systemer.",
         linkLabel: "API trin for trin",
         linkHref: "/blog/opticloud-api-how-to-use-it-step-by-step",
       },
@@ -239,7 +239,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * Get help.
  *
  * Same design language as the deep-dive templates: the `--edge` column,
- * `font-light` display type, tinted panels for the contact routes, and one
+ * `font-normal` display type, tinted panels for the contact routes, and one
  * full-bleed deep band to close.
  *
  * The FAQ runs on the asymmetric two-column used for value propositions
@@ -266,13 +266,13 @@ export default async function GetHelpPage({ params }: Props) {
         />
 
         <div className="px-[var(--edge)]">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t.headline}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.body}
           </p>
 
@@ -282,7 +282,7 @@ export default async function GetHelpPage({ params }: Props) {
             </Button>
             <Link
               href="#faq"
-              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -295,7 +295,7 @@ export default async function GetHelpPage({ params }: Props) {
 
       {/* Contact routes, as tinted panels carrying the page colour. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.channelsTitle}
         </h2>
 
@@ -308,16 +308,16 @@ export default async function GetHelpPage({ params }: Props) {
               <>
                 <div>
                   <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/70">
-                    <Icon className="h-5 w-5 text-foreground/70" />
+                    <Icon className="h-5 w-5 text-foreground/82" />
                   </span>
                   <h3 className="mt-6 text-lg font-medium tracking-tight text-foreground">
                     {channel.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/72">
                     {channel.description}
                   </p>
                 </div>
-                <span className="mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors group-hover:text-foreground">
+                <span className="mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors group-hover:text-foreground">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </span>
@@ -352,10 +352,10 @@ export default async function GetHelpPage({ params }: Props) {
       {/* FAQ: question on the left line, answer beside it. */}
       <section id="faq" className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-28">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
             {t.faqTitle}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-foreground/60">
+          <p className="mt-4 text-base leading-relaxed text-foreground/72">
             {t.faqBody}
           </p>
         </div>
@@ -366,15 +366,15 @@ export default async function GetHelpPage({ params }: Props) {
               key={item.question}
               className="grid gap-4 border-b border-black/[0.08] py-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16 lg:py-10"
             >
-              <dt className="text-xl font-light leading-snug tracking-tight text-foreground lg:text-2xl">
+              <dt className="text-xl font-normal leading-snug tracking-tight text-foreground lg:text-2xl">
                 {item.question}
               </dt>
-              <dd className="text-base leading-relaxed text-foreground/65">
+              <dd className="text-base leading-relaxed text-foreground/78">
                 {item.answer}
                 {item.linkHref && item.linkLabel && (
                   <Link
                     href={item.linkHref}
-                    className="group mt-5 inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+                    className="group mt-5 inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
                   >
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 transition-colors group-hover:border-black/25">
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -395,10 +395,10 @@ export default async function GetHelpPage({ params }: Props) {
       >
         <div className="px-[var(--edge)]">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
               {t.closingTitle}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
               {t.closingBody}
             </p>
             <Button

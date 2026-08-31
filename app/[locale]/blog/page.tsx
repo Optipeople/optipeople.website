@@ -55,7 +55,7 @@ const copy: Record<Locale, ArchiveCopy> = {
     eyebrow: "Blog",
     title: "Artikler og indsigter",
     subtitle:
-      "Praktisk viden om OEE, vedligehold og industriel data, og hvad der reelt ændrer sig på gulvet, når produktionen bliver målt.",
+      "Praktisk viden om OEE, vedligehold og data fra produktionen, og om hvad der faktisk ændrer sig på gulvet, når man begynder at måle.",
     countLabel: (count) => `${count} artikler`,
     listLabel: "Alle artikler",
     emptyTitle: "Ingen blogindlæg endnu",
@@ -86,7 +86,7 @@ export default async function BlogPage({ params, searchParams }: Props) {
   const { page } = await searchParams
   const t = copy[locale as Locale] ?? copy.en
   const currentPage = Math.max(1, parseInt(page || "1", 10))
-  const posts = getPostsByCategory("Insights")
+  const posts = getPostsByCategory("Insights", locale as Locale)
   const prefix = locale === "da" ? "/da" : ""
 
   return (

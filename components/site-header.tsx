@@ -154,7 +154,7 @@ export function SiteHeader() {
           </Link>
 
           <nav
-            className="hidden items-center gap-0.5 text-sm font-medium text-foreground/75 lg:flex xl:gap-2"
+            className="hidden items-center gap-0.5 text-sm font-medium text-foreground/85 lg:flex xl:gap-2"
             role="navigation"
             aria-label={t("navigationLabel")}
           >
@@ -212,7 +212,7 @@ export function SiteHeader() {
                       >
                         <Link
                           href={item.href}
-                          className={`block w-full cursor-pointer rounded-md px-4 py-3 text-sm text-foreground/75 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+                          className={`block w-full cursor-pointer rounded-md px-4 py-3 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
                           aria-label={t("linkLabel", { title: item.title })}
                         >
                           {item.title}
@@ -356,7 +356,7 @@ function MegaMenuPanel({ menu }: { menu: NavMenu }) {
               >
                 <Link
                   href={item.href}
-                  className={`cursor-pointer rounded-md px-3 py-1.5 text-xs leading-snug text-foreground/70 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+                  className={`cursor-pointer rounded-md px-3 py-1.5 text-xs leading-snug text-foreground/82 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
                   aria-label={t("linkLabel", { title: item.title })}
                 >
                   {item.title}
@@ -414,7 +414,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
       <DialogPrimitive.Trigger asChild>
         <button
           type="button"
-          className={`-mr-1 flex size-10 cursor-pointer items-center justify-center rounded-lg text-foreground/75 transition-colors lg:hidden ${HOVER_WASH} ${FOCUS_RING}`}
+          className={`-mr-1 flex size-10 cursor-pointer items-center justify-center rounded-lg text-foreground/85 transition-colors lg:hidden ${HOVER_WASH} ${FOCUS_RING}`}
           aria-label={t("openMenu")}
         >
           <Menu className="size-5" aria-hidden="true" />
@@ -446,7 +446,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
             <DialogPrimitive.Close asChild>
               <button
                 type="button"
-                className={`-mr-1 flex size-10 cursor-pointer items-center justify-center rounded-lg text-foreground/75 transition-colors ${HOVER_WASH} ${FOCUS_RING}`}
+                className={`-mr-1 flex size-10 cursor-pointer items-center justify-center rounded-lg text-foreground/85 transition-colors ${HOVER_WASH} ${FOCUS_RING}`}
                 aria-label={t("closeMenu")}
               >
                 <X className="size-5" aria-hidden="true" />
@@ -481,7 +481,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
                   <li key={target.href}>
                     <a
                       href={target.href}
-                      className={`flex items-center gap-2 rounded-md py-2 text-sm text-foreground/75 transition-colors hover:text-foreground ${FOCUS_RING_INSET}`}
+                      className={`flex items-center gap-2 rounded-md py-2 text-sm text-foreground/85 transition-colors hover:text-foreground ${FOCUS_RING_INSET}`}
                     >
                       <LogIn
                         className="size-3.5 text-muted-foreground"
@@ -515,7 +515,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
  * expand if hydration is slow or fails.
  */
 function MobileNavSection({ menu }: { menu: NavMenu }) {
-  const linkClass = `block rounded-md py-2 text-sm text-foreground/75 transition-colors hover:text-foreground ${FOCUS_RING_INSET}`
+  const linkClass = `block rounded-md py-2 text-sm text-foreground/85 transition-colors hover:text-foreground ${FOCUS_RING_INSET}`
 
   return (
     <details className="group border-b border-border/50">
@@ -587,7 +587,7 @@ function LoginMenu() {
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className={`flex cursor-pointer items-center gap-1.5 rounded text-xs font-medium text-foreground/65 transition-colors hover:text-foreground data-[state=open]:text-foreground ${FOCUS_RING}`}
+          className={`flex cursor-pointer items-center gap-1.5 rounded text-xs font-medium text-foreground/78 transition-colors hover:text-foreground data-[state=open]:text-foreground ${FOCUS_RING}`}
           aria-label={t("login")}
         >
           <LogIn className="h-3.5 w-3.5" aria-hidden="true" />
@@ -608,7 +608,7 @@ function LoginMenu() {
           >
             <a
               href={target.href}
-              className={`block w-full cursor-pointer rounded-md px-4 py-2.5 text-sm text-foreground/75 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+              className={`block w-full cursor-pointer rounded-md px-4 py-2.5 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
             >
               {t(`loginMenu.${target.key}`)}
             </a>
@@ -646,7 +646,7 @@ function LanguageSwitcher() {
               className={`cursor-pointer rounded px-0.5 transition-colors ${FOCUS_RING} ${
                 isActive
                   ? "text-foreground"
-                  : "text-foreground/55 hover:text-foreground"
+                  : "text-foreground/70 hover:text-foreground"
               }`}
             >
               {t(`languages.${language}`)}

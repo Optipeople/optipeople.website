@@ -237,11 +237,11 @@ function MesMockup() {
         className="flex items-center gap-1.5 rounded-lg px-2 py-[7px]"
         style={{ backgroundColor: "var(--green-dark3)" }}
       >
-        <Database className="size-[9px] shrink-0 text-white/70" />
+        <Database className="size-[9px] shrink-0 text-white/82" />
         <span className="text-[7.5px] font-semibold leading-none text-white">
           One data foundation
         </span>
-        <span className="ml-auto shrink-0 text-[6px] leading-none text-white/50">
+        <span className="ml-auto shrink-0 text-[6px] leading-none text-white/65">
           no re-entry
         </span>
       </div>
@@ -373,12 +373,12 @@ export function MesVisual() {
               style={{ backgroundColor: "var(--green-dark3)" }}
             >
               <span className="flex items-center gap-[0.5em]">
-                <Database className="size-[0.9em] shrink-0 text-white/70" />
+                <Database className="size-[0.9em] shrink-0 text-white/82" />
                 <span className="truncate text-[0.85em] font-semibold text-white">
                   One data foundation
                 </span>
               </span>
-              <span className="mt-[0.45em] block text-[0.75em] leading-[1.35] text-white/55">
+              <span className="mt-[0.45em] block text-[0.75em] leading-[1.35] text-white/70">
                 Written once, no re-entry
               </span>
             </div>
@@ -646,7 +646,7 @@ function OeeMockup() {
             style={{ width: seg.w + "%", backgroundColor: seg.tone }}
           >
             {seg.label && (
-              <span className="text-[6px] leading-none text-white/85">
+              <span className="text-[6px] leading-none text-white/90">
                 {seg.label}
               </span>
             )}
@@ -969,7 +969,7 @@ function EmsMockup() {
                 {label}
               </p>
               <p className="mt-[3px] flex items-baseline gap-[3px]">
-                <span className="text-[15px] font-light leading-none tracking-tight text-slate-900">
+                <span className="text-[15px] font-normal leading-none tracking-tight text-slate-900">
                   {value}
                 </span>
                 <span className="text-[6px] leading-none text-slate-400">
@@ -1242,7 +1242,7 @@ function MaintenanceMockup() {
               }
             >
               {label}
-              <span className={active ? "text-white/70" : "text-slate-400"}>
+              <span className={active ? "text-white/82" : "text-slate-400"}>
                 {count}
               </span>
             </span>
@@ -1474,7 +1474,7 @@ function PlanningMockup() {
       {PLAN_GROUPS.map((group) => (
         <div key={group.route}>
           <p
-            className="px-2 py-[3px] text-[6px] font-semibold uppercase tracking-[0.1em] text-white/90"
+            className="px-2 py-[3px] text-[6px] font-semibold uppercase tracking-[0.1em] text-white/95"
             style={{ backgroundColor: "var(--green-dark3)" }}
           >
             {group.route}
@@ -1693,7 +1693,7 @@ function OrdersMockup() {
               }
             >
               {label}
-              <span className={active ? "text-white/70" : "text-slate-400"}>
+              <span className={active ? "text-white/82" : "text-slate-400"}>
                 {count}
               </span>
             </span>
@@ -2229,7 +2229,7 @@ function AnalysisMockup() {
               Produced
             </p>
             <p className="mt-[2px] flex items-baseline gap-1">
-              <span className="text-[19px] font-light leading-none tracking-tight text-slate-900">
+              <span className="text-[19px] font-normal leading-none tracking-tight text-slate-900">
                 991
               </span>
               <span
@@ -2245,7 +2245,7 @@ function AnalysisMockup() {
               Rejected
             </p>
             <p className="mt-[2px] flex items-baseline gap-1">
-              <span className="text-[19px] font-light leading-none tracking-tight text-slate-400">
+              <span className="text-[19px] font-normal leading-none tracking-tight text-slate-400">
                 216
               </span>
               <span className="text-[6px] font-medium leading-none text-slate-400">
@@ -2367,10 +2367,10 @@ function AiAgentsMockup() {
       {/* App bar, logo hard left and the signed-in user on the right */}
       <div className="flex items-center gap-2 px-2.5 py-[7px]">
         <Image src={logo} alt="" width={140} height={28} className="h-[9px] w-auto invert" />
-        <span className="ml-auto truncate text-[7.5px] font-medium text-white/85">
+        <span className="ml-auto truncate text-[7.5px] font-medium text-white/90">
           Welcome, Morten
         </span>
-        <span className="grid size-[11px] shrink-0 place-items-center rounded-[3px] bg-white/15 text-white/80">
+        <span className="grid size-[11px] shrink-0 place-items-center rounded-[3px] bg-white/15 text-white/88">
           <ChevronDown className="size-2" />
         </span>
       </div>
@@ -2378,15 +2378,15 @@ function AiAgentsMockup() {
       <div className="flex">
         {/* Collapsed documents rail */}
         <div className="flex w-[18px] shrink-0 flex-col items-center gap-2 pt-2.5">
-          <PanelLeftOpen className="size-[9px] text-white/75" />
-          <span className="rotate-180 text-[6px] font-medium tracking-[0.14em] text-white/60 [writing-mode:vertical-rl]">
+          <PanelLeftOpen className="size-[9px] text-white/85" />
+          <span className="rotate-180 text-[6px] font-medium tracking-[0.14em] text-white/72 [writing-mode:vertical-rl]">
             DOCUMENTS
           </span>
         </div>
 
         {/* The conversation */}
         <div className="flex-1 rounded-tl-xl bg-[#f4f5f6] px-3 pb-3 pt-3">
-          <p className="text-[10.5px] font-light leading-[1.35] text-slate-900">
+          <p className="text-[10.5px] font-normal leading-[1.35] text-slate-900">
             Ask about installation, maintenance, tool changes or anything from
             your machine’s manual.
           </p>

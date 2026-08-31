@@ -92,7 +92,7 @@ export function NewsletterForm() {
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--green-light1)] text-[var(--green-dark3)]">
           <Check className="h-7 w-7" aria-hidden="true" strokeWidth={2.5} />
         </div>
-        <h2 className="mt-6 text-2xl font-light tracking-tight text-foreground">
+        <h2 className="mt-6 text-2xl font-normal tracking-tight text-foreground">
           {t("successTitle")}
         </h2>
         <p className="mx-auto mt-3 max-w-sm text-base leading-relaxed text-muted-foreground">

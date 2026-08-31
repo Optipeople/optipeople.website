@@ -358,7 +358,7 @@ function PromptCard({
             />
           </div>
 
-          <h3 className="max-w-[18rem] text-xl font-light tracking-tight text-foreground">
+          <h3 className="max-w-[18rem] text-xl font-normal tracking-tight text-foreground">
             {title}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

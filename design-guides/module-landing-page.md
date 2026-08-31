@@ -88,9 +88,9 @@ Follows the homepage type system, with these module-specific patterns:
 The hero always has a background image. Text is white on a dark overlay.
 
 ```
-Eyebrow:  text-sm font-medium text-white/90
-Title:    text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-white
-Subtitle: text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto
+Eyebrow:  text-sm font-medium text-white/95
+Title:    text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-tight text-white
+Subtitle: text-lg lg:text-xl text-white/88 leading-relaxed max-w-2xl mx-auto
 ```
 
 The hero title should be **short and benefit-driven**, not a feature description. Think Apple:
@@ -100,17 +100,17 @@ The hero title should be **short and benefit-driven**, not a feature description
 ### Section Headings
 
 ```
-Primary:   text-3xl lg:text-4xl font-light tracking-tight
-Secondary: text-2xl font-light
+Primary:   text-3xl lg:text-4xl font-normal tracking-tight
+Secondary: text-2xl font-normal
 ```
 
-Section headings are always `font-light`. Never bold. Centered by default unless the layout is asymmetric (e.g., text-left with image-right).
+Section headings are always `font-normal`. Never bold. Centered by default unless the layout is asymmetric (e.g., text-left with image-right).
 
 ### Body Text
 
 ```
 Primary:   text-lg text-muted-foreground leading-relaxed
-Secondary: text-base text-foreground/70
+Secondary: text-base text-foreground/82
 Small:     text-sm text-muted-foreground
 ```
 
@@ -139,13 +139,13 @@ Centered layout with a full-bleed background image. The default background is `/
   />
   <div className="absolute inset-0 bg-black/70" />
   <div className="relative mx-auto max-w-4xl text-center">
-    <p className="text-sm font-medium text-white/90 mb-4">
+    <p className="text-sm font-medium text-white/95 mb-4">
       {eyebrowLabel}
     </p>
-    <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light leading-tight text-white">
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-normal leading-tight text-white">
       {benefitDrivenHeadline}
     </h1>
-    <p className="mt-6 text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+    <p className="mt-6 text-lg lg:text-xl text-white/88 leading-relaxed max-w-2xl mx-auto">
       {oneToTwoSentenceDescription}
     </p>
     <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -164,7 +164,7 @@ Centered layout with a full-bleed background image. The default background is `/
 - **Background image is required.** Default: `/images/default-hero-bg.png`. Add `priority` for above-the-fold loading. Use `alt=""` since the image is decorative.
 - **Fallback color:** `bg-primary` on the section serves as the background while the image loads and behind any transparent areas. This matches the brand's deep green.
 - **Overlay:** `bg-black/70` ensures text readability over busy background images. Use 70% minimum, the image should be felt, not read.
-- **Text is white:** `text-white` for the title, `text-white/90` for eyebrow, `text-white/80` for subtitle
+- **Text is white:** `text-white` for the title, `text-white/95` for eyebrow, `text-white/88` for subtitle
 - **Outline button on dark:** Override with `bg-white/10 border-white/30 text-white shadow-none hover:bg-white/20 hover:text-white`. The frosted glass effect (`bg-white/10` + `border-white/30`) makes the button clearly visible on dark backgrounds. `shadow-none` removes the default outline shadow.
 - Title is the largest text on the page, one line on desktop if possible
 - Description fills in context without repeating the title
@@ -180,7 +180,7 @@ Optional but powerful. Frame the pain before showing the solution. Can be a simp
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-3xl text-center">
-    <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+    <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
       {problemFramingHeadline}
     </h2>
     <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -196,7 +196,7 @@ Optional but powerful. Frame the pain before showing the solution. Can be a simp
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-5xl grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
     <div>
-      <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+      <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
         {headline}
       </h2>
       <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -219,7 +219,7 @@ The core of the page. Show what the module does.
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
   <div className="mx-auto max-w-5xl">
-    <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+    <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
       {sectionHeading}
     </h2>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -260,7 +260,7 @@ For modules where each capability needs a visual or longer explanation, alternat
         }`}
       >
         <div>
-          <h3 className="text-2xl lg:text-3xl font-light tracking-tight">
+          <h3 className="text-2xl lg:text-3xl font-normal tracking-tight">
             {feature.title}
           </h3>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
@@ -290,7 +290,7 @@ A full-width (or near-full-width) product screenshot or interactive demo. This i
 <section className="py-20 lg:py-32 px-6 lg:px-8">
   <div className="mx-auto max-w-6xl">
     <div className="text-center mb-12 lg:mb-16">
-      <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+      <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
         {headline}
       </h2>
       <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -319,13 +319,13 @@ Hard numbers or customer validation. Two patterns:
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-4xl">
-    <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+    <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
       Typical Results
     </h2>
     <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 text-center">
       {metrics.map(item => (
         <div key={item.label}>
-          <p className="text-5xl lg:text-6xl font-extralight text-primary tracking-tight">
+          <p className="text-5xl lg:text-6xl font-light text-primary tracking-tight">
             {item.metric}
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
@@ -339,7 +339,7 @@ Hard numbers or customer validation. Two patterns:
 ```
 
 **Guidelines:**
-- Metrics are large, `text-5xl lg:text-6xl font-extralight` in `text-primary`
+- Metrics are large, `text-5xl lg:text-6xl font-light` in `text-primary`
 - 3 metrics is ideal. 4 max (switch to `sm:grid-cols-2 lg:grid-cols-4`)
 - Labels are short, one line, `text-sm`
 - Apple-style: let the numbers be the visual. No icons, no cards, no decoration.
@@ -351,7 +351,7 @@ For a focused customer quote instead of or alongside metrics:
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
   <div className="mx-auto max-w-3xl text-center">
-    <blockquote className="text-xl lg:text-2xl font-light leading-relaxed text-foreground/80">
+    <blockquote className="text-xl lg:text-2xl font-normal leading-relaxed text-foreground/88">
       "{quoteText}"
     </blockquote>
     <div className="mt-8">
@@ -369,13 +369,13 @@ Reduce friction by showing the process is simple. Three steps is ideal.
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-4xl">
-    <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+    <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
       How It Works
     </h2>
     <div className="grid sm:grid-cols-3 gap-8 lg:gap-12">
       {steps.map((step, i) => (
         <div key={step.title} className="text-center">
-          <div className="text-4xl font-extralight text-primary mb-4">
+          <div className="text-4xl font-light text-primary mb-4">
             {String(i + 1).padStart(2, '0')}
           </div>
           <h3 className="text-lg font-medium mb-2">{step.title}</h3>
@@ -546,11 +546,11 @@ export default function ModuleNamePage() {
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative mx-auto max-w-4xl text-center">
-          <p className="text-sm font-medium text-white/90 mb-4">Module Name</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light leading-tight text-white">
+          <p className="text-sm font-medium text-white/95 mb-4">Module Name</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-normal leading-tight text-white">
             Benefit-Driven Headline
           </h1>
-          <p className="mt-6 text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-6 text-lg lg:text-xl text-white/88 leading-relaxed max-w-2xl mx-auto">
             One to two sentences expanding on the headline.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -567,7 +567,7 @@ export default function ModuleNamePage() {
       {/* Capabilities */}
       <section id="capabilities" className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
             Section Heading
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -580,7 +580,7 @@ export default function ModuleNamePage() {
       <section className="py-20 lg:py-32 px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+            <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
               Visual Section Headline
             </h2>
           </div>
@@ -593,7 +593,7 @@ export default function ModuleNamePage() {
       {/* Results */}
       <section className="py-16 lg:py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
             Typical Results
           </h2>
           <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 text-center">
@@ -605,7 +605,7 @@ export default function ModuleNamePage() {
       {/* How It Works */}
       <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
             How It Works
           </h2>
           <div className="grid sm:grid-cols-3 gap-8 lg:gap-12">
@@ -627,7 +627,7 @@ export default function ModuleNamePage() {
 - [ ] Hero headline is benefit-driven, not feature-descriptive
 - [ ] No more than 7 sections total
 - [ ] Section backgrounds alternate correctly (no two tinted sections adjacent)
-- [ ] All headings use `font-light`, nothing is bold
+- [ ] All headings use `font-normal`, nothing is bold
 - [ ] `max-w-4xl` for text, `max-w-5xl`/`6xl` for grids and visuals
 - [ ] Buttons follow the variant/size table above
 - [ ] Images have `alt` text and use `rounded-2xl`+ with overflow-hidden

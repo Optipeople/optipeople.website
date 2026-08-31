@@ -27,7 +27,10 @@ export function CallToAction({
   return (
     <section
       className={cn(
-        "mt-16 lg:mt-24 py-16 lg:py-24",
+        // No top margin: this is a full-bleed band with its own padding, so a
+        // margin would only open a stray white stripe under pages that end on
+        // a coloured section.
+        "py-16 lg:py-24",
         variant === "default" && "bg-foreground/[0.02]",
         variant === "dark" && "bg-foreground text-background",
         className
@@ -36,7 +39,7 @@ export function CallToAction({
       <div className="mx-auto w-full max-w-3xl px-8 text-center">
         <h2
           className={cn(
-            "text-3xl lg:text-4xl font-light tracking-tight",
+            "text-3xl lg:text-4xl font-normal tracking-tight",
             variant === "default" && "text-foreground",
             variant === "dark" && "text-background"
           )}
@@ -48,7 +51,7 @@ export function CallToAction({
           <p
             className={cn(
               "mt-4 text-lg",
-              variant === "default" && "text-foreground/70",
+              variant === "default" && "text-foreground/82",
               variant === "dark" && "text-background/70"
             )}
           >

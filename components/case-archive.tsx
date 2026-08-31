@@ -31,7 +31,7 @@ type CaseArchiveProps = {
  * Cases archive.
  *
  * Same design language as the deep-dive templates (the `--edge` column,
- * `font-light` display type, oversized tabular metrics, tinted surfaces), with
+ * `font-normal` display type, oversized tabular metrics, tinted surfaces), with
  * one deliberate difference: this page opens on the deep brand surface rather
  * than a tint. Customer results are the heaviest claim on the site, so the
  * page is allowed to carry the most visual weight.
@@ -72,7 +72,7 @@ export function CaseArchive({
       >
         <div className="px-[var(--edge)]">
           {backHref && backLabel && (
-            <nav className="flex items-center gap-2 text-sm text-white/50">
+            <nav className="flex items-center gap-2 text-sm text-white/65">
               <Link
                 href={backHref}
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
@@ -81,19 +81,19 @@ export function CaseArchive({
                 {backLabel}
               </Link>
               <span aria-hidden>/</span>
-              <span className="text-white/80">{eyebrow}</span>
+              <span className="text-white/88">{eyebrow}</span>
             </nav>
           )}
 
           <div className="mt-10 max-w-4xl lg:mt-14">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/50">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
               {eyebrow}
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-normal leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               {title}
             </h1>
             {subtitle && (
-              <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-white/70 lg:text-xl">
+              <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-white/82 lg:text-xl">
                 {subtitle}
               </p>
             )}
@@ -103,20 +103,20 @@ export function CaseArchive({
             <dl className="mt-12 grid max-w-2xl grid-cols-1 border-t border-white/[0.14] sm:grid-cols-2 lg:mt-16">
               {storiesLabel && (
                 <div className="border-b border-white/[0.14] py-7 sm:pr-8 lg:pr-12">
-                  <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums lg:text-5xl">
+                  <dt className="text-4xl font-light leading-none tracking-tight tabular-nums lg:text-5xl">
                     {cases.length}
                   </dt>
-                  <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-white/60">
+                  <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-white/72">
                     {storiesLabel}
                   </dd>
                 </div>
               )}
               {measuredLabel && (
                 <div className="border-b border-white/[0.14] py-7 sm:border-l sm:border-white/[0.14] sm:pl-8 lg:pl-12">
-                  <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums lg:text-5xl">
+                  <dt className="text-4xl font-light leading-none tracking-tight tabular-nums lg:text-5xl">
                     {measured}
                   </dt>
-                  <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-white/60">
+                  <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-white/72">
                     {measuredLabel}
                   </dd>
                 </div>
@@ -131,7 +131,7 @@ export function CaseArchive({
       {named.length > 0 && (
         <section className="border-b border-black/[0.08] px-[var(--edge)] py-10 lg:py-12">
           {customersLabel && (
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">
               {customersLabel}
             </p>
           )}
@@ -153,10 +153,10 @@ export function CaseArchive({
             className="rounded-[1.75rem] p-10 lg:p-14"
             style={{ backgroundColor: theme.tint }}
           >
-            <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+            <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
               {emptyTitle}
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/60">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/72">
               {emptyBody}
             </p>
           </div>
@@ -178,41 +178,41 @@ export function CaseArchive({
                       customer={featured.customer}
                       logo={featured.logo}
                     />
-                    <span className="text-sm tabular-nums text-foreground/40">
+                    <span className="text-sm tabular-nums text-foreground/60">
                       {formatPostYear(featured.date)}
                     </span>
                   </div>
 
                   {featured.metric ? (
                     <>
-                      <p className="mt-8 text-6xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-7xl">
+                      <p className="mt-8 text-6xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-7xl">
                         {featured.metric}
                       </p>
                       {featured.metricLabel && (
-                        <p className="mt-4 text-base text-foreground/55">
+                        <p className="mt-4 text-base text-foreground/70">
                           {featured.metricLabel}
                         </p>
                       )}
                     </>
                   ) : (
                     featured.metricLabel && (
-                      <p className="mt-8 text-3xl font-light leading-tight tracking-tight text-foreground lg:text-4xl">
+                      <p className="mt-8 text-3xl font-normal leading-tight tracking-tight text-foreground lg:text-4xl">
                         {featured.metricLabel}
                       </p>
                     )
                   )}
 
-                  <h2 className="mt-8 max-w-md text-xl font-light leading-snug tracking-tight text-foreground/80 lg:text-2xl">
+                  <h2 className="mt-8 max-w-md text-xl font-normal leading-snug tracking-tight text-foreground/88 lg:text-2xl">
                     {featured.outcome ?? featured.title}
                   </h2>
 
                   {featured.quote && (
-                    <p className="mt-8 border-l border-black/15 pl-5 font-serif text-lg italic leading-relaxed text-foreground/60">
+                    <p className="mt-8 border-l border-black/15 pl-5 font-serif text-lg italic leading-relaxed text-foreground/72">
                       {featured.quote}
                     </p>
                   )}
 
-                  <span className="mt-10 inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors group-hover:text-foreground">
+                  <span className="mt-10 inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors group-hover:text-foreground">
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                     </span>
@@ -244,7 +244,7 @@ export function CaseArchive({
           {rest.length > 0 && (
             <section className="px-[var(--edge)] pb-20 lg:pb-28">
               {moreLabel && (
-                <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+                <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
                   {moreLabel}
                 </h2>
               )}
@@ -297,7 +297,7 @@ function CustomerMark({
 
   return (
     <span
-      className={`text-sm font-medium uppercase tracking-[0.12em] text-foreground/55 ${className}`}
+      className={`text-sm font-medium uppercase tracking-[0.12em] text-foreground/70 ${className}`}
     >
       {customer}
     </span>
@@ -324,7 +324,7 @@ function CaseCard({
       <div>
         <div className="flex h-7 items-center justify-between gap-4">
           <CustomerMark customer={post.customer} logo={post.logo} />
-          <span className="shrink-0 text-sm tabular-nums text-foreground/35">
+          <span className="shrink-0 text-sm tabular-nums text-foreground/50">
             {formatPostYear(post.date)}
           </span>
         </div>
@@ -332,30 +332,30 @@ function CaseCard({
         <div className="mt-8">
           {post.metric ? (
             <>
-              <p className="text-5xl font-extralight leading-none tracking-tight tabular-nums text-foreground">
+              <p className="text-5xl font-light leading-none tracking-tight tabular-nums text-foreground">
                 {post.metric}
               </p>
               {post.metricLabel && (
-                <p className="mt-3 text-sm leading-relaxed text-foreground/55">
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70">
                   {post.metricLabel}
                 </p>
               )}
             </>
           ) : (
             post.metricLabel && (
-              <p className="text-xl font-light leading-snug tracking-tight text-foreground lg:text-2xl">
+              <p className="text-xl font-normal leading-snug tracking-tight text-foreground lg:text-2xl">
                 {post.metricLabel}
               </p>
             )
           )}
         </div>
 
-        <p className="mt-6 line-clamp-3 text-sm leading-relaxed text-foreground/60">
+        <p className="mt-6 line-clamp-3 text-sm leading-relaxed text-foreground/72">
           {post.outcome ?? post.title}
         </p>
       </div>
 
-      <span className="mt-10 inline-flex items-center gap-3 text-sm font-medium text-foreground/65 transition-colors group-hover:text-foreground">
+      <span className="mt-10 inline-flex items-center gap-3 text-sm font-medium text-foreground/78 transition-colors group-hover:text-foreground">
         <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
         </span>

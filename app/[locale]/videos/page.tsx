@@ -169,7 +169,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * Videos page.
  *
  * Same design language as the deep-dive templates: the `--edge` column,
- * `font-light` display type, arrow-in-circle affordances, and one full-bleed
+ * `font-normal` display type, arrow-in-circle affordances, and one full-bleed
  * deep band as the closing rhythm break.
  *
  * The carousel keeps its own full-bleed track (cards bleed off both screen
@@ -196,27 +196,27 @@ export default async function VideosPage({ params }: Props) {
         />
 
         <div className="px-[var(--edge)]">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t.headline}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.body}
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link
               href="#stories"
-              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </span>
               {t.watchLabel}
             </Link>
-            <p className="text-sm tabular-nums text-foreground/50">
+            <p className="text-sm tabular-nums text-foreground/65">
               {t.countLabel(t.videos.length)}
             </p>
           </div>
@@ -227,10 +227,10 @@ export default async function VideosPage({ params }: Props) {
       <section id="stories" className="scroll-mt-24 pb-20 lg:pb-28">
         <div className="mb-10 px-[var(--edge)] lg:mb-14">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
               {t.carouselTitle}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-foreground/60">
+            <p className="mt-4 text-base leading-relaxed text-foreground/72">
               {t.carouselBody}
             </p>
           </div>
@@ -246,10 +246,10 @@ export default async function VideosPage({ params }: Props) {
       >
         <div className="px-[var(--edge)]">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
               {t.moreTitle}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
               {t.moreBody}
             </p>
           </div>
@@ -264,10 +264,10 @@ export default async function VideosPage({ params }: Props) {
                 } ${i < t.moreLinks.length - 1 ? "sm:pr-8 lg:pr-10" : ""}`}
               >
                 <div>
-                  <h3 className="text-xl font-light tracking-tight lg:text-2xl">
+                  <h3 className="text-xl font-normal tracking-tight lg:text-2xl">
                     {link.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/60">
+                  <p className="mt-3 text-sm leading-relaxed text-white/72">
                     {link.description}
                   </p>
                 </div>

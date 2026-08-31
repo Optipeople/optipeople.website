@@ -112,7 +112,7 @@ export async function generateMetadata({ params }: PageProps) {
  * People.
  *
  * Same design language as the deep-dive templates: the `--edge` column,
- * `font-light` display type, oversized tabular figures on a hairline strip,
+ * `font-normal` display type, oversized tabular figures on a hairline strip,
  * and tinted surfaces rather than bare photos on white.
  *
  * Each person sits on their own surface from the brand rotation. On a team of
@@ -140,30 +140,30 @@ export default async function PeoplePage({ params }: PageProps) {
         />
 
         <div className="px-[var(--edge)]">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.intro}
           </p>
 
           <dl className="mt-12 grid max-w-2xl grid-cols-1 border-y border-black/[0.08] sm:grid-cols-2 lg:mt-14">
             <div className="py-7 sm:pr-8 lg:pr-12">
-              <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                 {employees.length}
               </dt>
-              <dd className="mt-3 max-w-[24ch] text-sm leading-relaxed text-foreground/55">
+              <dd className="mt-3 max-w-[24ch] text-sm leading-relaxed text-foreground/70">
                 {t.peopleLabel}
               </dd>
             </div>
             <div className="border-t border-black/[0.08] py-7 sm:border-l sm:border-t-0 sm:pl-8 lg:pl-12">
-              <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                 {teams}
               </dt>
-              <dd className="mt-3 max-w-[24ch] text-sm leading-relaxed text-foreground/55">
+              <dd className="mt-3 max-w-[24ch] text-sm leading-relaxed text-foreground/70">
                 {t.teamsLabel}
               </dd>
             </div>
@@ -174,10 +174,10 @@ export default async function PeoplePage({ params }: PageProps) {
       {/* The claim about how we work, on the asymmetric two-column. */}
       <section className="px-[var(--edge)] py-16 lg:py-24">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
             {t.secondaryTitle}
           </h2>
-          <p className="text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.secondary}
           </p>
         </div>
@@ -186,10 +186,10 @@ export default async function PeoplePage({ params }: PageProps) {
       {/* The team itself. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+          <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
             {t.teamTitle}
           </h2>
-          <p className="max-w-md text-sm leading-relaxed text-foreground/55">
+          <p className="max-w-md text-sm leading-relaxed text-foreground/70">
             {t.contactNote}
           </p>
         </div>
@@ -212,13 +212,13 @@ export default async function PeoplePage({ params }: PageProps) {
               </div>
 
               <div className="mt-6 flex-1">
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">
                   {person.team}
                 </p>
-                <h3 className="mt-3 text-xl font-light tracking-tight text-foreground">
+                <h3 className="mt-3 text-xl font-normal tracking-tight text-foreground">
                   {person.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/60">
+                <p className="mt-2 text-sm leading-relaxed text-foreground/72">
                   {person.role}
                 </p>
 
@@ -226,7 +226,7 @@ export default async function PeoplePage({ params }: PageProps) {
                   {person.expertise.map((skill) => (
                     <li
                       key={skill}
-                      className="rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/55"
+                      className="rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/70"
                     >
                       {skill}
                     </li>
@@ -236,7 +236,7 @@ export default async function PeoplePage({ params }: PageProps) {
 
               <a
                 href={`mailto:${person.email}`}
-                className="group mt-6 inline-flex items-center gap-3 text-sm text-foreground/65 transition-colors hover:text-foreground"
+                className="group mt-6 inline-flex items-center gap-3 text-sm text-foreground/78 transition-colors hover:text-foreground"
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -250,7 +250,7 @@ export default async function PeoplePage({ params }: PageProps) {
 
       {/* Where to go next, on the hairline grid. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+        <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {t.closingTitle}
         </h2>
         <div className="mt-8 grid gap-px overflow-hidden rounded-[1.5rem] bg-black/[0.08] sm:grid-cols-2">
@@ -264,7 +264,7 @@ export default async function PeoplePage({ params }: PageProps) {
                 <h3 className="text-lg font-medium tracking-tight text-foreground">
                   {link.title}
                 </h3>
-                <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/60">
+                <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/72">
                   {link.description}
                 </p>
               </div>

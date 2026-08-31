@@ -11,7 +11,7 @@ import { getPageTheme } from "@/lib/page-theme"
  * Feature deep-dive template.
  *
  * Design language follows the homepage: the `--edge` column so every section
- * shares one left line, oversized `font-light` headings, oversized tabular
+ * shares one left line, oversized `font-normal` headings, oversized tabular
  * metrics, arrow-in-circle affordances, and large tinted surfaces instead of
  * bordered cards floating on white. Each slug carries its own colour pair
  * (see lib/page-theme.ts) so the eight feature pages stay distinguishable.
@@ -44,7 +44,7 @@ export function FeaturePageTemplate({
         />
 
         <div className="px-[var(--edge)]">
-          <nav className="flex items-center gap-2 text-sm text-foreground/50">
+          <nav className="flex items-center gap-2 text-sm text-foreground/65">
             <Link
               href={page.parentHref}
               className="transition-colors hover:text-foreground"
@@ -52,18 +52,18 @@ export function FeaturePageTemplate({
               {page.parentLabel}
             </Link>
             <span aria-hidden>/</span>
-            <span className="text-foreground/80">{page.eyebrow}</span>
+            <span className="text-foreground/88">{page.eyebrow}</span>
           </nav>
 
           <div className="mt-10 grid items-center gap-12 lg:mt-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
             <div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/50">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                 {page.eyebrow}
               </p>
-              <h1 className="mt-5 text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                 {page.heroTitle}
               </h1>
-              <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+              <p className="mt-6 max-w-xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
                 {page.heroBody}
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -72,7 +72,7 @@ export function FeaturePageTemplate({
                 </Button>
                 <Link
                   href="#capabilities"
-                  className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+                  className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
                 >
                   <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -100,7 +100,7 @@ export function FeaturePageTemplate({
       {/* Proof strip, numbers move up out of the page tail so the visitor
           meets the evidence while the claim is still on screen. */}
       <section className="px-[var(--edge)]">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {t("typicalResults")}
         </p>
         <dl className="mt-6 grid grid-cols-1 border-y border-black/[0.08] sm:grid-cols-3">
@@ -113,10 +113,10 @@ export function FeaturePageTemplate({
                   : ""
               } ${i < page.metrics.length - 1 ? "sm:pr-8 lg:pr-12" : ""}`}
             >
-              <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                 {item.metric}
               </dt>
-              <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/55">
+              <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/70">
                 {item.label}
               </dd>
             </div>
@@ -128,10 +128,10 @@ export function FeaturePageTemplate({
           left line while the argument runs beside it. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {page.valueTitle}
           </h2>
-          <p className="text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {page.valueBody}
           </p>
         </div>
@@ -144,13 +144,13 @@ export function FeaturePageTemplate({
         className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-32"
       >
         <div className="max-w-2xl">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t("seeCapabilities")}
           </p>
-          <h2 className="mt-4 text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+          <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
             {page.capabilitiesTitle}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-foreground/60">
+          <p className="mt-4 text-base leading-relaxed text-foreground/72">
             {page.capabilitiesBody}
           </p>
         </div>
@@ -167,13 +167,13 @@ export function FeaturePageTemplate({
                   i % 2 === 1 ? "lg:order-2" : ""
                 }`}
               >
-                <span className="text-sm font-medium tabular-nums text-foreground/35">
+                <span className="text-sm font-medium tabular-nums text-foreground/50">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-5 text-2xl font-light leading-tight tracking-tight text-foreground lg:text-3xl">
+                <h3 className="mt-5 text-2xl font-normal leading-tight tracking-tight text-foreground lg:text-3xl">
                   {capability.title}
                 </h3>
-                <p className="mt-4 max-w-md text-base leading-relaxed text-foreground/65">
+                <p className="mt-4 max-w-md text-base leading-relaxed text-foreground/78">
                   {capability.description}
                 </p>
               </div>
@@ -202,13 +202,13 @@ export function FeaturePageTemplate({
         >
           <div className="px-[var(--edge)]">
             <div className="max-w-2xl">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/45">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
                 {t("productView")}
               </p>
-              <h2 className="mt-4 text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+              <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
                 {page.showcaseTitle}
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+              <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
                 {page.showcaseBody}
               </p>
             </div>
@@ -229,7 +229,7 @@ export function FeaturePageTemplate({
           The page closes here: the conversion CTA is rendered globally by
           app/[locale]/layout.tsx, so the template must not repeat it. */}
       <section className="px-[var(--edge)] py-20 lg:py-28">
-        <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+        <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {t("relatedFeatures")}
         </h2>
         <div className="mt-10 grid gap-px overflow-hidden rounded-2xl bg-black/[0.08] sm:grid-cols-3">
@@ -243,7 +243,7 @@ export function FeaturePageTemplate({
                 <h3 className="text-lg font-medium leading-snug tracking-tight text-foreground">
                   {feature.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+                <p className="mt-3 text-sm leading-relaxed text-foreground/72">
                   {feature.description}
                 </p>
               </div>

@@ -2,6 +2,8 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 
+import { defaultLocale, locales, type Locale } from "@/i18n/routing"
+
 export type BlogPost = {
   slug: string
   title: string
@@ -11,6 +13,8 @@ export type BlogPost = {
   category: string
   image?: string
   summary: string
+  /** Locale this post's prose is actually written in, after fallback. */
+  contentLocale: Locale
   /** Case-study fields (optional, used by the Cases showcase) */
   customer?: string
   metric?: string
@@ -22,6 +26,44 @@ export type BlogPost = {
 
 const postsDirectory = path.join(process.cwd(), "content/blog")
 const publicDirectory = path.join(process.cwd(), "public")
+
+/**
+ * Translations live beside the English source as `<slug>.<locale>.md`, so
+ * `dansk-traeemballage-….md` and `dansk-traeemballage-….da.md` are the same
+ * story in two languages under one slug and one URL path.
+ *
+ * English is the canonical set: it decides which slugs exist, and a locale
+ * with no file of its own falls back to it. A missing translation therefore
+ * shows the English article rather than a 404.
+ */
+const translationSuffixes = locales.map((locale) => `.${locale}.md`)
+
+function isTranslationFile(fileName: string) {
+  return translationSuffixes.some((suffix) => fileName.endsWith(suffix))
+}
+
+function sourceFileName(slug: string) {
+  return `${slug}.md`
+}
+
+function translationFileName(slug: string, locale: Locale) {
+  return `${slug}.${locale}.md`
+}
+
+type ParsedFile = {
+  data: Record<string, unknown>
+  content: string
+}
+
+function readMarkdown(fileName: string): ParsedFile | undefined {
+  try {
+    const fileContents = fs.readFileSync(path.join(postsDirectory, fileName), "utf8")
+    const { data, content } = matter(fileContents)
+    return { data: data as Record<string, unknown>, content }
+  } catch {
+    return undefined
+  }
+}
 
 export function resolveImagePath(image: unknown): string | undefined {
   if (typeof image !== "string" || image.trim() === "") {
@@ -92,84 +134,97 @@ function createSummary(content: string, fallbackTitle: string) {
   return plainText.slice(0, 157).trimEnd() + (plainText.length > 157 ? "..." : "")
 }
 
-export function getAllPosts(): BlogPost[] {
-  const fileNames = fs.readdirSync(postsDirectory)
-  const posts = fileNames
-    .filter((fileName) => fileName.endsWith(".md"))
-    .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, "")
-      const fullPath = path.join(postsDirectory, fileName)
-      const fileContents = fs.readFileSync(fullPath, "utf8")
-      const { data, content } = matter(fileContents)
+function asString(value: unknown) {
+  return typeof value === "string" ? value : ""
+}
 
-      return {
-        slug,
-        title: data.title,
-        content,
-        date: data.date,
-        author: data.author,
-        category: data.category,
-        image: resolveImagePath(data.image),
-        summary: createSummary(content, data.title),
-        ...caseFields(data),
-      } as BlogPost
-    })
+/**
+ * Build one post in the requested locale.
+ *
+ * Frontmatter merges with the translation winning, so a translated file only
+ * has to carry the fields it actually changes. `date` and `category` are the
+ * exception: they stay canonical, so ordering and category filtering can never
+ * drift because a translated file spelled a category differently.
+ */
+function parsePost(slug: string, locale: Locale): BlogPost | undefined {
+  const source = readMarkdown(sourceFileName(slug))
+  if (!source) {
+    return undefined
+  }
+
+  const translation =
+    locale === defaultLocale ? undefined : readMarkdown(translationFileName(slug, locale))
+  const data = { ...source.data, ...(translation?.data ?? {}) }
+  const content = (translation ?? source).content
+  const title = asString(data.title)
+
+  return {
+    slug,
+    title,
+    content,
+    date: asString(source.data.date),
+    category: asString(source.data.category),
+    author: asString(data.author),
+    image: resolveImagePath(data.image),
+    summary: createSummary(content, title),
+    contentLocale: translation ? locale : defaultLocale,
+    ...caseFields(data),
+  }
+}
+
+export function getAllPosts(locale: Locale = defaultLocale): BlogPost[] {
+  const posts = getAllSlugs()
+    .map((slug) => parsePost(slug, locale))
+    .filter((post): post is BlogPost => post !== undefined)
 
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`)
-    const fileContents = fs.readFileSync(fullPath, "utf8")
-    const { data, content } = matter(fileContents)
-
-    return {
-      slug,
-      title: data.title,
-      content,
-      date: data.date,
-      author: data.author,
-      category: data.category,
-      image: resolveImagePath(data.image),
-      summary: createSummary(content, data.title),
-      ...caseFields(data),
-    } as BlogPost
-  } catch {
-    return undefined
-  }
+export function getPostBySlug(
+  slug: string,
+  locale: Locale = defaultLocale,
+): BlogPost | undefined {
+  return parsePost(slug, locale)
 }
 
-export function getLatestPosts(count: number = 3): BlogPost[] {
-  return getAllPosts().slice(0, count)
+export function getLatestPosts(count: number = 3, locale: Locale = defaultLocale): BlogPost[] {
+  return getAllPosts(locale).slice(0, count)
 }
 
-export function getLatestPostsByCategory(category: string, count: number = 3): BlogPost[] {
-  return getPostsByCategory(category).slice(0, count)
+export function getLatestPostsByCategory(
+  category: string,
+  count: number = 3,
+  locale: Locale = defaultLocale,
+): BlogPost[] {
+  return getPostsByCategory(category, locale).slice(0, count)
 }
 
-export function getCategories(): string[] {
-  const posts = getAllPosts()
+export function getCategories(locale: Locale = defaultLocale): string[] {
+  const posts = getAllPosts(locale)
   return [...new Set(posts.map((post) => post.category))].sort()
 }
 
-export function getPostsByCategory(category: string): BlogPost[] {
-  return getAllPosts().filter((post) => post.category === category)
+export function getPostsByCategory(
+  category: string,
+  locale: Locale = defaultLocale,
+): BlogPost[] {
+  return getAllPosts(locale).filter((post) => post.category === category)
 }
 
 /**
  * Case studies ordered for the showcase: stories with a hard metric first
  * (newest within each group), so the strongest results lead the page.
  */
-export function getCaseStudies(): BlogPost[] {
-  return getPostsByCategory("Cases").sort(
+export function getCaseStudies(locale: Locale = defaultLocale): BlogPost[] {
+  return getPostsByCategory("Cases", locale).sort(
     (a, b) => (b.metric ? 1 : 0) - (a.metric ? 1 : 0),
   )
 }
 
+/** Canonical slugs, taken from the English sources rather than translations. */
 export function getAllSlugs(): string[] {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames
-    .filter((fileName) => fileName.endsWith(".md"))
+    .filter((fileName) => fileName.endsWith(".md") && !isTranslationFile(fileName))
     .map((fileName) => fileName.replace(/\.md$/, ""))
 }

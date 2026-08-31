@@ -62,13 +62,13 @@ const copy: Record<
     badge: "Nyhedsbrev",
     title: "Få praktiske ideer til bedre produktion",
     intro:
-      "Korte opdateringer om produktionsdata, OEE, vedligehold, AI og digital drift. Ingen støj, kun brugbare ideer fra gulvet.",
+      "Korte opdateringer om produktionsdata, OEE, vedligehold, AI og digital drift. Ingen støj, kun noget, I kan bruge.",
     perks: [
       "Månedligt, aldrig spam",
       "Skrevet fra fabriksgulvet",
       "Afmeld med ét klik",
     ],
-    logosTitle: "Brugt af industriledere",
+    logosTitle: "Virksomheder, der kører på OptiPeople",
     expectEyebrow: "Hvad du kan forvente",
     expectTitle: "Noter fra gulvet, der er pladsen i indbakken værd.",
     showcaseEyebrow: "Fra platformen",
@@ -76,9 +76,9 @@ const copy: Record<
     dashboardAlt: "OptiPeople produktionsdashboard",
     topics: [
       {
-        title: "Produktionsperformance",
+        title: "Produktion og OEE",
         description:
-          "Find tab, forbedr OEE, og hold forbedringsarbejdet forankret i rigtige produktionsdata.",
+          "Find tabene, forbedr OEE, og hold forbedringerne fast på rigtige tal fra produktionen.",
       },
       {
         title: "Forbundne fabrikker",
@@ -88,7 +88,7 @@ const copy: Record<
       {
         title: "Vedligehold & oppetid",
         description:
-          "Planlagt vedligehold, tilstande og de små vaner, der stille beskytter oppetiden.",
+          "Planlagt vedligehold, maskinens tilstand og de små vaner, der holder oppetiden oppe.",
       },
     ],
   },
@@ -154,7 +154,7 @@ export default async function NewsletterPage({
             <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
               {t.badge}
             </p>
-            <h1 className="mt-5 text-balance text-4xl font-light leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-balance text-4xl font-normal leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
               {t.title}
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
@@ -164,7 +164,7 @@ export default async function NewsletterPage({
               {t.perks.map((perk) => (
                 <li
                   key={perk}
-                  className="flex items-center gap-3 text-sm text-foreground/80"
+                  className="flex items-center gap-3 text-sm text-foreground/88"
                 >
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--green-light1)] text-[var(--green-dark3)]">
                     <Check
@@ -198,7 +198,7 @@ export default async function NewsletterPage({
         <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
           {t.expectEyebrow}
         </p>
-        <h2 className="mt-3 max-w-2xl text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+        <h2 className="mt-3 max-w-2xl text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
           {t.expectTitle}
         </h2>
 
@@ -231,7 +231,7 @@ export default async function NewsletterPage({
         <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
           {t.showcaseEyebrow}
         </p>
-        <h2 className="mt-3 max-w-2xl text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+        <h2 className="mt-3 max-w-2xl text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
           {t.showcaseTitle}
         </h2>
         <div className="mt-10 lg:mt-12">

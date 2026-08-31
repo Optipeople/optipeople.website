@@ -68,7 +68,7 @@ Left-aligned. Text-only. No image, no visual, confidence through restraint.
     <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
       About
     </p>
-    <h1 className="text-4xl sm:text-5xl font-light text-foreground tracking-tight leading-tight">
+    <h1 className="text-4xl sm:text-5xl font-normal text-foreground tracking-tight leading-tight">
       We make industrial operations work
     </h1>
     <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
@@ -82,7 +82,7 @@ Left-aligned. Text-only. No image, no visual, confidence through restraint.
 **Guidelines:**
 - Left-aligned (not centered), editorial feel, different from landing pages
 - Eyebrow: `uppercase tracking-wide text-muted-foreground`, simple page identifier
-- Title: `text-4xl sm:text-5xl font-light tracking-tight`, standard heading scale
+- Title: `text-4xl sm:text-5xl font-normal tracking-tight`, standard heading scale
 - Description: 1–2 sentences, `text-lg text-muted-foreground`, `max-w-3xl` for comfortable line length
 - No buttons in the hero, this isn't a conversion section
 
@@ -95,7 +95,7 @@ Explain the company's area of expertise. Can use centered text or a two-column l
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
   <div className="mx-auto max-w-3xl text-center">
-    <h2 className="text-3xl lg:text-4xl font-light tracking-tight mb-8">
+    <h2 className="text-3xl lg:text-4xl font-normal tracking-tight mb-8">
       Built for the space between shopfloor and ERP
     </h2>
     <p className="text-lg text-muted-foreground leading-relaxed">
@@ -111,7 +111,7 @@ Explain the company's area of expertise. Can use centered text or a two-column l
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-5xl grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
     <div>
-      <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+      <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
         {headline}
       </h2>
       <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -134,7 +134,7 @@ Show the principles behind the work. Use a simple list or a minimal grid, no hea
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-4xl">
-    <h2 className="text-3xl lg:text-4xl font-light tracking-tight mb-16">
+    <h2 className="text-3xl lg:text-4xl font-normal tracking-tight mb-16">
       How we work
     </h2>
     <div className="space-y-12">
@@ -165,7 +165,7 @@ People with faces. Grid of team members.
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
   <div className="mx-auto max-w-5xl">
-    <h2 className="text-3xl lg:text-4xl font-light tracking-tight mb-16">
+    <h2 className="text-3xl lg:text-4xl font-normal tracking-tight mb-16">
       The team
     </h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
@@ -202,7 +202,7 @@ Hard numbers that prove credibility. Same pattern as the metrics row in the [mod
     <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 text-center">
       {stats.map(stat => (
         <div key={stat.label}>
-          <p className="text-5xl lg:text-6xl font-extralight text-primary tracking-tight">
+          <p className="text-5xl lg:text-6xl font-light text-primary tracking-tight">
             {stat.metric}
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
@@ -217,7 +217,7 @@ Hard numbers that prove credibility. Same pattern as the metrics row in the [mod
 
 **Guidelines:**
 - 3 metrics: years in business, customers served, installations running, whatever is real and impressive
-- Large numbers in `text-primary` with `font-extralight`
+- Large numbers in `text-primary` with `font-light`
 - No heading for this section, the numbers speak for themselves
 - Can be positioned before or after the team section depending on content flow
 
@@ -252,9 +252,9 @@ Track Record     → white
 
 - [ ] Hero is left-aligned, not centered
 - [ ] No CTA buttons in the hero
-- [ ] All headings use `font-light`
+- [ ] All headings use `font-normal`
 - [ ] Team photos use portrait aspect ratio (`3/4`), `rounded-2xl`
-- [ ] Metrics use `text-primary font-extralight`
+- [ ] Metrics use `text-primary font-light`
 - [ ] No heavy decoration, no cards, no icons, no gradients
 - [ ] Section backgrounds alternate correctly
 - [ ] Content reads well at `max-w-4xl` line length

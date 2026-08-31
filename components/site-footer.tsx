@@ -206,10 +206,10 @@ export function SiteFooter() {
           {/* Bottom bar */}
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-400">
                 {currentYear} {contactInfo.companyName}. {t("rights")}
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-400">
                 {t("tagline")}
               </p>
             </div>

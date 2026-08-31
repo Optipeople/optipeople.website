@@ -85,7 +85,7 @@ const copy: Record<Locale, InsightsCopy> = {
     eyebrow: "Indsigter",
     title: "Ét sted til ideer og beviser",
     intro:
-      "Bloggen er til perspektiver og praktisk viden. Cases er til konkrete kundeeffekter og implementeringseksempler. Begge er skrevet af dem, der arbejder med det.",
+      "Bloggen er til viden, I kan bruge. Cases er til det, kunderne rent faktisk fik ud af det. Begge dele er skrevet af dem, der arbejder med det til daglig.",
     latestLabel: "Nyeste",
     latestTitle: "Nyeste fra begge",
     browseLabel: "Nyeste først",
@@ -94,14 +94,14 @@ const copy: Record<Locale, InsightsCopy> = {
       blog: {
         title: "Blogindlæg",
         description:
-          "Artikler, forklaringer og praktiske perspektiver om produktion, data og digital drift.",
+          "Artikler og forklaringer om produktion, data og digital drift.",
         countLabel: "artikler",
         cta: "Se blogindlæg",
       },
       cases: {
         title: "Cases",
         description:
-          "Kundehistorier og konkrete eksempler på hvordan fabrikker bruger Opticloud til output, oppetid og beslutninger.",
+          "Kundehistorier og konkrete eksempler på, hvordan fabrikker bruger Opticloud til at producere mere, holde maskinerne kørende og træffe beslutninger.",
         countLabel: "kundehistorier",
         cta: "Se cases",
       },
@@ -190,7 +190,7 @@ export default async function InsightsPage({
     },
   ]
 
-  const latest = getAllPosts().slice(0, 5)
+  const latest = getAllPosts(locale as Locale).slice(0, 5)
   const moreIcons = [PlayCircle, Mail]
 
   return (
@@ -198,13 +198,13 @@ export default async function InsightsPage({
       {/* Neutral hero: the panels below hold the colour. */}
       <section className="bg-[var(--gray-1)] pb-20 pt-12 lg:pb-28 lg:pt-16">
         <div className="px-[var(--edge)]">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.intro}
           </p>
         </div>
@@ -214,8 +214,8 @@ export default async function InsightsPage({
       <section className="px-[var(--edge)] py-16 lg:py-24">
         <div className="grid gap-5 lg:grid-cols-2 lg:gap-6">
           {panels.map((panel) => {
-            const posts = getPostsByCategory(panel.category)
-            const preview = getLatestPostsByCategory(panel.category, 2)
+            const posts = getPostsByCategory(panel.category, locale as Locale)
+            const preview = getLatestPostsByCategory(panel.category, 2, locale as Locale)
             const Icon = panel.icon
             const card = t.cards[panel.key]
 
@@ -226,28 +226,28 @@ export default async function InsightsPage({
                 style={{ backgroundColor: panel.theme.tint }}
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/70">
-                  <Icon className="h-5 w-5 text-foreground/70" />
+                  <Icon className="h-5 w-5 text-foreground/82" />
                 </span>
 
-                <h2 className="mt-7 text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+                <h2 className="mt-7 text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
                   {card.title}
                 </h2>
-                <p className="mt-4 max-w-md text-base leading-relaxed text-foreground/60">
+                <p className="mt-4 max-w-md text-base leading-relaxed text-foreground/72">
                   {card.description}
                 </p>
 
                 <p className="mt-8 flex items-baseline gap-3">
-                  <span className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+                  <span className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                     {posts.length}
                   </span>
-                  <span className="text-sm text-foreground/50">
+                  <span className="text-sm text-foreground/65">
                     {card.countLabel}
                   </span>
                 </p>
 
                 {preview.length > 0 && (
                   <div className="mt-8 overflow-hidden rounded-[1.25rem] bg-white/60">
-                    <p className="px-5 pt-5 text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
+                    <p className="px-5 pt-5 text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">
                       {t.latestLabel}
                     </p>
                     <div className="mt-3 divide-y divide-black/[0.06]">
@@ -268,16 +268,16 @@ export default async function InsightsPage({
                                 className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                               />
                             ) : (
-                              <span className="flex h-full items-center justify-center text-foreground/35">
+                              <span className="flex h-full items-center justify-center text-foreground/50">
                                 <Icon className="h-4 w-4" />
                               </span>
                             )}
                           </span>
                           <span className="min-w-0">
-                            <span className="block text-xs tabular-nums text-foreground/45">
+                            <span className="block text-xs tabular-nums text-foreground/65">
                               {formatPostDate(post.date, locale)}
                             </span>
-                            <span className="mt-1.5 line-clamp-2 block text-sm font-medium leading-snug text-foreground/80 transition-colors group-hover:text-foreground">
+                            <span className="mt-1.5 line-clamp-2 block text-sm font-medium leading-snug text-foreground/88 transition-colors group-hover:text-foreground">
                               {post.title}
                             </span>
                           </span>
@@ -289,7 +289,7 @@ export default async function InsightsPage({
 
                 <Link
                   href={panel.href}
-                  className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+                  className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
                 >
                   <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -306,10 +306,10 @@ export default async function InsightsPage({
       {latest.length > 0 && (
         <section className="px-[var(--edge)] pb-20 lg:pb-28">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
-            <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+            <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
               {t.latestTitle}
             </h2>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">
               {t.browseLabel}
             </p>
           </div>
@@ -322,18 +322,18 @@ export default async function InsightsPage({
                   className="group grid gap-x-8 gap-y-2 border-b border-black/[0.08] py-6 transition-colors hover:bg-[var(--gray-1)] sm:grid-cols-[9rem_minmax(0,1fr)_2.25rem] sm:items-center"
                 >
                   <span className="flex items-baseline gap-3">
-                    <span className="text-sm tabular-nums text-foreground/45">
+                    <span className="text-sm tabular-nums text-foreground/65">
                       {formatPostDate(post.date, locale)}
                     </span>
-                    <span className="shrink-0 rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/50">
+                    <span className="shrink-0 rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/65">
                       {t.typeLabels[post.category] ?? post.category}
                     </span>
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-lg font-light leading-snug tracking-tight text-foreground lg:text-xl">
+                    <span className="block text-lg font-normal leading-snug tracking-tight text-foreground lg:text-xl">
                       {post.title}
                     </span>
-                    <span className="mt-1.5 line-clamp-1 block text-sm leading-relaxed text-foreground/50">
+                    <span className="mt-1.5 line-clamp-1 block text-sm leading-relaxed text-foreground/65">
                       {post.outcome ?? post.summary}
                     </span>
                   </span>
@@ -349,7 +349,7 @@ export default async function InsightsPage({
 
       {/* Adjacent formats, on the hairline grid rather than as loose links. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+        <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {t.moreTitle}
         </h2>
         <div className="mt-8 grid gap-px overflow-hidden rounded-[1.5rem] bg-black/[0.08] sm:grid-cols-2">
@@ -363,12 +363,12 @@ export default async function InsightsPage({
               >
                 <div>
                   <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--gray-1)]">
-                    <Icon className="h-5 w-5 text-foreground/60" />
+                    <Icon className="h-5 w-5 text-foreground/72" />
                   </span>
                   <h3 className="mt-6 text-lg font-medium tracking-tight text-foreground">
                     {item.title}
                   </h3>
-                  <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/60">
+                  <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/72">
                     {item.description}
                   </p>
                 </div>

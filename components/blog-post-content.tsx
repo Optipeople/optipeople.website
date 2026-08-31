@@ -45,7 +45,7 @@ export function TableOfContents({
 
   return (
     <nav className="sticky top-28">
-      <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+      <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
         {label}
       </h2>
       <ul className="mt-5 space-y-3 border-l border-black/[0.08] pl-5">
@@ -53,7 +53,7 @@ export function TableOfContents({
           <li key={heading.slug}>
             <a
               href={`#${heading.slug}`}
-              className="block text-sm leading-snug text-foreground/55 transition-colors duration-200 hover:text-foreground"
+              className="block text-sm leading-snug text-foreground/70 transition-colors duration-200 hover:text-foreground"
             >
               {heading.text}
             </a>

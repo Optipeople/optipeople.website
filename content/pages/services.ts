@@ -118,63 +118,63 @@ const services: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Smart Operations services | OptiPeople",
         metaDescription:
-          "Forbedr shopfloor-synlighed med live overvågning, OEE, stopårsager og automatiseret rapportering.",
+          "Få styr på, hvad der sker på gulvet: overvågning i realtid, OEE, stopårsager og rapporter, der laver sig selv.",
         eyebrow: "Smart Operations",
         heroTitle: "Se fabrikken i realtid",
         heroBody:
-          "Forbind maskiner, opsaml produktionsdata automatisk, og giv teamet synlighed til at træffe bedre beslutninger hurtigere.",
+          "Vi kobler maskinerne på, samler produktionsdata automatisk og giver teamet det overblik, der skal til for at træffe bedre beslutninger hurtigere.",
         primaryLabel: "Book en demo",
-        introTitle: "Drift bliver bedre, når fakta er synlige",
+        introTitle: "Driften bliver bedre, når man kan se, hvad der sker",
         introBody:
-          "Vi hjælper produktionsteams fra strategi til implementering: datakilder, dashboards, rapportering og nye arbejdsgange.",
-        capabilitiesTitle: "Det vi leverer",
+          "Vi følger produktionsteams hele vejen: hvor data kommer fra, hvad der skal stå på skærmene, hvilke rapporter der skal ud, og hvordan hverdagen ser ud bagefter.",
+        capabilitiesTitle: "Det laver vi",
         features: [
           {
             icon: Activity,
-            title: "Realtidsovervågning",
+            title: "Overvågning i realtid",
             description:
-              "Live status på maskiner, tællere og performance på tværs af produktionen.",
+              "Se status på maskinerne, tællerne og hvordan det går, på tværs af hele produktionen.",
           },
           {
             icon: Gauge,
-            title: "OEE-sporing",
+            title: "OEE-opfølgning",
             description:
-              "Automatisk beregning af availability, performance og quality med drill-down.",
+              "Tilgængelighed, ydelse og kvalitet bliver regnet ud automatisk, og I kan klikke jer ned i tallene.",
           },
           {
             icon: Radio,
-            title: "Maskinforbindelse",
+            title: "Maskinerne koblet på",
             description:
-              "Kobl nyt og gammelt udstyr på uden at skifte hele maskinparken ud.",
+              "Vi kobler nyt og gammelt udstyr på, uden at I skal skifte maskinparken ud.",
           },
         ],
         visualTitle: "Fra signal til beslutning",
         visualBody:
-          "Dashboard, alarmer og rapportering samles i den arbejdsgang, der passer til jeres fabrik.",
+          "Dashboards, alarmer og rapporter bliver sat op, så de passer til den måde, jeres fabrik arbejder på.",
         visualImage: "/images/dashboard2.png",
         visualAlt: "Smart operations dashboard",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "15-25%", label: "OEE-forbedring første år" },
+          { metric: "15-25%", label: "Bedre OEE det første år" },
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
-          { metric: "2 timer", label: "Sparet dagligt på rapportering" },
+          { metric: "2 timer", label: "Sparet på rapportering hver dag" },
         ],
         stepsTitle: "Sådan arbejder vi",
         steps: [
           {
             title: "Kortlæg",
             description:
-              "Vi finder de vigtigste tab, datakilder og beslutninger i hverdagen.",
+              "Vi finder de største tab, de data, der allerede findes, og de beslutninger, der bliver truffet i hverdagen.",
           },
           {
-            title: "Implementér",
+            title: "Sæt op",
             description:
-              "Maskiner, dashboards og rapporter sættes op tæt på driften.",
+              "Maskiner, dashboards og rapporter bliver sat op tæt på driften.",
           },
           {
-            title: "Forankr",
+            title: "Få det ind i hverdagen",
             description:
-              "Vi hjælper teamet med at bruge data i tavlemøder, opfølgning og forbedringer.",
+              "Vi hjælper teamet med at bruge tallene på tavlemødet, i opfølgningen og i forbedringerne.",
           },
         ],
       },
@@ -266,61 +266,61 @@ const services: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Automation services | OptiPeople",
         metaDescription:
-          "Design og integrér PLC, HMI, SCADA og maskinstyring til stabil industriel automation.",
+          "Vi designer og kobler PLC, HMI, SCADA og maskinstyring sammen, så automationen holder i drift.",
         eyebrow: "Automation",
         heroTitle: "Automation og styring bygget til produktion",
         heroBody:
-          "Vi designer, programmerer og idriftsætter automationsløsninger fra PLC-logik til komplette produktionslinjer.",
+          "Vi tegner, programmerer og sætter i drift, fra logikken i en PLC til en hel produktionslinje.",
         primaryLabel: "Tal om projektet",
-        introTitle: "Maskiner skal arbejde for jer",
+        introTitle: "Maskinerne skal arbejde for jer",
         introBody:
-          "Dårlig styring, ustabile signaler og isolerede systemer koster oppetid og kvalitet. Vi bygger automation, der holder i drift.",
-        capabilitiesTitle: "Automationsengineering fra ende til anden",
+          "Dårlig styring, ustabile signaler og systemer, der ikke taler sammen, koster oppetid og kvalitet. Vi bygger automation, der holder, når den først er sat i drift.",
+        capabilitiesTitle: "Automation hele vejen igennem",
         features: [
           {
             icon: Cpu,
             title: "PLC-programmering",
             description:
-              "Udvikling og retrofit til Siemens, Allen-Bradley, Beckhoff og flere platforme.",
+              "Nyt og ombygning på Siemens, Allen-Bradley, Beckhoff og flere.",
           },
           {
             icon: Monitor,
             title: "HMI og SCADA",
             description:
-              "Operatørflader og overvågning der giver kontrol og overblik i realtid.",
+              "Skærme til operatøren og overvågning, der giver styr på det hele, mens det kører.",
           },
           {
             icon: Cable,
             title: "El-design og tavler",
             description:
-              "El-diagrammer, tavledesign, dokumentation og byg efter relevante standarder.",
+              "Diagrammer, tavler, dokumentation og byg efter de standarder, der gælder.",
           },
         ],
-        visualTitle: "Fra koncept til idriftsat system",
+        visualTitle: "Fra idé til system i drift",
         visualBody:
-          "Vi håndterer el-design, PLC, HMI, test, installation og idriftsættelse.",
+          "Vi tager el-design, PLC, HMI, test, installation og opstart.",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "30%", label: "Hurtigere cyklustider efter upgrade" },
-          { metric: "99,5%", label: "Oppetid på idriftsatte systemer" },
-          { metric: "0", label: "Unødige stop under retrofit" },
+          { metric: "30%", label: "Hurtigere cyklustider efter opgradering" },
+          { metric: "99,5%", label: "Oppetid på de systemer, vi sætter i drift" },
+          { metric: "0", label: "Unødvendige stop under ombygningen" },
         ],
         stepsTitle: "Sådan arbejder vi",
         steps: [
           {
-            title: "Scope",
+            title: "Afklar",
             description:
-              "Vi afklarer krav, proces og sikkerhed, før løsningen designes.",
+              "Vi bliver enige om krav, proces og sikkerhed, før der bliver tegnet noget.",
           },
           {
             title: "Byg",
             description:
-              "PLC, HMI, el-design og FAT samles i et dokumenteret forløb.",
+              "PLC, HMI, el-design og test samles i ét forløb, der er skrevet ned undervejs.",
           },
           {
-            title: "Idriftsæt",
+            title: "Sæt i drift",
             description:
-              "Installation, test og træning gennemføres, indtil systemet kører stabilt.",
+              "Vi installerer, tester og lærer folk op, indtil det kører stabilt.",
           },
         ],
       },
@@ -412,60 +412,60 @@ const services: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Business Intelligence services | OptiPeople",
         metaDescription:
-          "Power BI dashboards, datamodeller, KPI-design og automatiseret rapportering til produktion.",
+          "Power BI-dashboards, datamodeller, nøgletal og rapporter, der sender sig selv.",
         eyebrow: "Business Intelligence",
-        heroTitle: "Rapporter der faktisk driver beslutninger",
+        heroTitle: "Rapporter, der faktisk bliver brugt",
         heroBody:
-          "Få Power BI dashboards, datamodeller og automatiseringer der samler spredte data til klare indsigter.",
+          "Power BI-dashboards, datamodeller og automatik, der samler data fra alle hjørner til noget, man kan træffe beslutninger på.",
         primaryLabel: "Kontakt os",
-        introTitle: "Data findes overalt. Indsigt gør ikke.",
+        introTitle: "Data er der masser af. Svar er der ikke.",
         introBody:
-          "ERP, MES, CRM og regneark giver hver deres brik. Vi samler datalandskabet, så teamet kan handle på svar i stedet for at lede efter dem.",
-        capabilitiesTitle: "Det vi leverer",
+          "ERP, MES, CRM og regneark har hver deres brik. Vi samler dem, så teamet kan handle på svaret i stedet for at lede efter det.",
+        capabilitiesTitle: "Det laver vi",
         features: [
           {
             icon: BarChart3,
-            title: "Power BI dashboards",
+            title: "Power BI-dashboards",
             description:
-              "Rapporter fra ledelsesoverblik til operationelle drill-downs.",
+              "Rapporter fra ledelsens overblik til de tal, man kan klikke sig helt ned i.",
           },
           {
             icon: Database,
-            title: "Dataintegration",
+            title: "Data samlet ét sted",
             description:
-              "Samlet rapporteringslag på tværs af ERP, MES, CRM og andre kilder.",
+              "Ét sted at rapportere fra, på tværs af ERP, MES, CRM og de andre kilder.",
           },
           {
             icon: Workflow,
-            title: "Workflow automation",
+            title: "Automatik i stedet for håndarbejde",
             description:
-              "Automatisér dataloads, rapportudsendelse og gentagne processer.",
+              "Data bliver hentet, rapporter sendt, og de trin, der kommer igen, kører af sig selv.",
           },
         ],
-        visualTitle: "Fra rå data til ledelsesklare rapporter",
+        visualTitle: "Fra rå data til rapporter, ledelsen kan bruge",
         visualBody:
-          "Interaktive dashboards der opdateres automatisk og taler samme sprog som driften.",
+          "Dashboards, der opdaterer sig selv og bruger de samme ord som driften.",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "80%", label: "Mindre tid på manuel rapportering" },
-          { metric: "1 view", label: "Alle datakilder samlet" },
-          { metric: "Live", label: "Opdaterede indsigter" },
+          { metric: "80%", label: "Mindre tid på rapportering i hånden" },
+          { metric: "1 skærm", label: "Alle kilder samlet" },
+          { metric: "Live", label: "Tal, der opdaterer sig selv" },
         ],
         stepsTitle: "Sådan arbejder vi",
         steps: [
           {
             title: "Forstå",
-            description: "Vi kortlægger beslutninger, datakilder og KPI'er.",
+            description: "Vi finder ud af, hvilke beslutninger der skal træffes, hvor data ligger, og hvilke tal der betyder noget.",
           },
           {
             title: "Byg",
             description:
-              "Datamodeller, rapporter og automationsflows udvikles til jeres arbejdsgange.",
+              "Datamodeller, rapporter og automatik bygges til den måde, I arbejder på.",
           },
           {
             title: "Overdrag",
             description:
-              "Teamet får dokumentation, træning og mulighed for løbende support.",
+              "I får dokumentationen, oplæringen og hjælp bagefter, hvis I vil have det.",
           },
         ],
       },
@@ -559,63 +559,63 @@ const services: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "AI-agentløsninger | OptiPeople",
         metaDescription:
-          "AI-agenter og copilots der hjælper produktionsteams med data, beslutninger og automatiserede arbejdsgange.",
+          "AI-agenter og copiloter, der hjælper produktionsteams med data, beslutninger og de opgaver, der kommer igen.",
         eyebrow: "AI-agentløsninger",
-        heroTitle: "AI der arbejder med jeres drift",
+        heroTitle: "AI, der arbejder med i driften",
         heroBody:
-          "Byg agenter der forstår produktionsdata, finder mønstre og hjælper teamet fra spørgsmål til handling.",
+          "Vi bygger agenter, der kan læse jeres produktionsdata, finde mønstrene og hjælpe teamet fra spørgsmål til handling.",
         primaryLabel: "Tal om AI",
-        introTitle: "AI skal være tæt på arbejdsflowet",
+        introTitle: "AI skal sidde tæt på arbejdet",
         introBody:
-          "Værdien kommer ikke fra generiske svar, men fra AI der kan bruge jeres data, regler og systemer sikkert og sporbarhed.",
-        capabilitiesTitle: "Agenter bygget til produktionsdrift",
+          "Værdien ligger ikke i generelle svar. Den ligger i en AI, der må bruge jeres data, jeres regler og jeres systemer, sikkert og med spor tilbage til kilden.",
+        capabilitiesTitle: "Agenter bygget til produktion",
         features: [
           {
             icon: Bot,
-            title: "Datacopilots",
+            title: "Spørg dine data",
             description:
-              "Stil spørgsmål til OEE, stopårsager, energi og kvalitet i almindeligt sprog.",
+              "Stil spørgsmål om OEE, stopårsager, energi og kvalitet i almindeligt sprog.",
           },
           {
             icon: Search,
-            title: "Mønsterdetektion",
+            title: "Find mønstrene",
             description:
-              "Find afvigelser og sammenhænge på tværs af maskiner, skift og perioder.",
+              "Find det, der stikker ud, og de sammenhænge, der går på tværs af maskiner, skift og perioder.",
           },
           {
             icon: Workflow,
-            title: "Agent workflows",
+            title: "Agenter i arbejde",
             description:
-              "Lad agenter samle data, foreslå handlinger og forberede opfølgning.",
+              "Lad agenten samle tallene, foreslå næste skridt og gøre opfølgningen klar.",
           },
         ],
         visualTitle: "Agenter på tværs af jeres systemer",
         visualBody:
-          "Fra ERP og MES til email og regneark. AI kobles på data og processer med tydelige sikkerhedsrammer.",
+          "Fra ERP og MES til mail og regneark. AI bliver koblet på jeres data og processer, med klare rammer for, hvad den må.",
         visualImage: "/images/report1.png",
         visualAlt: "AI-analyse på produktionsrapport",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "10x", label: "Hurtigere fra spørgsmål til indsigt" },
-          { metric: "24/7", label: "Løbende mønsterdetektion" },
-          { metric: "100%", label: "Sporbare indsigter" },
+          { metric: "10x", label: "Hurtigere fra spørgsmål til svar" },
+          { metric: "24/7", label: "AI holder øje med mønstrene" },
+          { metric: "100%", label: "Svar, I kan spore tilbage" },
         ],
         stepsTitle: "Sådan arbejder vi",
         steps: [
           {
-            title: "Vælg use case",
+            title: "Vælg opgaven",
             description:
-              "Vi starter med konkrete beslutninger og gentagne opgaver.",
+              "Vi starter med konkrete beslutninger og de opgaver, der kommer igen.",
           },
           {
-            title: "Forbind data",
+            title: "Kobl data på",
             description:
-              "Agenten får adgang til de relevante systemer og datakilder.",
+              "Agenten får adgang til de systemer og data, den skal bruge.",
           },
           {
-            title: "Valider",
+            title: "Prøv af",
             description:
-              "Svar og handlinger testes med brugere, før agenten skaleres.",
+              "Svar og handlinger bliver testet af dem, der skal bruge dem, før vi ruller ud.",
           },
         ],
       },

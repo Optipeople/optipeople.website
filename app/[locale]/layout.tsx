@@ -91,7 +91,11 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
+      {/* No `antialiased` here on purpose. Forcing
+          -webkit-font-smoothing: antialiased thins every glyph on macOS, which
+          made the light display type look frail. Leaving it off lets the OS use
+          its normal smoothing so the same weights render with their real mass. */}
+      <body className="bg-background text-foreground min-h-screen flex flex-col">
         <NextIntlClientProvider>
           <SiteHeader />
           <main className="flex-1">{children}</main>

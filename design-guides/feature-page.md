@@ -92,7 +92,7 @@ The feature page hero uses a product-forward layout, the screenshot is the visua
 
 ```
 Eyebrow:  text-sm font-medium tracking-wide text-muted-foreground uppercase
-Title:    text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-tight
+Title:    text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-tight
 Subtitle: text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl
 ```
 
@@ -103,17 +103,17 @@ The hero title should name the feature clearly while leading with the benefit:
 ### Section Headings
 
 ```
-Primary:   text-3xl lg:text-4xl font-light tracking-tight
-Secondary: text-2xl font-light
+Primary:   text-3xl lg:text-4xl font-normal tracking-tight
+Secondary: text-2xl font-normal
 ```
 
-Always `font-light`. Never bold. Centered by default unless layout is asymmetric.
+Always `font-normal`. Never bold. Centered by default unless layout is asymmetric.
 
 ### Body Text
 
 ```
 Primary:   text-lg text-muted-foreground leading-relaxed
-Secondary: text-base text-foreground/70
+Secondary: text-base text-foreground/82
 Small:     text-sm text-muted-foreground
 ```
 
@@ -140,7 +140,7 @@ Product-forward layout. The feature name and benefit headline sit on the left; a
       <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
         {featureName}
       </p>
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light leading-tight">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-normal leading-tight">
         {benefitDrivenHeadline}
       </h1>
       <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed">
@@ -182,7 +182,7 @@ A focused text section that frames the problem and positions the feature as the 
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-3xl text-center">
-    <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+    <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
       {problemOrBenefitHeadline}
     </h2>
     <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -205,7 +205,7 @@ The core of the feature page. This uses the **alternating rows pattern**, image-
 <section id="capabilities" className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
   <div className="mx-auto max-w-5xl">
     <div className="text-center mb-16 lg:mb-20">
-      <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+      <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
         {sectionHeading}
       </h2>
       <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -221,7 +221,7 @@ The core of the feature page. This uses the **alternating rows pattern**, image-
           }`}
         >
           <div>
-            <h3 className="text-2xl lg:text-3xl font-light tracking-tight">
+            <h3 className="text-2xl lg:text-3xl font-normal tracking-tight">
               {capability.title}
             </h3>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
@@ -259,7 +259,7 @@ A full-width screenshot that shows the feature in context, the dashboard view, t
 <section className="py-20 lg:py-32 px-6 lg:px-8">
   <div className="mx-auto max-w-6xl">
     <div className="text-center mb-12 lg:mb-16">
-      <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+      <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
         {headline}
       </h2>
       <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -289,13 +289,13 @@ Hard numbers or a focused customer testimonial. Choose one pattern, not both (un
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-4xl">
-    <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+    <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
       {sectionHeading}
     </h2>
     <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 text-center">
       {metrics.map(item => (
         <div key={item.label}>
-          <p className="text-5xl lg:text-6xl font-extralight text-primary tracking-tight">
+          <p className="text-5xl lg:text-6xl font-light text-primary tracking-tight">
             {item.metric}
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
@@ -313,7 +313,7 @@ Hard numbers or a focused customer testimonial. Choose one pattern, not both (un
 ```tsx
 <section className="py-16 lg:py-24 px-6 lg:px-8">
   <div className="mx-auto max-w-3xl text-center">
-    <blockquote className="text-xl lg:text-2xl font-light leading-relaxed text-foreground/80">
+    <blockquote className="text-xl lg:text-2xl font-normal leading-relaxed text-foreground/88">
       "{quoteText}"
     </blockquote>
     <div className="mt-8">
@@ -325,7 +325,7 @@ Hard numbers or a focused customer testimonial. Choose one pattern, not both (un
 ```
 
 **Guidelines:**
-- Metrics: 3 is ideal, `text-5xl lg:text-6xl font-extralight` in `text-primary`
+- Metrics: 3 is ideal, `text-5xl lg:text-6xl font-light` in `text-primary`
 - Metrics should be specific to this feature, not generic platform numbers
 - Testimonial: one focused quote, not a wall of text
 - This section is optional. Only include it if you have real data or a real quote. Placeholder metrics undermine credibility.
@@ -337,7 +337,7 @@ Help the visitor explore further. Show 2–3 sibling features from the same doma
 ```tsx
 <section className="py-12 lg:py-16 px-6 lg:px-8 bg-muted/30">
   <div className="mx-auto max-w-5xl">
-    <h2 className="text-2xl lg:text-3xl font-light text-center mb-12">
+    <h2 className="text-2xl lg:text-3xl font-normal text-center mb-12">
       Related Features
     </h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -568,7 +568,7 @@ export default function FeatureNamePage() {
               <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
                 Feature Name
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-normal leading-tight">
                 Benefit-Driven Headline
               </h1>
               <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed">
@@ -599,7 +599,7 @@ export default function FeatureNamePage() {
       {/* Value Proposition (optional) */}
       <section className="py-16 lg:py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+          <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
             Problem or Benefit Headline
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -613,7 +613,7 @@ export default function FeatureNamePage() {
       <section id="capabilities" className="py-16 lg:py-24 px-6 lg:px-8 bg-muted/30">
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16 lg:mb-20">
-            <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+            <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
               How It Works
             </h2>
           </div>
@@ -626,7 +626,7 @@ export default function FeatureNamePage() {
                 }`}
               >
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-light tracking-tight">
+                  <h3 className="text-2xl lg:text-3xl font-normal tracking-tight">
                     {capability.title}
                   </h3>
                   <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
@@ -646,7 +646,7 @@ export default function FeatureNamePage() {
       <section className="py-20 lg:py-32 px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
+            <h2 className="text-3xl lg:text-4xl font-normal tracking-tight">
               Visual Section Headline
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -667,13 +667,13 @@ export default function FeatureNamePage() {
       {/* Results (optional) */}
       <section className="py-16 lg:py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl lg:text-4xl font-light text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-normal text-center mb-16">
             Typical Results
           </h2>
           <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 text-center">
             {metrics.map(item => (
               <div key={item.label}>
-                <p className="text-5xl lg:text-6xl font-extralight text-primary tracking-tight">
+                <p className="text-5xl lg:text-6xl font-light text-primary tracking-tight">
                   {item.metric}
                 </p>
                 <p className="mt-3 text-sm text-muted-foreground">
@@ -688,7 +688,7 @@ export default function FeatureNamePage() {
       {/* Related Features (optional, use white bg if this is the last section) */}
       <section className="py-12 lg:py-16 px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-2xl lg:text-3xl font-light text-center mb-12">
+          <h2 className="text-2xl lg:text-3xl font-normal text-center mb-12">
             Related Features
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -725,7 +725,7 @@ export default function FeatureNamePage() {
 - [ ] Breadcrumb links back to the correct parent module
 - [ ] Capabilities section has 3–4 items, each with a real screenshot
 - [ ] Alternating rows alternate correctly (image-left, image-right, image-left...)
-- [ ] All headings use `font-light`, nothing is bold
+- [ ] All headings use `font-normal`, nothing is bold
 - [ ] `max-w-4xl` for text, `max-w-5xl` for capability rows, `max-w-6xl` for hero + showcase
 - [ ] Images have `alt` text and use `rounded-2xl` + `overflow-hidden`
 - [ ] Section backgrounds alternate correctly (no two tinted sections adjacent)

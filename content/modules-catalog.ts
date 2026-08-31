@@ -37,7 +37,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Modular MES", da: "Modulært MES" },
     blurb: {
       en: "The cloud MES foundation every other module plugs into.",
-      da: "Det cloudbaserede MES-fundament, alle andre moduler bygger på.",
+      da: "Fundamentet i skyen, som alle de andre moduler bygger på.",
     },
   },
   {
@@ -46,7 +46,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "IoT", da: "IoT" },
     blurb: {
       en: "Connect new and legacy machines, sensors, and protocols.",
-      da: "Forbind nye og gamle maskiner, sensorer og protokoller.",
+      da: "Få nye og gamle maskiner, sensorer og protokoller koblet på.",
     },
   },
   {
@@ -55,7 +55,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "OEE", da: "OEE" },
     blurb: {
       en: "Live OEE, downtime, orders, and shift performance.",
-      da: "Live OEE, nedetid, ordrer og skiftperformance.",
+      da: "Live OEE, nedetid, ordrer og hvordan skiftene kører.",
     },
   },
   {
@@ -64,7 +64,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "AI agents", da: "AI-agenter" },
     blurb: {
       en: "Agents and copilots that work on your own production data.",
-      da: "Agenter og copilots, der arbejder på jeres egne produktionsdata.",
+      da: "Agenter og copiloter, der arbejder på jeres egne produktionsdata.",
     },
   },
   {
@@ -73,7 +73,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Maintenance", da: "Vedligehold" },
     blurb: {
       en: "Preventive planning and mobile task management.",
-      da: "Forebyggende planlægning og mobil opgavestyring.",
+      da: "Forebyggende planlægning og opgaverne på mobilen.",
     },
   },
   {
@@ -82,7 +82,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "EMS", da: "EMS" },
     blurb: {
       en: "Energy consumption connected to production output.",
-      da: "Energiforbrug koblet til produktionens output.",
+      da: "Energiforbruget holdt op mod det, I producerer.",
     },
   },
   {
@@ -100,7 +100,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Orders", da: "Ordrer" },
     blurb: {
       en: "Two-way sync between ERP planning and the floor.",
-      da: "Tovejssynk mellem ERP-planlægning og gulvet.",
+      da: "Ordrer begge veje mellem ERP og gulvet.",
     },
   },
   {
@@ -109,7 +109,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Planning", da: "Planlægning" },
     blurb: {
       en: "Sequence production against the capacity you actually have.",
-      da: "Planlæg produktionen efter den kapacitet I faktisk har.",
+      da: "Planlæg produktionen efter den kapacitet, I faktisk har.",
     },
   },
   {
@@ -127,7 +127,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Analysis", da: "Analyse" },
     blurb: {
       en: "Automated reports on performance, loss, and cost.",
-      da: "Automatiske rapporter om performance, tab og omkostninger.",
+      da: "Rapporter, der laver sig selv, om drift, tab og omkostninger.",
     },
   },
 ]

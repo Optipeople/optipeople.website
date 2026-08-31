@@ -11,7 +11,7 @@ import { addLocalePrefix, type Locale } from "@/lib/i18n"
  * Rendered by the English `/ai/[slug]` route and the Danish catch-all.
  *
  * Shares the design language of the feature and overview templates (see
- * components/templates/feature-page.tsx): the `--edge` column, `font-light`
+ * components/templates/feature-page.tsx): the `--edge` column, `font-normal`
  * display type, tinted surfaces, arrow-in-circle affordances. The hero mockup
  * keeps `cap.theme.bg`, the exact colour its card carries on the homepage
  * slider, so arriving here feels like the card opened up.
@@ -49,7 +49,7 @@ export function AiStackPage({
         />
 
         <div className="px-[var(--edge)]">
-          <nav className="flex items-center gap-2 text-sm text-foreground/50">
+          <nav className="flex items-center gap-2 text-sm text-foreground/65">
             <Link
               href={homeHref}
               className="transition-colors hover:text-foreground"
@@ -57,18 +57,18 @@ export function AiStackPage({
               {aiLabel}
             </Link>
             <span aria-hidden>/</span>
-            <span className="text-foreground/80">{c.eyebrow}</span>
+            <span className="text-foreground/88">{c.eyebrow}</span>
           </nav>
 
           <div className="mt-10 grid items-center gap-12 lg:mt-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
             <div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/50">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                 {c.eyebrow}
               </p>
-              <h1 className="mt-5 text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                 {c.heroTitle}
               </h1>
-              <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+              <p className="mt-6 max-w-xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
                 {c.heroBody}
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -80,7 +80,7 @@ export function AiStackPage({
                     href={c.secondaryCtaHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+                    className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
                   >
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -107,10 +107,10 @@ export function AiStackPage({
       {/* Value proposition, asymmetric two-column. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {c.valueTitle}
           </h2>
-          <p className="text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {c.valueBody}
           </p>
         </div>
@@ -118,7 +118,7 @@ export function AiStackPage({
 
       {/* Capabilities, numbered cells inside one tinted panel. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {c.capabilitiesTitle}
         </h2>
         <div
@@ -127,13 +127,13 @@ export function AiStackPage({
         >
           {c.capabilities.map((item, i) => (
             <div key={item.title} className="bg-background p-7 lg:p-9">
-              <span className="text-sm font-medium tabular-nums text-foreground/35">
+              <span className="text-sm font-medium tabular-nums text-foreground/50">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/78">
                 {item.description}
               </p>
             </div>
@@ -143,7 +143,7 @@ export function AiStackPage({
 
       {/* Use cases, tinted cards. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {c.useCasesTitle}
         </h2>
         <div className="mt-10 grid gap-4 sm:grid-cols-3 lg:mt-14 lg:gap-5">
@@ -156,7 +156,7 @@ export function AiStackPage({
               <h3 className="text-lg font-medium tracking-tight text-foreground">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/78">
                 {item.description}
               </p>
             </div>
@@ -173,10 +173,10 @@ export function AiStackPage({
           style={{ backgroundColor: theme.deep }}
         >
           <div className="max-w-xl">
-            <h2 className="text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
               {c.ctaTitle}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
               {c.ctaBody}
             </p>
           </div>
@@ -193,7 +193,7 @@ export function AiStackPage({
                 href={c.secondaryCtaHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 text-sm font-medium text-white/75 transition-colors hover:text-white"
+                className="group inline-flex items-center gap-3 text-sm font-medium text-white/85 transition-colors hover:text-white"
               >
                 <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/10 transition-colors group-hover:border-white/50 group-hover:bg-white/20">
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -207,7 +207,7 @@ export function AiStackPage({
 
       {/* Related capabilities, each row keeps its own colour. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+        <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {relatedLabel}
         </h2>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

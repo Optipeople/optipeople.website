@@ -225,7 +225,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
   da: {
     eyebrow: "Dataplatform",
     title: "Opticloud-platformens arkitektur",
-    lede: "Data forlader produktionen over krypterede forbindelser, bliver koblet til ordrer, skift, maskiner og operatører på vejen ind, og lander i en datacontainer, der er dedikeret til jeres virksomhed. Jeres team, jeres systemer og jeres AI-assistenter læser alle fra den samme registrering.",
+    lede: "Data forlader produktionen over krypterede forbindelser, bliver koblet til ordrer, skift, maskiner og operatører på vejen ind, og lander i en datacontainer, der kun er jeres. Jeres team, jeres systemer og jeres AI-assistenter læser alle det samme.",
     site: {
       label: "Produktionssted",
       nodes: [
@@ -247,7 +247,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
         {
           id: "sources",
           title: "Øvrige kilder",
-          body: "ERP, historians, filer og tredjepartssystemer",
+          body: "ERP, historik-databaser, filer og andre systemer",
         },
       ],
     },
@@ -279,7 +279,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
             {
               id: "processing",
               title: "Behandlingsmotorer",
-              body: "Realtidsbehandling af hændelser, telemetri og procesdata",
+              body: "Behandler stop, målinger og procesdata, mens de kommer ind",
             },
           ],
         },
@@ -366,10 +366,10 @@ const copy: Record<Locale, ArchitectureCopy> = {
 const HIGHLIGHT_FILL = "#163b40"
 
 const ZONE_LABEL =
-  "text-[0.68rem] font-medium uppercase tracking-[0.16em] text-foreground/45"
+  "text-[0.68rem] font-medium uppercase tracking-[0.16em] text-foreground/65"
 
 const STAGE_LABEL =
-  "text-[0.62rem] font-medium uppercase tracking-[0.16em] text-foreground/40"
+  "text-[0.62rem] font-medium uppercase tracking-[0.16em] text-foreground/60"
 
 function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
   const Icon = NODE_ICONS[node.id]
@@ -387,7 +387,7 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
       style={inverted ? { backgroundColor: HIGHLIGHT_FILL } : undefined}
     >
       <Icon
-        className={cn("h-5 w-5", inverted ? undefined : "text-foreground/40")}
+        className={cn("h-5 w-5", inverted ? undefined : "text-foreground/60")}
         style={inverted ? { color: "var(--green-system)" } : undefined}
         aria-hidden
       />
@@ -402,7 +402,7 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
       <p
         className={cn(
           "mt-1.5 text-xs leading-relaxed",
-          inverted ? "text-white/70" : "text-foreground/55"
+          inverted ? "text-white/82" : "text-foreground/70"
         )}
       >
         {node.body}
@@ -426,7 +426,7 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
 function Flow() {
   return (
     <div className="flex items-center justify-center py-1 xl:py-0" aria-hidden>
-      <ChevronRight className="h-5 w-5 rotate-90 text-foreground/25 xl:rotate-0" />
+      <ChevronRight className="h-5 w-5 rotate-90 text-foreground/35 xl:rotate-0" />
     </div>
   )
 }
@@ -453,17 +453,18 @@ export function PlatformArchitecture({ locale = "en" }: { locale?: Locale }) {
       id="architecture"
       className="scroll-mt-24 bg-[var(--gray-1)] py-20 lg:py-28"
     >
-      {/* Wider than the 1140px content column, like the flower above it: the
-          diagram needs the room, while the heading still reads as page copy. */}
-      <div className="mx-auto max-w-[1400px] px-6">
+      {/* On the shared content column: the heading, the diagram and the
+          assurance row all start on the same left line as the rest of the
+          page, rather than a wider canvas of their own. */}
+      <div className="px-[var(--edge)]">
         <div className="max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.eyebrow}
           </p>
-          <h2 className="mt-4 text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+          <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
             {t.title}
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-foreground/60 lg:text-lg">
+          <p className="mt-5 text-base leading-relaxed text-foreground/72 lg:text-lg">
             {t.lede}
           </p>
         </div>
@@ -474,10 +475,10 @@ export function PlatformArchitecture({ locale = "en" }: { locale?: Locale }) {
 
           <div className="flex flex-col rounded-[1.25rem] border border-black/[0.06] bg-white/70 p-4 xl:rounded-[1.5rem] xl:p-6">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-1">
-              <p className={cn(ZONE_LABEL, "text-foreground/60")}>
+              <p className={cn(ZONE_LABEL, "text-foreground/72")}>
                 {t.platform.label}
               </p>
-              <p className="text-[0.68rem] text-foreground/40">
+              <p className="text-[0.68rem] text-foreground/60">
                 {t.platform.host}
               </p>
             </div>
@@ -491,7 +492,7 @@ export function PlatformArchitecture({ locale = "en" }: { locale?: Locale }) {
                   <span className="h-px flex-1 bg-black/[0.09]" />
                   {i < stages.length - 1 ? (
                     <ChevronRight
-                      className="h-3.5 w-3.5 shrink-0 text-foreground/25"
+                      className="h-3.5 w-3.5 shrink-0 text-foreground/35"
                       aria-hidden
                     />
                   ) : null}
@@ -527,7 +528,7 @@ export function PlatformArchitecture({ locale = "en" }: { locale?: Locale }) {
                 <p className="text-sm font-medium tracking-tight text-foreground">
                   {item.title}
                 </p>
-                <p className="mt-1 text-xs leading-relaxed text-foreground/55">
+                <p className="mt-1 text-xs leading-relaxed text-foreground/70">
                   {item.body}
                 </p>
               </div>

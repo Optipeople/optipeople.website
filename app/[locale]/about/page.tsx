@@ -91,27 +91,27 @@ const copy: Record<
     eyebrow: "Om os",
     title: "Vi får industriel drift til at fungere",
     intro:
-      "OptiPeople bygger software, forbinder systemer og hjælper industrielle teams med at gøre data til bedre beslutninger fra fabriksgulv til ledelse.",
-    missionHeading: "Bygget til rummet mellem shopfloor og ERP",
+      "OptiPeople bygger software, kobler systemer sammen og hjælper produktionsteams med at bruge tallene til bedre beslutninger, fra gulvet til ledelsen.",
+    missionHeading: "Bygget til hullet mellem gulvet og ERP",
     missionBody:
-      "De fleste fabrikker har maskiner, der producerer data, og ERP-systemer der har brug for den. OptiPeople udfylder mellemrummet med realtidsdata, synlighed og handlinger, der forbedrer performance.",
+      "De fleste fabrikker har maskiner, der laver data, og et ERP, der har brug for dem. OptiPeople fylder hullet ud imellem med tal i realtid, overblik og handlinger, der flytter noget.",
     valuesHeading: "Sådan arbejder vi",
     teamHeading: "Teamet",
     values: [
       {
         title: "Start med problemet",
         description:
-          "Vi starter ikke med teknologi. Vi starter med at forstå hvordan driften faktisk fungerer.",
+          "Vi starter ikke med teknikken. Vi starter med at finde ud af, hvordan driften faktisk kører.",
       },
       {
         title: "Gør det brugbart",
         description:
-          "Software der ikke bruges på gulvet, virker ikke. Derfor designer vi til mennesker i produktionen.",
+          "Software, der ikke bliver brugt på gulvet, virker ikke. Derfor bygger vi til de folk, der står i produktionen.",
       },
       {
         title: "Tag ansvar for resultatet",
         description:
-          "Vi afleverer ikke bare et system. Vi bliver involveret i rollout, adoption og forbedring.",
+          "Vi afleverer ikke bare et system. Vi er med, når det bliver rullet ud, taget i brug og gjort bedre.",
       },
       {
         title: "Skab tillid med data",
@@ -126,7 +126,7 @@ const copy: Record<
         metric: "5",
         label: "Fagområder",
         detail:
-          "Automation, IoT, software, operations implementering, operations consulting",
+          "Automation, IoT, software, implementering i driften og rådgivning",
       },
     ],
     statsTitle: "Hvem vi er",
@@ -190,13 +190,13 @@ export default async function AboutPage({ params }: PageProps) {
           }}
         />
         <div className="px-[var(--edge)]">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.intro}
           </p>
           <div className="mt-10">
@@ -210,7 +210,7 @@ export default async function AboutPage({ params }: PageProps) {
       {/* Proof strip. These numbers used to sit alone at the very bottom of
           the page, after the last section, with nothing following them. */}
       <section className="px-[var(--edge)] pt-16 lg:pt-20">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {t.statsTitle}
         </p>
         <dl className="mt-6 grid grid-cols-1 divide-y divide-black/[0.08] border-y border-black/[0.08] sm:grid-cols-3 sm:divide-y-0">
@@ -221,13 +221,13 @@ export default async function AboutPage({ params }: PageProps) {
                 i > 0 ? "sm:border-l sm:border-black/[0.08] sm:pl-8" : ""
               } ${i < t.stats.length - 1 ? "sm:pr-8" : ""}`}
             >
-              <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                 {stat.metric}
               </dt>
-              <dd className="mt-3 max-w-[26ch] text-sm leading-relaxed text-foreground/55">
+              <dd className="mt-3 max-w-[26ch] text-sm leading-relaxed text-foreground/70">
                 {stat.label}
                 {stat.detail ? (
-                  <span className="mt-1 block text-foreground/40">
+                  <span className="mt-1 block text-foreground/60">
                     {stat.detail}
                   </span>
                 ) : null}
@@ -240,10 +240,10 @@ export default async function AboutPage({ params }: PageProps) {
       {/* Mission: asymmetric, replacing the centred max-w-3xl block. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {t.missionHeading}
           </h2>
-          <p className="text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.missionBody}
           </p>
         </div>
@@ -251,7 +251,7 @@ export default async function AboutPage({ params }: PageProps) {
 
       {/* Values: numbered rail on hairlines. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.valuesHeading}
         </h2>
         <ol className="mt-10 grid grid-cols-1 border-t border-black/[0.08] sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
@@ -264,13 +264,13 @@ export default async function AboutPage({ params }: PageProps) {
                 i % 2 === 1 ? "sm:border-l sm:border-black/[0.08]" : ""
               } ${i > 0 ? "lg:border-l lg:border-black/[0.08]" : "lg:border-l-0"}`}
             >
-              <span className="text-sm font-medium tabular-nums text-foreground/35">
+              <span className="text-sm font-medium tabular-nums text-foreground/50">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-5 text-xl font-light tracking-tight text-foreground lg:text-2xl">
+              <h3 className="mt-5 text-xl font-normal tracking-tight text-foreground lg:text-2xl">
                 {value.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/72">
                 {value.description}
               </p>
             </li>
@@ -280,7 +280,7 @@ export default async function AboutPage({ params }: PageProps) {
 
       {/* Team: tinted cards rather than bare photos on a grey band. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.teamHeading}
         </h2>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-5">
@@ -303,7 +303,7 @@ export default async function AboutPage({ params }: PageProps) {
                 <h3 className="text-base font-medium tracking-tight text-foreground">
                   {person.name}
                 </h3>
-                <p className="mt-1 text-sm text-foreground/60">{person.role}</p>
+                <p className="mt-1 text-sm text-foreground/72">{person.role}</p>
               </div>
             </article>
           ))}
@@ -317,13 +317,13 @@ export default async function AboutPage({ params }: PageProps) {
       >
         <div className="px-[var(--edge)]">
           <div className="max-w-3xl">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/45">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
               {t.visual.eyebrow}
             </p>
-            <h2 className="mt-4 text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+            <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
               {t.visual.title}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
               {t.visual.body}
             </p>
           </div>

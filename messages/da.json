@@ -21,26 +21,26 @@
       "da": "DA"
     },
     "footer": {
-      "brand": "Én platform til produktion, performance og forbundne driftsteams.",
+      "brand": "Én platform til produktionen, tallene og de folk, der får den til at køre.",
       "company": "Virksomhed",
       "modules": "Moduler",
       "services": "Services & rådgivning",
       "legal": "Juridisk",
       "connect": "Følg os",
       "rights": "Alle rettigheder forbeholdes.",
-      "tagline": "Forbundet drift gjort enkelt",
+      "tagline": "Drift, der hænger sammen",
       "followLabel": "Følg os på {title}"
     }
   },
   "cta": {
-    "title": "Gør indsigt til handling",
+    "title": "Gør tallene til handling",
     "description": "Stop med at gætte. Begynd at styre på fakta.",
     "primaryLabel": "Book en snak"
   },
   "newsletterPrompt": {
     "eyebrow": "Nyhedsbrev",
     "title": "Kan du lide det, du læser?",
-    "body": "Praktiske noter fra produktionen, produktionsdata, OEE og vedligehold. Ingen støj.",
+    "body": "Praktiske noter om produktionsdata, OEE og vedligehold. Ingen støj.",
     "exitTitle": "Inden du går",
     "exitBody": "Få praktiske noter fra produktionen i din indbakke. Ingen støj, afmeld når som helst.",
     "emailPlaceholder": "dig@virksomhed.dk",
@@ -84,7 +84,7 @@
     "phoneOptional": "(valgfrit)",
     "phonePlaceholder": "+45 12 34 56 78",
     "message": "Besked",
-    "messagePlaceholder": "Fortæl os om jeres situation",
+    "messagePlaceholder": "Fortæl os, hvad I står med",
     "send": "Send besked",
     "sending": "Sender...",
     "errorName": "Indtast dit navn",

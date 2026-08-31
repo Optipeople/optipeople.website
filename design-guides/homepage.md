@@ -90,16 +90,16 @@ Mobile-first. Three breakpoints matter:
 
 | Role | Classes | Example |
 |------|---------|---------|
-| Hero heading | `text-6xl font-light` | "Digital Operations Platform" |
-| Section heading | `text-4xl lg:text-5xl font-light tracking-tight` | "One platform. Built for industrial reality." |
-| Card title | `text-5xl tracking-tight leading-[1.2] font-extralight` | Slide carousel titles |
-| Overlay heading | `text-4xl lg:text-5xl tracking-tight font-extralight` | "Know Your Factory..." |
+| Hero heading | `text-6xl font-normal` | "Digital Operations Platform" |
+| Section heading | `text-4xl lg:text-5xl font-normal tracking-tight` | "One platform. Built for industrial reality." |
+| Card title | `text-5xl tracking-tight leading-[1.2] font-normal` | Slide carousel titles |
+| Overlay heading | `text-4xl lg:text-5xl tracking-tight font-normal` | "Know Your Factory..." |
 | Body (primary) | `text-lg` or `text-xl` | Section descriptions |
-| Body (secondary) | `text-base text-foreground/70` | Supporting text |
+| Body (secondary) | `text-base text-foreground/82` | Supporting text |
 | Section label | `text-sm font-medium tracking-wide uppercase` | "Cases", "Platform" |
 | Meta / small | `text-xs` or `text-sm` | Timestamps, attribution |
 
-**Design rule:** Main headings use `font-light` or `font-extralight`, never bold. This creates the premium industrial feel. Only labels and small UI text use `font-medium`.
+**Design rule:** Headings use `font-normal` (400), never bold. `font-light` (300) is reserved for oversized tabular metrics, where the size carries the weight. Labels and small UI text use `font-medium`.
 
 ---
 
@@ -146,8 +146,8 @@ Each platform module has a dedicated color used consistently across all componen
 ### Text Opacity Convention
 
 - Full text: `text-foreground` (no opacity)
-- Secondary text: `text-foreground/70` or `text-foreground/80`
-- Tertiary text: `text-foreground/60`
+- Secondary text: `text-foreground/82` or `text-foreground/88`
+- Tertiary text: `text-foreground/72`
 
 ---
 
@@ -218,7 +218,7 @@ The most reused component on the homepage. Three layout variants:
 - Tall narrow cards (380px wide on desktop, 95% on mobile)
 - Black background with white text
 - Image at top with gradient overlay fading down
-- Title uppercase `text-sm`, description `text-xl lg:text-2xl font-light`
+- Title uppercase `text-sm`, description `text-xl lg:text-2xl font-normal`
 - Arrow navigation button bottom-right
 
 #### Navigation Types
@@ -261,7 +261,7 @@ The most reused component on the homepage. Three layout variants:
 ### CallToAction
 
 - Two variants: `default` (subtle light bg) and `dark` (inverted colors)
-- Title: `text-3xl lg:text-4xl font-light tracking-tight`
+- Title: `text-3xl lg:text-4xl font-normal tracking-tight`
 - Buttons: `flex flex-col sm:flex-row gap-4`
 - Padding: `py-16 lg:py-24`
 
@@ -338,8 +338,8 @@ export default function NewPage() {
       {/* 1. Hero, py-12 lg:py-16, max-w-5xl */}
       <section className="py-12 lg:py-16">
         <div className="mx-auto w-full max-w-5xl px-8 lg:px-6">
-          {/* text-6xl font-light heading */}
-          {/* text-xl text-foreground/70 subheading */}
+          {/* text-6xl font-normal heading */}
+          {/* text-xl text-foreground/82 subheading */}
           {/* Optional: SlideCarousel or hero visual */}
         </div>
       </section>
@@ -347,7 +347,7 @@ export default function NewPage() {
       {/* 2–N. Content Sections, ascending py tiers */}
       <section className="py-12 lg:py-28">
         <div className="mx-auto w-full max-w-5xl px-8 lg:px-6">
-          {/* text-4xl lg:text-5xl font-light section heading */}
+          {/* text-4xl lg:text-5xl font-normal section heading */}
           {/* Section content using established components */}
         </div>
       </section>

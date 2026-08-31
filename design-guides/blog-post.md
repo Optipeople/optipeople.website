@@ -101,7 +101,7 @@ On mobile, the layout collapses to single column, the table of contents is hidde
   <p className="text-sm text-muted-foreground">
     {post.date} &middot; {post.author}
   </p>
-  <h1 className="mt-2 text-4xl font-light text-foreground">
+  <h1 className="mt-2 text-4xl font-normal text-foreground">
     {post.title}
   </h1>
 </header>
@@ -109,7 +109,7 @@ On mobile, the layout collapses to single column, the table of contents is hidde
 
 **Guidelines:**
 - Meta line first: date + author, separated by middot, `text-sm text-muted-foreground`
-- Title: `text-4xl font-light`, consistent with the site's heading style
+- Title: `text-4xl font-normal`, consistent with the site's heading style
 - No eyebrow label (unlike landing pages), the back link provides context
 - `mb-8` before the hero image
 
@@ -144,31 +144,31 @@ The article content is rendered from Markdown using `react-markdown` with `remar
 ```tsx
 <div className="prose prose-lg max-w-none
   prose-headings:text-foreground
-  prose-p:text-foreground/80
+  prose-p:text-foreground/88
   prose-strong:text-foreground
   prose-a:text-primary
   prose-code:text-foreground
   prose-pre:bg-muted
   prose-blockquote:border-primary
-  prose-blockquote:text-foreground/70
-  prose-li:text-foreground/80
+  prose-blockquote:text-foreground/82
+  prose-li:text-foreground/88
   prose-th:text-foreground
-  prose-td:text-foreground/80">
+  prose-td:text-foreground/88">
 ```
 
 ### Typography Within Prose
 
 | Element | Style | Notes |
 |---------|-------|-------|
-| Body text | `prose-lg`, `text-foreground/80` | Slightly muted for comfortable reading |
+| Body text | `prose-lg`, `text-foreground/88` | Slightly muted for comfortable reading |
 | Headings | `text-foreground` | Full contrast, auto-generated IDs for TOC linking |
 | Links | `text-primary hover:underline` | Brand color, underline on hover |
 | Strong | `text-foreground` | Full contrast to stand out from /80 body |
-| Blockquotes | `border-l-4 border-primary`, `text-foreground/70` | Primary-colored left border, italic |
+| Blockquotes | `border-l-4 border-primary`, `text-foreground/82` | Primary-colored left border, italic |
 | Code (inline) | `bg-muted px-1.5 py-0.5 rounded text-sm` | Subtle background pill |
 | Code (block) | `bg-muted rounded-lg p-4 text-sm overflow-x-auto` | Contained code block |
 | Tables | Full-width, `border-collapse`, `border border-border` | Header row gets `bg-muted` |
-| Lists | `text-foreground/80` | Same opacity as body text |
+| Lists | `text-foreground/88` | Same opacity as body text |
 | Images | `rounded-lg my-6`, 800×450 | Inline images within the content |
 
 ### Heading Anchors
@@ -246,7 +246,7 @@ export default async function BlogPostPage({ params }: Props) {
                   <p className="text-sm text-muted-foreground">
                     {post.date} &middot; {post.author}
                   </p>
-                  <h1 className="mt-2 text-4xl font-light text-foreground">
+                  <h1 className="mt-2 text-4xl font-normal text-foreground">
                     {post.title}
                   </h1>
                 </header>

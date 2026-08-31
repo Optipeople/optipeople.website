@@ -115,7 +115,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * Talk to us.
  *
  * Same design language as the deep-dive templates: the `--edge` column,
- * `font-light` display type, hairline rails, and a tint that washes down from
+ * `font-normal` display type, hairline rails, and a tint that washes down from
  * behind the header.
  *
  * The form is treated the way screenshots are treated elsewhere on the site,
@@ -168,13 +168,13 @@ export default async function ContactPage({ params }: Props) {
         <div className="px-[var(--edge)]">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
             <div className="lg:pt-4">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                 {t.eyebrow}
               </p>
-              <h1 className="mt-5 text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                 {t.headline}
               </h1>
-              <p className="mt-6 max-w-xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+              <p className="mt-6 max-w-xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
                 {t.body}
               </p>
 
@@ -184,9 +184,9 @@ export default async function ContactPage({ params }: Props) {
                   <div key={detail.label} className="flex items-center gap-4">
                     <dt className="sr-only">{detail.label}</dt>
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/70">
-                      <detail.icon className="h-4 w-4 text-foreground/60" />
+                      <detail.icon className="h-4 w-4 text-foreground/72" />
                     </span>
-                    <dd className="text-base text-foreground/70">
+                    <dd className="text-base text-foreground/82">
                       {detail.href ? (
                         <a
                           href={detail.href}
@@ -207,18 +207,18 @@ export default async function ContactPage({ params }: Props) {
             <div className="rounded-[1.5rem] bg-white p-7 shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08] sm:p-9 lg:rounded-[1.75rem] lg:p-10">
               <div className="space-y-3">
                 <LeadEmailForm showFineprint={false} />
-                <p className="px-1 text-sm text-foreground/55">{t.quickIntro}</p>
+                <p className="px-1 text-sm text-foreground/70">{t.quickIntro}</p>
               </div>
 
               <div className="my-8 flex items-center gap-4" aria-hidden="true">
                 <span className="h-px flex-1 bg-black/[0.08]" />
-                <span className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">
                   {t.orDivider}
                 </span>
                 <span className="h-px flex-1 bg-black/[0.08]" />
               </div>
 
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                 {t.formTitle}
               </p>
               <div className="mt-6">
@@ -231,7 +231,7 @@ export default async function ContactPage({ params }: Props) {
 
       {/* What happens next: a numbered hairline rail. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.stepsTitle}
         </h2>
         <ol className="mt-10 grid grid-cols-1 border-t border-black/[0.08] sm:grid-cols-3 lg:mt-14">
@@ -242,13 +242,13 @@ export default async function ContactPage({ params }: Props) {
                 i > 0 ? "sm:border-l sm:pl-8 lg:pl-12" : ""
               } ${i < t.steps.length - 1 ? "sm:pr-8 lg:pr-12" : ""}`}
             >
-              <span className="text-sm font-medium tabular-nums text-foreground/35">
+              <span className="text-sm font-medium tabular-nums text-foreground/50">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-5 text-xl font-light tracking-tight text-foreground lg:text-2xl">
+              <h3 className="mt-5 text-xl font-normal tracking-tight text-foreground lg:text-2xl">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/72">
                 {step.description}
               </p>
             </li>

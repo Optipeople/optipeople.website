@@ -36,7 +36,7 @@ type PostArchiveProps = {
  * Blog archive.
  *
  * Shares the deep-dive design language (components/templates/feature-page.tsx):
- * the `--edge` column so every block sits on one left line, `font-light`
+ * the `--edge` column so every block sits on one left line, `font-normal`
  * display type, hairlines instead of bordered cards floating on white, and
  * arrow-in-circle affordances.
  *
@@ -100,7 +100,7 @@ export function PostArchive({
 
         <div className="px-[var(--edge)]">
           {backHref && backLabel && (
-            <nav className="flex items-center gap-2 text-sm text-foreground/50">
+            <nav className="flex items-center gap-2 text-sm text-foreground/65">
               <Link
                 href={backHref}
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
@@ -109,24 +109,24 @@ export function PostArchive({
                 {backLabel}
               </Link>
               <span aria-hidden>/</span>
-              <span className="text-foreground/80">{eyebrow}</span>
+              <span className="text-foreground/88">{eyebrow}</span>
             </nav>
           )}
 
           <div className="mt-10 max-w-3xl lg:mt-14">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/50">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
               {eyebrow}
             </p>
-            <h1 className="mt-5 text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
               {title}
             </h1>
             {subtitle && (
-              <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+              <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
                 {subtitle}
               </p>
             )}
             {countLabel && (
-              <p className="mt-8 text-sm tabular-nums text-foreground/50">
+              <p className="mt-8 text-sm tabular-nums text-foreground/65">
                 {countLabel}
               </p>
             )}
@@ -154,16 +154,16 @@ export function PostArchive({
                 </div>
 
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/45">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/65">
                     {formatPostDate(featured.date, locale)}
                   </p>
-                  <h2 className="mt-5 text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+                  <h2 className="mt-5 text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
                     {featured.title}
                   </h2>
-                  <p className="mt-5 max-w-md text-base leading-relaxed text-foreground/60">
+                  <p className="mt-5 max-w-md text-base leading-relaxed text-foreground/72">
                     {featured.summary}
                   </p>
-                  <span className="mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors group-hover:text-foreground">
+                  <span className="mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors group-hover:text-foreground">
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                     </span>
@@ -182,10 +182,10 @@ export function PostArchive({
             className="rounded-[1.75rem] p-10 lg:p-14"
             style={{ backgroundColor: theme.tint }}
           >
-            <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+            <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
               {emptyTitle}
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/60">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/72">
               {emptyBody}
             </p>
           </div>
@@ -215,10 +215,10 @@ export function PostArchive({
                         />
                       )}
                     </div>
-                    <p className="mt-5 text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/45">
+                    <p className="mt-5 text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/65">
                       {formatPostDate(post.date, locale)}
                     </p>
-                    <h3 className="mt-3 text-xl font-light leading-snug tracking-tight text-foreground transition-colors group-hover:text-foreground/70 lg:text-2xl">
+                    <h3 className="mt-3 text-xl font-normal leading-snug tracking-tight text-foreground transition-colors group-hover:text-foreground/82 lg:text-2xl">
                       {post.title}
                     </h3>
                   </Link>
@@ -229,7 +229,7 @@ export function PostArchive({
             {list.length > 0 && (
               <div className="mt-16 lg:mt-24">
                 {listLabel && (
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                     {listLabel}
                   </p>
                 )}
@@ -240,14 +240,14 @@ export function PostArchive({
                         href={`${postBasePath}/${post.slug}`}
                         className="group grid gap-x-8 gap-y-2 border-b border-black/[0.08] py-6 transition-colors hover:bg-[var(--gray-1)] sm:grid-cols-[9rem_minmax(0,1fr)_2.25rem] sm:items-center lg:py-7"
                       >
-                        <span className="text-sm tabular-nums text-foreground/45">
+                        <span className="text-sm tabular-nums text-foreground/65">
                           {formatPostDate(post.date, locale)}
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-lg font-light leading-snug tracking-tight text-foreground lg:text-xl">
+                          <span className="block text-lg font-normal leading-snug tracking-tight text-foreground lg:text-xl">
                             {post.title}
                           </span>
-                          <span className="mt-1.5 line-clamp-1 block text-sm leading-relaxed text-foreground/50">
+                          <span className="mt-1.5 line-clamp-1 block text-sm leading-relaxed text-foreground/65">
                             {post.summary}
                           </span>
                         </span>
@@ -282,7 +282,7 @@ export function PostArchive({
                         className={`flex h-9 w-9 items-center justify-center rounded-full text-sm tabular-nums transition-colors ${
                           page === validPage
                             ? "bg-foreground font-medium text-background"
-                            : "text-foreground/55 hover:bg-[var(--gray-1)] hover:text-foreground"
+                            : "text-foreground/70 hover:bg-[var(--gray-1)] hover:text-foreground"
                         }`}
                       >
                         {page}
@@ -331,7 +331,7 @@ function PageStep({
 
   if (!href) {
     return (
-      <span className="inline-flex items-center gap-3 text-sm font-medium text-foreground/25">
+      <span className="inline-flex items-center gap-3 text-sm font-medium text-foreground/35">
         {direction === "prev" && icon}
         {label}
         {direction === "next" && icon}
@@ -342,7 +342,7 @@ function PageStep({
   return (
     <Link
       href={href}
-      className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+      className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
     >
       {direction === "prev" && icon}
       {label}

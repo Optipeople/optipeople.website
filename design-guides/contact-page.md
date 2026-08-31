@@ -64,7 +64,7 @@ Two columns: context on the left, form on the right.
       <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
         Contact
       </p>
-      <h1 className="text-4xl sm:text-5xl font-light text-foreground tracking-tight leading-tight">
+      <h1 className="text-4xl sm:text-5xl font-normal text-foreground tracking-tight leading-tight">
         Let's talk about your operations
       </h1>
       <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
@@ -227,7 +227,7 @@ After successful submission, replace the form with a confirmation message:
 
 ```tsx
 <div className="text-center py-12">
-  <h2 className="text-2xl font-light mb-4">Thanks for reaching out</h2>
+  <h2 className="text-2xl font-normal mb-4">Thanks for reaching out</h2>
   <p className="text-base text-muted-foreground">
     We'll get back to you within one business day.
   </p>
@@ -290,7 +290,7 @@ export default function ContactPage() {
             <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
               Contact
             </p>
-            <h1 className="text-4xl sm:text-5xl font-light text-foreground tracking-tight leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-normal text-foreground tracking-tight leading-tight">
               Let's talk about your operations
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">

@@ -10,7 +10,7 @@ import { HeroModulePicker } from "@/components/hero-module-picker"
 import { hasModuleMockup } from "@/components/module-mockups"
 import { Button } from "@/components/ui/button"
 import { moduleCatalog, moduleChipRows } from "@/content/modules-catalog"
-import { getPostBySlug } from "@/lib/blog-data"
+import { getCaseStudies, getPostBySlug } from "@/lib/blog-data"
 import { aiStackSlides, aiStackSliderCopy } from "@/lib/ai-stack"
 import { customerLogos } from "@/lib/customers"
 import { buildMetadata } from "@/lib/seo"
@@ -50,7 +50,7 @@ function ComparisonBars({
   const max = Math.max(before, after)
   const height = (v: number) => `${Math.max(10, Math.round((v / max) * 100))}%`
   const baseBar = tone === "dark" ? "bg-white/15" : "bg-black/[0.08]"
-  const labelColor = tone === "dark" ? "text-white/50" : "text-black/45"
+  const labelColor = tone === "dark" ? "text-white/65" : "text-black/65"
   const accent = tone === "dark" ? "var(--green-light2)" : "var(--green-system)"
 
   return (
@@ -139,6 +139,8 @@ type HomeCopy = {
   ai: { ariaLabel: string }
   testimonials: Testimonial[]
   testimonialTitle: string
+  /** Link label on each testimonial card that has a matching case study. */
+  testimonialCaseLabel: string
   bento: {
     eyebrow: string
     title: string
@@ -418,6 +420,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
     ],
     testimonialTitle: "What our customers say",
+    testimonialCaseLabel: "Read the case",
     bento: {
       eyebrow: "Customer results",
       title: "Measured on the floor.",
@@ -513,10 +516,10 @@ const copy: Record<Locale, HomeCopy> = {
         tab: "Produktionsvirksomheder",
         title: "Kend din fabrik. I realtid.",
         description:
-          "OptiPeople forbinder maskiner, processer og mennesker i ét levende driftsoverblik. Se flaskehalse mens de opstår, reagér hurtigere, og styr produktionen på fakta.",
+          "OptiPeople kobler maskiner, processer og mennesker sammen i ét overblik, der opdaterer sig selv. Se flaskehalsen, mens den opstår, reager hurtigere, og styr produktionen efter fakta.",
         imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
         imageAlt: "Live OptiPeople operatørpanel med maskinstatus, output og produktionstidslinje i realtid",
-        primaryLabel: "Udforsk produktionsløsninger",
+        primaryLabel: "Se løsningen til produktion",
         primaryHref: "/solutions/manufacturing",
         bgColor: "bg-blue-50/0",
         layout: "overlay",
@@ -526,33 +529,33 @@ const copy: Record<Locale, HomeCopy> = {
         tab: "OEM'er og maskinbyggere",
         title: "Gør maskiner til platforme",
         description:
-          "Opticloud gør det muligt at levere forbundne maskiner med indbygget indsigt. Overvåg performance i felten, hjælp kunder proaktivt, og byg digitale services oven på udstyret.",
+          "Med Opticloud kan I levere maskiner, der er koblet på, med indblikket bygget ind. Hold øje med, hvordan de kører ude hos kunderne, hjælp før de ringer, og byg service oven på udstyret.",
         imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         imageAlt: "OptiPeople effektivitetsrapport med live tilgængelighed, performance og OEE for en forbundet maskine",
-        primaryLabel: "Se OEM-fordele",
+        primaryLabel: "Se løsningen til maskinbyggere",
         primaryHref: "/solutions/oems",
         bgColor: "bg-blue-50/0",
         layout: "overlay",
         overlay: "light",
       },
       {
-        tab: "Service og aftermarket",
+        tab: "Service og eftermarked",
         title: "Løs problemer før kunden mærker dem",
         description:
-          "Giv serviceholdet indblik i maskinernes sundhed og brug. Planlæg vedligehold, reducer brandslukning, og gør service til en konkurrencefordel.",
+          "Giv serviceholdet indblik i, hvordan maskinerne har det, og hvor meget de bliver brugt. Planlæg vedligeholdet, skær brandslukningen ned, og gør service til noget, I vinder på.",
         imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
         imageAlt: "Log over registrerede stop med service-kritiske tags til proaktiv vedligehold og service",
-        primaryLabel: "Optimer service",
+        primaryLabel: "Se løsningen til service",
         primaryHref: "/solutions/service",
         bgColor: "bg-blue-50/0",
         layout: "overlay",
         overlay: "light",
       },
     ],
-    logoWallTitle: "Brugt af industriledere",
+    logoWallTitle: "Virksomheder, der kører på OptiPeople",
     trust: {
-      heading: "Foretrukket af førende produktionsvirksomheder.",
-      headingSub: "Se hvordan de driver produktion på data med OptiPeople.",
+      heading: "Førende produktionsvirksomheder bruger OptiPeople.",
+      headingSub: "Se hvordan de bruger tallene i den daglige drift.",
       storiesLabel: "Kundehistorier",
       quote:
         "Sammenlignet med vores OEE før Opticloud har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
@@ -562,7 +565,7 @@ const copy: Record<Locale, HomeCopy> = {
       eyebrow: "Platformmoduler",
       title: "Ét modul ad gangen. Ét datagrundlag.",
       subtitle:
-        "Hvert modul svarer på et konkret driftsspørgsmål, og de læser alle fra de samme maskinsignaler, et stop registreret på gulvet slår igennem i OEE, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
+        "Hvert modul svarer på et konkret spørgsmål i driften, og de læser alle de samme maskinsignaler. Et stop, der bliver registreret på gulvet, slår igennem i OEE, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
       ariaLabel: "Platformmoduler",
     },
     moduleCta: "Udforsk {module}",
@@ -571,47 +574,47 @@ const copy: Record<Locale, HomeCopy> = {
     moduleSlides: {
       mes: {
         description:
-          "Det cloudbaserede MES, de øvrige moduler kører på. Start med én linje og tilføj moduler, når næste spørgsmål melder sig, samme datagrundlag hele vejen.",
+          "MES'et i skyen, som de andre moduler kører på. Start med én linje, og tag flere moduler med, når næste spørgsmål melder sig. Det er de samme data hele vejen.",
       },
       oee: {
         description:
-          "Se hvor produktionstiden går tabt og hvorfor. Følg tilgængelighed, performance og kvalitet live på tværs af skift, linjer og maskiner.",
+          "Se hvor produktionstiden går tabt, og hvorfor. Følg tilgængelighed, ydelse og kvalitet live på tværs af skift, linjer og maskiner.",
       },
       qms: {
         description:
-          "Registrer kvalitetsdata dér hvor arbejdet sker. Spor afvigelser tilbage til maskine, batch og skift, og gør kontroller til dokumentation i stedet for papirarbejde.",
+          "Registrer kvalitetsdata dér, hvor arbejdet sker. Følg afvigelsen tilbage til maskine, batch og skift, og lad kontrollen være dokumentationen i stedet for papirarbejde.",
       },
       ems: {
         description:
-          "Kobl energi, vibration, flow og temperatur direkte til produktionen. Se kWh pr. produceret enhed og find det spild, elregningen skjuler.",
+          "Kobl energi, vibration, flow og temperatur direkte sammen med produktionen. Se kWh pr. produceret enhed, og find det spild, elregningen ikke viser.",
       },
       maintenance: {
         description:
-          "Planlæg forebyggende vedligehold efter brug og tilstand i stedet for kalenderen. Tildel opgaver, følg status og reducer uplanlagt nedetid.",
+          "Planlæg vedligeholdet efter brug og tilstand i stedet for efter kalenderen. Sæt navn på opgaverne, følg med i dem, og få mindre uplanlagt nedetid.",
       },
       planning: {
         description:
-          "Planlæg ordrer efter den kapacitet I faktisk har. Planer bygget på målte kørehastigheder og reel maskintilgængelighed, ikke regnearksantagelser.",
+          "Læg ordrerne efter den kapacitet, I faktisk har. Planerne bygger på målte kørehastigheder og den tid, maskinerne reelt er ledige, ikke på tal fra et regneark.",
       },
       orders: {
         description:
-          "Tovejssynk mellem ERP og gulvet. Ordrer kommer ud på maskinen, og status, spild og tid går direkte tilbage uden manuel indtastning.",
+          "Ordrer begge veje mellem ERP og gulvet. Ordren kommer ud på maskinen, og status, spild og tid går direkte tilbage, uden at nogen taster det ind.",
       },
       iot: {
         description:
-          "Få data fra alt, moderne styringer over gængse industrielle protokoller, og ældre maskiner via sensorer, der måler signalet direkte.",
+          "Få data fra det hele. De nyere styringer over de protokoller, maskiner taler, og de gamle maskiner med sensorer, der måler signalet direkte.",
       },
       documents: {
         description:
-          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den gældende version. Operatøren ser det, der gælder for ordren foran sig.",
+          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder. Operatøren ser det, der hører til ordren foran sig.",
       },
       analysis: {
         description:
-          "Gør produktionsdata til tydelige rapporter om performance, tab og omkostningsdrivere, automatisk og uden regnearksarbejde.",
+          "Gør produktionsdata til rapporter, folk kan læse: hvordan det går, hvor I taber, og hvad der koster mest. Uden regneark.",
       },
       "ai-agents": {
         description:
-          "Stil spørgsmål i almindeligt sprog, og lad agenter holde øje med mønstre i jeres egne produktionsdata, på de samme tal, som alle andre ser.",
+          "Stil spørgsmål i almindeligt sprog, og lad agenterne holde øje med mønstrene i jeres egne produktionsdata. Det er de samme tal, som alle andre ser.",
       },
     },
 
@@ -640,10 +643,11 @@ const copy: Record<Locale, HomeCopy> = {
       },
     ],
     testimonialTitle: "Det siger kunderne",
+    testimonialCaseLabel: "Læs casen",
     bento: {
       eyebrow: "Kunderesultater",
       title: "Målt på fabriksgulvet.",
-      subtitle: "Resultater produktionsvirksomheder har opnået med OptiPeople. Åbn en for at se hvordan.",
+      subtitle: "Det har produktionsvirksomheder fået ud af OptiPeople. Åbn en, og se hvordan.",
       allCases: "Alle cases",
       caseCards: [
         {
@@ -661,7 +665,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Fortrolig fabrik",
           value: "21→41%",
           unit: "OEE",
-          note: "Output næsten fordoblet med datadrevet drift.",
+          note: "Produktionen næsten fordoblet ved at styre efter tal.",
           slug: "fra-data-til-effektivitet",
           span: "narrow",
           kind: "chart",
@@ -672,7 +676,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Danpres",
           value: "−50%",
           unit: "tid til værktøjsreparation",
-          note: "Kapacitet frigjort inden for den eksisterende plan.",
+          note: "Mere kapacitet, uden at planen blev lavet om.",
           slug: "danpres-boosting-production-by-reducing-tool-repair-time-by-50",
           span: "narrow",
           kind: "image",
@@ -681,7 +685,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Kvik",
           value: "−50%",
           unit: "servicetimer",
-          note: "Brugsbaseret vedligehold, plus 40 ekstra produktionstimer om året.",
+          note: "Vedligehold efter brug, og 40 ekstra produktionstimer om året.",
           slug: "kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud",
           span: "wide",
           kind: "image",
@@ -690,7 +694,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Dansk Træemballage",
           value: "+5%",
           unit: "OEE på tre måneder",
-          note: "Opnået på den allerførste forbundne produktionslinje.",
+          note: "Opnået på den allerførste linje, vi koblede på.",
           slug: "dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud",
           span: "wide",
           kind: "image",
@@ -699,7 +703,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "DFI Geisler",
           value: "+5%",
           unit: "produktivitet",
-          note: "Fastholdt over to år og syv maskiner.",
+          note: "Holdt fast i to år og på syv maskiner.",
           slug: "dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights",
           span: "narrow",
           kind: "image",
@@ -707,6 +711,30 @@ const copy: Record<Locale, HomeCopy> = {
       ],
     },
   },
+}
+
+/**
+ * Points each quote at that customer's case study, matched on the case's
+ * `customer` frontmatter. A quote from a customer without a published story
+ * keeps no link rather than sending the reader to the archive.
+ *
+ * Slugs and `customer` are the same across translations, so the default-locale
+ * set is enough here. The locale prefix on the link comes from next-intl.
+ */
+function linkTestimonials(testimonials: Testimonial[]): Testimonial[] {
+  const slugByCustomer = new Map<string, string>()
+  for (const study of getCaseStudies()) {
+    const key = study.customer?.toLowerCase()
+    // getCaseStudies leads with the strongest stories, so the first wins.
+    if (key && !slugByCustomer.has(key)) {
+      slugByCustomer.set(key, study.slug)
+    }
+  }
+
+  return testimonials.map((testimonial) => {
+    const slug = slugByCustomer.get(testimonial.company.toLowerCase())
+    return slug ? { ...testimonial, href: `/blog/${slug}` } : testimonial
+  })
 }
 
 const metadataCopy: Record<Locale, { title: string; description: string }> = {
@@ -718,7 +746,7 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   da: {
     title: "OptiPeople | Digital driftsplatform til produktionsvirksomheder",
     description:
-      "Forbind maskiner, følg produktion i realtid, forbedr OEE og gør driftsdata til handling.",
+      "Kobl maskinerne på, følg produktionen i realtid, forbedr OEE, og gør tallene til handling.",
   },
 }
 
@@ -755,10 +783,10 @@ export default async function Home({
     <main>
       <section className="py-12 lg:py-16">
         <div className="w-full px-[var(--edge)] py-22">
-          <h1 className="mx-auto max-w-3xl text-balance text-center text-4xl font-light leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mx-auto max-w-3xl text-balance text-center text-4xl font-normal leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {hero.heading}
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-balance text-center text-lg font-light leading-snug text-foreground/70 sm:text-xl">
+          <p className="mx-auto mt-6 max-w-xl text-balance text-center text-lg font-normal leading-snug text-foreground/82 sm:text-xl">
             {hero.subheading}
           </p>
           <HeroModulePicker
@@ -785,13 +813,13 @@ export default async function Home({
         <div className="grid w-full grid-cols-1 gap-12 px-[var(--edge)] lg:grid-cols-2 lg:gap-16">
           {/* Left, headline + customer stories link */}
           <div>
-            <h2 className="text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+            <h2 className="text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
               {t.trust.heading}
-              <span className="block text-foreground/50">{t.trust.headingSub}</span>
+              <span className="block text-foreground/65">{t.trust.headingSub}</span>
             </h2>
             <Link
               href="/cases"
-              className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+              className="group mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground/88 transition-colors hover:text-foreground"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 transition-colors group-hover:border-black/20">
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -802,7 +830,7 @@ export default async function Home({
 
           {/* Right, featured testimonial */}
           <figure className="flex flex-col">
-            <blockquote className="text-xl font-light leading-relaxed text-foreground/90 lg:text-2xl">
+            <blockquote className="text-xl font-normal leading-relaxed text-foreground/95 lg:text-2xl">
               &ldquo;{t.trust.quote}&rdquo;
             </blockquote>
             <figcaption className="mt-6 text-sm text-muted-foreground">
@@ -817,7 +845,7 @@ export default async function Home({
           <p className="mb-3 text-sm font-medium uppercase tracking-wide text-muted-foreground">
             {t.platform.eyebrow}
           </p>
-          <h2 className="text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+          <h2 className="text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
             {t.platform.title}
           </h2>
           <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
@@ -830,6 +858,7 @@ export default async function Home({
           navigationType={["arrows"]}
           ariaLabel={t.platform.ariaLabel}
           className="mt-8"
+          storageKey="home-modules"
         />
       </section>
 
@@ -839,7 +868,7 @@ export default async function Home({
           <p className="mb-3 text-sm font-medium uppercase tracking-wide text-muted-foreground">
             {ai.eyebrow}
           </p>
-          <h2 className="text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+          <h2 className="text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
             {ai.title}
           </h2>
           <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
@@ -852,20 +881,22 @@ export default async function Home({
           navigationType={["arrows"]}
           ariaLabel={t.ai.ariaLabel}
           className="mt-8"
+          storageKey="home-ai"
         />
       </section>
 
       {/* Testimonial Carousel */}
       <TestimonialCarousel
-        testimonials={t.testimonials}
+        testimonials={linkTestimonials(t.testimonials)}
         title={t.testimonialTitle}
+        caseLabel={t.testimonialCaseLabel}
         className="py-12 lg:py-28"
       />
 
       {/* Customer Results, Scandinavian bento of measured outcomes */}
-      {/* Negative bottom margin cancels the CTA's top margin so the two
-          backgrounds meet flush instead of leaving an empty white band. */}
-      <section className="-mb-16 bg-[var(--gray-1)] py-24 lg:-mb-24 lg:py-32">
+      {/* The CTA below carries no top margin, so the two backgrounds already
+          meet flush and this band needs no negative margin to pull it up. */}
+      <section className="bg-[var(--gray-1)] py-24 lg:py-32">
         <div className="px-[var(--edge)]">
           {/* Header */}
           <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
@@ -873,7 +904,7 @@ export default async function Home({
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
                 {t.bento.eyebrow}
               </p>
-              <h2 className="mt-4 text-4xl font-light tracking-tight text-foreground lg:text-5xl">
+              <h2 className="mt-4 text-4xl font-normal tracking-tight text-foreground lg:text-5xl">
                 {t.bento.title}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
@@ -882,7 +913,7 @@ export default async function Home({
             </div>
             <Link
               href="/cases"
-              className="group hidden shrink-0 items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm font-medium text-foreground/80 transition-colors hover:border-black/20 hover:text-foreground sm:inline-flex"
+              className="group hidden shrink-0 items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm font-medium text-foreground/88 transition-colors hover:border-black/20 hover:text-foreground sm:inline-flex"
             >
               {t.bento.allCases}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -913,7 +944,7 @@ export default async function Home({
                 return (
                   <>
                     {from}
-                    <span className={`mx-1 font-extralight ${cls}`}>→</span>
+                    <span className={`mx-1 font-light ${cls}`}>→</span>
                     {to}
                   </>
                 )
@@ -937,15 +968,15 @@ export default async function Home({
                       <div>
                         <p
                           className={`text-xs font-medium uppercase tracking-[0.2em] ${
-                            dark ? "text-white/55" : "text-foreground/45"
+                            dark ? "text-white/70" : "text-foreground/65"
                           }`}
                         >
                           {card.company}
                         </p>
-                        <h3 className="mt-4 text-5xl font-light leading-none tracking-tight tabular-nums lg:text-6xl">
-                          {metric(dark ? "text-white/40" : "text-foreground/30")}
+                        <h3 className="mt-4 text-5xl font-normal leading-none tracking-tight tabular-nums lg:text-6xl">
+                          {metric(dark ? "text-white/60" : "text-foreground/40")}
                         </h3>
-                        <p className={`mt-3 text-sm ${dark ? "text-white/70" : "text-foreground/60"}`}>
+                        <p className={`mt-3 text-sm ${dark ? "text-white/82" : "text-foreground/72"}`}>
                           {card.unit}
                         </p>
                       </div>
@@ -966,7 +997,7 @@ export default async function Home({
                       )}
                       <p
                         className={`max-w-[16rem] text-sm leading-snug ${
-                          dark ? "text-white/50" : "text-foreground/50"
+                          dark ? "text-white/65" : "text-foreground/65"
                         }`}
                       >
                         {card.note}
@@ -1024,7 +1055,7 @@ export default async function Home({
                   <div className="relative p-7 lg:p-8">
                     <p
                       className={`text-xs font-semibold uppercase tracking-[0.2em] ${
-                        light ? "text-white/90" : "text-slate-900/90"
+                        light ? "text-white/95" : "text-slate-900/90"
                       }`}
                     >
                       {card.company}
@@ -1035,7 +1066,7 @@ export default async function Home({
                     <p className={`mt-2 text-sm font-medium ${light ? "text-white" : "text-slate-900"}`}>
                       {card.unit}
                     </p>
-                    <p className={`mt-3 max-w-sm text-sm leading-snug ${light ? "text-white/85" : "text-slate-900/85"}`}>
+                    <p className={`mt-3 max-w-sm text-sm leading-snug ${light ? "text-white/90" : "text-slate-900/85"}`}>
                       {card.note}
                     </p>
                   </div>

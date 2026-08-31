@@ -80,7 +80,7 @@ export function VideoCarousel({
     <section className={className}>
       {title && (
         <div className={`${COLUMN} mb-10`}>
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
             {title}
           </h2>
         </div>
@@ -125,13 +125,13 @@ export function VideoCarousel({
                           {video.title}
                         </h3>
                         {video.languageLabel && (
-                          <span className="shrink-0 rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/55">
+                          <span className="shrink-0 rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/70">
                             {video.languageLabel}
                           </span>
                         )}
                       </div>
                       {video.description && (
-                        <p className="mt-2 text-sm leading-relaxed text-foreground/60">
+                        <p className="mt-2 text-sm leading-relaxed text-foreground/72">
                           {video.description}
                         </p>
                       )}

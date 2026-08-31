@@ -12,7 +12,7 @@ import { getPageTheme, type PageFamily } from "@/lib/page-theme"
  * Overview template for modules, services, and solutions.
  *
  * Same design language as the feature deep-dive (components/templates/
- * feature-page.tsx): the `--edge` column, `font-light` display type, oversized
+ * feature-page.tsx): the `--edge` column, `font-normal` display type, oversized
  * tabular metrics, and tinted surfaces instead of bordered cards on white.
  * Where the feature page leads with a screenshot, this one leads with an
  * editorial statement, these pages sell a scope, not a screen.
@@ -59,17 +59,17 @@ export function StandardPageTemplate({
         <div className="px-[var(--edge)]">
           <p
             className={`text-xs font-medium uppercase tracking-[0.2em] ${
-              dark ? "text-white/50" : "text-foreground/45"
+              dark ? "text-white/65" : "text-foreground/65"
             }`}
           >
             {page.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             {page.heroTitle}
           </h1>
           <p
-            className={`mt-6 max-w-2xl text-lg font-light leading-relaxed lg:text-xl ${
-              dark ? "text-white/70" : "text-foreground/65"
+            className={`mt-6 max-w-2xl text-lg font-normal leading-relaxed lg:text-xl ${
+              dark ? "text-white/82" : "text-foreground/78"
             }`}
           >
             {page.heroBody}
@@ -88,8 +88,8 @@ export function StandardPageTemplate({
               href="#capabilities"
               className={`group inline-flex items-center gap-3 text-sm font-medium transition-colors ${
                 dark
-                  ? "text-white/70 hover:text-white"
-                  : "text-foreground/70 hover:text-foreground"
+                  ? "text-white/82 hover:text-white"
+                  : "text-foreground/82 hover:text-foreground"
               }`}
             >
               <span
@@ -109,7 +109,7 @@ export function StandardPageTemplate({
 
       {/* Proof strip, the numbers used to sit two thirds down the page. */}
       <section className="px-[var(--edge)] pt-16 lg:pt-20">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {page.metricsTitle}
         </p>
         <dl className="mt-6 grid grid-cols-1 border-y border-black/[0.08] sm:grid-cols-3">
@@ -122,10 +122,10 @@ export function StandardPageTemplate({
                   : ""
               } ${i < page.metrics.length - 1 ? "sm:pr-8 lg:pr-12" : ""}`}
             >
-              <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                 {item.metric}
               </dt>
-              <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/55">
+              <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/70">
                 {item.label}
               </dd>
             </div>
@@ -137,10 +137,10 @@ export function StandardPageTemplate({
           runs beside it. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {page.introTitle}
           </h2>
-          <p className="text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {page.introBody}
           </p>
         </div>
@@ -151,7 +151,7 @@ export function StandardPageTemplate({
         id="capabilities"
         className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-28"
       >
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {page.capabilitiesTitle}
         </h2>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-5">
@@ -162,12 +162,12 @@ export function StandardPageTemplate({
               style={{ backgroundColor: theme.tint }}
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/70">
-                <feature.icon className="h-5 w-5 text-foreground/70" />
+                <feature.icon className="h-5 w-5 text-foreground/82" />
               </span>
               <h3 className="mt-6 text-lg font-medium tracking-tight text-foreground">
                 {feature.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/78">
                 {feature.description}
               </p>
             </div>
@@ -177,7 +177,7 @@ export function StandardPageTemplate({
 
       {/* Steps, a numbered rail on hairlines instead of centred columns. */}
       <section className="px-[var(--edge)] pb-20 lg:pb-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {page.stepsTitle}
         </h2>
         <ol className="mt-10 grid grid-cols-1 border-t border-black/[0.08] sm:grid-cols-3 lg:mt-14">
@@ -188,13 +188,13 @@ export function StandardPageTemplate({
                 i > 0 ? "sm:border-l sm:pl-8 lg:pl-12" : ""
               } ${i < page.steps.length - 1 ? "sm:pr-8 lg:pr-12" : ""}`}
             >
-              <span className="text-sm font-medium tabular-nums text-foreground/35">
+              <span className="text-sm font-medium tabular-nums text-foreground/50">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-5 text-xl font-light tracking-tight text-foreground lg:text-2xl">
+              <h3 className="mt-5 text-xl font-normal tracking-tight text-foreground lg:text-2xl">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/72">
                 {step.description}
               </p>
             </li>
@@ -209,13 +209,13 @@ export function StandardPageTemplate({
       >
         <div className="px-[var(--edge)]">
           <div className="max-w-2xl">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/45">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
               {t("productView")}
             </p>
-            <h2 className="mt-4 text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+            <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
               {page.visualTitle}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
               {page.visualBody}
             </p>
           </div>
@@ -239,7 +239,7 @@ export function StandardPageTemplate({
                 }`}
               />
             ) : (
-              <p className="text-sm text-white/50">{t("productView")}</p>
+              <p className="text-sm text-white/65">{t("productView")}</p>
             )}
           </div>
         </div>

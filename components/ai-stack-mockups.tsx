@@ -214,28 +214,28 @@ function ApiMockup() {
         <span className="size-2 rounded-full bg-red-400/80" />
         <span className="size-2 rounded-full bg-yellow-400/80" />
         <span className="size-2 rounded-full bg-green-400/80" />
-        <span className="ml-2 text-[10px] text-white/40">api.optipeople.dk</span>
+        <span className="ml-2 text-[10px] text-white/60">api.optipeople.dk</span>
       </div>
       <div className="space-y-1 p-3">
         <p>
           <span className="text-emerald-400">GET</span>{" "}
           <span className="text-sky-300">/v1/machines/42/oee</span>
         </p>
-        <p className="text-white/40">Authorization: Bearer •••••</p>
-        <p className="pt-1 text-white/70">{"{"}</p>
-        <p className="pl-3 text-white/70">
+        <p className="text-white/60">Authorization: Bearer •••••</p>
+        <p className="pt-1 text-white/82">{"{"}</p>
+        <p className="pl-3 text-white/82">
           <span className="text-violet-300">&quot;oee&quot;</span>:{" "}
           <span className="text-amber-300">0.87</span>,
         </p>
-        <p className="pl-3 text-white/70">
+        <p className="pl-3 text-white/82">
           <span className="text-violet-300">&quot;availability&quot;</span>:{" "}
           <span className="text-amber-300">0.94</span>,
         </p>
-        <p className="pl-3 text-white/70">
+        <p className="pl-3 text-white/82">
           <span className="text-violet-300">&quot;performance&quot;</span>:{" "}
           <span className="text-amber-300">0.96</span>
         </p>
-        <p className="text-white/70">{"}"}</p>
+        <p className="text-white/82">{"}"}</p>
       </div>
     </div>
   )

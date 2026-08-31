@@ -113,31 +113,31 @@ const danishModules: ModuleNode[] = [
     name: "OptiCloud",
     description: "Dit fælles datagrundlag",
     pitch:
-      "Al produktionsdata samlet ét sted. Forbind maskiner, systemer og mennesker, så beslutninger bygger på fakta i stedet for mavefornemmelser.",
-    features: ["Dataopsamling i realtid", "Sikker cloud-infrastruktur", "Åbne API-integrationer"],
+      "Alle jeres produktionsdata ét sted. Kobl maskiner, systemer og mennesker sammen, så beslutningerne bygger på fakta i stedet for mavefornemmelser.",
+    features: ["Data opsamlet løbende", "Sikker drift i skyen", "Åbne API'er"],
   },
   {
     id: "production",
     name: "OEE",
     description: "Se hvor tiden går tabt",
     pitch:
-      "Følg OEE i realtid, og forstå præcis hvor produktionstiden forsvinder. Stop med at gætte, og begynd at forbedre.",
-    features: ["Live OEE-dashboards", "Stopårsagsregistrering", "Ordresporing"],
+      "Følg OEE i realtid, og se præcis hvor produktionstiden forsvinder. Så er gætteriet slut, og forbedringerne kan begynde.",
+    features: ["Live OEE på skærmen", "Stopårsager", "Følg ordren"],
   },
   {
     id: "mes",
     name: "Modulært MES",
-    description: "Styr eksekvering i cloud",
+    description: "Styr produktionen i skyen",
     pitch:
-      "OptiCloud samler manufacturing execution, live shopfloor-overblik, sporbarhed og rapportering i ét cloudbaseret MES-lag.",
-    features: ["Manufacturing execution", "Shopfloor-dashboards", "Produktionssporbarhed"],
+      "OptiCloud samler styringen af produktionen, overblikket over gulvet, sporbarheden og rapporteringen i ét MES i skyen.",
+    features: ["Styring af produktionen", "Dashboards til gulvet", "Sporbarhed hele vejen"],
   },
   {
     id: "quality",
     name: "QMS",
-    description: "Byg ansvarlighed ind",
+    description: "Fang fejlen i tide",
     pitch:
-      "Registrer kvalitetsdata ved kilden, og spor hver afvigelse tilbage til maskiner, batches og skift.",
+      "Registrer kvalitetsdata ved kilden, og følg hver afvigelse tilbage til maskine, batch og skift.",
     features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelsesregistrering"],
   },
   {
@@ -145,47 +145,47 @@ const danishModules: ModuleNode[] = [
     name: "Ordrer",
     description: "Forbind ERP og gulv",
     pitch:
-      "ERP kender planen. Maskinerne kender virkeligheden. OptiCloud forbinder de to, så planlæggere får realtidsdata og operatører får den rigtige kontekst.",
-    features: ["Tovejssynk med ERP", "Ordresporing", "Live shopfloor-dashboards"],
+      "ERP kender planen. Maskinerne kender virkeligheden. OptiCloud kobler de to sammen, så planlæggeren får tal fra i dag, og operatøren ved, hvad der er vigtigst.",
+    features: ["Ordrer begge veje", "Følg ordren", "Live overblik på gulvet"],
   },
   {
     id: "maintenance",
     name: "Vedligehold",
-    description: "Løs det før det stopper",
+    description: "Løs det, før det stopper",
     pitch:
-      "Gå fra reaktiv brandslukning til planlagt vedligehold. Reducer uplanlagt nedetid, og forlæng udstyrets levetid.",
-    features: ["Forebyggende planlægning", "Prediktive alarmer", "Mobil opgavestyring"],
+      "Gå fra brandslukning til planlagt vedligehold. Færre uplanlagte stop, og maskinerne holder længere.",
+    features: ["Forebyggende planlægning", "Alarm før nedbruddet", "Opgaverne på mobilen"],
   },
   {
     id: "energy",
     name: "EMS",
     description: "Skær spild væk",
     pitch:
-      "Kobl energiforbrug direkte til produktionen. Find afvigelser og optimeringsmuligheder automatisk.",
-    features: ["Live kWh-sporing", "Sensortelemetri", "Afvigelsesdetektion"],
+      "Kobl energiforbruget direkte sammen med produktionen. Så finder I spildet og det, der stikker ud.",
+    features: ["kWh fulgt live", "Sensordata", "Besked når noget stikker ud"],
   },
   {
     id: "analysis",
     name: "Analyse",
     description: "Fra data til beslutning",
     pitch:
-      "Gør rå produktionsdata til klare rapporter om performance, tab og omkostningsdrivere uden manuelle regneark.",
-    features: ["Automatiske rapporter", "Omkostningsanalyse", "Investeringsgrundlag"],
+      "Gør rå produktionsdata til rapporter, folk kan læse: hvordan det går, hvor I taber, og hvad der koster mest. Uden regneark.",
+    features: ["Rapporter, der laver sig selv", "Hvad tingene koster", "Grundlag for investeringer"],
   },
   {
     id: "iot",
     name: "IoT",
     description: "Få data fra alt",
     pitch:
-      "Forbind maskiner, sensorer og systemer til platformen. Hent data fra PLC'er, IoT-gateways og ældre udstyr uanset protokol.",
-    features: ["Plug-and-play forbindelser", "Protokoluafhængig opsamling", "Edge dataopsamling"],
+      "Kobl maskiner, sensorer og systemer på platformen. Hent data fra PLC'er, IoT-gateways og gammelt udstyr, uanset protokol.",
+    features: ["Nem opkobling", "Uanset protokol", "Opsamling ude ved maskinen"],
   },
   {
     id: "planning",
     name: "Planlægning",
     description: "Planlæg på reel kapacitet",
-    pitch: "Planlæg efter målte kørehastigheder og de timer, maskinen faktisk har til rådighed, og lad gulvet se samme sekvens som planlæggeren.",
-    features: ["Planlægning på reel kapacitet", "Kørehastigheder fra virkelige data", "Omplanlæg uden at starte forfra"],
+    pitch: "Planlæg efter målte kørehastigheder og de timer, maskinen faktisk er ledig. Gulvet ser den samme rækkefølge som planlæggeren.",
+    features: ["Planlæg efter reel kapacitet", "Kørehastigheder fra virkeligheden", "Læg om uden at starte forfra"],
   },
   {
     id: "documents",
@@ -198,7 +198,7 @@ const danishModules: ModuleNode[] = [
     id: "ai-agents",
     name: "AI-agenter",
     description: "Spørg jeres egne data",
-    pitch: "Agenter og copilots, der arbejder på jeres produktionsdata, svarer i almindeligt sprog og holder øje med de mønstre, ingen har tid til at lede efter.",
+    pitch: "Agenter og copiloter, der arbejder på jeres produktionsdata, svarer i almindeligt sprog og holder øje med de mønstre, ingen har tid til at lede efter.",
     features: ["Svar i almindeligt sprog", "Mønstre og afvigelser", "Bygget på jeres egne data"],
   },
 ]
@@ -214,7 +214,7 @@ const platformIntro = {
     eyebrow: "Platform",
     title: "Forbundet fra starten",
     description:
-      "Alle moduler deler data på tværs og skaber ét samlet billede af driften",
+      "Modulerne deler data med hinanden og giver ét samlet billede af driften",
     centerLabel: "OptiCloud platform",
   },
 } as const
@@ -400,13 +400,13 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
       <div className="mx-auto max-w-[1400px] px-6">
         {/* Header. Centred on purpose: it sits above a radial diagram. */}
         <div className="mb-16 text-center lg:mb-20">
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {intro.eyebrow}
           </p>
-          <h2 className="text-3xl font-light leading-[1.1] tracking-tight text-foreground lg:text-5xl">
+          <h2 className="text-3xl font-normal leading-[1.1] tracking-tight text-foreground lg:text-5xl">
             {intro.title}
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mx-auto mt-5 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {intro.description}
           </p>
         </div>
@@ -557,7 +557,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
                   />
                   <div className="min-w-0">
                     <DialogTitle>{dialogModule.name}</DialogTitle>
-                    <DialogDescription className="mt-0.5 font-medium text-foreground/70">
+                    <DialogDescription className="mt-0.5 font-medium text-foreground/82">
                       {dialogModule.description}
                     </DialogDescription>
                   </div>

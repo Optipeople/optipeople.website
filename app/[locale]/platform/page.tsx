@@ -24,7 +24,7 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   da: {
     title: "Platform | OptiPeople",
     description:
-      "Udforsk OptiCloud-platformen — modulært MES, OEE, QMS, EMS, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter i ét samlet billede af driften.",
+      "Se OptiCloud-platformen: MES, OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter i ét samlet billede af driften.",
   },
 }
 
@@ -101,7 +101,7 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "Én platform til hele driften",
-      lede: "OptiCloud forbinder produktion, kvalitet, vedligehold, energi og analyse på ét fælles datagrundlag. Alle moduler arbejder på de samme live data — så det, ét team registrerer, kan alle teams bruge.",
+      lede: "OptiCloud kobler produktion, kvalitet, vedligehold, energi og analyse sammen på ét fælles datagrundlag. Alle moduler arbejder på de samme data, så det, ét team registrerer, kan de andre bruge.",
       cta: "Book en demo",
       jump: "Se modulerne",
     },
@@ -110,12 +110,12 @@ const copy: Record<Locale, PlatformCopy> = {
       items: [
         { metric: "11", label: "Moduler på ét fælles datagrundlag, slået til efterhånden som I får brug for dem" },
         { metric: "1", label: "Struktureret registrering pr. maskine, ordre, batch og skift" },
-        { metric: "Alle", label: "Protokoller og maskinaldre — nye PLC'er såvel som ældre udstyr" },
+        { metric: "Alle", label: "Protokoller og maskinaldre, både nye PLC'er og gammelt udstyr" },
       ],
     },
     intro: {
       title: "De fleste fabrikker har ikke et dataproblem. De har et data-i-stumper-problem.",
-      body: "OEE-tallene ligger i ét system, vedligeholdsloggen i et andet, kvalitet i et ringbind, og energi på en regning, der kommer en måned for sent. Ingen tager fejl, men ingen kan se hele billedet heller. OptiCloud lægger hver eneste af de registreringer på det samme fundament, koblet til de samme maskiner, ordrer og skift — så diskussionen flytter sig fra, hvis tal der er rigtigt, til hvad I gør ved det.",
+      body: "OEE-tallene ligger i ét system, vedligeholdsloggen i et andet, kvaliteten i et ringbind, og energien på en regning, der kommer en måned for sent. Ingen tager fejl, men ingen kan se hele billedet. OptiCloud lægger det hele på det samme fundament, koblet til de samme maskiner, ordrer og skift. Så flytter diskussionen sig fra, hvis tal der er rigtigt, til hvad I gør ved det.",
     },
     steps: {
       title: "Sådan hænger det sammen",
@@ -123,35 +123,35 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Forbind",
           description:
-            "Forbind maskiner, sensorer og systemer via IoT-modulet — PLC'er, gateways og ældre udstyr, uanset protokol og alder.",
+            "Kobl maskiner, sensorer og systemer på gennem IoT-modulet: PLC'er, gateways og gammelt udstyr, uanset protokol og alder.",
         },
         {
           title: "Opsaml",
           description:
-            "Data lander i ét struktureret grundlag, koblet til maskiner, ordrer, batches og skift — ikke spredt ud over systemer og regneark.",
+            "Data lander ét sted, koblet til maskiner, ordrer, batches og skift, i stedet for spredt ud over systemer og regneark.",
         },
         {
           title: "Analysér",
           description:
-            "Følg OEE i realtid, og få automatiske rapporter om performance, tab, kvalitet og energi — de samme tal for alle.",
+            "Følg OEE i realtid, og få rapporter om drift, tab, kvalitet og energi, der laver sig selv. De samme tal for alle.",
         },
         {
           title: "Handl",
           description:
-            "Gør indsigt til handling: opret opgaver, planlæg vedligehold, justér planen, og lad AI-copilots svare på spørgsmål i jeres egne data.",
+            "Gør tallene til handling: opret opgaver, planlæg vedligehold, ret planen til, og lad AI svare på spørgsmål i jeres egne data.",
         },
       ],
     },
     modules: {
       title: "Modulerne",
       subtitle:
-        "Hvert modul løser et konkret driftsbehov, og sammen giver de ét forbundet overblik over fabriksgulvet.",
+        "Hvert modul løser en konkret opgave i driften, og sammen giver de ét samlet overblik over gulvet.",
       cards: moduleIndexLinks("da"),
     },
     visual: {
       eyebrow: "Produktvisning",
-      title: "De samme live data, dér hvor beslutningen bliver taget",
-      body: "På gulvet er det et operatørpanel. På kontoret er det en rapport. På mødet er det tallet, ingen sætter spørgsmålstegn ved — fordi det hele kommer fra den samme registrering.",
+      title: "De samme tal, dér hvor beslutningen bliver truffet",
+      body: "På gulvet er det et operatørpanel. På kontoret er det en rapport. På mødet er det tallet, ingen sætter spørgsmålstegn ved, fordi det hele kommer fra den samme registrering.",
     },
     logos: "Brugt af produktionsvirksomheder i hele Norden",
   },
@@ -191,13 +191,13 @@ export default async function PlatformPage({ params }: PageProps) {
           }}
         />
         <div className="px-[var(--edge)]">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.hero.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t.hero.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.hero.lede}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -206,7 +206,7 @@ export default async function PlatformPage({ params }: PageProps) {
             </Button>
             <Link
               href="#modules"
-              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              className="group inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -219,7 +219,7 @@ export default async function PlatformPage({ params }: PageProps) {
 
       {/* Proof strip, on hairlines like the deep-dive template. */}
       <section className="px-[var(--edge)] pt-16 lg:pt-20">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {t.proof.title}
         </p>
         <dl className="mt-6 grid grid-cols-1 border-y border-black/[0.08] sm:grid-cols-3">
@@ -232,10 +232,10 @@ export default async function PlatformPage({ params }: PageProps) {
                   : ""
               } ${i < t.proof.items.length - 1 ? "sm:pr-8 lg:pr-12" : ""}`}
             >
-              <dt className="text-4xl font-extralight leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
                 {item.metric}
               </dt>
-              <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/55">
+              <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/70">
                 {item.label}
               </dd>
             </div>
@@ -246,10 +246,10 @@ export default async function PlatformPage({ params }: PageProps) {
       {/* Intro — the argument the page was previously missing entirely. */}
       <section className="px-[var(--edge)] py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
-          <h2 className="text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
+          <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {t.intro.title}
           </h2>
-          <p className="text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {t.intro.body}
           </p>
         </div>
@@ -260,7 +260,7 @@ export default async function PlatformPage({ params }: PageProps) {
 
       {/* Steps — numbered rail on hairlines, replacing the centred 01–04 row. */}
       <section className="px-[var(--edge)] py-20 lg:py-28">
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.steps.title}
         </h2>
         <ol className="mt-10 grid grid-cols-1 border-t border-black/[0.08] sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
@@ -275,13 +275,13 @@ export default async function PlatformPage({ params }: PageProps) {
                 i > 0 ? "lg:border-l" : ""
               }`}
             >
-              <span className="text-sm font-medium tabular-nums text-foreground/35">
+              <span className="text-sm font-medium tabular-nums text-foreground/50">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-5 text-xl font-light tracking-tight text-foreground lg:text-2xl">
+              <h3 className="mt-5 text-xl font-normal tracking-tight text-foreground lg:text-2xl">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/72">
                 {step.description}
               </p>
             </li>
@@ -298,12 +298,12 @@ export default async function PlatformPage({ params }: PageProps) {
           grid previews its destinations instead of repeating one grey box. */}
       <section
         id="modules"
-        className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-28"
+        className="scroll-mt-24 px-[var(--edge)] py-20 lg:py-28"
       >
-        <h2 className="max-w-2xl text-3xl font-light leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.modules.title}
         </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/60 lg:text-lg">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/72 lg:text-lg">
           {t.modules.subtitle}
         </p>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-5">
@@ -315,14 +315,14 @@ export default async function PlatformPage({ params }: PageProps) {
               style={{ backgroundColor: getThemeForHref(card.href).tint }}
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl font-light tracking-tight text-foreground lg:text-2xl">
+                <h3 className="text-xl font-normal tracking-tight text-foreground lg:text-2xl">
                   {card.title}
                 </h3>
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+              <p className="mt-3 text-sm leading-relaxed text-foreground/78">
                 {card.description}
               </p>
             </Link>
@@ -337,13 +337,13 @@ export default async function PlatformPage({ params }: PageProps) {
       >
         <div className="px-[var(--edge)]">
           <div className="max-w-2xl">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/45">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/65">
               {t.visual.eyebrow}
             </p>
-            <h2 className="mt-4 text-3xl font-light leading-[1.15] tracking-tight lg:text-4xl">
+            <h2 className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight lg:text-4xl">
               {t.visual.title}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-white/65 lg:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-white/78 lg:text-lg">
               {t.visual.body}
             </p>
           </div>
@@ -361,11 +361,11 @@ export default async function PlatformPage({ params }: PageProps) {
 
       {/* Social proof, the same wall the homepage and newsletter use. */}
       <section className="px-[var(--edge)] pt-20 lg:pt-28">
-        <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+        <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {t.logos}
         </p>
       </section>
-      <LogoWall logos={customerLogos} className="pb-4 pt-10 lg:pt-12" />
+      <LogoWall logos={customerLogos} className="pb-20 pt-10 lg:pb-28 lg:pt-12" />
     </main>
   )
 }

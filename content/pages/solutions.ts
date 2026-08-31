@@ -117,57 +117,57 @@ const solutions: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Løsninger til produktion | OptiPeople",
         metaDescription:
-          "OptiPeople hjælper produktionsvirksomheder med realtidsdata, OEE, kvalitet, energi og vedligehold.",
+          "OptiPeople giver produktionsvirksomheder tal i realtid på OEE, kvalitet, energi og vedligehold.",
         eyebrow: "Til produktionsvirksomheder",
         heroTitle: "Kend din fabrik i realtid",
         heroBody:
-          "Forbind maskiner, processer og mennesker i ét driftsoverblik, så teamet kan handle hurtigere og styre på fakta.",
+          "Vi kobler maskiner, processer og mennesker sammen i ét overblik, så teamet kan handle hurtigere og styre efter fakta.",
         primaryLabel: "Book en demo",
-        introTitle: "Fabrikker forbedres i hverdagen",
+        introTitle: "Fabrikker bliver bedre i hverdagen",
         introBody:
-          "Når data bliver synlig dér hvor beslutningerne træffes, bliver tavlemøder, prioritering og forbedringer mere konkrete.",
-        capabilitiesTitle: "Det produktionshold får",
+          "Når tallene er synlige dér, hvor beslutningerne bliver truffet, bliver tavlemødet, prioriteringen og forbedringerne konkrete.",
+        capabilitiesTitle: "Det får produktionsholdet",
         features: [
           {
             icon: Factory,
-            title: "Shopfloor-synlighed",
-            description: "Live status, output og stopårsager på maskiner og linjer.",
+            title: "Overblik over gulvet",
+            description: "Status, produceret antal og stopårsager på maskiner og linjer, mens det sker.",
           },
           {
             icon: Gauge,
             title: "OEE og tab",
-            description: "Forstå hvor tid, kvalitet og performance går tabt.",
+            description: "Se hvor tiden, kvaliteten og farten går tabt.",
           },
           {
             icon: Users,
             title: "Fælles fakta",
-            description: "Operatører, ledere og direktører arbejder ud fra samme data.",
+            description: "Operatører, ledere og direktion arbejder ud fra de samme tal.",
           },
         ],
         visualTitle: "Fra maskinsignal til forbedring",
         visualBody:
-          "Opticloud samler data og gør den synlig i dashboards, rapporter og daglige arbejdsgange.",
+          "Opticloud samler tallene og viser dem på dashboards, i rapporter og i det daglige arbejde.",
         visualImage: "/images/dashboard2.png",
         visualAlt: "Produktionsdashboard",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "15-25%", label: "OEE-forbedring" },
+          { metric: "15-25%", label: "Bedre OEE" },
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
-          { metric: "Live", label: "Beslutningsgrundlag" },
+          { metric: "Live", label: "Tal at beslutte ud fra" },
         ],
         stepsTitle: "Sådan kommer I i gang",
         steps: [
           {
             title: "Kortlæg",
-            description: "Vi finder de tab og datakilder, der betyder mest.",
+            description: "Vi finder de tab og de datakilder, der betyder mest.",
           },
           {
             title: "Forbind",
-            description: "Maskiner og systemer kobles på uden at forstyrre driften.",
+            description: "Maskiner og systemer bliver koblet på, uden at driften bliver forstyrret.",
           },
           {
             title: "Forbedr",
-            description: "Teamet bruger data i hverdagen til målrettede handlinger.",
+            description: "Teamet bruger tallene i hverdagen til at rette de rigtige steder.",
           },
         ],
         darkHero: true,
@@ -264,59 +264,59 @@ const solutions: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Løsninger til OEM'er | OptiPeople",
         metaDescription:
-          "Gør maskiner til forbundne platforme med remote diagnostics, performance analytics og digitale servicepakker.",
+          "Gør maskinerne forbundne: fejlfinding på afstand, indblik i hvordan de kører, og service, I kan tage penge for.",
         eyebrow: "Til OEM'er og maskinbyggere",
         heroTitle: "Gør maskiner til platforme",
         heroBody:
-          "Lever forbundne maskiner med indbygget indsigt, proaktiv support og mulighed for digitale serviceindtægter.",
+          "Lever maskiner, der er koblet på, med indblikket bygget ind, hjælp før kunden ringer, og service, I kan sælge.",
         primaryLabel: "Book en demo",
-        introTitle: "Det er ikke længere nok at sælge maskiner",
+        introTitle: "Det er ikke længere nok at sælge maskinen",
         introBody:
-          "Kunder forventer remote support, prediktive indsigter og digitale services. OptiPeople giver infrastrukturen til at eje relationen efter salget.",
-        capabilitiesTitle: "Alt til forbundne maskiner",
+          "Kunderne forventer hjælp på afstand, besked før noget går galt, og digitale services. Vi leverer det, der skal til, for at I beholder kontakten efter salget.",
+        capabilitiesTitle: "Alt til maskiner, der er koblet på",
         features: [
           {
             icon: BellRing,
-            title: "Fjerndiagnostik",
-            description: "Find årsager og hjælp kunder før et servicebesøg.",
+            title: "Fejlfinding på afstand",
+            description: "Find årsagen og hjælp kunden, før nogen sætter sig ud i bilen.",
           },
           {
             icon: TrendingUp,
-            title: "Performanceanalyse",
+            title: "Se hvordan maskinen kører",
             description:
-              "Giv kunder indsigt i maskinbrug, output og forbedringsmuligheder.",
+              "Giv kunden indblik i, hvordan maskinen bliver brugt, hvad den laver, og hvor der er noget at hente.",
           },
           {
             icon: RefreshCw,
-            title: "Digitale servicepakker",
+            title: "Service som abonnement",
             description:
-              "Pak overvågning, alarmer og rapportering som abonnementsservices.",
+              "Pak overvågning, alarmer og rapporter sammen til en service, kunden betaler for.",
           },
         ],
-        visualTitle: "Jeres maskiner, jeres brand, én platform",
+        visualTitle: "Jeres maskiner, jeres navn, én platform",
         visualBody:
-          "Et portalsetup hvor kunder ser live maskindata, servicehistorik og performance.",
+          "En portal, hvor kunden ser maskinens tal, servicehistorikken og hvordan den kører.",
         visualImage: "/images/OpticloudOPSingle.jpg",
         visualAlt: "Maskinportal med eget brand",
-        metricsTitle: "Hvad forbundne maskinbyggere opnår",
+        metricsTitle: "Det opnår maskinbyggere, der kobler maskinerne på",
         metrics: [
-          { metric: "3x", label: "Vækst i aftermarket-potentiale" },
-          { metric: "60%", label: "Hurtigere problemløsning" },
-          { metric: "35%", label: "Stærkere kundefastholdelse" },
+          { metric: "3x", label: "Større forretning på eftermarkedet" },
+          { metric: "60%", label: "Hurtigere løsning på problemerne" },
+          { metric: "35%", label: "Flere kunder bliver hængende" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
-            title: "Integrér",
-            description: "Vi kobler platformen til maskinens styring og data.",
+            title: "Kobl på",
+            description: "Vi kobler platformen på maskinens styring og data.",
           },
           {
-            title: "Deploy",
-            description: "Maskiner leveres med Opticloud som digitalt lag.",
+            title: "Lever",
+            description: "Maskinerne bliver leveret med Opticloud som det digitale lag.",
           },
           {
-            title: "Monetisér",
-            description: "Data og support pakkes som serviceydelser kunder betaler for.",
+            title: "Tjen på det",
+            description: "Data og support bliver til ydelser, kunden betaler for.",
           },
         ],
         darkHero: true,
@@ -416,61 +416,61 @@ const solutions: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Serviceløsninger | OptiPeople",
         metaDescription:
-          "Giv serviceholdet synlighed på maskinsundhed, usage-based maintenance og remote diagnostics.",
-        eyebrow: "Til service og aftermarket",
-        heroTitle: "Løs problemer før kunden mærker dem",
+          "Giv serviceholdet indblik i, hvordan maskinerne har det, vedligehold efter brug, og fejlfinding på afstand.",
+        eyebrow: "Til service og eftermarked",
+        heroTitle: "Løs problemet, før kunden mærker det",
         heroBody:
-          "Planlæg vedligehold på fakta, reducer akutte udkald, og gør service til en konkurrencefordel.",
+          "Planlæg vedligeholdet efter fakta, skær de akutte udkald ned, og gør service til noget, I vinder på.",
         primaryLabel: "Book en demo",
-        introTitle: "Reaktiv service er dyrt og drænende",
+        introTitle: "At rykke ud, når det brænder, er dyrt",
         introBody:
-          "Teknikere skal ikke bruge tiden på at gætte. Med maskindata, alarmer og historik kan service planlægges, før fejl bliver synlige for kunden.",
-        capabilitiesTitle: "Alt til proaktiv service",
+          "Teknikerne skal ikke bruge tiden på at gætte. Med maskindata, alarmer og historik kan servicen planlægges, før kunden opdager, at der er noget galt.",
+        capabilitiesTitle: "Alt til service på forkant",
         features: [
           {
             icon: HeartPulse,
-            title: "Maskinsundhed",
+            title: "Hvordan har maskinen det",
             description:
-              "Følg vibration, temperatur, energi og driftstimer i realtid.",
+              "Følg vibration, temperatur, energi og driftstimer, mens det sker.",
           },
           {
             icon: MapPin,
-            title: "Fjerndiagnostik",
+            title: "Fejlfinding på afstand",
             description:
-              "Diagnosticér fejl eksternt og mød op med de rigtige dele.",
+              "Find fejlen hjemmefra, og mød op med de rigtige dele i bilen.",
           },
           {
             icon: FileText,
             title: "Servicerapporter",
             description:
-              "Lever dataunderbyggede rapporter og design serviceaftaler med sikkerhed.",
+              "Lever rapporter med tallene bag, og læg serviceaftalerne på et sikkert grundlag.",
           },
         ],
-        visualTitle: "Ét overblik over alle maskiner I servicerer",
+        visualTitle: "Ét overblik over alle de maskiner, I servicerer",
         visualBody:
-          "Maskinsundhed, servicehistorik og kommende vedligehold på tværs af installeret base.",
+          "Hvordan maskinerne har det, hvad der er lavet på dem, og hvad der venter forude, på tværs af alt det, I har ude at køre.",
         visualImage: "/images/report-mockrup-3.png",
-        visualAlt: "Maskinsundhedsdashboard",
+        visualAlt: "Dashboard over maskinernes tilstand",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "50%", label: "Færre akutte servicekald" },
-          { metric: "40 timer", label: "Sparet årligt pr. maskine" },
-          { metric: "30%", label: "Mere servicekontraktværdi" },
+          { metric: "50%", label: "Færre akutte udkald" },
+          { metric: "40 timer", label: "Sparet pr. maskine om året" },
+          { metric: "30%", label: "Mere værdi i serviceaftalerne" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
             title: "Forbind",
-            description: "Sensorer og maskindata samles i et serviceoverblik.",
+            description: "Sensorer og maskindata bliver samlet i ét serviceoverblik.",
           },
           {
-            title: "Overvåg",
-            description: "Alarmer og trends viser, hvor teamet skal reagere.",
+            title: "Hold øje",
+            description: "Alarmer og udviklingen viser, hvor teamet skal sætte ind.",
           },
           {
             title: "Forebyg",
             description:
-              "Planlæg vedligehold efter faktisk brug og løs problemer remote når muligt.",
+              "Planlæg vedligeholdet efter, hvor meget maskinen har kørt, og løs det på afstand, når det kan lade sig gøre.",
           },
         ],
         darkHero: true,

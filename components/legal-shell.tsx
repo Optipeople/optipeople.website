@@ -31,7 +31,7 @@ export function LegalShell({
           <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
             {eyebrow}
           </p>
-          <h1 className="text-4xl sm:text-5xl font-light text-foreground tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-normal text-foreground tracking-tight leading-tight">
             {title}
           </h1>
           <p className="mt-6 text-base text-muted-foreground">

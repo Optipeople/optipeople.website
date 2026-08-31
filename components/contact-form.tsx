@@ -57,7 +57,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="py-12 text-center">
-        <h2 className="mb-4 text-2xl font-light">{t("successTitle")}</h2>
+        <h2 className="mb-4 text-2xl font-normal">{t("successTitle")}</h2>
         <p className="text-base text-muted-foreground">{t("successBody")}</p>
       </div>
     )

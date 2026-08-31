@@ -52,7 +52,7 @@ The page has three distinct zones:
   <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
     Cases
   </p>
-  <h1 className="text-4xl lg:text-5xl font-light text-foreground tracking-tight">
+  <h1 className="text-4xl lg:text-5xl font-normal text-foreground tracking-tight">
     Stories from the field
   </h1>
 </div>
@@ -60,7 +60,7 @@ The page has three distinct zones:
 
 **Guidelines:**
 - Eyebrow: `text-sm font-medium tracking-wide uppercase text-muted-foreground`, categorizes the page
-- Title: `text-4xl lg:text-5xl font-light tracking-tight`, consistent with homepage section headings
+- Title: `text-4xl lg:text-5xl font-normal tracking-tight`, consistent with homepage section headings
 - `mb-16` separates header from content grid
 - No description paragraph, the title is self-explanatory, keep it minimal
 
@@ -75,10 +75,10 @@ The first post on each page gets a prominent 2-column layout:
       <Image ... className="object-cover transition-transform duration-500 group-hover:scale-105" />
     </div>
     <div className="space-y-4">
-      <h2 className="text-2xl lg:text-3xl font-medium tracking-tight group-hover:text-foreground/80 transition-colors">
+      <h2 className="text-2xl lg:text-3xl font-medium tracking-tight group-hover:text-foreground/88 transition-colors">
         {post.title}
       </h2>
-      <div className="flex items-center gap-2 text-sm font-medium text-foreground/70 pt-2">
+      <div className="flex items-center gap-2 text-sm font-medium text-foreground/82 pt-2">
         Read case study
         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
       </div>
@@ -91,7 +91,7 @@ The first post on each page gets a prominent 2-column layout:
 - Image on left, text on right (`lg:grid-cols-2`)
 - Image aspect: `aspect-[4/3]` mobile, `lg:aspect-[16/10]` desktop
 - Image: `rounded-2xl` with standard card shadow and border
-- Title uses `font-medium` (exception to the font-light heading rule, post titles need weight for scannability)
+- Title uses `font-medium` (exception to the font-normal heading rule, post titles need weight for scannability)
 - "Read case study" link with arrow that translates on hover, subtle call to action
 - Entire card is a link (`group block`), the hover state is on the group
 
@@ -108,7 +108,7 @@ All posts after the featured one, separated by a subtle divider:
           <Image ... className="object-cover transition-transform duration-500 group-hover:scale-105" />
         </div>
         <div className="space-y-2">
-          <h3 className="text-lg font-medium tracking-tight group-hover:text-foreground/80 transition-colors line-clamp-2">
+          <h3 className="text-lg font-medium tracking-tight group-hover:text-foreground/88 transition-colors line-clamp-2">
             {post.title}
           </h3>
         </div>
@@ -159,9 +159,9 @@ Appears only when total posts exceed the page limit (10 posts per page).
 
 **Guidelines:**
 - Centered, `mt-16` from last content
-- Previous/Next: `text-sm font-medium text-foreground/70 hover:text-foreground`
+- Previous/Next: `text-sm font-medium text-foreground/82 hover:text-foreground`
 - Page numbers: `w-10 h-10 rounded-lg`, active page `bg-foreground text-background`
-- Disabled state: `text-foreground/30 cursor-not-allowed`
+- Disabled state: `text-foreground/40 cursor-not-allowed`
 - Uses `aria-label="Pagination"` for accessibility
 - Page 1 links to `/blog` (no query param), subsequent pages to `/blog?page=N`
 

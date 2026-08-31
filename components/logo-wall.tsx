@@ -25,7 +25,7 @@ export function LogoWall({
       <div className="mx-auto w-full max-w-7xl px-8">
         {/* Header - matching hero typography */}
         {title && (
-          <h2 className="text-4xl lg:text-5xl font-light text-foreground text-center">
+          <h2 className="text-4xl lg:text-5xl font-normal text-foreground text-center">
             {title}
           </h2>
         )}

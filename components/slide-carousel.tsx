@@ -88,6 +88,9 @@ type SlideCarouselProps = {
   ariaLabel: string
   className?: string
   defaultLayout?: SlideLayout // Default layout if not specified per slide
+  // Opt in to remembering the scroll position across navigations. Must be
+  // unique per slider, it keys the sessionStorage entry.
+  storageKey?: string
 }
 
 // ── Shared layout system (Langdock-style) ────────────────────────────────────
@@ -111,13 +114,57 @@ const NARROW_ITEM = "basis-[88%] sm:basis-[420px] lg:basis-[380px]"
 // padded by `--edge` on both sides, the card sits centered on that same column.
 const WIDE_ITEM = "basis-[90%] lg:basis-[calc(100vw-var(--edge)*2)]"
 
+// ── Slider position memory ─────────────────────────────────────────────────
+// Opening a card leaves the page, and coming back remounts the slider, which
+// would otherwise start over on the first card. A slider given a `storageKey`
+// remembers its snap index for the tab session and opens on it again, so
+// "scroll to EMS, open EMS, press back" lands on EMS rather than on Dashboard.
+const POSITION_KEY_PREFIX = "optipeople:slider:"
+
+function readSliderPosition(
+  storageKey: string | undefined,
+  lastIndex: number
+): number {
+  // This runs during render, but the value only ever feeds embla's startIndex,
+  // never the markup, so the server (no sessionStorage) and the hydrating
+  // client are free to disagree on it.
+  if (!storageKey || typeof window === "undefined") return 0
+  try {
+    const stored = Number(
+      window.sessionStorage.getItem(POSITION_KEY_PREFIX + storageKey)
+    )
+    if (!Number.isInteger(stored)) return 0
+    // The slide count can change between visits, and a narrower window trims
+    // snaps off the end, so never trust a stored index blindly.
+    return Math.min(Math.max(stored, 0), Math.max(lastIndex, 0))
+  } catch {
+    return 0 // Storage blocked (private mode, cookie settings).
+  }
+}
+
+function writeSliderPosition(storageKey: string, index: number): void {
+  try {
+    window.sessionStorage.setItem(
+      POSITION_KEY_PREFIX + storageKey,
+      String(index)
+    )
+  } catch {
+    // Position memory is a nicety, a blocked write is not worth surfacing.
+  }
+}
+
 export function SlideCarousel({
   slides,
   navigationType,
   ariaLabel,
   className = "",
   defaultLayout = "grid",
+  storageKey,
 }: SlideCarouselProps) {
+  // Read once per mount: a later render must not yank the slider backwards.
+  const [startIndex] = useState(() =>
+    readSliderPosition(storageKey, slides.length - 1)
+  )
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
   const [canScrollPrev, setCanScrollPrev] = useState(false)
@@ -149,6 +196,7 @@ export function SlideCarousel({
       setCurrent(Math.max(0, Math.min(snapIndex, slides.length - 1)))
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
+      if (storageKey) writeSliderPosition(storageKey, snapIndex)
     }
 
     updateCurrent()
@@ -165,7 +213,7 @@ export function SlideCarousel({
       api.off("select", updateCurrent)
       api.off("settle", onSettle)
     }
-  }, [api, slides.length])
+  }, [api, slides.length, storageKey])
 
   const scrollTo = (index: number, fromTabClick = false) => {
     isTabClickRef.current = fromTabClick
@@ -271,7 +319,7 @@ export function SlideCarousel({
                 className={`cursor-pointer relative z-10 px-4 py-2.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0 ${
                   current === index
                     ? "text-white"
-                    : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                    : "text-foreground/82 hover:text-foreground hover:bg-foreground/5"
                 }`}
                 aria-label={`Switch to ${slide.tab ?? slide.title}`}
               >
@@ -348,6 +396,7 @@ export function SlideCarousel({
             slidesToScroll: 1,
             skipSnaps: true,
             duration: 18,
+            startIndex,
           }}
           aria-label={ariaLabel}
         >
@@ -391,7 +440,7 @@ export function SlideCarousel({
                           <div className="grid h-full grid-cols-2 grid-rows-[2fr_1fr] gap-2">
                             {/* Title block */}
                             <div className="min-w-0 h-full bg-slate-100 rounded-2xl p-6 flex flex-col justify-center">
-                              <h3 className="text-5xl lg:text-5xl tracking-tight leading-[1.2] font-extralight">
+                              <h3 className="text-5xl lg:text-5xl tracking-tight leading-[1.2] font-normal">
                                 {slide.title}
                               </h3>
                             </div>
@@ -423,7 +472,7 @@ export function SlideCarousel({
 
                             {/* Subtitle block */}
                             <div className="min-w-0 h-full bg-slate-100 rounded-2xl p-6 flex flex-col justify-center">
-                              <p className="text-base text-foreground/80">
+                              <p className="text-base text-foreground/88">
                                 {slide.description}
                               </p>
                             </div>
@@ -476,10 +525,10 @@ export function SlideCarousel({
 
                             {/* Content overlay */}
                             <div className="relative z-10 h-full flex flex-col justify-center p-6 sm:p-12 lg:p-20 max-w-[85%] sm:max-w-[60%]">
-                              <h3 className={`text-2xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.2] font-extralight mb-3 sm:mb-4 ${slide.overlay === "light" ? "text-black" : "text-white"}`}>
+                              <h3 className={`text-2xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.2] font-normal mb-3 sm:mb-4 ${slide.overlay === "light" ? "text-black" : "text-white"}`}>
                                 {slide.title}
                               </h3>
-                              <p className={`text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 ${slide.overlay === "light" ? "text-black/80" : "text-white/90"}`}>
+                              <p className={`text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 ${slide.overlay === "light" ? "text-black/88" : "text-white/95"}`}>
                                 {slide.description}
                               </p>
                               <div>
@@ -594,7 +643,7 @@ export function SlideCarousel({
                                   className={`mt-2 max-w-[18rem] text-sm leading-relaxed ${
                                     slide.textTone === "dark"
                                       ? "text-slate-900/70"
-                                      : "text-white/70"
+                                      : "text-white/82"
                                   }`}
                                 >
                                   {slide.description}
@@ -636,7 +685,7 @@ export function SlideCarousel({
                               <p
                                 className={`mt-2 max-w-[15rem] text-sm leading-relaxed ${
                                   slide.textTone === "light"
-                                    ? "text-white/70"
+                                    ? "text-white/82"
                                     : "text-slate-600"
                                 }`}
                               >

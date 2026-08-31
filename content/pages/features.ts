@@ -86,68 +86,68 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Produktionseffektivitet | OptiPeople",
         metaDescription:
-          "Følg OEE i realtid, se hvor produktionstiden går tabt, og forstå performance på tværs af skift, linjer og maskiner.",
+          "Følg OEE i realtid, se hvor produktionstiden går tabt, og se hvordan det går på tværs af skift, linjer og maskiner.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Produktionseffektivitet",
         heroTitle: "Se hvor produktionstiden går tabt",
         heroBody:
-          "Følg OEE live og forstå performance på tværs af skift, linjer og maskiner baseret på reelle produktionsdata.",
+          "Følg OEE live, og se hvordan det går på tværs af skift, linjer og maskiner. Det bygger på rigtige tal fra produktionen, ikke på fornemmelser.",
         heroImage: "/images/report-mockup4.png",
         heroImageAlt: "OptiPeople dashboards til OEE og produktion",
-        valueTitle: "Produktionsdata skal arbejde lige så hårdt som teamet",
+        valueTitle: "Jeres tal skal arbejde lige så hårdt som jeres folk",
         valueBody:
-          "Når tal samles efter dagen er slut, er det for sent at handle. Produktionseffektivitet giver et live, præcist billede mens beslutninger stadig kan gøre en forskel.",
-        capabilitiesTitle: "Fra rå signaler til reel forståelse",
+          "Bliver tallene først samlet, når dagen er slut, er det for sent at gøre noget ved dem. Her kan I se, hvordan det går lige nu, mens I stadig kan nå at rette op.",
+        capabilitiesTitle: "Fra maskinsignal til noget, I kan bruge",
         capabilitiesBody:
-          "Hver maskine fortæller en historie. Vi oversætter den til tal, tidslinjer og sammenligninger teamet kan bruge.",
+          "Hver maskine fortæller noget. Vi laver det om til tal, tidslinjer og sammenligninger, teamet kan handle på.",
         capabilities: [
           {
             title: "Live OEE i ét overblik",
             description:
-              "Availability, performance og quality beregnes automatisk fra maskinsignaler og opdateres mens produktionen kører.",
+              "Tilgængelighed, ydelse og kvalitet bliver regnet ud af maskinernes egne signaler og opdateret, mens produktionen kører.",
             image: "/images/report-mockup1.png",
             imageAlt: "OEE-dashboard",
           },
           {
-            title: "Se hvad der skete time for time",
+            title: "Se hvad der skete, time for time",
             description:
-              "Farvekodede tidslinjer viser kørsel, stop, omstilling og idle på hver maskine.",
+              "Farvekodede tidslinjer viser, hvornår hver maskine kørte, stod stille, blev stillet om eller ventede.",
             image: "/images/dashboard1.png",
             imageAlt: "Produktionstidslinje",
           },
           {
             title: "Sammenlign skift, linjer og maskiner",
             description:
-              "Side-by-side performance gør forskelle tydelige og hjælper med at kopiere bedste praksis.",
+              "Se tallene side om side. Så bliver det tydeligt, hvor forskellene er, og hvad der er værd at gøre efter.",
             image: "/images/report-mockup2.png",
             imageAlt: "Rapport med sammenligning af skift",
           },
         ],
-        showcaseTitle: "Det fulde billede fra gulv til ledelse",
+        showcaseTitle: "Hele billedet, fra gulvet til ledelsen",
         showcaseBody:
-          "Operatører ser maskinen. Team leads ser linjen. Ledelsen ser fabrikken. Samme data, rigtigt detaljeniveau.",
+          "Operatøren ser sin maskine. Teamlederen ser sin linje. Ledelsen ser fabrikken. De samme tal, bare i det niveau, man har brug for.",
         showcaseImage: "/images/report-mockup5.png",
         showcaseAlt: "Rapportoverblik med OEE",
         metrics: [
-          { metric: "15-25%", label: "OEE-forbedring det første år" },
-          { metric: "2 timer", label: "Sparet dagligt på rapportering" },
-          { metric: "< 1 min", label: "Fra maskinhændelse til dashboard" },
+          { metric: "15-25%", label: "Bedre OEE det første år" },
+          { metric: "2 timer", label: "Sparet på rapportering hver dag" },
+          { metric: "< 1 min", label: "Fra det sker på maskinen, til det står på skærmen" },
         ],
         related: [
           {
-            title: "Stopårsagsregistrering",
-            description: "Opsaml nedetidsårsager ved kilden.",
+            title: "Stopårsager",
+            description: "Registrer årsagen til stoppet ude ved maskinen.",
             href: "/features/stop-cause-registration",
           },
           {
             title: "Analyse og rapportering",
-            description: "Gør produktionsdata til klare rapporter.",
+            description: "Gør produktionsdata til rapporter, folk kan læse.",
             href: "/features/analysis-and-reporting",
           },
           {
             title: "Kvalitetsstyring",
-            description: "Registrer kvalitetsdata dér hvor arbejdet sker.",
+            description: "Registrer kvalitetsdata dér, hvor arbejdet sker.",
             href: "/features/quality-management",
           },
         ],
@@ -236,55 +236,55 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
       },
       da: {
-        metaTitle: "Stopårsagsregistrering | OptiPeople",
+        metaTitle: "Stopårsager | OptiPeople",
         metaDescription:
-          "Gør nedetid synlig ved kilden med operatørregistrering direkte ved maskinen.",
+          "Gør nedetiden synlig, dér hvor den sker. Operatøren registrerer stoppet direkte på maskinen.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
-        eyebrow: "Stopårsagsregistrering",
-        heroTitle: "Gør nedetid synlig ved kilden",
+        eyebrow: "Stopårsager",
+        heroTitle: "Gør nedetiden synlig, dér hvor den sker",
         heroBody:
-          "Operatører registrerer stop direkte ved maskinen, mens konteksten er frisk. I får rene data, der kan handles på.",
+          "Operatøren registrerer stoppet direkte på maskinen, mens det stadig står klart, hvad der skete. Så har I rene tal, der er til at handle på.",
         heroImage: "/images/Stop-Screen-Select.png",
         heroImageAlt: "Skærm til valg af stopårsag",
-        valueTitle: "I kan ikke forbedre det, I ikke kan se",
+        valueTitle: "I kan ikke lave om på det, I ikke kan se",
         valueBody:
-          "Uden rene stopdata bliver forbedringsprojekter styret af fornemmelser. Stopårsagsregistrering fanger hvert stop, hver årsag og hver varighed.",
-        capabilitiesTitle: "Fra maskinstop til struktureret data på sekunder",
+          "Uden ordentlige stopdata bliver forbedringer styret af fornemmelser. Her bliver hvert stop registreret: hvad der skete, hvorfor, og hvor længe det varede.",
+        capabilitiesTitle: "Fra maskinstop til brugbare tal på få sekunder",
         capabilitiesBody:
-          "Et enkelt flow der gør hvert stop til viden, produktionen kan lære af.",
+          "Ét enkelt forløb, der gør hvert stop til noget, produktionen kan lære af.",
         capabilities: [
           {
-            title: "Maskinen siger det først",
+            title: "Maskinen siger til først",
             description:
-              "Når maskinen stopper, bliver operatøren guidet til at registrere årsagen med det samme.",
+              "Når maskinen stopper, bliver operatøren bedt om at sætte en årsag på med det samme.",
             image: "/images/Stop-Screen-Red.png",
             imageAlt: "Rød stopskærm",
           },
           {
             title: "Hvert stop får en årsag",
             description:
-              "Operatører vælger fra maskinspecifikke årsager, så data bliver struktureret.",
+              "Operatøren vælger fra en liste, der passer til lige den maskine. Så bliver tallene til at regne på bagefter.",
             image: "/images/operatorpanel2.png",
             imageAlt: "Stoplog på operatørpanel",
           },
           {
-            title: "Et komplet skiftbillede",
+            title: "Hele skiftet på én tidslinje",
             description:
-              "Tidslinjer viser stop, varighed og mønstre på tværs af skift og maskiner.",
+              "Tidslinjen viser stoppene, hvor længe de varede, og hvad der går igen på tværs af skift og maskiner.",
             image: "/images/Stop-Screen-Timeline.png",
             imageAlt: "Tidslinje over stop",
           },
         ],
-        showcaseTitle: "Stopdata føder det større billede",
+        showcaseTitle: "Stopdata bliver til det store billede",
         showcaseBody:
-          "Hver registrering flyder ind i produktionsdashboardet, så performance og årsager ses samlet.",
+          "Hver registrering går videre til produktionsdashboardet, så I ser tallene og årsagerne samlet ét sted.",
         showcaseImage: "/images/dashboard1.png",
         showcaseAlt: "Dashboard med stopdata",
         metrics: [
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
-          { metric: "95%+", label: "Stopårsager fanget" },
-          { metric: "< 10s", label: "Gennemsnitlig registreringstid" },
+          { metric: "95%+", label: "Af stoppene bliver forklaret" },
+          { metric: "< 10s", label: "Tager én registrering" },
         ],
         related: [
           {
@@ -299,7 +299,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           },
           {
             title: "Analyse og rapportering",
-            description: "Rapportér på tab og forbedringer.",
+            description: "Se hvad stoppene koster, og om det bliver bedre.",
             href: "/features/analysis-and-reporting",
           },
         ],
@@ -384,63 +384,63 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Vedligehold og opgaver | OptiPeople",
         metaDescription:
-          "Planlæg og udfør forebyggende vedligehold baseret på brug, tilstand og opgavestatus.",
+          "Planlæg og udfør vedligehold efter, hvor meget maskinen har kørt, hvordan den har det, og hvad der allerede er lavet.",
         parentLabel: "Vedligehold",
         parentHref: "/modules/maintenance",
         eyebrow: "Vedligehold og opgaver",
         heroTitle: "Gør vedligehold planlagt og synligt",
         heroBody:
-          "Opret opgaver, tildel ansvar, og planlæg service ud fra faktisk brug og maskintilstand.",
+          "Opret opgaver, sæt navn på dem, og planlæg service efter, hvor meget maskinen faktisk har kørt.",
         heroImage: "/images/taskapp2.png",
         heroImageAlt: "Vedligeholdsopgaver",
-        valueTitle: "Vedligehold fungerer bedst før nedbruddet",
+        valueTitle: "Vedligehold virker bedst, før maskinen bryder ned",
         valueBody:
-          "Når driftstimer, alarmer og opgaver bor samme sted, kan teknikere prioritere rigtigt og dokumentere arbejdet uden ekstra papir.",
+          "Når driftstimer, alarmer og opgaver ligger samme sted, kan teknikerne tage det vigtigste først og skrive arbejdet ned uden ekstra papir.",
         capabilitiesTitle: "Fra signal til færdig opgave",
         capabilitiesBody:
-          "Vedligeholdsflowet forbinder maskindata, planlægning og udførelse.",
+          "Vedligeholdet hænger sammen med maskindata, planlægning og det arbejde, der bliver lavet.",
         capabilities: [
           {
             title: "Planer efter brug",
             description:
-              "Planlæg service efter driftstimer, cyklusser eller faste intervaller.",
+              "Planlæg service efter driftstimer, antal cyklusser eller faste intervaller.",
             image: "/images/taskapp1.png",
             imageAlt: "Opgaveapp",
           },
           {
-            title: "Opgaver på mobil",
+            title: "Opgaverne på mobilen",
             description:
-              "Teknikere ser opgaver, noter og status direkte dér hvor arbejdet udføres.",
+              "Teknikeren ser opgaven, noterne og status dér, hvor arbejdet bliver lavet.",
             image: "/images/taskapp2.png",
             imageAlt: "Opgavestyring",
           },
           {
             title: "Historik pr. maskine",
             description:
-              "Se tidligere service, fejl og handlinger, så gentagelser bliver synlige.",
+              "Se hvad der før er lavet på maskinen, og hvilke fejl der bliver ved med at komme igen.",
             image: "/images/backoffice1.png",
             imageAlt: "Backoffice-historik",
           },
         ],
         metrics: [
           { metric: "50%", label: "Mindre uplanlagt nedetid" },
-          { metric: "40 timer", label: "Ekstra produktionstid årligt" },
-          { metric: "30%", label: "Færre akutte opgaver" },
+          { metric: "40 timer", label: "Ekstra produktionstid om året" },
+          { metric: "30%", label: "Færre hasteopgaver" },
         ],
         related: [
           {
-            title: "Energi og telemetri",
-            description: "Brug sensordata til at opdage slid og afvigelser.",
+            title: "Energi og målinger",
+            description: "Brug sensorerne til at opdage slid, før det bliver til nedbrud.",
             href: "/features/energy-and-telemetry",
           },
           {
             title: "Maskinstyring",
-            description: "Brug maskinsignaler som triggere for opgaver.",
+            description: "Lad maskinens signaler oprette opgaven.",
             href: "/features/machine-control",
           },
           {
             title: "Analyse og rapportering",
-            description: "Følg vedligeholdseffekt og nedetid.",
+            description: "Følg nedetiden, og se om vedligeholdet virker.",
             href: "/features/analysis-and-reporting",
           },
         ],
@@ -525,60 +525,60 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Kvalitetsstyring | OptiPeople",
         metaDescription:
-          "Registrer kvalitetsdata ved kilden og spor afvigelser til maskiner, batches og skift.",
+          "Registrer kvalitetsdata dér, hvor arbejdet sker, og følg en afvigelse tilbage til maskine, batch og skift.",
         parentLabel: "QMS",
         parentHref: "/modules/quality",
         eyebrow: "Kvalitetsstyring",
-        heroTitle: "Gør kvalitet til en del af flowet",
+        heroTitle: "Gør kvalitet til en del af arbejdet",
         heroBody:
-          "Flyt kvalitetsregistrering ud til arbejdet, og bind kontroller, afvigelser og handlinger sammen med produktionen.",
+          "Flyt kvalitetstjekket ud til maskinen, og bind kontroller, afvigelser og handlinger sammen med produktionen.",
         heroImage: "/images/backoffice1.png",
         heroImageAlt: "Kvalitetsstyring",
-        valueTitle: "Kvalitet skal registreres dér hvor den skabes",
+        valueTitle: "Kvalitet skal registreres dér, hvor den bliver skabt",
         valueBody:
-          "Digitale kontroller og sporbarhed reducerer forsinkelse, fejl og usikkerhed i kvalitetsarbejdet.",
-        capabilitiesTitle: "Kvalitet med fuld kontekst",
+          "Digitale kontroller og sporbarhed skærer ventetiden, fejlene og tvivlen væk i kvalitetsarbejdet.",
+        capabilitiesTitle: "Kvalitet med det hele omkring sig",
         capabilitiesBody:
-          "Hændelser forbindes med maskine, produkt, operatør og skift.",
+          "Hver registrering hænger sammen med maskine, produkt, operatør og skift.",
         capabilities: [
           {
-            title: "Digitale formularer",
-            description: "Guidede kontroller sikrer ensartet datafangst.",
+            title: "Digitale skemaer",
+            description: "Guidede kontroller sikrer, at det bliver registreret ens hver gang.",
             image: "/images/backoffice1.png",
             imageAlt: "Digital formular",
           },
           {
             title: "Afvigelser og handlinger",
-            description: "Log afvigelser og følg korrigerende handlinger til lukning.",
+            description: "Skriv afvigelsen ned, og følg handlingen hele vejen, til den er lukket.",
             image: "/images/report-mockup2.png",
             imageAlt: "Afvigelsesrapport",
           },
           {
             title: "Sporbarhed",
-            description: "Knyt kvalitetshændelser til batch, maskine og skift.",
+            description: "Knyt kvalitetstjek og afvigelser til batch, maskine og skift.",
             image: "/images/report-mockup5.png",
             imageAlt: "Sporbarhedsrapport",
           },
         ],
         metrics: [
           { metric: "60%", label: "Mindre omarbejde" },
-          { metric: "90%", label: "Hurtigere afvigelsesrespons" },
+          { metric: "90%", label: "Hurtigere svar på afvigelser" },
           { metric: "100%", label: "Digital sporbarhed" },
         ],
         related: [
           {
             title: "Produktionseffektivitet",
-            description: "Se kvalitet i sammenhæng med OEE.",
+            description: "Se kvaliteten i sammenhæng med OEE.",
             href: "/features/production-efficiency",
           },
           {
             title: "Analyse og rapportering",
-            description: "Rapportér kvalitetstrends og afvigelser.",
+            description: "Følg kvaliteten og afvigelserne over tid.",
             href: "/features/analysis-and-reporting",
           },
           {
             title: "Maskinstyring",
-            description: "Giv operatøren feedback ved maskinen.",
+            description: "Giv operatøren besked ude ved maskinen.",
             href: "/features/machine-control",
           },
         ],
@@ -669,60 +669,60 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Analyse og rapportering | OptiPeople",
         metaDescription:
-          "Gør produktionsdata til klare rapporter om performance, tab og omkostninger.",
+          "Gør produktionsdata til rapporter, folk kan læse: hvordan det går, hvor tiden går tabt, og hvad det koster.",
         parentLabel: "Analyse",
         parentHref: "/modules/analysis",
         eyebrow: "Analyse og rapportering",
-        heroTitle: "Rapporter der forklarer hvad der sker",
+        heroTitle: "Rapporter, der forklarer, hvad der sker",
         heroBody:
-          "Automatisér rapporter, og få svar på performance, tab og cost drivers uden manuelt arbejde.",
+          "Lad rapporterne lave sig selv, og få svar på, hvordan det går, hvor tiden går tabt, og hvad der koster mest.",
         heroImage: "/images/report-mockup1.png",
         heroImageAlt: "Rapportering",
-        valueTitle: "Rapportering skal være et arbejdsredskab",
+        valueTitle: "En rapport skal være et arbejdsredskab",
         valueBody:
-          "Når rapporter er levende og koblet til driften, bliver de en del af forbedringsarbejdet i stedet for en månedlig bagudskuende øvelse.",
-        capabilitiesTitle: "Indsigt fra samme datagrundlag",
+          "Når rapporten er koblet til driften og opdaterer sig selv, bliver den en del af forbedringsarbejdet i stedet for et tilbageblik en gang om måneden.",
+        capabilitiesTitle: "Indsigt fra det samme datagrundlag",
         capabilitiesBody:
-          "Fra live KPI'er til dybe analyser. Samme data, forskellige spørgsmål.",
+          "Fra tal, der opdaterer sig selv, til de dybe analyser. Samme data, forskellige spørgsmål.",
         capabilities: [
           {
-            title: "Automatiske rapporter",
-            description: "Rapporter opdateres og sendes uden manuelle udtræk.",
+            title: "Rapporter, der laver sig selv",
+            description: "Rapporterne opdaterer sig selv og bliver sendt ud, uden at nogen trækker tal.",
             image: "/images/report-mockup1.png",
             imageAlt: "Automatisk rapport",
           },
           {
-            title: "Tabsfordeling",
-            description: "Find de stop, produkter og linjer der koster mest.",
+            title: "Hvor I taber mest",
+            description: "Find de stop, de produkter og de linjer, der koster mest.",
             image: "/images/report-mockup2.png",
             imageAlt: "Tabsanalyse",
           },
           {
-            title: "Drill-down",
-            description: "Gå fra fabriksniveau til maskine, skift og hændelse.",
+            title: "Klik dig ned i tallene",
+            description: "Gå fra hele fabrikken ned til den enkelte maskine, det enkelte skift og det enkelte stop.",
             image: "/images/report-mockup5.png",
-            imageAlt: "Drill-down rapport",
+            imageAlt: "Rapport man kan klikke sig ned i",
           },
         ],
         metrics: [
-          { metric: "80%", label: "Mindre manuel rapportering" },
-          { metric: "Live", label: "Opdaterede KPI'er" },
-          { metric: "1 kilde", label: "Samlet datagrundlag" },
+          { metric: "80%", label: "Mindre rapportering i hånden" },
+          { metric: "Live", label: "Tal, der opdaterer sig selv" },
+          { metric: "1 kilde", label: "Alle henter fra de samme data" },
         ],
         related: [
           {
-            title: "AI og copilots",
-            description: "Få AI-summaries og mønsterdetektion.",
+            title: "AI og copiloter",
+            description: "Lad AI skrive sammendraget og finde mønstrene.",
             href: "/features/ai-and-copilots",
           },
           {
-            title: "Energi og telemetri",
-            description: "Rapportér energiforbrug og afvigelser.",
+            title: "Energi og målinger",
+            description: "Følg energiforbruget og det, der stikker ud.",
             href: "/features/energy-and-telemetry",
           },
           {
             title: "Produktionseffektivitet",
-            description: "Forstå OEE og performance over tid.",
+            description: "Se hvordan OEE udvikler sig over tid.",
             href: "/features/production-efficiency",
           },
         ],
@@ -805,62 +805,62 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
       },
       da: {
-        metaTitle: "Energi og telemetri | OptiPeople",
+        metaTitle: "Energi og målinger | OptiPeople",
         metaDescription:
-          "Kobl energi, vibration, flow og temperatur til produktionens output og status.",
+          "Kobl energi, vibration, flow og temperatur sammen med det, maskinerne producerer.",
         parentLabel: "EMS",
         parentHref: "/modules/energy",
-        eyebrow: "Energi og telemetri",
-        heroTitle: "Se hvad maskinerne bruger og fortæller",
+        eyebrow: "Energi og målinger",
+        heroTitle: "Se hvad maskinerne bruger, og hvad de fortæller",
         heroBody:
-          "Forbind energimålere og sensorer med produktionen, så spild, slid og afvigelser bliver synlige.",
+          "Kobl energimålere og sensorer sammen med produktionen, så spild, slid og det, der stikker ud, bliver til at få øje på.",
         heroImage: "/images/report-mockrup-3.png",
-        heroImageAlt: "Energi og telemetri",
-        valueTitle: "Sensorer bliver først værdifulde i sammenhæng",
+        heroImageAlt: "Energi og målinger",
+        valueTitle: "En måling siger først noget, når produktionen står ved siden af",
         valueBody:
-          "Når telemetry kobles til maskinstatus, produkter og skift, kan teamet skelne normal variation fra reelle problemer.",
-        capabilitiesTitle: "Målinger med produktionskontekst",
+          "Når målingerne bliver holdt op mod maskinstatus, produkter og skift, kan teamet se forskel på almindelige udsving og et rigtigt problem.",
+        capabilitiesTitle: "Målinger med produktionen ved siden af",
         capabilitiesBody:
-          "Energi og sensorværdier bliver en del af samme driftsbillede som OEE og stop.",
+          "Energi og sensortal ligger i det samme billede som OEE og stop.",
         capabilities: [
           {
-            title: "Energiforbrug pr. enhed",
-            description: "Følg kWh pr. produkt, ordre og linje.",
+            title: "Energi pr. enhed",
+            description: "Følg kWh pr. produkt, pr. ordre og pr. linje.",
             image: "/images/Telemetry-Chart.png",
-            imageAlt: "Telemetrigraf",
+            imageAlt: "Graf over målinger",
           },
           {
-            title: "Sensortrends",
-            description: "Overvåg temperatur, vibration, flow og andre signaler.",
+            title: "Sensorerne over tid",
+            description: "Hold øje med temperatur, vibration, flow og de andre signaler.",
             image: "/images/Telemetry-Numbers.png",
-            imageAlt: "Telemetrital",
+            imageAlt: "Måletal",
           },
           {
-            title: "Afvigelser",
-            description: "Find mønstre der peger på spild, slid eller kommende fejl.",
+            title: "Det, der stikker ud",
+            description: "Find de mønstre, der peger på spild, slid eller en fejl på vej.",
             image: "/images/report-mockrup-3.png",
-            imageAlt: "Afvigelsesrapport",
+            imageAlt: "Rapport over afvigelser",
           },
         ],
         metrics: [
-          { metric: "10-20%", label: "Mindre energispild" },
-          { metric: "Live", label: "Sensoroverblik" },
-          { metric: "1 view", label: "Energi og produktion samlet" },
+          { metric: "10-20%", label: "Mindre spild af energi" },
+          { metric: "Live", label: "Overblik over sensorerne" },
+          { metric: "1 skærm", label: "Energi og produktion samlet" },
         ],
         related: [
           {
             title: "Vedligehold og opgaver",
-            description: "Brug telemetri til vedligeholdsalarmer.",
+            description: "Lad målingerne udløse vedligeholdet.",
             href: "/features/maintenance-and-tasks",
           },
           {
-            title: "AI og copilots",
+            title: "AI og copiloter",
             description: "Find mønstre i sensordata med AI.",
             href: "/features/ai-and-copilots",
           },
           {
             title: "Analyse og rapportering",
-            description: "Rapportér forbrug og optimeringer.",
+            description: "Følg forbruget og det, I har sparet.",
             href: "/features/analysis-and-reporting",
           },
         ],
@@ -943,64 +943,64 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
       },
       da: {
-        metaTitle: "AI og copilots | OptiPeople",
+        metaTitle: "AI og copiloter | OptiPeople",
         metaDescription:
-          "Stil spørgsmål, find mønstre og understøt beslutninger med AI trænet på jeres produktionsdata.",
+          "Stil spørgsmål, find mønstre og få hjælp til beslutningerne af en AI, der kender jeres produktionsdata.",
         parentLabel: "AI-agenter",
         parentHref: "/ai/agents",
-        eyebrow: "AI og copilots",
-        heroTitle: "AI trænet på jeres fabrik",
+        eyebrow: "AI og copiloter",
+        heroTitle: "AI, der kender jeres fabrik",
         heroBody:
-          "Stil spørgsmål, find mønstre og understøt beslutninger med AI der kender jeres maskiner, skift og historik.",
+          "Stil spørgsmål, find mønstre og få hjælp til beslutningerne af en AI, der kender jeres maskiner, jeres skift og jeres historik.",
         heroImage: "/images/report-mockup4.png",
         heroImageAlt: "AI på produktionsdata",
-        valueTitle: "Selv den bedste analytiker kan ikke se alt på én gang",
+        valueTitle: "Selv den bedste analytiker kan ikke se det hele på én gang",
         valueBody:
-          "AI kan overvåge store datamængder, finde svage signaler og pege på de mønstre, der kræver handling.",
-        capabilitiesTitle: "Intelligens der skaber tillid gennem transparens",
+          "AI kan holde øje med store mængder data, fange de små signaler og pege på det, der skal gøres noget ved.",
+        capabilitiesTitle: "AI, I kan tjekke efter",
         capabilitiesBody:
-          "Hver anbefaling kan spores tilbage til data. Ingen black boxes, kun dokumenterbar indsigt.",
+          "Hvert forslag kan følges tilbage til de tal, det bygger på. Ingen sort boks.",
         capabilities: [
           {
-            title: "Spørg data",
-            description: "Stil spørgsmål i almindeligt sprog og få svar med datagrundlag.",
+            title: "Spørg dine data",
+            description: "Stil spørgsmålet i almindeligt sprog, og få svaret med tallene bag.",
             image: "/images/report1.png",
             imageAlt: "Rapport til AI-analyse",
           },
           {
-            title: "Mønstre mennesker misser",
+            title: "Mønstre, mennesker overser",
             description:
-              "Find sammenhænge i cyklustid, energi, scrap og nedetid på tværs af datakilder.",
+              "Find sammenhænge mellem cyklustid, energi, kassation og nedetid på tværs af kilder.",
             image: "/images/report-mockup5.png",
             imageAlt: "Datamønstre",
           },
           {
-            title: "Beslutninger med evidens",
+            title: "Beslutninger med belæg",
             description:
-              "Hver anbefaling linker tilbage til de tal og tidslinjer, der understøtter den.",
+              "Hvert forslag linker tilbage til de tal og tidslinjer, det bygger på.",
             image: "/images/dashboard2.png",
-            imageAlt: "Dashboard med datagrundlag",
+            imageAlt: "Dashboard med tallene bag",
           },
         ],
         metrics: [
-          { metric: "10x", label: "Hurtigere fra spørgsmål til indsigt" },
-          { metric: "24/7", label: "Løbende mønsterdetektion" },
-          { metric: "100%", label: "Sporbare indsigter" },
+          { metric: "10x", label: "Hurtigere fra spørgsmål til svar" },
+          { metric: "24/7", label: "AI holder øje med mønstrene" },
+          { metric: "100%", label: "Svar, I kan spore tilbage" },
         ],
         related: [
           {
             title: "Analyse og rapportering",
-            description: "AI forbedrer rapporter med summaries og anbefalinger.",
+            description: "Lad AI skrive sammendraget og pege på næste skridt.",
             href: "/features/analysis-and-reporting",
           },
           {
-            title: "Energi og telemetri",
-            description: "Find sensorpatterns der peger på fejl eller spild.",
+            title: "Energi og målinger",
+            description: "Find de mønstre i sensordata, der peger på fejl eller spild.",
             href: "/features/energy-and-telemetry",
           },
           {
             title: "Produktionseffektivitet",
-            description: "Lad copiloten forklare OEE-fald.",
+            description: "Lad AI forklare, hvorfor OEE faldt.",
             href: "/features/production-efficiency",
           },
         ],
@@ -1085,63 +1085,63 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Maskinstyring | OptiPeople",
         metaDescription:
-          "Integrer med maskinstyring for feedback, automatisering og tættere loops mellem system og gulv.",
+          "Kobl jer på maskinstyringen: login ved maskinen, besked med det samme og kortere vej mellem system og gulv.",
         parentLabel: "IoT",
         parentHref: "/modules/iot",
         eyebrow: "Maskinstyring",
-        heroTitle: "Luk loopet mellem system og gulv",
+        heroTitle: "Luk sløjfen mellem system og gulv",
         heroBody:
-          "Integrer med maskinstyringer for operatørlogin, feedback i realtid og tættere produktionsloops.",
+          "Kobl jer på maskinstyringen, så operatøren kan logge ind ved maskinen, få besked med det samme og arbejde tættere på systemet.",
         heroImage: "/images/Start-Machine.png",
         heroImageAlt: "Maskinstyringspanel",
-        valueTitle: "Dataopsamling starter ved maskinen. Styring bør også.",
+        valueTitle: "Data starter ved maskinen. Det bør styringen også.",
         valueBody:
-          "Når system og maskinstyring lever hver for sig, opstår huller. OptiPeople forbinder dem, så digitalt flow og fysisk fabrik bevæger sig sammen.",
-        capabilitiesTitle: "Fra maskinsignal til operatørhandling og tilbage",
+          "Når systemet og maskinstyringen lever hver for sig, opstår der huller. Vi kobler dem sammen, så det digitale og den fysiske fabrik følges ad.",
+        capabilitiesTitle: "Fra maskinsignal til operatør og tilbage igen",
         capabilitiesBody:
-          "En tovejsforbindelse mellem produktionssystemet og maskinerne på gulvet.",
+          "En forbindelse, der går begge veje, mellem produktionssystemet og maskinerne på gulvet.",
         capabilities: [
           {
-            title: "Sikker maskinauthentifikation",
+            title: "Sikkert login ved maskinen",
             description:
-              "Operatører logger ind ved maskinen, så ansvar og sporbarhed starter ved skiftets begyndelse.",
+              "Operatøren logger ind ude ved maskinen, så det fra skiftets start er tydeligt, hvem der kørte hvad.",
             image: "/images/Login-Machine-Key.png",
             imageAlt: "Maskinlogin",
           },
           {
             title: "Start, stop og status",
             description:
-              "Operatører ser forudsætninger og status før produktionen startes.",
+              "Operatøren kan se, om alt er klar, før produktionen bliver sat i gang.",
             image: "/images/Start-Machine.png",
             imageAlt: "Start maskine",
           },
           {
-            title: "Feedback i realtid",
+            title: "Besked med det samme",
             description:
-              "Maskinstatus og alarmer vises direkte på gulvet, når forhold ændrer sig.",
+              "Maskinstatus og alarmer bliver vist direkte på gulvet, når noget ændrer sig.",
             image: "/images/Everything-is-okay.png",
             imageAlt: "Alt er ok skærm",
           },
         ],
         metrics: [
-          { metric: "100%", label: "Digital sporbarhed på sessioner" },
-          { metric: "< 1s", label: "Fra maskinhændelse til besked" },
-          { metric: "0", label: "Papirbaserede maskinlogs" },
+          { metric: "100%", label: "Digital sporbarhed på hver session" },
+          { metric: "< 1s", label: "Fra det sker på maskinen, til beskeden er ude" },
+          { metric: "0", label: "Papirlister ved maskinen" },
         ],
         related: [
           {
-            title: "Stopårsagsregistrering",
-            description: "Maskinstop kan trigge registrering automatisk.",
+            title: "Stopårsager",
+            description: "Et maskinstop kan sætte registreringen i gang af sig selv.",
             href: "/features/stop-cause-registration",
           },
           {
             title: "Vedligehold og opgaver",
-            description: "Maskinsignaler kan skabe vedligeholdsopgaver.",
+            description: "Maskinens signaler kan oprette vedligeholdsopgaven.",
             href: "/features/maintenance-and-tasks",
           },
           {
-            title: "Energi og telemetri",
-            description: "Sensordata føder direkte ind i dashboards.",
+            title: "Energi og målinger",
+            description: "Sensordata går direkte ind i jeres dashboards.",
             href: "/features/energy-and-telemetry",
           },
         ],

@@ -126,63 +126,63 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Produktionsmodul | OptiPeople",
         metaDescription:
-          "Følg OEE, nedetid, produktionsordrer og skiftperformance med live produktionsdata.",
+          "Følg OEE, nedetid, produktionsordrer og hvordan skiftene kører, på tal der opdaterer sig selv.",
         eyebrow: "Produktionsmodul",
         heroTitle: "Se hvor produktionstiden går tabt",
         heroBody:
-          "Følg OEE i realtid, og forstå præcis hvor produktionstiden forsvinder. Stop med at gætte, og begynd at forbedre.",
+          "Følg OEE i realtid, og se præcis hvor produktionstiden forsvinder. Så er gætteriet slut.",
         primaryLabel: "Book en demo",
-        introTitle: "Produktionsdata skal ikke bo i regneark",
+        introTitle: "Produktionstal hører ikke hjemme i et regneark",
         introBody:
-          "Når data først samles efter skiftet, er muligheden for at handle ofte væk. Produktionsmodulet erstatter manuelle logs med live signaler fra maskiner, linjer og skift.",
-        capabilitiesTitle: "Alt til synlig produktion",
+          "Bliver tallene først samlet, når skiftet er slut, er chancen for at gøre noget som regel væk. Produktionsmodulet erstatter håndskrevne lister med signaler direkte fra maskiner, linjer og skift.",
+        capabilitiesTitle: "Alt til en synlig produktion",
         features: [
           {
             icon: Gauge,
-            title: "Live OEE-dashboards",
+            title: "Live OEE på skærmen",
             description:
-              "Se availability, performance og quality på tværs af maskiner og skift uden at vente på dagsrapporter.",
+              "Se tilgængelighed, ydelse og kvalitet på tværs af maskiner og skift, uden at vente på dagsrapporten.",
           },
           {
             icon: Bell,
             title: "Stopårsager",
             description:
-              "Operatører registrerer nedetidsårsager ved maskinen, så forbedringsarbejdet bygger på strukturerede data.",
+              "Operatøren registrerer årsagen ude ved maskinen, så forbedringerne bygger på noget, I kan regne på.",
           },
           {
             icon: Activity,
-            title: "Skiftperformance",
+            title: "Hvordan kører skiftene",
             description:
-              "Sammenlign skift, teams og perioder, og find de arbejdsgange der skal kopieres bredere ud.",
+              "Sammenlign skift, hold og perioder, og find de arbejdsgange, der er værd at brede ud.",
           },
         ],
         visualTitle: "Ét dashboard til hele produktionen",
         visualBody:
-          "Fra enkeltmaskiner til fabrikkens KPI'er. Dyk ned i de data, der betyder mest, på det niveau der passer til rollen.",
+          "Fra den enkelte maskine til fabrikkens nøgletal. Klik dig ned i det, der betyder mest, i det niveau, der passer til jobbet.",
         visualImage: "/images/dashboard2.png",
         visualAlt: "Opticloud produktionsdashboard",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "15-25%", label: "OEE-forbedring det første år" },
+          { metric: "15-25%", label: "Bedre OEE det første år" },
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
-          { metric: "2 timer", label: "Sparet dagligt på manuel rapportering" },
+          { metric: "2 timer", label: "Sparet på rapportering hver dag" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
             title: "Forbind",
             description:
-              "Vi kobler os på eksisterende maskiner og PLC'er uden produktionsstop eller hardwareudskiftning.",
+              "Vi kobler os på de maskiner og PLC'er, I har, uden at produktionen skal stå stille, og uden at skifte hardware ud.",
           },
           {
-            title: "Visualiser",
+            title: "Vis det",
             description:
-              "Teamet får et live dashboard med OEE, stopårsager og skiftperformance fra dag ét.",
+              "Teamet får et dashboard med OEE, stopårsager og skift fra dag ét.",
           },
           {
             title: "Forbedr",
             description:
-              "Brug data til målrettede forbedringscyklusser og mål effekten af hvert tiltag.",
+              "Brug tallene til at rette ét sted ad gangen, og mål bagefter om det virkede.",
           },
         ],
       },
@@ -276,45 +276,45 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Kvalitetsmodul | OptiPeople",
         metaDescription:
-          "Digitaliser kontroller, spor afvigelser og byg kvalitetssporbarhed direkte ind i produktionen.",
+          "Gør kontrollerne digitale, følg afvigelserne, og byg sporbarheden ind i produktionen.",
         eyebrow: "Kvalitetsmodul",
-        heroTitle: "Byg ansvarlighed ind i produktionen",
+        heroTitle: "Fang fejlen, mens den er billig",
         heroBody:
-          "Registrer kvalitetsdata ved kilden, og spor hver afvigelse tilbage til maskiner, batches og skift.",
+          "Registrer kvalitetsdata ved kilden, og følg hver afvigelse tilbage til maskine, batch og skift.",
         primaryLabel: "Book en demo",
-        introTitle: "Kvalitetsproblemer skal ikke opdages for sent",
+        introTitle: "Kvalitetsproblemer må ikke først dukke op til sidst",
         introBody:
-          "Papirskemaer og regneark skjuler problemer, indtil de bliver dyre. Kvalitetsmodulet forbinder kontroller, afvigelser og korrigerende handlinger med produktionskonteksten.",
+          "Papirskemaer og regneark gemmer på problemerne, indtil de bliver dyre. Her hænger kontroller, afvigelser og handlinger sammen med det, der faktisk skete i produktionen.",
         capabilitiesTitle: "Digital kvalitetsstyring i praksis",
         features: [
           {
             icon: ClipboardCheck,
             title: "Digitale kontroller",
             description:
-              "Erstat papir med guidede formularer og obligatoriske checkpoints ved kilden.",
+              "Skift papiret ud med guidede skemaer og faste tjekpunkter ude ved maskinen.",
           },
           {
             icon: GitBranch,
             title: "Fuld sporbarhed",
             description:
-              "Spor produkter tilbage til maskine, batch, operatør og skift uden ekstra manuelt arbejde.",
+              "Følg produktet tilbage til maskine, batch, operatør og skift, uden ekstra arbejde.",
           },
           {
             icon: ShieldCheck,
-            title: "Auditklar dokumentation",
+            title: "Klar til audit",
             description:
-              "Auditspor og rapporter understøtter compliance og hurtigere kundedialog.",
+              "Sporet ligger der, og rapporterne er klar, både til revisionen og til kunden, der spørger.",
           },
         ],
-        visualTitle: "Kvalitetsdata forbundet med produktionen",
+        visualTitle: "Kvalitetsdata koblet til produktionen",
         visualBody:
-          "Hver kontrol, afvigelse og handling bindes til den maskine, batch og operatør der skabte konteksten.",
+          "Hver kontrol, hver afvigelse og hver handling hænger på den maskine, den batch og den operatør, den kom fra.",
         visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
         visualAlt: "Kvalitetskontroller og afvigelser registreret i Opticloud",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "60%", label: "Mindre kvalitetsrelateret omarbejde" },
-          { metric: "90%", label: "Hurtigere respons på afvigelser" },
+          { metric: "60%", label: "Mindre omarbejde på grund af kvalitet" },
+          { metric: "90%", label: "Hurtigere svar på afvigelser" },
           { metric: "100%", label: "Digital sporbarhed" },
         ],
         stepsTitle: "Sådan virker det",
@@ -322,17 +322,17 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Digitaliser",
             description:
-              "Erstat papirbaserede processer med digitale formularer koblet til produktionsdata.",
+              "Skift papiret ud med digitale skemaer, der hænger sammen med produktionsdata.",
           },
           {
             title: "Spor",
             description:
-              "Knyt kvalitetshændelser til maskiner, batches og operatører automatisk.",
+              "Kvalitetstjek og afvigelser bliver knyttet til maskine, batch og operatør af sig selv.",
           },
           {
             title: "Forbedr",
             description:
-              "Find mønstre, reducer scrap, og styr løbende forbedringer på fakta.",
+              "Find mønstrene, skær kassationen ned, og styr forbedringerne efter fakta.",
           },
         ],
       },
@@ -426,45 +426,45 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Vedligeholdsmodul | OptiPeople",
         metaDescription:
-          "Planlæg forebyggende vedligehold, håndter opgaver og reducer uplanlagt nedetid.",
+          "Planlæg forebyggende vedligehold, styr opgaverne, og få mindre uplanlagt nedetid.",
         eyebrow: "Vedligeholdsmodul",
-        heroTitle: "Løs det før det bryder ned",
+        heroTitle: "Løs det, før det bryder ned",
         heroBody:
-          "Gå fra reaktiv brandslukning til planlagt vedligehold baseret på brug, tilstand og historik.",
+          "Gå fra brandslukning til planlagt vedligehold efter, hvor meget maskinen har kørt, hvordan den har det, og hvad der er sket før.",
         primaryLabel: "Book en demo",
         introTitle: "Vedligehold skal følge virkeligheden",
         introBody:
-          "Kalenderintervaller fortæller sjældent hele historien. Med live driftstimer, sensordata og opgavestyring kan teamet lave det rigtige arbejde på det rigtige tidspunkt.",
-        capabilitiesTitle: "Alt til proaktivt vedligehold",
+          "En dato i kalenderen fortæller sjældent hele historien. Med driftstimer, sensordata og opgaver samme sted kan teamet lave det rigtige arbejde på det rigtige tidspunkt.",
+        capabilitiesTitle: "Alt til vedligehold, der er på forkant",
         features: [
           {
             icon: Calendar,
             title: "Forebyggende planlægning",
             description:
-              "Planlæg efter driftstimer, cyklusser, kalender eller tilstand og undgå oversete servicepunkter.",
+              "Planlæg efter driftstimer, cyklusser, kalender eller maskinens tilstand, så ingen servicepunkter bliver glemt.",
           },
           {
             icon: Smartphone,
-            title: "Mobil opgavestyring",
+            title: "Opgaverne på mobilen",
             description:
-              "Teknikere modtager og afslutter opgaver på mobile enheder med noter og billeder.",
+              "Teknikeren får opgaven, melder den færdig og lægger noter og billeder på, direkte fra telefonen.",
           },
           {
             icon: History,
-            title: "Vedligeholdshistorik",
+            title: "Historik pr. maskine",
             description:
-              "Fuld historik pr. maskine gør mønstre synlige og hjælper med at optimere intervaller.",
+              "Hele historikken på hver maskine gør mønstrene synlige og hjælper med at ramme det rigtige interval.",
           },
         ],
-        visualTitle: "Ét sted for opgaver, udstyr og historik",
+        visualTitle: "Ét sted til opgaver, udstyr og historik",
         visualBody:
-          "Samlet overblik over kommende service, aktuelle opgaver og maskinernes historik.",
+          "Overblik over den service, der venter, de opgaver, der kører, og det, der er lavet før.",
         visualImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
         visualAlt: "Vedligeholdsopgaver i Opticloud",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "50%", label: "Mindre uplanlagt nedetid" },
-          { metric: "40 timer", label: "Ekstra produktionstid årligt" },
+          { metric: "40 timer", label: "Ekstra produktionstid om året" },
           { metric: "30%", label: "Færre akutte servicekald" },
         ],
         stepsTitle: "Sådan virker det",
@@ -472,17 +472,17 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Registrer",
             description:
-              "Opret udstyr og planer ud fra brug, tilstand eller faste intervaller.",
+              "Opret udstyret og planerne efter brug, tilstand eller faste intervaller.",
           },
           {
-            title: "Overvåg",
+            title: "Hold øje",
             description:
-              "Følg maskinsundhed og driftstimer, og få alarmer når handling er nødvendig.",
+              "Følg driftstimerne og maskinens tilstand, og få besked, når der skal gøres noget.",
           },
           {
             title: "Forebyg",
             description:
-              "Reducer nedbrud, forlæng levetiden og sænk de samlede vedligeholdsomkostninger.",
+              "Færre nedbrud, længere levetid og en lavere regning på vedligehold.",
           },
         ],
       },
@@ -576,45 +576,45 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Energimodul | OptiPeople",
         metaDescription:
-          "Kobl energiforbrug til produktion og find spild, afvigelser og optimeringsmuligheder.",
+          "Kobl energiforbruget sammen med produktionen, og find spildet, udsvingene og det, der kan spares.",
         eyebrow: "Energimodul",
         heroTitle: "Skær spild væk uden at skære hjørner",
         heroBody:
-          "Mål energi i realtid, og forstå forbrug pr. produkt, maskine og skift med data koblet til produktionen.",
+          "Mål energien løbende, og se forbruget pr. produkt, pr. maskine og pr. skift, holdt op mod produktionen.",
         primaryLabel: "Book en demo",
-        introTitle: "Energidata giver først værdi i kontekst",
+        introTitle: "Et samlet kWh-tal siger ikke, hvor spildet er",
         introBody:
-          "Et samlet kWh-tal fortæller ikke, hvor spildet opstår. Når energidata forbindes med ordrer, maskintilstande og output, bliver optimering konkret.",
-        capabilitiesTitle: "Energiindsigt for produktionen",
+          "Regningen viser summen, ikke hvor den kom fra. Når forbruget bliver holdt op mod ordrer, maskinstatus og det producerede antal, bliver det konkret, hvad der er værd at gøre noget ved.",
+        capabilitiesTitle: "Energital, produktionen kan bruge",
         features: [
           {
             icon: Zap,
             title: "kWh pr. enhed",
             description:
-              "Se forbrug pr. produkt, ordre eller linje og følg udviklingen over tid.",
+              "Se forbruget pr. produkt, pr. ordre og pr. linje, og følg det over tid.",
           },
           {
             icon: Leaf,
             title: "CO2 og bæredygtighed",
             description:
-              "Dokumenter forbedringer og find de processer, hvor energitiltag har størst effekt.",
+              "Dokumenter det, I har forbedret, og find de steder, hvor en indsats betaler sig mest.",
           },
           {
             icon: Bell,
-            title: "Afvigelsesalarmer",
+            title: "Besked når noget stikker ud",
             description:
-              "Få besked når forbruget afviger fra normalen, før det bliver en dyr vane.",
+              "Få besked, når forbruget ikke ligner det normale, før det når at blive en dyr vane.",
           },
         ],
-        visualTitle: "Energi koblet direkte til output",
+        visualTitle: "Energi holdt op mod det, I producerer",
         visualBody:
-          "Sammenlign forbrug med maskinstatus, produktionstal og skift for at finde de reelle drivere.",
+          "Sammenlign forbruget med maskinstatus, produktionstal og skift, og find ud af, hvad der reelt trækker.",
         visualImage: "/images/report-mockrup-3.png",
-        visualAlt: "Energi- og telemetridashboard",
+        visualAlt: "Dashboard med energi og målinger",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "10-20%", label: "Lavere energispild" },
-          { metric: "Live", label: "Synlighed på forbrug" },
+          { metric: "10-20%", label: "Mindre spild af energi" },
+          { metric: "Live", label: "Overblik over forbruget" },
           { metric: "1 kilde", label: "Energi og produktion samlet" },
         ],
         stepsTitle: "Sådan virker det",
@@ -622,17 +622,17 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Mål",
             description:
-              "Forbind målere, sensorer og eksisterende data til Opticloud.",
+              "Vi kobler målere, sensorer og de data, I allerede har, på Opticloud.",
           },
           {
             title: "Kobl",
             description:
-              "Sæt energiforbrug i relation til produkter, ordrer og maskinstatus.",
+              "Forbruget bliver holdt op mod produkter, ordrer og maskinstatus.",
           },
           {
             title: "Reducer",
             description:
-              "Find spild, dokumentér forbedringer og følg effekten løbende.",
+              "Find spildet, skriv forbedringen ned, og følg med i, om den holder.",
           },
         ],
       },
@@ -726,63 +726,63 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Analysemodul | OptiPeople",
         metaDescription:
-          "Gør produktionsdata til rapporter om performance, tab, omkostninger og forbedringsmuligheder.",
+          "Gør produktionsdata til rapporter om, hvordan det går, hvor I taber, hvad det koster, og hvad der kan gøres bedre.",
         eyebrow: "Analysemodul",
-        heroTitle: "Fra rå data til klare beslutninger",
+        heroTitle: "Fra rå tal til klare beslutninger",
         heroBody:
-          "Automatisér rapportering, og få indsigt i performance, tab og omkostningsdrivere uden manuelt regnearksarbejde.",
+          "Lad rapporterne lave sig selv, og få svar på, hvordan det går, hvor I taber, og hvad der koster mest. Uden regneark.",
         primaryLabel: "Book en demo",
-        introTitle: "Rapporter skal drive handling",
+        introTitle: "En rapport skal føre til handling",
         introBody:
-          "Når rapportering kræver manuelle udtræk, kommer svarene for sent. Analysemodulet gør trends og forbedringsmuligheder synlige løbende.",
-        capabilitiesTitle: "Rapportering der kan bruges",
+          "Når nogen først skal trække tallene i hånden, kommer svaret for sent. Her opdaterer udviklingen sig løbende, så I kan se, hvor der er noget at hente.",
+        capabilitiesTitle: "Rapportering, der bliver brugt",
         features: [
           {
             icon: BarChart3,
-            title: "Automatiske rapporter",
+            title: "Rapporter, der laver sig selv",
             description:
-              "Daglige, ugentlige og månedlige rapporter leveres til de rigtige interessenter.",
+              "Dag, uge og måned bliver sendt af sted til dem, der skal have dem.",
           },
           {
             icon: Search,
-            title: "Tabsanalyse",
+            title: "Hvor taber I mest",
             description:
-              "Se hvilke stop, produkter eller linjer der driver de største tab.",
+              "Se hvilke stop, produkter og linjer der koster mest.",
           },
           {
             icon: PieChart,
-            title: "Investeringsgrundlag",
+            title: "Noget at beslutte ud fra",
             description:
-              "Brug data til at prioritere projekter og dokumentere effekten af forbedringer.",
+              "Brug tallene til at vælge de projekter, der betaler sig, og til at vise bagefter, at de gjorde det.",
           },
         ],
         visualTitle: "Rapporter uden regnearkskaos",
         visualBody:
-          "Drill ned fra ledelsesoverblik til maskin- og skiftniveau i samme datagrundlag.",
+          "Klik dig fra ledelsens overblik ned til den enkelte maskine og det enkelte skift. Det er de samme data hele vejen.",
         visualImage: "/images/report-mockup1.png",
         visualAlt: "Rapportering i Opticloud",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "80%", label: "Mindre tid på manuel rapportering" },
-          { metric: "Live", label: "Opdaterede KPI'er" },
-          { metric: "1 view", label: "Samlet driftsbillede" },
+          { metric: "80%", label: "Mindre tid på rapportering i hånden" },
+          { metric: "Live", label: "Tal, der opdaterer sig selv" },
+          { metric: "1 skærm", label: "Samlet billede af driften" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
             title: "Saml",
             description:
-              "Data fra produktion, kvalitet, energi og vedligehold samles ét sted.",
+              "Data fra produktion, kvalitet, energi og vedligehold bliver samlet ét sted.",
           },
           {
             title: "Forklar",
             description:
-              "Rapporter viser både resultater og årsager bag udviklingen.",
+              "Rapporterne viser både, hvordan det gik, og hvorfor det gik sådan.",
           },
           {
             title: "Prioriter",
             description:
-              "Brug indsigten til at vælge de forbedringer, der flytter mest.",
+              "Brug det til at vælge de forbedringer, der flytter mest.",
           },
         ],
       },
@@ -877,63 +877,63 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "IoT-modul | OptiPeople",
         metaDescription:
-          "Forbind maskiner, sensorer og ældre udstyr til en samlet platform til produktionsdata.",
+          "Kobl maskiner, sensorer og gammelt udstyr på én samlet platform for produktionsdata.",
         eyebrow: "IoT-modul",
         heroTitle: "Få data fra alt på fabrikken",
         heroBody:
-          "Kobl nye og gamle maskiner på platformen med PLC'er, gateways, sensorer og åbne protokoller.",
+          "Kobl nye og gamle maskiner på med PLC'er, gateways, sensorer og åbne protokoller.",
         primaryLabel: "Book en demo",
-        introTitle: "Industridata skal ikke være låst fast",
+        introTitle: "Jeres data skal ikke være låst inde i maskinen",
         introBody:
-          "Mange fabrikker har værdifulde signaler gemt i ældre udstyr, isolerede PLC'er og lokale systemer. IoT-modulet får data sikkert ud og ind i driftsoverblikket.",
-        capabilitiesTitle: "Maskindata uden rip-and-replace",
+          "Mange fabrikker har værdifulde signaler siddende i gammelt udstyr, i PLC'er der ikke taler med nogen, og i systemer der kun kender sig selv. IoT-modulet henter dem sikkert ud og ind i overblikket.",
+        capabilitiesTitle: "Maskindata uden at rive noget ud",
         features: [
           {
             icon: Plug,
-            title: "Protokolfleksibilitet",
+            title: "De protokoller, maskiner taler",
             description:
-              "Forbind via OPC-UA, Modbus, MQTT, IO-Link, sensorkits eller API'er.",
+              "Vi kobler på over OPC-UA, Modbus, MQTT, IO-Link, sensorsæt eller API.",
           },
           {
             icon: Network,
-            title: "Edge dataopsamling",
+            title: "Opsamling tæt på maskinen",
             description:
-              "Opsaml og kvalitetssikr signaler tæt på maskinen, før de sendes videre.",
+              "Signalerne bliver samlet op og tjekket lige ved maskinen, før de bliver sendt videre.",
           },
           {
             icon: ShieldCheck,
-            title: "Sikker integration",
+            title: "Sikker forbindelse",
             description:
-              "Data flyttes kontrolleret og sikkert uden at forstyrre produktionen.",
+              "Data bliver flyttet kontrolleret og sikkert, uden at produktionen bliver forstyrret.",
           },
         ],
         visualTitle: "Én gateway, alle maskiner",
         visualBody:
-          "Se forbundne enheder, signaler og datakvalitet i ét samlet overblik.",
+          "Se de enheder, der er koblet på, hvilke signaler de sender, og om data er, som de skal være.",
         visualImage: "/images/Telemetry-Numbers.png",
-        visualAlt: "Telemetrioverblik",
+        visualAlt: "Overblik over målinger",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "Alle aldre", label: "Nye og gamle maskiner" },
-          { metric: "< 1 min", label: "Fra signal til dashboard" },
-          { metric: "Åben", label: "Integration via API" },
+          { metric: "< 1 min", label: "Fra signal til skærm" },
+          { metric: "Åben", label: "Kobling gennem API" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
             title: "Find",
             description:
-              "Vi kortlægger de signaler, der giver værdi for drift og forbedringer.",
+              "Vi finder ud af, hvilke signaler der er værd at hente ind.",
           },
           {
             title: "Forbind",
             description:
-              "Maskiner og sensorer kobles på med den protokol, der passer bedst.",
+              "Maskiner og sensorer bliver koblet på med den protokol, der passer bedst.",
           },
           {
             title: "Brug",
             description:
-              "Data bliver til dashboards, rapporter, alarmer og automatisering.",
+              "Data bliver til dashboards, rapporter, alarmer og automatik.",
           },
         ],
       },
@@ -1028,63 +1028,63 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "ERP Shopfloor-modul | OptiPeople",
         metaDescription:
-          "Forbind ERP-planlægning med produktionens realitet gennem live data og tovejssynk.",
+          "Kobl planen i ERP sammen med det, der faktisk sker i produktionen. Data går begge veje.",
         eyebrow: "ERP Shopfloor-modul",
-        heroTitle: "Byg bro mellem ERP og fabriksgulv",
+        heroTitle: "Byg bro mellem ERP og gulvet",
         heroBody:
-          "ERP kender planen. Maskinerne kender virkeligheden. Opticloud forbinder de to, så planlæggere og operatører arbejder på samme fakta.",
+          "ERP kender planen. Maskinerne kender virkeligheden. Vi kobler de to sammen, så planlæggere og operatører arbejder ud fra det samme.",
         primaryLabel: "Book en demo",
-        introTitle: "ERP kan ikke se produktionen alene",
+        introTitle: "ERP kan ikke se produktionen af sig selv",
         introBody:
-          "Når plan og realitet ikke hænger sammen, arbejder planlæggere med gamle tal og operatører uden kontekst. ERP Shopfloor lukker hullet.",
-        capabilitiesTitle: "Integration mellem plan og udførelse",
+          "Når planen og virkeligheden ikke passer sammen, sidder planlæggeren med gamle tal, og operatøren ved ikke, hvad der er vigtigst. Det hul lukker ERP Shopfloor.",
+        capabilitiesTitle: "Plan og udførelse hænger sammen",
         features: [
           {
             icon: ArrowLeftRight,
-            title: "Tovejssynk",
+            title: "Det går begge veje",
             description:
-              "Send ordrer ned på gulvet og faktiske mængder, scrap og tider tilbage til ERP.",
+              "Send ordrerne ned på gulvet, og send antal, kassation og tider tilbage til ERP.",
           },
           {
             icon: Clock,
-            title: "Ordresporing",
+            title: "Følg ordren",
             description:
-              "Følg ordrer fra start til slut og se afvigelser fra planen mens de sker.",
+              "Se ordren fra start til slut, og opdag det med det samme, hvis den skrider fra planen.",
           },
           {
             icon: Gauge,
-            title: "Live shopfloor",
+            title: "Gulvet i realtid",
             description:
-              "Kombinér ordrestatus med OEE, stopårsager og maskindata i realtid.",
+              "Se ordrestatus sammen med OEE, stopårsager og maskindata.",
           },
         ],
-        visualTitle: "Fra ERP-ordre til maskindata",
+        visualTitle: "Fra ordre i ERP til tal fra maskinen",
         visualBody:
-          "Planen, udførelsen og afvigelserne vises i samme dashboard.",
+          "Planen, arbejdet og afvigelserne står i det samme billede.",
         visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
         visualImagePosition: "top",
         visualAlt: "Arbejdsordrer i Opticloud",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "Live", label: "Faktiske tal tilbage til planlægning" },
+          { metric: "Live", label: "Faktiske tal tilbage til planlægningen" },
           { metric: "1 flow", label: "Fra ordre til færdigmelding" },
-          { metric: "Mindre", label: "Manuel registrering" },
+          { metric: "Mindre", label: "Registrering i hånden" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
-            title: "Synk",
-            description: "ERP-ordrer og produktionsdata forbindes i et styret flow.",
+            title: "Kobl sammen",
+            description: "ERP-ordrer og produktionsdata bliver koblet sammen i et styret flow.",
           },
           {
             title: "Følg",
             description:
-              "Operatører og planlæggere ser status og afvigelser i realtid.",
+              "Operatører og planlæggere ser status og afvigelser med det samme.",
           },
           {
-            title: "Luk loopet",
+            title: "Luk sløjfen",
             description:
-              "Faktiske mængder og tider sendes tilbage, så ERP altid er opdateret.",
+              "Antal og tider går tilbage, så ERP altid er opdateret.",
           },
         ],
       },
@@ -1177,62 +1177,62 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "MES-modul | OptiPeople",
         metaDescription:
-          "Cloudbaseret MES til OEE, stopanalyse, vedligehold, energi og rapportering.",
+          "MES i skyen til OEE, stopanalyse, vedligehold, energi og rapportering.",
         eyebrow: "MES-modul",
-        heroTitle: "Din cloudbaserede MES-platform",
+        heroTitle: "Jeres MES i skyen",
         heroBody:
-          "Et samlet Manufacturing Execution System i skyen. Opsaml produktions-, telemetri- og energidata og gør det handlingsklart for hele organisationen.",
+          "Et samlet Manufacturing Execution System i skyen. Saml produktionsdata, målinger og energital ét sted, og gør dem brugbare for hele huset.",
         primaryLabel: "Book en demo",
-        introTitle: "Produktion kræver mere end maskiner",
+        introTitle: "Produktion er mere end maskiner",
         introBody:
-          "Operatører, ledere og direktører har brug for tilgængelige data i deres eget niveau af detaljer. Opticloud forbinder teknologi og menneskelige beslutninger.",
-        capabilitiesTitle: "En komplet MES bygget til cloud",
+          "Operatører, ledere og direktion har brug for de samme data, bare i hvert sit niveau. Opticloud binder teknikken sammen med de beslutninger, mennesker skal træffe.",
+        capabilitiesTitle: "En hel MES, bygget til skyen",
         features: [
           {
             icon: Monitor,
-            title: "Tilpassede dashboards",
+            title: "Dashboards, I selv sætter op",
             description:
-              "Fra tavleskærme til ledelsesrapportering. Samme data, forskellige perspektiver.",
+              "Fra tavleskærmen på gulvet til rapporten til ledelsen. Samme data, hver sin vinkel.",
           },
           {
             icon: Wrench,
             title: "Vedligehold og TPM",
             description:
-              "Brug telemetri og driftshistorik til vedligehold baseret på tilstand.",
+              "Brug målinger og driftshistorik til at vedligeholde efter maskinens tilstand.",
           },
           {
             icon: Leaf,
             title: "Energi og bæredygtighed",
             description:
-              "Følg energiforbrug pr. produceret enhed og dokumentér forbedringer.",
+              "Følg energien pr. produceret enhed, og dokumenter det, I har forbedret.",
           },
         ],
-        visualTitle: "Én platform, alle perspektiver",
+        visualTitle: "Én platform, alle vinkler",
         visualBody:
-          "Operatører ser deres maskine. Ledere ser linjen. Direktører ser fabrikken.",
+          "Operatøren ser sin maskine. Lederen ser linjen. Direktionen ser fabrikken.",
         visualDrawn: "mes",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "Realtid", label: "Synlighed på tværs" },
-          { metric: "100%", label: "Digital datafangst" },
-          { metric: "Industry 5.0", label: "Menneskecentreret produktion" },
+          { metric: "Realtid", label: "Overblik på tværs af fabrikken" },
+          { metric: "100%", label: "Registreret digitalt" },
+          { metric: "Industry 5.0", label: "Mennesker i centrum af produktionen" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
             title: "Forbind",
             description:
-              "Maskiner, sensorer og systemer samles i ét cloudbaseret MES.",
+              "Maskiner, sensorer og systemer bliver samlet i ét MES i skyen.",
           },
           {
-            title: "Visualiser",
+            title: "Vis det",
             description:
-              "Hver rolle får de data, der er nødvendige for at handle sikkert.",
+              "Hver rolle får de tal, der skal til for at kunne handle.",
           },
           {
-            title: "Optimér",
+            title: "Forbedr",
             description:
-              "Brug realtidsdata til at fjerne gætteri og drive løbende forbedringer.",
+              "Brug tal fra i dag i stedet for gæt, og bliv ved med at rette til.",
           },
         ],
       },
@@ -1326,63 +1326,63 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Planlægningsmodul | OptiPeople",
         metaDescription:
-          "Planlæg og sekvensér produktionen efter målt kapacitet, reelle kørehastigheder, reel maskintilgængelighed og én plan, gulvet kan se.",
+          "Planlæg og læg ordrerne i rækkefølge efter den kapacitet, I faktisk har: målte kørehastigheder, den tid maskinerne reelt er ledige, og én plan, gulvet kan se.",
         eyebrow: "Planlægningsmodul",
-        heroTitle: "Planlæg efter den kapacitet I faktisk har",
+        heroTitle: "Planlæg efter den kapacitet, I faktisk har",
         heroBody:
-          "Planer bygget på målte kørehastigheder og reel maskintilgængelighed i stedet for regnearksantagelser, og synlige for dem, der skal levere dem.",
+          "Planer, der bygger på målte kørehastigheder og den tid, maskinerne reelt er ledige, i stedet for tal fra et regneark. Og som er synlige for dem, der skal levere dem.",
         primaryLabel: "Book en demo",
         introTitle: "En plan er kun så god som tallene under den",
         introBody:
-          "De fleste planer bygger på standardtider, der blev sat for år tilbage, og en kapacitet, ingen har målt siden. Når planlægningen læser fra samme data som gulvet, er tallene under planen dem, maskinerne faktisk har produceret.",
-        capabilitiesTitle: "Planlægning der hænger sammen med gulvet",
+          "De fleste planer bygger på standardtider, der blev sat for år tilbage, og en kapacitet, ingen har målt siden. Når planlægningen læser de samme data som gulvet, er tallene under planen dem, maskinerne faktisk har lavet.",
+        capabilitiesTitle: "Planlægning, der hænger sammen med gulvet",
         features: [
           {
             icon: Calendar,
-            title: "Planlægning på reel kapacitet",
+            title: "Planlæg efter reel kapacitet",
             description:
-              "Planlæg efter reelle tilgængelige timer pr. maskine, skiftplaner, planlagt vedligehold og kendt nedetid er regnet med.",
+              "Planlæg efter de timer, maskinen reelt er ledig. Skiftplaner, planlagt vedligehold og kendt nedetid er regnet med.",
           },
           {
             icon: Gauge,
-            title: "Kørehastigheder fra virkelige data",
+            title: "Kørehastigheder fra virkeligheden",
             description:
-              "Standardtider kommer fra det, maskinen faktisk har produceret, pr. vare og pr. opstilling.",
+              "Standardtiderne kommer fra det, maskinen faktisk har produceret, pr. vare og pr. opstilling.",
           },
           {
             icon: RefreshCw,
-            title: "Omplanlæg uden at starte forfra",
+            title: "Læg om uden at starte forfra",
             description:
-              "Et nedbrud eller en hasteordre kræver ikke en ny plan. Justér det berørte vindue og se effekten med det samme.",
+              "Et nedbrud eller en hasteordre kræver ikke en helt ny plan. Ret det stykke, det går ud over, og se med det samme, hvad det betyder.",
           },
         ],
         visualTitle: "Planlægning og produktion på samme data",
         visualBody:
-          "Planen læser maskinsignalerne, og fremdriften går direkte tilbage. Hvad der er bagud, og hvad en omrokering koster, står i samme billede.",
+          "Planen læser maskinsignalerne, og fremdriften går direkte tilbage. Hvad der er bagud, og hvad en omrokering koster, står i det samme billede.",
         visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.png",
         visualAlt: "Overblik over produktionsplanlægning i Opticloud",
         metricsTitle: "Hvad ændrer sig",
         metrics: [
-          { metric: "Målt", label: "Kapacitet fra reelt output" },
+          { metric: "Målt", label: "Kapacitet ud fra det, I faktisk producerer" },
           { metric: "Én plan", label: "Delt mellem planlægning og gulv" },
-          { metric: "Samme dag", label: "Omplanlægning når virkeligheden ændrer sig" },
+          { metric: "Samme dag", label: "Ny plan, når virkeligheden ændrer sig" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
             title: "Mål",
             description:
-              "Platformen bygger kørehastigheder og tilgængelige timer pr. maskine ud fra de produktionsdata, I allerede opsamler.",
+              "Platformen regner kørehastigheder og ledige timer ud pr. maskine ud fra de data, I allerede samler op.",
           },
           {
             title: "Planlæg",
             description:
-              "Sekvensér ordrer efter den kapacitet, med opstillingstid og planlagt vedligehold i samme billede.",
+              "Læg ordrerne i rækkefølge efter den kapacitet, med opstillingstid og planlagt vedligehold i samme billede.",
           },
           {
             title: "Justér",
             description:
-              "Fremdriften melder sig selv fra gulvet. Skrider noget, ser I konsekvensen og omplanlægger det berørte vindue.",
+              "Fremdriften melder sig selv fra gulvet. Går noget skævt, ser I følgen og lægger den del af planen om.",
           },
         ],
       },
@@ -1475,28 +1475,28 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Dokumentmodul | OptiPeople",
         metaDescription:
-          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den gældende version, knyttet til ordren foran operatøren.",
+          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder, knyttet til ordren foran operatøren.",
         eyebrow: "Dokumentmodul",
         heroTitle: "Den rigtige instruktion ved den rigtige maskine",
         heroBody:
-          "Arbejdsinstruktioner, tegninger og certifikater dér hvor arbejdet sker, i den version, der gælder for ordren foran operatøren.",
+          "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker, i den version, der gælder for ordren foran operatøren.",
         primaryLabel: "Book en demo",
-        introTitle: "Dokumentation på gulvet bliver forældet i stilhed",
+        introTitle: "Papirerne ved maskinen bliver forældede, uden at nogen opdager det",
         introBody:
-          "Instruktioner ligger i mapper ved maskinen, på et fællesdrev ingen stoler på, og i hovedet på den, der sidst stillede op. Når dokumenter er knyttet til maskine og ordre, åbner operatøren det, der gælder nu, og en ny revision er på gulvet, så snart den er godkendt.",
-        capabilitiesTitle: "Dokumentation der følger arbejdet",
+          "Instruktionerne ligger i en mappe ved maskinen, på et fællesdrev ingen stoler på, og i hovedet på den, der sidst stillede om. Når dokumenterne hænger på maskinen og ordren, åbner operatøren det, der gælder nu, og en ny version er på gulvet, så snart den er godkendt.",
+        capabilitiesTitle: "Papirerne følger arbejdet",
         features: [
           {
             icon: FileText,
-            title: "Instruktioner ved maskinen",
+            title: "Instruktionen ved maskinen",
             description:
-              "Åbn opstillingsark, tegning eller arbejdsinstruktion fra panelet ved maskinen, filtreret til den kørende ordre.",
+              "Åbn opstillingsarket, tegningen eller instruktionen fra panelet ved maskinen, filtreret til den ordre, der kører.",
           },
           {
             icon: History,
-            title: "Versioner der ikke skrider",
+            title: "Én version, der gælder",
             description:
-              "Én gældende version og én historik. Godkend en revision, og gulvet har den med det samme.",
+              "Én gældende version og én historik. Godkend en ny, og gulvet har den med det samme.",
           },
           {
             icon: ShieldCheck,
@@ -1505,9 +1505,9 @@ const modules: LocalizedPage<StandardPage>[] = [
               "Certifikater, kalibreringer og godkendte instruktioner ligger sammen med de produktionsdata, de hører til.",
           },
         ],
-        visualTitle: "Dokumenter ved siden af de data, de beskriver",
+        visualTitle: "Dokumenterne ved siden af de tal, de handler om",
         visualBody:
-          "Instruktionen til en opgave, de stop der blev registreret på den, og kvalitetskontrollerne bagefter ligger på samme ordre.",
+          "Instruktionen til opgaven, de stop, der blev registreret undervejs, og kvalitetstjekkene bagefter ligger på den samme ordre.",
         visualDrawn: "documents",
         metricsTitle: "Hvad ændrer sig",
         metrics: [
@@ -1520,17 +1520,17 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Læg ind",
             description:
-              "Hent instruktioner, tegninger og certifikater ind, og knyt dem til de maskiner, varer og ordrer de gælder for.",
+              "Hent instruktioner, tegninger og certifikater ind, og knyt dem til de maskiner, varer og ordrer, de gælder for.",
           },
           {
             title: "Udgiv",
             description:
-              "Godkend en version, og den bliver den, gulvet ser. Tidligere versioner bliver i historikken, ikke på maskinen.",
+              "Godkend en version, og det er den, gulvet ser. De gamle bliver i historikken, ikke ude på maskinen.",
           },
           {
             title: "Bekræft",
             description:
-              "Operatøren åbner det, der gælder for opgaven, og bekræfter de dokumenter, der kræver det.",
+              "Operatøren åbner det, der gælder for opgaven, og kvitterer for de dokumenter, der kræver det.",
           },
         ],
       },

@@ -9,13 +9,13 @@ export default function LocaleNotFound() {
   return (
     <section className="flex flex-1 items-center justify-center py-24 lg:py-32">
       <div className="mx-auto max-w-2xl px-6 text-center">
-        <p className="select-none text-8xl font-light text-foreground/10 lg:text-9xl">
+        <p className="select-none text-8xl font-normal text-foreground/10 lg:text-9xl">
           404
         </p>
-        <h1 className="mt-4 text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+        <h1 className="mt-4 text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
           {t("title")}
         </h1>
-        <p className="mx-auto mt-4 max-w-md text-lg text-foreground/70">
+        <p className="mx-auto mt-4 max-w-md text-lg text-foreground/82">
           {t("body")}
         </p>
         <div className="mt-10">

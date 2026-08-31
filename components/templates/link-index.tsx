@@ -39,13 +39,13 @@ export function LinkIndexPage({
       {/* Hero, neutral, because the cards below carry the colour. */}
       <section className="bg-[var(--gray-1)] pb-20 pt-12 lg:pb-28 lg:pt-16">
         <div className="px-[var(--edge)]">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/45">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {page.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {page.headline}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/65 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
             {page.body}
           </p>
         </div>
@@ -54,7 +54,7 @@ export function LinkIndexPage({
       {/* Destination cards */}
       <section className="px-[var(--edge)] py-20 lg:py-28">
         {page.linksTitle && (
-          <h2 className="text-2xl font-light tracking-tight text-foreground lg:text-3xl">
+          <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
             {page.linksTitle}
           </h2>
         )}
@@ -80,10 +80,10 @@ export function LinkIndexPage({
               >
                 <div className="flex items-start justify-between gap-6 p-7 lg:p-9">
                   <div>
-                    <h3 className="text-xl font-light tracking-tight text-foreground lg:text-2xl">
+                    <h3 className="text-xl font-normal tracking-tight text-foreground lg:text-2xl">
                       {link.title}
                     </h3>
-                    <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/65">
+                    <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/78">
                       {link.description}
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export function LinkIndexPage({
                 <h2 className="text-lg font-medium tracking-tight text-foreground">
                   {section.title}
                 </h2>
-                <p className="mt-4 text-base leading-relaxed text-foreground/60">
+                <p className="mt-4 text-base leading-relaxed text-foreground/72">
                   {section.body}
                 </p>
               </div>
@@ -130,7 +130,7 @@ export function LinkIndexPage({
           </div>
 
           {page.note && (
-            <p className="mt-10 text-sm leading-relaxed text-foreground/55">
+            <p className="mt-10 text-sm leading-relaxed text-foreground/70">
               {page.note}
             </p>
           )}

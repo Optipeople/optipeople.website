@@ -7,16 +7,16 @@ import "./globals.css"
 export default function GlobalNotFound() {
   return (
     <html lang="en">
-      <body className="antialiased bg-background text-foreground">
+      <body className="bg-background text-foreground">
         <section className="flex min-h-screen items-center justify-center py-24">
           <div className="mx-auto max-w-2xl px-6 text-center">
-            <p className="select-none text-8xl font-light text-foreground/10 lg:text-9xl">
+            <p className="select-none text-8xl font-normal text-foreground/10 lg:text-9xl">
               404
             </p>
-            <h1 className="mt-4 text-3xl font-light tracking-tight text-foreground lg:text-4xl">
+            <h1 className="mt-4 text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
               Page not found
             </h1>
-            <p className="mx-auto mt-4 max-w-md text-lg text-foreground/70">
+            <p className="mx-auto mt-4 max-w-md text-lg text-foreground/82">
               The page you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
             <div className="mt-10">
