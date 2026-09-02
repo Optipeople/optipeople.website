@@ -8,7 +8,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalizedCallToAction } from "@/components/localized-call-to-action";
 import { NewsletterPrompt } from "@/components/newsletter-prompt";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
+import { generalEmail } from "@/lib/contact";
 import { absoluteUrl, siteName, siteUrl } from "@/lib/seo";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -27,7 +28,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "OptiPeople | Digital operations platform for manufacturers",
+  title: "OptiPeople | Run operations on live data",
   description:
     "OptiPeople helps manufacturers connect machines, track production in real time, improve OEE, and turn operational data into action.",
 };
@@ -55,7 +56,7 @@ export default async function LocaleLayout({
     name: siteName,
     url: siteUrl,
     logo: absoluteUrl("/favicon.ico"),
-    email: "hej@optipeople.dk",
+    email: generalEmail(locale as Locale),
     telephone: "+45 23 74 47 05",
     sameAs: ["https://www.linkedin.com/company/optipeople-aps/"],
   };

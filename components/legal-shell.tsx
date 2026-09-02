@@ -28,10 +28,11 @@ export function LegalShell({
     <main className="min-h-screen">
       <section className="pt-16 sm:pt-24 pb-10 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
-          <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase mb-3">
+          {/* Same eyebrow token as every other page. */}
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {eyebrow}
           </p>
-          <h1 className="text-4xl sm:text-5xl font-normal text-foreground tracking-tight leading-tight">
+          <h1 className="mt-5 text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl">
             {title}
           </h1>
           <p className="mt-6 text-base text-muted-foreground">
@@ -40,7 +41,7 @@ export function LegalShell({
         </div>
       </section>
 
-      <section className="pb-20 lg:pb-28 px-6 lg:px-8">
+      <section className="pb-16 sm:pb-20 lg:pb-28 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl prose prose-slate prose-headings:font-medium prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-p:leading-relaxed prose-a:text-foreground">
           {children}
         </div>

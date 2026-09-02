@@ -140,7 +140,7 @@ export default async function PrivacyPage({ params }: Props) {
             OptiPeople ApS, Sønderskovvej 17, 8362 Hørning, Denmark
             (CVR 32883532) is the data controller for personal data collected
             via this website. You can reach us at{" "}
-            <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> or
+            <a href="mailto:hi@optipeople.dk">hi@optipeople.dk</a> or
             +45 23 74 47 05.
           </p>
           <h2>What we collect and why</h2>
@@ -188,7 +188,7 @@ export default async function PrivacyPage({ params }: Props) {
             of your personal data, to object to or restrict processing, and to
             data portability. Where processing is based on consent, you may
             withdraw it at any time. To exercise any of these rights, contact{" "}
-            <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a>.
+            <a href="mailto:hi@optipeople.dk">hi@optipeople.dk</a>.
           </p>
           <p>
             You also have the right to lodge a complaint with the Danish Data

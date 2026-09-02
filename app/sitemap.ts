@@ -1,48 +1,44 @@
 import type { MetadataRoute } from "next";
+import { featureSlugs } from "@/content/pages/features";
+import { moduleSlugs } from "@/content/pages/modules";
+import { serviceSlugs } from "@/content/pages/services";
+import { solutionSlugs } from "@/content/pages/solutions";
+import { aiCapabilitySlugs } from "@/lib/ai-stack";
 import { getAllPosts } from "@/lib/blog-data";
 import { absoluteUrl } from "@/lib/seo";
 import { addLocalePrefix } from "@/lib/i18n";
 
-const staticRoutes = [
+// Hand-listed pages: the hubs, the indexes, and the singletons. Every [slug]
+// route is derived from its content catalog below, so a new module, feature,
+// service, solution, or AI page is indexed the day it ships rather than when
+// someone remembers to add it here.
+const singleRoutes = [
   "/",
   "/about",
   "/contact",
+  "/platform",
   "/insights",
   "/newsletter",
   "/blog",
   "/cases",
+  "/videos",
+  "/resources/people",
+  "/get-help",
   "/modules",
-  "/solutions",
   "/features",
   "/services",
-  "/services/smart-operations",
-  "/services/automation",
-  "/services/business-intelligence",
-  "/services/ai-solutions",
-  "/solutions/manufacturing",
-  "/solutions/oems",
-  "/solutions/service",
-  "/modules/production",
-  "/modules/maintenance",
-  "/modules/quality",
-  "/modules/analysis",
-  "/modules/energy",
-  "/modules/iot",
-  "/modules/mes",
-  "/modules/erp-shopfloor",
-  "/features/production-efficiency",
-  "/features/stop-cause-registration",
-  "/features/maintenance-and-tasks",
-  "/features/quality-management",
-  "/features/analysis-and-reporting",
-  "/features/energy-and-telemetry",
-  "/features/ai-and-copilots",
-  "/features/machine-control",
-  "/resources/people",
-  "/videos",
-  "/get-help",
+  "/solutions",
   "/privacy",
   "/terms",
+];
+
+const staticRoutes = [
+  ...singleRoutes,
+  ...moduleSlugs.map((slug) => `/modules/${slug}`),
+  ...featureSlugs.map((slug) => `/features/${slug}`),
+  ...serviceSlugs.map((slug) => `/services/${slug}`),
+  ...solutionSlugs.map((slug) => `/solutions/${slug}`),
+  ...aiCapabilitySlugs.map((slug) => `/ai/${slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

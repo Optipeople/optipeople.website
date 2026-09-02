@@ -148,7 +148,7 @@ export function CaseArchive({
       )}
 
       {!featured ? (
-        <section className="px-[var(--edge)] py-20 lg:py-28">
+        <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-28">
           <div
             className="rounded-[1.75rem] p-10 lg:p-14"
             style={{ backgroundColor: theme.tint }}
@@ -242,7 +242,7 @@ export function CaseArchive({
 
           {/* The remaining stories, each on its own brand surface. */}
           {rest.length > 0 && (
-            <section className="px-[var(--edge)] pb-20 lg:pb-28">
+            <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
               {moreLabel && (
                 <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
                   {moreLabel}

@@ -21,14 +21,11 @@
       "da": "DA"
     },
     "footer": {
-      "brand": "Digital driftspartner for produktions- og industrivirksomheder.",
-      "company": "Virksomhed",
-      "modules": "Moduler",
-      "services": "Services & rådgivning",
-      "legal": "Juridisk",
+      "brand": "Digital driftsplatform og digitale services til produktions- og industrivirksomheder.",
+      "navigationLabel": "Navigation i sidefoden",
       "connect": "Følg os",
       "rights": "Alle rettigheder forbeholdes.",
-      "tagline": "Drift, der hænger sammen",
+      "tagline": "Styr driften på live data",
       "followLabel": "Følg os på {title}"
     }
   },

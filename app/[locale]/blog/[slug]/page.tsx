@@ -161,7 +161,7 @@ export default async function BlogPostPage({ params }: Props) {
               </span>
             </nav>
 
-            <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-16">
+            <div className="mt-10 grid grid-cols-1 gap-10 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-16">
               <div>
                 {post.customer && (
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
@@ -264,7 +264,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Body: contents rail on the left, one readable measure on the right. */}
       <div className="px-[var(--edge)] py-16 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16">
           <aside className="hidden lg:block">
             <TableOfContents headings={headings} label={t.tableOfContents} />
           </aside>
@@ -285,7 +285,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Related reading, on the hairline grid. */}
       {related.length > 0 && (
-        <section className="px-[var(--edge)] pb-20 lg:pb-28">
+        <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
           <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
             {isCaseStudy ? t.relatedCases : t.relatedPosts}
           </h2>

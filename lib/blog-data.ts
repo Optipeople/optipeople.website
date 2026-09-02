@@ -50,6 +50,16 @@ function translationFileName(slug: string, locale: Locale) {
   return `${slug}.${locale}.md`
 }
 
+/**
+ * `draft: true` in the English frontmatter unpublishes a post without deleting
+ * it: the slug drops out of every listing, the sitemap, and static params, and
+ * its URL 404s in every locale. Like `date` and `category`, the flag is read
+ * from the source only, so a translation can neither publish nor hide a story.
+ */
+function isDraft(sourceData: Record<string, unknown>) {
+  return sourceData.draft === true
+}
+
 type ParsedFile = {
   data: Record<string, unknown>
   content: string
@@ -148,7 +158,7 @@ function asString(value: unknown) {
  */
 function parsePost(slug: string, locale: Locale): BlogPost | undefined {
   const source = readMarkdown(sourceFileName(slug))
-  if (!source) {
+  if (!source || isDraft(source.data)) {
     return undefined
   }
 
@@ -221,10 +231,17 @@ export function getCaseStudies(locale: Locale = defaultLocale): BlogPost[] {
   )
 }
 
-/** Canonical slugs, taken from the English sources rather than translations. */
+/**
+ * Canonical slugs, taken from the English sources rather than translations.
+ * Drafts are left out, so a hidden post has no route to prerender.
+ */
 export function getAllSlugs(): string[] {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames
     .filter((fileName) => fileName.endsWith(".md") && !isTranslationFile(fileName))
+    .filter((fileName) => {
+      const source = readMarkdown(fileName)
+      return source !== undefined && !isDraft(source.data)
+    })
     .map((fileName) => fileName.replace(/\.md$/, ""))
 }

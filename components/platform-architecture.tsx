@@ -451,7 +451,7 @@ export function PlatformArchitecture({ locale = "en" }: { locale?: Locale }) {
   return (
     <section
       id="architecture"
-      className="scroll-mt-24 bg-[var(--gray-1)] py-20 lg:py-28"
+      className="scroll-mt-24 bg-[var(--gray-1)] py-16 sm:py-20 lg:py-28"
     >
       {/* On the shared content column: the heading, the diagram and the
           assurance row all start on the same left line as the rest of the

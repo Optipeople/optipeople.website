@@ -425,20 +425,34 @@ Feature pages are the most screenshot-heavy pages on the site. Every feature pag
 
 ### Image Containers
 
-| Context | Radius | Aspect Ratio | Shadow |
-|---------|--------|-------------|--------|
-| Hero screenshot | `rounded-2xl` | `aspect-[4/3]` | Standard card shadow |
-| Capability row | `rounded-2xl` | `aspect-[4/3]` | Standard card shadow |
-| Full-width showcase | `rounded-4xl` | `aspect-[16/9]` | Standard card shadow |
+**Never crop a screenshot to a ratio the layout picked.** Every frame is a
+`FramedImage` (components/framed-image.tsx): it reads the file's intrinsic size
+and takes its shape from the picture, so the whole screen is visible and there
+are no letterbox bars either. Fixed `aspect-[4/3]` boxes with `object-cover`
+are what this replaced, after visitors read the crops as images cut in half.
 
-Standard card shadow: `shadow-[0_0.5px_2.5px_0_rgba(0,0,0,0.30),0_0_0_0.5px_rgba(0,0,0,0.05)]`
+| Context | Radius | Height cap (`--frame-cap`) | Ground |
+|---------|--------|---------------------------|--------|
+| Hero screenshot | `rounded-2xl` | `22rem`, `30rem` from `lg` | `bg-white` on the page tint |
+| Capability row | `rounded-xl` | `20rem`, `26rem` from `lg` | `bg-white` on the panel tint |
+| Full-width showcase | `rounded-2xl` | `30rem`, `42rem` from `lg` | `bg-white/5` on the deep surface |
 
-All image containers include: `overflow-hidden border border-[var(--gray-2)]`
+The cap is the only thing the layout gets to decide: the mount fills its column
+until it would grow taller than the cap, then narrows instead. Without it a
+portrait capture would push the rest of the section down the page.
+
+Frames carry `overflow-hidden`, a ring rather than a border
+(`ring-1 ring-black/[0.08]`, or `ring-white/[0.12]` on deep surfaces), and a
+soft drop shadow. `mx-auto` so a mount narrower than its column sits centred.
 
 ### Screenshot Guidance
 
 - Use **real product UI**, actual OptiPeople screens, not mockups or wireframes
-- Crop to show the relevant part of the interface, don't show the full browser chrome
+- Crop the *file*, not the frame. If only part of the interface is relevant,
+  export a tighter capture; the frame will show whatever the file contains
+- Prefer a landscape capture. A whole 4:3 or 16:10 screen fills these frames;
+  a full-page mobile capture (`393x1364`, say) can only ever sit as a narrow
+  strip in the middle of them, so use a phone-shaped capture instead
 - If a screenshot doesn't exist yet, use a `bg-muted/30` placeholder with centered text: "Screenshot coming soon"
 - Never use stock photos, abstract illustrations, or decorative images
 

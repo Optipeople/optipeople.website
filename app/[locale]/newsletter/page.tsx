@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { BarChart3, Check, Factory, Wrench } from "lucide-react"
 
 import { type Locale } from "@/i18n/routing"
@@ -6,7 +5,9 @@ import { setRequestLocale } from "next-intl/server"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { LogoWall } from "@/components/logo-wall"
 import { customerLogos } from "@/lib/customers"
+import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
+import { FramedImage } from "@/components/framed-image"
 
 const copy: Record<
   Locale,
@@ -138,6 +139,8 @@ export default async function NewsletterPage({
   setRequestLocale(locale as Locale)
 
   const t = copy[locale as Locale] ?? copy.en
+  // Green: the same tint the topic cards on the other pages draw from.
+  const theme = getSurface("green")
 
   return (
     <main className="relative overflow-hidden">
@@ -149,9 +152,9 @@ export default async function NewsletterPage({
 
       {/* Hero, copy alongside the signup form */}
       <section className="px-[var(--edge)] pt-20 pb-16 sm:pt-28 lg:pb-24">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="max-w-xl">
-            <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
               {t.badge}
             </p>
             <h1 className="mt-5 text-balance text-4xl font-normal leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
@@ -187,7 +190,7 @@ export default async function NewsletterPage({
 
       {/* Social proof, same logo wall as the homepage */}
       <section className="px-[var(--edge)] pt-8 lg:pt-12">
-        <p className="text-center text-sm font-medium uppercase tracking-wide text-muted-foreground">
+        <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {t.logosTitle}
         </p>
       </section>
@@ -195,7 +198,7 @@ export default async function NewsletterPage({
 
       {/* What to expect, bento-style topic cards */}
       <section className="px-[var(--edge)] py-12 lg:py-20">
-        <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {t.expectEyebrow}
         </p>
         <h2 className="mt-3 max-w-2xl text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
@@ -209,15 +212,16 @@ export default async function NewsletterPage({
             return (
               <div
                 key={topic.title}
-                className="rounded-3xl border border-border/50 bg-[oklch(0.97_0.013_168)] p-7 transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] lg:p-8"
+                className="rounded-[1.25rem] p-7 lg:rounded-[1.5rem] lg:p-8"
+                style={{ backgroundColor: theme.tint }}
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--green-light1)] text-[var(--green-dark3)]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/70 text-foreground/82">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <h3 className="mt-6 text-lg font-medium tracking-tight text-foreground">
                   {topic.title}
                 </h3>
-                <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                <p className="mt-3 text-sm leading-relaxed text-foreground/78">
                   {topic.description}
                 </p>
               </div>
@@ -227,8 +231,8 @@ export default async function NewsletterPage({
       </section>
 
       {/* Product showcase */}
-      <section className="px-[var(--edge)] pb-24 lg:pb-32">
-        <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+      <section className="px-[var(--edge)] pb-16 sm:pb-24 lg:pb-32">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
           {t.showcaseEyebrow}
         </p>
         <h2 className="mt-3 max-w-2xl text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
@@ -236,16 +240,15 @@ export default async function NewsletterPage({
         </h2>
         <div className="mt-10 lg:mt-12">
           <div className="relative overflow-hidden rounded-[2rem] border border-border/50 bg-[linear-gradient(135deg,#f4efe6,#f8f6f1)] p-3 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_24px_60px_-28px_rgba(0,0,0,0.22)] sm:p-4">
-            <div className="overflow-hidden rounded-[1.5rem] border border-border/60">
-              <Image
-                src="/images/Mockups/Report-OEE-Efficiency-With-Filter.png"
-                alt={t.dashboardAlt}
-                width={1600}
-                height={1000}
-                className="h-auto w-full object-cover"
-                sizes="(min-width: 1024px) 64rem, 100vw"
-              />
-            </div>
+            {/* The declared 1600x1000 was not the file's 2941x1706, so
+                object-cover was quietly shaving the sides off. */}
+            <FramedImage
+              src="/images/Mockups/Report-OEE-Efficiency-With-Filter.png"
+              alt={t.dashboardAlt}
+              boxSizes="(min-width: 1024px) 64rem, 100vw"
+              cap="[--frame-cap:30rem] lg:[--frame-cap:40rem]"
+              className="mx-auto overflow-hidden rounded-[1.5rem] border border-border/60"
+            />
           </div>
         </div>
       </section>

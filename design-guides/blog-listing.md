@@ -191,6 +191,7 @@ Post content in markdown...
 | `author` | Yes | Post meta on detail page |
 | `category` | Yes | Filtering (future), eyebrow labels |
 | `image` | No | Card image, hero image on post page |
+| `draft` | No | `true` unpublishes the post: hidden from every list and the sitemap, URL 404s. Files stay in the repo. |
 
 Posts are sorted by date descending (newest first).
 

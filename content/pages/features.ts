@@ -320,9 +320,9 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Fix Things Before They Break",
         heroBody:
           "Plan and execute preventive maintenance based on real usage and condition. Assign tasks, track completion, and turn reactive firefighting into structured prevention.",
-        heroImage: "/images/taskapp2.png",
+        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
         heroImageAlt:
-          "OptiPeople task management interface showing filterable task list with progress tracking",
+          "Tasks Management showing maintenance tasks triggered by counters and run hours, beside the lists they draw on",
         valueTitle: "Unplanned stops are the most expensive kind",
         valueBody:
           "Every unplanned stop costs more than a planned one, in lost production, emergency parts, and scrambled schedules. Most factories know this but still run maintenance off spreadsheets and memory. OptiPeople puts every task in one place, triggered by real machine data, tracked to completion.",
@@ -334,17 +334,17 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "One List for Every Task on the Floor",
             description:
               "Search, filter, and prioritize across all open tasks, by machine, urgency, or type. Operators see exactly what needs doing and how much time is left. No more whiteboards, no more forgotten follow-ups.",
-            image: "/images/taskapp2.png",
+            image: "/images/taskapp1.png",
             imageAlt:
-              "Task list showing open maintenance tasks with search, filters, and remaining time for each task",
+              "Task list on a phone with search and machine filter, showing each open task and the time left on it",
           },
           {
             title: "Maintenance Driven by Data, Not Calendars",
             description:
               "Schedule maintenance based on actual machine usage, run hours, and condition signals, not fixed intervals. When a threshold is reached, the task appears automatically. You maintain what needs it, when it needs it.",
-            image: "/images/report1.png",
+            image: "/images/Mockups/Tasls-Maintenance.png",
             imageAlt:
-              "OEE report showing availability, performance, and timeline chart used to plan maintenance windows",
+              "Task list where the When column reads after counter reached and production hour reached rather than a fixed date",
           },
           {
             title: "Close the Loop at the Machine",
@@ -391,8 +391,9 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Gør vedligehold planlagt og synligt",
         heroBody:
           "Opret opgaver, sæt navn på dem, og planlæg service efter, hvor meget maskinen faktisk har kørt.",
-        heroImage: "/images/taskapp2.png",
-        heroImageAlt: "Vedligeholdsopgaver",
+        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
+        heroImageAlt:
+          "Opgavestyring med vedligeholdsopgaver, der udløses af tællere og driftstimer, ved siden af de lister, de trækker på",
         valueTitle: "Vedligehold virker bedst, før maskinen bryder ned",
         valueBody:
           "Når driftstimer, alarmer og opgaver ligger samme sted, kan teknikerne tage det vigtigste først og skrive arbejdet ned uden ekstra papir.",
@@ -404,15 +405,16 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Planer efter brug",
             description:
               "Planlæg service efter driftstimer, antal cyklusser eller faste intervaller.",
-            image: "/images/taskapp1.png",
-            imageAlt: "Opgaveapp",
+            image: "/images/Mockups/Tasls-Maintenance.png",
+            imageAlt:
+              "Opgavelisten med vedligehold planlagt efter tællere og driftstimer",
           },
           {
             title: "Opgaverne på mobilen",
             description:
               "Teknikeren ser opgaven, noterne og status dér, hvor arbejdet bliver lavet.",
-            image: "/images/taskapp2.png",
-            imageAlt: "Opgavestyring",
+            image: "/images/taskapp1.png",
+            imageAlt: "Opgaverne på telefonen med resttid pr. opgave",
           },
           {
             title: "Historik pr. maskine",

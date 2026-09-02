@@ -137,7 +137,7 @@ export function PostArchive({
               href={`${postBasePath}/${featured.slug}`}
               className="group mt-12 block lg:mt-16"
             >
-              <article className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
+              <article className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08] lg:aspect-[16/11]">
                   {featured.image ? (
                     <Image
@@ -176,7 +176,7 @@ export function PostArchive({
         </div>
       </section>
 
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         {paginatedPosts.length === 0 ? (
           <div
             className="rounded-[1.75rem] p-10 lg:p-14"

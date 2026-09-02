@@ -404,4 +404,20 @@
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
   }
+  /* A word that cannot fit its line breaks inside it instead of pushing the
+     column past the screen edge. Danish compounds like
+     "produktionsvirksomheder" hit this at phone widths; English rarely does.
+     `break-word` leaves min-content sizing alone, so grids are unaffected. */
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  dt,
+  dd,
+  blockquote,
+  figcaption {
+    overflow-wrap: break-word;
+  }
 }

@@ -437,16 +437,23 @@ How It Works    → white
 
 ### Aspect Ratios
 
+Screenshots have no assigned ratio: they bring their own. Use `FramedImage`
+(components/framed-image.tsx), which reads the file's intrinsic size and shapes
+the mount to it, and give it a height cap of `30rem`, `42rem` from `lg`, for the
+product section. See [feature-page.md](feature-page.md#image-containers).
+
+Fixed ratios still apply to two things:
+
 | Content | Ratio | Usage |
 |---------|-------|-------|
-| Dashboard / full UI | `aspect-[16/9]` | Hero visual, product section |
-| Feature detail | `aspect-[4/3]` | Alternating row images |
-| Wide banner | `aspect-[2/1]` | Optional hero background |
+| Drawn panels (`visualDrawn`) | `aspect-[16/9]` | Built to fill the frame, so they get one |
+| Photography | `aspect-[16/9]`, `aspect-[4/3]` | A photograph is composed to be cropped; a screen is not |
 
 ### Hover Effects
 
-- Images inside links: `group-hover:scale-105 transition-transform duration-500`
-- Always wrap in `overflow-hidden` to contain the scale
+- Frames inside links: `group-hover:scale-[1.02] transition-transform duration-500`
+  on the mount. Do not scale the image inside the mount, a zoom is a crop by
+  another name
 - Static images (not clickable): no hover effect
 
 ---

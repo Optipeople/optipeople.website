@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server"
 
 import { Link } from "@/i18n/navigation"
 import type { Locale } from "@/i18n/routing"
+import { generalEmail } from "@/lib/contact"
 import { employees } from "@/lib/employees"
 import { getSurface, rotateSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
@@ -15,12 +16,19 @@ type PeopleCopy = {
   eyebrow: string
   title: string
   intro: string
+  stats: { metric: string; label: string }[]
   secondaryTitle: string
   secondary: string
-  peopleLabel: string
-  teamsLabel: string
   teamTitle: string
   contactNote: string
+  softwareTeam: {
+    team: string
+    title: string
+    description: string
+    tileEyebrow: string
+    builds: string[]
+    expertise: string[]
+  }
   closingTitle: string
   closingLinks: { title: string; description: string; href: string }[]
 }
@@ -35,15 +43,32 @@ const copy: Record<Locale, PeopleCopy> = {
     eyebrow: "People",
     title: "Meet OptiPeople",
     intro:
-      "A small, hands-on team with experience in software, projects, BI, IoT, sales, and industrial operations. Between us we cover the whole path from a machine on the floor to a report someone actually uses.",
+      "A hands-on team with experience in software, projects, BI, IoT, sales, and industrial operations. Between us we cover the whole path from a machine on the floor to a report someone actually uses.",
+    stats: [
+      { metric: "100+", label: "Factories" },
+      { metric: "10+", label: "Years of experience" },
+      { metric: "1", label: "Digital partner for your company" },
+    ],
     secondaryTitle: "You keep talking to the same people",
     secondary:
-      "We work directly with the factories we serve, which means the person who scopes your project is usually the person you keep talking to. There is no account-management layer between you and the people doing the work.",
-    peopleLabel: "people on the team",
-    teamsLabel: "disciplines, from sales to platform engineering",
+      "We work closely with the factories we serve. You have a dedicated contact throughout, and the person who scopes your project is the one who does most of the work on it. So the people you meet at the start are the people you keep talking to.",
     teamTitle: "The team",
     contactNote:
-      "Write to whoever is closest to your question, or send it to hej@optipeople.dk and we will route it.",
+      "Write to whoever is closest to your question, or send it to hi@optipeople.dk and we will route it.",
+    softwareTeam: {
+      team: "Software team",
+      title: "The development team",
+      description:
+        "The developers and engineers who build and run the OptiPeople Data Platform, from the device on the machine to the report in your inbox.",
+      tileEyebrow: "What they build",
+      builds: [
+        "OptiPeople Data Platform",
+        "IoT edge and connectivity",
+        "ERP and MES integrations",
+        "AI, copilots and reporting",
+      ],
+      expertise: ["Platform Engineering", "IoT", "Integrations", "AI"],
+    },
     closingTitle: "Not sure who to ask?",
     closingLinks: [
       {
@@ -69,15 +94,32 @@ const copy: Record<Locale, PeopleCopy> = {
     eyebrow: "Mennesker",
     title: "Mød OptiPeople",
     intro:
-      "Et lille, praktisk team med erfaring i software, projekter, BI, IoT, salg og industriel drift. Tilsammen dækker vi hele vejen fra en maskine på gulvet til en rapport, nogen rent faktisk bruger.",
+      "Et praktisk team med erfaring i software, projekter, BI, IoT, salg og industriel drift. Tilsammen dækker vi hele vejen fra en maskine på gulvet til en rapport, nogen rent faktisk bruger.",
+    stats: [
+      { metric: "100+", label: "Fabrikker" },
+      { metric: "10+", label: "Års erfaring" },
+      { metric: "1", label: "Digital partner til jeres virksomhed" },
+    ],
     secondaryTitle: "I taler med de samme mennesker hele vejen",
     secondary:
-      "Vi arbejder direkte med de fabrikker, vi løser opgaver for. Den, der skruer jeres projekt sammen, er derfor typisk også den, I bliver ved med at tale med. Der ligger ikke et lag af kundeansvarlige mellem jer og dem, der laver arbejdet.",
-    peopleLabel: "mennesker i teamet",
-    teamsLabel: "fagområder, fra salg til platformsudvikling",
+      "Vi arbejder tæt sammen med de fabrikker, vi løser opgaver for. I har én fast kontaktperson hele vejen, og den, der skruer jeres projekt sammen, er også den, der laver det meste af arbejdet. Så dem, I møder i starten, er dem, I bliver ved med at tale med.",
     teamTitle: "Teamet",
     contactNote:
       "Skriv til den, der er tættest på jeres spørgsmål, eller send det til hej@optipeople.dk, så sender vi det videre.",
+    softwareTeam: {
+      team: "Softwareteam",
+      title: "Udviklingsteamet",
+      description:
+        "Udviklerne og ingeniørerne, der bygger og driver OptiPeople Data Platform, fra boksen på maskinen til rapporten i jeres indbakke.",
+      tileEyebrow: "Det, de bygger",
+      builds: [
+        "OptiPeople Data Platform",
+        "IoT-enheder og opkobling",
+        "ERP- og MES-integrationer",
+        "AI, copiloter og rapporter",
+      ],
+      expertise: ["Platformsudvikling", "IoT", "Integrationer", "AI"],
+    },
     closingTitle: "I tvivl om hvem I skal spørge?",
     closingLinks: [
       {
@@ -115,17 +157,24 @@ export async function generateMetadata({ params }: PageProps) {
  * `font-normal` display type, oversized tabular figures on a hairline strip,
  * and tinted surfaces rather than bare photos on white.
  *
- * Each person sits on their own surface from the brand rotation. On a team of
- * nine that reads as nine individuals rather than one card template repeated,
- * which is the whole point of the page. The figures in the strip are counted
- * from lib/employees.ts, so they cannot fall out of date.
+ * Each person sits on their own surface from the brand rotation, so the grid
+ * reads as individuals rather than one card template repeated, which is the
+ * whole point of the page. The software team closes the grid as
+ * one card: its developers have no public profiles, so the photo slot carries
+ * what they build instead of a face.
+ *
+ * The figures in the strip are the same company-level claims as on /about
+ * (factories, years, one partner), not a headcount. The page sells the track
+ * record, never the size of the team, and the copy must not call it small.
  */
 export default async function PeoplePage({ params }: PageProps) {
   const { locale } = await params
   setRequestLocale(locale as Locale)
   const t = copy[locale as Locale] ?? copy.en
   const theme = getSurface("purple")
-  const teams = new Set(employees.map((person) => person.team)).size
+  // The software team has no public individual addresses, so its card points at
+  // the shared inbox the contact note already routes through.
+  const softwareTeamEmail = generalEmail(locale as Locale)
 
   return (
     <div className="min-h-screen">
@@ -150,23 +199,22 @@ export default async function PeoplePage({ params }: PageProps) {
             {t.intro}
           </p>
 
-          <dl className="mt-12 grid max-w-2xl grid-cols-1 border-y border-black/[0.08] sm:grid-cols-2 lg:mt-14">
-            <div className="py-7 sm:pr-8 lg:pr-12">
-              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
-                {employees.length}
-              </dt>
-              <dd className="mt-3 max-w-[24ch] text-sm leading-relaxed text-foreground/70">
-                {t.peopleLabel}
-              </dd>
-            </div>
-            <div className="border-t border-black/[0.08] py-7 sm:border-l sm:border-t-0 sm:pl-8 lg:pl-12">
-              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
-                {teams}
-              </dt>
-              <dd className="mt-3 max-w-[24ch] text-sm leading-relaxed text-foreground/70">
-                {t.teamsLabel}
-              </dd>
-            </div>
+          <dl className="mt-12 grid max-w-3xl grid-cols-1 divide-y divide-black/[0.08] border-y border-black/[0.08] sm:grid-cols-3 sm:divide-y-0 lg:mt-14">
+            {t.stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`py-7 ${
+                  i > 0 ? "sm:border-l sm:border-black/[0.08] sm:pl-8" : ""
+                } ${i < t.stats.length - 1 ? "sm:pr-8" : ""}`}
+              >
+                <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
+                  {stat.metric}
+                </dt>
+                <dd className="mt-3 max-w-[22ch] text-sm leading-relaxed text-foreground/70">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
           </dl>
         </div>
       </section>
@@ -184,7 +232,7 @@ export default async function PeoplePage({ params }: PageProps) {
       </section>
 
       {/* The team itself. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
             {t.teamTitle}
@@ -245,11 +293,78 @@ export default async function PeoplePage({ params }: PageProps) {
               </a>
             </article>
           ))}
+
+          {/*
+            The software team as one card. Same frame as a person, but the
+            photo slot is the page's deep surface listing what the team builds,
+            since the developers behind the platform have no public profiles.
+          */}
+          <article
+            className="reveal flex flex-col rounded-[1.25rem] p-5 lg:rounded-[1.5rem] lg:p-6"
+            style={{ backgroundColor: rotateSurface(employees.length).tint }}
+          >
+            <div
+              className="flex aspect-[3/4] flex-col justify-between overflow-hidden rounded-xl p-5 shadow-[0_18px_44px_-24px_rgba(0,0,0,0.4)] ring-1 ring-black/[0.08] lg:p-6"
+              style={{ backgroundColor: theme.deep }}
+            >
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/60">
+                {t.softwareTeam.tileEyebrow}
+              </p>
+              <ol className="border-t border-white/[0.14]">
+                {t.softwareTeam.builds.map((item, i) => (
+                  <li
+                    key={item}
+                    className="flex items-baseline gap-4 border-b border-white/[0.14] py-3.5"
+                  >
+                    <span className="text-xs tabular-nums text-white/50">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-base leading-snug text-white/90">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="mt-6 flex-1">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/60">
+                {t.softwareTeam.team}
+              </p>
+              <h3 className="mt-3 text-xl font-normal tracking-tight text-foreground">
+                {t.softwareTeam.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-foreground/72">
+                {t.softwareTeam.description}
+              </p>
+
+              <ul className="mt-5 flex flex-wrap gap-1.5">
+                {t.softwareTeam.expertise.map((skill) => (
+                  <li
+                    key={skill}
+                    className="rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/70"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href={`mailto:${softwareTeamEmail}`}
+              className="group mt-6 inline-flex items-center gap-3 text-sm text-foreground/78 transition-colors hover:text-foreground"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </span>
+              <span className="truncate">{softwareTeamEmail}</span>
+            </a>
+          </article>
         </div>
       </section>
 
       {/* Where to go next, on the hairline grid. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {t.closingTitle}
         </h2>

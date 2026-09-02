@@ -1,6 +1,7 @@
 ---
 title: "Dansand: 3.5 million bags of sand yearly, and the OptiPeople Data Platform enables better time management"
 date: "2022-04-07"
+draft: true
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/dansand.jpg"

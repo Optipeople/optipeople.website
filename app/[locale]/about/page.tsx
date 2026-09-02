@@ -238,7 +238,7 @@ export default async function AboutPage({ params }: PageProps) {
       </section>
 
       {/* Mission: asymmetric, replacing the centred max-w-3xl block. */}
-      <section className="px-[var(--edge)] py-20 lg:py-32">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {t.missionHeading}
@@ -250,7 +250,7 @@ export default async function AboutPage({ params }: PageProps) {
       </section>
 
       {/* Values: numbered rail on hairlines. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.valuesHeading}
         </h2>
@@ -279,11 +279,13 @@ export default async function AboutPage({ params }: PageProps) {
       </section>
 
       {/* Team: tinted cards rather than bare photos on a grey band. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.teamHeading}
         </h2>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-5">
+        {/* Two across even on a phone: eight full-width portraits made the
+            page a very long scroll, and a name and a title fit a half column. */}
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:mt-14 lg:grid-cols-4 lg:gap-5">
           {team.map((person) => (
             <article
               key={person.slug}
@@ -296,14 +298,16 @@ export default async function AboutPage({ params }: PageProps) {
                   alt={person.name}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, 100vw"
+                  sizes="(min-width: 1024px) 25vw, 50vw"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-base font-medium tracking-tight text-foreground">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-sm font-medium leading-snug tracking-tight text-foreground sm:text-base">
                   {person.name}
                 </h3>
-                <p className="mt-1 text-sm text-foreground/72">{person.role}</p>
+                <p className="mt-1 text-xs text-foreground/72 sm:text-sm">
+                  {person.role}
+                </p>
               </div>
             </article>
           ))}

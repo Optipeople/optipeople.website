@@ -55,9 +55,17 @@ function highlightNumbers(text: string): React.ReactNode[] {
   return result.length > 0 ? result : [text]
 }
 
-/** Shared between the linked and unlinked card so both read identically. */
+/**
+ * Shared between the linked and unlinked card so both read identically.
+ *
+ * The card is 380px wide from `sm` up. Below that it is the viewport minus the
+ * page gutter, because a fixed 380px card was wider than a 375px phone and its
+ * first words sat under the edge fade. Height is a minimum, not a fixed value:
+ * the track is a flex row, so every card stretches to the tallest one and a
+ * long quote on a narrow card simply makes the row taller.
+ */
 const CARD_CLASS =
-  "group flex h-[320px] w-[380px] flex-shrink-0 flex-col rounded-[20px] bg-card p-8 ring-1 ring-black/[0.04] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_16px_40px_-16px_rgba(0,0,0,0.18)]"
+  "group flex min-h-[300px] w-[calc(100vw-3rem)] max-w-[380px] flex-shrink-0 flex-col rounded-[20px] bg-card p-6 ring-1 ring-black/[0.04] shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_2px_4px_rgba(0,0,0,0.05),0_16px_40px_-16px_rgba(0,0,0,0.18)] sm:min-h-[320px] sm:w-[380px] sm:p-8"
 
 function TestimonialCard({
   testimonial,
@@ -90,7 +98,7 @@ function TestimonialCard({
           </span>
         )}
       </div>
-      <p className="-mt-3 flex-1 text-[17px] font-normal leading-[1.6] tracking-[-0.01em] text-foreground/90">
+      <p className="-mt-3 flex-1 text-base font-normal leading-[1.6] tracking-[-0.01em] text-foreground/90 sm:text-[17px]">
         {highlightNumbers(testimonial.quote)}
       </p>
       <div className="mt-auto border-t border-black/[0.06] pt-5">
@@ -124,9 +132,11 @@ function TestimonialCard({
   )
 }
 
-const CARD_WIDTH = 380
-const GAP = 32
-const STEP = CARD_WIDTH + GAP
+// The widest a card and its gap get (the `sm` values in CARD_CLASS and the
+// track). The real step is measured from the DOM once mounted, because both
+// shrink on a phone; this constant only sizes the clone count and seeds the
+// measurement.
+const MAX_STEP = 380 + 32
 // Widest viewport the track is built to fill. The set is repeated until it
 // covers this plus one full set, so the wrap point always sits off-screen.
 const MAX_TRACK_WIDTH = 2560
@@ -178,14 +188,16 @@ export function TestimonialCarousel({
   caseLabel = "Read the case",
   className = "",
 }: TestimonialCarouselProps) {
-  // Exact width of one set of testimonials (the loop period)
-  const setWidth = testimonials.length * STEP
-  // Two sets only cover a wide screen when the set itself is wide. With few
-  // quotes the track ran dry and left an empty band on the right.
+  // Clone count is sized for the widest cards; narrower ones only mean more
+  // coverage than needed, never a gap.
+  const maxSetWidth = testimonials.length * MAX_STEP
   const setCount =
-    setWidth > 0 ? Math.max(2, 1 + Math.ceil(MAX_TRACK_WIDTH / setWidth)) : 1
+    maxSetWidth > 0 ? Math.max(2, 1 + Math.ceil(MAX_TRACK_WIDTH / maxSetWidth)) : 1
 
   const trackRef = React.useRef<HTMLDivElement>(null)
+  // Distance from one card's left edge to the next, measured from the DOM so
+  // the loop period follows the responsive card width and gap.
+  const stepRef = React.useRef(MAX_STEP)
   // Unbounded scroll position in px; only wrapped when applied as a transform
   const offsetRef = React.useRef(0)
   // When set, the rAF loop eases toward this position instead of auto-scrolling
@@ -207,13 +219,35 @@ export function TestimonialCarousel({
   }, [])
 
   React.useEffect(() => {
-    const autoSpeed = setWidth * AUTO_SPEED_FACTOR // px per second
+    const track = trackRef.current
+    if (!track) return
+    const measure = () => {
+      const first = track.children[0] as HTMLElement | undefined
+      const second = track.children[1] as HTMLElement | undefined
+      if (first && second) {
+        const step = second.offsetLeft - first.offsetLeft
+        if (step > 0) stepRef.current = step
+      }
+    }
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(track)
+    return () => observer.disconnect()
+  }, [])
+
+  const count = testimonials.length
+
+  React.useEffect(() => {
     let rafId: number
     let lastTime: number | null = null
 
     const tick = (time: number) => {
       const dt = lastTime === null ? 0 : (time - lastTime) / 1000
       lastTime = time
+
+      // Exact width of one set of testimonials (the loop period)
+      const setWidth = count * stepRef.current
+      const autoSpeed = setWidth * AUTO_SPEED_FACTOR // px per second
 
       const target = targetRef.current
       if (target !== null) {
@@ -234,7 +268,7 @@ export function TestimonialCarousel({
         offsetRef.current += autoSpeed * dt
       }
 
-      if (trackRef.current) {
+      if (trackRef.current && setWidth > 0) {
         const wrapped =
           ((offsetRef.current % setWidth) + setWidth) % setWidth
         trackRef.current.style.transform = `translateX(${-wrapped}px)`
@@ -244,16 +278,17 @@ export function TestimonialCarousel({
 
     rafId = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(rafId)
-  }, [setWidth])
+  }, [count])
 
   const step = (direction: 1 | -1) => {
+    const size = stepRef.current
     const from = targetRef.current ?? offsetRef.current
     // Snap to the next/previous card boundary
     const nextIndex =
       direction === 1
-        ? Math.floor(from / STEP + 1e-4) + 1
-        : Math.ceil(from / STEP - 1e-4) - 1
-    targetRef.current = nextIndex * STEP
+        ? Math.floor(from / size + 1e-4) + 1
+        : Math.ceil(from / size - 1e-4) - 1
+    targetRef.current = nextIndex * size
     resumeAtRef.current = performance.now() + RESUME_DELAY_MS
   }
 
@@ -280,30 +315,31 @@ export function TestimonialCarousel({
         onBlur={() => (focusedRef.current = false)}
       >
         {/* Fade edges - aggressive fade so only 2-3 cards visible from center.
-            Narrower below sm, where 35% of the viewport washed out the whole
-            card and left the quote and its link barely readable. */}
+            On a phone the fade is only as wide as the card's own padding, so
+            it never washes over the quote itself. */}
         <div
-          className="absolute left-0 top-0 bottom-0 w-[16%] sm:w-[35%] z-10 pointer-events-none"
+          className="absolute left-0 top-0 bottom-0 w-6 sm:w-[35%] z-10 pointer-events-none"
           style={{
             background: "linear-gradient(to right, var(--background) 0%, var(--background) 40%, transparent 100%)",
           }}
         />
         <div
-          className="absolute right-0 top-0 bottom-0 w-[16%] sm:w-[35%] z-10 pointer-events-none"
+          className="absolute right-0 top-0 bottom-0 w-6 sm:w-[35%] z-10 pointer-events-none"
           style={{
             background: "linear-gradient(to left, var(--background) 0%, var(--background) 40%, transparent 100%)",
           }}
         />
 
-        {/* Navigation arrows */}
-        <div className="absolute inset-y-0 left-4 sm:left-8 z-20 flex items-center pointer-events-none">
+        {/* Navigation arrows over the track. Hidden on a phone, where they
+            would sit on top of the quote; the row below takes over there. */}
+        <div className="absolute inset-y-0 left-4 sm:left-8 z-20 hidden items-center pointer-events-none sm:flex">
           <ArrowButton
             direction="left"
             onClick={() => step(-1)}
             label="Previous testimonial"
           />
         </div>
-        <div className="absolute inset-y-0 right-4 sm:right-8 z-20 flex items-center pointer-events-none">
+        <div className="absolute inset-y-0 right-4 sm:right-8 z-20 hidden items-center pointer-events-none sm:flex">
           <ArrowButton
             direction="right"
             onClick={() => step(1)}
@@ -312,7 +348,7 @@ export function TestimonialCarousel({
         </div>
 
         {/* Scrolling track - transform driven by rAF loop for seamless infinite loop */}
-        <div ref={trackRef} className="flex gap-8 py-10 will-change-transform">
+        <div ref={trackRef} className="flex gap-4 py-6 will-change-transform sm:gap-8 sm:py-10">
           {/* First set is the real one, the rest are clones for the loop */}
           {Array.from({ length: setCount }, (_, set) =>
             testimonials.map((testimonial, index) => (
@@ -325,6 +361,20 @@ export function TestimonialCarousel({
             )),
           )}
         </div>
+      </div>
+
+      {/* Phone arrows, right-aligned below the track like the other sliders. */}
+      <div className="mt-2 flex justify-end gap-3 px-[var(--edge)] sm:hidden">
+        <ArrowButton
+          direction="left"
+          onClick={() => step(-1)}
+          label="Previous testimonial"
+        />
+        <ArrowButton
+          direction="right"
+          onClick={() => step(1)}
+          label="Next testimonial"
+        />
       </div>
     </section>
   )

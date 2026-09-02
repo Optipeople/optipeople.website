@@ -60,7 +60,7 @@ export function AiStackPage({
             <span className="text-foreground/88">{c.eyebrow}</span>
           </nav>
 
-          <div className="mt-10 grid items-center gap-12 lg:mt-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
+          <div className="mt-10 grid grid-cols-1 items-center gap-12 lg:mt-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                 {c.eyebrow}
@@ -91,9 +91,11 @@ export function AiStackPage({
               </div>
             </div>
 
-            {/* Mockup on the capability's own card colour. */}
+            {/* Mockup on the capability's own card colour. The 4/3 frame only
+                holds from `sm` up: on a phone it is 245px tall and cut the
+                taller mockups off, so there the frame wraps its content. */}
             <div
-              className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-[1.75rem] p-10 shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.06] lg:rounded-[2rem]"
+              className="relative flex items-center justify-center overflow-hidden rounded-[1.75rem] px-6 py-10 shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.06] sm:aspect-[4/3] sm:p-10 lg:rounded-[2rem]"
               style={{ backgroundColor: cap.theme.bg }}
             >
               <div className="w-full max-w-sm">
@@ -105,7 +107,7 @@ export function AiStackPage({
       </section>
 
       {/* Value proposition, asymmetric two-column. */}
-      <section className="px-[var(--edge)] py-20 lg:py-32">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {c.valueTitle}
@@ -117,7 +119,7 @@ export function AiStackPage({
       </section>
 
       {/* Capabilities, numbered cells inside one tinted panel. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {c.capabilitiesTitle}
         </h2>
@@ -142,7 +144,7 @@ export function AiStackPage({
       </section>
 
       {/* Use cases, tinted cards. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {c.useCasesTitle}
         </h2>
@@ -167,7 +169,7 @@ export function AiStackPage({
       {/* Capability CTA, deep brand surface. Bespoke per-capability copy,
           and the only place the secondary action (API reference) is offered,
           so it stays despite the global CTA further down. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <div
           className="flex flex-col gap-8 rounded-[1.75rem] px-8 py-14 text-white sm:px-12 lg:flex-row lg:items-end lg:justify-between lg:rounded-[2rem] lg:px-16 lg:py-20"
           style={{ backgroundColor: theme.deep }}
@@ -206,7 +208,7 @@ export function AiStackPage({
       </section>
 
       {/* Related capabilities, each row keeps its own colour. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {relatedLabel}
         </h2>

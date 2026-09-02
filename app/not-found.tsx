@@ -2,13 +2,24 @@
 // passthrough, so this renders its own <html>/<body>. Locale-scoped 404s use
 // app/[locale]/not-found.tsx (with full chrome + translations).
 import Link from "next/link"
+import { IBM_Plex_Sans } from "next/font/google"
 import "./globals.css"
+
+// The locale layout is not rendered here, so the brand face has to be loaded
+// again or the page falls back to the system font. Same options as the
+// locale layout, so next/font serves the one set of files.
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-ibm-plex-sans",
+})
 
 export default function GlobalNotFound() {
   return (
-    <html lang="en">
+    <html lang="en" className={ibmPlexSans.variable}>
       <body className="bg-background text-foreground">
-        <section className="flex min-h-screen items-center justify-center py-24">
+        <section className="flex min-h-screen items-center justify-center py-16 sm:py-24">
           <div className="mx-auto max-w-2xl px-6 text-center">
             <p className="select-none text-8xl font-normal text-foreground/10 lg:text-9xl">
               404

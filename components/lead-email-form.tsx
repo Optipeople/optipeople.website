@@ -116,7 +116,10 @@ export function LeadEmailForm({
             autoComplete="email"
             aria-label={t("placeholder")}
             aria-invalid={Boolean(error)}
-            className="h-10 min-w-0 flex-1 bg-transparent text-base text-foreground placeholder:text-muted-foreground/70 focus:outline-none"
+            // `w-0` with `flex-1`: an input's intrinsic width otherwise counts
+            // towards the pill's min-content size and can widen an auto-sized
+            // grid track past the viewport on a phone.
+            className="h-10 w-0 min-w-0 flex-1 bg-transparent text-base text-foreground placeholder:text-muted-foreground/70 focus:outline-none"
           />
           <button
             type="submit"

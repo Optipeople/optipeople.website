@@ -21,14 +21,11 @@
       "da": "DA"
     },
     "footer": {
-      "brand": "Digital strategic operations partner for manufacturing and industrial companies.",
-      "company": "Company",
-      "modules": "Modules",
-      "services": "Services & Advisory",
-      "legal": "Legal",
+      "brand": "Digital operations platform and digital services for manufacturing and industrial companies.",
+      "navigationLabel": "Footer navigation",
       "connect": "Connect",
       "rights": "All rights reserved.",
-      "tagline": "Connected operations made simple",
+      "tagline": "Run operations on live data",
       "followLabel": "Follow us on {title}"
     }
   },

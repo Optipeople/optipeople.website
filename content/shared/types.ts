@@ -47,12 +47,6 @@ export type StandardPage = {
   visualImage?: string
   visualAlt?: string
   /**
-   * Which edge of the screenshot to hold on to in the 16/9 visual frame.
-   * Defaults to the centre. Set "top" for captures that are close to square,
-   * where a centred crop would cut the heading and the toolbar off.
-   */
-  visualImagePosition?: "top" | "center" | "bottom"
-  /**
    * Draw the visual in code instead of shipping a screenshot, for modules
    * whose screen we have no usable capture of, or whose capture is a poor
    * ambassador for it. Takes precedence over `visualImage`.

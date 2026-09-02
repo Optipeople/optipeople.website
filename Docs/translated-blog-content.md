@@ -31,10 +31,11 @@ outcome: "Én produktionslinje, live oppetid på gulvet, og et OEE-løft på 5%.
 Translatable frontmatter: `title`, `author`, `image`, `customer`, `metric`,
 `metricLabel`, `quote`, `outcome`.
 
-`date` and `category` are deliberately **not** translatable. `lib/blog-data.ts`
-always reads them from the English source, so ordering and the `Cases` vs
-`Insights` split can never drift because a translated file spelled a category
-differently. Setting them in a translation has no effect.
+`date`, `category`, and `draft` are deliberately **not** translatable.
+`lib/blog-data.ts` always reads them from the English source, so ordering, the
+`Cases` vs `Insights` split, and whether a story is live can never drift
+because a translated file spelled a category differently or hid a post on its
+own. Setting them in a translation has no effect.
 
 ## Fallback behaviour
 
@@ -48,3 +49,21 @@ translated to Danish; most `Insights` articles are not yet.
 Add the English file first. Only `.md` files without a locale suffix define
 which slugs exist (`getAllSlugs()`), so a translation on its own is invisible
 to the router.
+
+## Hiding a post
+
+To unpublish a post without deleting it, add `draft: true` to the frontmatter
+of the English file:
+
+```yaml
+---
+title: "Dansand: 3.5 million bags of sand yearly, ..."
+date: "2022-04-07"
+draft: true
+---
+```
+
+The slug then disappears from the blog and cases archives, the home page, the
+sitemap, and the prerendered routes, and `/blog/<slug>` returns 404 in every
+locale. Both language files stay in the repo, so removing the line publishes
+the story again. The Dansand case is hidden this way.

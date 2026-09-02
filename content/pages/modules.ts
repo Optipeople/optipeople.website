@@ -1004,7 +1004,6 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualBody:
           "Priority, product, quantity, due date, station, and readiness in one list, whether the orders came from an ERP or were created here.",
         visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
-        visualImagePosition: "top",
         visualAlt: "The work order list on the panel at the machine",
         metricsTitle: "What Changes",
         metrics: [
@@ -1086,7 +1085,6 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualBody:
           "Prioritet, vare, antal, dato, station og om den kan startes, i én liste. Uanset om ordrerne kom fra et ERP eller blev oprettet her.",
         visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
-        visualImagePosition: "top",
         visualAlt: "Arbejdsordrer i OptiPeople Data Platform",
         metricsTitle: "Typiske resultater",
         metrics: [

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -11,6 +10,7 @@ import {
   RoutesVisual,
 } from "@/components/module-mockups"
 import { PlatformArchitecture } from "@/components/platform-architecture"
+import { FramedImage } from "@/components/framed-image"
 import type { StandardPage } from "@/content/shared/types"
 import type { Locale } from "@/i18n/routing"
 import { getPageTheme, type PageFamily } from "@/lib/page-theme"
@@ -148,7 +148,7 @@ export function StandardPageTemplate({
 
       {/* Intro, asymmetric: the statement holds the left line, the argument
           runs beside it. */}
-      <section className="px-[var(--edge)] py-20 lg:py-32">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {page.introTitle}
@@ -162,7 +162,7 @@ export function StandardPageTemplate({
       {/* Capabilities, tinted cards carrying the page's colour. */}
       <section
         id="capabilities"
-        className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-28"
+        className="scroll-mt-24 px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28"
       >
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {page.capabilitiesTitle}
@@ -189,7 +189,7 @@ export function StandardPageTemplate({
       </section>
 
       {/* Steps, a numbered rail on hairlines instead of centred columns. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {page.stepsTitle}
         </h2>
@@ -236,33 +236,39 @@ export function StandardPageTemplate({
                 {page.visualBody}
               </p>
             </div>
-            <div className="reveal relative mt-12 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
-              {page.visualDrawn === "documents" ? (
-                <DocumentsVisual />
-              ) : page.visualDrawn === "mes" ? (
-                <MesVisual />
-              ) : page.visualDrawn === "oee" ? (
-                <OeeVisual />
-              ) : page.visualDrawn === "routes" ? (
-                <RoutesVisual />
-              ) : page.visualImage ? (
-                <Image
-                  src={page.visualImage}
-                  alt={page.visualAlt ?? page.visualTitle}
-                  fill
-                  sizes="(min-width: 1024px) 1140px, 100vw"
-                  className={`object-cover ${
-                    page.visualImagePosition === "top"
-                      ? "object-top"
-                      : page.visualImagePosition === "bottom"
-                        ? "object-bottom"
-                        : "object-center"
-                  }`}
-                />
-              ) : (
-                <p className="text-sm text-white/65">{t("productView")}</p>
-              )}
-            </div>
+            {/* A screenshot brings its own shape (see FramedImage). The drawn
+                panels are built to fill a 16/9 frame, so they keep one, except
+                the MES panel, which stacks below `lg` and is taller than that
+                ratio there and gets a content-height frame instead. */}
+            {page.visualImage && !page.visualDrawn ? (
+              <FramedImage
+                src={page.visualImage}
+                alt={page.visualAlt ?? page.visualTitle}
+                boxSizes="(min-width: 1024px) 1140px, 100vw"
+                cap="[--frame-cap:30rem] lg:[--frame-cap:42rem]"
+                className="reveal mx-auto mt-12 overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16"
+              />
+            ) : (
+              <div
+                className={`reveal relative mt-12 flex items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16 ${
+                  page.visualDrawn === "mes"
+                    ? "py-[3.5%] lg:aspect-[16/9] lg:py-0"
+                    : "aspect-[16/9]"
+                }`}
+              >
+                {page.visualDrawn === "documents" ? (
+                  <DocumentsVisual />
+                ) : page.visualDrawn === "mes" ? (
+                  <MesVisual />
+                ) : page.visualDrawn === "oee" ? (
+                  <OeeVisual />
+                ) : page.visualDrawn === "routes" ? (
+                  <RoutesVisual />
+                ) : (
+                  <p className="text-sm text-white/65">{t("productView")}</p>
+                )}
+              </div>
+            )}
           </div>
         </section>
       )}

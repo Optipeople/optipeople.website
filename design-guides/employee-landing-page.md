@@ -151,11 +151,7 @@ A compact metrics row to give immediate context.
 </section>
 ```
 
-**Suggested stats:**
-- Total employees
-- Departments represented
-- Countries/locations
-- Average tenure (if available)
+**Stats:** the strip carries the same company-level claims as the About page (100+ factories, 10+ years of experience, one digital partner for your company), not a headcount or a department count. The page sells the track record, never the size of the team. Do not describe the team as small anywhere on the page: larger prospects read it as a capacity risk.
 
 Use real data only. If data is uncertain, remove the stat.
 
@@ -219,6 +215,7 @@ Primary content block. Cards should be clean, consistent, and easy to scan.
 - Radius: `rounded-2xl`
 - Names are the primary metadata; role/team are supporting
 - Avoid heavy card borders/shadows; the photos and whitespace should carry the layout
+- The software team has no public individual profiles. It closes the grid as one card whose photo slot lists what the team builds, reached through the shared general inbox (hej@ in Danish, hi@ in English)
 - Support empty states for filters (`No matches found` + clear filters action)
 
 ### 5. Culture / Hiring Note (Optional)

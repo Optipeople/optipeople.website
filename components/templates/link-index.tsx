@@ -1,7 +1,7 @@
-import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
 import { Link } from "@/i18n/navigation"
+import { FramedImage } from "@/components/framed-image"
 import type { SimplePage } from "@/content/shared/types"
 import { getFeature } from "@/content/pages/features"
 import { getModule } from "@/content/pages/modules"
@@ -37,7 +37,7 @@ export function LinkIndexPage({
   return (
     <main className="min-h-screen">
       {/* Hero, neutral, because the cards below carry the colour. */}
-      <section className="bg-[var(--gray-1)] pb-20 pt-12 lg:pb-28 lg:pt-16">
+      <section className="bg-[var(--gray-1)] pb-16 pt-12 sm:pb-20 lg:pb-28 lg:pt-16">
         <div className="px-[var(--edge)]">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {page.eyebrow}
@@ -52,7 +52,7 @@ export function LinkIndexPage({
       </section>
 
       {/* Destination cards */}
-      <section className="px-[var(--edge)] py-20 lg:py-28">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-28">
         {page.linksTitle && (
           <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
             {page.linksTitle}
@@ -92,19 +92,22 @@ export function LinkIndexPage({
                   </span>
                 </div>
 
-                {/* Screenshot peeks in from the bottom edge of the card. */}
+                {/* Screenshot sits on the card as a whole picture. It used to
+                    run off the bottom edge under `object-cover`, which read to
+                    visitors as an image cut in half rather than as a crop, so
+                    the mount now hugs the screenshot and keeps its own margin.
+                    Hover lifts the mount rather than zooming inside it, since a
+                    zoom is a crop by another name. */}
                 {preview && (
-                  <div className="mt-2 px-7 lg:px-9">
-                    <div className="relative h-40 overflow-hidden rounded-t-xl bg-white shadow-[0_-8px_30px_-16px_rgba(0,0,0,0.35)] ring-1 ring-black/[0.06] lg:h-48">
-                      <Image
-                        src={preview}
-                        alt=""
-                        aria-hidden
-                        fill
-                        sizes="(min-width: 640px) 520px, 100vw"
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                      />
-                    </div>
+                  <div className="mt-2 px-7 pb-7 lg:px-9 lg:pb-9">
+                    <FramedImage
+                      src={preview}
+                      alt=""
+                      decorative
+                      boxSizes="(min-width: 640px) 520px, 100vw"
+                      cap="[--frame-cap:14rem] lg:[--frame-cap:18rem]"
+                      className="mx-auto overflow-hidden rounded-xl bg-white shadow-[0_8px_30px_-16px_rgba(0,0,0,0.35)] ring-1 ring-black/[0.06] transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
                   </div>
                 )}
               </Link>
@@ -115,7 +118,7 @@ export function LinkIndexPage({
 
       {/* Editorial sections, hairline grid rather than loose paragraphs. */}
       {page.sections && page.sections.length > 0 && (
-        <section className="px-[var(--edge)] pb-20 lg:pb-28">
+        <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
           <div className="grid gap-px overflow-hidden rounded-[1.5rem] bg-black/[0.08] sm:grid-cols-2">
             {page.sections.map((section) => (
               <div key={section.title} className="bg-background p-8 lg:p-10">

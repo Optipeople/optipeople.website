@@ -21,7 +21,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Link, usePathname } from "@/i18n/navigation"
-import { navigationLinks, navigationMenus } from "@/i18n/navigation-data"
+import {
+  loginTargets,
+  navigationLinks,
+  navigationMenus,
+} from "@/i18n/navigation-data"
 import type { NavItem, NavMenu } from "@/i18n/navigation-data"
 import type { Locale } from "@/i18n/routing"
 
@@ -30,14 +34,6 @@ import logo from "@/app/Optipeople-Logo-Vector.svg"
 // Delay before a hovered menu closes, so crossing the trigger→panel gap or
 // sliding between menus never flickers the dropdown shut.
 const HOVER_CLOSE_DELAY = 120
-
-// The three portal targets shown under "Log in", shared by the desktop utility
-// bar and the mobile drawer so the two can never drift apart.
-const LOGIN_TARGETS = [
-  { key: "portal", href: "https://portal.optipeople.dk/" },
-  { key: "platform", href: "https://cloud.optipeople.dk/" },
-  { key: "aiAssist", href: "https://ai.optipeople.dk/" },
-] as const
 
 // Shared focus treatment. `focus-visible` rather than `focus`, so a mouse click
 // never leaves a ring behind, and the colour comes from the `ring` theme token
@@ -477,7 +473,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
                 {t("login")}
               </p>
               <ul className="mt-2">
-                {LOGIN_TARGETS.map((target) => (
+                {loginTargets.map((target) => (
                   <li key={target.href}>
                     <a
                       href={target.href}
@@ -587,7 +583,9 @@ function LoginMenu() {
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className={`flex cursor-pointer items-center gap-1.5 rounded text-xs font-medium text-foreground/78 transition-colors hover:text-foreground data-[state=open]:text-foreground ${FOCUS_RING}`}
+          // Full bar height, so the tap target is the 28px strip rather than
+          // the 16px text line inside it.
+          className={`flex h-7 cursor-pointer items-center gap-1.5 rounded px-1 text-xs font-medium text-foreground/78 transition-colors hover:text-foreground data-[state=open]:text-foreground ${FOCUS_RING}`}
           aria-label={t("login")}
         >
           <LogIn className="h-3.5 w-3.5" aria-hidden="true" />
@@ -600,7 +598,7 @@ function LoginMenu() {
         sideOffset={8}
         className={`w-48 p-2 ${PANEL_SHELL}`}
       >
-        {LOGIN_TARGETS.map((target) => (
+        {loginTargets.map((target) => (
           <DropdownMenuItem
             key={target.href}
             asChild
@@ -643,7 +641,7 @@ function LanguageSwitcher() {
               href={pathname}
               locale={language}
               aria-current={isActive ? "page" : undefined}
-              className={`cursor-pointer rounded px-0.5 transition-colors ${FOCUS_RING} ${
+              className={`flex h-7 cursor-pointer items-center rounded px-1 transition-colors ${FOCUS_RING} ${
                 isActive
                   ? "text-foreground"
                   : "text-foreground/70 hover:text-foreground"

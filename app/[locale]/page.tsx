@@ -276,7 +276,7 @@ const copy: Record<Locale, HomeCopy> = {
         imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
         imageAlt: "Live OptiPeople operator panel showing real-time machine status, output and production timeline",
         primaryLabel: "Explore manufacturing solutions",
-        primaryHref: "/solutions/manufacturing",
+        primaryHref: "/modules/mes",
         bgColor: "bg-blue-50/0",
         layout: "overlay",
         overlay: "dark",
@@ -520,7 +520,7 @@ const copy: Record<Locale, HomeCopy> = {
         imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
         imageAlt: "Live OptiPeople operatørpanel med maskinstatus, output og produktionstidslinje i realtid",
         primaryLabel: "Se løsningen til produktion",
-        primaryHref: "/solutions/manufacturing",
+        primaryHref: "/modules/mes",
         bgColor: "bg-blue-50/0",
         layout: "overlay",
         overlay: "dark",
@@ -739,12 +739,12 @@ function linkTestimonials(testimonials: Testimonial[]): Testimonial[] {
 
 const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
-    title: "OptiPeople | Digital operations platform for manufacturers",
+    title: "OptiPeople | Run operations on live data",
     description:
       "Connect machines, track OEE in real time, automate reporting, and give production teams the data they need to improve output and uptime.",
   },
   da: {
-    title: "OptiPeople | Digital driftsplatform til produktionsvirksomheder",
+    title: "OptiPeople | Styr driften på live data",
     description:
       "Kobl maskinerne på, følg produktionen i realtid, forbedr OEE, og gør tallene til handling.",
   },
@@ -782,7 +782,9 @@ export default async function Home({
   return (
     <main>
       <section className="py-12 lg:py-16">
-        <div className="w-full px-[var(--edge)] py-22">
+        {/* The inner padding stacks on the section's own, so on a phone the
+            two together used to push the headline below the first fold. */}
+        <div className="w-full px-[var(--edge)] py-10 sm:py-16 lg:py-22">
           <h1 className="mx-auto max-w-3xl text-balance text-center text-4xl font-normal leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {hero.heading}
           </h1>
@@ -809,7 +811,7 @@ export default async function Home({
       <LogoWall logos={customerLogos} className="pb-0 lg:pb-0" />
 
       {/* Trust band, pairs the logo wall with social proof */}
-      <section className="pt-20 pb-12 lg:pt-32 lg:pb-28">
+      <section className="pt-16 pb-12 sm:pt-20 lg:pt-32 lg:pb-28">
         <div className="grid w-full grid-cols-1 gap-12 px-[var(--edge)] lg:grid-cols-2 lg:gap-16">
           {/* Left, headline + customer stories link */}
           <div>
@@ -896,7 +898,7 @@ export default async function Home({
       {/* Customer Results, Scandinavian bento of measured outcomes */}
       {/* The CTA below carries no top margin, so the two backgrounds already
           meet flush and this band needs no negative margin to pull it up. */}
-      <section className="bg-[var(--gray-1)] py-24 lg:py-32">
+      <section className="bg-[var(--gray-1)] py-16 sm:py-24 lg:py-32">
         <div className="px-[var(--edge)]">
           {/* Header */}
           <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">

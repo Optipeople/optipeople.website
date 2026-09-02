@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
 import type { Locale } from "@/i18n/routing"
 import { getSurface } from "@/lib/page-theme"
+import { SUPPORT_EMAIL } from "@/lib/contact"
 import { buildMetadata } from "@/lib/seo"
 
 const PATH = "/get-help"
@@ -60,8 +61,8 @@ const copy: Record<Locale, HelpCopy> = {
         title: "Email support",
         description:
           "Technical issues, questions about your setup, or a machine that stopped reporting. Include the site and machine name if you can. It saves a round trip.",
-        actionLabel: "hej@optipeople.dk",
-        href: "mailto:hej@optipeople.dk",
+        actionLabel: SUPPORT_EMAIL,
+        href: `mailto:${SUPPORT_EMAIL}`,
       },
       {
         icon: Phone,
@@ -147,8 +148,8 @@ const copy: Record<Locale, HelpCopy> = {
         title: "Skriv til support",
         description:
           "Tekniske problemer, spørgsmål til jeres opsætning eller en maskine, der er holdt op med at rapportere. Skriv gerne fabrik og maskinnavn med, så sparer vi en tur frem og tilbage.",
-        actionLabel: "hej@optipeople.dk",
-        href: "mailto:hej@optipeople.dk",
+        actionLabel: SUPPORT_EMAIL,
+        href: `mailto:${SUPPORT_EMAIL}`,
       },
       {
         icon: Phone,
@@ -278,7 +279,7 @@ export default async function GetHelpPage({ params }: Props) {
 
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Button asChild size="lg" className="rounded-full px-7">
-              <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a>
+              <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
             </Button>
             <Link
               href="#faq"
@@ -294,7 +295,7 @@ export default async function GetHelpPage({ params }: Props) {
       </section>
 
       {/* Contact routes, as tinted panels carrying the page colour. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.channelsTitle}
         </h2>
@@ -350,7 +351,7 @@ export default async function GetHelpPage({ params }: Props) {
       </section>
 
       {/* FAQ: question on the left line, answer beside it. */}
-      <section id="faq" className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-28">
+      <section id="faq" className="scroll-mt-24 px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
             {t.faqTitle}
@@ -370,13 +371,13 @@ export default async function GetHelpPage({ params }: Props) {
                 {item.question}
               </dt>
               <dd className="text-base leading-relaxed text-foreground/78">
-                {item.answer}
+                <p>{item.answer}</p>
                 {item.linkHref && item.linkLabel && (
                   <Link
                     href={item.linkHref}
-                    className="group mt-5 inline-flex items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
+                    className="group mt-5 flex w-fit items-center gap-3 text-sm font-medium text-foreground/82 transition-colors hover:text-foreground"
                   >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 transition-colors group-hover:border-black/25">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 transition-colors group-hover:border-black/25">
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                     </span>
                     {item.linkLabel}

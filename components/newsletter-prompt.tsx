@@ -320,7 +320,7 @@ function PromptCard({
   }
 
   return (
-    <div className="relative overflow-hidden rounded-[1.5rem] border border-border/50 bg-white/90 p-6 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_24px_60px_-24px_rgba(0,0,0,0.28)] backdrop-blur-md sm:p-7">
+    <div className="relative overflow-hidden rounded-[1.5rem] border border-border/50 bg-white/90 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_24px_60px_-24px_rgba(0,0,0,0.28)] backdrop-blur-md sm:p-7">
       <button
         type="button"
         onClick={onDismiss}
@@ -358,10 +358,12 @@ function PromptCard({
             />
           </div>
 
-          <h3 className="max-w-[18rem] text-xl font-normal tracking-tight text-foreground">
+          <h3 className="max-w-[18rem] text-lg font-normal tracking-tight text-foreground sm:text-xl">
             {title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          {/* The card covered half a phone screen. The supporting line goes
+              first: the title, field and consent note carry the ask alone. */}
+          <p className="mt-2 hidden text-sm leading-relaxed text-muted-foreground sm:block">
             {body}
           </p>
 
@@ -401,7 +403,7 @@ function PromptCard({
             <button
               type="button"
               onClick={onDismiss}
-              className="mx-auto block text-xs text-muted-foreground/70 transition-colors hover:text-foreground"
+              className="mx-auto block px-3 py-2 text-xs text-muted-foreground/70 transition-colors hover:text-foreground"
             >
               {copy.noThanks}
             </button>

@@ -16,9 +16,15 @@ export type NavItem = {
   href: string
   /** Optional second line, only rendered by the mega-menu layout. */
   description?: string
+  /** Off-site URL, rendered as a plain anchor instead of a localized Link. */
+  external?: boolean
 }
 
+export type NavMenuId = "ai" | "platform" | "services" | "customers" | "resources"
+
 export type NavMenu = {
+  /** Locale-independent key, used by the footer to mirror the menu. */
+  id: NavMenuId
   title: string
   items: NavItem[]
   /**
@@ -45,6 +51,7 @@ export type NavMenu = {
 export const navigationMenus: Record<Locale, NavMenu[]> = {
   en: [
     {
+      id: "ai",
       title: "AI",
       items: [
         { title: "Opti Assist Chat", href: "/ai/chat" },
@@ -55,6 +62,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
+      id: "platform",
       title: "Platform and Modules",
       layout: "mega",
       items: moduleNavItems("en"),
@@ -69,6 +77,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       overview: { title: "See the whole data platform", href: "/platform" },
     },
     {
+      id: "services",
       title: "Services & Advisory",
       items: [
         { title: "Smart Operations", href: "/services/smart-operations" },
@@ -81,6 +90,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
+      id: "customers",
       title: "Customers",
       items: [
         {
@@ -110,6 +120,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
+      id: "resources",
       title: "Resources",
       items: [
         { title: "Insights", href: "/insights" },
@@ -123,6 +134,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
   ],
   da: [
     {
+      id: "ai",
       title: "AI",
       items: [
         { title: "Opti Assist Chat", href: "/ai/chat" },
@@ -133,6 +145,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
+      id: "platform",
       title: "Platform og moduler",
       layout: "mega",
       items: moduleNavItems("da"),
@@ -144,6 +157,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       overview: { title: "Se hele dataplatformen", href: "/platform" },
     },
     {
+      id: "services",
       title: "Services & rådgivning",
       items: [
         { title: "Smart Operations", href: "/services/smart-operations" },
@@ -156,6 +170,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
+      id: "customers",
       title: "Kunder",
       items: [
         {
@@ -185,6 +200,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       ],
     },
     {
+      id: "resources",
       title: "Ressourcer",
       items: [
         { title: "Indsigter", href: "/insights" },
@@ -204,62 +220,154 @@ export const navigationLinks: Record<Locale, NavItem[]> = {
   da: [{ title: "Videoer", href: "/videos" }],
 }
 
-export type FooterColumns = {
-  company: NavItem[]
-  modules: NavItem[]
-  services: NavItem[]
-  legal: NavItem[]
+// Portal targets shown under "Log in" in the header (labelled by the
+// chrome.loginMenu.* messages) and listed in the footer's Company column, so
+// the two can never drift apart.
+export const loginTargets = [
+  { key: "portal", href: "https://portal.optipeople.dk/" },
+  { key: "platform", href: "https://platform.optipeople.dk/" },
+  { key: "aiAssist", href: "https://ai.optipeople.dk/" },
+] as const
+
+export type LoginTargetKey = (typeof loginTargets)[number]["key"]
+
+export type FooterColumn = {
+  title: string
+  items: NavItem[]
 }
 
-export const footerLinks: Record<Locale, FooterColumns> = {
+// Copy only the footer needs: labels for pages the header does not carry
+// (the archives, the legal pages) and footer-specific wording for shared
+// destinations. Everything else is lifted straight out of navigationMenus.
+const footerCopy: Record<
+  Locale,
+  {
+    platformOverview: string
+    cases: string
+    blog: string
+    company: string
+    privacy: string
+    terms: string
+    login: Record<LoginTargetKey, string>
+  }
+> = {
   en: {
-    company: [
-      { title: "About", href: "/about" },
-      { title: "Newsletter", href: "/newsletter" },
-      { title: "Contact", href: "/contact" },
-    ],
-    modules: [
-      { title: "Platform overview", href: "/platform" },
-      ...moduleNavItems("en"),
-    ],
-    services: [
-      { title: "Smart Operations", href: "/services/smart-operations" },
-      { title: "AI Agentic Solutions", href: "/services/ai-solutions" },
-      { title: "Automation", href: "/services/automation" },
-      {
-        title: "Business Intelligence",
-        href: "/services/business-intelligence",
-      },
-    ],
-    legal: [
-      { title: "Privacy Policy", href: "/privacy" },
-      { title: "Terms of Service", href: "/terms" },
-    ],
+    platformOverview: "Platform overview",
+    cases: "Customer cases",
+    blog: "Blog",
+    company: "Company",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+    login: {
+      portal: "Log in to Portal",
+      platform: "Log in to Platform",
+      aiAssist: "Log in to Opti Assist",
+    },
   },
   da: {
-    company: [
-      { title: "Om os", href: "/about" },
-      { title: "Nyhedsbrev", href: "/newsletter" },
-      { title: "Kontakt", href: "/contact" },
-    ],
-    modules: [
-      { title: "Platformoverblik", href: "/platform" },
-      ...moduleNavItems("da"),
-    ],
-    services: [
-      { title: "Smart Operations", href: "/services/smart-operations" },
-      { title: "AI-agentløsninger", href: "/services/ai-solutions" },
-      { title: "Automation", href: "/services/automation" },
-      {
-        title: "Business Intelligence",
-        href: "/services/business-intelligence",
-      },
-    ],
-    legal: [
-      { title: "Privatlivspolitik", href: "/privacy" },
-      { title: "Vilkår", href: "/terms" },
-    ],
+    platformOverview: "Platformoverblik",
+    cases: "Kundecases",
+    blog: "Blog",
+    company: "Virksomhed",
+    privacy: "Privatlivspolitik",
+    terms: "Vilkår",
+    login: {
+      portal: "Log ind på Portal",
+      platform: "Log ind på Platform",
+      aiAssist: "Log ind på Opti Assist",
+    },
   },
+}
+
+// Pages the header files under Resources but the footer lists under Company.
+const COMPANY_HREFS = ["/about", "/contact"]
+
+function menuById(locale: Locale, id: NavMenuId): NavMenu {
+  const menu = navigationMenus[locale].find((entry) => entry.id === id)
+  if (!menu) throw new Error(`Missing "${id}" menu for locale ${locale}`)
+  return menu
+}
+
+function itemByHref(items: NavItem[], href: string): NavItem {
+  const item = items.find((entry) => entry.href === href)
+  if (!item) throw new Error(`Missing nav item ${href}`)
+  return item
+}
+
+/**
+ * Footer columns, in header order. Each column is built from the header's own
+ * menus so the footer mirrors the header by construction: add a module, a
+ * feature, or an AI page up there and it appears down here with the same
+ * title.
+ *
+ * The footer adds two things the header does not carry: the content archives
+ * (cases, blog) under Resources, and the legal pages plus the login targets
+ * under Company. The header's Customers menu (six case posts) is represented
+ * by the single cases-archive link rather than repeated.
+ */
+function buildFooterColumns(locale: Locale): FooterColumn[] {
+  const copy = footerCopy[locale]
+  const ai = menuById(locale, "ai")
+  const platform = menuById(locale, "platform")
+  const services = menuById(locale, "services")
+  const resources = menuById(locale, "resources")
+
+  const features = platform.secondary
+  if (!features) {
+    throw new Error(`Platform menu for locale ${locale} has no features group`)
+  }
+
+  const insights = itemByHref(resources.items, "/insights")
+  const otherResources = resources.items.filter(
+    (item) => item.href !== insights.href && !COMPANY_HREFS.includes(item.href)
+  )
+
+  return [
+    { title: ai.title, items: ai.items },
+    {
+      title: platform.title,
+      items: [
+        { title: copy.platformOverview, href: "/platform" },
+        ...platform.items,
+      ],
+    },
+    {
+      title: features.title,
+      items: [
+        ...(features.overview ? [features.overview] : []),
+        ...features.items,
+      ],
+    },
+    { title: services.title, items: services.items },
+    {
+      title: resources.title,
+      items: [
+        insights,
+        { title: copy.cases, href: "/cases" },
+        { title: copy.blog, href: "/blog" },
+        ...navigationLinks[locale],
+        ...otherResources,
+      ],
+    },
+    {
+      title: copy.company,
+      items: [
+        ...COMPANY_HREFS.map((href) => itemByHref(resources.items, href)),
+        { title: copy.privacy, href: "/privacy" },
+        { title: copy.terms, href: "/terms" },
+        ...loginTargets.map((target) => ({
+          title: copy.login[target.key],
+          href: target.href,
+          external: true,
+        })),
+      ],
+    },
+  ]
+}
+
+export const footerColumns: Record<Locale, FooterColumn[]> = {
+  en: buildFooterColumns("en"),
+  da: buildFooterColumns("da"),
 }
 
 export type NavLocale = Locale

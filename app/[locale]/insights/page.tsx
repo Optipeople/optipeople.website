@@ -196,7 +196,7 @@ export default async function InsightsPage({
   return (
     <div className="min-h-screen">
       {/* Neutral hero: the panels below hold the colour. */}
-      <section className="bg-[var(--gray-1)] pb-20 pt-12 lg:pb-28 lg:pt-16">
+      <section className="bg-[var(--gray-1)] pb-16 pt-12 sm:pb-20 lg:pb-28 lg:pt-16">
         <div className="px-[var(--edge)]">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.eyebrow}
@@ -304,7 +304,7 @@ export default async function InsightsPage({
 
       {/* Mixed recency list: what actually went up last, regardless of type. */}
       {latest.length > 0 && (
-        <section className="px-[var(--edge)] pb-20 lg:pb-28">
+        <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
               {t.latestTitle}
@@ -348,7 +348,7 @@ export default async function InsightsPage({
       )}
 
       {/* Adjacent formats, on the hairline grid rather than as loose links. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {t.moreTitle}
         </h2>

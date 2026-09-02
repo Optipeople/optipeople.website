@@ -1,10 +1,10 @@
-import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
 import { RoutesVisual } from "@/components/module-mockups"
+import { FramedImage } from "@/components/framed-image"
 import type { FeaturePage } from "@/content/shared/types"
 import { getPageTheme } from "@/lib/page-theme"
 
@@ -56,7 +56,7 @@ export function FeaturePageTemplate({
             <span className="text-foreground/88">{page.eyebrow}</span>
           </nav>
 
-          <div className="mt-10 grid items-center gap-12 lg:mt-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
+          <div className="mt-10 grid grid-cols-1 items-center gap-12 lg:mt-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                 {page.eyebrow}
@@ -83,17 +83,16 @@ export function FeaturePageTemplate({
               </div>
             </div>
 
-            {/* Screenshot floats on the tint rather than sitting in a border. */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08]">
-              <Image
-                src={page.heroImage}
-                alt={page.heroImageAlt}
-                fill
-                sizes="(min-width: 1024px) 600px, 100vw"
-                className="object-cover"
-                priority
-              />
-            </div>
+            {/* Screenshot floats on the tint rather than sitting in a border,
+                and the mount is cut to the screenshot rather than the reverse. */}
+            <FramedImage
+              src={page.heroImage}
+              alt={page.heroImageAlt}
+              boxSizes="(min-width: 1024px) 600px, 100vw"
+              cap="[--frame-cap:22rem] lg:[--frame-cap:30rem]"
+              className="mx-auto overflow-hidden rounded-2xl bg-white shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08]"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -127,7 +126,7 @@ export function FeaturePageTemplate({
 
       {/* Value proposition, asymmetric two-column: the statement holds the
           left line while the argument runs beside it. */}
-      <section className="px-[var(--edge)] py-20 lg:py-32">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {page.valueTitle}
@@ -142,7 +141,7 @@ export function FeaturePageTemplate({
           holding both the copy and the screenshot, alternating sides. */}
       <section
         id="capabilities"
-        className="scroll-mt-24 px-[var(--edge)] pb-20 lg:pb-32"
+        className="scroll-mt-24 px-[var(--edge)] pb-16 sm:pb-20 lg:pb-32"
       >
         <div className="max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
@@ -179,16 +178,17 @@ export function FeaturePageTemplate({
                 </p>
               </div>
 
-              <div className="p-6 pt-0 sm:p-10 sm:pt-0 lg:p-10">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-white shadow-[0_20px_50px_-24px_rgba(0,0,0,0.4)] ring-1 ring-black/[0.08]">
-                  <Image
-                    src={capability.image}
-                    alt={capability.imageAlt}
-                    fill
-                    sizes="(min-width: 1024px) 520px, 100vw"
-                    className="object-cover"
-                  />
-                </div>
+              {/* Centred, because a portrait capture makes a narrower mount
+                  than a report does and should still sit in the middle of the
+                  panel rather than at the top of it. */}
+              <div className="flex items-center p-6 pt-0 sm:p-10 sm:pt-0 lg:p-10">
+                <FramedImage
+                  src={capability.image}
+                  alt={capability.imageAlt}
+                  boxSizes="(min-width: 1024px) 520px, 100vw"
+                  cap="[--frame-cap:20rem] lg:[--frame-cap:26rem]"
+                  className="mx-auto overflow-hidden rounded-xl bg-white shadow-[0_20px_50px_-24px_rgba(0,0,0,0.4)] ring-1 ring-black/[0.08]"
+                />
               </div>
             </article>
           ))}
@@ -216,16 +216,19 @@ export function FeaturePageTemplate({
                   {page.showcaseBody}
                 </p>
               </div>
-              <div className="reveal relative mt-12 flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
+              <div className="reveal mt-12 lg:mt-16">
                 {page.showcaseDrawn === "routes" ? (
-                  <RoutesVisual />
+                  // The drawn panel is built to fill a 16/9 frame, so it keeps one.
+                  <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12]">
+                    <RoutesVisual />
+                  </div>
                 ) : page.showcaseImage ? (
-                  <Image
+                  <FramedImage
                     src={page.showcaseImage}
                     alt={page.showcaseAlt ?? page.showcaseTitle}
-                    fill
-                    sizes="(min-width: 1024px) 1140px, 100vw"
-                    className="object-cover"
+                    boxSizes="(min-width: 1024px) 1140px, 100vw"
+                    cap="[--frame-cap:30rem] lg:[--frame-cap:42rem]"
+                    className="mx-auto overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12]"
                   />
                 ) : null}
               </div>
@@ -236,7 +239,7 @@ export function FeaturePageTemplate({
       {/* Related, hairline grid instead of detached bordered cards.
           The page closes here: the conversion CTA is rendered globally by
           app/[locale]/layout.tsx, so the template must not repeat it. */}
-      <section className="px-[var(--edge)] py-20 lg:py-28">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-28">
         <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
           {t("relatedFeatures")}
         </h2>

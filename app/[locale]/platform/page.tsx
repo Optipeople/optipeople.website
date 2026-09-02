@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { setRequestLocale } from "next-intl/server"
 import type { Metadata } from "next"
 import { ArrowRight } from "lucide-react"
@@ -12,6 +11,7 @@ import { customerLogos } from "@/lib/customers"
 import { moduleIndexLinks } from "@/content/modules-catalog"
 import { getSurface, getThemeForHref } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
+import { FramedImage } from "@/components/framed-image"
 
 type PageProps = { params: Promise<{ locale: string }> }
 
@@ -244,7 +244,7 @@ export default async function PlatformPage({ params }: PageProps) {
       </section>
 
       {/* Intro: the argument the page was previously missing entirely. */}
-      <section className="px-[var(--edge)] py-20 lg:py-32">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-32">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
           <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:sticky lg:top-28 lg:self-start lg:text-4xl">
             {t.intro.title}
@@ -259,7 +259,7 @@ export default async function PlatformPage({ params }: PageProps) {
       <PlatformFlower locale={loc} />
 
       {/* Steps: numbered rail on hairlines, replacing the centred 01 to 04 row. */}
-      <section className="px-[var(--edge)] py-20 lg:py-28">
+      <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.steps.title}
         </h2>
@@ -302,7 +302,7 @@ export default async function PlatformPage({ params }: PageProps) {
            follows the architecture band, and a band's bottom padding sits
            inside the band, so the standard py-20 left this heading reading as
            flush with the coloured edge above it. */
-        className="scroll-mt-24 px-[var(--edge)] pb-20 pt-28 lg:pb-28 lg:pt-40"
+        className="scroll-mt-24 px-[var(--edge)] pb-16 pt-20 sm:pb-20 sm:pt-28 lg:pb-28 lg:pt-40"
       >
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.modules.title}
@@ -351,15 +351,13 @@ export default async function PlatformPage({ params }: PageProps) {
               {t.visual.body}
             </p>
           </div>
-          <div className="reveal relative mt-12 aspect-[16/9] overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16">
-            <Image
-              src="/images/Mockups/Report-OEE-Efficiency-With-Filter.png"
-              alt={t.visual.title}
-              fill
-              sizes="(min-width: 1024px) 1140px, 100vw"
-              className="object-cover object-top"
-            />
-          </div>
+          <FramedImage
+            src="/images/Mockups/Report-OEE-Efficiency-With-Filter.png"
+            alt={t.visual.title}
+            boxSizes="(min-width: 1024px) 1140px, 100vw"
+            cap="[--frame-cap:30rem] lg:[--frame-cap:42rem]"
+            className="reveal mx-auto mt-12 overflow-hidden rounded-2xl bg-white/5 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)] ring-1 ring-white/[0.12] lg:mt-16"
+          />
         </div>
       </section>
 
@@ -369,7 +367,7 @@ export default async function PlatformPage({ params }: PageProps) {
           {t.logos}
         </p>
       </section>
-      <LogoWall logos={customerLogos} className="pb-20 pt-10 lg:pb-28 lg:pt-12" />
+      <LogoWall logos={customerLogos} className="pb-16 pt-10 sm:pb-20 lg:pb-28 lg:pt-12" />
     </main>
   )
 }

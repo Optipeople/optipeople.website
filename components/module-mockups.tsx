@@ -316,30 +316,39 @@ function MesMockup() {
 }
 
 /**
- * The same argument as MesMockup, turned on its side for the module page's
- * 16/9 visual frame: the event on the left, the foundation in the middle, the
- * modules that already have it on the right, then what else landed today.
- * Reads left to right because that is what a wide frame is for, where the card
- * version stacks downward into its bottom crop.
+ * The same argument as MesMockup, drawn for the module page's visual frame: the
+ * event, the foundation it lands in, the modules that already have it, then
+ * what else landed today.
+ *
+ * Two layouts, one tree. From `lg` the flow runs left to right, because that is
+ * what a wide frame is for and the three reader cards finally have the width to
+ * hold their own labels. Below it the same three stages stack downward with the
+ * chevrons turned a quarter: a 16/9 frame on a phone is about 180px tall, and
+ * the sideways version could only fit there by truncating every line in it.
  *
  * Sized in `em` off one container-query font size, so the whole window scales
- * with the frame the way a screenshot would.
+ * with the frame the way a screenshot would. The narrow branch reads the frame
+ * harder (3cqw against 1.5cqw) and caps sooner, because a phone frame is a
+ * third of the width and proportional type would land at 5px. The two clamps
+ * meet around 14px, where the layout switches, so nothing jumps.
+ *
+ * The frame is content-height below `lg` (see the drawn branch in
+ * components/templates/standard-page.tsx), so the stack is never cropped.
  */
 export function MesVisual() {
   return (
-    <div className="@container absolute inset-0 flex items-center justify-center">
-      <div
-        className="w-[93%] overflow-hidden rounded-[0.85em] bg-white text-left text-slate-700 shadow-[0_1.5em_3em_-1.4em_rgba(0,0,0,0.65)] ring-1 ring-black/10"
-        style={{ fontSize: "clamp(6px, 1.5cqw, 18px)" }}
-      >
-        <div className="flex items-baseline gap-[0.6em] border-b border-slate-200 bg-slate-50 px-[1.3em] py-[0.85em]">
+    <div className="@container relative flex w-full items-center justify-center lg:absolute lg:inset-0">
+      <div className="w-[93%] overflow-hidden rounded-[0.85em] bg-white text-left text-[clamp(9px,3cqw,14px)] text-slate-700 shadow-[0_1.5em_3em_-1.4em_rgba(0,0,0,0.65)] ring-1 ring-black/10 lg:text-[clamp(11px,1.5cqw,18px)]">
+        {/* Title and count hold the first line; the sentence wraps under them
+            instead of truncating into nothing on a narrow frame. */}
+        <div className="flex flex-wrap items-baseline gap-x-[0.6em] gap-y-[0.3em] border-b border-slate-200 bg-slate-50 px-[1.3em] py-[0.85em] lg:flex-nowrap">
           <span
             className="shrink-0 text-[0.95em] font-semibold"
             style={{ color: "var(--green-dark3)" }}
           >
             Modular MES
           </span>
-          <span className="truncate text-[0.85em] text-slate-400">
+          <span className="order-last w-full text-[0.85em] leading-[1.35] text-slate-400 lg:order-none lg:w-auto lg:min-w-0 lg:truncate lg:leading-normal">
             Registered once at the machine, read by every module
           </span>
           <span className="ml-auto shrink-0 rounded-full bg-slate-100 px-[0.7em] py-[0.2em] text-[0.75em] font-medium text-slate-600">
@@ -349,9 +358,12 @@ export function MesVisual() {
 
         <div className="px-[1.3em] py-[1.3em]">
           {/* One thing happens on the floor, lands once, and is already there
-              in every module that needs it. */}
-          <div className="flex items-stretch gap-[0.7em]">
-            <div className="flex w-[24%] shrink-0 flex-col justify-center rounded-[0.55em] border border-slate-200 px-[0.9em] py-[0.8em]">
+              in every module that needs it. The chevrons take their width from
+              their own content rather than a share of the row: as flex-1 they
+              split the leftover width with the reader grid and squeezed it to a
+              third of what its labels need. */}
+          <div className="flex flex-col lg:flex-row lg:items-stretch lg:gap-[0.7em]">
+            <div className="flex flex-col justify-center rounded-[0.55em] border border-slate-200 px-[0.9em] py-[0.8em] lg:w-[24%] lg:shrink-0">
               <span className="flex items-center gap-[0.5em]">
                 <span className="size-[0.5em] shrink-0 rounded-full bg-rose-500" />
                 <span className="truncate text-[0.85em] font-semibold text-slate-800">
@@ -369,7 +381,7 @@ export function MesVisual() {
             <MesFlowArrow />
 
             <div
-              className="flex w-[22%] shrink-0 flex-col justify-center rounded-[0.55em] px-[0.9em] py-[0.8em]"
+              className="flex flex-col justify-center rounded-[0.55em] px-[0.9em] py-[0.8em] lg:w-[22%] lg:shrink-0"
               style={{ backgroundColor: "var(--green-dark3)" }}
             >
               <span className="flex items-center gap-[0.5em]">
@@ -385,7 +397,7 @@ export function MesVisual() {
 
             <MesFlowArrow />
 
-            <div className="grid flex-1 grid-cols-3 gap-[0.6em]">
+            <div className="grid grid-cols-3 gap-[0.6em] lg:min-w-0 lg:flex-1">
               {MES_READERS.map(({ module, effect, icon: Icon }) => (
                 <div
                   key={module}
@@ -403,7 +415,7 @@ export function MesVisual() {
                   <p className="mt-[0.5em] truncate text-[0.85em] font-semibold text-slate-800">
                     {module}
                   </p>
-                  <p className="mt-[0.25em] text-[0.75em] leading-[1.35] text-slate-500">
+                  <p className="mt-[0.25em] break-words text-[0.75em] leading-[1.35] text-slate-500">
                     {effect}
                   </p>
                 </div>
@@ -411,7 +423,7 @@ export function MesVisual() {
             </div>
           </div>
 
-          <div className="mt-[1.3em] grid grid-cols-[1fr_1.15fr] gap-[1.6em] border-t border-slate-100 pt-[1.1em]">
+          <div className="mt-[1.3em] grid gap-[1.1em] border-t border-slate-100 pt-[1.1em] sm:grid-cols-[1fr_1.15fr] sm:gap-[1.6em]">
             {/* The rest are there when the next question comes up. */}
             <div>
               <p className="text-[0.7em] font-semibold uppercase tracking-[0.1em] text-slate-400">
@@ -469,12 +481,17 @@ export function MesVisual() {
   )
 }
 
-/** The hairline and chevron between two stages of the wide MES flow. */
+/**
+ * The hairline and chevron between two stages of the MES flow: pointing down
+ * through the stacked layout, and along the row from `lg`, where it holds a
+ * fixed share of the width so the stages either side keep theirs.
+ */
 function MesFlowArrow() {
   return (
-    <div className="flex min-w-[1.4em] flex-1 items-center text-slate-300">
-      <span className="h-px flex-1 bg-current" />
-      <ChevronRight className="-ml-[0.35em] size-[0.9em]" />
+    <div className="flex items-center justify-center py-[0.35em] text-slate-300 lg:min-w-[1.4em] lg:flex-[0_1_2.6em] lg:py-0">
+      <ChevronDown className="size-[1em] lg:hidden" />
+      <span className="hidden h-px flex-1 bg-current lg:block" />
+      <ChevronRight className="-ml-[0.35em] hidden size-[0.9em] lg:block" />
     </div>
   )
 }

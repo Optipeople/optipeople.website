@@ -66,7 +66,12 @@ Three tiers of vertical padding, chosen by section weight:
 |------|---------|----------|
 | Standard | `py-12 lg:py-16` | Hero, lighter sections |
 | Large | `py-12 lg:py-28` | Logo wall, video, testimonials, features |
-| XL | `py-20 lg:py-32` | Platform flower, blog/cases |
+| XL | `py-16 sm:py-20 lg:py-32` | Platform flower, blog/cases |
+
+The XL tier and the deep-dive templates' `pb-16 sm:pb-20 lg:pb-28` step down
+to 64px below `sm`. On a 375px phone the 80px base read as dead space between
+sections and added a full screen of scrolling to the longer pages; from `sm`
+up the original rhythm is unchanged.
 
 ### Responsive Strategy
 

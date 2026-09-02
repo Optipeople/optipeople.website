@@ -5,6 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 import { ContactForm } from "@/components/contact-form"
 import { LeadEmailForm } from "@/components/lead-email-form"
 import { getSurface } from "@/lib/page-theme"
+import { generalEmail } from "@/lib/contact"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
 
@@ -136,8 +137,8 @@ export default async function ContactPage({ params }: Props) {
     {
       icon: Mail,
       label: t.emailLabel,
-      value: "hej@optipeople.dk",
-      href: "mailto:hej@optipeople.dk",
+      value: generalEmail(locale as Locale),
+      href: `mailto:${generalEmail(locale as Locale)}`,
     },
     {
       icon: Phone,
@@ -166,7 +167,10 @@ export default async function ContactPage({ params }: Props) {
         />
 
         <div className="px-[var(--edge)]">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
+          {/* `grid-cols-1` matters: without a sized track the single column
+              grows to the form's intrinsic width, and the email pill's input
+              made the whole hero wider than a phone screen. */}
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
             <div className="lg:pt-4">
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
                 {t.eyebrow}
@@ -204,7 +208,7 @@ export default async function ContactPage({ params }: Props) {
             </div>
 
             {/* The form is the brightest surface on the page. */}
-            <div className="rounded-[1.5rem] bg-white p-7 shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08] sm:p-9 lg:rounded-[1.75rem] lg:p-10">
+            <div className="min-w-0 rounded-[1.5rem] bg-white p-6 shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08] sm:p-9 lg:rounded-[1.75rem] lg:p-10">
               <div className="space-y-3">
                 <LeadEmailForm showFineprint={false} />
                 <p className="px-1 text-sm text-foreground/70">{t.quickIntro}</p>
@@ -230,7 +234,7 @@ export default async function ContactPage({ params }: Props) {
       </section>
 
       {/* What happens next: a numbered hairline rail. */}
-      <section className="px-[var(--edge)] pb-20 lg:pb-28">
+      <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
         <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
           {t.stepsTitle}
         </h2>

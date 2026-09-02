@@ -287,7 +287,7 @@ export function SlideCarousel({
         <div
           ref={tabNavRef}
           className="inline-flex
-          bg-slate-100 rounded-full border-[5px] border-slate-100
+          rounded-full border-[5px] border-muted bg-muted
           overflow-x-auto max-w-full
           scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none]
           [&::-webkit-scrollbar]:hidden"
@@ -510,17 +510,32 @@ export function SlideCarousel({
                               </div>
                             </div>
 
-                            {/* Color overlay (conditionally rendered) */}
+                            {/* Colour overlay. The left-to-right mask is a
+                                wide-card device: it only clears the image on
+                                the right, where there is no copy. On a phone
+                                the copy column is 85% of a 330px card, so the
+                                headline ran into the cleared area and sat on
+                                the bright screenshot. Below `sm` the wash
+                                covers the whole card instead. */}
                             {slide.overlay !== "none" && (
-                              <div
-                                className="absolute inset-0"
-                                style={{
-                                  maskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
-                                  WebkitMaskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
-                                }}
-                              >
-                                <div className={`absolute inset-0 ${slide.overlay === "light" ? "bg-white/90" : "bg-black/80"}`} />
-                              </div>
+                              <>
+                                <div
+                                  className={`absolute inset-0 sm:hidden ${
+                                    slide.overlay === "light"
+                                      ? "bg-white/92"
+                                      : "bg-black/82"
+                                  }`}
+                                />
+                                <div
+                                  className="absolute inset-0 hidden sm:block"
+                                  style={{
+                                    maskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
+                                    WebkitMaskImage: 'linear-gradient(to right, black 0%, black 30%, transparent 95%)',
+                                  }}
+                                >
+                                  <div className={`absolute inset-0 ${slide.overlay === "light" ? "bg-white/90" : "bg-black/80"}`} />
+                                </div>
+                              </>
                             )}
 
                             {/* Content overlay */}
@@ -532,7 +547,14 @@ export function SlideCarousel({
                                 {slide.description}
                               </p>
                               <div>
-                                <Button asChild variant="green">
+                                {/* Allowed to wrap: on a phone the label is
+                                    longer than the 85% column and a nowrap
+                                    button ran under the card's clipped edge. */}
+                                <Button
+                                  asChild
+                                  variant="green"
+                                  className="h-auto min-h-11 max-w-full whitespace-normal py-2.5 text-left"
+                                >
                                   <Link
                                     href={slide.primaryHref}
                                     className="cursor-pointer"

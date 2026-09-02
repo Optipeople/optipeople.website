@@ -436,7 +436,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[var(--gray-1)] py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-[var(--gray-1)] py-16 sm:py-20 lg:py-32">
       {/* Keeps its own wide canvas: the diagram needs more room than the
           1140px content column, but the heading type matches the rest of the
           redesigned pages. */}

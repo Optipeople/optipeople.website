@@ -25,14 +25,15 @@ type VideosCopy = {
 }
 
 // Video titles match the published titles on the OptiPeople YouTube channel.
-// All three are recorded in Danish; the language tag says so on both locales.
+// The two customer stories are in Danish, the Omron talk is in English; the
+// language tag on each card says which, on both locales.
 const copy: Record<Locale, VideosCopy> = {
   en: {
     eyebrow: "Videos",
     headline: "See OptiPeople Data Platform in action",
-    body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place. The videos are recorded in Danish, and every story below is also written up in full on the site.",
+    body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place. The customer stories are in Danish and the Omron talk is in English, and every story below is also written up in full on the site.",
     watchLabel: "Watch the stories",
-    countLabel: (count) => `${count} videos, recorded in Danish`,
+    countLabel: (count) => `${count} videos, in Danish and English`,
     carouselTitle: "Customer stories",
     carouselBody:
       "Manufacturers describing the work in their own words: what they measured before, what they connected, and what they do differently now.",
@@ -56,7 +57,7 @@ const copy: Record<Locale, VideosCopy> = {
         title: "OptiPeople & Omron: turning data into a competitive advantage",
         description:
           "A joint talk with Omron on how production data becomes a real advantage: what to measure, and how to turn it into decisions.",
-        languageLabel: "Danish",
+        languageLabel: "English",
       },
     ],
     moreTitle: "Read the stories instead",
@@ -86,9 +87,9 @@ const copy: Record<Locale, VideosCopy> = {
   da: {
     eyebrow: "Videoer",
     headline: "Se OptiPeople Data Platform i aktion",
-    body: "Kundesamtaler og partneroplæg om, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret ét sted. Alle historier findes også skrevet i fuld længde her på sitet.",
+    body: "Kundesamtaler og partneroplæg om, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret ét sted. Kundehistorierne er på dansk, og oplægget med Omron er på engelsk. Alle historier findes også skrevet i fuld længde her på sitet.",
     watchLabel: "Se historierne",
-    countLabel: (count) => `${count} videoer, optaget på dansk`,
+    countLabel: (count) => `${count} videoer, på dansk og engelsk`,
     carouselTitle: "Kundehistorier",
     carouselBody:
       "Produktionsvirksomheder fortæller med egne ord: hvad de målte før, hvad de fik forbundet, og hvad de gør anderledes i dag.",
@@ -109,11 +110,10 @@ const copy: Record<Locale, VideosCopy> = {
       },
       {
         videoId: "H4HvdRpmHjo",
-        title:
-          "OptiPeople & Omron: Sådan udnytter du data til at skabe en konkurrencefordel",
+        title: "OptiPeople & Omron: turning data into a competitive advantage",
         description:
           "Fælles oplæg med Omron om, hvordan produktionsdata bliver til en reel konkurrencefordel: hvad man skal måle, og hvordan det bliver til beslutninger.",
-        languageLabel: "Dansk",
+        languageLabel: "Engelsk",
       },
     ],
     moreTitle: "Læs historierne i stedet",
@@ -224,7 +224,7 @@ export default async function VideosPage({ params }: Props) {
       </section>
 
       {/* Carousel. Heading on the edge column, track full-bleed. */}
-      <section id="stories" className="scroll-mt-24 pb-20 lg:pb-28">
+      <section id="stories" className="scroll-mt-24 pb-16 sm:pb-20 lg:pb-28">
         <div className="mb-10 px-[var(--edge)] lg:mb-14">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
