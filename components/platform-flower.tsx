@@ -122,7 +122,7 @@ const danishModules: ModuleNode[] = [
     description: "Se hvor tiden går tabt",
     pitch:
       "Følg OEE i realtid, og se præcis hvor produktionstiden forsvinder. Så er gætteriet slut, og forbedringerne kan begynde.",
-    features: ["Live OEE på skærmen", "Stopårsager", "Tab på fart og kvalitet"],
+    features: ["Live OEE på skærmen", "Stopårsager", "Tab på ydelse og kvalitet"],
   },
   {
     id: "mes",
@@ -177,21 +177,21 @@ const danishModules: ModuleNode[] = [
     name: "IoT",
     description: "Få data fra alt",
     pitch:
-      "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, sensorer der er sat op, historians og leverandørportaler, uanset protokol og alder.",
+      "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, sensorer der er sat op, historians og leverandørportaler, uanset protokol og alder. Nyt udstyr sætter vi kun op, hvor maskinen ikke har noget at læse fra i forvejen.",
     features: ["Brug det hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun hvor der mangler noget"],
   },
   {
     id: "planning",
     name: "Planlægning",
     description: "Ruter og tidslinjer",
-    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, og ikke bare på én flad tidslinje. Efter målte kørehastigheder og reel ledig tid.",
+    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, ikke bare på én flad tidslinje. Vi bruger kørehastigheder, I selv har målt, og den tid, maskinen faktisk har ledig.",
     features: ["Ruter, ikke én flad tidslinje", "Kørehastigheder fra virkeligheden", "Læg om uden at starte forfra"],
   },
   {
     id: "documents",
     name: "Dokumenter",
     description: "Rette version, rette sted",
-    pitch: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen, på stationen, på lageret eller i laboratoriet, i den version, der gælder for opgaven.",
+    pitch: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen, på stationen, på linjen, på lageret eller i laboratoriet, i den version, der gælder for den, der står med opgaven.",
     features: ["Dér hvor arbejdet sker", "Én gældende version", "Klar til audit"],
   },
   {
@@ -199,7 +199,7 @@ const danishModules: ModuleNode[] = [
     name: "AI-agenter",
     description: "Spørg jeres egne data",
     pitch: "Agenter og copiloter, der arbejder på jeres produktionsdata, svarer i almindeligt sprog og holder øje med de mønstre, ingen har tid til at lede efter.",
-    features: ["Svar i almindeligt sprog", "Mønstre og afvigelser", "Bygget på jeres egne data"],
+    features: ["Svar i almindeligt sprog", "Besked ved mønstre og afvigelser", "Bygget på jeres egne data"],
   },
 ]
 const platformIntro = {
@@ -512,10 +512,11 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
                 const uy = Math.sin(a)
                 const hubEdge = CENTER_R * Math.cos(Math.PI / HUB_SIDES) // hub inradius
                 const petalBase = ORBIT - PETAL_R * Math.cos(Math.PI / 5) // pentagon inradius from centre
-                const x1 = CENTER[0] + ux * petalBase
-                const y1 = CENTER[1] + uy * petalBase
-                const x2 = CENTER[0] + ux * hubEdge
-                const y2 = CENTER[1] + uy * hubEdge
+                const round = (n: number) => Math.round(n * 100) / 100
+                const x1 = round(CENTER[0] + ux * petalBase)
+                const y1 = round(CENTER[1] + uy * petalBase)
+                const x2 = round(CENTER[0] + ux * hubEdge)
+                const y2 = round(CENTER[1] + uy * hubEdge)
                 return (
                   <g key={`flow-${p.id}`}>
                     <line

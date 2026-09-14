@@ -1243,7 +1243,7 @@ function EmsMockup() {
                   className="h-[8px] flex-1 rounded-[1px]"
                   style={{
                     backgroundColor: "var(--green-dark3)",
-                    opacity: 0.08 + v * 0.8,
+                    opacity: Math.round((0.08 + v * 0.8) * 1000) / 1000,
                   }}
                 />
               ))}
@@ -2658,7 +2658,7 @@ function AnalysisMockup() {
               style={{
                 height: (value / 460) * 42 + "px",
                 backgroundColor: "var(--green-dark3)",
-                opacity: 0.9 - i * 0.03,
+                opacity: Math.round((0.9 - i * 0.03) * 1000) / 1000,
               }}
             />
           ))}
