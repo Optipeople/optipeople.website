@@ -237,7 +237,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
         {
           id: "loggers",
           title: "Dataloggere",
-          body: "Opsamling af sensor- og procesdata",
+          body: "Samler sensor- og procesdata op",
         },
         {
           id: "operators",
@@ -345,7 +345,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
       ],
     },
     assurances: [
-      { title: "Microsoft Azure", body: "Cloud-hosting i enterprise-klasse" },
+      { title: "Microsoft Azure", body: "Drift i skyen, i enterprise-klasse" },
       {
         title: "Krypteret hele vejen",
         body: "TLS undervejs, krypteret når det ligger lagret",

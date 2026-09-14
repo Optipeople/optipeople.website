@@ -8,7 +8,7 @@ outcome: "OptiPeople Data Platform strukturerer maskin- og OEE-data og sender de
 
 Denne case viser, hvordan OptiPeople Data Platform kan arbejde sammen med iFix fra General Electric og skabe en bredere overvågning af fabrikken.
 
-OptiPeople Data Platform står for indsamling og strukturering af data, mens iFix kan bruge de data som en del af et større SCADA-miljø.
+OptiPeople Data Platform indsamler og strukturerer data, mens iFix kan bruge de data som en del af et større SCADA-miljø.
 
 ## Situationen
 
@@ -45,4 +45,4 @@ Integrationen skaber en stærkere driftsopsætning ved at:
 - forbedre overblikket på tværs af fabrikken
 - understøtte mere effektive alarmstrategier
 - reducere reaktionstiden, når noget fejler
-- skabe grundlag for besparelser på den lange bane
+- bane vejen for besparelser på den lange bane

@@ -119,7 +119,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "OptiPeople giver produktionsvirksomheder tal i realtid på OEE, kvalitet, energi og vedligehold.",
         eyebrow: "Til produktionsvirksomheder",
-        heroTitle: "Kend din fabrik i realtid",
+        heroTitle: "Kend jeres fabrik i realtid",
         heroBody:
           "Vi kobler maskiner, processer og mennesker sammen i ét overblik, så teamet kan handle hurtigere og styre efter fakta.",
         primaryLabel: "Book en demo",

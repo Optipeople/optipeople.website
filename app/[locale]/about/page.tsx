@@ -133,7 +133,7 @@ const copy: Record<
     cta: "Tal med os",
     visual: {
       eyebrow: "Det, vi bygger",
-      title: "Software, der gør sig fortjent til pladsen på gulvet",
+      title: "Software, der fortjener sin plads på gulvet",
       body: "Hver eneste skærm, vi sender ud, bliver brugt midt i et skift, med handsker på og under tidspres. Det vilkår former alt. Skal der en manual til, har vi gjort det forkert.",
     },
   },

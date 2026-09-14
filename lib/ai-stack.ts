@@ -739,7 +739,7 @@ export const aiCapabilities: AiCapability[] = [
           "Alt det, I kan se i OptiPeople Data Platform, kan I også hente med kode. Træk OEE, maskiner, stop, skift og målinger ind i jeres egne apps, dashboards og automatiseringer gennem et dokumenteret REST API. Almindelig JSON over HTTPS, med en nøgle, I selv opretter i portalen.",
         valueTitle: "Jeres data, på jeres måde",
         valueBody:
-          "Nogle gange skal værdien opstå i jeres eget system: i BI-modellen, controllerne passer, på skærmen ude på gulvet, i den interne app IT ejer. REST API'et giver udviklere direkte adgang til produktionsdata, så I kan bygge det, forretningen har brug for. Det går begge veje. Hent det, platformen har samlet, eller send maskinstatus, emnetællere og målinger ind fra jeres egne systemer over MQTT i et dokumenteret JSON-format. I skal bruge en konto i portalen, en maskine, en enhed og en nøgle, så er I i gang. Data er jeres, og API'et er beviset på, at de ikke er låst inde.",
+          "Nogle gange skal værdien opstå i jeres eget system: i BI-modellen, controllerne passer, på skærmen ude på gulvet, som operatørerne kigger på, i den interne app IT ejer. REST API'et giver udviklere direkte, autentificeret adgang til produktionsdata, så I kan bygge det, forretningen har brug for. Det går begge veje: hent det, platformen har samlet, eller send maskinstatus, emnetællere og målinger ind fra jeres egne systemer over MQTT i et dokumenteret JSON-format. Data er jeres, og API'et er beviset på det.",
         capabilitiesTitle: "Klar til udviklere",
         capabilities: [
           {

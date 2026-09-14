@@ -1,5 +1,5 @@
 ---
-title: "Dansand: 3,5 millioner sække sand om året, og OptiPeople Data Platform giver bedre styring af tiden"
+title: "Dansand: 3,5 millioner sække sand om året, og OptiPeople Data Platform giver bedre styr på tiden"
 metricLabel: "sække sand om året"
 quote: "Vi vil bruge data til at træffe investeringsbeslutninger, når en maskine skal skiftes, så vi investerer rigtigt."
 outcome: "Oppetids- og produktionsdata på big bag-linjerne driver nu den daglige opfølgning og investeringsbeslutningerne."
@@ -11,7 +11,7 @@ Dansand bruger OptiPeople Data Platform på håndteringslinjerne til big bags me
 
 ## Situationen
 
-Som Danmarks førende sandspecialist har Dansand en produktion, hvor overblik over maskinerne og styring af tiden betyder meget.
+Som Danmarks førende sandspecialist har Dansand en produktion, hvor det betyder meget at have overblik over maskinerne og styr på tiden.
 
 Virksomheden ville have stærkere data til at vurdere processerne og til at træffe bedre investeringsbeslutninger, når maskiner skulle udskiftes helt eller delvist.
 
@@ -30,7 +30,7 @@ Data bruges direkte i den løbende opfølgning på driften.
 
 Hos Dansand bruges data fra OptiPeople Data Platform til at:
 
-- skabe grundlaget for produktionsmøderne
+- lægge grunden til produktionsmøderne
 - styrke samarbejdet på tværs af teamet
 - understøtte procesforbedringer
 - understøtte bedre investeringsbeslutninger

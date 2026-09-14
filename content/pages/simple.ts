@@ -44,7 +44,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       sections: [
         {
           title: "Bygget på det samme datagrundlag",
-          body: "Modulerne er ikke fire produkter, der er syet sammen. De læser de samme maskinsignaler, de samme ordrer og den samme tid. Et stop, der bliver registreret på gulvet, slår derfor igennem i OEE-tallet, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
+          body: "Modulerne er ikke en stribe produkter, der er syet sammen. De læser de samme maskinsignaler, de samme ordrer og den samme tid. Et stop, der bliver registreret på gulvet, slår derfor igennem i OEE-tallet, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
         },
         {
           title: "Start dér, hvor det gør ondt",
@@ -183,7 +183,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       sections: [
         {
           title: "Software og ingeniørarbejde i samme team",
-          body: "At koble en fabrik på er sjældent en ren softwareopgave. Der er styringer, tavler og sensorer, og der er udstyr, som ikke bare kan stå stille en uge. Vi laver både platformen og automationsarbejdet, så overleveringen mellem de to bliver ikke jeres problem.",
+          body: "At koble en fabrik på er sjældent en ren softwareopgave. Der er styringer, tavler og sensorer, og der er udstyr, som ikke bare kan stå stille en uge. Vi laver både platformen og automationsarbejdet, så bliver overleveringen mellem de to ikke jeres problem.",
         },
         {
           title: "Vi starter med det, I allerede har",
@@ -258,7 +258,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Fra rapporter til penge på service",
-          body: "For maskinbyggere ændrer det, hvad I kan sælge, når maskinerne er koblet på. Garanteret oppetid, serviceaftaler efter maskinens tilstand og fejlfinding på afstand bygger alle sammen på at vide, hvordan maskinen rent faktisk kører. Det er et dataspørgsmål, før det bliver en forretning.",
+          body: "For maskinbyggere ændrer det, hvad I kan sælge, når maskinerne er koblet på. Garanteret oppetid, serviceaftaler efter maskinens tilstand og fejlfinding på afstand bygger alle sammen på at vide, hvordan maskinen rent faktisk kører. Det handler om data, før det handler om penge.",
         },
         {
           title: "I tvivl om, hvad I er?",

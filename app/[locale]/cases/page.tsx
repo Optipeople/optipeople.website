@@ -47,7 +47,7 @@ const copy: Record<Locale, CasesCopy> = {
   da: {
     metaTitle: "Cases | OptiPeople",
     metaDescription:
-      "Se hvordan produktionsvirksomheder bruger OptiPeople og OptiPeople Data Platform til at forbedre OEE, oppetid og beslutninger.",
+      "Se hvordan produktionsvirksomheder bruger OptiPeople og OptiPeople Data Platform til at forbedre OEE og oppetid og træffe bedre beslutninger.",
     backLabel: "Forsiden",
     eyebrow: "Cases",
     title: "Virkelige resultater fra virkelige fabrikker",

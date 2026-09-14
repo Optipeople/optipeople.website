@@ -120,7 +120,7 @@ const copy: Record<Locale, PeopleCopy> = {
       ],
       expertise: ["Platformsudvikling", "IoT", "Integrationer", "AI"],
     },
-    closingTitle: "I tvivl om hvem I skal spørge?",
+    closingTitle: "I tvivl om, hvem I skal spørge?",
     closingLinks: [
       {
         title: "Få hjælp",

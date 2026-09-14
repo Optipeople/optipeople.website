@@ -7,7 +7,7 @@ outcome: "Ugentlige maskinrapporter på fabriksgulvet gjorde produktionsdata til
 
 ## Kort fortalt
 
-DFI Geisler bruger OptiPeople Data Platform til at følge performance på syv udvalgte bearbejdningsmaskiner i bordpladeproduktionen på Mors.
+DFI Geisler bruger OptiPeople Data Platform til at følge ydelsen på syv udvalgte bearbejdningsmaskiner i bordpladeproduktionen på Mors.
 
 Over de seneste to år har den systematiske brug af produktionsdata hjulpet virksomheden med at øge produktiviteten med cirka **5%**.
 
@@ -29,7 +29,7 @@ OptiPeople Data Platform er en del af den daglige driftsrytme omkring de syv mas
 
 Produktionslederne printer ugentlige maskinrapporter og hænger dem op på tavler ved hver maskine. Rapporterne bliver et konkret udgangspunkt for samtalerne på fabriksgulvet.
 
-Ledere og medarbejdere gennemgår data sammen og bruger dem til at drøfte performance, nedetid og mulige forbedringer.
+Ledere og medarbejdere gennemgår data sammen og bruger dem til at drøfte ydelse, nedetid og mulige forbedringer.
 
 ## Hvad der gjorde opsætningen effektiv
 

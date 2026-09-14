@@ -118,7 +118,7 @@ const copy: Record<Locale, VideosCopy> = {
     ],
     moreTitle: "Læs historierne i stedet",
     moreBody:
-      "Foretrækker du tekst, eller vil du have tallene? De skrevne cases går mere i dybden.",
+      "Foretrækker I tekst, eller vil I have tallene? De skrevne cases går mere i dybden.",
     moreLinks: [
       {
         title: "Alle kundecases",
@@ -135,7 +135,7 @@ const copy: Record<Locale, VideosCopy> = {
       {
         title: "Tal med os",
         description:
-          "Vil du se platformen på jeres egne produktionsdata? Book en gennemgang.",
+          "Vil I se platformen på jeres egne produktionsdata? Book en gennemgang.",
         href: "/contact",
       },
     ],

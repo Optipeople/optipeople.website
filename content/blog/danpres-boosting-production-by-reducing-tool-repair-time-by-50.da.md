@@ -16,7 +16,7 @@ I uge 35 og 36 registrerede operatørerne hos Danpres stopårsager for værktøj
 
 Den registrerede tid til værktøjsreparation over de to uger var **17 timer**.
 
-Ved at gøre nedetiden til driftsdata fik virksomheden et klarere grundlag for forbedringsarbejdet.
+Ved at gøre nedetiden til driftsdata fik virksomheden noget klart at forbedre ud fra.
 
 ## Hvad analysen viste
 
@@ -42,7 +42,7 @@ Casen viser, hvordan mindre tid brugt på værktøjsreparation kan:
 - reducere nedetid
 - øge de effektive driftstimer
 - omsætte den planlagte tid til mere produktion
-- potentielt lette lønomkostningspresset i vedligehold
+- potentielt spare på lønudgifterne i vedligehold
 
 Tim Ostergaard  
 Supply Chain Manager, Danpres

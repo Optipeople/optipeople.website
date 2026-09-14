@@ -28,7 +28,7 @@ Fiberline ville:
 
 Data hentes fra maskinerne gennem en software-til-software-integration og sendes til OptiPeople Data Platform.
 
-Det giver et stærkere grundlag for at følge stop, nedetid og mønstre i nedbrud.
+Det gør det nemmere at følge stop, nedetid og mønstre i nedbrud.
 
 ## Resultatet
 

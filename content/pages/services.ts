@@ -109,7 +109,7 @@ const services: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Rådgivning om smart factory og smart operations: proceskortlægning, tekniske vurderinger, business cases og forprojekter.",
         eyebrow: "Smart Operations",
-        heroTitle: "Find ud af hvad der skal bygges, før I bygger det",
+        heroTitle: "Find ud af, hvad der skal bygges, før I bygger det",
         heroBody:
           "Vi rådgiver om smart factory og smart operations: vi kortlægger processerne, vurderer hvad fabrikken teknisk kan bære, og regner business casen igennem, før der bliver bygget noget.",
         primaryLabel: "Book en snak",
@@ -120,7 +120,7 @@ const services: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Workflow,
-            title: "Procéskortlægning",
+            title: "Proceskortlægning",
             description:
               "Vi går flowet igennem med dem, der kører det: hvad der faktisk sker fra ordre til palle, hvor overleveringerne er, og hvilke beslutninger der bliver truffet på en fornemmelse.",
           },
@@ -128,19 +128,19 @@ const services: LocalizedPage<StandardPage>[] = [
             icon: Search,
             title: "Teknisk vurdering",
             description:
-              "Hvad kan fabrikken reelt levere? Styringer, protokoller, netværk, de sensorer og systemer der er, og hvad hver maskine kan måles på uden en ombygning.",
+              "Hvad kan fabrikken reelt levere? Styringer, protokoller, netværk, de sensorer og systemer, der er, og hvad hver maskine kan måles på uden en ombygning.",
           },
           {
             icon: FileBarChart,
             title: "Business case",
             description:
-              "Tabet sat i tal, indsatsen prissat, og en tilbagebetalingstid, I kan tage med til bestyrelsen. Skrevet så tallene kan diskuteres.",
+              "Tabet sat i tal, indsatsen prissat, og en tilbagebetalingstid, I kan tage med til bestyrelsen. Skrevet, så tallene kan diskuteres.",
           },
           {
             icon: ScanLine,
             title: "Forprojekt",
             description:
-              "Et afgrænset første skridt på én linje eller én maskine, med et klart spørgsmål det skal svare på. Billigt nok til at måtte gå galt, rigtigt nok til at vise, om resten er værd at binde sig til.",
+              "Et afgrænset første skridt på én linje eller én maskine, med et klart spørgsmål, det skal svare på. Billigt nok til at måtte gå galt, rigtigt nok til at vise, om resten er værd at binde sig til.",
           },
         ],
         visualTitle: "Rådgivningen ender i noget, I kan beslutte ud fra",
@@ -425,7 +425,7 @@ const services: LocalizedPage<StandardPage>[] = [
         primaryLabel: "Kontakt os",
         introTitle: "En rapport er et svar. Nogen skal have stillet spørgsmålet rigtigt først",
         introBody:
-          "De BI-opgaver, vi bliver hentet ind på, går sjældent galt på teknikken. Formlerne er rigtige, opdateringen kører, rapporten er flot, og den bliver stadig ikke brugt. For tallet på den var ikke det, mødet drejer sig om, eller tre afdelinger regner det ud på hver sin måde, eller ingen har aftalt, hvem der gør noget, når det flytter sig. Så vi starter med rådgivning og afklaring: beslutningerne, definitionerne, ejerskabet, og hvad data faktisk kan bære. Derefter bygger vi, på den platform der passer. Vi laver meget Power BI, fordi mange af vores kunder ligger på Microsoft, men Tableau, Fabric eller det datawarehouse, I allerede har, er lige så gode svar, hvis det er der, huset i forvejen er.",
+          "De BI-opgaver, vi bliver hentet ind på, går sjældent galt på teknikken. Formlerne er rigtige, opdateringen kører, rapporten er flot, og den bliver stadig ikke brugt. For tallet på den var ikke det, mødet drejer sig om, eller tre afdelinger regner det ud på hver sin måde, eller ingen har aftalt, hvem der gør noget, når det flytter sig. Så vi starter med rådgivning og afklaring: beslutningerne, definitionerne, ejerskabet, og hvad data faktisk kan bære. Derefter bygger vi, på den platform der passer. Vi laver meget Power BI, fordi mange af vores kunder ligger på Microsoft, men Tableau, Fabric eller det datawarehouse, I allerede har, er lige så gode svar, hvis det er der, I allerede er.",
         capabilitiesTitle: "Rådgivning først, byggeri bagefter",
         features: [
           {
@@ -579,28 +579,46 @@ const services: LocalizedPage<StandardPage>[] = [
         heroBody:
           "Vi bygger agenter, der kan læse jeres produktionsdata, finde mønstrene og hjælpe teamet fra spørgsmål til handling.",
         primaryLabel: "Tal om AI",
-        introTitle: "AI skal sidde tæt på arbejdet",
+        introTitle: "Jeres team skal ikke være flaskehalsen",
         introBody:
-          "Værdien ligger ikke i generelle svar. Den ligger i en AI, der må bruge jeres data, jeres regler og jeres systemer, sikkert og med spor tilbage til kilden.",
+          "Driften skaber hele tiden opgaver, der kræver opmærksomhed: rapporter skal hentes, planer skal opdateres, data skal jagtes på tværs af systemer, afvigelser skal flages. Det er vigtige opgaver, men de kræver ikke, at et menneske sidder og gør dem. Agenterne klarer dem selv, nøjagtigt og døgnet rundt, så jeres folk får tiden til de beslutninger, der faktisk kræver omtanke.",
         capabilitiesTitle: "Agenter bygget til produktion",
         features: [
           {
             icon: Bot,
-            title: "Spørg dine data",
+            title: "Rutinerne kører af sig selv",
             description:
-              "Stil spørgsmål om OEE, stopårsager, energi og kvalitet i almindeligt sprog.",
+              "Agenter, der klarer dataindtastning, ordrebehandling og lageropdateringer fra ende til anden, uden at nogen skal røre det.",
           },
           {
-            icon: Search,
-            title: "Find mønstrene",
+            icon: FileBarChart,
+            title: "Rapporterne skriver sig selv",
             description:
-              "Find det, der stikker ud, og de sammenhænge, der går på tværs af maskiner, skift og perioder.",
+              "Agenter henter data fra flere systemer og leverer produktionsrapporter, skiftrapporter og KPI'er, præcis når de skal være klar.",
+          },
+          {
+            icon: BrainCircuit,
+            title: "Find mønstrene, før I spørger",
+            description:
+              "Mere end et dashboard. Agenten opdager afvigelser, forklarer udviklingen og foreslår næste skridt, ud fra jeres egne produktionsdata.",
+          },
+          {
+            icon: CalendarClock,
+            title: "Planer der retter sig selv til",
+            description:
+              "Agenter, der balancerer belastningen og justerer planen i realtid, når noget ændrer sig på gulvet.",
           },
           {
             icon: Workflow,
-            title: "Agenter i arbejde",
+            title: "Agenter, der arbejder sammen",
             description:
-              "Lad agenten samle tallene, foreslå næste skridt og gøre opfølgningen klar.",
+              "Kobl agenter på tværs af ERP, MES, SCADA og de andre systemer. Byg arbejdsgange i flere trin, hvor agenterne sender opgaven videre til hinanden selv.",
+          },
+          {
+            icon: ShieldCheck,
+            title: "Fang afvigelsen, før den eskalerer",
+            description:
+              "Automatiser kvalitetstjek, få besked ved afvigelser, og hold en komplet sporbarhed, så risikoen og omarbejdet falder.",
           },
         ],
         visualTitle: "Agenter på tværs af jeres systemer",

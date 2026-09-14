@@ -11,7 +11,7 @@ Gurit bruger OptiPeople Data Platform i sin kerneforretning med kitting af kerne
 
 ## Situationen
 
-Gurit ville have et stærkere grundlag for optimeringsarbejdet og mere pålidelig indsigt i, hvordan produktionsressourcerne blev brugt.
+Gurit ville have noget solidt at optimere ud fra og mere pålidelig indsigt i, hvordan produktionsressourcerne blev brugt.
 
 Behovet var ikke kun at se, hvad der skete, men at kunne måle forbedringsindsatserne, så beslutninger byggede på fakta i stedet for antagelser.
 

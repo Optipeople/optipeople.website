@@ -29,7 +29,7 @@ Overblikket var vigtigt for at:
 
 OptiPeople Data Platform blev installeret på udvalgte nøglemaskiner.
 
-Platformen indsamler data fra maskinerne, mens operatørerne kan registrere stopårsager direkte. Ledere kan derefter få et hurtigt overblik over produktionsstatus og performance.
+Platformen indsamler data fra maskinerne, mens operatørerne kan registrere stopårsager direkte. Ledere kan derefter få et hurtigt overblik over produktionsstatus og ydelse.
 
 ## Resultatet
 

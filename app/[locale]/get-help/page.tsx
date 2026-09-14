@@ -136,11 +136,11 @@ const copy: Record<Locale, HelpCopy> = {
   da: {
     metaTitle: "Få hjælp | OptiPeople",
     metaDescription:
-      "Support til OptiPeople Data Platform: hvordan du får fat i os, svartider og svar på de spørgsmål vi oftest får om maskinopkobling, OEE, data og API.",
+      "Support til OptiPeople Data Platform: hvordan I får fat i os, svartider og svar på de spørgsmål, vi oftest får, om maskinopkobling, OEE, data og API.",
     eyebrow: "Få hjælp",
     headline: "Vi hjælper jer videre",
     body: "Uanset om I kører OptiPeople Data Platform i dag eller stadig er ved at finde ud af, om det passer til jeres produktion, kan I få fat i et rigtigt menneske her. Vi besvarer supporthenvendelser på hverdage, og haster det på en kørende installation, går det hurtigere på telefonen end på mail.",
-    jumpLabel: "Spørgsmål vi ofte får",
+    jumpLabel: "Spørgsmål, vi ofte får",
     channelsTitle: "Sådan får I fat i os",
     channels: [
       {
@@ -168,9 +168,9 @@ const copy: Record<Locale, HelpCopy> = {
         href: "/resources/people",
       },
     ],
-    faqTitle: "Spørgsmål vi ofte får",
+    faqTitle: "Spørgsmål, vi ofte får",
     faqBody:
-      "De spørgsmål vi oftest møder, med henvisning til hvor de er beskrevet mere udførligt.",
+      "De spørgsmål, vi oftest møder, med henvisning til, hvor de er beskrevet mere udførligt.",
     faq: [
       {
         question: "Kan I forbinde vores ældre maskiner?",

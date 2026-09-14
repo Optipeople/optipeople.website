@@ -70,7 +70,7 @@ const copy: Record<
       "Afmeld med ét klik",
     ],
     logosTitle: "Virksomheder, der kører på OptiPeople",
-    expectEyebrow: "Hvad du kan forvente",
+    expectEyebrow: "Hvad I kan forvente",
     expectTitle: "Noter fra gulvet, der er pladsen i indbakken værd.",
     showcaseEyebrow: "Fra platformen",
     showcaseTitle: "De samme data, vores kunder handler på hver dag.",
@@ -79,7 +79,7 @@ const copy: Record<
       {
         title: "Produktion og OEE",
         description:
-          "Find tabene, forbedr OEE, og hold forbedringerne fast på rigtige tal fra produktionen.",
+          "Tab i produktionen, bedre OEE og forbedringsarbejde, der holder sig til de rigtige produktionstal.",
       },
       {
         title: "Forbundne fabrikker",

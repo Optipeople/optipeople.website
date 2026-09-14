@@ -77,9 +77,9 @@ const copy: Record<Locale, ContactCopy> = {
           "Tyve minutter om jeres linjer, jeres maskiner og hvad I måler i dag.",
       },
       {
-        title: "En gennemgang på jeres data",
+        title: "En gennemgang af jeres data",
         description:
-          "Vi viser platformen på jeres egen produktion i stedet for et demodatasæt.",
+          "Vi viser platformen med jeres egen produktion i stedet for et demodatasæt.",
       },
     ],
     emailLabel: "Email",

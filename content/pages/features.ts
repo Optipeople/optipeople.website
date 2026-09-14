@@ -255,7 +255,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           "Ét enkelt forløb, der gør hvert stop til noget, produktionen kan lære af.",
         capabilities: [
           {
-            title: "Maskinen siger til først",
+            title: "Maskinen melder stop med det samme",
             description:
               "Når maskinen stopper, bliver operatøren bedt om at sætte en årsag på med det samme.",
             image: "/images/Stop-Screen-Red.png",
@@ -284,7 +284,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metrics: [
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
           { metric: "95%+", label: "Af stoppene bliver forklaret" },
-          { metric: "< 10s", label: "Tager én registrering" },
+          { metric: "< 10s", label: "Til at registrere et stop" },
         ],
         related: [
           {
@@ -388,23 +388,23 @@ const features: LocalizedPage<FeaturePage>[] = [
         parentLabel: "Vedligehold",
         parentHref: "/modules/maintenance",
         eyebrow: "Vedligehold og opgaver",
-        heroTitle: "Gør vedligehold planlagt og synligt",
+        heroTitle: "Løs det, før det bryder ned",
         heroBody:
           "Opret opgaver, sæt navn på dem, og planlæg service efter, hvor meget maskinen faktisk har kørt.",
         heroImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
         heroImageAlt:
           "Opgavestyring med vedligeholdsopgaver, der udløses af tællere og driftstimer, ved siden af de lister, de trækker på",
-        valueTitle: "Vedligehold virker bedst, før maskinen bryder ned",
+        valueTitle: "Et uplanlagt stop koster mest",
         valueBody:
-          "Når driftstimer, alarmer og opgaver ligger samme sted, kan teknikerne tage det vigtigste først og skrive arbejdet ned uden ekstra papir.",
+          "Et uplanlagt stop koster mere: tabt produktion, hasteordrer på reservedele og en plan, der vælter. Når driftstimer, alarmer og opgaver ligger samme sted, kan teknikerne tage det vigtigste først, i stedet for at stole på et regneark og hukommelsen.",
         capabilitiesTitle: "Fra signal til færdig opgave",
         capabilitiesBody:
           "Vedligeholdet hænger sammen med maskindata, planlægning og det arbejde, der bliver lavet.",
         capabilities: [
           {
-            title: "Planer efter brug",
+            title: "Efter brug, ikke kalenderen",
             description:
-              "Planlæg service efter driftstimer, antal cyklusser eller faste intervaller.",
+              "Planlæg service efter driftstimer og antal cyklusser. Når grænsen er nået, dukker opgaven op af sig selv, ikke fordi der står en dato i kalenderen.",
             image: "/images/Mockups/Tasls-Maintenance.png",
             imageAlt:
               "Opgavelisten med vedligehold planlagt efter tællere og driftstimer",
@@ -531,15 +531,15 @@ const features: LocalizedPage<FeaturePage>[] = [
         parentLabel: "QMS",
         parentHref: "/modules/quality",
         eyebrow: "Kvalitetsstyring",
-        heroTitle: "Gør kvalitet til en del af arbejdet",
+        heroTitle: "Fang fejlen, hvor den opstår",
         heroBody:
-          "Flyt kvalitetstjekket ud til maskinen, og bind kontroller, afvigelser og handlinger sammen med produktionen.",
+          "Registrer kvaliteten ude ved maskinen, og følg hver afvigelse tilbage til det skift, den batch og den maskine, den kom fra.",
         heroImage: "/images/backoffice1.png",
         heroImageAlt: "Kvalitetsstyring",
-        valueTitle: "Kvalitet skal registreres dér, hvor den bliver skabt",
+        valueTitle: "Jo senere I opdager fejlen, jo dyrere bliver den",
         valueBody:
-          "Digitale kontroller og sporbarhed skærer ventetiden, fejlene og tvivlen væk i kvalitetsarbejdet.",
-        capabilitiesTitle: "Kvalitet med det hele omkring sig",
+          "Ligger kvalitetsdata i papirskemaer og spredte systemer, opdager I afvigelsen for sent, batchen er kørt, og skaden er sket. Her bliver hver afvigelse registreret med det samme, og koblet til maskinen, skiftet og det, der gik forud.",
+        capabilitiesTitle: "Fra hændelse på gulvet til et spor, I kan følge",
         capabilitiesBody:
           "Hver registrering hænger sammen med maskine, produkt, operatør og skift.",
         capabilities: [
@@ -675,7 +675,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         parentLabel: "Analyse",
         parentHref: "/modules/analysis",
         eyebrow: "Analyse og rapportering",
-        heroTitle: "Rapporter, der forklarer, hvad der sker",
+        heroTitle: "Rapporterne skriver sig selv",
         heroBody:
           "Lad rapporterne lave sig selv, og få svar på, hvordan det går, hvor tiden går tabt, og hvad der koster mest.",
         heroImage: "/images/report-mockup1.png",
@@ -683,7 +683,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         valueTitle: "En rapport skal være et arbejdsredskab",
         valueBody:
           "Når rapporten er koblet til driften og opdaterer sig selv, bliver den en del af forbedringsarbejdet i stedet for et tilbageblik en gang om måneden.",
-        capabilitiesTitle: "Indsigt fra det samme datagrundlag",
+        capabilitiesTitle: "Fra rå tal til den rapport, I skal bruge",
         capabilitiesBody:
           "Fra tal, der opdaterer sig selv, til de dybe analyser. Samme data, forskellige spørgsmål.",
         capabilities: [
@@ -845,7 +845,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           },
         ],
         metrics: [
-          { metric: "10-20%", label: "Mindre spild af energi" },
+          { metric: "10-20%", label: "Mindre energispild" },
           { metric: "Live", label: "Overblik over sensorerne" },
           { metric: "1 skærm", label: "Energi og produktion samlet" },
         ],
@@ -953,7 +953,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         eyebrow: "AI og copiloter",
         heroTitle: "AI, der kender jeres fabrik",
         heroBody:
-          "Stil spørgsmål, find mønstre og få hjælp til beslutningerne af en AI, der kender jeres maskiner, jeres skift og jeres historik.",
+          "Stil spørgsmål, find mønstre, og lad en AI, der kender jeres maskiner, jeres skift og jeres historik, hjælpe med beslutningerne.",
         heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         heroImageAlt: "Live effektivitetsrapport, som AI-assistenten svarer ud fra",
         valueTitle: "Selv den bedste analytiker kan ikke se det hele på én gang",
@@ -964,7 +964,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           "Hvert forslag kan følges tilbage til de tal, det bygger på. Ingen sort boks.",
         capabilities: [
           {
-            title: "Spørg dine data",
+            title: "Spørg jeres data",
             description: "Stil spørgsmålet i almindeligt sprog, og få svaret med tallene bag.",
             image: "/images/report1.png",
             imageAlt: "Rapport til AI-analyse",
@@ -1095,7 +1095,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         parentLabel: "IoT",
         parentHref: "/modules/iot",
         eyebrow: "Maskinstyring",
-        heroTitle: "Luk sløjfen mellem system og gulv",
+        heroTitle: "Få system og gulv til at følges ad",
         heroBody:
           "Kobl jer på maskinstyringen, så operatøren kan logge ind ved maskinen, få besked med det samme og arbejde tættere på systemet.",
         heroImage: "/images/Start-Machine.png",
@@ -1117,21 +1117,21 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Start, stop og status",
             description:
-              "Operatøren kan se, om alt er klar, før produktionen bliver sat i gang.",
+              "Operatøren kan se, om alt er klar, før produktionen går i gang.",
             image: "/images/Start-Machine.png",
             imageAlt: "Start maskine",
           },
           {
             title: "Besked med det samme",
             description:
-              "Maskinstatus og alarmer bliver vist direkte på gulvet, når noget ændrer sig.",
+              "Maskinstatus og alarmer går direkte ud på gulvet, når noget ændrer sig.",
             image: "/images/Everything-is-okay.png",
             imageAlt: "Alt er ok skærm",
           },
         ],
-        showcaseTitle: "Det rutetrin, der kører, og filerne der hører til",
+        showcaseTitle: "Det rutetrin, der kører, og filerne, der hører til",
         showcaseBody:
-          "En ordre lander ikke ved maskinen af sig selv. Den lander som ét trin på en produktionsrute, med det NC-program, det opstillingsark og den tegningsversion, der hører til netop det trin, på den maskine operatøren er logget ind ved.",
+          "En ordre lander ikke ved maskinen af sig selv. Den lander som ét trin på en produktionsrute, med det NC-program, det opstillingsark og den tegningsversion, der hører til netop det trin, på den maskine, operatøren er logget ind ved.",
         showcaseDrawn: "routes",
         metrics: [
           { metric: "100%", label: "Digital sporbarhed på hver session" },

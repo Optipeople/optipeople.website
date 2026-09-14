@@ -10,7 +10,7 @@ Carl Hansen & Søn bruger OptiPeople Data Platform til at skabe mere præcis ind
 
 ## Sådan bruges OptiPeople Data Platform
 
-OptiPeople Data Platform giver pålidelige data på maskinernes performance, og det giver virksomheden et stærkere grundlag for strategiske beslutninger og driftsanalyse.
+OptiPeople Data Platform giver pålidelige data om maskinernes ydelse, og det gør det nemmere for virksomheden at træffe strategiske beslutninger og lave driftsanalyser.
 
 Operatørerne understøtter arbejdet ved at registrere stopårsager, så det bliver lettere at se, hvor produktiviteten kan løftes.
 

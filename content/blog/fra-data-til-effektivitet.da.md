@@ -17,13 +17,13 @@ Maskinen i fokus producerede både små og store serier.
 
 Fordi omstillinger var dyre, havde fabrikken en mistanke om, at der var noget at hente, men manglede de data, der skulle til for at træffe beslutninger med sikkerhed.
 
-OptiPeople Data Platform blev sat i drift for at skabe det beslutningsgrundlag.
+OptiPeople Data Platform blev sat i drift for at give fabrikken det, de manglede, til at kunne beslutte med sikkerhed.
 
 ## Hvad data viste
 
 Så snart dataindsamlingen begyndte, stod det klart, at maskinens produktivitet hang tæt sammen med seriestørrelsen.
 
-De mange omstillinger var en hovedårsag til den lave effektivitet. De små serier brugte for meget tid på opstilling og trak den samlede performance ned.
+De mange omstillinger var en hovedårsag til den lave effektivitet. De små serier brugte for meget tid på opstilling og trak den samlede ydelse ned.
 
 Servicetjek spillede også ind. Efter tjek i oktober og februar lagde OEE sig på et højere niveau.
 
@@ -64,4 +64,4 @@ Med en indtjeningsmaksimerende betragtning blev den ekstra produktionskapacitet 
 
 Casen viser, at produktionsoptimering starter med data.
 
-Når det rigtige detaljeringsniveau er tilgængeligt, bliver det muligt at forbedre servicerutinerne, justere produktionsstrategien og vurdere investeringer på et markant stærkere grundlag.
+Når det rigtige detaljeringsniveau er tilgængeligt, bliver det muligt at forbedre servicerutinerne, justere produktionsstrategien og vurdere investeringer med langt større sikkerhed.

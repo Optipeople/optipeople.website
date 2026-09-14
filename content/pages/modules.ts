@@ -150,7 +150,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Activity,
             title: "Hvordan kører skiftene",
             description:
-              "Sammenlign skift, hold og perioder, og find de arbejdsgange, der er værd at brede ud.",
+              "Sammenlign skift, hold og perioder, og find de greb, der virker bedst, så I kan bruge dem andre steder.",
           },
         ],
         visualTitle: "Tallet, skiftet og det, der tog tiden",
@@ -309,7 +309,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualAlt: "Kvalitetskontroller og afvigelser registreret i OptiPeople Data Platform",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "60%", label: "Mindre omarbejde på grund af kvalitet" },
+          { metric: "60%", label: "Mindre omarbejde på grund af kvalitetsfejl" },
           { metric: "90%", label: "Hurtigere svar på afvigelser" },
           { metric: "100%", label: "Digital sporbarhed" },
         ],
@@ -484,7 +484,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Forebyg og forudsig",
             description:
-              "Gå fra brandslukning til planlagt vedligehold, og dér hvor maskinsignalerne rækker til det, til at handle på en målt udvikling, før noget bryder ned. Færre nedbrud, længere levetid og en lavere regning.",
+              "Gå fra brandslukning til planlagt vedligehold. Ræk maskinsignalerne langt nok, kan I gå videre til det forudsigende: I handler på en målt udvikling, før noget bryder ned. Færre nedbrud, længere levetid og en lavere regning.",
           },
         ],
       },
@@ -887,7 +887,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         introTitle: "I har flere data, end I tror, og de ligger flere steder, end I har lyst til",
         introBody:
           "Billedet er sjældent en tom fabrik. Det er tre generationer af styringer, et sensoropsæt fra et projekt for fem år siden, en database ingen slår op i, og maskinleverandørens egen portal, der kun dækker deres egne maskiner. Hver af dem har en del af svaret, hver for sig. Arbejdet er ikke at sætte hardware på maskiner. Det er at samle det, der allerede melder noget, og først derefter fylde de rigtige huller.",
-        capabilitiesTitle: "Saml først, sæt kun nyt op hvor det skal til",
+        capabilitiesTitle: "Saml først, sæt kun nyt op, hvor det skal til",
         features: [
           {
             icon: Layers,
@@ -916,7 +916,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Hvor data kommer fra, og hvor de ender",
         visualBody:
-          "Maskiner, det hardware I har, operatørernes enheder og de systemer, der allerede kører, samlet i én datacontainer pr. virksomhed, som jeres team, jeres systemer og jeres AI-assistenter læser fra.",
+          "Maskiner, det hardware, I har, operatørernes enheder og de systemer, der allerede kører, samlet i én datacontainer pr. virksomhed, som jeres team, jeres systemer og jeres AI-assistenter læser fra.",
         visualSection: "architecture",
         metricsTitle: "Typiske resultater",
         metrics: [
@@ -939,7 +939,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Brug det",
             description:
-              "Data bliver til dashboards, rapporter, alarmer og automatik, i de moduler I har brug for.",
+              "Data bliver til dashboards, rapporter, alarmer og automatik, i de moduler, I har brug for.",
           },
         ],
       },
@@ -1078,7 +1078,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Gauge,
             title: "Hver ordre har sine egne tal med",
             description:
-              "Den samme registrering fylder OEE, så hver ordre ender med reel køretid, reelle stop og reelt output bag sig, uden at nogen udfylder et skema.",
+              "Den samme registrering går også ind i OEE, så hver ordre ender med reel køretid, reelle stop og reelt output bag sig, uden at nogen udfylder et skema.",
           },
         ],
         visualTitle: "Den ordreliste, gulvet arbejder efter",
@@ -1086,7 +1086,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           "Prioritet, vare, antal, dato, station og om den kan startes, i én liste. Uanset om ordrerne kom fra et ERP eller blev oprettet her.",
         visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
         visualAlt: "Arbejdsordrer i OptiPeople Data Platform",
-        metricsTitle: "Typiske resultater",
+        metricsTitle: "Hvad ændrer sig",
         metrics: [
           { metric: "0", label: "ERP-koblinger skal der til for at komme i gang" },
           { metric: "1 skærm", label: "Til operatøren: hvad, start, stop, meld tilbage" },
@@ -1233,7 +1233,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Calendar,
             title: "Planlægning, ruter og tidslinjer",
             description:
-              "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, på en tidslinje gulvet kan se.",
+              "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, på en tidslinje, gulvet kan se.",
           },
           {
             icon: Monitor,
@@ -1256,14 +1256,14 @@ const modules: LocalizedPage<StandardPage>[] = [
         metrics: [
           { metric: "1", label: "Modul er et fint sted at starte" },
           { metric: "11", label: "Moduler på det samme datagrundlag" },
-          { metric: "0", label: "Gange I taster det samme igen" },
+          { metric: "0", label: "Gange, I taster det samme igen" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
             title: "Start med ét",
             description:
-              "Vælg det modul, der svarer på spørgsmålet nu. Maskiner, sensorer og systemer bliver koblet på, som netop det modul har brug for.",
+              "Vælg det modul, der svarer på spørgsmålet nu. Maskiner, sensorer og systemer bliver koblet på, efterhånden som modulet har brug for dem, uden at noget skal skiftes ud.",
           },
           {
             title: "Tag det næste",
@@ -1388,7 +1388,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: GitBranch,
             title: "Ruter, ikke én flad tidslinje",
             description:
-              "Hver vare har en rute: skær, fræs, lim, montér, glas, pak. Ordrerne bliver lagt i rækkefølge hen over hver enhed på ruten, så noget, der skrider ved station to, også er synligt som et problem ved station fem.",
+              "Hver vare har en rute: skær, fræs, lim, montér, glasér, pak. Ordrerne bliver lagt i rækkefølge hen over hver enhed på ruten, så noget, der skrider ved station to, også er synligt som et problem ved station fem.",
           },
           {
             icon: Calendar,
@@ -1406,7 +1406,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: RefreshCw,
             title: "Læg om uden at starte forfra",
             description:
-              "Et nedbrud eller en hasteordre kræver ikke en helt ny plan. Ret det stykke, det går ud over, og se med det samme, hvad det betyder.",
+              "Et nedbrud eller en hasteordre kræver ikke en helt ny plan. Ret den del af planen, det rammer, og se med det samme, hvad det betyder.",
           },
         ],
         visualTitle: "Én række pr. enhed, samlet under sin rute",
@@ -1536,7 +1536,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         primaryLabel: "Book en demo",
         introTitle: "Papirerne ved maskinen bliver forældede, uden at nogen opdager det",
         introBody:
-          "Instruktionerne ligger i en mappe ved maskinen, på et fællesdrev ingen stoler på, og i hovedet på den, der sidst stillede om. Når dokumenterne hænger på maskinen og ordren, åbner operatøren det, der gælder nu, og en ny version er på gulvet, så snart den er godkendt.",
+          "Instruktionerne ligger i en mappe ved maskinen, på et fællesdrev, ingen stoler på, og i hovedet på den, der sidst stillede om. Når dokumenterne hænger på maskinen og ordren, åbner operatøren det, der gælder nu, og en ny version er på gulvet, så snart den er godkendt.",
         capabilitiesTitle: "Papirerne følger arbejdet",
         features: [
           {

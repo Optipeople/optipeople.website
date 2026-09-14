@@ -492,7 +492,7 @@ const copy: Record<Locale, HomeCopy> = {
     hero: {
       variants: {
         product: {
-          heading: "Styr produktion og drift på live data",
+          heading: "Kør produktion og drift på live data",
           subheading: "Ét datagrundlag. Alle teams på de samme tal.",
         },
         category: {
@@ -744,7 +744,7 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
       "Connect machines, track OEE in real time, automate reporting, and give production teams the data they need to improve output and uptime.",
   },
   da: {
-    title: "OptiPeople | Styr driften på live data",
+    title: "OptiPeople | Kør driften på live data",
     description:
       "Kobl maskinerne på, følg produktionen i realtid, forbedr OEE, og gør tallene til handling.",
   },
