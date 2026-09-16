@@ -69,7 +69,7 @@ export const employees: Employee[] = [
   {
     slug: "mads-hauerslev",
     name: "Mads Hauerslev",
-    role: "BI Consultant",
+    role: "Client Solutions Consultant",
     email: "mh@optipeople.dk",
     team: "Business Intelligence",
     location: "Denmark",
@@ -79,7 +79,7 @@ export const employees: Employee[] = [
   },
   {
     slug: "marcus-eduard",
-    name: "Marcus Eduard",
+    name: "Marcus Eduard Jühne",
     role: "Sales Engineer",
     email: "me@optipeople.dk",
     team: "Sales",
