@@ -263,7 +263,7 @@ const copy: Record<Locale, HomeCopy> = {
       modulePrompt: "What do you want to run better?",
       moduleRows: [
         ["mes", "oee", "qms", "ems", "maintenance"],
-        ["planning", "iot", "documents", "ai-agents"],
+        ["orders", "planning", "iot", "documents", "ai-agents"],
       ],
     },
     tabsAriaLabel: "Team solutions",
@@ -507,7 +507,7 @@ const copy: Record<Locale, HomeCopy> = {
       modulePrompt: "Hvad vil du gøre bedre?",
       moduleRows: [
         ["mes", "oee", "qms", "ems", "maintenance"],
-        ["planning", "iot", "documents", "ai-agents"],
+        ["orders", "planning", "iot", "documents", "ai-agents"],
       ],
     },
     tabsAriaLabel: "Løsninger til teams",
