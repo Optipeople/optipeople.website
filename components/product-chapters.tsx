@@ -399,14 +399,11 @@ function IotChapter({ locale }: { locale: Locale }) {
       <div className="px-[var(--edge)]">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-8">
-            <p
-              className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-medium ring-1 ring-black/[0.06]"
-              style={{ color: "var(--green-dark3)" }}
-            >
-              <Cpu className="size-4" />
+            {/* The product's name as plain type, no pill or icon */}
+            <p className="text-xl font-medium tracking-tight" style={{ color: "var(--green-dark1)" }}>
               {t.eyebrow}
             </p>
-            <h2 className="mt-6 text-balance text-5xl font-normal leading-[1.02] tracking-[-0.035em] text-slate-950 sm:text-6xl lg:text-7xl">
+            <h2 className="mt-4 text-balance text-5xl font-normal leading-[1.02] tracking-[-0.035em] text-slate-950 sm:text-6xl lg:text-7xl">
               {t.tagline}
             </h2>
           </div>
@@ -656,11 +653,10 @@ function AssistChapter({ locale }: { locale: Locale }) {
 
   const heading = (
     <div className="text-center">
-      <p className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] px-3 py-1 text-sm font-medium text-white ring-1 ring-white/10">
-        <Sparkles className="size-4" style={{ color: "var(--green-light2)" }} />
+      <p className="text-xl font-medium tracking-tight" style={{ color: "var(--green-light2)" }}>
         {t.name}
       </p>
-      <h2 className="mx-auto mt-7 max-w-3xl text-balance text-5xl font-normal leading-[1.02] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">
+      <h2 className="mx-auto mt-4 max-w-3xl text-balance text-5xl font-normal leading-[1.02] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">
         {t.tagline}
       </h2>
       <p className="mx-auto mt-6 max-w-lg text-balance text-lg leading-relaxed text-white/70">
