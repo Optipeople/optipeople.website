@@ -44,3 +44,7 @@ next-env.d.ts
 
 # claude code (local-only settings)
 .claude/settings.local.json
+
+# SEO data pulls: the Google service account key and the raw exports
+/.secrets/
+/seo-data/
