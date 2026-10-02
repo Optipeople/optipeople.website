@@ -180,11 +180,12 @@ function MesChapter({ locale }: { locale: Locale }) {
   return (
     <section
       id="product-mes"
-      // overflow-clip, not overflow-hidden: hidden would make the section a
-      // scroll container, and the index rows' view() timeline would never
-      // move. Clip still cuts the screenshots off at the band's lower edge,
-      // and flow-root stops their negative margin collapsing through it.
-      className="flow-root overflow-clip pt-24 text-white sm:pt-28 lg:pt-36"
+      // The screenshots hang over the seam into the IoT band, so the section
+      // sits above it (relative z-10) and clips only sideways. overflow-x-clip,
+      // not overflow-hidden: hidden would make the section a scroll container,
+      // and the index rows' view() timeline would never move. flow-root stops
+      // the screenshots' negative margin collapsing through the section.
+      className="relative z-10 flow-root overflow-x-clip pt-24 text-white sm:pt-28 lg:pt-36"
       style={{ backgroundColor: DEEP }}
     >
       <div className="grid items-center gap-16 px-[var(--edge)] lg:grid-cols-12 lg:gap-12">
@@ -263,9 +264,11 @@ function MesChapter({ locale }: { locale: Locale }) {
       </div>
 
       {/* The real product, not a drawing: the planning timeline behind, the
-          OEE report in front, running off the bottom of the band. Crops of
-          the captures in public/images/Mockups, backdrop removed. */}
-      <div className="mt-20 -mb-[clamp(3rem,9vw,8rem)] px-[var(--edge)] lg:mt-28">
+          OEE report in front, straddling the seam between this band and the
+          next. The negative margin is the overlap, and the IoT band's top
+          padding makes room for it (same clamp in both places). Crops of the
+          captures in public/images/Mockups, backdrop removed. */}
+      <div className="mt-20 -mb-[clamp(5rem,16vw,15rem)] px-[var(--edge)] lg:mt-28">
         <div className="reveal relative mx-auto max-w-6xl pb-[14%]">
           <div className="w-[86%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_40px_90px_-40px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
             <Image
@@ -437,7 +440,11 @@ function IotChapter({ locale }: { locale: Locale }) {
   const t = IOT_COPY[locale]
 
   return (
-    <section id="product-iot" className="bg-[var(--gray-1)] py-24 sm:py-28 lg:py-36">
+    <section
+      id="product-iot"
+      // Top padding = the MES screenshots' overlap plus the usual gap.
+      className="bg-[var(--gray-1)] pb-24 pt-[calc(clamp(5rem,16vw,15rem)+5rem)] sm:pb-28 lg:pb-36 lg:pt-[calc(clamp(5rem,16vw,15rem)+7rem)]"
+    >
       <div className="px-[var(--edge)]">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-8">
