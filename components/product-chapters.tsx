@@ -16,6 +16,8 @@ import {
   Thermometer,
 } from "lucide-react"
 
+import Image from "next/image"
+
 import type { Locale } from "@/i18n/routing"
 import { Link } from "@/i18n/navigation"
 import { moduleCatalog } from "@/content/modules-catalog"
@@ -88,6 +90,8 @@ type MesCopy = {
   body: string
   gridLabel: string
   proof: { value: string; label: string; company: string; href: string }
+  /** Alt text for the two real screenshots under the index. */
+  shots: { timeline: string; oee: string }
   /** Live reading on each tile, keyed by module id. */
   readings: Record<string, string>
 }
@@ -98,6 +102,10 @@ const MES_COPY: Record<Locale, MesCopy> = {
     tagline: "Run the floor on facts. Start with one line.",
     body: "Orders, OEE, planning and machine data on one foundation. Add the next module when you need it, with or without your ERP.",
     gridLabel: "Nine modules. One data foundation.",
+    shots: {
+      timeline: "OptiPeople production timeline with work orders planned across each production route",
+      oee: "OptiPeople OEE report for CNC Drilling with availability, performance, OEE and the stops behind them",
+    },
     proof: {
       value: "−41%",
       label: "unnecessary stops",
@@ -121,6 +129,10 @@ const MES_COPY: Record<Locale, MesCopy> = {
     tagline: "Styr gulvet efter fakta. Start med én linje.",
     body: "Ordrer, OEE, planlægning og maskindata på samme fundament. Tag næste modul, når I har brug for det, med eller uden jeres ERP.",
     gridLabel: "Ni moduler. Ét datagrundlag.",
+    shots: {
+      timeline: "OptiPeoples produktionstidslinje med arbejdsordrer lagt ud på hver produktionsrute",
+      oee: "OptiPeoples OEE-rapport for CNC-boring med tilgængelighed, ydelse, OEE og stoppene bag tallene",
+    },
     proof: {
       value: "−41%",
       label: "unødvendige stop",
@@ -168,9 +180,11 @@ function MesChapter({ locale }: { locale: Locale }) {
   return (
     <section
       id="product-mes"
-      // No overflow-hidden here: it would make the section a scroll
-      // container, and the tiles' view() timeline would never move.
-      className="py-24 text-white sm:py-28 lg:py-36"
+      // overflow-clip, not overflow-hidden: hidden would make the section a
+      // scroll container, and the index rows' view() timeline would never
+      // move. Clip still cuts the screenshots off at the band's lower edge,
+      // and flow-root stops their negative margin collapsing through it.
+      className="flow-root overflow-clip pt-24 text-white sm:pt-28 lg:pt-36"
       style={{ backgroundColor: DEEP }}
     >
       <div className="grid items-center gap-16 px-[var(--edge)] lg:grid-cols-12 lg:gap-12">
@@ -245,6 +259,34 @@ function MesChapter({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ol>
+        </div>
+      </div>
+
+      {/* The real product, not a drawing: the planning timeline behind, the
+          OEE report in front, running off the bottom of the band. Crops of
+          the captures in public/images/Mockups, backdrop removed. */}
+      <div className="mt-20 -mb-[clamp(3rem,9vw,8rem)] px-[var(--edge)] lg:mt-28">
+        <div className="reveal relative mx-auto max-w-6xl pb-[14%]">
+          <div className="w-[86%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_40px_90px_-40px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
+            <Image
+              src="/images/Product/planning-timeline.png"
+              alt={t.shots.timeline}
+              width={1824}
+              height={1047}
+              sizes="(min-width: 1280px) 1000px, 86vw"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="absolute bottom-0 right-0 w-[58%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.95)] ring-1 ring-black/10">
+            <Image
+              src="/images/Product/oee-report.png"
+              alt={t.shots.oee}
+              width={2525}
+              height={1291}
+              sizes="(min-width: 1280px) 680px, 58vw"
+              className="h-auto w-full"
+            />
+          </div>
         </div>
       </div>
     </section>
