@@ -41,8 +41,8 @@ own. Setting them in a translation has no effect.
 
 A locale with no file of its own falls back to English rather than 404'ing, and
 the article body is then marked `lang="en"` so browsers, screen readers, and
-translation tools see the real language of the text. All 15 cases are
-translated to Danish; most `Insights` articles are not yet.
+translation tools see the real language of the text. Every post, cases and
+`Insights` alike, has a Danish translation.
 
 ## Adding a new post
 
