@@ -100,12 +100,12 @@ This means the production process has an overall efficiency of `65.8%`.
 
 | Week | Availability (%) | Performance (%) | Quality (%) | OEE (%) |
 | --- | ---: | ---: | ---: | ---: |
-| 1 | 92 | 85 | 98 | 74.6 |
-| 2 | 88 | 80 | 95 | 59.2 |
-| 3 | 93 | 87 | 99 | 79.2 |
-| 4 | 90 | 82 | 97 | 72.3 |
+| 1 | 92 | 85 | 98 | 76.6 |
+| 2 | 88 | 80 | 95 | 66.9 |
+| 3 | 93 | 87 | 99 | 80.1 |
+| 4 | 90 | 82 | 97 | 71.6 |
 
-In this example, the machine's OEE is highest in week 1 and lowest in week 2. Looking at the data makes it easier to identify whether availability, performance, or quality is affecting the result most.
+In this example, the machine's OEE is highest in week 3 and lowest in week 2. Looking at the data makes it easier to identify whether availability, performance, or quality is affecting the result most.
 
 ## Actions to Take Based on the Data
 
