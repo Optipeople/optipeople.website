@@ -139,7 +139,7 @@ type HomeCopy = {
   /** CTA on each module slide. "{module}" is replaced with the module name. */
   moduleCta: string
   ai: { ariaLabel: string }
-  /** One voice per customer; the first is set large. */
+  /** One quote per person (and Fiberline, quoted as a company); the first is set large. */
   testimonials: CustomerVoice[]
   testimonialTitle: string
   /** Link label on each testimonial card that has a matching case study. */
@@ -362,6 +362,13 @@ const copy: Record<Locale, HomeCopy> = {
       },
       {
         quote:
+          "OptiPeople Data Platform provides us with valuable management information that was previously unavailable. Our operators monitor uptime on tablets, which has encouraged quicker recovery times.",
+        author: "Kasper Kielgast Poulsen",
+        role: "Fabrikschef",
+        company: "Dansk Træemballage",
+      },
+      {
+        quote:
           "We now perform maintenance based on operating hours instead of fixed time intervals. This gives us ~40 extra production hours annually and 50% fewer service hours.",
         author: "Stefan Lindell",
         role: "Lean Project Manager",
@@ -543,6 +550,13 @@ const copy: Record<Locale, HomeCopy> = {
         author: "Tommy Andersen",
         role: "Production Manager",
         company: "DFI Geisler",
+      },
+      {
+        quote:
+          "OptiPeople Data Platform giver os ledelsesinformation, vi ikke havde før. Operatørerne følger oppetiden på tablets, og det har fået dem til at komme hurtigere i gang igen efter et stop.",
+        author: "Kasper Kielgast Poulsen",
+        role: "Fabrikschef",
+        company: "Dansk Træemballage",
       },
       {
         quote:

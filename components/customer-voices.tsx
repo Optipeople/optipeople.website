@@ -15,8 +15,8 @@ export type CustomerVoice = {
 /**
  * Customer quotes as an editorial spread rather than a carousel: the first
  * quote set large on its own, the rest beneath it in columns on a hairline.
- * No cards and no slider, the type carries it. One voice per customer, so
- * nobody is quoted twice on the page.
+ * No cards and no slider, the type carries it. One quote per person, so
+ * nobody is quoted twice in the section.
  */
 export function CustomerVoices({
   title,
@@ -52,20 +52,26 @@ export function CustomerVoices({
         </figure>
 
         {rest.length > 0 ? (
-          <div className="mt-16 grid border-t border-slate-900/10 md:grid-cols-2 lg:mt-20">
+          <div
+            className={`mt-16 grid border-t border-slate-900/10 lg:mt-20 ${
+              rest.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"
+            }`}
+          >
+            {/* Stacked on hairlines below lg; from lg one row of columns, a
+                hairline between each, sized to how many voices there are. */}
             {rest.map((voice, i) => (
               <figure
                 key={voice.company}
-                className={`flex flex-col pt-10 md:pt-12 ${
+                className={`flex flex-col pt-10 lg:pt-12 ${
                   i > 0
-                    ? "mt-10 border-t border-slate-900/10 md:mt-0 md:border-l md:border-t-0 md:pl-12"
-                    : "md:pr-12"
-                }`}
+                    ? "mt-10 border-t border-slate-900/10 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10"
+                    : ""
+                } ${i < rest.length - 1 ? "lg:pr-10" : ""}`}
               >
-                <blockquote className="text-xl leading-snug tracking-tight text-slate-900 lg:text-2xl">
+                <blockquote className="text-xl leading-snug tracking-tight text-slate-900 xl:text-2xl">
                   &ldquo;{voice.quote}&rdquo;
                 </blockquote>
-                <Attribution voice={voice} caseLabel={caseLabel} className="mt-auto pt-8" />
+                <Attribution voice={voice} caseLabel={caseLabel} stacked className="mt-auto pt-8" />
               </figure>
             ))}
           </div>
@@ -83,7 +89,7 @@ function Attribution({
 }: {
   voice: CustomerVoice
   caseLabel: string
-  /** Link under the name instead of across from it, for the featured quote. */
+  /** Link under the name instead of across from it. */
   stacked?: boolean
   className?: string
 }) {
@@ -97,12 +103,11 @@ function Attribution({
         <span className="block text-base font-medium text-slate-900">
           {voice.author ?? voice.company}
         </span>
-        {voice.author ? (
-          <span className="block text-sm text-slate-900/65">
-            {voice.role ? `${voice.role}, ` : ""}
-            {voice.company}
-          </span>
-        ) : null}
+        {/* A company-only quote keeps an empty second line, so names and
+            links stay level across the columns. */}
+        <span className="block text-sm text-slate-900/65">
+          {voice.author ? `${voice.role ? `${voice.role}, ` : ""}${voice.company}` : " "}
+        </span>
       </span>
       {voice.href ? (
         <Link
