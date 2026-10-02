@@ -404,7 +404,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
   const leftPct = (x: number) => `${(x / VB_W) * 100}%`
   const topPct = (y: number) => `${(y / VB_H) * 100}%`
 
-  const Label = ({
+  const renderLabel = ({
     id,
     x,
     y,
@@ -421,6 +421,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
     const isLight = BRAND[id].text === "light"
     return (
       <button
+        key={id}
         onClick={() => setActiveModule(id)}
         className={cn(
           "absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center leading-tight",
@@ -574,9 +575,9 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
             {/* HTML label overlay (positioned over each pentagon) */}
             <div className="absolute inset-0">
               {petals.map((p) => (
-                <Label key={p.id} id={p.id} x={p.labelX} y={p.cy} r={PETAL_R} />
+                renderLabel({ id: p.id, x: p.labelX, y: p.cy, r: PETAL_R })
               ))}
-              <Label id="opticloud" x={CENTER[0]} y={CENTER[1]} r={CENTER_R} isCenter />
+              {renderLabel({ id: "opticloud", x: CENTER[0], y: CENTER[1], r: CENTER_R, isCenter: true })}
             </div>
           </div>
 
