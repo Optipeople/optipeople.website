@@ -270,7 +270,7 @@ function MesChapter({ locale }: { locale: Locale }) {
           captures in public/images/Mockups, backdrop removed. */}
       <div className="mt-20 -mb-[clamp(5rem,16vw,15rem)] px-[var(--edge)] lg:mt-28">
         <div className="reveal relative mx-auto max-w-6xl pb-[14%]">
-          <div className="w-[86%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_40px_90px_-40px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
+          <div className="w-[86%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_24px_48px_-28px_rgba(0,0,0,0.45)] ring-1 ring-white/10">
             <Image
               src="/images/Product/planning-timeline.png"
               alt={t.shots.timeline}
@@ -280,7 +280,7 @@ function MesChapter({ locale }: { locale: Locale }) {
               className="h-auto w-full"
             />
           </div>
-          <div className="absolute bottom-0 right-0 w-[58%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.95)] ring-1 ring-black/10">
+          <div className="absolute bottom-0 right-0 w-[58%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] ring-1 ring-black/10">
             <Image
               src="/images/Product/oee-report.png"
               alt={t.shots.oee}
