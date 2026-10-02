@@ -5,6 +5,8 @@ import { AiStackPage } from "@/components/ai-stack-page"
 import { aiCapabilitySlugs, getAiCapability } from "@/lib/ai-stack"
 import { type Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>
@@ -38,6 +40,16 @@ export async function generateMetadata({ params }: Props) {
 export default async function AiCapabilityPage({ params }: Props) {
   const { locale, slug } = await params
   setRequestLocale(locale as Locale)
-  if (!getAiCapability(slug)) notFound()
-  return <AiStackPage slug={slug} locale={locale as Locale} />
+  const cap = getAiCapability(slug)
+  if (!cap) notFound()
+  // There is no /ai index page, so the trail goes straight from home.
+  const name = pageName(cap.content[locale as Locale].metaTitle)
+  return (
+    <>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [{ name, path: cap.href }])}
+      />
+      <AiStackPage slug={slug} locale={locale as Locale} />
+    </>
+  )
 }

@@ -8,6 +8,8 @@ import { customerLogos } from "@/lib/customers"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import { FramedImage } from "@/components/framed-image"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema } from "@/lib/structured-data"
 
 const copy: Record<
   Locale,
@@ -144,6 +146,14 @@ export default async function NewsletterPage({
 
   return (
     <main className="relative overflow-hidden">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          {
+            name: locale === "da" ? "OptiPeople nyhedsbrev" : "OptiPeople Newsletter",
+            path: "/newsletter",
+          },
+        ])}
+      />
       {/* Ambient background wash */}
       <div
         aria-hidden="true"

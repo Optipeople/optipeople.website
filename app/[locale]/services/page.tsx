@@ -5,6 +5,8 @@ import { LinkIndexPage } from "@/components/templates/link-index"
 import { getSimplePage } from "@/content/pages/simple"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 const PATH = "/services"
 type Props = { params: Promise<{ locale: string }> }
@@ -28,10 +30,17 @@ export default async function ServicesIndex({ params }: Props) {
   const page = getSimplePage(PATH, locale as Locale)
   if (!page) notFound()
   return (
-    <LinkIndexPage
-      page={page}
-      family="services"
-      locale={locale as Locale}
-    />
+    <>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(page.metaTitle), path: PATH },
+        ])}
+      />
+      <LinkIndexPage
+        page={page}
+        family="services"
+        locale={locale as Locale}
+      />
+    </>
   )
 }

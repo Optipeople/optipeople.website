@@ -5,6 +5,9 @@ import { FeaturePageTemplate } from "@/components/templates/feature-page"
 import { getFeature, featureSlugs } from "@/content/pages/features"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
+import { getSimplePage } from "@/content/pages/simple"
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -31,7 +34,18 @@ export default async function FeaturePage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const entry = getFeature(slug)
   if (!entry) notFound()
+  const c = entry.content[locale as Locale]
+  const modules = getSimplePage("/modules", locale as Locale)!
   return (
-    <FeaturePageTemplate page={entry.content[locale as Locale]} slug={entry.slug} />
+    <>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(modules.metaTitle), path: "/modules" },
+          { name: c.parentLabel, path: c.parentHref },
+          { name: pageName(c.metaTitle), path: entry.href },
+        ])}
+      />
+      <FeaturePageTemplate page={entry.content[locale as Locale]} slug={entry.slug} />
+    </>
   )
 }

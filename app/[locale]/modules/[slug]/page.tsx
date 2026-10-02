@@ -5,6 +5,9 @@ import { StandardPageTemplate } from "@/components/templates/standard-page"
 import { getModule, moduleSlugs } from "@/content/pages/modules"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, moduleSchema, pageName } from "@/lib/structured-data"
+import { getSimplePage } from "@/content/pages/simple"
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -31,11 +34,30 @@ export default async function ModulePage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const entry = getModule(slug)
   if (!entry) notFound()
+  const c = entry.content[locale as Locale]
+  const name = pageName(c.metaTitle)
+  const modules = getSimplePage("/modules", locale as Locale)!
   return (
-    <StandardPageTemplate
-      page={entry.content[locale as Locale]}
-      family="modules"
-      slug={entry.slug}
-    />
+    <>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(modules.metaTitle), path: "/modules" },
+          { name, path: entry.href },
+        ])}
+      />
+      <JsonLd
+        data={moduleSchema({
+          name,
+          description: c.metaDescription,
+          path: entry.href,
+          locale: locale as Locale,
+        })}
+      />
+      <StandardPageTemplate
+        page={entry.content[locale as Locale]}
+        family="modules"
+        slug={entry.slug}
+      />
+    </>
   )
 }

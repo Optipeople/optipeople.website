@@ -12,6 +12,8 @@ import {
 import { formatPostDate } from "@/lib/format-date"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema } from "@/lib/structured-data"
 
 type InsightsCopy = {
   eyebrow: string
@@ -195,6 +197,11 @@ export default async function InsightsPage({
 
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: locale === "da" ? "Viden og cases" : "Insights", path: "/insights" },
+        ])}
+      />
       {/* Neutral hero: the panels below hold the colour. */}
       <section className="bg-[var(--gray-1)] pb-16 pt-12 sm:pb-20 lg:pb-28 lg:pt-16">
         <div className="px-[var(--edge)]">

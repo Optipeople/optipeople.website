@@ -3,6 +3,8 @@ import { setRequestLocale } from "next-intl/server"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
 import { LegalShell } from "@/components/legal-shell"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 const PATH = "/privacy"
 type Props = { params: Promise<{ locale: string }> }
@@ -43,8 +45,14 @@ export default async function PrivacyPage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const l = locale as Locale
 
+  const m = meta[l]
   return (
     <LegalShell eyebrow={eyebrow[l]} title={heading[l]} locale={l}>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(m.title), path: PATH },
+        ])}
+      />
       {l === "da" ? (
         <>
           <p>

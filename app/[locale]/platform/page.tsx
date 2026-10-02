@@ -12,6 +12,8 @@ import { moduleIndexLinks } from "@/content/modules-catalog"
 import { getSurface, getThemeForHref } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import { FramedImage } from "@/components/framed-image"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName, platformSchema } from "@/lib/structured-data"
 
 type PageProps = { params: Promise<{ locale: string }> }
 
@@ -178,8 +180,15 @@ export default async function PlatformPage({ params }: PageProps) {
   // of them, and teal is the surface no single module family owns outright.
   const theme = getSurface("teal")
 
+  const m = metadataCopy[loc]
   return (
     <main className="min-h-screen">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(m.title), path: "/platform" },
+        ])}
+      />
+      <JsonLd data={platformSchema({ description: m.description, locale: loc })} />
       {/* Hero: the wide editorial statement the deep-dive pages open on,
           rather than the centred column this page used to lead with. */}
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">

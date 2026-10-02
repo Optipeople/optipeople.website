@@ -29,7 +29,7 @@ outcome: "Én produktionslinje, live oppetid på gulvet, og et OEE-løft på 5%.
 ```
 
 Translatable frontmatter: `title`, `author`, `image`, `customer`, `metric`,
-`metricLabel`, `quote`, `outcome`.
+`metricLabel`, `quote`, `outcome`, `updated`.
 
 `date`, `category`, and `draft` are deliberately **not** translatable.
 `lib/blog-data.ts` always reads them from the English source, so ordering, the
@@ -67,3 +67,18 @@ The slug then disappears from the blog and cases archives, the home page, the
 sitemap, and the prerendered routes, and `/blog/<slug>` returns 404 in every
 locale. Both language files stay in the repo, so removing the line publishes
 the story again. The Dansand case is hidden this way.
+
+## Structured data
+
+Every post emits schema.org JSON-LD from `lib/structured-data.ts`, so search and
+answer engines can read it. Three frontmatter details feed it:
+
+- `author`: a person's name becomes a `Person` author. The default
+  `"OptiPeople Team"` is credited to the company instead.
+- `updated`: an ISO date (`"2025-03-04"`) for the last real revision. It sets
+  `dateModified` and shows as "updated …" in the byline. Without it,
+  `dateModified` equals `date`. A translation can set its own.
+- A question-and-answer section becomes `FAQPage` markup: an `## FAQ` heading
+  (or `## Frequently asked questions`, `## Ofte stillede spørgsmål`,
+  `## Spørgsmål og svar`), each question as an `###` heading and its answer as
+  the text below it. The section ends at the next `##` heading.

@@ -9,6 +9,8 @@ export type BlogPost = {
   title: string
   content: string
   date: string
+  /** Last substantive revision, from `updated` in the frontmatter. */
+  updated?: string
   author: string
   category: string
   image?: string
@@ -174,6 +176,7 @@ function parsePost(slug: string, locale: Locale): BlogPost | undefined {
     content,
     date: asString(source.data.date),
     category: asString(source.data.category),
+    updated: asString(data.updated) || undefined,
     author: asString(data.author),
     image: resolveImagePath(data.image),
     summary: createSummary(content, title),

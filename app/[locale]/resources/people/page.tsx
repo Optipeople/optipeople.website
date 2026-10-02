@@ -8,6 +8,8 @@ import { generalEmail } from "@/lib/contact"
 import { employees } from "@/lib/employees"
 import { getSurface, rotateSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 type PageProps = { params: Promise<{ locale: string }> }
 
@@ -178,6 +180,11 @@ export default async function PeoplePage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(t.meta.title), path: "/resources/people" },
+        ])}
+      />
       {/* Hero on the tint, which fades out before the first photograph. */}
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-20 lg:pt-20">
         <div

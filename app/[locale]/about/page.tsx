@@ -6,6 +6,8 @@ import { Link } from "@/i18n/navigation"
 import { employees } from "@/lib/employees"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 type PageProps = { params: Promise<{ locale: string }> }
 
@@ -180,6 +182,11 @@ export default async function AboutPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(t.meta.title), path: "/about" },
+        ])}
+      />
       {/* Hero */}
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">
         <div

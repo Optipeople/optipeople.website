@@ -4,6 +4,8 @@ import { PostArchive } from "@/components/post-archive"
 import { getPostsByCategory } from "@/lib/blog-data"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -90,25 +92,32 @@ export default async function BlogPage({ params, searchParams }: Props) {
   const prefix = locale === "da" ? "/da" : ""
 
   return (
-    <PostArchive
-      posts={posts}
-      basePath={`${prefix}/blog`}
-      postBasePath={`${prefix}/blog`}
-      backHref={`${prefix}/insights`}
-      backLabel={t.backLabel}
-      eyebrow={t.eyebrow}
-      title={t.title}
-      subtitle={t.subtitle}
-      countLabel={t.countLabel(posts.length)}
-      listLabel={t.listLabel}
-      locale={locale}
-      emptyTitle={t.emptyTitle}
-      emptyBody={t.emptyBody}
-      ctaLabel={t.ctaLabel}
-      currentPage={currentPage}
-      paginationLabel={t.paginationLabel}
-      previousLabel={t.previousLabel}
-      nextLabel={t.nextLabel}
-    />
+    <>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(t.metaTitle), path: "/blog" },
+        ])}
+      />
+      <PostArchive
+        posts={posts}
+        basePath={`${prefix}/blog`}
+        postBasePath={`${prefix}/blog`}
+        backHref={`${prefix}/insights`}
+        backLabel={t.backLabel}
+        eyebrow={t.eyebrow}
+        title={t.title}
+        subtitle={t.subtitle}
+        countLabel={t.countLabel(posts.length)}
+        listLabel={t.listLabel}
+        locale={locale}
+        emptyTitle={t.emptyTitle}
+        emptyBody={t.emptyBody}
+        ctaLabel={t.ctaLabel}
+        currentPage={currentPage}
+        paginationLabel={t.paginationLabel}
+        previousLabel={t.previousLabel}
+        nextLabel={t.nextLabel}
+      />
+    </>
   )
 }
