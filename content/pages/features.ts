@@ -86,52 +86,52 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Produktionseffektivitet | OptiPeople",
         metaDescription:
-          "Følg OEE i realtid, se hvor produktionstiden går tabt, og se hvordan det går på tværs af skift, linjer og maskiner.",
+          "Følg OEE, mens produktionen kører. Se, hvor tiden går tabt, og hvordan skift, linjer og maskiner klarer sig.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Produktionseffektivitet",
-        heroTitle: "Se hvor produktionstiden går tabt",
+        heroTitle: "Se, hvor produktionstiden går tabt",
         heroBody:
-          "Følg OEE live, og se hvordan det går på tværs af skift, linjer og maskiner. Det bygger på rigtige tal fra produktionen, ikke på fornemmelser.",
+          "Følg OEE live, og se, hvordan hvert skift, hver linje og hver maskine klarer sig. Tallene kommer fra produktionen selv, ikke fra mavefornemmelser.",
         heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         heroImageAlt: "OptiPeople effektivitetsrapport med tilgængelighed, ydelse og OEE mod målet",
-        valueTitle: "Jeres tal skal arbejde lige så hårdt som jeres folk",
+        valueTitle: "Tallene nytter mest, mens skiftet stadig kører",
         valueBody:
-          "Bliver tallene først samlet, når dagen er slut, er det for sent at gøre noget ved dem. Her kan I se, hvordan det går lige nu, mens I stadig kan nå at rette op.",
+          "De fleste fabrikker stykker stadig tallene sammen fra overleveringssedler, regneark og dagsrapporter. Når nogen endelig ser dem, er det for sent at gøre noget. Her ser I, hvordan det går lige nu, mens I stadig kan nå at rette op.",
         capabilitiesTitle: "Fra maskinsignal til noget, I kan bruge",
         capabilitiesBody:
-          "Hver maskine fortæller noget. Vi laver det om til tal, tidslinjer og sammenligninger, teamet kan handle på.",
+          "Hver maskine har noget at fortælle. Vi laver det om til tal, tidslinjer og sammenligninger, I kan bruge til noget.",
         capabilities: [
           {
-            title: "Live OEE i ét overblik",
+            title: "OEE live på én skærm",
             description:
-              "Tilgængelighed, ydelse og kvalitet bliver regnet ud af maskinernes egne signaler og opdateret, mens produktionen kører.",
+              "Tilgængelighed, ydelse og kvalitet bliver regnet ud fra maskinernes egne signaler og opdateret, mens produktionen kører. Ingen regneark, og ingen venten på skiftrapporten.",
             image: "/images/report-mockup1.png",
             imageAlt: "OEE-dashboard",
           },
           {
-            title: "Se hvad der skete, time for time",
+            title: "Se, hvad der skete, time for time",
             description:
-              "Farvekodede tidslinjer viser, hvornår hver maskine kørte, stod stille, blev stillet om eller ventede.",
+              "Farvekodede tidslinjer viser, hvornår hver maskine kørte, stod stille, blev stillet om eller ventede. Så ser I også de 20 minutter til omstilling hver morgen, som ingen taler om.",
             image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
             imageAlt: "Tidslinje med kørsel, stop, omstilling og tomgang hen over et helt skift",
           },
           {
             title: "Sammenlign skift, linjer og maskiner",
             description:
-              "Se tallene side om side. Så bliver det tydeligt, hvor forskellene er, og hvad der er værd at gøre efter.",
+              "Se tallene side om side: hvilke skift der klarer sig bedst, hvilke linjer der halter, og hvor afstanden mellem bedst og dårligst er størst.",
             image: "/images/report-mockup2.png",
             imageAlt: "Rapport med sammenligning af skift",
           },
         ],
         showcaseTitle: "Hele billedet, fra gulvet til ledelsen",
         showcaseBody:
-          "Operatøren ser sin maskine. Teamlederen ser sin linje. Ledelsen ser fabrikken. De samme tal, bare i det niveau, man har brug for.",
+          "Operatøren ser sin maskine. Teamlederen ser sin linje. Ledelsen ser fabrikken. Det er de samme tal, bare i den detaljegrad, hver især har brug for.",
         showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
         showcaseAlt: "Rapport med producerede og kasserede emner samt output pr. time",
         metrics: [
           { metric: "15-25%", label: "Bedre OEE det første år" },
-          { metric: "2 timer", label: "Sparet på rapportering hver dag" },
+          { metric: "2 timer", label: "Sparet på rapportering om dagen" },
           { metric: "< 1 min", label: "Fra det sker på maskinen, til det står på skærmen" },
         ],
         related: [
@@ -238,58 +238,58 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Stopårsager | OptiPeople",
         metaDescription:
-          "Gør nedetiden synlig, dér hvor den sker. Operatøren registrerer stoppet direkte på maskinen.",
+          "Få styr på nedetiden ude ved maskinen. Operatøren registrerer stoppet med det samme, så I får tal, I kan bruge.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Stopårsager",
-        heroTitle: "Gør nedetiden synlig, dér hvor den sker",
+        heroTitle: "Få styr på nedetiden ude ved maskinen",
         heroBody:
-          "Operatøren registrerer stoppet direkte på maskinen, mens det stadig står klart, hvad der skete. Så har I rene tal, der er til at handle på.",
+          "Operatøren registrerer stoppet direkte på maskinen, mens det stadig står klart, hvad der skete. Så får I tal, der er til at stole på og til at gøre noget ved.",
         heroImage: "/images/Stop-Screen-Select.png",
         heroImageAlt: "Skærm til valg af stopårsag",
-        valueTitle: "I kan ikke lave om på det, I ikke kan se",
+        valueTitle: "Det, I ikke kan se, kan I ikke rette",
         valueBody:
-          "Uden ordentlige stopdata bliver forbedringer styret af fornemmelser. Her bliver hvert stop registreret: hvad der skete, hvorfor, og hvor længe det varede.",
+          "Meget nedetid bliver aldrig skrevet ned, eller den havner bagefter i en uklar kategori. Så bygger forbedringerne på mavefornemmelser. Her bliver hvert stop registreret: hvad der skete, hvorfor, og hvor længe det varede. Så ved I, hvor I skal sætte ind.",
         capabilitiesTitle: "Fra maskinstop til brugbare tal på få sekunder",
         capabilitiesBody:
-          "Ét enkelt forløb, der gør hvert stop til noget, produktionen kan lære af.",
+          "Tre trin, og hvert stop bliver til noget, I kan lære af.",
         capabilities: [
           {
             title: "Maskinen melder stop med det samme",
             description:
-              "Når maskinen stopper, bliver operatøren bedt om at sætte en årsag på med det samme.",
+              "Når maskinen stopper, bliver operatørpanelet rødt med det samme. Operatøren trykker på skærmen og registrerer stoppet, mens det stadig står klart, hvad der skete.",
             image: "/images/Stop-Screen-Red.png",
             imageAlt: "Rød stopskærm",
           },
           {
             title: "Hvert stop får en årsag",
             description:
-              "Operatøren vælger fra en liste, der passer til lige den maskine. Så bliver tallene til at regne på bagefter.",
+              "Operatøren vælger årsagen fra en fast liste, der passer til lige den maskine: omstilling, værktøjsskift, venter på materiale, fejl. Så kan I regne på tallene bagefter i stedet for at tyde fritekst.",
             image: "/images/operatorpanel2.png",
             imageAlt: "Stoplog på operatørpanel",
           },
           {
             title: "Hele skiftet på én tidslinje",
             description:
-              "Tidslinjen viser stoppene, hvor længe de varede, og hvad der går igen på tværs af skift og maskiner.",
+              "Tidslinjen viser hvert stop, hvor længe det varede, og hvad der går igen fra skift til skift og fra maskine til maskine.",
             image: "/images/Stop-Screen-Timeline.png",
             imageAlt: "Tidslinje over stop",
           },
         ],
-        showcaseTitle: "Stopdata bliver til det store billede",
+        showcaseTitle: "Stoppene hænger sammen med resten af tallene",
         showcaseBody:
-          "Hver registrering går videre til produktionsdashboardet, så I ser tallene og årsagerne samlet ét sted.",
+          "Hvert registreret stop lander i produktionsdashboardet, så I ser tallene og forklaringen bag dem side om side.",
         showcaseImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
         showcaseAlt: "Dashboard med stopdata",
         metrics: [
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
-          { metric: "95%+", label: "Af stoppene bliver forklaret" },
-          { metric: "< 10s", label: "Til at registrere et stop" },
+          { metric: "95%+", label: "Af stoppene får en årsag" },
+          { metric: "< 10s", label: "Om at registrere et stop" },
         ],
         related: [
           {
             title: "Produktionseffektivitet",
-            description: "Følg OEE live på tværs af produktionen.",
+            description: "Følg OEE live på alle skift, linjer og maskiner.",
             href: "/features/production-efficiency",
           },
           {
@@ -384,13 +384,13 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Vedligehold og opgaver | OptiPeople",
         metaDescription:
-          "Planlæg og udfør vedligehold efter, hvor meget maskinen har kørt, hvordan den har det, og hvad der allerede er lavet.",
+          "Planlæg vedligehold efter, hvor meget maskinen har kørt, og hvordan den har det. Fordel opgaverne, følg dem til dørs, og få færre uplanlagte stop.",
         parentLabel: "Vedligehold",
         parentHref: "/modules/maintenance",
         eyebrow: "Vedligehold og opgaver",
         heroTitle: "Løs det, før det bryder ned",
         heroBody:
-          "Opret opgaver, sæt navn på dem, og planlæg service efter, hvor meget maskinen faktisk har kørt.",
+          "Planlæg vedligehold efter, hvor meget maskinen faktisk har kørt, og hvordan den har det. Fordel opgaverne, se dem blive lavet, og slip for at slukke ildebrande.",
         heroImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
         heroImageAlt:
           "Opgavestyring med vedligeholdsopgaver, der udløses af tællere og driftstimer, ved siden af de lister, de trækker på",
@@ -399,12 +399,12 @@ const features: LocalizedPage<FeaturePage>[] = [
           "Et uplanlagt stop koster mere: tabt produktion, hasteordrer på reservedele og en plan, der vælter. Når driftstimer, alarmer og opgaver ligger samme sted, kan teknikerne tage det vigtigste først, i stedet for at stole på et regneark og hukommelsen.",
         capabilitiesTitle: "Fra signal til færdig opgave",
         capabilitiesBody:
-          "Vedligeholdet hænger sammen med maskindata, planlægning og det arbejde, der bliver lavet.",
+          "Det starter ved maskinen og slutter med en reparation, der er tjekket. Uden papir og uden gætteri.",
         capabilities: [
           {
-            title: "Efter brug, ikke kalenderen",
+            title: "Efter brug, ikke efter kalenderen",
             description:
-              "Planlæg service efter driftstimer og antal cyklusser. Når grænsen er nået, dukker opgaven op af sig selv, ikke fordi der står en dato i kalenderen.",
+              "Planlæg service efter driftstimer og antal cyklusser. Når grænsen er nået, dukker opgaven op af sig selv. Så laver I vedligehold på det, der trænger, når det trænger.",
             image: "/images/Mockups/Tasls-Maintenance.png",
             imageAlt:
               "Opgavelisten med vedligehold planlagt efter tællere og driftstimer",
@@ -412,14 +412,14 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Opgaverne på mobilen",
             description:
-              "Teknikeren ser opgaven, noterne og status dér, hvor arbejdet bliver lavet.",
+              "Teknikeren ser opgaven, noterne og den tid, der er tilbage, dér hvor arbejdet bliver lavet. Ingen whiteboards og ingen glemte opfølgninger.",
             image: "/images/taskapp1.png",
             imageAlt: "Opgaverne på telefonen med resttid pr. opgave",
           },
           {
             title: "Historik pr. maskine",
             description:
-              "Se hvad der før er lavet på maskinen, og hvilke fejl der bliver ved med at komme igen.",
+              "Se, hvad der før er lavet på maskinen, og hvilke fejl der bliver ved med at komme igen.",
             image: "/images/backoffice1.png",
             imageAlt: "Backoffice-historik",
           },
@@ -538,7 +538,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroImageAlt: "Kvalitetsstyring",
         valueTitle: "Jo senere I opdager fejlen, jo dyrere bliver den",
         valueBody:
-          "Ligger kvalitetsdata i papirskemaer og spredte systemer, opdager I afvigelsen for sent, batchen er kørt, og skaden er sket. Her bliver hver afvigelse registreret med det samme, og koblet til maskinen, skiftet og det, der gik forud.",
+          "Ligger kvalitetsdata i papirskemaer og spredte systemer, opdager I afvigelsen for sent: batchen er kørt, og skaden er sket. Her bliver hver afvigelse registreret med det samme og koblet til maskinen, skiftet og det, der gik forud.",
         capabilitiesTitle: "Fra hændelse på gulvet til et spor, I kan følge",
         capabilitiesBody:
           "Hver registrering hænger sammen med maskine, produkt, operatør og skift.",
@@ -671,21 +671,21 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Analyse og rapportering | OptiPeople",
         metaDescription:
-          "Gør produktionsdata til rapporter, folk kan læse: hvordan det går, hvor tiden går tabt, og hvad det koster.",
+          "Få rapporter, folk kan læse: hvordan det går, hvor tiden går tabt, og hvad det koster. Uden regneark og uden håndarbejde.",
         parentLabel: "Analyse",
         parentHref: "/modules/analysis",
         eyebrow: "Analyse og rapportering",
         heroTitle: "Rapporterne skriver sig selv",
         heroBody:
-          "Lad rapporterne lave sig selv, og få svar på, hvordan det går, hvor tiden går tabt, og hvad der koster mest.",
+          "Få klare svar på, hvordan det går, hvor tiden går tabt, og hvad der koster mest. Uden regneark, og uden at nogen skal trække tallene i hånden.",
         heroImage: "/images/report-mockup1.png",
         heroImageAlt: "Rapportering",
-        valueTitle: "En rapport skal være et arbejdsredskab",
+        valueTitle: "Tallene findes allerede. De skal bare stilles op",
         valueBody:
-          "Når rapporten er koblet til driften og opdaterer sig selv, bliver den en del af forbedringsarbejdet i stedet for et tilbageblik en gang om måneden.",
+          "Maskinerne laver tusindvis af målinger hver dag. Men kræver det en person, et regneark og en halv formiddag at få en rapport ud af dem, bliver tallene liggende. OptiPeople laver rapporterne af sig selv, ens hver gang og klar, når I er.",
         capabilitiesTitle: "Fra rå tal til den rapport, I skal bruge",
         capabilitiesBody:
-          "Fra tal, der opdaterer sig selv, til de dybe analyser. Samme data, forskellige spørgsmål.",
+          "Alle rapporter bygger på de samme live tal. Ingen indtastning, ingen kopiering og ingen tvivl om, hvilken version der gælder.",
         capabilities: [
           {
             title: "Rapporter, der laver sig selv",
@@ -809,18 +809,18 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Energi og målinger | OptiPeople",
         metaDescription:
-          "Kobl energi, vibration, flow og temperatur sammen med det, maskinerne producerer.",
+          "Kobl energi, vibration, flow og temperatur sammen med produktionen, og find spildet og det, der stikker ud.",
         parentLabel: "EMS",
         parentHref: "/modules/energy",
         eyebrow: "Energi og målinger",
-        heroTitle: "Se hvad maskinerne bruger, og hvad de fortæller",
+        heroTitle: "Se, hvad maskinerne bruger, og hvad de fortæller",
         heroBody:
           "Kobl energimålere og sensorer sammen med produktionen, så spild, slid og det, der stikker ud, bliver til at få øje på.",
         heroImage: "/images/report-mockrup-3.png",
         heroImageAlt: "Energi og målinger",
-        valueTitle: "En måling siger først noget, når produktionen står ved siden af",
+        valueTitle: "Energi og maskinernes tilstand uden et ekstra system",
         valueBody:
-          "Når målingerne bliver holdt op mod maskinstatus, produkter og skift, kan teamet se forskel på almindelige udsving og et rigtigt problem.",
+          "Mange fabrikker følger energien i ét system, produktionen i et andet og maskinernes tilstand i et tredje, hvis overhovedet. Så kan ingen se, hvad der hænger sammen med hvad. I OptiPeople ligger målingerne sammen med produktionstallene, så I kan se forskel på almindelige udsving og et rigtigt problem.",
         capabilitiesTitle: "Målinger med produktionen ved siden af",
         capabilitiesBody:
           "Energi og sensortal ligger i det samme billede som OEE og stop.",
@@ -857,7 +857,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           },
           {
             title: "AI og copiloter",
-            description: "Find mønstre i sensordata med AI.",
+            description: "Lad AI finde mønstrene i sensordata.",
             href: "/features/ai-and-copilots",
           },
           {
@@ -947,39 +947,39 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "AI og copiloter | OptiPeople",
         metaDescription:
-          "Stil spørgsmål, find mønstre og få hjælp til beslutningerne af en AI, der kender jeres produktionsdata.",
+          "Stil spørgsmål til jeres egne produktionsdata, find mønstrene, og få noget at beslutte ud fra.",
         parentLabel: "AI-agenter",
         parentHref: "/ai/agents",
         eyebrow: "AI og copiloter",
         heroTitle: "AI, der kender jeres fabrik",
         heroBody:
-          "Stil spørgsmål, find mønstre, og lad en AI, der kender jeres maskiner, jeres skift og jeres historik, hjælpe med beslutningerne.",
+          "Spørg løs, og få svar fra en AI, der kender jeres maskiner, jeres skift og jeres historik. Den finder mønstrene og hjælper jer med at beslutte.",
         heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         heroImageAlt: "Live effektivitetsrapport, som AI-assistenten svarer ud fra",
         valueTitle: "Selv den bedste analytiker kan ikke se det hele på én gang",
         valueBody:
-          "AI kan holde øje med store mængder data, fange de små signaler og pege på det, der skal gøres noget ved.",
+          "Produktionen laver flere data, end noget menneske kan nå at kigge igennem. Det vigtige drukner: en cyklustid, der langsomt kryber op, en sammenhæng mellem luftfugtighed og kassation, et skift, der stille og roligt klarer sig bedre. AI'en bliver ikke træt. Den holder øje med det hele, hele tiden, og siger til, når der er noget.",
         capabilitiesTitle: "AI, I kan tjekke efter",
         capabilitiesBody:
           "Hvert forslag kan følges tilbage til de tal, det bygger på. Ingen sort boks.",
         capabilities: [
           {
             title: "Spørg jeres data",
-            description: "Stil spørgsmålet i almindeligt sprog, og få svaret med tallene bag.",
+            description: "Skriv spørgsmålet med almindelige ord, f.eks. »Hvad gav mest nedetid i sidste uge?«, og få svaret med tallene bag.",
             image: "/images/report1.png",
             imageAlt: "Rapport til AI-analyse",
           },
           {
             title: "Mønstre, mennesker overser",
             description:
-              "Find sammenhænge mellem cyklustid, energi, kassation og nedetid på tværs af kilder.",
+              "Den finder sammenhænge mellem cyklustid, energi, kassation og nedetid, som ingen ville opdage ved at gå tallene igennem i hånden. Og den siger til, før det bliver et problem.",
             image: "/images/Mockups/Report-Individual-Events-Desktop.png",
             imageAlt: "Rapport med de gentagne stopårsager, mønstrene bygger på",
           },
           {
             title: "Beslutninger med belæg",
             description:
-              "Hvert forslag linker tilbage til de tal og tidslinjer, det bygger på.",
+              "Når AI'en peger på en maskine eller et skift, kan I klikke jer ned i de tal og den tidslinje, forslaget bygger på.",
             image: "/images/Mockups/Report-Production-Counters-Desktop.png",
             imageAlt: "Dashboard med tallene bag",
           },
@@ -1091,18 +1091,18 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Maskinstyring | OptiPeople",
         metaDescription:
-          "Kobl jer på maskinstyringen: login ved maskinen, besked med det samme og kortere vej mellem system og gulv.",
+          "Kobl OptiPeople på maskinstyringen. Operatøren logger ind ved maskinen, får besked med det samme, og systemet passer med det, der sker på gulvet.",
         parentLabel: "IoT",
         parentHref: "/modules/iot",
         eyebrow: "Maskinstyring",
         heroTitle: "Få system og gulv til at følges ad",
         heroBody:
-          "Kobl jer på maskinstyringen, så operatøren kan logge ind ved maskinen, få besked med det samme og arbejde tættere på systemet.",
+          "Kobl OptiPeople på maskinstyringen. Så logger operatøren ind ved maskinen, får besked med det samme, og det, der står i systemet, passer med det, der sker på gulvet.",
         heroImage: "/images/Start-Machine.png",
         heroImageAlt: "Maskinstyringspanel",
-        valueTitle: "Data starter ved maskinen. Det bør styringen også.",
+        valueTitle: "Når data kommer fra maskinen, skal styringen også sidde der",
         valueBody:
-          "Når systemet og maskinstyringen lever hver for sig, opstår der huller. Vi kobler dem sammen, så det digitale og den fysiske fabrik følges ad.",
+          "Når systemet og maskinstyringen lever hver for sig, opstår der huller. Operatøren får ingen besked, hændelser bliver ikke registreret, og start- og stoptider passer ikke med virkeligheden. OptiPeople kobler sig direkte på maskinstyringen, så systemet og fabrikken følges ad.",
         capabilitiesTitle: "Fra maskinsignal til operatør og tilbage igen",
         capabilitiesBody:
           "En forbindelse, der går begge veje, mellem produktionssystemet og maskinerne på gulvet.",
@@ -1110,23 +1110,23 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Sikkert login ved maskinen",
             description:
-              "Operatøren logger ind ude ved maskinen, så det fra skiftets start er tydeligt, hvem der kørte hvad.",
+              "Operatøren logger ind ved maskinen med sin egen nøgle, før produktionen starter. Så ved I fra skiftets første minut, hvem der kører hvad, hvornår og på hvilken maskine.",
             image: "/images/Login-Machine-Key.png",
             imageAlt: "Maskinlogin",
           },
           {
             title: "Start, stop og status",
             description:
-              "Operatøren kan se, om alt er klar, før produktionen går i gang.",
+              "Operatøren starter og stopper maskinen direkte fra panelet. Systemet tjekker først, at maskinen er klar, og at operatøren er logget ind. Ét tryk, og det hele bliver registreret.",
             image: "/images/Start-Machine.png",
             imageAlt: "Start maskine",
           },
           {
             title: "Besked med det samme",
             description:
-              "Maskinstatus og alarmer går direkte ud på gulvet, når noget ændrer sig.",
+              "Grønt betyder, at alt er i orden. Når noget ændrer sig, f.eks. en sensor over grænsen, en kvalitetsalarm eller et serviceinterval, der er nået, ser operatøren det med det samme.",
             image: "/images/Everything-is-okay.png",
-            imageAlt: "Alt er ok skærm",
+            imageAlt: "Operatørpanel, der viser, at alt er i orden",
           },
         ],
         showcaseTitle: "Det rutetrin, der kører, og filerne, der hører til",
