@@ -94,7 +94,7 @@ const copy: Record<
       "Vi bygger software, kobler systemerne sammen og hjælper jer med at træffe bedre beslutninger ud fra tallene. Både på gulvet og i ledelsen.",
     missionHeading: "Vi fylder hullet mellem gulvet og ERP",
     missionBody:
-      "På de fleste fabrikker laver maskinerne data, og ERP-systemet har brug for dem. Men imellem de to er der ikke noget, der hjælper. Det hul fylder vi. OptiPeople Data Platform samler data op fra produktionen, mens den kører, og viser dem til operatører og ledere, så de kan handle på dem. Det giver bedre ydelse, mindre spild og færre stop.",
+      "På de fleste fabrikker laver maskinerne data, og ERP-systemet har brug for dem. Men imellem de to er der ikke noget, der hjælper. Det hul fylder vi. OptiPeople Data Platform samler data op fra produktionen, mens den kører, og viser dem til operatører og ledere, så de kan gøre noget ved det, mens det stadig betyder noget. Det giver bedre ydelse, mindre spild og færre stop.",
     valuesHeading: "Sådan arbejder vi",
     teamHeading: "Holdet",
     values: [

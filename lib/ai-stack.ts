@@ -299,7 +299,7 @@ export const aiCapabilities: AiCapability[] = [
         eyebrow: "Workflows",
         heroTitle: "Lad rutinerne køre af sig selv",
         heroBody:
-          "Når der sker noget i produktionen, kan et workflow gå i gang af sig selv. En linje står stille, et skift slutter, et dokument lander i indbakken. Så henter workflowet de tal, der skal bruges, lader AI klare det, den er god til, og sender resultatet videre til dem, der skal handle på det. I sætter trinnene sammen på en skærm og trækker linjer imellem dem. Der skal ikke skrives kode.",
+          "Når der sker noget i produktionen, kan et workflow gå i gang af sig selv. En linje står stille, et skift slutter, et dokument lander i indbakken. Så henter workflowet de tal, der skal bruges, lader AI klare det, den er god til, og sender resultatet videre til dem, der skal gøre noget ved det. I sætter trinnene sammen på en skærm og trækker linjer imellem dem. Der skal ikke skrives kode.",
         valueTitle: "Det, I gør hver dag, kan køre af sig selv",
         valueBody:
           "Meget af arbejdet i en drift gentager sig. En maskine stopper, en rapport skal skrives, en opgave skal oprettes, og nogen skal have besked. I dag kører det på vaner og hukommelse, og på et travlt skift betyder det for sent eller slet ikke. Med et workflow sætter I fremgangsmåden op én gang, og så sker den hver gang: tallene hentes i OptiPeople Data Platform, AI skriver sammendraget eller sætter stoppet i den rigtige kasse, og resultatet ryger videre til de folk og systemer, der skal bruge det. Beslutningerne bliver hos jer. Rutinen tager workflowet.",

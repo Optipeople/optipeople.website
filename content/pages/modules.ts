@@ -484,7 +484,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Forebyg og forudsig",
             description:
-              "Gå fra brandslukning til planlagt vedligehold. Hvor maskinsignalerne er gode nok, kan I gå et skridt videre og handle på en målt udvikling, før noget bryder ned. Færre nedbrud, længere levetid og en lavere regning.",
+              "Gå fra brandslukning til planlagt vedligehold. Hvor maskinsignalerne er gode nok, kan I gå et skridt videre og gribe ind, når målingerne begynder at skride, før noget bryder ned. Færre nedbrud, længere levetid og en lavere regning.",
           },
         ],
       },
