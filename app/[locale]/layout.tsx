@@ -10,6 +10,7 @@ import { LocalizedCallToAction } from "@/components/localized-call-to-action";
 import { NewsletterPrompt } from "@/components/newsletter-prompt";
 import { routing, type Locale } from "@/i18n/routing";
 import { generalEmail } from "@/lib/contact";
+import { isIndexableDeploy } from "@/lib/indexing";
 import { absoluteUrl, siteName, siteUrl } from "@/lib/seo";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -39,6 +40,8 @@ export const metadata: Metadata = {
   title: "OptiPeople | Run manufacturing and operations on live data",
   description:
     "One data foundation for the whole factory. Connect your machines, follow OEE live, and put every team on the same numbers, from the floor to management.",
+  // Preview deploys stay out of search. Production leaves robots unset.
+  ...(!isIndexableDeploy && { robots: { index: false, follow: false } }),
 };
 
 export function generateStaticParams() {
