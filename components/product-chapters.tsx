@@ -104,7 +104,7 @@ const MES_COPY: Record<Locale, MesCopy> = {
     gridLabel: "Nine modules. One data foundation.",
     shots: {
       timeline: "OptiPeople production timeline with work orders planned across each production route",
-      oee: "OptiPeople OEE report for CNC Drilling with availability, performance, OEE and the stops behind them",
+      oee: "OptiPeople MES report for CNC Drilling with availability over time, OEE, performance and quality",
     },
     proof: {
       value: "−41%",
@@ -131,7 +131,7 @@ const MES_COPY: Record<Locale, MesCopy> = {
     gridLabel: "Ni moduler. Ét datagrundlag.",
     shots: {
       timeline: "OptiPeoples produktionstidslinje med arbejdsordrer lagt ud på hver produktionsrute",
-      oee: "OptiPeoples OEE-rapport for CNC-boring med tilgængelighed, ydelse, OEE og stoppene bag tallene",
+      oee: "OptiPeoples MES-rapport for CNC-boring med tilgængelighed over tid, OEE, ydelse og kvalitet",
     },
     proof: {
       value: "−41%",
@@ -264,7 +264,7 @@ function MesChapter({ locale }: { locale: Locale }) {
       </div>
 
       {/* The real product, not a drawing: the planning timeline behind, the
-          OEE report in front, straddling the seam between this band and the
+          MES report in front, straddling the seam between this band and the
           next. The negative margin is the overlap, and the IoT band's top
           padding makes room for it (same clamp in both places). Crops of the
           captures in public/images/Mockups, backdrop removed. */}
@@ -282,10 +282,10 @@ function MesChapter({ locale }: { locale: Locale }) {
           </div>
           <div className="absolute bottom-0 right-0 w-[58%] overflow-hidden rounded-[clamp(6px,1vw,14px)] shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] ring-1 ring-black/10">
             <Image
-              src="/images/Product/oee-report.png"
+              src="/images/Product/platform-report.png"
               alt={t.shots.oee}
-              width={2525}
-              height={1291}
+              width={2560}
+              height={1439}
               sizes="(min-width: 1280px) 680px, 58vw"
               className="h-auto w-full"
             />
