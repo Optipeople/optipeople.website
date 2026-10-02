@@ -57,5 +57,5 @@ nedetid", ikke "Reduktion i uplanlagt nedetidsomfang".
 
 ## Hvad der ikke skal laves om
 
-Kundecitater står, som kunden sagde dem. Produktnavne (Opticloud, Opti Assist,
+Kundecitater står, som kunden sagde dem. Produktnavne (OptiPeople Data Platform, Opti Assist,
 Workflows, Agents) og URL-slugs er ens på tværs af sprog.

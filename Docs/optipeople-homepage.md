@@ -6,7 +6,7 @@
 
 Connect production, machines, and people with your business systems.
 
-OptiCloud gives industrial teams real-time insight, control, and coordination across the shopfloor and ERP. Built for production environments where downtime is not an option.
+The OptiPeople Data Platform gives industrial teams real-time insight, control, and coordination across the shopfloor and ERP. Built for production environments where downtime is not an option.
 
 **Primary CTA:** Talk to us  
 **Secondary CTA:** See how it works
@@ -67,7 +67,7 @@ Combine shopfloor data with business data for planning, costing, and operational
 
 ### One platform. Built for industrial reality.
 
-OptiCloud is a modular digital operations platform that connects OT and IT.  
+The OptiPeople Data Platform is a modular digital operations layer that connects OT and IT.  
 It adapts to your processes instead of forcing new ones.
 
 **Production**  
@@ -112,7 +112,7 @@ OT, IT, IoT, automation, and system design.
 From pilot to production, fast and safely.
 
 **Custom software and integrations**  
-Extensions, apps, and tailored solutions built on OptiCloud.
+Extensions, apps, and tailored solutions built on the platform.
 
 ---
 
@@ -120,7 +120,7 @@ Extensions, apps, and tailored solutions built on OptiCloud.
 
 **Let’s talk about your operations**
 
-See how OptiCloud can support your production, service, or aftermarket setup.
+See how the OptiPeople Data Platform can support your production, service, or aftermarket setup.
 
 **Talk to us**
 

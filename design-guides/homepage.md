@@ -146,7 +146,7 @@ Each platform module has a dedicated color used consistently across all componen
 | Energy | `--orange-dark3` | Deep orange |
 | Analysis | `--green-light2` | Light green |
 | AI / Extra | `--green-dark1` | Teal green |
-| OptiCloud (center) | `--green-dark3` | Primary brand |
+| Data Platform (center) | `--green-dark3` | Primary brand |
 
 ### Text Opacity Convention
 

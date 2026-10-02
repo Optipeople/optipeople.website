@@ -22,7 +22,7 @@ file, so an image or logo swapped later only has to change in one place.
 
 ```yaml
 ---
-title: "DANSK TRÆEMBALLAGE løfter OEE med 5% på 3 måneder med Opticloud"
+title: "DANSK TRÆEMBALLAGE: 5% højere OEE på tre måneder med OptiPeople Data Platform"
 metricLabel: "OEE på tre måneder"
 outcome: "Én produktionslinje, live oppetid på gulvet, og et OEE-løft på 5%."
 ---
