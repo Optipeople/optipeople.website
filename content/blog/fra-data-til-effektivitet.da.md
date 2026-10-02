@@ -1,67 +1,67 @@
 ---
-title: "Fra data til effektivitet"
+title: "Tallene viste vejen til næsten dobbelt så høj OEE"
 customer: "Anonymiseret case"
 metricLabel: "OEE, næsten fordoblet"
-outcome: "En analyse af OEE per seriestørrelse begrundede maskine nummer to og løftede OEE fra 21% til 41%."
+outcome: "OEE opgjort per seriestørrelse viste, at der skulle en maskine nummer to til. Bagefter steg OEE fra 21% til 41%."
 ---
 
 ## Kort fortalt
 
-Denne anonymiserede case viser, hvordan en fabrik brugte data fra OptiPeople Data Platform til at finde effektiviseringsmuligheder, forbedre OEE og træffe en bedre funderet investeringsbeslutning.
+I denne anonymiserede case brugte en fabrik data fra OptiPeople Data Platform til at finde ud af, hvor effektiviteten gik tabt. Det gav højere OEE og et bedre grundlag for at investere i nyt udstyr.
 
-Kerneresultatet var en stigning i OEE fra **21%** til **41%**.
+OEE steg fra **21%** til **41%**.
 
-## Situationen
+## Udgangspunktet
 
-Maskinen i fokus producerede både små og store serier.
+Maskinen kørte både små og store serier.
 
-Fordi omstillinger var dyre, havde fabrikken en mistanke om, at der var noget at hente, men manglede de data, der skulle til for at træffe beslutninger med sikkerhed.
+Omstillingerne var dyre, så fabrikken havde en mistanke om, at der var noget at hente. Men der manglede tal til at træffe en beslutning med ro i maven.
 
-OptiPeople Data Platform blev sat i drift for at give fabrikken det, de manglede, til at kunne beslutte med sikkerhed.
+Derfor blev OptiPeople Data Platform sat op.
 
-## Hvad data viste
+## Det viste tallene
 
-Så snart dataindsamlingen begyndte, stod det klart, at maskinens produktivitet hang tæt sammen med seriestørrelsen.
+Allerede da de første data kom ind, var det tydeligt, at maskinens produktivitet hang tæt sammen med seriestørrelsen.
 
-De mange omstillinger var en hovedårsag til den lave effektivitet. De små serier brugte for meget tid på opstilling og trak den samlede ydelse ned.
+De mange omstillinger trak effektiviteten ned. De små serier brugte for meget tid på opstilling og sænkede maskinens samlede ydelse.
 
-Servicetjek spillede også ind. Efter tjek i oktober og februar lagde OEE sig på et højere niveau.
+Servicetjek spillede også ind. Efter tjekkene i oktober og februar lå OEE på et højere niveau.
 
-## Sådan blev forbedringen skabt
+## Sådan kom forbedringen
 
-Analysen viste, at det gav mening at købe en ekstra og mindre maskine til de små emner.
+Analysen viste, at det kunne betale sig at købe en ekstra, mindre maskine til de små emner.
 
-Den mindre maskine havde ingen opstillingstid, selv om den producerede langsommere end den store. Til små serier var den alligevel det bedste valg.
+Den lille maskine havde ingen opstillingstid. Den producerede langsommere end den store, men til små serier var den alligevel det bedste valg.
 
-Efter investeringen var fabrikken ikke længere afhængig af én maskine, der brugte for meget tid på at stå stille eller blive omstillet. I stedet havde den to maskiner, der passede bedre til hver sin produktionsprofil.
+Efter investeringen var fabrikken ikke længere afhængig af én maskine, der stod for meget stille eller blev stillet om. Nu havde den to maskiner, der hver passede til sin slags produktion.
 
-## Hvorfor analysen var afgørende
+## Derfor var analysen afgørende
 
-En vigtig erkendelse var, at OEE skulle vurderes per seriestørrelse og ikke kun på maskinniveau.
+En vigtig pointe var, at OEE skulle opgøres per seriestørrelse og ikke kun for maskinen samlet.
 
-Én maskine kan præstere godt på nogle varetyper og samtidig blive trukket ned af andre. Uden det detaljeringsniveau er det nemt at nå den forkerte konklusion.
+En maskine kan køre fint på nogle varer og blive trukket ned af andre. Uden det detaljeringsniveau er det let at drage den forkerte konklusion.
 
-I denne case lå de bedste OEE-resultater i de seriestørrelser, hvor der blev produceret **500 emner eller mere** før omstilling.
+Her lå de bedste OEE-tal i de serier, hvor der blev produceret **500 emner eller flere** før næste omstilling.
 
 ## Resultatet
 
-Fabrikken opnåede flere målbare gevinster:
+Fabrikken fik flere målbare gevinster:
 
 - OEE steg fra **21%** til **41%**
-- 6.119 enheder kunne produceres på **2,3 skiftehold** i stedet for **3,0**
+- 6.119 enheder kunne laves på **2,3 skift** i stedet for **3,0**
 - den daglige produktionstid for den mængde faldt fra **24 timer** til **18,5 timer**
-- det svarer til en besparelse på **5,5 timer om dagen**
+- det er en besparelse på **5,5 timer om dagen**
 
-## Business casen
+## Regnestykket
 
-Der blev regnet på to perspektiver for tilbagebetaling.
+Tilbagebetalingen blev regnet ud på to måder.
 
-Med en fastomkostningsbetragtning gav en samlet investering på **3,5 mio. kr.** og en årlig besparelse på **750.000 kr.** en tilbagebetalingstid på **4,6 år**.
+Ser man kun på de faste omkostninger, gav en samlet investering på **3,5 mio. kr.** og en årlig besparelse på **750.000 kr.** en tilbagebetalingstid på **4,6 år**.
 
-Med en indtjeningsmaksimerende betragtning blev den ekstra produktionskapacitet værdisat til **2,96 mio. kr. om året**. Kunne den ekstra produktion sælges, var tilbagebetalingstiden **1,2 år**.
+Ser man i stedet på indtjeningen, var den ekstra kapacitet **2,96 mio. kr. om året** værd. Kunne den ekstra produktion sælges, var investeringen tjent hjem på **1,2 år**.
 
 ## Det vigtigste at tage med
 
-Casen viser, at produktionsoptimering starter med data.
+Produktionsoptimering starter med data.
 
-Når det rigtige detaljeringsniveau er tilgængeligt, bliver det muligt at forbedre servicerutinerne, justere produktionsstrategien og vurdere investeringer med langt større sikkerhed.
+Når tallene er detaljerede nok, kan fabrikken forbedre servicerutinerne, justere sin produktionsstrategi og vurdere investeringer på et langt sikrere grundlag.

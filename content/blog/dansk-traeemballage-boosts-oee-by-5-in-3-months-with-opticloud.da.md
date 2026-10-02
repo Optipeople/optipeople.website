@@ -1,34 +1,36 @@
 ---
-title: "DANSK TRÆEMBALLAGE løfter OEE med 5% på 3 måneder med OptiPeople Data Platform"
+title: "DANSK TRÆEMBALLAGE: 5% højere OEE på tre måneder med OptiPeople Data Platform"
 metricLabel: "OEE på tre måneder"
-outcome: "Én produktionslinje, live oppetid på gulvet, og et OEE-løft på 5% inden for de første tre måneder."
+outcome: "Operatørerne ser oppetiden live ved én produktionslinje, og på tre måneder steg OEE med 5%."
 ---
 
 ## Kort fortalt
 
-Dansk Træemballage satte OptiPeople Data Platform i drift på én produktionslinje i 2024 og så en gennemsnitlig **stigning i OEE på 5% inden for tre måneder**.
+Dansk Træemballage tog OptiPeople Data Platform i brug på én produktionslinje i 2024.
 
-## Sådan bruges OptiPeople Data Platform
+Inden for tre måneder steg OEE i gennemsnit med **5%**.
 
-OptiPeople Data Platform bruges til at indsamle:
+## Sådan bruger Dansk Træemballage OptiPeople Data Platform
 
-- oppetidsdata
-- OEE-data
+Platformen samler data om linjen:
+
+- oppetid
+- OEE
 - stopårsager
-- spildprocent på produktionslinjen
+- spildprocent
 
-Det giver ledelsen information, der ikke tidligere var tilgængelig.
+Det giver ledelsen tal, de ikke havde før.
 
-Operatørerne følger desuden oppetiden direkte på en tablet, hvilket har gjort, at linjen kommer hurtigere i gang igen efter stop.
+Operatørerne kan selv følge oppetiden på en tablet. Det har fået linjen hurtigere i gang igen efter et stop.
 
 ## Resultatet
 
-Opsætningen har givet Dansk Træemballage:
+Dansk Træemballage har fået:
 
-- et stærkere værktøj til løbende forbedringer
-- bedre indsigt for ledelsen
-- hurtigere opfølgning i driften efter stop
-- en gennemsnitlig **stigning i OEE på 5%** på kun tre måneder
+- et bedre værktøj til det løbende forbedringsarbejde
+- et klarere billede for ledelsen
+- hurtigere opfølgning, når linjen har stået stille
+- i gennemsnit **5% højere OEE** på bare tre måneder
 
 Kasper Kielgast Poulsen  
 Fabrikschef, DTE Ribe Stampemøllevej

@@ -1,52 +1,54 @@
 ---
-title: "Kvik: maksimal oppetid og effektivitet med brugsbaseret vedligehold via OptiPeople Data Platform"
+title: "Kvik: Mere oppetid med vedligehold efter driftstimer i OptiPeople Data Platform"
 metricLabel: "oppetid"
 quote: "Vi vedligeholder nu efter ønskede driftstimer i stedet for faste tidsintervaller, og det er langt mere effektivt."
-outcome: "Brugsbaseret vedligehold løftede oppetiden 5% og fjernede omkring fire unødvendige services om året på 24/7-maskiner."
+outcome: "Vedligehold efter driftstimer gav 5% mere oppetid og sparede omkring fire unødvendige services om året på maskiner, der kører 24/7."
 ---
 
 ## Kort fortalt
 
-Kvik bruger OptiPeople Data Platform til at gå fra tidsbaseret til brugsbaseret vedligehold. Det øger oppetiden og fjerner samtidig unødvendigt servicearbejde.
+Kvik er gået fra vedligehold efter kalenderen til vedligehold efter, hvor meget maskinerne har kørt.
+
+Det giver mere oppetid og færre services, der ikke var brug for.
 
 ## Udfordringen
 
-Kvik stod med to problemer, der hang sammen.
+Kvik havde to problemer, der hang sammen.
 
 ### Planlægning af vedligehold
 
-- spildtid under vedligehold
-- vedligehold efter faste tidsintervaller
+- tid, der gik til spilde under vedligehold
+- vedligehold efter faste intervaller
 
-### Indsigt i oppetid
+### Overblik over oppetid
 
-- manglende overblik over oppetid
-- ingen klar indsigt i årsagerne til nedetid
-- manuel indtastning af stopårsager
-- ugyldige data
+- intet klart overblik over oppetiden
+- ingen klar viden om, hvorfor maskinerne stod stille
+- stopårsager, der blev tastet ind i hånden
+- data, man ikke kunne stole på
 
-## Sådan bruges OptiPeople Data Platform
+## Sådan bruger Kvik OptiPeople Data Platform
 
-Kvik bruger servicemodulet i OptiPeople Data Platform til at udløse vedligeholdsvarsler ud fra ønskede driftstimer i stedet for faste tidsintervaller.
+Kvik bruger servicemodulet i OptiPeople Data Platform. Det sender et varsel om vedligehold, når maskinen har kørt det ønskede antal timer, i stedet for efter faste intervaller.
 
-Modulet sender en mail til en dedikeret Outlook-kalender. En dag bookes automatisk syv dage frem, så serviceteamet har tid til at planlægge den præcise dato for vedligeholdet.
+Varslet lander som en mail i en Outlook-kalender, der kun bruges til vedligehold. Der bliver automatisk booket en dag syv dage frem. Så har serviceteamet en uge til at finde den præcise dato.
 
 ## Resultatet
 
-### Ekstra produktionstid
+### Mere tid til produktion
 
-På maskiner, der kører 24/7, ser Kvik cirka **4 færre services om året**, hvilket svarer til omkring **40 ekstra produktionstimer årligt**.
+På maskiner, der kører 24/7, har Kvik cirka **4 færre services om året**. Det giver omkring **40 ekstra produktionstimer om året**.
 
-På maskiner med enkeltholdsdrift eller mindre er servicetiden reduceret med omkring **50%**.
+På maskiner, der kører ét skift eller mindre, er tiden til service skåret ned med omkring **50%**.
 
-### Højere oppetid
+### Mere oppetid
 
-Kvik oplever desuden:
+Kvik har desuden fået:
 
 - **5% højere oppetid**
-- automatisk registrering af stopårsager
-- gyldige og pålidelige data
-- sporing af mikrostop
+- stopårsager, der registreres automatisk
+- data, der er gyldige og til at stole på
+- styr på mikrostop
 - færre afbrydelser
 
 > "Vi bruger servicemodulet i OptiPeople Data Platform til at sende varsler. Vi vedligeholder nu efter ønskede driftstimer i stedet for faste tidsintervaller. Det gør os langt mere effektive og sparer os for unødvendigt vedligehold og nedetid."

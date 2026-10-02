@@ -1,48 +1,46 @@
 ---
-title: "Sammenspillet mellem OptiPeople Data Platform og iFix fra General Electric"
+title: "Sådan spiller OptiPeople Data Platform sammen med iFix fra General Electric"
 metricLabel: "SCADA-integration"
-outcome: "OptiPeople Data Platform strukturerer maskin- og OEE-data og sender dem videre til et GE iFix SCADA-miljø til bredere overvågning."
+outcome: "OptiPeople Data Platform samler maskin- og OEE-data i et fast format og sender dem videre til GE iFix, så de indgår i den samlede SCADA-overvågning."
 ---
 
 ## Kort fortalt
 
-Denne case viser, hvordan OptiPeople Data Platform kan arbejde sammen med iFix fra General Electric og skabe en bredere overvågning af fabrikken.
+Her viser vi, hvordan OptiPeople Data Platform kan arbejde sammen med iFix fra General Electric, så overvågningen dækker mere af fabrikken.
 
-OptiPeople Data Platform indsamler og strukturerer data, mens iFix kan bruge de data som en del af et større SCADA-miljø.
+OptiPeople Data Platform samler data ind og sætter dem i system. iFix bruger dem som en del af et større SCADA-miljø.
 
-## Situationen
+## Udgangspunktet
 
-Mange fabrikker har allerede maskiner med indbyggede PLC'er og isolerede, maskinspecifikke visninger af produktionsdata.
+Mange fabrikker har allerede maskiner med egen PLC og en skærm ved hver maskine, der kun viser dens egne tal.
 
-Det kan være nyttigt, men det skaber ikke automatisk et samlet overblik på tværs af fabrikken.
+Det kan være nyttigt. Men det giver ikke af sig selv et samlet overblik over fabrikken.
 
-I projekter, hvor OEE-data skal ind i et større overvågningsmiljø, kan et SCADA-system som iFix allerede være på plads.
+Skal OEE-data indgå i en større overvågning, er der måske allerede et SCADA-system som iFix på plads.
 
 ## Sådan bruges OptiPeople Data Platform
 
-OptiPeople Data Platform håndterer laget med dataindsamling.
+OptiPeople Data Platform tager sig af at samle data ind. Det betyder:
 
-Det omfatter:
+- maskindata bliver samlet og vist
+- operatørerne har et sted at skrive stopårsager, noter og logbog
+- maskindata bliver lagt i ét fast format, der kan bruges videre
 
-- indsamling og visualisering af maskindata
-- en grænseflade, hvor operatørerne kan angive stopårsager, noter og logbogsindførsler
-- aggregering af maskindata til et konsistent format, der kan bruges videre
+Opsætningen kan også klare mere indviklede forhold. OptiPeople Data Platform kan f.eks. håndtere, at én maskine har flere spor, at forskellige varenumre kører på samme tid, eller at nogle maskiner har egen PLC og andre ikke har.
 
-Opsætningen er også designet til mere komplekse miljøer. OptiPeople Data Platform kan for eksempel håndtere, at en maskine har flere spor, at forskellige varenumre kører samtidig, eller at nogle maskiner har egen PLC, mens andre ikke har.
+## Sådan virker integrationen
 
-## Sådan fungerer integrationen
+Når OptiPeople Data Platform kobles på iFix eller et lignende system, bliver de strukturerede produktionsdata sendt videre til SCADA-laget.
 
-Når OptiPeople Data Platform integreres med iFix eller et tilsvarende system, sendes de strukturerede produktionsdata videre til brug i SCADA-laget.
+Her kan iFix lægge dem sammen med andre datakilder, der ikke har noget med OEE at gøre.
 
-iFix kan derefter kombinere de data med andre datakilder, der ikke har med OEE-måling at gøre.
-
-Resultatet er en bredere overvågningsløsning, der hjælper brugerne med at forstå, hvad der sker, og hvordan de skal reagere.
+Så får brugerne en overvågning, der dækker bredere og viser, hvad der sker, og hvad de skal gøre ved det.
 
 ## Resultatet
 
-Integrationen skaber en stærkere driftsopsætning ved at:
+Integrationen giver en stærkere drift, fordi den:
 
-- forbedre overblikket på tværs af fabrikken
-- understøtte mere effektive alarmstrategier
-- reducere reaktionstiden, når noget fejler
-- bane vejen for besparelser på den lange bane
+- giver bedre overblik over hele fabrikken
+- gør det muligt at lave bedre alarmstrategier
+- giver kortere reaktionstid, når noget går galt
+- lægger grunden til besparelser på længere sigt

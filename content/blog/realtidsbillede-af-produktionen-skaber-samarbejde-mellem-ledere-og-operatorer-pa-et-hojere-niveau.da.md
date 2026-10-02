@@ -1,43 +1,43 @@
 ---
-title: "Broen: OptiPeople Data Platform styrker samarbejdet"
-metricLabel: "Realtid, delt af alle"
-outcome: "Et live-billede af produktionen på nøglemaskinerne samlede ledere og operatører om de samme tal."
+title: "Broen: Ledere og operatører ser de samme tal med OptiPeople Data Platform"
+metricLabel: "Samme live-billede for alle"
+outcome: "Ledere og operatører ser nu det samme live-billede af nøglemaskinerne og taler ud fra de samme tal."
 ---
 
 ## Kort fortalt
 
-Broen ville have bedre indsigt i stopårsager og et realtidsbillede af produktionen, som ledere og operatører kunne bruge sammen.
+Broen ville vide mere om, hvorfor maskinerne stoppede. Virksomheden ville også have et billede af produktionen lige nu, som ledere og operatører kunne bruge sammen.
 
-OptiPeople Data Platform var med til at skabe det fælles driftsbillede.
+Det billede fik de med OptiPeople Data Platform.
 
-## Situationen
+## Udgangspunktet
 
-Broen A/S producerer ventiler til en række anvendelser og havde brug for et klarere billede af, hvorfor produktionsmaskinerne stoppede.
+Broen A/S laver ventiler til mange forskellige formål. Virksomheden havde brug for et klarere billede af, hvorfor produktionsmaskinerne stoppede.
 
-Virksomheden ville samtidig have et realtidsoverblik over nøgletal som producerede emner og OEE.
+Broen ville også kunne se nøgletal som producerede emner og OEE, mens produktionen kørte.
 
-## Hvorfor det var vigtigt
+## Hvorfor det betød noget
 
-Overblikket var vigtigt for at:
+Overblikket skulle hjælpe Broen med at:
 
-- øge produktionen
-- udnytte den tilgængelige kapacitet bedre
-- styrke konkurrencekraften
-- understøtte den digitale transformation på hele fabrikken
+- producere mere
+- udnytte den kapacitet, der allerede var
+- stå stærkere i konkurrencen
+- komme videre med digitaliseringen på hele fabrikken
 
-## Sådan bruges OptiPeople Data Platform
+## Sådan bruger Broen OptiPeople Data Platform
 
 OptiPeople Data Platform blev installeret på udvalgte nøglemaskiner.
 
-Platformen indsamler data fra maskinerne, mens operatørerne kan registrere stopårsager direkte. Ledere kan derefter få et hurtigt overblik over produktionsstatus og ydelse.
+Platformen henter data fra maskinerne, og operatørerne registrerer selv stopårsager. Lederne kan så hurtigt se, hvordan produktionen står og kører.
 
 ## Resultatet
 
-Opsætningen giver Broen:
+Broen har fået:
 
-- aktivt input fra operatørerne om, hvorfor stop opstår
-- realtidsoverblik over produktionen plus uge- og månedsrapporter
-- bedre samarbejde mellem ledere og operatører om oppetid
-- en løsning, virksomheden har været meget tilfreds med, sammen med OptiPeoples service og support
+- operatører, der selv melder ind, hvorfor stoppene opstår
+- et live-overblik over produktionen plus uge- og månedsrapporter
+- et bedre samarbejde mellem ledere og operatører om oppetiden
+- en løsning, som virksomheden har været meget tilfreds med, ligesom med OptiPeoples service og support
 
 Hjemmeside: [broen.com](http://www.broen.com)

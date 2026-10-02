@@ -1,50 +1,50 @@
 ---
-title: "Detaljeret viden om produktionen giver medicinalkunde mulighed for at høste de lavthængende frugter"
+title: "Detaljerede tal fra produktionen viser medicinalproducent de lavthængende frugter"
 customer: "Medicinalproducent"
-metricLabel: "Lavthængende frugter, gjort synlige"
-outcome: "Realtidsdata på stop og oppetid gav en producent af dyremedicin mulighed for at effektivisere uden at presse medarbejderne."
+metricLabel: "Lavthængende frugter fundet"
+outcome: "Med tal for stop og oppetid, mens produktionen kører, kunne en producent af dyremedicin effektivisere uden at presse medarbejderne."
 ---
 
 ## Kort fortalt
 
-En producent af dyremedicin havde brug for mere detaljeret og rettidig indsigt i produktionen for at kunne effektivisere uden at øge presset på medarbejderne.
+En producent af dyremedicin ville effektivisere uden at lægge mere pres på medarbejderne. Det krævede et mere detaljeret billede af produktionen, og det skulle komme med det samme.
 
-OptiPeople Data Platform leverede de realtidsdata, der skulle til for at understøtte det skift.
+OptiPeople Data Platform gav dem tallene, mens produktionen kørte.
 
-## Situationen
+## Udgangspunktet
 
-Virksomheden havde allerede et overblik over produktionen, men ikke i det detaljeringsniveau, der var behov for.
+Virksomheden havde allerede et overblik over produktionen, men det var ikke detaljeret nok.
 
-Der var et klart behov for viden om produktionen med det samme i stedet for at vente til månedsafslutning plus tre uger.
+Tallene kom først tre uger efter månedsafslutningen. De skulle bruges med det samme.
 
-Teamet ville samtidig væk fra beslutninger truffet på mavefornemmelse og over mod en mere databaseret måde at arbejde.
+Teamet ville også væk fra at beslutte på mavefornemmelse og over til at se på tallene.
 
-Det manglende overblik omfattede:
+De manglede overblik over:
 
 - stop
-- reel oppetid
+- den reelle oppetid
 - opstartstider
 - nedlukningstider
 
-## Hvorfor det var vigtigt
+## Hvorfor det betød noget
 
-For at holde konkurrencekraften ville kunden effektivisere produktionen og samtidig holde fokus på de praktiske forbedringer, der kunne gennemføres med lille indsats først.
+Kunden ville effektivisere for at holde trit med konkurrenterne. Planen var at starte med de praktiske forbedringer, der kunne laves uden den store indsats.
 
-## Sådan bruges OptiPeople Data Platform
+## Sådan bruger kunden OptiPeople Data Platform
 
-OptiPeople Data Platform indsamler data fra hver maskinlinje i produktionen, mens medarbejderne bruger platformen til at registrere stopårsager.
+OptiPeople Data Platform henter data fra hver maskinlinje i produktionen. Medarbejderne bruger platformen til at registrere stopårsager.
 
-Det giver et stærkere driftsbillede for både ledelse og operatører.
+Så ser ledelse og operatører det samme billede af driften.
 
 ## Resultatet
 
-Opsætningen giver kunden:
+Kunden har fået:
 
-- aktivt input fra operatørerne om, hvorfor stop opstår
-- bedre indsigt i stopårsager for ledelse og projektteams
-- et stærkere grundlag for løbende procesoptimering
-- bedre samarbejde mellem ledelse og operatører om at løfte oppetiden
-- trendanalyse på stopårsager, der hjælper med at prioritere produktområder
-- et grundlag for serviceplanlægning og forebyggende vedligehold ud fra produktionsdata
-- et grundlag for at måle energiforbrug op mod produceret mængde
-- en model, der kan skaleres globalt og erstatte papirbaserede rutiner
+- operatører, der selv melder ind, hvorfor stoppene opstår
+- et bedre overblik over stopårsager for ledelse og projektgrupper
+- et bedre grundlag for at forbedre processerne løbende
+- et tættere samarbejde mellem ledelse og operatører om at få oppetiden op
+- trends i stopårsagerne, der viser, hvilke produktområder der skal tages først
+- et grundlag for at planlægge service og forebyggende vedligehold ud fra produktionsdata
+- mulighed for at måle energiforbruget op mod den producerede mængde
+- en model, der kan rulles ud globalt og afløse rutinerne på papir

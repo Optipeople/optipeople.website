@@ -1,61 +1,61 @@
 ---
-title: "DFI Geisler øger produktiviteten med 5% med datadreven indsigt fra OptiPeople Data Platform"
+title: "DFI Geisler: 5% højere produktivitet med tal fra OptiPeople Data Platform"
 metricLabel: "produktivitet over to år"
 quote: "Præcise data og stopregistrering er afgørende for, at vi kan tage fat i de rigtige problemer og handle rigtigt."
-outcome: "Ugentlige maskinrapporter på fabriksgulvet gjorde produktionsdata til en daglig forbedringsvane."
+outcome: "Ugentlige maskinrapporter, hængt op ved maskinerne, har gjort tallene til en fast del af forbedringsarbejdet."
 ---
 
 ## Kort fortalt
 
-DFI Geisler bruger OptiPeople Data Platform til at følge ydelsen på syv udvalgte bearbejdningsmaskiner i bordpladeproduktionen på Mors.
+DFI Geisler følger syv udvalgte bearbejdningsmaskiner i bordpladeproduktionen på Mors med OptiPeople Data Platform.
 
-Over de seneste to år har den systematiske brug af produktionsdata hjulpet virksomheden med at øge produktiviteten med cirka **5%**.
+De seneste to år har virksomheden brugt tallene systematisk. Det har givet cirka **5%** højere produktivitet.
 
-## Situationen
+## Udgangspunktet
 
-DFI Geisler ville have et klarere billede af, hvordan nøglemaskinerne præsterede fra dag til dag.
+DFI Geisler ville kunne se, hvordan de vigtigste maskiner kørte fra dag til dag.
 
-Teamet havde brug for en fælles måde at følge:
+Teamet havde brug for én fælles måde at følge:
 
 - antal producerede emner
 - oppetid
-- tilbagevendende stopårsager
+- de stopårsager, der går igen
 
-Indsigten skulle kunne bruges af både ledere og operatører, ikke kun til rapportering bagefter.
+Tallene skulle kunne bruges af både ledere og operatører i hverdagen, ikke kun i en rapport bagefter.
 
-## Sådan bruges OptiPeople Data Platform
+## Sådan bruger DFI Geisler OptiPeople Data Platform
 
-OptiPeople Data Platform er en del af den daglige driftsrytme omkring de syv maskiner.
+OptiPeople Data Platform er en fast del af hverdagen omkring de syv maskiner.
 
-Produktionslederne printer ugentlige maskinrapporter og hænger dem op på tavler ved hver maskine. Rapporterne bliver et konkret udgangspunkt for samtalerne på fabriksgulvet.
+Produktionslederne printer hver uge en maskinrapport og hænger den op på en tavle ved hver maskine. Rapporten er udgangspunktet for snakken på gulvet.
 
-Ledere og medarbejdere gennemgår data sammen og bruger dem til at drøfte ydelse, nedetid og mulige forbedringer.
+Ledere og medarbejdere går tallene igennem sammen. De taler om, hvordan maskinen har kørt, hvor tiden er gået tabt, og hvad der kan gøres bedre.
 
-## Hvad der gjorde opsætningen effektiv
+## Derfor virker det
 
-To ting træder frem i opsætningen hos DFI Geisler.
+To ting skiller sig ud hos DFI Geisler.
 
 ### 1. Præcis stopregistrering
 
-Operatørerne blev grundigt oplært i OptiPeople Data Platform og aktivt inddraget i implementeringen.
+Operatørerne blev grundigt oplært i OptiPeople Data Platform og var selv med i implementeringen.
 
-Det skabte ejerskab omkring datakvaliteten og gjorde stopregistreringen mere konsistent.
+Derfor føler de ansvar for, at tallene er rigtige, og stoppene bliver registreret mere ensartet.
 
 > "Præcise data og stopregistrering er afgørende for, at vi kan tage fat i de rigtige problemer og handle rigtigt."
 
-### 2. Løbende opfølgning på gentagne problemer
+### 2. Fast opfølgning på de problemer, der går igen
 
-Hyppige stopårsager gennemgås af ledere og operatører i fællesskab.
+Ledere og operatører gennemgår sammen de stopårsager, der går igen tit.
 
-I stedet for at behandle stop som enkeltstående hændelser bruger teamet mønstrene i data til at finde, hvor arbejdsgangene kan strømlines, og hvor gentagne problemer kan reduceres.
+Et stop bliver ikke bare set som en enkeltstående hændelse. Teamet kigger efter mønstre i tallene og finder ud af, hvor arbejdsgangene kan gøres enklere, og hvor de samme problemer kan fjernes.
 
-Produktionslederne følger også udviklingen i årsagerne til maskinnedbrud over tid, hvilket giver et mere målrettet forbedringsarbejde.
+Produktionslederne følger også, hvordan årsagerne til maskinnedbrud udvikler sig over tid. Så ved de, hvor forbedringerne skal sættes ind.
 
 ## Resultatet
 
-Resultatet er en målbar produktivitetsforbedring på omkring **5%** over to år.
+Produktiviteten er steget med omkring **5%** på to år, og det kan måles.
 
-Virksomheden kan se, at bedre data ikke er nok i sig selv. Værdien kommer, når pålidelig dataindsamling kombineres med løbende forbedringer og fast dialog på fabriksgulvet.
+Erfaringen hos DFI Geisler er, at bedre data ikke gør det alene. Effekten kommer, når pålidelige tal bliver brugt i det løbende forbedringsarbejde og i en fast dialog på gulvet.
 
 > "Vi bruger OptiPeople Data Platform systematisk hver dag på disse syv maskiner."
 
@@ -63,9 +63,9 @@ Virksomheden kan se, at bedre data ikke er nok i sig selv. Værdien kommer, når
 
 ## Det vigtigste at tage med
 
-Hos DFI Geisler virker OptiPeople Data Platform, fordi data er synlige, bliver drøftet regelmæssigt og fører direkte til handling.
+OptiPeople Data Platform virker hos DFI Geisler, fordi tallene hænger fremme, bliver talt om jævnligt og fører direkte til handling.
 
-Det gør produktionsrapportering fra et passivt nøgletal til et aktivt forbedringsværktøj.
+Så er produktionsrapporten ikke bare et tal, man kigger på. Den er et værktøj, man forbedrer med.
 
 Tommy Andersen  
 Production Manager, DFI Geisler

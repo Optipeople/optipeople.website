@@ -1,36 +1,38 @@
 ---
-title: "Carl Hansen & Søn styrker produktiviteten og reducerer omstillingstider med OptiPeople Data Platform og OptiAI"
-metricLabel: "Kortere omstillingstider med OptiAI"
-outcome: "Skarpere indsigt i produktiviteten, plus et OptiAI-pilotprojekt der reducerer omstillingstider gennem smartere ordresekvensering."
+title: "Carl Hansen & Søn: Mere produktivitet og kortere omstillinger med OptiPeople Data Platform og OptiAI"
+metricLabel: "Kortere omstillinger med OptiAI"
+outcome: "Et skarpere billede af produktiviteten og et pilotprojekt med OptiAI, der skal korte omstillingerne ned ved at lægge ordrerne i en smartere rækkefølge."
 ---
 
 ## Kort fortalt
 
-Carl Hansen & Søn bruger OptiPeople Data Platform til at skabe mere præcis indsigt i produktionen og kører samtidig et pilotprojekt med OptiAI, der skal reducere omstillingstider gennem bedre sekvensering af produktionen.
+Carl Hansen & Søn bruger OptiPeople Data Platform til at få et mere præcist billede af produktionen.
 
-## Sådan bruges OptiPeople Data Platform
+Samtidig kører virksomheden et pilotprojekt med OptiAI. Målet er kortere omstillinger, fordi ordrerne kommer i en bedre rækkefølge.
 
-OptiPeople Data Platform giver pålidelige data om maskinernes ydelse, og det gør det nemmere for virksomheden at træffe strategiske beslutninger og lave driftsanalyser.
+## Sådan bruger Carl Hansen & Søn OptiPeople Data Platform
 
-Operatørerne understøtter arbejdet ved at registrere stopårsager, så det bliver lettere at se, hvor produktiviteten kan løftes.
+Platformen giver pålidelige tal for, hvordan maskinerne kører. Dem bruger virksomheden, både når der skal træffes større beslutninger, og når driften skal analyseres.
 
-Operatørerne vælger også det konkrete emne, der produceres, så cyklustiderne kan justeres tilsvarende i OptiPeople Data Platform. Det giver mere præcise produktionsdata og en mere nøjagtig opfølgning i driften.
+Operatørerne registrerer stopårsager. Så er det lettere at se, hvor der er produktivitet at hente.
 
-## OptiAI-pilotprojektet
+De vælger også, hvilket emne der kører. Så bliver cyklustiden i OptiPeople Data Platform tilpasset emnet, og tallene passer bedre til virkeligheden. Det gør opfølgningen i driften mere præcis.
 
-Carl Hansen kører desuden et pilotprojekt med OptiAI for at optimere rækkefølgen af produktionsordrer.
+## Pilotprojektet med OptiAI
 
-Målet er at reducere omstillingstiderne ved at foreslå en mere effektiv ordresekvens og minimere skiftene mellem produktionsordrer.
+Carl Hansen tester desuden OptiAI til at planlægge rækkefølgen af produktionsordrer.
 
-## Resultatet
+OptiAI foreslår en rækkefølge, hvor der skal stilles færre gange om mellem ordrerne. Det skal give kortere omstillingstider.
 
-Tilsammen skal opsætningen give Carl Hansen:
+## Det skal det give
 
-- mere præcis indsigt i produktiviteten
-- bedre målretning af forbedringsområder
-- mere nøjagtig håndtering af cyklustider
-- kortere omstillingstider
-- højere samlet produktivitet
+Samlet skal opsætningen give Carl Hansen:
+
+- et mere præcist billede af produktiviteten
+- bedre styr på, hvor forbedringerne skal sættes ind
+- cyklustider, der passer til det emne, der kører
+- kortere omstillinger
+- højere produktivitet samlet set
 
 Tommy Madsen  
 Production Unit Manager

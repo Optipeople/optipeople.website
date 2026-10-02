@@ -1,36 +1,38 @@
 ---
-title: "Dansand: 3,5 millioner sække sand om året, og OptiPeople Data Platform giver bedre styr på tiden"
+title: "Dansand: 3,5 millioner sække sand om året og bedre styr på tiden med OptiPeople Data Platform"
 metricLabel: "sække sand om året"
 quote: "Vi vil bruge data til at træffe investeringsbeslutninger, når en maskine skal skiftes, så vi investerer rigtigt."
-outcome: "Oppetids- og produktionsdata på big bag-linjerne driver nu den daglige opfølgning og investeringsbeslutningerne."
+outcome: "Tal for oppetid og produceret mængde på big bag-linjerne bruges nu i den daglige opfølgning og som grundlag, når der skal investeres."
 ---
 
 ## Kort fortalt
 
-Dansand bruger OptiPeople Data Platform på håndteringslinjerne til big bags med sand som støtte til den daglige opfølgning og til bedre beslutninger om drift og investeringer.
+Dansand har OptiPeople Data Platform på de linjer, der håndterer big bags med sand.
 
-## Situationen
+Tallene bruges i den daglige opfølgning. De bruges også, når der skal tages stilling til driften og til nye investeringer.
 
-Som Danmarks førende sandspecialist har Dansand en produktion, hvor det betyder meget at have overblik over maskinerne og styr på tiden.
+## Udgangspunktet
 
-Virksomheden ville have stærkere data til at vurdere processerne og til at træffe bedre investeringsbeslutninger, når maskiner skulle udskiftes helt eller delvist.
+Dansand er Danmarks førende sandspecialist. I produktionen betyder det meget at vide, hvordan maskinerne kører, og hvor tiden går hen.
+
+Virksomheden ville have bedre tal at vurdere processerne ud fra. Og når en maskine skulle skiftes helt eller delvist, skulle investeringen bygge på data.
 
 > "Vi vil gerne bruge data til at træffe investeringsbeslutninger, når en maskine helt eller delvist skal skiftes. Det sikrer, at vi investerer rigtigt."
 
-## Sådan bruges OptiPeople Data Platform
+## Sådan bruger Dansand OptiPeople Data Platform
 
 OptiPeople Data Platform måler:
 
-- oppetid på maskinlinjerne
-- producerede mængder
+- oppetiden på maskinlinjerne
+- hvor meget der bliver produceret
 
-Data bruges direkte i den løbende opfølgning på driften.
+Tallene går direkte ind i den løbende opfølgning på driften.
 
 ## Resultatet
 
-Hos Dansand bruges data fra OptiPeople Data Platform til at:
+Hos Dansand bruges tallene fra OptiPeople Data Platform til at:
 
-- lægge grunden til produktionsmøderne
-- styrke samarbejdet på tværs af teamet
-- understøtte procesforbedringer
-- understøtte bedre investeringsbeslutninger
+- give produktionsmøderne et fælles udgangspunkt
+- få teamet til at arbejde bedre sammen
+- finde og følge op på procesforbedringer
+- træffe bedre investeringsbeslutninger

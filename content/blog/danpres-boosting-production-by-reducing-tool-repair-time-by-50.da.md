@@ -1,48 +1,48 @@
 ---
-title: "Danpres øger produktionen ved at halvere tiden til værktøjsreparation"
+title: "Danpres: Mere produktion ved at halvere tiden til værktøjsreparation"
 metricLabel: "tid til værktøjsreparation"
-outcome: "To uger med data fra OptiPeople Data Platform viste, at en halvering af tiden til værktøjsreparation frigiver omkring 190.000 emners årlig kapacitet."
+outcome: "To ugers data fra OptiPeople Data Platform viste, at en halvering af tiden til værktøjsreparation giver plads til omkring 190.000 emner mere om året."
 ---
 
 ## Kort fortalt
 
-Danpres brugte data fra OptiPeople Data Platform fra to ugers produktion til at sætte tal på, hvad en reduktion af tiden til værktøjsreparation er værd.
+Danpres tog to ugers produktionsdata fra OptiPeople Data Platform og regnede på, hvad det er værd at bruge mindre tid på at reparere værktøj.
 
-Analysen viste, at en reduktion på **50%** kan frigive betydelig produktionskapacitet inden for den eksisterende plan.
+Bliver tiden skåret ned med **50%**, er der plads til væsentligt mere produktion inden for den plan, der allerede ligger.
 
-## Situationen
+## Udgangspunktet
 
-I uge 35 og 36 registrerede operatørerne hos Danpres stopårsager for værktøjsreparation i OptiPeople Data Platform.
+I uge 35 og 36 registrerede operatørerne hos Danpres stop til værktøjsreparation i OptiPeople Data Platform.
 
-Den registrerede tid til værktøjsreparation over de to uger var **17 timer**.
+På de to uger løb det op i **17 timer**.
 
-Ved at gøre nedetiden til driftsdata fik virksomheden noget klart at forbedre ud fra.
+Nu stod nedetiden sort på hvidt, og så var der noget konkret at arbejde med.
 
-## Hvad analysen viste
+## Det viste regnestykket
 
-Hvis tiden til værktøjsreparation reduceres med **50%**, så:
+Halveres tiden til værktøjsreparation (**50%**), får Danpres:
 
-- frigives **8,5 produktionstimer** hver anden uge
-- frigives **17 produktionstimer** om måneden
+- **8,5 produktionstimer** tilbage hver anden uge
+- **17 produktionstimer** tilbage om måneden
 
-Fordi OptiPeople Data Platform også følger den producerede mængde, kan den frigjorte tid kobles direkte til produktionsvolumen.
+OptiPeople Data Platform tæller også, hvor meget der bliver produceret. Derfor kan de sparede timer regnes direkte om til emner.
 
-Med det gennemsnitlige antal producerede emner per effektiv time i uge 35 og 36:
+I uge 35 og 36 lå gennemsnittet på 936 emner per effektiv time:
 
 `17 timer x 936 emner i gennemsnit per effektiv time = 15.912 emner`
 
-Det svarer til en årlig merproduktion på:
+Over et år giver det en merproduktion på:
 
 `190.044 emner`
 
-## Resultatet
+## Hvad casen viser
 
-Casen viser, hvordan mindre tid brugt på værktøjsreparation kan:
+Mindre tid på værktøjsreparation kan:
 
-- reducere nedetid
-- øge de effektive driftstimer
-- omsætte den planlagte tid til mere produktion
-- potentielt spare på lønudgifterne i vedligehold
+- skære ned på nedetiden
+- give flere effektive driftstimer
+- få mere produktion ud af den tid, der allerede er planlagt
+- måske spare lønkroner i vedligehold
 
 Tim Ostergaard  
 Supply Chain Manager, Danpres

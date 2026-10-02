@@ -1,35 +1,35 @@
 ---
-title: "Optimering af maskinydelse og strømforbrug med OptiPeople Data Platform hos Steel Products"
+title: "Steel Products følger maskinernes ydelse og strømforbrug med OptiPeople Data Platform"
 metricLabel: "Energi per produceret emne"
-outcome: "Maskinydelse og strømforbrug følges per emne, så energiforbruget kobles direkte til produktionen."
+outcome: "Maskinernes ydelse og strømforbrug følges per emne, så energiforbruget kan holdes direkte op mod det, der bliver produceret."
 ---
 
 ## Kort fortalt
 
-Steel Products bruger OptiPeople Data Platform til at få bedre indsigt i maskinernes ydelse og samtidig følge strømforbruget per produceret emne.
+Steel Products bruger OptiPeople Data Platform til at se, hvordan maskinerne kører, og til at følge strømforbruget for hvert emne, der bliver produceret.
 
-## Sådan bruges OptiPeople Data Platform
+## Sådan bruger Steel Products OptiPeople Data Platform
 
-Operatørerne spiller en vigtig rolle i opsætningen ved at registrere stopårsager på flere maskiner og hjælpe med at holde datakvaliteten oppe.
+Operatørerne spiller en stor rolle. De registrerer stopårsager på flere maskiner og er med til at holde tallene korrekte.
 
-Operatørerne vælger også det emne, der produceres, hvilket kobler maskindata til den konkrete produktionsopgave.
+De vælger også, hvilket emne der kører. Så bliver maskindata koblet til den konkrete opgave.
 
-Det gør det muligt at analysere:
+Det gør det muligt at se på:
 
-- stilstandstid
-- udviklingen i produktionsdata knyttet til bestemte emner
-- energiforbrug per produceret emne
+- hvor længe maskinerne står stille
+- hvordan produktionstallene udvikler sig for de enkelte emner
+- energiforbruget per produceret emne
 
-Data om strømforbrug hentes fra de tilkoblede maskiner, og det giver et mere detaljeret billede af drift og energiforbrug over tid.
+Strømforbruget hentes fra de tilkoblede maskiner. Det giver et mere detaljeret billede af driften og energiforbruget over tid.
 
 ## Resultatet
 
-Med opsætningen kan Steel Products:
+Steel Products har nu et bedre grundlag for at:
 
-- følge maskinernes ydelse
-- forbedre datakvaliteten
-- forstå produktionsadfærden på emneniveau
-- følge energiforbruget i forhold til produktionen
+- følge, hvordan maskinerne kører
+- forbedre kvaliteten af data
+- forstå, hvordan produktionen opfører sig på de enkelte emner
+- holde energiforbruget op mod det, der bliver produceret
 
 Jacob Schrøder Nørgaard  
 Project Engineer, Steel Products
