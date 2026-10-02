@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
 import { LogoWall } from "@/components/logo-wall"
-import { TestimonialCarousel, type Testimonial } from "@/components/testimonial-carousel"
+import { CustomerVoices, type CustomerVoice } from "@/components/customer-voices"
 import { HeroModulePicker } from "@/components/hero-module-picker"
 import { ProductChapters } from "@/components/product-chapters"
 import { hasModuleMockup } from "@/components/module-mockups"
@@ -139,7 +139,8 @@ type HomeCopy = {
   /** CTA on each module slide. "{module}" is replaced with the module name. */
   moduleCta: string
   ai: { ariaLabel: string }
-  testimonials: Testimonial[]
+  /** One voice per customer; the first is set large. */
+  testimonials: CustomerVoice[]
   testimonialTitle: string
   /** Link label on each testimonial card that has a matching case study. */
   testimonialCaseLabel: string
@@ -354,48 +355,25 @@ const copy: Record<Locale, HomeCopy> = {
     testimonials: [
       {
         quote:
-          "Comparing our OEE to previous data before OptiPeople Data Platform, we've seen an average increase of 5% within just three months.",
-        author: "Kasper Kielgast Poulsen",
-        title: "Fabrikschef",
-        company: "Dansk Træemballage",
-      },
-      {
-        quote:
           "Over the past two years, OptiPeople Data Platform has helped us increase productivity by approximately 5%. Data collection combined with continuous improvements is key.",
         author: "Tommy Andersen",
-        title: "Production Manager",
+        role: "Production Manager",
         company: "DFI Geisler",
       },
       {
         quote:
           "We now perform maintenance based on operating hours instead of fixed time intervals. This gives us ~40 extra production hours annually and 50% fewer service hours.",
         author: "Stefan Lindell",
-        title: "Lean Project Manager",
+        role: "Lean Project Manager",
         company: "Kvik",
       },
       {
         quote:
-          "OptiPeople Data Platform provides us with valuable management information that was previously unavailable. Our operators monitor uptime on tablets, which has encouraged quicker recovery times.",
-        author: "Kasper Kielgast Poulsen",
-        title: "Fabrikschef",
-        company: "Dansk Træemballage",
-      },
-      {
-        quote:
-          "For some of our operators, recording accurate data has become a kind of competition to maximize productivity. We've achieved 5% higher productivity.",
-        author: "Tommy Andersen",
-        title: "Production Manager",
-        company: "DFI Geisler",
-      },
-      {
-        quote:
-          "We achieved a 5% increase in uptime with automatic downtime cause logging. The data is now valid and reliable with full microstop tracking.",
-        author: "Stefan Lindell",
-        title: "Lean Project Manager",
-        company: "Kvik",
+          "Now stop reasons are being registered and we have a much better overview of our machines’ efficiency.",
+        company: "Fiberline Composites",
       },
     ],
-    testimonialTitle: "What our customers say",
+    testimonialTitle: "In their own words.",
     testimonialCaseLabel: "Read the case",
     bento: {
       eyebrow: "Customer results",
@@ -561,27 +539,25 @@ const copy: Record<Locale, HomeCopy> = {
     testimonials: [
       {
         quote:
-          "Sammenlignet med vores OEE før OptiPeople Data Platform har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
-        author: "Kasper Kielgast Poulsen",
-        title: "Fabrikschef",
-        company: "Dansk Træemballage",
-      },
-      {
-        quote:
           "OptiPeople Data Platform har hjulpet os med at øge produktiviteten med cirka 5%. Dataindsamling kombineret med løbende forbedringer er nøglen.",
         author: "Tommy Andersen",
-        title: "Production Manager",
+        role: "Production Manager",
         company: "DFI Geisler",
       },
       {
         quote:
           "Vi vedligeholder nu efter driftstimer i stedet for faste intervaller. Det giver omkring 40 ekstra produktionstimer årligt.",
         author: "Stefan Lindell",
-        title: "Lean Project Manager",
+        role: "Lean Project Manager",
         company: "Kvik",
       },
+      {
+        quote:
+          "Nu bliver stopårsagerne registreret, og vi har et meget bedre overblik over maskinernes effektivitet.",
+        company: "Fiberline Composites",
+      },
     ],
-    testimonialTitle: "Det siger kunderne",
+    testimonialTitle: "Med deres egne ord.",
     testimonialCaseLabel: "Læs casen",
     bento: {
       eyebrow: "Kunderesultater",
@@ -660,7 +636,7 @@ const copy: Record<Locale, HomeCopy> = {
  * Slugs and `customer` are the same across translations, so the default-locale
  * set is enough here. The locale prefix on the link comes from next-intl.
  */
-function linkTestimonials(testimonials: Testimonial[]): Testimonial[] {
+function linkTestimonials(testimonials: CustomerVoice[]): CustomerVoice[] {
   const slugByCustomer = new Map<string, string>()
   for (const study of getCaseStudies()) {
     const key = study.customer?.toLowerCase()
@@ -841,12 +817,12 @@ export default async function Home({
         />
       </section>
 
-      {/* Testimonial Carousel */}
-      <TestimonialCarousel
-        testimonials={linkTestimonials(t.testimonials)}
+      {/* Customer voices, an editorial spread instead of the carousel that
+          sat here (TestimonialCarousel is kept for other pages). */}
+      <CustomerVoices
+        voices={linkTestimonials(t.testimonials)}
         title={t.testimonialTitle}
         caseLabel={t.testimonialCaseLabel}
-        className="py-12 lg:py-28"
       />
 
       {/* Customer Results, Scandinavian bento of measured outcomes */}
