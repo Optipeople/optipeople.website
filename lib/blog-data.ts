@@ -9,12 +9,16 @@ export type BlogPost = {
   title: string
   content: string
   date: string
+  /** Last real edit, from `updated` frontmatter, falling back to `date`. */
+  updated: string
   author: string
   category: string
   image?: string
   summary: string
   /** Locale this post's prose is actually written in, after fallback. */
   contentLocale: Locale
+  /** Locales with prose of their own: English plus every translation file. */
+  translatedLocales: Locale[]
   /** Case-study fields (optional, used by the Cases showcase) */
   customer?: string
   metric?: string
@@ -48,6 +52,10 @@ function sourceFileName(slug: string) {
 
 function translationFileName(slug: string, locale: Locale) {
   return `${slug}.${locale}.md`
+}
+
+function hasTranslation(slug: string, locale: Locale) {
+  return locale === defaultLocale || fs.existsSync(path.join(postsDirectory, translationFileName(slug, locale)))
 }
 
 /**
@@ -148,6 +156,14 @@ function asString(value: unknown) {
   return typeof value === "string" ? value : ""
 }
 
+/** gray-matter turns an unquoted YAML date into a Date, so accept both. */
+function asDateString(value: unknown) {
+  if (value instanceof Date) {
+    return Number.isNaN(value.getTime()) ? "" : value.toISOString().slice(0, 10)
+  }
+  return asString(value)
+}
+
 /**
  * Build one post in the requested locale.
  *
@@ -173,11 +189,14 @@ function parsePost(slug: string, locale: Locale): BlogPost | undefined {
     title,
     content,
     date: asString(source.data.date),
+    // A translation can carry its own `updated`, since it is edited on its own.
+    updated: asDateString(data.updated) || asString(source.data.date),
     category: asString(source.data.category),
     author: asString(data.author),
     image: resolveImagePath(data.image),
     summary: createSummary(content, title),
     contentLocale: translation ? locale : defaultLocale,
+    translatedLocales: locales.filter((item) => hasTranslation(slug, item)),
     ...caseFields(data),
   }
 }
