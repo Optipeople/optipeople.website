@@ -7,6 +7,7 @@ import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
 import { LogoWall } from "@/components/logo-wall"
 import { TestimonialCarousel, type Testimonial } from "@/components/testimonial-carousel"
 import { HeroModulePicker } from "@/components/hero-module-picker"
+import { ProductChapters, type ProductChapter } from "@/components/product-chapters"
 import { hasModuleMockup } from "@/components/module-mockups"
 import { Button } from "@/components/ui/button"
 import { moduleCatalog, moduleChipRows } from "@/content/modules-catalog"
@@ -122,7 +123,10 @@ type HomeCopy = {
      */
     moduleRows: string[][]
   }
-  tabSlides: SlideData[]
+  /** The three products the page leads with, stacked under the hero. */
+  chapters: ProductChapter[]
+  /** One line under the chapters, for visitors not ready to pick a product. */
+  advisory: { text: string; linkLabel: string; href: string }
   logoWallTitle: string
   trust: {
     heading: string
@@ -148,7 +152,6 @@ type HomeCopy = {
     allCases: string
     caseCards: CaseCard[]
   }
-  tabsAriaLabel: string
 }
 
 /**
@@ -179,9 +182,11 @@ type ModuleSlideCopy = {
  * current order in content/modules-catalog.ts, so a reorder is worth a look
  * here. `tone` decides the title, the supporting line and the arrow button.
  *
- * Two placements are load-bearing rather than decorative: AI agents sits on a
- * light card because its mockup is the only dark one, and OEE sits on the
- * deepest green because its gauges carry the most colour of any slide.
+ * MES, IoT and AI agents keep their colours for when they are shown, but the
+ * homepage leaves them out (see CHAPTER_MODULE_IDS), so the alternation is
+ * tuned for the eight that remain: Maintenance and Planning took the sage and
+ * the sand those three freed up. OEE sits on the deepest green because its
+ * gauges carry the most colour of any slide.
  */
 type ModuleAccent = { bg: string; tone: "light" | "dark" }
 
@@ -190,50 +195,60 @@ const MODULE_SLIDE_ACCENTS: Record<string, ModuleAccent> = {
   iot: { bg: "#c7d9cd", tone: "dark" },
   oee: { bg: "#243b2f", tone: "light" },
   "ai-agents": { bg: "#d8d4c6", tone: "dark" },
-  maintenance: { bg: "#2a3446", tone: "light" },
+  maintenance: { bg: "#c7d9cd", tone: "dark" },
   ems: { bg: "#0f2f33", tone: "light" },
   qms: { bg: "#c5d8e8", tone: "dark" },
   orders: { bg: "#1c1f26", tone: "light" },
-  planning: { bg: "#2f5140", tone: "light" },
+  planning: { bg: "#d8d4c6", tone: "dark" },
   documents: { bg: "#e4ded4", tone: "dark" },
   analysis: { bg: "#3d4436", tone: "light" },
 }
+
+/**
+ * Modules that have a product chapter of their own above the carousel. The
+ * carousel is where the visitor explores the rest of the platform, so these
+ * are left out of it rather than told twice. AI agents has the AI section.
+ */
+const CHAPTER_MODULE_IDS = new Set(["mes", "iot", "ai-agents"])
 
 /** A module added to the catalog before it is given a colour still gets a card. */
 const MODULE_SLIDE_FALLBACK: ModuleAccent = { bg: "#243b2f", tone: "light" }
 
 /**
  * Builds the module carousel by walking the catalog, so the slides are always
- * the modules the hero chips and the nav offer, in the same order. A module
- * with no copy yet still gets a slide, falling back to its catalog blurb.
+ * the modules the hero chips and the nav offer, in the same order, minus the
+ * ones that have a chapter of their own. A module with no copy yet still gets
+ * a slide, falling back to its catalog blurb.
  */
 function buildModuleSlides(
   locale: Locale,
   copyById: Record<string, ModuleSlideCopy>,
   ctaTemplate: string
 ): SlideData[] {
-  return moduleCatalog.map((entry) => {
-    const label = entry.label[locale]
-    const slide = copyById[entry.id]
-    // Modules we have no presentable screenshot for draw their visual in code.
-    const mockup = hasModuleMockup(entry.id) ? entry.id : undefined
-    const accent = MODULE_SLIDE_ACCENTS[entry.id] ?? MODULE_SLIDE_FALLBACK
-    return {
-      title: label,
-      description: slide?.description ?? entry.blurb[locale],
-      moduleMockup: mockup,
-      imageSrc: mockup ? undefined : slide?.imageSrc ?? "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
-      imageAlt: mockup ? undefined : slide?.imageAlt ?? label,
-      imageFit: slide?.imageFit,
-      imagePosition: slide?.imagePosition,
-      primaryLabel: ctaTemplate.replace("{module}", label),
-      primaryHref: entry.href,
-      bgColor: "bg-black",
-      layout: "vertical",
-      accentColor: accent.bg,
-      textTone: accent.tone,
-    }
-  })
+  return moduleCatalog
+    .filter((entry) => !CHAPTER_MODULE_IDS.has(entry.id))
+    .map((entry) => {
+      const label = entry.label[locale]
+      const slide = copyById[entry.id]
+      // Modules we have no presentable screenshot for draw their visual in code.
+      const mockup = hasModuleMockup(entry.id) ? entry.id : undefined
+      const accent = MODULE_SLIDE_ACCENTS[entry.id] ?? MODULE_SLIDE_FALLBACK
+      return {
+        title: label,
+        description: slide?.description ?? entry.blurb[locale],
+        moduleMockup: mockup,
+        imageSrc: mockup ? undefined : slide?.imageSrc ?? "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
+        imageAlt: mockup ? undefined : slide?.imageAlt ?? label,
+        imageFit: slide?.imageFit,
+        imagePosition: slide?.imagePosition,
+        primaryLabel: ctaTemplate.replace("{module}", label),
+        primaryHref: entry.href,
+        bgColor: "bg-black",
+        layout: "vertical",
+        accentColor: accent.bg,
+        textTone: accent.tone,
+      }
+    })
 }
 
 /** Which of the three hero headline directions renders. */
@@ -266,48 +281,52 @@ const copy: Record<Locale, HomeCopy> = {
         ["orders", "planning", "ems", "maintenance", "documents"],
       ],
     },
-    tabsAriaLabel: "Team solutions",
-    tabSlides: [
+    chapters: [
       {
-        tab: "Manufacturing companies",
-        title: "Know Your Factory. In Real Time.",
-        description:
-          "OptiPeople connects machines, processes, and people into one live operational view. See bottlenecks as they happen, act faster, and run production with facts instead of gut feeling.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
-        imageAlt: "Live OptiPeople operator panel showing real-time machine status, output and production timeline",
-        primaryLabel: "Explore manufacturing solutions",
-        primaryHref: "/modules/mes",
-        bgColor: "bg-blue-50/0",
-        layout: "overlay",
-        overlay: "dark",
+        id: "mes",
+        eyebrow: "Modular MES",
+        title: "Your MES, one module at a time.",
+        body: "Start with orders and OEE on a single line. Add planning, routes and quality when the next question turns up. It runs on its own, or next to your ERP.",
+        points: [
+          "Start, stop and report orders at the machine",
+          "Live OEE across shifts, lines and machines",
+          "Planning with routes and timelines",
+        ],
+        ctaLabel: "Explore Modular MES",
+        ctaHref: "/modules/mes",
       },
       {
-        tab: "OEMs and machine builders",
-        title: "Turn Machines Into Platforms",
-        description:
-          "OptiPeople Data Platform lets you ship connected machines with built-in insight. Monitor performance in the field, support customers proactively, and build recurring digital services on top of your equipment.",
-        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
-        imageAlt: "OptiPeople efficiency report with live Availability, Performance and OEE for a connected machine",
-        primaryLabel: "Learn About OEM Benefits",
-        primaryHref: "/solutions/oems",
-        bgColor: "bg-blue-50/0",
-        layout: "overlay",
-        overlay: "light",
+        id: "iot",
+        eyebrow: "IoT",
+        title: "Connect what you already have.",
+        body: "New controls, a press from 1998, the sensor kit from an old project and the systems you already run. We read from all of it, and add hardware only where there is nothing to read.",
+        points: [
+          "Siemens, Fanuc, OPC UA, Modbus, MQTT and more",
+          "Reuses your existing hardware, historians and SCADA",
+          "A gateway only where a machine has nothing to give",
+        ],
+        ctaLabel: "Explore IoT",
+        ctaHref: "/modules/iot",
       },
       {
-        tab: "Service and aftermarket teams",
-        title: "Fix Problems Before Customers Feel Them",
-        description:
-          "Give service teams real visibility into machine health and usage. Plan maintenance, reduce firefighting, and turn service into a competitive advantage.",
-        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
-        imageAlt: "Registered stop log with service-critical tags for proactive maintenance and service",
-        primaryLabel: "Optimize Your Service Ops",
-        primaryHref: "/solutions/service",
-        bgColor: "bg-blue-50/0",
-        layout: "overlay",
-        overlay: "light",
+        id: "assist",
+        eyebrow: "AI · Opti Assist",
+        title: "Ask your factory. Get an answer.",
+        body: "Opti Assist reads your manuals, procedures and live production data. Operators get the right step at the machine. Managers get the numbers behind the week, with the sources to check.",
+        points: [
+          "Answers from your own documents and SOPs",
+          "Grounded in live data from your machines",
+          "Not locked to one AI model, and works on your data only",
+        ],
+        ctaLabel: "Meet Opti Assist",
+        ctaHref: "/ai/chat",
       },
     ],
+    advisory: {
+      text: "Not sure where to start? We advise on MES, IoT and AI, from the first assessment to the business case.",
+      linkLabel: "Talk to an advisor",
+      href: "/services/smart-operations",
+    },
     logoWallTitle: "Trusted by industry leaders",
     trust: {
       heading: "Trusted by leading manufacturers.",
@@ -318,8 +337,8 @@ const copy: Record<Locale, HomeCopy> = {
       cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
-      eyebrow: "Platform modules",
-      title: "One module at a time. One data foundation.",
+      eyebrow: "Explore the platform",
+      title: "Every module. The same data.",
       subtitle:
         "Each module answers a specific operational question, and they all read from the same machine signals, so a stop registered on the floor lands in OEE, in the maintenance history, and in the monthly report without anyone re-entering it.",
       ariaLabel: "Platform modules",
@@ -510,48 +529,52 @@ const copy: Record<Locale, HomeCopy> = {
         ["orders", "planning", "ems", "maintenance", "documents"],
       ],
     },
-    tabsAriaLabel: "Løsninger til teams",
-    tabSlides: [
+    chapters: [
       {
-        tab: "Produktionsvirksomheder",
-        title: "Kend din fabrik. I realtid.",
-        description:
-          "OptiPeople kobler maskiner, processer og mennesker sammen i ét overblik, der opdaterer sig selv. Se flaskehalsen, mens den opstår, reager hurtigere, og styr produktionen efter fakta.",
-        imageSrc: "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
-        imageAlt: "Live OptiPeople operatørpanel med maskinstatus, output og produktionstidslinje i realtid",
-        primaryLabel: "Se løsningen til produktion",
-        primaryHref: "/modules/mes",
-        bgColor: "bg-blue-50/0",
-        layout: "overlay",
-        overlay: "dark",
+        id: "mes",
+        eyebrow: "Modulært MES",
+        title: "Jeres MES. Ét modul ad gangen.",
+        body: "Start med ordrer og OEE på én linje. Tag planlægning, ruter og kvalitet med, når næste spørgsmål melder sig. Det kører fint for sig selv, eller sammen med jeres ERP.",
+        points: [
+          "Start, stop og meld ordrer tilbage ved maskinen",
+          "Live OEE på tværs af skift, linjer og maskiner",
+          "Planlægning med ruter og tidslinjer",
+        ],
+        ctaLabel: "Se Modulært MES",
+        ctaHref: "/modules/mes",
       },
       {
-        tab: "OEM'er og maskinbyggere",
-        title: "Gør maskiner til platforme",
-        description:
-          "Med OptiPeople Data Platform kan I levere maskiner, der er koblet på, med indblikket bygget ind. Hold øje med, hvordan de kører ude hos kunderne, hjælp før de ringer, og byg service oven på udstyret.",
-        imageSrc: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
-        imageAlt: "OptiPeople effektivitetsrapport med live tilgængelighed, performance og OEE for en forbundet maskine",
-        primaryLabel: "Se løsningen til maskinbyggere",
-        primaryHref: "/solutions/oems",
-        bgColor: "bg-blue-50/0",
-        layout: "overlay",
-        overlay: "light",
+        id: "iot",
+        eyebrow: "IoT",
+        title: "Kobl det på, I allerede har.",
+        body: "Nye styringer, en presse fra 1998, sensorsættet fra et gammelt projekt og de systemer, I kører i dag. Vi læser fra det hele og sætter kun ny hardware op, hvor der ikke er noget at læse fra.",
+        points: [
+          "Siemens, Fanuc, OPC UA, Modbus, MQTT og flere",
+          "Genbruger jeres hardware, historians og SCADA",
+          "Kun en gateway dér, hvor maskinen intet har at give",
+        ],
+        ctaLabel: "Se IoT",
+        ctaHref: "/modules/iot",
       },
       {
-        tab: "Service og eftermarked",
-        title: "Løs problemer før kunden mærker dem",
-        description:
-          "Giv serviceholdet indblik i, hvordan maskinerne har det, og hvor meget de bliver brugt. Planlæg vedligeholdet, skær brandslukningen ned, og gør service til noget, I vinder på.",
-        imageSrc: "/images/Mockups/Report-Individual-Events-Desktop.png",
-        imageAlt: "Log over registrerede stop med service-kritiske tags til proaktiv vedligehold og service",
-        primaryLabel: "Se løsningen til service",
-        primaryHref: "/solutions/service",
-        bgColor: "bg-blue-50/0",
-        layout: "overlay",
-        overlay: "light",
+        id: "assist",
+        eyebrow: "AI · Opti Assist",
+        title: "Spørg fabrikken. Få et svar.",
+        body: "Opti Assist kender jeres manualer, procedurer og produktionsdata, som de ser ud lige nu. Operatøren får det rigtige trin ved maskinen. Lederen får tallene bag ugen, med kilderne til at tjekke dem.",
+        points: [
+          "Svar fra jeres egne dokumenter og SOP'er",
+          "Bygger på live data fra jeres maskiner",
+          "Ikke låst til én AI-model, og kun på jeres data",
+        ],
+        ctaLabel: "Mød Opti Assist",
+        ctaHref: "/ai/chat",
       },
     ],
+    advisory: {
+      text: "I tvivl om, hvor I skal starte? Vi rådgiver om MES, IoT og AI, fra den første vurdering til business casen.",
+      linkLabel: "Tal med en rådgiver",
+      href: "/services/smart-operations",
+    },
     logoWallTitle: "Virksomheder, der kører på OptiPeople",
     trust: {
       heading: "Førende produktionsvirksomheder bruger OptiPeople.",
@@ -562,8 +585,8 @@ const copy: Record<Locale, HomeCopy> = {
       cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
-      eyebrow: "Platformmoduler",
-      title: "Ét modul ad gangen. Ét datagrundlag.",
+      eyebrow: "Udforsk platformen",
+      title: "Alle moduler. De samme data.",
       subtitle:
         "Hvert modul svarer på et konkret spørgsmål i driften, og de læser alle de samme maskinsignaler. Et stop, der bliver registreret på gulvet, slår igennem i OEE, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
       ariaLabel: "Platformmoduler",
@@ -799,12 +822,23 @@ export default async function Home({
           />
         </div>
 
-        <SlideCarousel
-          slides={t.tabSlides}
-          navigationType={["tabs"]}
-          ariaLabel={t.tabsAriaLabel}
-          className="mt-8"
-        />
+        {/* The three products, stacked to scroll rather than slide. The
+            audience slider that sat here is gone from the page; SlideCarousel
+            itself stays for the module and AI sections below. */}
+        <ProductChapters chapters={t.chapters} className="mt-8" />
+
+        <div className="mt-10 px-[var(--edge)] sm:mt-14">
+          <p className="mx-auto max-w-2xl text-balance text-center text-lg leading-relaxed text-foreground/78">
+            {t.advisory.text}{" "}
+            <Link
+              href={t.advisory.href}
+              className="group inline-flex items-center gap-1 whitespace-nowrap font-medium text-foreground underline decoration-foreground/25 underline-offset-4 transition-colors hover:decoration-foreground"
+            >
+              {t.advisory.linkLabel}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </p>
+        </div>
       </section>
 
       {/* Customer Logo Wall */}
