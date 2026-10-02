@@ -225,7 +225,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
   da: {
     eyebrow: "Dataplatform",
     title: "Arkitekturen bag OptiPeople Data Platform",
-    lede: "Data forlader produktionen over krypterede forbindelser, bliver koblet til ordrer, skift, maskiner og operatører på vejen ind, og lander i en datacontainer, der kun er jeres. Jeres team, jeres systemer og jeres AI-assistenter læser alle det samme.",
+    lede: "Data forlader produktionen over krypterede forbindelser, bliver koblet til ordrer, skift, maskiner og operatører på vejen ind, og lander i en datacontainer, der kun er jeres. Jeres folk, jeres systemer og jeres AI-assistenter arbejder alle ud fra de samme data.",
     site: {
       label: "Produktionssted",
       nodes: [
@@ -247,7 +247,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
         {
           id: "sources",
           title: "Øvrige kilder",
-          body: "ERP, historik-databaser, filer og andre systemer",
+          body: "ERP, historikdatabaser, filer og andre systemer",
         },
       ],
     },
@@ -274,7 +274,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
               id: "context",
               title: "Kontekstmotor",
               body: "Kobler data til ordrer, skift, maskiner og operatører",
-              badge: "Data i kontekst",
+              badge: "Data med sammenhæng",
             },
             {
               id: "processing",
@@ -289,9 +289,9 @@ const copy: Record<Locale, ArchitectureCopy> = {
           nodes: [
             {
               id: "container",
-              title: "Kundens datacontainer",
-              body: "Konfiguration, transaktioner og telemetri, dedikeret pr. kunde",
-              badge: "Ingen delte data",
+              title: "Jeres egen datacontainer",
+              body: "Konfiguration, transaktioner og telemetri. Én container pr. kunde",
+              badge: "Deles ikke med andre",
               highlight: true,
             },
             {
@@ -345,18 +345,18 @@ const copy: Record<Locale, ArchitectureCopy> = {
       ],
     },
     assurances: [
-      { title: "Microsoft Azure", body: "Drift i skyen, i enterprise-klasse" },
+      { title: "Microsoft Azure", body: "Professionel hosting i Microsofts sky" },
       {
         title: "Krypteret hele vejen",
-        body: "TLS undervejs, krypteret når det ligger lagret",
+        body: "Krypteret med TLS på vejen og i lageret",
       },
       {
-        title: "Fuld dataisolation",
-        body: "Dedikeret datacontainer pr. kunde",
+        title: "Jeres data for sig",
+        body: "Én datacontainer pr. kunde",
       },
       {
-        title: "Kontrolleret adgang",
-        body: "Kun autentificerede og autoriserede endpoints",
+        title: "Styr på adgangen",
+        body: "Alle endpoints kræver login og rettigheder",
       },
     ],
   },

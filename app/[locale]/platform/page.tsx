@@ -24,7 +24,7 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   da: {
     title: "Platform | OptiPeople",
     description:
-      "Se OptiPeople Data Platform: MES, OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter i ét samlet billede af driften.",
+      "OptiPeople Data Platform er et modulært MES med OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter. Alle modulerne bygger på de samme data om jeres drift.",
   },
 }
 
@@ -101,59 +101,59 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "Én modulopbygget platform til hele produktionen",
-      lede: "OptiPeople Data Platform kobler produktion, planlægning, kvalitet, vedligehold, energi og analyse sammen på ét fælles datagrundlag. Tag ét modul eller ti: alle moduler arbejder på de samme data, så det, ét team registrerer, kan de andre bruge.",
+      lede: "OptiPeople Data Platform kobler produktion, planlægning, kvalitet, vedligehold, energi og analyse sammen på ét fælles datagrundlag. Tag ét modul eller ti. Alle modulerne henter fra de samme data, så det, ét team registrerer, kan de andre bruge.",
       cta: "Book en demo",
       jump: "Se modulerne",
     },
     proof: {
       title: "Det, platformen kører på",
       items: [
-        { metric: "11", label: "Moduler på ét fælles datagrundlag, slået til efterhånden som I får brug for dem" },
-        { metric: "1", label: "Struktureret registrering pr. maskine, ordre, batch og skift" },
-        { metric: "Alle", label: "Protokoller og maskinaldre, både nye PLC'er og gammelt udstyr" },
+        { metric: "11", label: "Moduler, der deler de samme data. I slår dem til, når I får brug for dem" },
+        { metric: "1", label: "Samlet registrering pr. maskine, ordre, batch og skift" },
+        { metric: "Alle", label: "Protokoller og maskiner, uanset alder. Nye PLC'er og gammelt udstyr" },
       ],
     },
     intro: {
-      title: "De fleste fabrikker har ikke et dataproblem. De har et data-i-stumper-problem.",
-      body: "OEE-tallene ligger i ét system, vedligeholdsloggen i et andet, kvaliteten i et ringbind, og energien på en regning, der kommer en måned for sent. Ingen tager fejl, men ingen kan se hele billedet. OptiPeople Data Platform lægger det hele på det samme fundament, koblet til de samme maskiner, ordrer og skift. Så flytter diskussionen sig fra, hvis tal der er rigtigt, til hvad I gør ved det.",
+      title: "De fleste fabrikker mangler ikke data. Data ligger bare i stumper.",
+      body: "OEE-tallene ligger i ét system, vedligeholdsloggen i et andet, kvaliteten i et ringbind, og energien på en regning, der kommer en måned for sent. Ingen gør noget forkert, men ingen kan se det hele. OptiPeople Data Platform lægger det hele på det samme fundament, koblet til de samme maskiner, ordrer og skift. Så flytter diskussionen sig fra, hvis tal der er rigtigt, til hvad I gør ved det.",
     },
     steps: {
       title: "Sådan hænger det sammen",
       items: [
         {
-          title: "Forbind",
+          title: "Kobl på",
           description:
             "Kobl maskiner, sensorer og systemer på gennem IoT-modulet: PLC'er, gateways og gammelt udstyr, uanset protokol og alder.",
         },
         {
-          title: "Opsaml",
+          title: "Saml",
           description:
             "Data lander ét sted, koblet til maskiner, ordrer, batches og skift, i stedet for spredt ud over systemer og regneark.",
         },
         {
-          title: "Analysér",
+          title: "Følg med",
           description:
-            "Følg de tal, der betyder noget hos jer, mens det sker, og få rapporter om produktion, tab, kvalitet og omkostninger, der laver sig selv. De samme tal for alle.",
+            "Følg de tal, der betyder noget for jer, mens det sker. Rapporterne om produktion, tab, kvalitet og omkostninger laver sig selv, og alle ser de samme tal.",
         },
         {
           title: "Handl",
           description:
-            "Gør tallene til handling: opret opgaver, planlæg vedligehold, ret planen til, og lad AI svare på spørgsmål i jeres egne data.",
+            "Brug tallene til noget: opret opgaver, planlæg vedligehold, ret planen til, og spørg AI om jeres egne data.",
         },
       ],
     },
     modules: {
       title: "Modulerne",
       subtitle:
-        "Hvert modul løser en konkret opgave i driften, og sammen giver de ét samlet overblik over gulvet.",
+        "Hvert modul løser en konkret opgave i driften. Sammen giver de jer overblikket over hele gulvet.",
       cards: moduleIndexLinks("da"),
     },
     visual: {
       eyebrow: "Produktvisning",
-      title: "De samme tal, dér hvor beslutningen bliver truffet",
+      title: "De samme tal, uanset hvor beslutningen bliver taget",
       body: "På gulvet er det et operatørpanel. På kontoret er det en rapport. På mødet er det tallet, ingen sætter spørgsmålstegn ved, fordi det hele kommer fra den samme registrering.",
     },
-    logos: "Brugt af produktionsvirksomheder i Norden og resten af verden",
+    logos: "Produktionsvirksomheder i Norden og ude i verden bruger OptiPeople",
   },
 }
 

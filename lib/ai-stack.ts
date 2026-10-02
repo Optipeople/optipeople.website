@@ -62,7 +62,7 @@ export const aiStackSliderCopy: Record<
     eyebrow: "OptiPeople AI",
     title: "Den AI, jeres drift har brug for.",
     subtitle:
-      "Nem at bruge for alle. Stærk nok til det svære i produktionen.",
+      "Let at gå til for alle, og god nok til de svære opgaver i produktionen.",
   },
 }
 
@@ -148,16 +148,16 @@ export const aiCapabilities: AiCapability[] = [
       da: {
         cardTitle: "Chat",
         cardSubtitle: "En AI-assistent til alle i virksomheden.",
-        metaTitle: "Opti Assist | AI-chat til din drift",
+        metaTitle: "Opti Assist | AI-chat til jeres drift",
         metaDescription:
           "Opti Assist er en AI-chat til hele teamet. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, virksomheden ved i forvejen.",
         eyebrow: "Chat · Opti Assist",
         heroTitle: "En AI-chat, alle i driften kan bruge",
         heroBody:
-          "Opti Assist er én chat til hele huset. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, I selv har skrevet ned. Spørg om nattens OEE, om den stopårsag, der bliver ved med at komme igen på linje 3, eller om hvordan omstillingen skal laves. Du får svaret i almindeligt sprog, og du kan se, hvor det kommer fra.",
+          "Opti Assist er én chat til hele huset. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, I selv har skrevet ned. Spørg om nattens OEE, om den stopårsag, der bliver ved med at komme igen på linje 3, eller om hvordan omstillingen skal laves. I får svaret i almindeligt sprog og kan se, hvor det kommer fra.",
         valueTitle: "Én assistent til hele virksomheden",
         valueBody:
-          "Ingen skal have en dataanalytiker ved siden af sig for at få et svar. Det meste af det, en fabrik ved, ligger spredt: i dashboards, i arbejdsbeskrivelser, i vedligeholdsloggen og i hovedet på et par erfarne kolleger. Når spørgsmålet kommer midt i et skift, er der ikke tid til at lede fire steder. Opti Assist samler det ét sted. Den kobler det, I har skrevet ned, sammen med det, der sker i OptiPeople Data Platform lige nu. Så kan alle spørge, se hvor svaret kommer fra og handle på det. Også dem, der står ude ved maskinen.",
+          "Ingen skal have en dataanalytiker ved siden af sig for at få et svar. Det meste af det, en fabrik ved, ligger spredt: i dashboards, i arbejdsbeskrivelser, i vedligeholdsloggen og i hovedet på et par erfarne kolleger. Når spørgsmålet kommer midt i et skift, er der ikke tid til at lede fire steder. Opti Assist samler trådene. Den kobler det, I har skrevet ned, sammen med det, der sker i OptiPeople Data Platform lige nu. Så kan alle spørge, se, hvor svaret kommer fra, og gøre noget ved det. Også dem, der står ude ved maskinen.",
         capabilitiesTitle: "Det kan Opti Assist",
         capabilities: [
           {
@@ -168,7 +168,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Svar ud fra det, I ved",
             description:
-              "Vedhæft dokumenter, arbejdsbeskrivelser og rapporter, eller spørg direkte ind i det, virksomheden har liggende. Svaret siger, hvor det kommer fra, så I selv kan åbne originalen og tjekke efter.",
+              "Vedhæft dokumenter, arbejdsbeskrivelser og rapporter, eller søg direkte i det, virksomheden har liggende. Svaret siger, hvor det kommer fra, så I selv kan åbne originalen og tjekke efter.",
           },
           {
             title: "Tallene er dem fra i dag",
@@ -186,12 +186,12 @@ export const aiCapabilities: AiCapability[] = [
               "Opti Assist svarer ud fra det, I selv har: OEE, stopårsager, vedligeholdslogs, energital og jeres egne dokumenter. Hvem der kan se hvad, følger de rettigheder, I selv sætter.",
           },
           {
-            title: "Fra svar til noget, der sker",
+            title: "Svaret kan sætte noget i gang",
             description:
               "Et godt svar er tit starten på en opgave. Lad den skrive udkastet til skiftrapporten, samle de største stopårsager til morgenmødet eller sende resultatet videre til et workflow eller en agent.",
           },
         ],
-        useCasesTitle: "Sådan bruger teams det",
+        useCasesTitle: "Sådan bliver det brugt",
         useCases: [
           {
             title: "Før morgenmødet",
@@ -206,7 +206,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Til ugerapporten",
             description:
-              "En fabrikschef spørger, hvordan ugen gik i forhold til sidste uge: nedetid, produceret antal og energi pr. enhed. Svaret bygger på data fra i dag, og kilderne kan tjekkes.",
+              "En fabrikschef spørger, hvordan ugen gik sammenlignet med ugen før: nedetid, produceret antal og energi pr. enhed. Svaret bygger på de aktuelle tal, og kilderne kan tjekkes.",
           },
         ],
         ctaTitle: "Giv hele teamet en AI-assistent",
@@ -313,7 +313,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Starter, når der faktisk sker noget",
             description:
-              "Et workflow kan gå i gang på et stop, på et fast tidspunkt, på et nyt dokument eller på en forespørgsel fra en kollega. Starten tager det med, det handler om: hvilken maskine, hvilken ordre, hvilket skift. Så ved alle de næste trin, hvad de arbejder på.",
+              "Et workflow kan gå i gang på et stop, på et fast tidspunkt, på et nyt dokument eller på en forespørgsel fra en kollega. Workflowet ved fra start, hvad det handler om: hvilken maskine, hvilken ordre, hvilket skift. Så ved alle de næste trin, hvad de arbejder på.",
           },
           {
             title: "AI, hvor det gør en forskel",
@@ -321,14 +321,14 @@ export const aiCapabilities: AiCapability[] = [
               "Saml nattens stop i et kort sammendrag. Sæt en fejlbeskrivelse i den rigtige kategori. Find ordrenumrene i et dokument. Skriv første udkast til rapporten. I sætter selv rammerne for, hvad AI må svare.",
           },
           {
-            title: "Del op, gentag, sæt sammen",
+            title: "Del op og gentag",
             description:
               "Send de lange stop den ene vej og de korte den anden. Kør det samme trin igennem alle maskiner på en linje eller alle ordrer i en serie. Bland dataopslag, AI og beskeder i det samme flow.",
           },
           {
             title: "Et menneske siger god for det",
             description:
-              "Alt skal ikke køre uden opsyn. Sæt et godkendelsestrin ind, så en person siger ja, før opgaven bliver oprettet eller rapporten sendt. Workflowet laver det tunge arbejde. Underskriften er jeres.",
+              "Alt skal ikke køre uden opsyn. Sæt et godkendelsestrin ind, så en person siger ja, før opgaven bliver oprettet eller rapporten sendt. Workflowet laver det tunge arbejde. Det sidste ord er jeres.",
           },
           {
             title: "Hænger sammen med jeres systemer",
@@ -336,27 +336,27 @@ export const aiCapabilities: AiCapability[] = [
               "Et workflow læser jeres tal i platformen og kan nå de andre systemer gennem integrationer. Så lander resultatet i ERP'et, i mailen eller i det værktøj, teamet alligevel sidder i.",
           },
         ],
-        useCasesTitle: "Sådan bruger teams det",
+        useCasesTitle: "Sådan bliver det brugt",
         useCases: [
           {
             title: "Skiftrapporten skriver sig selv",
             description:
-              "Når skiftet slutter, henter workflowet OEE, produceret antal og stopårsager. AI skriver et kort sammendrag, og det ryger videre til næste skift og til teamlederen. Samme opsætning hvert skift, uden at nogen taster den ind.",
+              "Når skiftet slutter, henter workflowet OEE, produceret antal og stopårsager. AI skriver et kort sammendrag, og det ryger videre til næste skift og til teamlederen. Samme form hver gang, og ingen skal taste den ind.",
           },
           {
             title: "Der bliver fulgt op på nedetiden",
             description:
-              "Et stop trækker ud og bryder grænsen. Workflowet sætter årsagen i den rigtige kategori, opretter en opgave til vedligehold med maskinens seneste historik og giver teknikeren på vagt besked.",
+              "Et stop varer længere, end I har sat som grænse. Workflowet sætter årsagen i den rigtige kategori, opretter en opgave til vedligehold med maskinens seneste historik og giver teknikeren på vagt besked.",
           },
           {
             title: "Strømmen, der løber, mens intet kører",
             description:
-              "Hver nat holder et workflow energitallene op mod produktionen. De maskiner, der trækker strøm uden at lave noget, kommer på en liste, og listen ligger i den rigtige indbakke før næste planlægningsmøde.",
+              "Et workflow, der kører efter en fast plan, holder energitallene op mod produktionen. De maskiner, der trækker strøm uden at lave noget, kommer på en liste, og listen ligger i den rigtige indbakke før næste planlægningsmøde.",
           },
         ],
         ctaTitle: "Automatiser det, ingen har lyst til at lave to gange",
         ctaBody:
-          "Tag en opgave med, som I laver om og om igen. Så bygger vi den som workflow sammen på en demo.",
+          "Tag en opgave med, som I laver om og om igen. Så bygger vi den op som et workflow sammen med jer på en demo.",
         primaryCtaLabel: "Book en demo",
       },
     },
@@ -440,7 +440,7 @@ export const aiCapabilities: AiCapability[] = [
         cardSubtitle: "AI, der tager de opgaver, som kommer igen.",
         metaTitle: "AI-agenter | AI, der tager de opgaver, som kommer igen",
         metaDescription:
-          "Byg AI-agenter, der klarer de opgaver, som kommer igen i driften. De finder frem til det, de skal vide, læser dokumenterne, tænker sig om og leverer et resultat. En del af Opti Assist.",
+          "Byg AI-agenter, der klarer de opgaver, som kommer igen i driften. De finder frem til det, de skal vide, læser dokumenterne, tænker sig om og kommer med et resultat. En del af Opti Assist.",
         eyebrow: "Agents",
         heroTitle: "AI, der tager de opgaver, som kommer igen",
         heroBody:
@@ -478,10 +478,10 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Dem, der kender opgaven, retter den til",
             description:
-              "Rammer svaret ved siden af, retter I i agentens instruktioner, og næste gang kører den den nye version. Det er teamet med opgaven, der former agenten, ikke IT.",
+              "Rammer svaret ved siden af, retter I i agentens instruktioner, og næste gang kører den den nye version. Det er dem med opgaven, der former agenten, ikke it-afdelingen.",
           },
         ],
-        useCasesTitle: "Sådan bruger teams det",
+        useCasesTitle: "Sådan bliver det brugt",
         useCases: [
           {
             title: "Agenten, der skriver morgenens overblik",
@@ -499,7 +499,7 @@ export const aiCapabilities: AiCapability[] = [
               "Tilbud og specifikationer kommer i alle mulige formater. Agenten læser hvert dokument op mod jeres krav og stiller det op på samme måde hver gang, klar til, at et menneske vælger.",
           },
         ],
-        ctaTitle: "Giv det arbejde, der kommer igen, til en agent",
+        ctaTitle: "Lad en agent tage det, der kommer igen",
         ctaBody:
           "Fortæl os om en opgave, der kommer igen hver uge. Så viser vi jer på en demo, hvordan agenten til den ser ud.",
         primaryCtaLabel: "Book en demo",
@@ -592,7 +592,7 @@ export const aiCapabilities: AiCapability[] = [
           "OptiPeople kobler sig på de store ERP-systemer og taler med maskinerne på gulvet over MQTT og OPC-UA. Resten klarer et REST API. Produktionsdata, ordrer og dokumenter flytter sig mellem systemerne, uden at nogen skal taste dem ind igen.",
         valueTitle: "AI er ikke bedre end det, den er koblet på",
         valueBody:
-          "En assistent, der ikke kan se jeres ERP, er bare en chatbot. Et dashboard, der ikke kan høre maskinerne, er bare et billede. Skal AI kunne bruges i driften, skal begge ender være koblet på: systemerne med ordrer, varer og planer, og maskinerne der laver dem. Vi kobler os på begge steder, både i backoffice og ude ved PLC'er og sensorer. Så arbejder OptiPeople Data Platform, og al den AI der ligger ovenpå, ud fra de samme tal, som resten af forretningen bruger. Ingen taster det samme to gange, og der ligger ikke fire kopier, som ikke passer sammen. Én kobling, passet ét sted, som alt det andet henter fra.",
+          "En assistent, der ikke kan se jeres ERP, er bare en chatbot. Et dashboard, der ikke kan høre maskinerne, er bare et billede. Skal AI kunne bruges i driften, skal begge ender være koblet på: systemerne med ordrer, varer og planer, og maskinerne, der laver dem. Vi kobler os på begge steder, både i backoffice og ude ved PLC'er og sensorer. Så arbejder OptiPeople Data Platform, og al den AI, der ligger ovenpå, ud fra de samme tal, som resten af forretningen bruger. Ingen taster det samme to gange, og der ligger ikke fire kopier, som ikke passer sammen. Koblingen bliver lavet og passet ét sted, og alt det andet henter derfra.",
         capabilitiesTitle: "Passer ind, hvor I er i forvejen",
         capabilities: [
           {
@@ -608,7 +608,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "OPC-UA på gulvet",
             description:
-              "Vi læser direkte fra OPC-UA-serverne på nyere maskiner og linjer. Der skal ikke bygges særlige kasser til det, og der skal ikke rives noget ud, som virker.",
+              "Vi læser direkte fra OPC-UA-serverne på nyere maskiner og linjer. Der skal ikke bygges særlige adaptere til det, og der skal ikke rives noget ud, som virker.",
           },
           {
             title: "Et REST API til resten",
@@ -618,7 +618,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Værktøjerne omkring driften",
             description:
-              "Kobl jer på dokumenter, regneark, mail og de værktøjer, I samarbejder i. Så følger baggrunden med arbejdet, og AI kan svare ud fra det samme materiale, som teamet selv læser.",
+              "Tag dokumenter, regneark, mail og jeres samarbejdsværktøjer med ind. Så følger baggrunden med arbejdet, og AI kan svare ud fra det samme materiale, som teamet selv læser.",
           },
           {
             title: "Det går begge veje",
@@ -626,7 +626,7 @@ export const aiCapabilities: AiCapability[] = [
               "Vi læser data ind og skriver også tilbage: opret ordrer, opdater opgaver og læg resultater dér, hvor teamet alligevel kigger. En kobling er mere end import.",
           },
         ],
-        useCasesTitle: "Sådan bruger teams det",
+        useCasesTitle: "Sådan bliver det brugt",
         useCases: [
           {
             title: "Ordrer fra ERP, resultater tilbage",
@@ -739,7 +739,7 @@ export const aiCapabilities: AiCapability[] = [
           "Alt det, I kan se i OptiPeople Data Platform, kan I også hente med kode. Træk OEE, maskiner, stop, skift og målinger ind i jeres egne apps, dashboards og automatiseringer gennem et dokumenteret REST API. Almindelig JSON over HTTPS, med en nøgle, I selv opretter i portalen.",
         valueTitle: "Jeres data, på jeres måde",
         valueBody:
-          "Nogle gange skal værdien opstå i jeres eget system: i BI-modellen, controllerne passer, på skærmen ude på gulvet, som operatørerne kigger på, i den interne app IT ejer. REST API'et giver udviklere direkte, autentificeret adgang til produktionsdata, så I kan bygge det, forretningen har brug for. Det går begge veje: hent det, platformen har samlet, eller send maskinstatus, emnetællere og målinger ind fra jeres egne systemer over MQTT i et dokumenteret JSON-format. Data er jeres, og API'et er beviset på det.",
+          "Nogle gange hører tallene hjemme i jeres eget system: i BI-modellen, controllerne passer, på skærmen ude på gulvet, som operatørerne kigger på, eller i den interne app, it-afdelingen ejer. Med REST API'et får jeres udviklere direkte adgang til produktionsdata med en nøgle, I selv styrer, så I kan bygge det, forretningen har brug for. Det går begge veje: hent det, platformen har samlet, eller send maskinstatus, emnetællere og målinger ind fra jeres egne systemer over MQTT i et dokumenteret JSON-format. I er ikke låst fast. Data er jeres, og API'et beviser det.",
         capabilitiesTitle: "Klar til udviklere",
         capabilities: [
           {
@@ -750,7 +750,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Dokumenteret med Swagger",
             description:
-              "En interaktiv OpenAPI-reference lader dig prøve hvert endpoint, før du skriver en linje kode. Det, referencen viser, er det, API'et svarer.",
+              "I en interaktiv OpenAPI-reference kan I prøve hvert endpoint, før I skriver en linje kode. Det, referencen viser, er det, API'et svarer.",
           },
           {
             title: "Sikker adgang, kun til det aftalte",
@@ -773,7 +773,7 @@ export const aiCapabilities: AiCapability[] = [
               "Platformen tager også imod data. Maskinstatus, emnetællere og målinger kan sendes ind over MQTT i et dokumenteret JSON-format, med UTC-tidsstempler og id på hver enhed.",
           },
         ],
-        useCasesTitle: "Sådan bruger teams det",
+        useCasesTitle: "Sådan bliver det brugt",
         useCases: [
           {
             title: "Rapportering i Power BI",
@@ -783,7 +783,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Jeres egne skærme og apps",
             description:
-              "IT bygger en skærm til gulvet eller en intern app på data fra i dag. API'et svarer med de samme tal, som platformen viser, så de to aldrig siger noget forskelligt.",
+              "It-afdelingen bygger en skærm til gulvet eller en intern app på de aktuelle tal. API'et svarer med de samme tal, som platformen viser, så de to aldrig siger noget forskelligt.",
           },
           {
             title: "Data den anden vej",
@@ -793,7 +793,7 @@ export const aiCapabilities: AiCapability[] = [
         ],
         ctaTitle: "Begynd at bygge på OptiPeople",
         ctaBody:
-          "Kig i den live API-reference, eller tal med os om nøgler, og om hvordan jeres første kobling kunne se ud.",
+          "Prøv API-referencen direkte, eller tal med os om nøgler, og om hvordan jeres første kobling kunne se ud.",
         primaryCtaLabel: "Tal med os",
         secondaryCtaLabel: "Se API-reference",
         secondaryCtaHref: API_DOCS_HREF,

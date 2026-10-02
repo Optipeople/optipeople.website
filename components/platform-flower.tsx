@@ -111,17 +111,17 @@ const danishModules: ModuleNode[] = [
   {
     id: "opticloud",
     name: "OptiPeople Data Platform",
-    description: "Dit fælles datagrundlag",
+    description: "Ét sæt tal for alle",
     pitch:
-      "Alle jeres produktionsdata ét sted. Kobl maskiner, systemer og mennesker sammen, så beslutningerne bygger på fakta i stedet for mavefornemmelser.",
+      "Alle jeres produktionsdata samlet. Kobl maskiner, systemer og folk sammen, så I beslutter ud fra fakta og ikke ud fra mavefornemmelsen.",
     features: ["Data opsamlet løbende", "Sikker drift i skyen", "Åbne API'er"],
   },
   {
     id: "production",
     name: "OEE",
-    description: "Se hvor tiden går tabt",
+    description: "Se, hvor tiden går tabt",
     pitch:
-      "Følg OEE i realtid, og se præcis hvor produktionstiden forsvinder. Så er gætteriet slut, og forbedringerne kan begynde.",
+      "Følg OEE, mens det sker, og se præcis, hvor produktionstiden forsvinder. Så kan I holde op med at gætte og begynde at forbedre.",
     features: ["Live OEE på skærmen", "Stopårsager", "Tab på ydelse og kvalitet"],
   },
   {
@@ -129,7 +129,7 @@ const danishModules: ModuleNode[] = [
     name: "Modulært MES",
     description: "Ét modul ad gangen",
     pitch:
-      "Det modulære MES, de andre ti kobler sig på. Start med det modul, der svarer på spørgsmålet nu, og tag det næste på data, I allerede samler op.",
+      "Det modulære MES, de andre ti kobler sig på. Start med det modul, der svarer på det, I vil vide nu, og byg det næste oven på de data, I allerede samler op.",
     features: ["Start med ét modul", "Fælles datagrundlag", "Ingen dobbeltregistrering"],
   },
   {
@@ -138,14 +138,14 @@ const danishModules: ModuleNode[] = [
     description: "Fang fejlen i tide",
     pitch:
       "Registrer kvalitetsdata ved kilden, og følg hver afvigelse tilbage til maskine, batch og skift.",
-    features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelsesregistrering"],
+    features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelser registreret"],
   },
   {
     id: "erp-shopfloor",
     name: "Ordrer",
     description: "Kør dem ved maskinen",
     pitch:
-      "Ordrerne står på skærmen ved maskinen. Operatøren starter, stopper og melder antal og kassation, dér hvor arbejdet sker. Det kører alene, og kan kobles på ERP, hvis I vil.",
+      "Ordrerne står på skærmen ved maskinen. Operatøren starter, stopper og melder antal og kassation, dér, hvor arbejdet sker. Det kører fint uden ERP, men kan kobles på jeres ERP, hvis I vil.",
     features: ["Start, stop og meld ved maskinen", "Kører med eller uden ERP", "Ordrer begge veje, når I vil"],
   },
   {
@@ -153,53 +153,53 @@ const danishModules: ModuleNode[] = [
     name: "Vedligehold",
     description: "Løs det, før det stopper",
     pitch:
-      "Gå fra brandslukning til forebyggende vedligehold, og til forudsigende dér hvor maskinsignalerne rækker til det. Færre uplanlagte stop, og maskinerne holder længere.",
-    features: ["Forebyggende og forudsigende", "Udløst af IoT-data", "Opgaverne på mobilen"],
+      "Gå fra brandslukning til forebyggende vedligehold, og til forudsigende vedligehold dér, hvor maskinens signaler kan bære det. Færre uplanlagte stop, og maskinerne holder længere.",
+    features: ["Forebyggende og forudsigende", "Sat i gang af IoT-data", "Opgaverne på mobilen"],
   },
   {
     id: "energy",
     name: "EMS",
     description: "Skær spild væk",
     pitch:
-      "Kobl energiforbruget direkte sammen med produktionen. Så finder I spildet og det, der stikker ud.",
-    features: ["kWh fulgt live", "Sensordata", "Besked når noget stikker ud"],
+      "Kobl energiforbruget direkte sammen med det, der bliver produceret. Så finder systemet selv spildet og det, der stikker ud.",
+    features: ["kWh fulgt live", "Sensordata", "Besked, når noget stikker ud"],
   },
   {
     id: "analysis",
     name: "Analyse",
-    description: "Fra data til beslutning",
+    description: "Tal at beslutte ud fra",
     pitch:
       "Gør rå produktionsdata til rapporter, folk kan læse: hvordan det går, hvor I taber, og hvad der koster mest. Uden regneark.",
-    features: ["Rapporter, der laver sig selv", "Hvad tingene koster", "Grundlag for investeringer"],
+    features: ["Rapporter, der laver sig selv", "Hvad tingene koster", "Tal at investere ud fra"],
   },
   {
     id: "iot",
     name: "IoT",
     description: "Få data fra alt",
     pitch:
-      "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, sensorer der er sat op, historians og leverandørportaler, uanset protokol og alder. Nyt udstyr sætter vi kun op, hvor maskinen ikke har noget at læse fra i forvejen.",
-    features: ["Brug det hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun hvor der mangler noget"],
+      "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, de sensorer, der allerede sidder der, historikdatabaser og leverandørportaler, uanset protokol og alder. Nyt udstyr sætter vi kun op, hvor maskinen ikke har noget at læse fra i forvejen.",
+    features: ["Brug det hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun, hvor der mangler noget"],
   },
   {
     id: "planning",
     name: "Planlægning",
     description: "Ruter og tidslinjer",
-    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, ikke bare på én flad tidslinje. Vi bruger kørehastigheder, I selv har målt, og den tid, maskinen faktisk har ledig.",
-    features: ["Ruter, ikke én flad tidslinje", "Kørehastigheder fra virkeligheden", "Læg om uden at starte forfra"],
+    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, ikke bare på én flad tidslinje. Planen bygger på de kørehastigheder, der faktisk er målt, og den tid, maskinen reelt har ledig.",
+    features: ["Ruter, ikke én flad tidslinje", "Målte kørehastigheder", "Læg om uden at starte forfra"],
   },
   {
     id: "documents",
     name: "Dokumenter",
     description: "Rette version, rette sted",
     pitch: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen, på stationen, på linjen, på lageret eller i laboratoriet, i den version, der gælder for den, der står med opgaven.",
-    features: ["Dér hvor arbejdet sker", "Én gældende version", "Klar til audit"],
+    features: ["Dér, hvor arbejdet sker", "Én gældende version", "Klar til audit"],
   },
   {
     id: "ai-agents",
     name: "AI-agenter",
-    description: "Spørg jeres egne data",
-    pitch: "Agenter og copiloter, der arbejder på jeres produktionsdata, svarer i almindeligt sprog og holder øje med de mønstre, ingen har tid til at lede efter.",
-    features: ["Svar i almindeligt sprog", "Besked ved mønstre og afvigelser", "Bygget på jeres egne data"],
+    description: "Spørg ind til jeres egne tal",
+    pitch: "Agenter og copiloter, der arbejder med jeres produktionsdata. De svarer i almindeligt sprog og holder øje med de mønstre, ingen har tid til at lede efter.",
+    features: ["Svar i almindeligt sprog", "Besked ved mønstre og afvigelser", "Kun ud fra jeres egne data"],
   },
 ]
 const platformIntro = {
@@ -214,7 +214,7 @@ const platformIntro = {
     eyebrow: "Platform",
     title: "Én modulopbygget platform, elleve moduler",
     description:
-      "Tag ét modul eller ti. Modulerne deler de samme data, så det, ét team registrerer, kan de andre bruge",
+      "Tag ét modul eller ti. Modulerne bruger de samme data, så det, ét team registrerer, kan de andre bruge",
     centerLabel: "OptiPeople Data Platform",
   },
 } as const
