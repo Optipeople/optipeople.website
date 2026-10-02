@@ -7,7 +7,7 @@ import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
 import { LogoWall } from "@/components/logo-wall"
 import { TestimonialCarousel, type Testimonial } from "@/components/testimonial-carousel"
 import { HeroModulePicker } from "@/components/hero-module-picker"
-import { ProductChapters, type ProductChapter } from "@/components/product-chapters"
+import { ProductChapters } from "@/components/product-chapters"
 import { hasModuleMockup } from "@/components/module-mockups"
 import { Button } from "@/components/ui/button"
 import { moduleCatalog, moduleChipRows } from "@/content/modules-catalog"
@@ -123,8 +123,6 @@ type HomeCopy = {
      */
     moduleRows: string[][]
   }
-  /** The three products the page leads with, stacked under the hero. */
-  chapters: ProductChapter[]
   /** One line under the chapters, for visitors not ready to pick a product. */
   advisory: { text: string; linkLabel: string; href: string }
   logoWallTitle: string
@@ -281,38 +279,6 @@ const copy: Record<Locale, HomeCopy> = {
         ["orders", "planning", "ems", "maintenance", "documents"],
       ],
     },
-    chapters: [
-      {
-        id: "mes",
-        name: "Modular MES",
-        tagline: "Run the floor on facts. Start with one line.",
-        body: "Orders, OEE, planning and machine data on one foundation. Add the next module when you need it, with or without your ERP.",
-        ctaLabel: "Learn more",
-        ctaHref: "/modules/mes",
-        secondaryLabel: "Book a demo",
-        secondaryHref: "/contact",
-      },
-      {
-        id: "iot",
-        name: "IoT",
-        tagline: "Every machine talking. Even the one from 1998.",
-        body: "We read from the controls, sensors and systems you already have. New hardware only goes where there is nothing to read.",
-        ctaLabel: "Learn more",
-        ctaHref: "/modules/iot",
-        secondaryLabel: "Book a demo",
-        secondaryHref: "/contact",
-      },
-      {
-        id: "assist",
-        name: "Opti Assist",
-        tagline: "The colleague who has read every manual.",
-        body: "AI that knows your machines, your procedures and your live production data. Ask in plain words, get the answer and the source.",
-        ctaLabel: "Learn more",
-        ctaHref: "/ai/chat",
-        secondaryLabel: "Book a demo",
-        secondaryHref: "/contact",
-      },
-    ],
     advisory: {
       text: "Not sure where to start? We advise on MES, IoT and AI, from the first assessment to the business case.",
       linkLabel: "Talk to an advisor",
@@ -520,38 +486,6 @@ const copy: Record<Locale, HomeCopy> = {
         ["orders", "planning", "ems", "maintenance", "documents"],
       ],
     },
-    chapters: [
-      {
-        id: "mes",
-        name: "Modulært MES",
-        tagline: "Start med én linje, og styr efter tallene.",
-        body: "Ordrer, OEE, planlægning og maskindata samlet i ét system. Læg det næste modul på, når I får brug for det, med eller uden jeres ERP.",
-        ctaLabel: "Læs mere",
-        ctaHref: "/modules/mes",
-        secondaryLabel: "Book en demo",
-        secondaryHref: "/contact",
-      },
-      {
-        id: "iot",
-        name: "IoT",
-        tagline: "Vi får data ud af alle maskiner. Også den fra 1998.",
-        body: "Vi læser fra de styringer, sensorer og systemer, I allerede har. Vi sætter kun ny hardware op, hvor der ikke er noget at læse fra.",
-        ctaLabel: "Læs mere",
-        ctaHref: "/modules/iot",
-        secondaryLabel: "Book en demo",
-        secondaryHref: "/contact",
-      },
-      {
-        id: "assist",
-        name: "Opti Assist",
-        tagline: "Kollegaen, der har læst alle manualerne.",
-        body: "AI, der kender jeres maskiner, jeres procedurer og tallene fra gulvet lige nu. Spørg helt almindeligt, og få svaret med kilden ved siden af.",
-        ctaLabel: "Læs mere",
-        ctaHref: "/ai/chat",
-        secondaryLabel: "Book en demo",
-        secondaryHref: "/contact",
-      },
-    ],
     advisory: {
       text: "Ved I ikke, hvor I skal begynde? Vi rådgiver om MES, IoT og AI hele vejen fra den første gennemgang til business casen.",
       linkLabel: "Tal med en rådgiver",
@@ -805,11 +739,11 @@ export default async function Home({
         </div>
       </section>
 
-      {/* The three products the page is built around, a full-bleed band each,
-          stacked to scroll rather than slide. The audience slider that sat
+      {/* The three products the page is built around, each in a section of
+          its own shape, stacked to scroll rather than slide. The audience slider that sat
           here is gone from the page; SlideCarousel itself stays for the module
           and AI sections below. */}
-      <ProductChapters chapters={t.chapters} />
+      <ProductChapters locale={loc} />
 
       {/* Follows a coloured band, so it carries its own top padding. */}
       <section className="py-20 lg:py-28">

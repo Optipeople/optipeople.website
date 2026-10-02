@@ -421,3 +421,55 @@
     overflow-wrap: break-word;
   }
 }
+
+/* Homepage product chapters (components/product-chapters.tsx).
+
+   --lit drives the Modular MES module tiles from off to on. It is registered
+   so it can animate, and it starts at 1, so a browser without scroll-driven
+   animations, or a visitor who asks for reduced motion, sees every tile lit.
+   Where both are available, each tile runs from 0 to 1 on its own slice of
+   the scroll (the slice is set inline per tile), so the grid fills up as the
+   section comes into view: one module, then the rest. */
+@property --lit {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1;
+}
+
+@keyframes chapter-tile-on {
+  from {
+    --lit: 0;
+  }
+  to {
+    --lit: 1;
+  }
+}
+
+@keyframes chapter-flow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes chapter-float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .chapter-tile {
+      animation: chapter-tile-on linear both;
+      animation-timeline: view();
+    }
+  }
+
+  .chapter-flow {
+    animation: chapter-flow 1.4s linear infinite;
+  }
+
+  .chapter-float {
+    animation: chapter-float 8s ease-in-out infinite;
+  }
+}
