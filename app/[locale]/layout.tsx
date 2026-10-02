@@ -36,9 +36,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "OptiPeople | Run operations on live data",
+  title: "OptiPeople | Run manufacturing and operations on live data",
   description:
-    "OptiPeople helps manufacturers connect machines, track production in real time, improve OEE, and turn operational data into action.",
+    "One data foundation for the whole factory. Connect your machines, follow OEE live, and put every team on the same numbers, from the floor to management.",
 };
 
 export function generateStaticParams() {

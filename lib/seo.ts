@@ -7,7 +7,13 @@ export const siteUrl =
   process.env.SITE_URL ||
   "https://optipeople-website.vercel.app";
 
-const defaultOgImage = "/images/Mockups/Report-OEE-Efficiency-With-Filter.png";
+// Square, so link previews in Slack, Teams and LinkedIn show it whole instead of
+// cropping a wide screenshot. The headline matches the homepage hero per locale.
+const defaultOgImage: Record<Locale, string> = {
+  en: "/images/og/share-en.jpg",
+  da: "/images/og/share-da.jpg",
+};
+const defaultOgImageSize = 1200;
 
 type MetadataOptions = {
   title: string;
@@ -27,7 +33,7 @@ export function buildMetadata({
   title,
   description,
   path = "/",
-  image = defaultOgImage,
+  image,
   keywords = [],
   type = "website",
   locale = "en",
@@ -35,7 +41,8 @@ export function buildMetadata({
   const unprefixedPath = removeLocalePrefix(path);
   const localizedPath = addLocalePrefix(unprefixedPath, locale);
   const canonical = absoluteUrl(localizedPath);
-  const socialImage = absoluteUrl(image);
+  const isDefaultImage = !image;
+  const socialImage = absoluteUrl(image ?? defaultOgImage[locale]);
   const englishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "en"));
   const danishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "da"));
 
@@ -63,11 +70,16 @@ export function buildMetadata({
         {
           url: socialImage,
           alt: title,
+          ...(isDefaultImage && {
+            width: defaultOgImageSize,
+            height: defaultOgImageSize,
+          }),
         },
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      // A square image in a large card gets cropped to 2:1.
+      card: isDefaultImage ? "summary" : "summary_large_image",
       title,
       description,
       images: [socialImage],

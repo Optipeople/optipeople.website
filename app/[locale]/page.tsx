@@ -678,14 +678,14 @@ function linkTestimonials(testimonials: Testimonial[]): Testimonial[] {
 
 const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
-    title: "OptiPeople | Run operations on live data",
+    title: "OptiPeople | Run manufacturing and operations on live data",
     description:
-      "Connect machines, track OEE in real time, automate reporting, and give production teams the data they need to improve output and uptime.",
+      "One data foundation for the whole factory. Connect your machines, follow OEE live, and put every team on the same numbers, from the floor to management.",
   },
   da: {
-    title: "OptiPeople | Styr driften efter live data",
+    title: "OptiPeople | Styr produktionen efter det, der sker lige nu",
     description:
-      "Kobl maskinerne på, følg OEE, mens det sker, og brug tallene til at få mere ud af produktionen.",
+      "Ét datagrundlag for hele fabrikken. Kobl maskinerne på, følg OEE, mens det sker, og giv alle i huset de samme tal, fra gulvet til ledelsen.",
   },
 }
 
