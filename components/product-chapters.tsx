@@ -136,7 +136,7 @@ const MES_COPY: Record<Locale, MesCopy> = {
       ems: "0,42 kWh/stk.",
       maintenance: "3 opgaver",
       documents: "Rev. 4 gælder",
-      "ai-agents": "Holder øje med linje 2",
+      "ai-agents": "Overvåger linje 2",
     },
   },
 }
@@ -187,16 +187,16 @@ function MesChapter({ locale }: { locale: Locale }) {
           {/* One customer result, the way the best product pages lead with proof */}
           <Link
             href={t.proof.href}
-            className="group mt-14 flex max-w-md items-end gap-6 border-t border-white/12 pt-8"
+            className="group mt-14 flex max-w-md items-end gap-4 border-t border-white/12 pt-8 sm:gap-6"
           >
             <span
-              className="text-6xl font-light leading-none tracking-tight tabular-nums"
+              className="shrink-0 text-5xl font-light leading-none tracking-tight tabular-nums sm:text-6xl"
               style={{ color: "var(--green-light2)" }}
             >
               {t.proof.value}
             </span>
             <span className="pb-1">
-              <span className="block text-base text-white">{t.proof.label}</span>
+              <span className="block whitespace-nowrap text-base text-white">{t.proof.label}</span>
               <span className="block text-sm text-white/65 transition-colors group-hover:text-white/88">
                 {t.proof.company}
               </span>
@@ -223,10 +223,10 @@ function MesChapter({ locale }: { locale: Locale }) {
               >
                 <Link
                   href={moduleHref(id)}
-                  className="group flex items-center gap-5 py-3 sm:py-3.5"
+                  className="group flex items-center gap-3 py-3 sm:gap-5 sm:py-3.5"
                 >
                   <span
-                    className="min-w-0 flex-1 truncate text-2xl font-normal tracking-tight text-white transition-transform duration-300 group-hover:translate-x-1.5 sm:text-3xl"
+                    className="min-w-0 flex-1 truncate text-xl font-normal tracking-tight text-white transition-transform duration-300 group-hover:translate-x-1.5 min-[400px]:text-2xl sm:text-3xl"
                     style={{ opacity: "calc(0.28 + var(--lit) * 0.72)" }}
                   >
                     {moduleLabel(id, locale)}
@@ -301,8 +301,8 @@ const IOT_COPY: Record<Locale, IotCopy> = {
     body: "Vi læser fra de styringer, sensorer og systemer, I allerede har. Ny hardware kommer kun op, hvor der ikke er noget at læse fra.",
     sources: [
       { title: "CNC-robot", sub: "Siemens S7 over OPC UA", tag: "Tilkoblet" },
-      { title: "Presse 4, fra 1998", sub: "Eftermonteret strømsensor", tag: "Sensor sat på", added: true },
-      { title: "Sensorsæt på ovnen", sub: "Modbus, fra et gammelt projekt", tag: "Genbrugt" },
+      { title: "Presse 4, fra 1998", sub: "Ny strømsensor", tag: "Sensor sat på", added: true },
+      { title: "Sensorsæt på ovnen", sub: "Modbus, gammelt projekt", tag: "Genbrugt" },
       { title: "SCADA-historian", sub: "SQL", tag: "Genbrugt" },
       { title: "ERP", sub: "REST API", tag: "Genbrugt" },
     ],
@@ -470,8 +470,8 @@ function IotChapter({ locale }: { locale: Locale }) {
         </div>
 
         {/* Below lg: the same story, read top to bottom */}
-        <div className="mx-auto mt-14 max-w-xl lg:hidden">
-          <div className="grid gap-2.5 sm:grid-cols-2">
+        <div className="mt-14 lg:hidden">
+          <div className="grid gap-2.5">
             {t.sources.map((node, i) => (
               <SourceNode key={node.title} node={node} icon={SOURCE_ICONS[i]} />
             ))}
@@ -479,7 +479,7 @@ function IotChapter({ locale }: { locale: Locale }) {
           <ChevronDown className="mx-auto my-4 size-6 text-slate-400" />
           <FoundationNode node={t.foundation} />
           <ChevronDown className="mx-auto my-4 size-6 text-slate-400" />
-          <div className="grid gap-2.5 sm:grid-cols-3">
+          <div className="grid gap-2.5">
             {t.readers.map((node, i) => (
               <ReaderNode key={node.title} node={node} icon={READER_ICONS[i]} />
             ))}
