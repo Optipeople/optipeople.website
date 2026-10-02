@@ -2,6 +2,7 @@ import type { CSSProperties } from "react"
 import type { LucideIcon } from "lucide-react"
 import {
   Antenna,
+  ArrowRight,
   ChartColumn,
   ChevronDown,
   ChevronRight,
@@ -157,6 +158,10 @@ function moduleLabel(id: string, locale: Locale) {
   return moduleCatalog.find((entry) => entry.id === id)?.label[locale] ?? id
 }
 
+function moduleHref(id: string) {
+  return moduleCatalog.find((entry) => entry.id === id)?.href ?? "/modules"
+}
+
 function MesChapter({ locale }: { locale: Locale }) {
   const t = MES_COPY[locale]
 
@@ -201,41 +206,42 @@ function MesChapter({ locale }: { locale: Locale }) {
 
         <div className="lg:col-span-6">
           <p className="text-sm text-white/65">{t.gridLabel}</p>
-          {/* An index rather than a grid of cards: the module names set large
-              on hairlines, each with what it is reading right now. A row comes
-              on as it scrolls into view, so the list fills up from the top. */}
+          {/* An index, the way Linear and Stripe list things: names set large
+              on hairlines, no markers, the row itself the link. The reading
+              is set in Plex Mono so it reads as data, not copy. A row comes on
+              as it scrolls into view, so the list fills up from the top. */}
           <ol className="mt-5 border-t border-white/12">
             {MES_MODULES.map((id, i) => (
               <li
                 key={id}
-                className="chapter-tile flex items-center gap-4 border-b border-white/12 py-3 sm:py-3.5"
+                className="chapter-tile border-b border-white/12"
                 style={
                   {
                     animationRange: `cover ${4 + i}% cover ${12 + i}%`,
                   } as CSSProperties
                 }
               >
-                <span
-                  className="size-1.5 shrink-0 rounded-full"
-                  style={{
-                    backgroundColor:
-                      "color-mix(in oklab, var(--green-system) calc(var(--lit) * 100%), rgb(255 255 255 / 0.2))",
-                    boxShadow:
-                      "0 0 0 calc(var(--lit) * 4px) color-mix(in oklab, var(--green-system) 22%, transparent)",
-                  }}
-                />
-                <span
-                  className="min-w-0 flex-1 truncate text-2xl font-normal tracking-tight text-white sm:text-3xl"
-                  style={{ opacity: "calc(0.28 + var(--lit) * 0.72)" }}
+                <Link
+                  href={moduleHref(id)}
+                  className="group flex items-baseline gap-5 py-3 sm:py-3.5"
                 >
-                  {moduleLabel(id, locale)}
-                </span>
-                <span
-                  className="shrink-0 text-right text-sm tabular-nums sm:text-base"
-                  style={{ color: "var(--green-light2)", opacity: "var(--lit)" }}
-                >
-                  {t.readings[id]}
-                </span>
+                  <span
+                    className="min-w-0 flex-1 truncate text-2xl font-normal tracking-tight text-white transition-transform duration-300 group-hover:translate-x-1.5 sm:text-3xl"
+                    style={{ opacity: "calc(0.28 + var(--lit) * 0.72)" }}
+                  >
+                    {moduleLabel(id, locale)}
+                  </span>
+                  <span
+                    className="shrink-0 text-right font-mono text-[13px] tabular-nums sm:text-sm"
+                    style={{ color: "var(--green-light2)", opacity: "calc(var(--lit) * 0.9)" }}
+                  >
+                    {t.readings[id]}
+                  </span>
+                  <ArrowRight
+                    className="size-4 shrink-0 self-center text-white/35 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-white"
+                    aria-hidden="true"
+                  />
+                </Link>
               </li>
             ))}
           </ol>

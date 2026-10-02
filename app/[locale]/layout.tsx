@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -24,6 +24,14 @@ const ibmPlexSerif = IBM_Plex_Serif({
   weight: ["400", "500", "600"],
   display: "swap",
   variable: "--font-ibm-plex-serif",
+});
+
+// Live readings and other small data, e.g. the module index on the homepage.
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-ibm-plex-mono",
 });
 
 export const metadata: Metadata = {
@@ -76,7 +84,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}
+      className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} ${ibmPlexMono.variable}`}
     >
       <head>
         <script
