@@ -121,11 +121,11 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "OEE-modul | OptiPeople",
+        metaTitle: "OEE-måling og OEE-system til produktionen | OptiPeople",
         metaDescription:
-          "Følg OEE, nedetid og tab, og se, hvordan skiftene kører. Tallene opdaterer sig selv.",
+          "Mål OEE direkte fra maskinerne. Se stop, nedetid og tab for hvert skift og hver linje, mens det sker, uden håndskrevne lister og regneark.",
         eyebrow: "OEE-modul",
-        heroTitle: "Se, hvor tiden går tabt",
+        heroTitle: "Mål OEE, og se, hvor tiden går tabt",
         heroBody:
           "Følg OEE, mens skiftet kører, og se præcis, hvor tiden forsvinder. Så skal I ikke gætte længere.",
         primaryLabel: "Book en demo",
@@ -270,9 +270,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Kvalitetsmodul | OptiPeople",
+        metaTitle: "Kvalitetsstyring og sporbarhed i produktionen | OptiPeople",
         metaDescription:
-          "Få kontrollerne væk fra papiret, følg afvigelserne, og spor hvert emne tilbage til maskine, batch og skift.",
+          "Kvalitetskontrol på skærmen ved maskinen i stedet for på papir. Følg afvigelserne, og spor hvert emne tilbage til maskine, batch og skift.",
         eyebrow: "Kvalitetsmodul",
         heroTitle: "Fang fejlen, mens den er billig",
         heroBody:
@@ -420,9 +420,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Vedligeholdsmodul | OptiPeople",
+        metaTitle: "Forebyggende vedligehold af maskiner | OptiPeople",
         metaDescription:
-          "Planlæg forebyggende vedligehold, styr opgaverne, og få mindre uplanlagt nedetid.",
+          "Planlæg forebyggende vedligehold efter driftstimer og maskinens tilstand, ikke kun efter kalenderen. Styr opgaverne, og få mindre uplanlagt nedetid.",
         eyebrow: "Vedligeholdsmodul",
         heroTitle: "Løs det, før det bryder ned",
         heroBody:
@@ -576,9 +576,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Energimodul | OptiPeople",
+        metaTitle: "Energiovervågning i produktionen | OptiPeople",
         metaDescription:
-          "Kobl energiforbruget sammen med produktionen, og find spildet, udsvingene og det, der kan spares.",
+          "Se energiforbruget pr. maskine, pr. ordre og pr. produkt, og hold det op mod det, I producerer. Så kan I se, hvor strømmen går til spilde.",
         eyebrow: "Energimodul",
         heroTitle: "Skær spildet væk, ikke kvaliteten",
         heroBody:
@@ -726,9 +726,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Analysemodul | OptiPeople",
+        metaTitle: "Produktionsrapporter og tabsanalyse | OptiPeople",
         metaDescription:
-          "Få rapporter, der viser, hvordan det går, hvor I taber, hvad det koster, og hvad der kan gøres bedre.",
+          "Rapporterne laver sig selv: hvordan produktionen kører, hvor I taber tid, hvad tabet koster, og hvad der er værd at gøre bedre.",
         eyebrow: "Analysemodul",
         heroTitle: "Rapporter, der faktisk bliver læst",
         heroBody:
@@ -876,9 +876,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         darkHero: true,
       },
       da: {
-        metaTitle: "IoT-modul | OptiPeople",
+        metaTitle: "Maskinovervågning og IoT i produktionen | OptiPeople",
         metaDescription:
-          "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. Ny hardware kommer kun op, hvor der ikke er noget at læse fra.",
+          "Kobl de maskiner, PLC'er og systemer på, I allerede har, også de gamle. Nye sensorer kommer kun op dér, hvor der ikke er noget at læse fra.",
         eyebrow: "IoT-modul",
         heroTitle: "Få data fra det, I allerede har",
         heroBody:
@@ -1031,9 +1031,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Ordremodul | OptiPeople",
+        metaTitle: "Ordrestyring på gulvet med ERP-integration | OptiPeople",
         metaDescription:
-          "Kør ordrerne på gulvet: start, stop og meld tilbage ved maskinen. Virker alene og kan tale med jeres ERP begge veje, hvis I vil.",
+          "Kør produktionsordrerne ved maskinen: start, stop og meld tilbage dér. Virker alene og taler med jeres ERP begge veje, hvis I vil.",
         eyebrow: "Ordremodul",
         heroTitle: "Ordrerne står på skærmen ved maskinen",
         heroBody:
@@ -1198,9 +1198,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Modulært MES | OptiPeople",
+        metaTitle: "Modulært MES-system til produktionen | OptiPeople",
         metaDescription:
-          "Et modulært MES: ordrer, OEE og effektivitet, IoT og maskinstyring, og planlægning med ruter og tidslinjer. Ét modul ad gangen.",
+          "Et MES, I tager i brug ét modul ad gangen: ordrer, OEE, IoT og maskinstyring, og planlægning med ruter og tidslinjer. Start dér, hvor det gør ondt.",
         eyebrow: "Modulært MES",
         heroTitle: "Jeres modulære MES",
         heroBody:
@@ -1371,9 +1371,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Planlægningsmodul | OptiPeople",
+        metaTitle: "Produktionsplanlægning efter reel kapacitet | OptiPeople",
         metaDescription:
-          "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, og ikke bare på én flad tidslinje. Efter målte kørehastigheder og reel ledig tid.",
+          "Læg ordrerne i rækkefølge hen over hele produktionsruten, ikke bare på én tidslinje. Efter målte kørehastigheder og den tid, maskinerne reelt har.",
         eyebrow: "Planlægningsmodul",
         heroTitle: "Planlæg hele ruten, ikke bare én tidslinje",
         heroBody:
@@ -1526,9 +1526,9 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Dokumentmodul | OptiPeople",
+        metaTitle: "Digitale arbejdsinstruktioner ved maskinen | OptiPeople",
         metaDescription:
-          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder, og knyttet til den ordre, operatøren står med.",
+          "Arbejdsinstruktioner, tegninger og certifikater på skærmen ved maskinen. Altid den version, der gælder, og knyttet til ordren, operatøren står med.",
         eyebrow: "Dokumentmodul",
         heroTitle: "Den rigtige instruktion på det rigtige sted",
         heroBody:

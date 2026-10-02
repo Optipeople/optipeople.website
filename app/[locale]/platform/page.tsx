@@ -22,9 +22,9 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
       "Explore the OptiPeople Data Platform: a modular MES with OEE, QMS, EMS, maintenance, planning, orders, IoT, documents, analysis, and AI agents, sharing data in one unified view of your operations.",
   },
   da: {
-    title: "Platform | OptiPeople",
+    title: "Platform til produktionsdata, OEE og MES | OptiPeople",
     description:
-      "OptiPeople Data Platform er et modulært MES med OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter. Alle modulerne bygger på de samme data om jeres drift.",
+      "Et MES bygget af moduler: OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT og dokumenter. Alle modulerne bruger de samme data om jeres drift.",
   },
 }
 

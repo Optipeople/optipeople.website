@@ -673,9 +673,9 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
       "One data foundation for the whole factory. Connect your machines, follow OEE live, and put every team on the same numbers, from the floor to management.",
   },
   da: {
-    title: "OptiPeople | Styr produktionen efter det, der sker lige nu",
+    title: "Produktionsovervågning, OEE og MES | OptiPeople",
     description:
-      "Ét datagrundlag for hele fabrikken. Kobl maskinerne på, følg OEE, mens det sker, og giv alle i huset de samme tal, fra gulvet til ledelsen.",
+      "Kobl maskinerne på, og følg OEE, stop og nedetid, mens det sker. Ét datagrundlag for produktion, kvalitet, vedligehold og energi, fra gulvet til ledelsen.",
   },
 }
 

@@ -105,7 +105,7 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Smart Operations-rådgivning | OptiPeople",
+        metaTitle: "Industri 4.0-rådgivning og forprojekter | OptiPeople",
         metaDescription:
           "Før I bygger noget: vi kortlægger processerne, vurderer, hvad fabrikken teknisk kan bære, regner business casen igennem og afgrænser et forprojekt.",
         eyebrow: "Smart Operations",
@@ -260,7 +260,7 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Automationsrådgivning og arkitektur | OptiPeople",
+        metaTitle: "Automationsrådgivning, PLC og SCADA | OptiPeople",
         metaDescription:
           "Vi rådgiver om automation og leverer it-, software- og IoT-arkitekturen omkring den. Hele løsningen leverer vi sammen med automationspartnere.",
         eyebrow: "Automation",
@@ -415,9 +415,9 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Rådgivning om Business Intelligence | OptiPeople",
+        metaTitle: "Power BI og rapportering til produktionen | OptiPeople",
         metaDescription:
-          "Vi hjælper jer med at finde ud af, hvilke beslutninger der kræver hvilke tal, hvad jeres data kan bære, og hvilken platform det skal bygges på. Power BI, Tableau eller noget helt tredje.",
+          "Hvilke beslutninger kræver hvilke tal, og hvad kan jeres data bære? Vi afgrænser BI-løsningen til produktionen i Power BI, Tableau eller noget tredje.",
         eyebrow: "Business Intelligence",
         heroTitle: "Det svære er at blive enige om, hvad der skal måles",
         heroBody:
@@ -571,9 +571,9 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "AI-agentløsninger | OptiPeople",
+        metaTitle: "AI-agenter til produktionen | OptiPeople",
         metaDescription:
-          "AI-agenter og copiloter, der hjælper produktionsteams med data, beslutninger og de opgaver, der kommer igen.",
+          "AI-agenter og copiloter, der laver rapporterne, hjælper med planlægningen og tager de faste opgaver i driften. Bygget på jeres egne produktionsdata.",
         eyebrow: "AI-agentløsninger",
         heroTitle: "AI, der arbejder med i driften",
         heroBody:

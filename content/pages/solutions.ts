@@ -115,7 +115,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         darkHero: true,
       },
       da: {
-        metaTitle: "Løsninger til produktion | OptiPeople",
+        metaTitle: "Live overblik over produktion og maskiner | OptiPeople",
         metaDescription:
           "Kobl maskinerne på, følg OEE, mens det sker, og styr produktionen efter tallene. Se, hvordan OptiPeople giver overblik og mindre nedetid.",
         eyebrow: "Til produktionsvirksomheder",
@@ -262,9 +262,9 @@ const solutions: LocalizedPage<StandardPage>[] = [
         darkHero: true,
       },
       da: {
-        metaTitle: "Løsninger til OEM'er | OptiPeople",
+        metaTitle: "Fjernovervågning af maskiner til OEM'er | OptiPeople",
         metaDescription:
-          "Kobl jeres maskiner på: fejlfinding på afstand, indblik i, hvordan de kører, og service, I kan tage penge for.",
+          "Kobl jeres maskiner på ude hos kunderne: fejlfinding på afstand, indblik i, hvordan de kører, og service, I kan tage penge for.",
         eyebrow: "Til OEM'er og maskinbyggere",
         heroTitle: "Gør maskinen til mere end jern",
         heroBody:
@@ -414,7 +414,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         darkHero: true,
       },
       da: {
-        metaTitle: "Serviceløsninger | OptiPeople",
+        metaTitle: "Fjernservice og vedligehold efter brug | OptiPeople",
         metaDescription:
           "Se, hvordan maskinerne har det, planlæg vedligehold efter faktisk brug, og find fejlen på afstand. Færre akutte udkald og service, I tjener penge på.",
         eyebrow: "Til service og eftermarked",

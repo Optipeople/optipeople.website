@@ -34,9 +34,9 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       links: moduleIndexLinks("en"),
     },
     da: {
-      metaTitle: "Moduler | OptiPeople",
+      metaTitle: "Moduler til OEE, MES, kvalitet og vedligehold | OptiPeople",
       metaDescription:
-        "Se OptiPeople-modulerne på én samlet platform: MES, OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT, dokumenter, analyse og AI-agenter.",
+        "Start med OEE-måling på én linje, og slå resten til, når I får brug for det: MES, kvalitet, energi, vedligehold, planlægning, ordrer og dokumenter.",
       eyebrow: "Moduler",
       headline: "Én platform til hele produktionen",
       body: "Hvert modul løser en konkret opgave i driften, og sammen giver de ét samlet overblik over gulvet. I skal ikke tage dem alle på én gang. De fleste starter med at overvåge én linje og tager så de moduler med, der svarer på det næste spørgsmål.",
@@ -173,9 +173,9 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       ],
     },
     da: {
-      metaTitle: "Services",
+      metaTitle: "Rådgivning om digitalisering af produktionen | OptiPeople",
       metaDescription:
-        "Fra idé til drift: OptiPeople laver smart operations, automation, BI og AI til produktionsvirksomheder.",
+        "Vi hjælper produktionsvirksomheder med at koble maskinerne på, automatisere og få tallene i brug. Rådgivning om Industri 4.0, automation, BI og AI.",
       eyebrow: "Services",
       headline: "Fra god idé til noget, der kører i driften",
       body: "Vi hjælper produktionsvirksomheder med at koble maskinerne på, få styr på data, automatisere processerne og gøre tallene brugbare i hverdagen. Vi er både ingeniører og softwarehus, og derfor kan vi tage ansvar for de dele af et projekt, der rører ved rigtigt udstyr.",
@@ -240,9 +240,9 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       ],
     },
     da: {
-      metaTitle: "Løsninger | OptiPeople",
+      metaTitle: "Løsninger til producenter og maskinbyggere | OptiPeople",
       metaDescription:
-        "OptiPeople-løsninger til produktionsvirksomheder, OEM'er og maskinbyggere samt service og eftermarked.",
+        "Én platform til fabrikker, der producerer, til maskinbyggere og OEM'er, og til serviceafdelinger, der holder maskinerne kørende ude hos kunderne.",
       eyebrow: "Løsninger",
       headline: "Bygget til den måde, I producerer og servicerer på",
       body: "Uanset om I driver en fabrik, bygger maskiner eller servicerer dem ude hos kunderne, giver OptiPeople jer de tal, der skal til for at handle hurtigere. Platformen er den samme i alle tre tilfælde. Det, der skifter, er, hvis maskiner I kigger på, og hvad I skal beslutte.",
