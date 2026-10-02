@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
 import { Link } from "@/i18n/navigation"
 import { MesVisual } from "@/components/module-mockups"
@@ -6,121 +6,118 @@ import { AssistVisual, IotVisual } from "@/components/product-visuals"
 
 export type ProductChapter = {
   id: "mes" | "iot" | "assist"
-  eyebrow: string
-  title: string
+  /** The product's name, set as the display line. */
+  name: string
+  /** The one sentence that sells it, under the name. */
+  tagline: string
   body: string
-  /** Three short proof points, one line each on desktop. */
-  points: string[]
   ctaLabel: string
   ctaHref: string
+  secondaryLabel: string
+  secondaryHref: string
 }
 
 /**
- * Panel colour per chapter, from the same family as the module carousel cards.
- * MES leads on the deep teal; IoT and Opti Assist sit on light tones, because
- * the Assist visual is the one dark panel and needs a light surface around it.
+ * Full-bleed band per product, dark, light, dark, so the three read as the
+ * spine of the page rather than three cards in a row of cards. The Assist
+ * visual is the one dark window, which is why it gets the brand teal rather
+ * than the near-black: it needs a surface lighter than its own shell.
  */
-const CHAPTER_THEME: Record<ProductChapter["id"], { bg: string; tone: "light" | "dark" }> = {
-  mes: { bg: "#163b40", tone: "light" },
-  iot: { bg: "#c7d9cd", tone: "dark" },
-  assist: { bg: "#d8d4c6", tone: "dark" },
+const BAND: Record<ProductChapter["id"], { bg: string; tone: "light" | "dark" }> = {
+  mes: { bg: "var(--gray-8)", tone: "light" },
+  iot: { bg: "var(--gray-1)", tone: "dark" },
+  assist: { bg: "#163b40", tone: "light" },
+}
+
+/**
+ * How wide each visual runs. MES needs the width for its left-to-right flow;
+ * the Assist window is an app and reads truer at app width.
+ */
+const VISUAL_WIDTH: Record<ProductChapter["id"], string> = {
+  mes: "max-w-5xl",
+  iot: "max-w-4xl",
+  assist: "max-w-3xl",
 }
 
 function ChapterVisual({ id }: { id: ProductChapter["id"] }) {
-  if (id === "mes") {
-    // Content height at every size; MesVisual switches to its stacked layout
-    // on its own once the column is narrower than a full page frame.
-    return <MesVisual fill={false} />
-  }
+  if (id === "mes") return <MesVisual fill={false} />
   return id === "iot" ? <IotVisual /> : <AssistVisual />
 }
 
 /**
- * The three products the homepage leads with, stacked vertically, one panel
- * each. Text and visual sit side by side from `lg`, alternating sides so the
- * eye zigzags down the page, and stack below it. The panels reveal on scroll
- * through the shared `.reveal` view timeline; nothing here needs JS.
+ * The three products the homepage is built around, one band each, stacked to
+ * scroll rather than slide. Centred name, tagline and two links, then the
+ * product itself, large, running off the bottom edge of the band the way a
+ * device sits on the floor of a product page, so the band ends on the window
+ * rather than on padding.
+ *
+ * The visual rises in through the shared `.reveal` view timeline; no JS.
  */
-export function ProductChapters({
-  chapters,
-  className = "",
-}: {
-  chapters: ProductChapter[]
-  className?: string
-}) {
+export function ProductChapters({ chapters }: { chapters: ProductChapter[] }) {
   return (
-    <div className={`space-y-4 px-[var(--edge)] sm:space-y-6 ${className}`}>
-      {chapters.map((chapter, index) => {
-        const theme = CHAPTER_THEME[chapter.id]
-        const light = theme.tone === "light"
-        const flip = index % 2 === 1
+    <>
+      {chapters.map((chapter) => {
+        const band = BAND[chapter.id]
+        const light = band.tone === "light"
 
         return (
-          <article
+          <section
             key={chapter.id}
             id={`product-${chapter.id}`}
-            className="reveal overflow-hidden rounded-[1.75rem] px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16"
-            style={{ backgroundColor: theme.bg }}
+            className="overflow-hidden pt-20 sm:pt-28 lg:pt-36"
+            style={{ backgroundColor: band.bg }}
           >
-            <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-              <div className={`lg:col-span-5 ${flip ? "lg:order-last" : ""}`}>
-                <p
-                  className={`flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] ${
-                    light ? "text-white/72" : "text-slate-900/65"
-                  }`}
-                >
-                  <span className="tabular-nums">{String(index + 1).padStart(2, "0")}</span>
-                  <span className={`h-px w-6 ${light ? "bg-white/30" : "bg-slate-900/20"}`} />
-                  {chapter.eyebrow}
-                </p>
-                <h2
-                  className={`mt-5 text-balance text-3xl font-normal leading-[1.1] tracking-tight sm:text-4xl lg:text-[2.6rem] ${
-                    light ? "text-white" : "text-slate-900"
-                  }`}
-                >
-                  {chapter.title}
-                </h2>
-                <p
-                  className={`mt-5 text-lg leading-relaxed ${
-                    light ? "text-white/82" : "text-slate-900/78"
-                  }`}
-                >
-                  {chapter.body}
-                </p>
+            <div className="px-[var(--edge)] text-center">
+              <h2
+                className={`text-5xl font-normal leading-none tracking-[-0.035em] sm:text-7xl lg:text-8xl ${
+                  light ? "text-white" : "text-slate-950"
+                }`}
+              >
+                {chapter.name}
+              </h2>
+              <p
+                className={`mx-auto mt-5 max-w-3xl text-balance text-2xl font-normal leading-tight tracking-tight sm:mt-6 sm:text-3xl lg:text-4xl ${
+                  light ? "text-white/88" : "text-slate-900/85"
+                }`}
+              >
+                {chapter.tagline}
+              </p>
+              <p
+                className={`mx-auto mt-5 max-w-xl text-balance text-lg leading-relaxed ${
+                  light ? "text-white/72" : "text-slate-900/72"
+                }`}
+              >
+                {chapter.body}
+              </p>
 
-                <ul className="mt-8">
-                  {chapter.points.map((point) => (
-                    <li
-                      key={point}
-                      className={`border-t py-3 text-[15px] leading-snug ${
-                        light ? "border-white/15 text-white/90" : "border-slate-900/12 text-slate-900/85"
-                      }`}
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href={chapter.ctaHref}
-                  className={`group mt-8 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
-                    light
-                      ? "bg-white text-slate-900 hover:bg-white/90"
-                      : "bg-slate-900 text-white hover:bg-slate-800"
-                  }`}
-                >
-                  {chapter.ctaLabel}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-lg">
+                {[
+                  { label: chapter.ctaLabel, href: chapter.ctaHref },
+                  { label: chapter.secondaryLabel, href: chapter.secondaryHref },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="group inline-flex items-center gap-0.5 font-normal transition-opacity hover:opacity-80"
+                    style={{ color: light ? "var(--green-light2)" : "var(--green-dark1)" }}
+                  >
+                    {link.label}
+                    <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                ))}
               </div>
+            </div>
 
-              <div className="lg:col-span-7">
+            {/* The negative bottom margin pushes the window's lower edge past
+                the band, and the section's overflow cuts it there. */}
+            <div className="mt-14 -mb-[clamp(3rem,9vw,7rem)] px-[var(--edge)] sm:mt-20">
+              <div className={`reveal mx-auto ${VISUAL_WIDTH[chapter.id]}`}>
                 <ChapterVisual id={chapter.id} />
               </div>
             </div>
-          </article>
+          </section>
         )
       })}
-    </div>
+    </>
   )
 }

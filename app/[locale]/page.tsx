@@ -284,42 +284,33 @@ const copy: Record<Locale, HomeCopy> = {
     chapters: [
       {
         id: "mes",
-        eyebrow: "Modular MES",
-        title: "Your MES, one module at a time.",
-        body: "Start with orders and OEE on a single line. Add planning, routes and quality when the next question turns up. It runs on its own, or next to your ERP.",
-        points: [
-          "Start, stop and report orders at the machine",
-          "Live OEE across shifts, lines and machines",
-          "Planning with routes and timelines",
-        ],
-        ctaLabel: "Explore Modular MES",
+        name: "Modular MES",
+        tagline: "Run the floor on facts. Start with one line.",
+        body: "Orders, OEE, planning and machine data on one foundation. Add the next module when you need it, with or without your ERP.",
+        ctaLabel: "Learn more",
         ctaHref: "/modules/mes",
+        secondaryLabel: "Book a demo",
+        secondaryHref: "/contact",
       },
       {
         id: "iot",
-        eyebrow: "IoT",
-        title: "Connect what you already have.",
-        body: "New controls, a press from 1998, the sensor kit from an old project and the systems you already run. We read from all of it, and add hardware only where there is nothing to read.",
-        points: [
-          "Siemens, Fanuc, OPC UA, Modbus, MQTT and more",
-          "Reuses your existing hardware, historians and SCADA",
-          "A gateway only where a machine has nothing to give",
-        ],
-        ctaLabel: "Explore IoT",
+        name: "IoT",
+        tagline: "Every machine talking. Even the one from 1998.",
+        body: "We read from the controls, sensors and systems you already have. New hardware only goes where there is nothing to read.",
+        ctaLabel: "Learn more",
         ctaHref: "/modules/iot",
+        secondaryLabel: "Book a demo",
+        secondaryHref: "/contact",
       },
       {
         id: "assist",
-        eyebrow: "AI · Opti Assist",
-        title: "Ask your factory. Get an answer.",
-        body: "Opti Assist reads your manuals, procedures and live production data. Operators get the right step at the machine. Managers get the numbers behind the week, with the sources to check.",
-        points: [
-          "Answers from your own documents and SOPs",
-          "Grounded in live data from your machines",
-          "Not locked to one AI model, and works on your data only",
-        ],
-        ctaLabel: "Meet Opti Assist",
+        name: "Opti Assist",
+        tagline: "The colleague who has read every manual.",
+        body: "AI that knows your machines, your procedures and your live production data. Ask in plain words, get the answer and the source.",
+        ctaLabel: "Learn more",
         ctaHref: "/ai/chat",
+        secondaryLabel: "Book a demo",
+        secondaryHref: "/contact",
       },
     ],
     advisory: {
@@ -532,42 +523,33 @@ const copy: Record<Locale, HomeCopy> = {
     chapters: [
       {
         id: "mes",
-        eyebrow: "Modulært MES",
-        title: "Jeres MES. Ét modul ad gangen.",
-        body: "Start med ordrer og OEE på én linje. Tag planlægning, ruter og kvalitet med, når næste spørgsmål melder sig. Det kører fint for sig selv, eller sammen med jeres ERP.",
-        points: [
-          "Start, stop og meld ordrer tilbage ved maskinen",
-          "Live OEE på tværs af skift, linjer og maskiner",
-          "Planlægning med ruter og tidslinjer",
-        ],
-        ctaLabel: "Se Modulært MES",
+        name: "Modulært MES",
+        tagline: "Styr gulvet efter fakta. Start med én linje.",
+        body: "Ordrer, OEE, planlægning og maskindata på samme fundament. Tag næste modul, når I har brug for det, med eller uden jeres ERP.",
+        ctaLabel: "Læs mere",
         ctaHref: "/modules/mes",
+        secondaryLabel: "Book en demo",
+        secondaryHref: "/contact",
       },
       {
         id: "iot",
-        eyebrow: "IoT",
-        title: "Kobl det på, I allerede har.",
-        body: "Nye styringer, en presse fra 1998, sensorsættet fra et gammelt projekt og de systemer, I kører i dag. Vi læser fra det hele og sætter kun ny hardware op, hvor der ikke er noget at læse fra.",
-        points: [
-          "Siemens, Fanuc, OPC UA, Modbus, MQTT og flere",
-          "Genbruger jeres hardware, historians og SCADA",
-          "Kun en gateway dér, hvor maskinen intet har at give",
-        ],
-        ctaLabel: "Se IoT",
+        name: "IoT",
+        tagline: "Alle maskiner taler med. Også den fra 1998.",
+        body: "Vi læser fra de styringer, sensorer og systemer, I allerede har. Ny hardware kommer kun op, hvor der ikke er noget at læse fra.",
+        ctaLabel: "Læs mere",
         ctaHref: "/modules/iot",
+        secondaryLabel: "Book en demo",
+        secondaryHref: "/contact",
       },
       {
         id: "assist",
-        eyebrow: "AI · Opti Assist",
-        title: "Spørg fabrikken. Få et svar.",
-        body: "Opti Assist kender jeres manualer, procedurer og produktionsdata, som de ser ud lige nu. Operatøren får det rigtige trin ved maskinen. Lederen får tallene bag ugen, med kilderne til at tjekke dem.",
-        points: [
-          "Svar fra jeres egne dokumenter og SOP'er",
-          "Bygger på live data fra jeres maskiner",
-          "Ikke låst til én AI-model, og kun på jeres data",
-        ],
-        ctaLabel: "Mød Opti Assist",
+        name: "Opti Assist",
+        tagline: "Kollegaen, der har læst alle manualerne.",
+        body: "AI, der kender jeres maskiner, jeres procedurer og tallene fra gulvet lige nu. Spørg med almindelige ord, og få svaret og kilden.",
+        ctaLabel: "Læs mere",
         ctaHref: "/ai/chat",
+        secondaryLabel: "Book en demo",
+        secondaryHref: "/contact",
       },
     ],
     advisory: {
@@ -821,13 +803,17 @@ export default async function Home({
             className="mt-10"
           />
         </div>
+      </section>
 
-        {/* The three products, stacked to scroll rather than slide. The
-            audience slider that sat here is gone from the page; SlideCarousel
-            itself stays for the module and AI sections below. */}
-        <ProductChapters chapters={t.chapters} className="mt-8" />
+      {/* The three products the page is built around, a full-bleed band each,
+          stacked to scroll rather than slide. The audience slider that sat
+          here is gone from the page; SlideCarousel itself stays for the module
+          and AI sections below. */}
+      <ProductChapters chapters={t.chapters} />
 
-        <div className="mt-10 px-[var(--edge)] sm:mt-14">
+      {/* Follows a coloured band, so it carries its own top padding. */}
+      <section className="py-20 lg:py-28">
+        <div className="px-[var(--edge)]">
           <p className="mx-auto max-w-2xl text-balance text-center text-lg leading-relaxed text-foreground/78">
             {t.advisory.text}{" "}
             <Link
