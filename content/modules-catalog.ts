@@ -37,7 +37,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Modular MES", da: "Modulært MES" },
     blurb: {
       en: "The modular MES foundation every other module plugs into.",
-      da: "Det modulære MES-fundament, alle de andre moduler bygger på.",
+      da: "Det MES, alle de andre moduler bygger på.",
     },
   },
   {
@@ -46,7 +46,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "IoT", da: "IoT" },
     blurb: {
       en: "Consolidate the machines, hardware, and systems you already run.",
-      da: "Saml de maskiner, det hardware og de systemer, I allerede har.",
+      da: "Få data fra de maskiner, den hardware og de systemer, I allerede har.",
     },
   },
   {
@@ -55,7 +55,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "OEE", da: "OEE" },
     blurb: {
       en: "Live OEE, downtime, losses, and shift performance.",
-      da: "Live OEE, nedetid, tab og hvordan skiftene kører.",
+      da: "OEE, nedetid og tab, live og skift for skift.",
     },
   },
   {
@@ -64,7 +64,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "AI agents", da: "AI-agenter" },
     blurb: {
       en: "Agents and copilots that work on your own production data.",
-      da: "Agenter og copiloter, der arbejder på jeres egne produktionsdata.",
+      da: "Agenter og copiloter, der arbejder med jeres egne produktionsdata.",
     },
   },
   {
@@ -73,7 +73,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Maintenance", da: "Vedligehold" },
     blurb: {
       en: "Preventive and predictive planning, driven by IoT data.",
-      da: "Forebyggende og forudsigende planlægning på IoT-data.",
+      da: "Forebyggende og forudsigende vedligehold ud fra maskinernes data.",
     },
   },
   {
@@ -100,7 +100,7 @@ export const moduleCatalog: ModuleEntry[] = [
     label: { en: "Orders", da: "Ordrer" },
     blurb: {
       en: "Start, stop, and report at the machine. ERP optional.",
-      da: "Start, stop og meld tilbage ved maskinen. ERP er en mulighed.",
+      da: "Start, stop og meld tilbage ved maskinen. Med eller uden ERP.",
     },
   },
   {

@@ -502,19 +502,19 @@ const copy: Record<Locale, HomeCopy> = {
     hero: {
       variants: {
         product: {
-          heading: "Kør produktion og drift på live data",
-          subheading: "Ét datagrundlag. Alle teams på de samme tal.",
+          heading: "Styr produktionen efter det, der sker lige nu",
+          subheading: "Alle i huset ser de samme tal, fra gulvet til ledelsen.",
         },
         category: {
-          heading: "Én platform til at drive hele produktionen",
-          subheading: "Alle maskiner, alle moduler, ét datagrundlag.",
+          heading: "Hele produktionen i ét system",
+          subheading: "Alle maskiner og alle moduler bygger på de samme data.",
         },
         outcome: {
-          heading: "Kend din fabrik. I realtid.",
-          subheading: "Live OEE, kvalitet og vedligehold på ét sted.",
+          heading: "Se, hvordan det går på fabrikken lige nu",
+          subheading: "OEE, kvalitet og vedligehold på samme skærm, mens det sker.",
         },
       },
-      modulePrompt: "Hvad vil du gøre bedre?",
+      modulePrompt: "Hvad vil I have bedre styr på?",
       moduleRows: [
         ["mes", "iot", "ai-agents", "oee", "qms"],
         ["orders", "planning", "ems", "maintenance", "documents"],
@@ -524,8 +524,8 @@ const copy: Record<Locale, HomeCopy> = {
       {
         id: "mes",
         name: "Modulært MES",
-        tagline: "Styr gulvet efter fakta. Start med én linje.",
-        body: "Ordrer, OEE, planlægning og maskindata på samme fundament. Tag næste modul, når I har brug for det, med eller uden jeres ERP.",
+        tagline: "Start med én linje, og styr efter tallene.",
+        body: "Ordrer, OEE, planlægning og maskindata samlet i ét system. Læg det næste modul på, når I får brug for det, med eller uden jeres ERP.",
         ctaLabel: "Læs mere",
         ctaHref: "/modules/mes",
         secondaryLabel: "Book en demo",
@@ -534,8 +534,8 @@ const copy: Record<Locale, HomeCopy> = {
       {
         id: "iot",
         name: "IoT",
-        tagline: "Alle maskiner taler med. Også den fra 1998.",
-        body: "Vi læser fra de styringer, sensorer og systemer, I allerede har. Ny hardware kommer kun op, hvor der ikke er noget at læse fra.",
+        tagline: "Vi får data ud af alle maskiner. Også den fra 1998.",
+        body: "Vi læser fra de styringer, sensorer og systemer, I allerede har. Vi sætter kun ny hardware op, hvor der ikke er noget at læse fra.",
         ctaLabel: "Læs mere",
         ctaHref: "/modules/iot",
         secondaryLabel: "Book en demo",
@@ -545,7 +545,7 @@ const copy: Record<Locale, HomeCopy> = {
         id: "assist",
         name: "Opti Assist",
         tagline: "Kollegaen, der har læst alle manualerne.",
-        body: "AI, der kender jeres maskiner, jeres procedurer og tallene fra gulvet lige nu. Spørg med almindelige ord, og få svaret og kilden.",
+        body: "AI, der kender jeres maskiner, jeres procedurer og tallene fra gulvet lige nu. Spørg helt almindeligt, og få svaret med kilden ved siden af.",
         ctaLabel: "Læs mere",
         ctaHref: "/ai/chat",
         secondaryLabel: "Book en demo",
@@ -553,41 +553,41 @@ const copy: Record<Locale, HomeCopy> = {
       },
     ],
     advisory: {
-      text: "I tvivl om, hvor I skal starte? Vi rådgiver om MES, IoT og AI, fra den første vurdering til business casen.",
+      text: "Ved I ikke, hvor I skal begynde? Vi rådgiver om MES, IoT og AI hele vejen fra den første gennemgang til business casen.",
       linkLabel: "Tal med en rådgiver",
       href: "/services/smart-operations",
     },
-    logoWallTitle: "Virksomheder, der kører på OptiPeople",
+    logoWallTitle: "De bruger allerede OptiPeople",
     trust: {
-      heading: "Førende produktionsvirksomheder bruger OptiPeople.",
-      headingSub: "Se hvordan de bruger tallene i den daglige drift.",
+      heading: "Mange producenter styrer allerede efter tallene med OptiPeople.",
+      headingSub: "Læs, hvordan de gør det i hverdagen.",
       storiesLabel: "Kundehistorier",
       quote:
         "Sammenlignet med vores OEE før OptiPeople Data Platform har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
       cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
-      eyebrow: "Udforsk platformen",
-      title: "Alle moduler. De samme data.",
+      eyebrow: "Platformen",
+      title: "Alle moduler læser de samme data",
       subtitle:
-        "Hvert modul svarer på et konkret spørgsmål i driften, og de læser alle de samme maskinsignaler. Et stop, der bliver registreret på gulvet, slår igennem i OEE, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
+        "Hvert modul svarer på et konkret spørgsmål i driften, og de læser alle de samme maskinsignaler. Et stop, der bliver registreret på gulvet, dukker op i OEE, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
       ariaLabel: "Platformmoduler",
     },
-    moduleCta: "Udforsk {module}",
+    moduleCta: "Mere om {module}",
     // Ingen slides bruger screenshots: hvert modul tegner sit visuelle
     // udtryk i kode, se components/module-mockups.tsx
     moduleSlides: {
       mes: {
         description:
-          "MES'et i skyen, som de andre moduler kører på. Start med én linje, og tag flere moduler med, når næste spørgsmål melder sig. Det er de samme data hele vejen.",
+          "Et MES i skyen, som alle de andre moduler bygger på. Start med én linje, og tag flere moduler med, når næste spørgsmål melder sig. Data er de samme hele vejen, så intet skal laves forfra.",
       },
       oee: {
         description:
-          "Se hvor produktionstiden går tabt, og hvorfor. Følg tilgængelighed, ydelse og kvalitet live på tværs af skift, linjer og maskiner.",
+          "Se, hvor produktionstiden forsvinder, og hvorfor. Følg tilgængelighed, ydelse og kvalitet live for hvert skift, hver linje og hver maskine, målt direkte på maskinernes signaler.",
       },
       qms: {
         description:
-          "Registrer kvalitetsdata dér, hvor arbejdet sker. Følg afvigelsen tilbage til maskine, batch og skift, og lad kontrollen være dokumentationen i stedet for papirarbejde.",
+          "Registrer kvalitetsdata dér, hvor arbejdet sker. Følg afvigelsen tilbage til maskine, batch og skift. Kontrollen bliver selv dokumentationen, så papirarbejdet forsvinder.",
       },
       ems: {
         description:
@@ -595,31 +595,31 @@ const copy: Record<Locale, HomeCopy> = {
       },
       maintenance: {
         description:
-          "Planlæg vedligeholdet efter brug og tilstand i stedet for efter kalenderen. Sæt navn på opgaverne, følg med i dem, og få mindre uplanlagt nedetid.",
+          "Planlæg vedligeholdet efter brug og tilstand i stedet for efter kalenderen. Fordel opgaverne, se, hvad der er gjort, og få mindre uplanlagt nedetid.",
       },
       planning: {
         description:
-          "Læg ordrerne efter den kapacitet, I faktisk har. Planerne bygger på målte kørehastigheder og den tid, maskinerne reelt er ledige, ikke på tal fra et regneark.",
+          "Læg ordrerne i rækkefølge efter den kapacitet, I faktisk har. Planerne bygger på målte kørehastigheder og den tid, maskinerne reelt er ledige, ikke på tal fra et regneark.",
       },
       orders: {
         description:
-          "Ordrer begge veje mellem ERP og gulvet. Ordren kommer ud på maskinen, og status, spild og tid går direkte tilbage, uden at nogen taster det ind.",
+          "ERP og gulvet taler sammen begge veje. Ordren kommer ud på maskinen, og status, kassation og tid går direkte tilbage, uden at nogen taster det ind igen.",
       },
       iot: {
         description:
-          "Få data fra det hele. De nyere styringer over de protokoller, maskiner taler, og de gamle maskiner med sensorer, der måler signalet direkte.",
+          "Vi henter data fra det hele: nyere styringer over de gængse industriprotokoller og ældre maskiner via sensorer, der måler signalet direkte.",
       },
       documents: {
         description:
-          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder. Operatøren ser det, der hører til ordren foran sig.",
+          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder. Operatøren ser lige præcis det, der hører til den ordre, der kører.",
       },
       analysis: {
         description:
-          "Gør produktionsdata til rapporter, folk kan læse: hvordan det går, hvor I taber, og hvad der koster mest. Uden regneark.",
+          "Rapporter, folk faktisk kan læse: hvordan det går, hvor I taber tid, og hvad der koster mest. De laver sig selv, uden regneark.",
       },
       "ai-agents": {
         description:
-          "Stil spørgsmål i almindeligt sprog, og lad agenterne holde øje med mønstrene i jeres egne produktionsdata. Det er de samme tal, som alle andre ser.",
+          "Spørg helt almindeligt, og lad agenterne holde øje med mønstre i jeres egne produktionsdata. De bruger de samme tal, som alle andre ser.",
       },
     },
 
@@ -652,14 +652,14 @@ const copy: Record<Locale, HomeCopy> = {
     bento: {
       eyebrow: "Kunderesultater",
       title: "Målt på fabriksgulvet.",
-      subtitle: "Det har produktionsvirksomheder fået ud af OptiPeople. Åbn en, og se hvordan.",
+      subtitle: "Det har produktionsvirksomheder fået ud af OptiPeople. Klik på en, og se, hvordan de gjorde.",
       allCases: "Alle cases",
       caseCards: [
         {
           company: "Fiberline Composites",
           value: "−41%",
           unit: "unødvendige stop",
-          note: "Færre maskinstop, og 6% mindre tid tabt per stop.",
+          note: "Færre maskinstop, og hvert stop koster 6% mindre tid.",
           slug: "konkurrencekraft-og-tempo-pa-digital-transformation",
           span: "wide",
           kind: "chart",
@@ -670,7 +670,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "Fortrolig fabrik",
           value: "21→41%",
           unit: "OEE",
-          note: "Produktionen næsten fordoblet ved at styre efter tal.",
+          note: "Næsten dobbelt så meget produceret, nu hvor de styrer efter tal.",
           slug: "fra-data-til-effektivitet",
           span: "narrow",
           kind: "chart",
@@ -680,8 +680,8 @@ const copy: Record<Locale, HomeCopy> = {
         {
           company: "Danpres",
           value: "−50%",
-          unit: "tid til værktøjsreparation",
-          note: "Mere kapacitet, uden at planen blev lavet om.",
+          unit: "tid på værktøjsreparation",
+          note: "Mere kapacitet inden for den plan, de allerede havde.",
           slug: "danpres-boosting-production-by-reducing-tool-repair-time-by-50",
           span: "narrow",
           kind: "image",
@@ -708,7 +708,7 @@ const copy: Record<Locale, HomeCopy> = {
           company: "DFI Geisler",
           value: "+5%",
           unit: "produktivitet",
-          note: "Holdt fast i to år og på syv maskiner.",
+          note: "Fastholdt i to år på syv maskiner.",
           slug: "dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights",
           span: "narrow",
           kind: "image",
@@ -749,9 +749,9 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
       "Connect machines, track OEE in real time, automate reporting, and give production teams the data they need to improve output and uptime.",
   },
   da: {
-    title: "OptiPeople | Kør driften på live data",
+    title: "OptiPeople | Styr driften efter live data",
     description:
-      "Kobl maskinerne på, følg produktionen i realtid, forbedr OEE, og gør tallene til handling.",
+      "Kobl maskinerne på, følg OEE, mens det sker, og brug tallene til at få mere ud af produktionen.",
   },
 }
 
