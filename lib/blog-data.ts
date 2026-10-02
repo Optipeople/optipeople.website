@@ -176,7 +176,7 @@ function parsePost(slug: string, locale: Locale): BlogPost | undefined {
     category: asString(source.data.category),
     author: asString(data.author),
     image: resolveImagePath(data.image),
-    summary: createSummary(content, title),
+    summary: asString(data.description) || createSummary(content, title),
     contentLocale: translation ? locale : defaultLocale,
     ...caseFields(data),
   }
