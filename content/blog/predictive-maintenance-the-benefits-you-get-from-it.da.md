@@ -50,3 +50,5 @@ Når maskinerne ikke bryder ned uden varsel, er der mindre risiko for, at nogen 
 ## Konklusion
 
 Forudsigende vedligehold er en praktisk vej til mere oppetid, lavere udgifter til vedligehold og en sikrere arbejdsplads. Hvis jeres drift står og falder med, at udstyret kører, får I et langt bedre grundlag at planlægge og beslutte ud fra, end hvis I bare venter på, at noget går i stykker.
+
+Fordelene koster også noget. Se [fordele og ulemper ved forudsigende vedligehold](/da/blog/what-are-the-advantages-and-disadvantages-of-predictive-maintenance) for begge sider i én tabel.

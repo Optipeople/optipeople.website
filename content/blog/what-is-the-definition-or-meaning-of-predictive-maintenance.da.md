@@ -50,6 +50,8 @@ Der er fire hovedformer for vedligehold:
 3. **Forudsigende vedligehold**: I bruger tilstand og data til at forudsige, hvornår der skal vedligeholdes
 4. **Præskriptivt vedligehold**: mere avancerede modeller foreslår, hvad det bedste er at gøre
 
+Forudsigende vedligehold findes selv i fire typer: efter tilstand, tid, brug og model. Se [de fire typer forudsigende vedligehold](/da/blog/the-four-types-of-predictive-maintenance-and-why-they-matter) for forskellen.
+
 ## Forudsigende vedligehold sammenlignet med reaktivt og forebyggende
 
 Reaktivt vedligehold venter på, at maskinen står af.

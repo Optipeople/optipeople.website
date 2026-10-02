@@ -54,6 +54,8 @@ There are four main maintenance approaches:
 3. **Predictive maintenance**: use condition and data to predict when maintenance is needed
 4. **Prescriptive maintenance**: use more advanced models to recommend the best action
 
+Predictive maintenance itself comes in four types: condition-based, time-based, usage-based and model-based. See [the four types of predictive maintenance](/blog/the-four-types-of-predictive-maintenance-and-why-they-matter) for how they differ.
+
 ## Predictive vs Reactive and Preventive Maintenance
 
 Reactive maintenance waits for failure.

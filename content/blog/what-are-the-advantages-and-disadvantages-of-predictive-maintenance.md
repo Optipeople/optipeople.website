@@ -1,72 +1,86 @@
 ---
-title: "What Are the Advantages and Disadvantages of Predictive Maintenance?"
+title: "Advantages and Disadvantages of Predictive Maintenance"
+description: "Pros and cons of predictive maintenance in one table: less downtime and longer equipment life against upfront cost, data work and new skills."
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/zero-fault-culture.jpg"
 ---
 
-When equipment runs continuously, parts eventually wear down. Predictive maintenance helps organizations identify when intervention is needed before that wear becomes failure.
+Predictive maintenance uses machine data to service equipment before it fails. Its main advantages are less unplanned downtime, lower maintenance and spare-part costs, longer equipment life and safer, more stable production. Its main disadvantages are the upfront cost of sensors and software, the need for clean data and new skills, and a payback that only comes on critical assets.
 
-Like any maintenance approach, it has both advantages and tradeoffs.
+## Predictive maintenance pros and cons at a glance
 
-## What Is Predictive Maintenance?
+| Advantages | Disadvantages |
+|---|---|
+| Less unplanned downtime | Higher upfront cost for sensors, connectivity and software |
+| Lower maintenance and spare-part costs | Needs reliable data and someone to look after it |
+| Longer equipment life | New skills and training for the maintenance team |
+| Fewer emergency repairs and safer work | Not every failure gives a warning signal |
+| More stable output and quality | Payback takes time and needs failure history |
+| Less wasted energy and material | Alerts only help if the organisation acts on them |
+| Better planning of people and parts | Overkill on cheap or non-critical equipment |
 
-Predictive maintenance uses sensor data, analytics, AI models, and machine learning to estimate future machine condition and identify likely failure before it happens.
+New to the term? Start with [what predictive maintenance means](/blog/what-is-the-definition-or-meaning-of-predictive-maintenance) and [how it works](/blog/how-does-predictive-maintenance-work).
 
-Its purpose is to improve how and when maintenance is performed so that organizations can avoid expensive repairs, reduce downtime, and increase asset availability.
+## What are the advantages of predictive maintenance?
 
-## Advantages of Predictive Maintenance
+1. **Less unplanned downtime.** Wear shows up in the data days or weeks before a breakdown, so the repair happens in a planned stop instead of in the middle of a shift.
+2. **Lower maintenance costs.** Teams service what needs it and skip what does not. Fewer parts are replaced too early, and fewer expensive emergency repairs are needed.
+3. **Longer equipment life.** Components run closer to their real end of life, and small problems are fixed before they damage the parts around them.
+4. **Fewer surprises and safer work.** Machines are less often run in a near-failure state, which lowers the risk of injuries and secondary damage.
+5. **More stable output and quality.** A machine in good condition holds its speed and produces fewer defects and less scrap.
+6. **Less waste and lower emissions.** Worn bearings, leaking air and overheating motors burn energy. Catching them early saves both energy and material.
+7. **Better planning.** When you know which job is coming, you can book the technician, order the spare part and pick the stop in advance.
 
-### Decreased Maintenance Costs
+The [benefits of predictive maintenance](/blog/predictive-maintenance-the-benefits-you-get-from-it) are covered in more depth in a separate guide.
 
-Because predictive maintenance uses real-time information, it reduces uncertainty and helps teams focus only on the work that is actually needed.
+## What are the disadvantages of predictive maintenance?
 
-### No Surprise Malfunctions
+1. **Higher upfront cost.** Sensors, gateways, software and integration have to be paid for before the first saving shows up.
+2. **Data work.** Predictions are only as good as the data behind them. Machines must be connected, signals must be stored, and someone has to keep it all running.
+3. **New skills.** The team needs to read trends, set sensible thresholds and trust the alerts. That takes training and time.
+4. **Not every failure is predictable.** Some faults, such as many electronic failures or damage from misuse, give little or no warning in the data.
+5. **Slow payback and a learning period.** Models and thresholds improve as failures are recorded. The first months often bring false alarms or missed warnings.
+6. **Organisational change.** An alert that nobody owns does nothing. Predictive maintenance only pays when alerts turn into planned work orders.
+7. **Overkill on low-value equipment.** For a cheap fan or a pump with a spare on the shelf, running it to failure can be the better deal.
 
-By identifying abnormal machine behavior early, predictive maintenance reduces the need for reactive emergency repairs.
+## How can you reduce the disadvantages?
 
-### Reduced Equipment Downtime
+Most of the drawbacks come from starting too big. A few habits keep cost and complexity down:
 
-Predictive models help ensure maintenance tasks are completed before unexpected breakdowns occur, which improves uptime.
+- **Start with your most critical machines**, the ones where a breakdown stops the line or takes days to repair.
+- **Use the data you already have.** Running hours, cycle counts and current draw often come straight from the machine or PLC, without new sensors.
+- **Begin with usage-based triggers** and add condition monitoring where it earns its place. See [the four types of predictive maintenance](/blog/the-four-types-of-predictive-maintenance-and-why-they-matter).
+- **Send alerts to a person who acts on them**, and tie each alert to a maintenance task.
 
-### Boosted Equipment Lifespan
+The [OptiPeople Maintenance module](/modules/maintenance) works this way: it reads running hours, cycle counts and telemetry from connected machines and triggers maintenance tasks and alerts from them. [Kvik moved from calendar-based to usage-based maintenance](/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud) this way and raised uptime by 5%.
 
-Machines and components can be used closer to their full useful life without being left to fail unexpectedly.
+## When is predictive maintenance worth it?
 
-### Expanded Equipment Performance
+It usually pays off when most of these are true:
 
-Machine data helps improve the timing of maintenance, which supports better and more stable performance.
+- a breakdown stops production or is expensive to repair
+- the machine shows wear in something you can measure, such as vibration, temperature, current or cycle count
+- the equipment is used enough to wear out in a predictable way
+- the team can act on an alert within the warning window
 
-### Expanded Revenue Potential
+When they are not true, [preventive maintenance](/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) on a fixed schedule or even [reactive maintenance](/blog/predictive-maintenance-vs-reactive-maintenance) can be the better fit.
 
-Although predictive maintenance can require investment upfront, it can reduce losses caused by downtime and unreliable equipment.
+## Frequently asked questions
 
-### Increased Efficiency and Reduced Emissions
+### What is the biggest disadvantage of predictive maintenance?
 
-A better maintenance strategy supports smoother operations and can reduce waste, energy loss, and harmful emissions caused by poorly maintained equipment.
+The upfront investment. Sensors, connectivity, software and training cost money before any downtime is avoided. Starting with a few critical machines and data the machines already produce keeps that investment small.
 
-### Upgraded Productivity
+### Is predictive maintenance worth the cost?
 
-When equipment breaks down less often, workflows stay more stable and teams spend less time firefighting.
+On critical equipment, usually yes. The saving comes from avoided unplanned stops, which often cost far more per hour than the maintenance itself. On cheap, non-critical equipment it rarely pays.
 
-### Better Product Quality
+### What is the advantage of predictive maintenance over preventive maintenance?
 
-Machines operating in better condition are more likely to produce consistent output with fewer defects.
+Preventive maintenance services machines on a fixed schedule, whether they need it or not. Predictive maintenance services them based on their actual condition or use, so parts are not replaced too early and fewer failures slip through between services.
 
-## Disadvantages of Predictive Maintenance
+### Do you need AI or machine learning for predictive maintenance?
 
-Predictive maintenance is not free of tradeoffs.
-
-Common disadvantages include:
-
-- higher upfront implementation cost
-- need for sensors, infrastructure, and software
-- more data and process complexity
-- need for new training and internal capability
-
-For some assets, these costs may outweigh the value if the equipment is low-risk or inexpensive to replace.
-
-## Final Perspective
-
-Predictive maintenance is most valuable where failure is costly, downtime matters, and machine condition can be measured effectively. For lower-criticality equipment, simpler maintenance strategies may still be the better fit.
+No. Many plants get most of the value from simple rules on running hours, cycle counts or a temperature limit. Machine learning helps when many signals interact, but it needs more data and failure history.
