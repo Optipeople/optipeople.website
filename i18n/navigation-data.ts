@@ -203,9 +203,9 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       id: "resources",
       title: "Ressourcer",
       items: [
-        { title: "Indsigter", href: "/insights" },
+        { title: "Viden", href: "/insights" },
         { title: "Nyhedsbrev", href: "/newsletter" },
-        { title: "Mennesker", href: "/resources/people" },
+        { title: "Holdet", href: "/resources/people" },
         { title: "Få hjælp", href: "/get-help" },
         { title: "Kontakt", href: "/contact" },
         { title: "Om os", href: "/about" },
@@ -265,7 +265,7 @@ const footerCopy: Record<
     },
   },
   da: {
-    platformOverview: "Platformoverblik",
+    platformOverview: "Om platformen",
     cases: "Kundecases",
     blog: "Blog",
     company: "Virksomhed",

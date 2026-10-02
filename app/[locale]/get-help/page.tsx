@@ -136,10 +136,10 @@ const copy: Record<Locale, HelpCopy> = {
   da: {
     metaTitle: "Få hjælp | OptiPeople",
     metaDescription:
-      "Support til OptiPeople Data Platform: hvordan I får fat i os, svartider og svar på de spørgsmål, vi oftest får, om maskinopkobling, OEE, data og API.",
+      "Support til OptiPeople Data Platform: hvordan I får fat i os, svartider og svar på de spørgsmål, vi oftest får, om opkobling af maskiner, OEE, data og API.",
     eyebrow: "Få hjælp",
-    headline: "Vi hjælper jer videre",
-    body: "Uanset om I kører OptiPeople Data Platform i dag eller stadig er ved at finde ud af, om det passer til jeres produktion, kan I få fat i et rigtigt menneske her. Vi besvarer supporthenvendelser på hverdage, og haster det på en kørende installation, går det hurtigere på telefonen end på mail.",
+    headline: "Hvad kan vi hjælpe med?",
+    body: "Uanset om I kører OptiPeople Data Platform i dag eller stadig overvejer, om det passer til jeres produktion, får I fat i et rigtigt menneske her. Vi svarer på supportsager på hverdage. Haster det på en installation, der kører, er telefonen hurtigere end en mail.",
     jumpLabel: "Spørgsmål, vi ofte får",
     channelsTitle: "Sådan får I fat i os",
     channels: [
@@ -155,70 +155,70 @@ const copy: Record<Locale, HelpCopy> = {
         icon: Phone,
         title: "Ring til os",
         description:
-          "Til akutte problemer på en kørende installation. I får fat i en, der kender platformen, ikke en omstilling.",
+          "Til akutte problemer på en installation, der kører. Vi taler både dansk og engelsk, og I får fat i en, der kender platformen, ikke et omstillingsbord.",
         actionLabel: "+45 23 74 47 05",
         href: "tel:+4523744705",
       },
       {
         icon: Users,
-        title: "Mød teamet",
+        title: "Mød folkene",
         description:
-          "Se hvem der arbejder med salg, projekter og teknologi hos OptiPeople, og kontakt den rigtige person direkte.",
-        actionLabel: "Se menneskene",
+          "Se, hvem der arbejder med salg, projekter og teknik hos OptiPeople, og skriv direkte til den rigtige.",
+        actionLabel: "Se folkene",
         href: "/resources/people",
       },
     ],
     faqTitle: "Spørgsmål, vi ofte får",
     faqBody:
-      "De spørgsmål, vi oftest møder, med henvisning til, hvor de er beskrevet mere udførligt.",
+      "De spørgsmål, vi oftest får, og hvor I kan læse mere om hvert enkelt.",
     faq: [
       {
-        question: "Kan I forbinde vores ældre maskiner?",
+        question: "Kan I koble vores ældre maskiner på?",
         answer:
-          "Som regel ja. Platformen læser fra de nyere styringer over de protokoller, maskiner taler, og på gammelt udstyr, hvor der ikke er noget at læse fra, sætter vi sensorer op, der måler signalet direkte: emnetæller, kørestatus og strømforbrug. En maskine skal ikke være ny for at kunne måles.",
+          "Som regel ja. Platformen læser fra nyere styringer over de almindelige industriprotokoller. På ældre udstyr, hvor der ikke er noget at læse fra, sætter vi sensorer på, der måler signalerne direkte: cyklusser, om maskinen kører, og strømforbrug. En maskine behøver ikke være ny for at kunne måles.",
         linkLabel: "Se IoT-modulet",
         linkHref: "/modules/iot",
       },
       {
         question: "Hvor lang tid tager det at komme i gang?",
         answer:
-          "Den første linje er typisk koblet på og sender data inden for uger, ikke måneder. Det meste af arbejdet ligger i at blive enige om, hvad der skal måles, og hvordan stopårsagerne skal deles op. Selve opkoblingen er den mindste del.",
+          "Den første linje er typisk koblet på og sender data i løbet af få uger, ikke måneder. Det meste af arbejdet ligger i at blive enige om, hvad der skal måles, og hvordan stopårsagerne skal deles op. Selve opkoblingen er den mindste del af arbejdet.",
         linkLabel: "Se platformen",
         linkHref: "/platform",
       },
       {
-        question: "Hvordan beregnes OEE i platformen?",
+        question: "Hvordan regner platformen OEE ud?",
         answer:
-          "Tilgængelighed, ydelse og kvalitet bliver regnet ud af maskinernes egne signaler og de stop, der er registreret. Ikke af skøn. Vil I se hele regnestykket og valgene bag, er det gennemgået med eksempler.",
+          "Tilgængelighed, ydelse og kvalitet bliver regnet ud fra maskinernes egne signaler og de stop, der er registreret. Ikke ud fra skøn. Vil I se hele regnestykket og de valg, der ligger bag, har vi skrevet det hele ud med regneeksempler.",
         linkLabel: "Sådan beregnes OEE",
         linkHref: "/blog/how-to-calculate-oee-for-manufacturing-and-maintenance",
       },
       {
         question: "Kan vi få vores data ud?",
         answer:
-          "Ja. Platformen har et REST API, og maskiner og koblinger kan sende over MQTT i et dokumenteret JSON-format. Jeres produktionsdata er jeres, og I kan hente dem ind i Power BI, et datawarehouse eller jeres egne systemer.",
+          "Ja. Platformen har et REST API, og maskiner og integrationer kan sende over MQTT i et dokumenteret JSON-format. Jeres produktionsdata er jeres, og I kan hente dem ind i Power BI, et datawarehouse eller jeres egne systemer.",
         linkLabel: "API trin for trin",
         linkHref: "/blog/opticloud-api-how-to-use-it-step-by-step",
       },
       {
-        question: "Virker det sammen med vores ERP?",
+        question: "Spiller det sammen med vores ERP?",
         answer:
-          "Platformen synkroniserer begge veje med ERP-planlægningen, så ordrer og produktionstilbagemeldinger bevæger sig mellem gulvet og planlægningssystemet i stedet for at blive tastet ind to gange.",
+          "Ja. Platformen synkroniserer begge veje med planlægningen i ERP, så ordrer og tilbagemeldinger fra produktionen går frem og tilbage mellem gulvet og planlægningen. Ingen skal taste dem ind to gange.",
         linkLabel: "Se ERP Shopfloor",
         linkHref: "/modules/erp-shopfloor",
       },
       {
         question: "Hvem ejer data, og hvor ligger de?",
         answer:
-          "I ejer jeres produktionsdata. De ligger på europæisk cloudinfrastruktur, og hvordan vi behandler persondata på sitet og i vores services står beskrevet i privatlivspolitikken.",
+          "I ejer jeres produktionsdata. De ligger på europæiske cloudservere. I privatlivspolitikken kan I læse, hvordan vi behandler persondata på sitet og i vores ydelser.",
         linkLabel: "Privatlivspolitik",
         linkHref: "/privacy",
       },
     ],
-    closingTitle: "Er I i tvivl om, hvor I skal starte?",
+    closingTitle: "Ved I ikke helt, hvor I skal starte?",
     closingBody:
-      "Fortæl os, hvordan jeres produktion ser ud, og hvad I gerne vil forbedre. Så siger vi ærligt, om vi er det rigtige match, og hvad et første skridt vil indebære.",
-    closingLabel: "Kontakt teamet",
+      "Fortæl os, hvordan jeres produktion ser ud, og hvad I gerne vil have bedre. Så siger vi ærligt, om vi passer til jer, og hvad et første skridt kræver.",
+    closingLabel: "Kontakt os",
   },
 }
 

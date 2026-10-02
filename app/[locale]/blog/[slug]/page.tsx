@@ -41,7 +41,7 @@ const copy: Record<Locale, PostCopy> = {
   },
   da: {
     backToBlog: "Blog",
-    backToCases: "Cases",
+    backToCases: "Kundehistorier",
     tableOfContents: "Indhold",
     relatedPosts: "Læs videre",
     relatedCases: "Flere kundehistorier",

@@ -15,7 +15,8 @@ const meta: Record<Locale, { title: string; description: string }> = {
   },
   da: {
     title: "Privatlivspolitik | OptiPeople",
-    description: "Privatliv og databeskyttelse hos OptiPeople.",
+    description:
+      "Sådan indsamler, bruger og beskytter OptiPeople ApS personoplysninger på dette website.",
   },
 }
 
@@ -48,68 +49,72 @@ export default async function PrivacyPage({ params }: Props) {
         <>
           <p>
             OptiPeople ApS (&quot;OptiPeople&quot;, &quot;vi&quot;, &quot;os&quot;) respekterer dit
-            privatliv og beskytter dine personoplysninger. Denne politik forklarer,
-            hvilke data vi indsamler via dette website, hvorfor vi indsamler dem, og
-            hvilke rettigheder du har efter databeskyttelsesforordningen (GDPR) og
-            dansk databeskyttelseslovgivning.
+            privatliv og passer på dine personoplysninger. Her kan du læse, hvilke
+            oplysninger vi indsamler via dette website, hvorfor vi gør det, og hvilke
+            rettigheder du har efter databeskyttelsesforordningen (GDPR) og den
+            danske databeskyttelseslov.
           </p>
           <h2>Dataansvarlig</h2>
           <p>
             OptiPeople ApS, Sønderskovvej 17, 8362 Hørning (CVR 32883532) er
-            dataansvarlig for personoplysninger indsamlet via dette website. Du kan
-            kontakte os på <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a>{" "}
-            eller +45 23 74 47 05.
+            dataansvarlig for de personoplysninger, vi indsamler via dette website.
+            Du kan skrive til os på{" "}
+            <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> eller ringe på
+            +45 23 74 47 05.
           </p>
-          <h2>Hvad vi indsamler og hvorfor</h2>
+          <h2>Hvad vi indsamler, og hvorfor</h2>
           <p>Vi indsamler kun de personoplysninger, du selv giver os:</p>
           <ul>
             <li>
-              <strong>Kontakthenvendelser.</strong> Når du udfylder
-              kontaktformularen, behandler vi dit navn, din e-mail, dit telefonnummer
-              (valgfrit) og din besked, så vi kan svare dig. Behandlingsgrundlaget er
-              vores legitime interesse i at besvare dig og tage skridt forud for en
-              eventuel aftale (GDPR art. 6, stk. 1, litra b og f).
+              <strong>Henvendelser.</strong> Når du udfylder kontaktformularen,
+              behandler vi dit navn, din e-mail, dit telefonnummer (hvis du oplyser
+              det) og din besked, så vi kan svare dig. Det gør vi, fordi vi har en
+              legitim interesse i at svare dig, og fordi det kan være nødvendigt,
+              før vi eventuelt indgår en aftale med dig (GDPR art. 6, stk. 1, litra
+              b og f).
             </li>
             <li>
-              <strong>Nyhedsbrev.</strong> Hvis du tilmelder dig vores nyhedsbrev,
-              behandler vi dit navn, din virksomhed og din e-mail for at sende dig de
-              opdateringer, du har samtykket til. Behandlingsgrundlaget er dit
-              samtykke (GDPR art. 6, stk. 1, litra a), som du til enhver tid kan
-              trække tilbage.
+              <strong>Nyhedsbrev.</strong> Når du tilmelder dig vores nyhedsbrev,
+              behandler vi dit navn, din virksomhed og din e-mail, så vi kan sende dig
+              de nyheder, du har sagt ja til. Det sker på grundlag af dit samtykke
+              (GDPR art. 6, stk. 1, litra a). Du kan til enhver tid trække det
+              tilbage.
             </li>
           </ul>
-          <h2>Hvordan dine data behandles</h2>
+          <h2>Sådan behandles dine data</h2>
           <p>
-            Formularer håndteres gennem vores CRM-leverandør (monday.com), og vores
-            website hostes af Vercel. Disse leverandører fungerer som databehandlere
-            for os under databehandleraftaler og behandler data inden for EU/EØS
-            eller under passende garantier ved tredjelandsoverførsler.
+            Formularerne går gennem vores CRM-leverandør (monday.com), og websitet
+            hostes af Vercel. Begge behandler data på vores vegne som databehandlere
+            under en databehandleraftale. De kan behandle data inden for EU/EØS eller
+            uden for EU/EØS, hvis de nødvendige garantier for overførslen er på plads.
           </p>
           <h2>Opbevaring</h2>
           <p>
-            Vi opbevarer kun personoplysninger, så længe det er nødvendigt til
-            formålet, typisk under vores dialog med dig og et eventuelt efterfølgende
-            kundeforhold, hvorefter de slettes eller anonymiseres i
-            overensstemmelse med gældende bogføringskrav.
+            Vi gemmer kun personoplysninger, så længe vi har brug for dem til det
+            formål, de blev indsamlet til. Typisk er det, mens vi er i dialog med dig,
+            og i et eventuelt kundeforhold bagefter. Derefter sletter eller
+            anonymiserer vi dem under hensyn til de gældende regler om bogføring.
           </p>
           <h2>Cookies</h2>
           <p>
-            Dette website bruger kun den strengt nødvendige tekniske lagring, der
-            kræves for, at sitet kan fungere. Vi bruger ikke reklame- eller
-            sporingscookies. Ændres dette, opdaterer vi politikken og indhenter
-            samtykke, hvor det kræves.
+            Websitet bruger kun den tekniske lagring, der er strengt nødvendig, for at
+            sitet kan fungere. Vi bruger ikke cookies til reklame eller sporing. Hvis
+            det ændrer sig, opdaterer vi politikken og beder om dit samtykke, hvor
+            loven kræver det.
           </p>
           <h2>Dine rettigheder</h2>
           <p>
-            Du har ret til at anmode om indsigt i, berigtigelse eller sletning af
-            dine personoplysninger, til at gøre indsigelse mod eller begrænse
-            behandlingen samt til dataportabilitet. Hvor behandlingen er baseret på
-            samtykke, kan du til enhver tid trække det tilbage. Kontakt{" "}
-            <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> for at gøre brug
-            af dine rettigheder.
+            Du har ret til at bede om indsigt i de personoplysninger, vi har om dig,
+            og om at få dem rettet eller slettet. Du kan også gøre indsigelse mod
+            behandlingen eller bede om at få den begrænset, og du har ret til
+            dataportabilitet, altså til at få dine data udleveret, så du kan tage dem
+            med videre. Bygger behandlingen på dit samtykke, kan du til enhver tid
+            trække det tilbage. Skriv til{" "}
+            <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a>, hvis du vil
+            bruge dine rettigheder.
           </p>
           <p>
-            Du har også ret til at klage til Datatilsynet (
+            Du kan også klage til Datatilsynet (
             <a
               href="https://www.datatilsynet.dk"
               target="_blank"
@@ -117,13 +122,13 @@ export default async function PrivacyPage({ params }: Props) {
             >
               datatilsynet.dk
             </a>
-            ), hvis du mener, at dine data behandles ulovligt.
+            ), hvis du mener, at dine data bliver behandlet ulovligt.
           </p>
           <h2>Ændringer</h2>
           <p>
-            Vi kan opdatere denne privatlivspolitik fra tid til anden. Den gældende
-            version findes altid på denne side med datoen for seneste revision angivet
-            ovenfor.
+            Vi kan opdatere privatlivspolitikken fra tid til anden. Den gældende
+            version står altid på denne side, og datoen for den seneste ændring står
+            øverst.
           </p>
         </>
       ) : (

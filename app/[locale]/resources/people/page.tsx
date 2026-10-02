@@ -87,25 +87,25 @@ const copy: Record<Locale, PeopleCopy> = {
   },
   da: {
     meta: {
-      title: "Mennesker | OptiPeople",
+      title: "Holdet bag OptiPeople | OptiPeople",
       description:
-        "Mød teamet bag OptiPeople: dem der arbejder med salg, projekter, IoT, business intelligence og platformsudvikling.",
+        "Mød folkene bag OptiPeople, som arbejder med salg, projekter, IoT, business intelligence og udvikling af platformen.",
     },
-    eyebrow: "Mennesker",
-    title: "Mød OptiPeople",
+    eyebrow: "Holdet",
+    title: "Mød folkene bag OptiPeople",
     intro:
-      "Et praktisk team med erfaring i software, projekter, BI, IoT, salg og industriel drift. Tilsammen dækker vi hele vejen fra en maskine på gulvet til en rapport, nogen rent faktisk bruger.",
+      "Et team, der selv tager fat, med erfaring i software, projekter, BI, IoT, salg og industriel drift. Tilsammen dækker vi hele vejen fra maskinen på gulvet til rapporten, som nogen faktisk bruger.",
     stats: [
       { metric: "100+", label: "Fabrikker" },
       { metric: "10+", label: "Års erfaring" },
-      { metric: "1", label: "Digital partner til jeres virksomhed" },
+      { metric: "1", label: "Partner til alt det digitale" },
     ],
-    secondaryTitle: "I taler med de samme mennesker hele vejen",
+    secondaryTitle: "I taler med de samme folk hele vejen",
     secondary:
-      "Vi arbejder tæt sammen med de fabrikker, vi løser opgaver for. I har én fast kontaktperson hele vejen, og den, der skruer jeres projekt sammen, er også den, der laver det meste af arbejdet. Så dem, I møder i starten, er dem, I bliver ved med at tale med.",
+      "Vi arbejder tæt sammen med fabrikkerne. I har én fast kontaktperson hele vejen, og den, der planlægger jeres projekt, er også den, der laver det meste af arbejdet. De folk, I møder i starten, er altså dem, I bliver ved med at tale med.",
     teamTitle: "Teamet",
     contactNote:
-      "Skriv til den, der er tættest på jeres spørgsmål, eller send det til hej@optipeople.dk, så sender vi det videre.",
+      "Skriv til den, der ved mest om jeres spørgsmål, eller send det til hej@optipeople.dk, så finder vi den rigtige.",
     softwareTeam: {
       team: "Softwareteam",
       title: "Udviklingsteamet",
@@ -125,13 +125,13 @@ const copy: Record<Locale, PeopleCopy> = {
       {
         title: "Få hjælp",
         description:
-          "Supportveje, svartider og de spørgsmål vi oftest svarer på.",
+          "Sådan får I fat i support, svartider og de spørgsmål, vi oftest får.",
         href: "/get-help",
       },
       {
         title: "Tal med os",
         description:
-          "Fortæl os, hvordan jeres produktion ser ud, så peger vi på den rigtige person.",
+          "Fortæl os, hvordan jeres produktion ser ud, så finder vi den rigtige person til jer.",
         href: "/contact",
       },
     ],

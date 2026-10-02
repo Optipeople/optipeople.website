@@ -61,35 +61,35 @@ const copy: Record<
   },
   da: {
     badge: "Nyhedsbrev",
-    title: "Få praktiske ideer til bedre produktion",
+    title: "Praktiske råd til en bedre drift",
     intro:
-      "Korte opdateringer om produktionsdata, OEE, vedligehold, AI og digital drift. Ingen støj, kun noget, I kan bruge.",
+      "Korte nyheder til dig, der arbejder med produktion, vedligehold, rapportering og data i industrien. Ingen fyld, bare ideer, du kan bruge.",
     perks: [
-      "Månedligt, aldrig spam",
-      "Skrevet fra fabriksgulvet",
+      "Én gang om måneden, aldrig spam",
+      "Skrevet af folk, der kender gulvet",
       "Afmeld med ét klik",
     ],
     logosTitle: "Virksomheder, der kører på OptiPeople",
-    expectEyebrow: "Hvad I kan forvente",
-    expectTitle: "Noter fra gulvet, der er pladsen i indbakken værd.",
+    expectEyebrow: "Det får du",
+    expectTitle: "Noter fra gulvet, som er værd at åbne.",
     showcaseEyebrow: "Fra platformen",
-    showcaseTitle: "De samme data, vores kunder handler på hver dag.",
-    dashboardAlt: "OptiPeople produktionsdashboard",
+    showcaseTitle: "De samme tal, som vores kunder styrer efter hver dag.",
+    dashboardAlt: "Produktionsdashboard i OptiPeople",
     topics: [
       {
         title: "Produktion og OEE",
         description:
-          "Tab i produktionen, bedre OEE og forbedringsarbejde, der holder sig til de rigtige produktionstal.",
+          "Sådan finder du tabene, får OEE op og holder forbedringsarbejdet på de rigtige produktionstal.",
       },
       {
-        title: "Forbundne fabrikker",
+        title: "Den opkoblede fabrik",
         description:
-          "Maskindata, integrationer og dashboards: systemerne, der gør driften lettere at styre.",
+          "Maskindata, integrationer og dashboards: de systemer, der gør driften lettere at styre.",
       },
       {
-        title: "Vedligehold & oppetid",
+        title: "Vedligehold og oppetid",
         description:
-          "Planlagt vedligehold, maskinens tilstand og de små vaner, der holder oppetiden oppe.",
+          "Planlagt vedligehold, maskinens tilstand og de små vaner, der stille og roligt holder maskinerne kørende.",
       },
     ],
   },
@@ -109,7 +109,7 @@ export async function generateMetadata({
     return buildMetadata({
       title: "OptiPeople nyhedsbrev",
       description:
-        "Tilmeld dig praktiske opdateringer om produktionsdata, OEE, vedligehold og digital drift.",
+        "Få praktiske nyheder om produktionsdata, OEE, vedligehold og digital drift direkte i din indbakke.",
       path: "/newsletter",
       locale: "da",
     })

@@ -82,42 +82,42 @@ const copy: Record<Locale, InsightsCopy> = {
     ],
   },
   da: {
-    eyebrow: "Indsigter",
-    title: "Ét sted til ideer og beviser",
+    eyebrow: "Viden",
+    title: "Ideer og resultater fra gulvet",
     intro:
-      "Bloggen er til viden, I kan bruge. Cases er til det, kunderne rent faktisk fik ud af det. Begge dele er skrevet af dem, der arbejder med det til daglig.",
+      "I bloggen skriver vi om det store billede og giver praktiske råd. I casene kan I se, hvad kunderne konkret har fået ud af det, og hvordan det blev sat op. Det hele er skrevet af dem, der laver arbejdet.",
     latestLabel: "Nyeste",
-    latestTitle: "Nyeste fra begge",
+    latestTitle: "Det nyeste fra begge",
     browseLabel: "Nyeste først",
     typeLabels: { Cases: "Case", Insights: "Artikel" },
     cards: {
       blog: {
         title: "Blogindlæg",
         description:
-          "Artikler og forklaringer om produktion, data og digital drift.",
+          "Artikler, forklaringer og holdninger om produktion, data og digital drift.",
         countLabel: "artikler",
         cta: "Se blogindlæg",
       },
       cases: {
         title: "Cases",
         description:
-          "Kundehistorier og konkrete eksempler på, hvordan fabrikker bruger OptiPeople Data Platform til at producere mere, holde maskinerne kørende og træffe beslutninger.",
+          "Kundehistorier og konkrete eksempler på, hvordan fabrikker bruger OptiPeople Data Platform til at producere mere, holde maskinerne kørende og træffe bedre beslutninger.",
         countLabel: "kundehistorier",
         cta: "Se cases",
       },
     },
-    moreTitle: "Andre måder at følge med",
+    moreTitle: "Følg med på andre måder",
     more: [
       {
         title: "Videoer",
         description:
-          "Kundesamtaler og partneroplæg, optaget ude på gulvet.",
+          "Kunder og partnere fortæller, optaget ude på gulvet.",
         href: "/videos",
       },
       {
         title: "Nyhedsbrev",
         description:
-          "En kort besked, når der bliver publiceret noget værd at læse.",
+          "En kort besked, når vi har skrevet noget, der er værd at læse.",
         href: "/newsletter",
       },
     ],
@@ -134,9 +134,9 @@ export async function generateMetadata({
 
   if (locale === "da") {
     return buildMetadata({
-      title: "Indsigter | OptiPeople",
+      title: "Viden og cases | OptiPeople",
       description:
-        "Find artikler og cases om produktion, OEE, prediktivt vedligehold og digital drift.",
+        "Artikler og kundecases om effektiv produktion, OEE, prædiktivt vedligehold og digital drift.",
       path: "/insights",
       locale: "da",
     })

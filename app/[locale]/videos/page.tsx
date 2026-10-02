@@ -86,50 +86,50 @@ const copy: Record<Locale, VideosCopy> = {
   },
   da: {
     eyebrow: "Videoer",
-    headline: "Se OptiPeople Data Platform i aktion",
-    body: "Kundesamtaler og partneroplæg om, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret ét sted. Kundehistorierne er på dansk, og oplægget med Omron er på engelsk. Alle historier findes også skrevet i fuld længde her på sitet.",
+    headline: "Se OptiPeople Data Platform i brug",
+    body: "Kunder og partnere fortæller, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret samme sted. Kundehistorierne er på dansk, og oplægget med Omron er på engelsk. Alle historierne kan I også læse i fuld længde her på sitet.",
     watchLabel: "Se historierne",
     countLabel: (count) => `${count} videoer, på dansk og engelsk`,
     carouselTitle: "Kundehistorier",
     carouselBody:
-      "Produktionsvirksomheder fortæller med egne ord: hvad de målte før, hvad de fik forbundet, og hvad de gør anderledes i dag.",
+      "Producenter fortæller med egne ord, hvad de målte før, hvad de har koblet på, og hvad de gør anderledes i dag.",
     videos: [
       {
         videoId: "3LOknXK4buo",
         title: "CASE: Glaseksperten x OptiPeople",
         description:
-          "Glaseksperten om at få forbundet produktionen og få et fælles, live billede af, hvordan linjerne faktisk kører.",
+          "Glaseksperten om at koble produktionen på og få et fælles billede af, hvordan linjerne kører lige nu.",
         languageLabel: "Dansk",
       },
       {
         videoId: "AgHZcfeu8mQ",
         title: "Partnerskabet med OptiPeople (CASE: Nicholaisen)",
         description:
-          "Nicholaisen om, hvordan samarbejdet ser ud i hverdagen, fra den første maskine bliver forbundet, til data bliver brugt i den daglige drift.",
+          "Nicholaisen om, hvordan samarbejdet fungerer i hverdagen: fra den første maskine blev koblet på, til tallene bliver brugt i driften.",
         languageLabel: "Dansk",
       },
       {
         videoId: "H4HvdRpmHjo",
         title: "OptiPeople & Omron: turning data into a competitive advantage",
         description:
-          "Fælles oplæg med Omron om, hvordan produktionsdata bliver til en reel konkurrencefordel: hvad man skal måle, og hvordan det bliver til beslutninger.",
+          "Oplæg sammen med Omron om, hvordan produktionsdata kan give en reel fordel over konkurrenterne: hvad I skal måle, og hvordan I træffer beslutninger ud fra det.",
         languageLabel: "Engelsk",
       },
     ],
-    moreTitle: "Læs historierne i stedet",
+    moreTitle: "Hellere læse historierne?",
     moreBody:
-      "Foretrækker I tekst, eller vil I have tallene? De skrevne cases går mere i dybden.",
+      "Vil I hellere have det på skrift, eller vil I se tallene? De skrevne cases går mere i dybden.",
     moreLinks: [
       {
         title: "Alle kundecases",
         description:
-          "Resultater fra fabriksgulvet: løft i OEE, mindre nedetid, og hvad der skulle til.",
+          "Resultater fra gulvet: højere OEE, mindre nedetid, og hvad der skulle til.",
         href: "/cases",
       },
       {
-        title: "Indsigter og artikler",
+        title: "Artikler og viden",
         description:
-          "Praktisk viden om OEE, vedligehold og industriel data fra dem, der arbejder med det.",
+          "Praktisk viden om OEE, vedligehold og data i produktionen, skrevet af folk, der arbejder med det hver dag.",
         href: "/insights",
       },
       {
@@ -150,7 +150,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return buildMetadata({
       title: "Videoer | OptiPeople",
       description:
-        "Se kundehistorier fra Glaseksperten og Nicholaisen samt oplægget med Omron om at gøre produktionsdata til en konkurrencefordel.",
+        "Se kundehistorier fra Glaseksperten og Nicholaisen og oplægget med Omron om, hvordan produktionsdata kan give en fordel over konkurrenterne.",
       path: "/videos",
       locale: "da",
     })

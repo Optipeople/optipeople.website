@@ -47,19 +47,19 @@ const copy: Record<Locale, CasesCopy> = {
   da: {
     metaTitle: "Cases | OptiPeople",
     metaDescription:
-      "Se hvordan produktionsvirksomheder bruger OptiPeople og OptiPeople Data Platform til at forbedre OEE og oppetid og træffe bedre beslutninger.",
+      "Se, hvordan producenter bruger OptiPeople Data Platform til at få OEE op, mindske nedetiden og træffe bedre beslutninger i produktionen.",
     backLabel: "Forsiden",
-    eyebrow: "Cases",
-    title: "Virkelige resultater fra virkelige fabrikker",
+    eyebrow: "Kundehistorier",
+    title: "Resultater fra gulvet",
     subtitle:
-      "Sådan bruger produktionsvirksomheder OptiPeople Data Platform til at løfte OEE, skære nedetiden ned og bruge tallene til bedre beslutninger.",
-    storiesLabel: "publicerede kundehistorier",
+      "Sådan bruger producenter OptiPeople Data Platform til at få OEE op, mindske nedetiden og træffe bedre beslutninger ud fra produktionstallene.",
+    storiesLabel: "udgivne kundehistorier",
     measuredLabel: "med et målt resultat på linjen",
     customersLabel: "Virksomhederne i historierne",
     moreLabel: "Flere historier",
     emptyTitle: "Ingen cases endnu",
-    emptyBody: "Cases vises her, når kundehistorier bliver publiceret.",
-    ctaLabel: "Læs case",
+    emptyBody: "Kundehistorierne kommer her, når de bliver udgivet.",
+    ctaLabel: "Læs historien",
   },
 }
 

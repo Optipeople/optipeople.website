@@ -50,17 +50,17 @@ const copy: Record<Locale, ArchiveCopy> = {
   da: {
     metaTitle: "Blog | OptiPeople",
     metaDescription:
-      "Læs artikler om produktionseffektivitet, OEE, vedligehold og digital drift.",
-    backLabel: "Indsigter",
+      "Artikler fra OptiPeople om effektiv produktion, OEE, prædiktivt vedligehold, data og digital drift.",
+    backLabel: "Viden",
     eyebrow: "Blog",
-    title: "Artikler og indsigter",
+    title: "Artikler og baggrund",
     subtitle:
-      "Praktisk viden om OEE, vedligehold og data fra produktionen, og om hvad der faktisk ændrer sig på gulvet, når man begynder at måle.",
+      "Praktisk viden om OEE, vedligehold og data fra produktionen. Og om, hvad der faktisk ændrer sig på gulvet, når I begynder at måle.",
     countLabel: (count) => `${count} artikler`,
     listLabel: "Alle artikler",
     emptyTitle: "Ingen blogindlæg endnu",
     emptyBody:
-      "Artikler og indsigter vises her, når de bliver publiceret.",
+      "Artiklerne kommer her, når de bliver udgivet. Kundehistorierne har deres eget arkiv under cases.",
     ctaLabel: "Læs artikel",
     paginationLabel: "Sidenavigation",
     previousLabel: "Forrige",

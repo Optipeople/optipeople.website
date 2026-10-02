@@ -86,37 +86,37 @@ const copy: Record<
     meta: {
       title: "Om OptiPeople",
       description:
-        "Mød teamet bag OptiPeople og se hvordan vi hjælper produktionsvirksomheder med at forbinde systemer og bruge driftsdata.",
+        "Mød folkene bag OptiPeople. Vi hjælper producenter med at koble systemerne sammen, se, hvad der sker på gulvet, og bruge tallene i den daglige drift.",
     },
     eyebrow: "Om os",
-    title: "Vi får industriel drift til at fungere",
+    title: "Vi får produktionen til at køre",
     intro:
-      "OptiPeople bygger software, kobler systemer sammen og hjælper produktionsteams med at bruge tallene til bedre beslutninger, fra gulvet til ledelsen.",
-    missionHeading: "Bygget til hullet mellem gulvet og ERP",
+      "Vi bygger software, kobler systemerne sammen og hjælper jer med at træffe bedre beslutninger ud fra tallene. Både på gulvet og i ledelsen.",
+    missionHeading: "Vi fylder hullet mellem gulvet og ERP",
     missionBody:
-      "De fleste fabrikker har maskiner, der laver data, og et ERP, der har brug for dem. OptiPeople fylder hullet ud imellem med tal i realtid, overblik og handlinger, der flytter noget.",
+      "På de fleste fabrikker laver maskinerne data, og ERP-systemet har brug for dem. Men imellem de to er der ikke noget, der hjælper. Det hul fylder vi. OptiPeople Data Platform samler data op fra produktionen, mens den kører, og viser dem til operatører og ledere, så de kan handle på dem. Det giver bedre ydelse, mindre spild og færre stop.",
     valuesHeading: "Sådan arbejder vi",
-    teamHeading: "Teamet",
+    teamHeading: "Holdet",
     values: [
       {
-        title: "Start med problemet",
+        title: "Vi starter med problemet",
         description:
-          "Vi starter ikke med teknikken. Vi starter med at finde ud af, hvordan driften faktisk kører.",
+          "Vi lægger ikke ud med teknik. Først finder vi ud af, hvordan jeres drift faktisk kører: nødløsningerne, de blinde vinkler og det, der falder mellem to systemer. Løsningen kommer derfra.",
       },
       {
-        title: "Gør det brugbart",
+        title: "Det skal kunne bruges",
         description:
-          "Software, der ikke bliver brugt på gulvet, virker ikke. Derfor bygger vi til de folk, der står i produktionen.",
+          "Software, som operatørerne ikke gider bruge, virker ikke. Alt, hvad vi laver, er bygget til folkene på gulvet. Det skal være hurtigt og tydeligt og kunne bruges uden manual.",
       },
       {
-        title: "Tag ansvar for resultatet",
+        title: "Vi hænger på resultatet",
         description:
-          "Vi afleverer ikke bare et system. Vi er med, når det bliver rullet ud, taget i brug og gjort bedre.",
+          "Vi afleverer ikke et system og går. Vi er med under udrulningen, mens det bliver taget i brug, og når det skal justeres. Virker det ikke, er det også vores problem.",
       },
       {
-        title: "Skab tillid med data",
+        title: "Tal frem for løfter",
         description:
-          "Beslutninger skal bygge på fakta, også beslutningen om at arbejde med os.",
+          "Vi holder os fra buzzwords og løse løfter. Når vi siger, at et system kan forbedre OEE, viser vi, hvordan det sker, hvor meget det giver, og hvad det kræver. Beslutninger skal bygge på fakta. Også beslutningen om at arbejde med os.",
       },
     ],
     stats: [
@@ -126,15 +126,15 @@ const copy: Record<
         metric: "5",
         label: "Fagområder",
         detail:
-          "Automation, IoT, software, implementering i driften og rådgivning",
+          "Automation, IoT, software, implementering i driften og driftsrådgivning",
       },
     ],
     statsTitle: "Hvem vi er",
     cta: "Tal med os",
     visual: {
       eyebrow: "Det, vi bygger",
-      title: "Software, der fortjener sin plads på gulvet",
-      body: "Hver eneste skærm, vi sender ud, bliver brugt midt i et skift, med handsker på og under tidspres. Det vilkår former alt. Skal der en manual til, har vi gjort det forkert.",
+      title: "Software, som folk på gulvet faktisk bruger",
+      body: "Hver skærm, vi laver, bliver brugt midt i et skift, med handsker på og tiden i nakken. Det bestemmer alt, hvad vi gør. Skal der en manual til, har vi lavet det forkert.",
     },
   },
 }

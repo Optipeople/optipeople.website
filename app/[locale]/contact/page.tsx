@@ -59,30 +59,30 @@ const copy: Record<Locale, ContactCopy> = {
   },
   da: {
     eyebrow: "Tal med os",
-    headline: "Lad os tale om jeres drift",
-    body: "Fortæl os om jeres situation, så vender vi tilbage inden for én arbejdsdag. Ingen salgsforløb og ingen omveje: I taler med dem, der driver platformen.",
-    formTitle: "Send en besked",
-    quickIntro: "Læg din email, så kontakter vi dig. Ingen formular nødvendig.",
+    headline: "Lad os tage en snak om jeres drift",
+    body: "Fortæl, hvor I står, så vender vi tilbage inden for én arbejdsdag. Ingen sælgerforløb og ingen mellemled: I taler direkte med dem, der står for platformen.",
+    formTitle: "Skriv til os",
+    quickIntro: "Skriv din e-mail, så kontakter vi dig. Du behøver ikke udfylde en formular.",
     orDivider: "eller",
-    stepsTitle: "Hvad sker der så",
+    stepsTitle: "Sådan foregår det",
     steps: [
       {
         title: "Vi læser den samme dag",
         description:
-          "Din besked går til teamet bag OptiPeople Data Platform, ikke ind i en kø.",
+          "Beskeden går direkte til folkene bag OptiPeople Data Platform. Den havner ikke i en kø.",
       },
       {
         title: "En kort snak",
         description:
-          "Tyve minutter om jeres linjer, jeres maskiner og hvad I måler i dag.",
+          "Tyve minutter om jeres linjer og maskiner, og om det, I allerede måler i dag.",
       },
       {
-        title: "En gennemgang af jeres data",
+        title: "Vi viser det på jeres data",
         description:
-          "Vi viser platformen med jeres egen produktion i stedet for et demodatasæt.",
+          "Vi viser platformen på jeres egen produktion, ikke på demodata.",
       },
     ],
-    emailLabel: "Email",
+    emailLabel: "E-mail",
     phoneLabel: "Telefon",
     officeLabel: "Kontor",
     officeLine2: "8362 Hørning, Danmark",
@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return buildMetadata({
       title: "Kontakt OptiPeople",
       description:
-        "Kontakt OptiPeople for en snak om produktion, OEE, automation, data og digital drift.",
+        "Tag en snak med OptiPeople om overvågning af produktionen, OEE, integrationer og digital drift på jeres fabrik.",
       path: "/contact",
       locale: "da",
     })
