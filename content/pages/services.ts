@@ -105,53 +105,53 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Smart Operations rådgivning | OptiPeople",
+        metaTitle: "Smart Operations-rådgivning | OptiPeople",
         metaDescription:
-          "Rådgivning om smart factory og smart operations: proceskortlægning, tekniske vurderinger, business cases og forprojekter.",
+          "Før I bygger noget: vi kortlægger processerne, vurderer, hvad fabrikken teknisk kan bære, regner business casen igennem og afgrænser et forprojekt.",
         eyebrow: "Smart Operations",
         heroTitle: "Find ud af, hvad der skal bygges, før I bygger det",
         heroBody:
-          "Vi rådgiver om smart factory og smart operations: vi kortlægger processerne, vurderer hvad fabrikken teknisk kan bære, og regner business casen igennem, før der bliver bygget noget.",
+          "Vi rådgiver om smart factory og smart operations. Vi kortlægger processerne, vurderer, hvad fabrikken teknisk kan bære, og regner på, om det overhovedet kan betale sig.",
         primaryLabel: "Book en snak",
-        introTitle: "De fleste digitaliseringsprojekter går galt i afklaringen, ikke i softwaren",
+        introTitle: "De fleste digitaliseringsprojekter går galt i forarbejdet, ikke i softwaren",
         introBody:
-          "Mønstret er til at genkende. Der bliver købt en platform, bygget tre integrationer og hængt skærme op, og halvandet år efter er der ingen, der bruger dem. For ingen fik skrevet ned, hvilke beslutninger der egentlig bliver truffet i hverdagen, og hvad de kræver. Rådgivningen er den billige del af projektet, og den afgør den dyre del. Vi går processerne igennem, ser på hvad udstyret og systemerne reelt kan levere, sætter tal på det tab, der er værd at gå efter, og lægger et omfang og en business case på bordet. Nogle gange er svaret et forprojekt. Nogle gange er svaret, at pengene skal bruges et andet sted i år.",
+          "I kender sikkert historien. Der bliver købt en platform, bygget tre integrationer og hængt skærme op, og halvandet år efter er der ingen, der kigger på dem. Ingen fik nemlig skrevet ned, hvilke beslutninger der egentlig bliver truffet i hverdagen, og hvad der skal til for at træffe dem godt. Rådgivningen er den billige del af projektet, og den afgør den dyre del. Vi går processerne igennem, ser på, hvad udstyret og systemerne reelt kan levere, sætter tal på det tab, der er værd at gå efter, og lægger en afgrænset opgave og en business case på bordet. Nogle gange er svaret et forprojekt. Andre gange er svaret, at pengene gør mere gavn et andet sted i år.",
         capabilitiesTitle: "Det rådgiver vi om",
         features: [
           {
             icon: Workflow,
             title: "Proceskortlægning",
             description:
-              "Vi går flowet igennem med dem, der kører det: hvad der faktisk sker fra ordre til palle, hvor overleveringerne er, og hvilke beslutninger der bliver truffet på en fornemmelse.",
+              "Vi går flowet igennem med dem, der kender det: hvad der faktisk sker fra ordre til palle, hvor opgaven skifter hænder, og hvilke beslutninger der bliver truffet på mavefornemmelse, fordi tallet ikke findes.",
           },
           {
             icon: Search,
             title: "Teknisk vurdering",
             description:
-              "Hvad kan fabrikken reelt levere? Styringer, protokoller, netværk, de sensorer og systemer, der er, og hvad hver maskine kan måles på uden en ombygning.",
+              "Hvad kan fabrikken reelt levere? Styringer, protokoller, netværk, de sensorer og systemer, I har, og hvad hver maskine kan måles på uden en ombygning. Den ærlige udgave, også om de maskiner, der skal have ny hardware.",
           },
           {
             icon: FileBarChart,
             title: "Business case",
             description:
-              "Tabet sat i tal, indsatsen prissat, og en tilbagebetalingstid, I kan tage med til bestyrelsen. Skrevet, så tallene kan diskuteres.",
+              "Vi sætter tal på tabet og pris på indsatsen og regner en tilbagebetalingstid ud, I kan tage med til bestyrelsen. Tallene er til at diskutere. Det er ikke en procentsats på en sælgers slide.",
           },
           {
             icon: ScanLine,
             title: "Forprojekt",
             description:
-              "Et afgrænset første skridt på én linje eller én maskine, med et klart spørgsmål, det skal svare på. Billigt nok til at måtte gå galt, rigtigt nok til at vise, om resten er værd at binde sig til.",
+              "Et afgrænset første skridt på én linje eller én maskine, med ét klart spørgsmål, det skal svare på. Billigt nok til, at det må gå galt, og ægte nok til at vise, om resten er pengene værd.",
           },
         ],
         visualTitle: "Rådgivningen ender i noget, I kan beslutte ud fra",
         visualBody:
-          "En kortlagt proces, en vurdering af hvad fabrikken kan bære, en business case med tal på, og et afgrænset første skridt. Går det videre, er det her billedet, byggeriet sigter efter.",
+          "I får processen kortlagt, en vurdering af, hvad fabrikken kan bære, en business case med tal på og et afgrænset første skridt. Bliver projektet til noget, er det her, I sigter efter.",
         visualImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
-        visualAlt: "OptiPeople efficiency report with availability, performance and OEE against target",
+        visualAlt: "OptiPeople-rapport med tilgængelighed, ydelse og OEE holdt op mod målet",
         metricsTitle: "Hvad I kan forvente",
         metrics: [
-          { metric: "2-4 uger", label: "Fra første gennemgang til et prissat omfang" },
-          { metric: "1 linje", label: "Er som regel den rigtige størrelse til et forprojekt" },
+          { metric: "2-4 uger", label: "Fra første rundgang til et oplæg med pris på" },
+          { metric: "1 linje", label: "Er som regel den rette størrelse til et forprojekt" },
           { metric: "0", label: "Krav om at købe noget bagefter" },
         ],
         stepsTitle: "Sådan arbejder vi",
@@ -159,7 +159,7 @@ const services: LocalizedPage<StandardPage>[] = [
           {
             title: "Kortlæg",
             description:
-              "Vi går processerne igennem med dem, der kører dem, og skriver flowet, registreringerne og de beslutninger ned, der bliver truffet uden tal.",
+              "Vi går processerne igennem med dem, der kender dem, og skriver ned, hvordan flowet går, hvad der bliver registreret, og hvilke beslutninger der bliver truffet uden tal.",
           },
           {
             title: "Vurdér og sæt tal på",
@@ -167,9 +167,9 @@ const services: LocalizedPage<StandardPage>[] = [
               "Hvad udstyret og systemerne teknisk kan bære, og hvad tabet er værd. Det er her, en business case holder eller ikke holder.",
           },
           {
-            title: "Læg omfanget",
+            title: "Afgræns",
             description:
-              "En prioriteret rækkefølge og et afgrænset første skridt, om det så er et forprojekt med os, et projekt med en partner, eller ingenting i år.",
+              "I får en prioriteret plan og et afgrænset første skridt. Det kan være et forprojekt med os, et projekt med en partner eller ingenting i år.",
           },
         ],
       },
@@ -262,26 +262,26 @@ const services: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Automationsrådgivning og arkitektur | OptiPeople",
         metaDescription:
-          "Vi rådgiver om automation og leverer IT-, software- og IoT-arkitekturen omkring den. Hele løsningen leverer vi sammen med automationspartnere.",
+          "Vi rådgiver om automation og leverer it-, software- og IoT-arkitekturen omkring den. Hele løsningen leverer vi sammen med automationspartnere.",
         eyebrow: "Automation",
-        heroTitle: "Vi er ikke et automationshus. Vi er laget omkring et",
+        heroTitle: "Vi bygger ikke maskinerne. Vi får dem til at passe ind",
         heroBody:
-          "Vi rådgiver om automation og leverer hele løsningen sammen med partnere, der bygger mekanikken og tavlerne. Vores del er den IT-, software- og IoT-arkitektur, der afgør, om resultatet bliver en linje, der hænger sammen med resten, eller en ø.",
+          "Vi rådgiver om automation og leverer hele løsningen sammen med partnere, der bygger mekanikken og tavlerne. Vores del er den it-, software- og IoT-arkitektur, der afgør, om den nye linje taler med resten af fabrikken eller ender som en ø.",
         primaryLabel: "Tal om projektet",
-        introTitle: "Det er sjældent maskinen, der går galt. Det er laget omkring den",
+        introTitle: "Det er sjældent maskinen, der fejler. Det er alt det omkring den",
         introBody:
-          "Automationshusene er gode til det, de laver, og vi konkurrerer ikke med dem. Vi tegner ikke maskiner, skriver ikke bevægelsesstyringen og bygger ikke tavler. Det, der gang på gang går galt, ligger et niveau højere op. Linjen bliver sat i drift, og så er der ingen, der har taget stilling til, hvordan den melder tilbage, hvilke signaler der kommer ud af PLC'en, hvem der ejer datamodellen, hvordan det når ERP, eller hvad der sker, når en maskine fra en anden leverandør kommer ind på samme linje. Det er vores felt. Vi skriver det ned på forhånd, sidder på jeres side af bordet, mens automationspartneren bygger, og sørger for, at den færdige celle kan læses af resten af driften.",
+          "Automationshusene er gode til det, de laver, og vi konkurrerer ikke med dem. Vi tegner ikke maskiner, skriver ikke bevægelsesstyringen og bygger ikke tavler. Det, der gang på gang går galt, ligger et lag længere oppe. Linjen bliver sat i drift, og så har ingen taget stilling til, hvordan den melder tilbage, hvilke signaler der kommer ud af PLC'en, hvem der ejer datamodellen, hvordan tallene kommer ind i ERP, eller hvad der sker, når en maskine fra en anden leverandør kommer ind på samme linje. Det er det, vi tager os af. Vi skriver det ned på forhånd, sidder på jeres side af bordet, mens automationspartneren bygger, og sørger for, at den færdige celle taler med resten af fabrikken.",
         capabilitiesTitle: "Der sidder vi i et automationsprojekt",
         features: [
           {
             icon: Search,
             title: "Rådgivning om automation",
             description:
-              "Om det her trin i det hele taget skal automatiseres, hvad det er værd, og hvad der skal være på plads først. Ofte skal processen rettes, før der bliver peget en robot på den.",
+              "Om det her trin overhovedet skal automatiseres, hvad det er værd, og hvad der skal være på plads først. Ærligt talt skal processen tit rettes op, før det giver mening at sætte en robot på den.",
           },
           {
             icon: Cpu,
-            title: "IT-, software- og IoT-arkitektur",
+            title: "It-, software- og IoT-arkitektur",
             description:
               "Hvilke signaler der kommer ud af styringen, i hvilken struktur, over hvilken protokol, ind i hvilket system, og hvem der ejer hvert lag. Det er den del, vi selv leverer.",
           },
@@ -289,24 +289,24 @@ const services: LocalizedPage<StandardPage>[] = [
             icon: Users,
             title: "Partnere og leverance",
             description:
-              "Vi tager maskinbyggere, integratorer og el-partnere med ind, og bliver på jeres side af bordet gennem byg, opstart og overdragelse.",
+              "Vi henter maskinbyggere, integratorer og el-partnere ind, som vi har arbejdet med før, og bliver på jeres side af bordet under byggeri, opstart og overdragelse.",
           },
           {
             icon: ScanLine,
             title: "Den nye celle koblet på",
             description:
-              "En linje, der er sat i drift uden at melde noget, er et halvt projekt. Status, tællere og alarmer kommer ud i samme struktur som resten af fabrikken.",
+              "En linje, der er sat i drift uden at melde noget, er et halvt projekt. Status, tællere og alarmer fra det nye udstyr lander i samme struktur som resten af fabrikken.",
           },
         ],
-        visualTitle: "Det lag, vi ejer, tegnet op",
+        visualTitle: "Vores del, tegnet op",
         visualBody:
-          "Mekanikken og tavlen hører til automationspartneren. Alt fra signalet forlader styringen, til tallet står foran et menneske, er den del, vi specificerer og leverer.",
+          "Mekanikken og tavlen er automationspartnerens. Alt fra det øjeblik, signalet forlader styringen, til tallet når frem til en medarbejder, specificerer og leverer vi.",
         visualSection: "architecture",
         metricsTitle: "Vores del af opgaven",
         metrics: [
           { metric: "0", label: "Maskiner tegnet af os. Det er partnerens arbejde" },
-          { metric: "1 kravspec", label: "Skrevet før nogen giver pris på byggeriet" },
-          { metric: "Jeres side", label: "Af bordet, gennem byg og overdragelse" },
+          { metric: "1 kravspec", label: "Skrevet, før nogen giver pris på byggeriet" },
+          { metric: "Jeres side", label: "Af bordet, fra byggeri til overdragelse" },
         ],
         stepsTitle: "Sådan arbejder vi",
         steps: [
@@ -323,7 +323,7 @@ const services: LocalizedPage<StandardPage>[] = [
           {
             title: "Kobl på og overdrag",
             description:
-              "Det nye udstyr melder ind i det samme datagrundlag som resten af fabrikken, dokumenteret så jeres eget team ejer det bagefter.",
+              "Det nye udstyr melder ind i det samme datagrundlag som resten af fabrikken. Det hele er dokumenteret, så jeres eget team ejer det bagefter.",
           },
         ],
       },
@@ -415,61 +415,61 @@ const services: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Business Intelligence rådgivning | OptiPeople",
+        metaTitle: "Rådgivning om Business Intelligence | OptiPeople",
         metaDescription:
-          "BI-rådgivning og afklaring: hvilke beslutninger kræver hvilke tal, hvad kan data bære, og hvilken platform skal det bygges på. Power BI, Tableau eller noget helt andet.",
+          "Vi hjælper jer med at finde ud af, hvilke beslutninger der kræver hvilke tal, hvad jeres data kan bære, og hvilken platform det skal bygges på. Power BI, Tableau eller noget helt tredje.",
         eyebrow: "Business Intelligence",
         heroTitle: "Det svære er at blive enige om, hvad der skal måles",
         heroBody:
-          "Vi arbejder med BI-teams som rådgivere først: hvilke beslutninger kræver hvilke tal, hvad kan jeres data ærligt bære, og hvad skal der egentlig bygges. Platformen kommer bagefter, og svaret er ikke altid Power BI.",
+          "Vi starter som rådgivere for jeres BI-team: hvilke beslutninger kræver hvilke tal, hvad kan jeres data reelt bære, og hvad skal der egentlig bygges? Platformen kommer bagefter, og svaret er ikke altid Power BI.",
         primaryLabel: "Kontakt os",
-        introTitle: "En rapport er et svar. Nogen skal have stillet spørgsmålet rigtigt først",
+        introTitle: "En rapport er et svar. Først skal nogen stille det rigtige spørgsmål",
         introBody:
-          "De BI-opgaver, vi bliver hentet ind på, går sjældent galt på teknikken. Formlerne er rigtige, opdateringen kører, rapporten er flot, og den bliver stadig ikke brugt. For tallet på den var ikke det, mødet drejer sig om, eller tre afdelinger regner det ud på hver sin måde, eller ingen har aftalt, hvem der gør noget, når det flytter sig. Så vi starter med rådgivning og afklaring: beslutningerne, definitionerne, ejerskabet, og hvad data faktisk kan bære. Derefter bygger vi, på den platform der passer. Vi laver meget Power BI, fordi mange af vores kunder ligger på Microsoft, men Tableau, Fabric eller det datawarehouse, I allerede har, er lige så gode svar, hvis det er der, I allerede er.",
-        capabilitiesTitle: "Rådgivning først, byggeri bagefter",
+          "De BI-opgaver, vi bliver hentet ind på, går sjældent galt på teknikken. Formlerne er rigtige, opdateringen kører, rapporten er flot, og den bliver stadig ikke brugt. For tallet på den var ikke det, mødet drejer sig om, eller tre afdelinger regner det ud på hver sin måde, eller ingen har aftalt, hvem der gør noget, når det flytter sig. Derfor starter vi med rådgivning og afklaring: beslutningerne, definitionerne, hvem der ejer tallene, og hvad data faktisk kan bære. Derefter bygger vi på den platform, der passer. Vi laver meget Power BI, fordi mange af vores kunder kører på Microsoft, men Tableau, Fabric eller det datawarehouse, I allerede har, er lige så gode svar, hvis det er dér, I står i dag.",
+        capabilitiesTitle: "Først rådgivning, så bygger vi",
         features: [
           {
             icon: Search,
             title: "Hvilke beslutninger, hvilke tal",
             description:
-              "Hvilke beslutninger bliver truffet på hvilke møder, ud fra hvad, og hvor ofte de bliver truffet uden tal. Resten følger af at få den liste rigtig.",
+              "Hvilke beslutninger bliver truffet på hvilke møder, ud fra hvad, og hvor tit de bliver truffet uden tal? Får I den liste rigtig, følger resten.",
           },
           {
             icon: PieChart,
             title: "Definitioner og ejerskab",
             description:
-              "Én definition pr. tal, skrevet ned, med en ejer og en aftale om, hvad der sker, når det flytter sig. At tre afdelinger regner OEE ud på hver sin måde er et afklaringsproblem.",
+              "Én definition pr. tal, skrevet ned, med en ejer og en aftale om, hvad der sker, når det flytter sig. Når tre afdelinger regner OEE ud på hver sin måde, er det et problem i forarbejdet, ikke i rapporten.",
           },
           {
             icon: Workflow,
             title: "Platform og værktøj",
             description:
-              "Power BI, Tableau, Fabric eller det, I allerede har. Vi anbefaler ud fra jeres nuværende systemer, licenser og folk, ikke ud fra hvad vi selv holder mest af.",
+              "Power BI, Tableau, Fabric eller det, I allerede har. Vi anbefaler ud fra jeres nuværende systemer, licenser og folk, ikke ud fra, hvad vi selv foretrækker.",
           },
           {
             icon: BarChart3,
-            title: "Byg og datamodeller",
+            title: "Datamodeller og rapporter",
             description:
-              "Så leverancen: datamodeller, rapporter og automatik oven på det afklarede omfang, med opdateringer der kører uden en person, der holder øje.",
+              "Så bygger vi: datamodeller, rapporter og dataflow ud fra det, vi har afklaret, med faste opdateringer og fejlhåndtering, som ingen behøver sidde og holde øje med.",
           },
         ],
-        visualTitle: "Afklaret først, bygget på det der passer",
+        visualTitle: "Først afklaret, så bygget på det, der passer",
         visualBody:
-          "Rapporten er det sidste skridt. Det, der afgør, om den bliver brugt, er definitionen bag hvert tal, ejeren der er sat på, og om kilderne overhovedet kan bære spørgsmålet.",
+          "Rapporten er det sidste skridt. Om den bliver brugt, afgøres af definitionen bag hvert tal, den ejer, der er sat på, og om kilderne overhovedet kan bære spørgsmålet.",
         visualImage: "/images/report-mockup1.png",
         visualAlt: "En rapport under opbygning med nøgletal og en skabelon, der bliver redigeret",
-        metricsTitle: "Det, opgaven bygger på",
+        metricsTitle: "Det styrer arbejdet",
         metrics: [
           { metric: "Rådgivning", label: "Først. Valget af platform kommer bagefter" },
           { metric: "1", label: "Definition pr. tal, med en ejer sat på" },
-          { metric: "Alle", label: "Platforme: Power BI, Tableau, Fabric, det I har" },
+          { metric: "Frit valg", label: "Af platform: Power BI, Tableau, Fabric eller det, I har" },
         ],
         stepsTitle: "Sådan arbejder vi",
         steps: [
           {
             title: "Afklar",
             description:
-              "Vi kortlægger beslutningerne, definerer tallene bag dem, sætter ejere på og vurderer, hvad jeres data ærligt kan bære i dag.",
+              "Vi kortlægger beslutningerne, definerer tallene bag dem, sætter ejere på og vurderer, hvad jeres data reelt kan bære i dag.",
           },
           {
             title: "Vælg og byg",
@@ -479,7 +479,7 @@ const services: LocalizedPage<StandardPage>[] = [
           {
             title: "Overdrag",
             description:
-              "Dokumentation, konventioner og oplæring, så jeres eget BI-team kan bygge videre. Hjælp bagefter, hvis I vil, ikke fordi I er nødt til det.",
+              "Dokumentation, faste konventioner og oplæring, så jeres eget BI-team kan bygge videre. Vi hjælper gerne bagefter, hvis I vil. Ikke fordi I sidder fast hos os.",
           },
         ],
       },
@@ -577,59 +577,59 @@ const services: LocalizedPage<StandardPage>[] = [
         eyebrow: "AI-agentløsninger",
         heroTitle: "AI, der arbejder med i driften",
         heroBody:
-          "Vi bygger agenter, der kan læse jeres produktionsdata, finde mønstrene og hjælpe teamet fra spørgsmål til handling.",
-        primaryLabel: "Tal om AI",
+          "Vi bygger agenter, der læser jeres produktionsdata, finder mønstrene og tager sig af det rutinearbejde, der ellers æder teamets tid.",
+        primaryLabel: "Tal med os om AI",
         introTitle: "Jeres team skal ikke være flaskehalsen",
         introBody:
-          "Driften skaber hele tiden opgaver, der kræver opmærksomhed: rapporter skal hentes, planer skal opdateres, data skal jagtes på tværs af systemer, afvigelser skal flages. Det er vigtige opgaver, men de kræver ikke, at et menneske sidder og gør dem. Agenterne klarer dem selv, nøjagtigt og døgnet rundt, så jeres folk får tiden til de beslutninger, der faktisk kræver omtanke.",
+          "Driften skaber hele tiden opgaver, der kræver opmærksomhed: rapporter skal hentes, planer skal opdateres, data skal findes frem i flere systemer, afvigelser skal meldes. Det er vigtige opgaver, men de kræver ikke, at et menneske sidder og laver dem. Agenterne klarer dem selv, nøjagtigt og døgnet rundt, så jeres folk får tiden til de beslutninger, der faktisk kræver omtanke.",
         capabilitiesTitle: "Agenter bygget til produktion",
         features: [
           {
             icon: Bot,
             title: "Rutinerne kører af sig selv",
             description:
-              "Agenter, der klarer dataindtastning, ordrebehandling og lageropdateringer fra ende til anden, uden at nogen skal røre det.",
+              "Agenter, der klarer dataindtastning, ordrebehandling og lageropdateringer hele vejen igennem, uden at nogen skal røre dem.",
           },
           {
             icon: FileBarChart,
             title: "Rapporterne skriver sig selv",
             description:
-              "Agenter henter data fra flere systemer og leverer produktionsrapporter, skiftrapporter og KPI'er, præcis når de skal være klar.",
+              "Agenter henter data fra flere systemer og leverer produktionsrapporter, skiftrapporter og nøgletal til tiden, hver gang.",
           },
           {
             icon: BrainCircuit,
             title: "Find mønstrene, før I spørger",
             description:
-              "Mere end et dashboard. Agenten opdager afvigelser, forklarer udviklingen og foreslår næste skridt, ud fra jeres egne produktionsdata.",
+              "Et dashboard viser tallene. Agenten opdager afvigelserne, forklarer, hvorfor kurven flytter sig, og foreslår, hvad I kan gøre, ud fra jeres egne produktionsdata.",
           },
           {
             icon: CalendarClock,
-            title: "Planer der retter sig selv til",
+            title: "Planer, der retter sig selv til",
             description:
-              "Agenter, der balancerer belastningen og justerer planen i realtid, når noget ændrer sig på gulvet.",
+              "Agenter, der fordeler belastningen og justerer planen med det samme, når noget ændrer sig på gulvet.",
           },
           {
             icon: Workflow,
             title: "Agenter, der arbejder sammen",
             description:
-              "Kobl agenter på tværs af ERP, MES, SCADA og de andre systemer. Byg arbejdsgange i flere trin, hvor agenterne sender opgaven videre til hinanden selv.",
+              "Agenterne arbejder i ERP, MES, SCADA og de andre systemer og sender selv opgaven videre til hinanden i arbejdsgange med flere trin.",
           },
           {
             icon: ShieldCheck,
-            title: "Fang afvigelsen, før den eskalerer",
+            title: "Fang afvigelsen, mens den er lille",
             description:
-              "Automatiser kvalitetstjek, få besked ved afvigelser, og hold en komplet sporbarhed, så risikoen og omarbejdet falder.",
+              "Kvalitetstjek kører automatisk, I får besked ved afvigelser, og sporbarheden er komplet. Det giver mindre risiko og mindre omarbejde.",
           },
         ],
-        visualTitle: "Agenter på tværs af jeres systemer",
+        visualTitle: "Agenter, der arbejder i alle jeres systemer",
         visualBody:
-          "Fra ERP og MES til mail og regneark. AI bliver koblet på jeres data og processer, med klare rammer for, hvad den må.",
+          "Fra ERP og MES til mail og regneark. Agenterne bliver koblet på jeres data og processer, med klare rammer for, hvad de må.",
         visualImage: "/images/report1.png",
         visualAlt: "AI-analyse på produktionsrapport",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "10x", label: "Hurtigere fra spørgsmål til svar" },
-          { metric: "24/7", label: "AI holder øje med mønstrene" },
+          { metric: "24/7", label: "Agenterne holder øje, også om natten" },
           { metric: "100%", label: "Svar, I kan spore tilbage" },
         ],
         stepsTitle: "Sådan arbejder vi",
@@ -647,7 +647,7 @@ const services: LocalizedPage<StandardPage>[] = [
           {
             title: "Prøv af",
             description:
-              "Svar og handlinger bliver testet af dem, der skal bruge dem, før vi ruller ud.",
+              "Dem, der skal bruge agenten, tester svar og handlinger, før den bliver taget i brug for alvor.",
           },
         ],
       },

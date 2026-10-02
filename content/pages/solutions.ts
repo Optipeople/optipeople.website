@@ -117,15 +117,15 @@ const solutions: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Løsninger til produktion | OptiPeople",
         metaDescription:
-          "OptiPeople giver produktionsvirksomheder tal i realtid på OEE, kvalitet, energi og vedligehold.",
+          "Kobl maskinerne på, følg OEE, mens det sker, og styr produktionen efter tallene. Se, hvordan OptiPeople giver overblik og mindre nedetid.",
         eyebrow: "Til produktionsvirksomheder",
-        heroTitle: "Kend jeres fabrik i realtid",
+        heroTitle: "Se, hvordan det går på fabrikken lige nu",
         heroBody:
-          "Vi kobler maskiner, processer og mennesker sammen i ét overblik, så teamet kan handle hurtigere og styre efter fakta.",
+          "Kobl alle maskiner på, få data samlet op automatisk, og giv jeres folk overblikket til at gribe ind, mens det stadig gør en forskel.",
         primaryLabel: "Book en demo",
-        introTitle: "Fabrikker bliver bedre i hverdagen",
+        introTitle: "De fleste fabrikker styrer stadig efter gårsdagens tal",
         introBody:
-          "Når tallene er synlige dér, hvor beslutningerne bliver truffet, bliver tavlemødet, prioriteringen og forbedringerne konkrete.",
+          "Skiftrapporten kommer for sent. Stopårsagerne står i en notesbog. OEE bliver regnet ud i regneark, som ingen stoler på. Når I endelig ser tallene, er det for sent at gøre noget. OptiPeople henter signalerne direkte fra hver maskine, hvert skift og hver linje, så I ikke skal gætte.",
         capabilitiesTitle: "Det får produktionsholdet",
         features: [
           {
@@ -136,24 +136,24 @@ const solutions: LocalizedPage<StandardPage>[] = [
           {
             icon: Gauge,
             title: "OEE og tab",
-            description: "Se hvor tiden, kvaliteten og farten går tabt.",
+            description: "Se, hvor I taber tid, kvalitet og fart.",
           },
           {
             icon: Users,
-            title: "Fælles fakta",
+            title: "De samme tal for alle",
             description: "Operatører, ledere og direktion arbejder ud fra de samme tal.",
           },
         ],
-        visualTitle: "Fra maskinsignal til forbedring",
+        visualTitle: "Hele driften på én skærm",
         visualBody:
-          "OptiPeople Data Platform samler tallene og viser dem på dashboards, i rapporter og i det daglige arbejde.",
+          "Fra den enkelte maskine til nøgletallene for hele fabrikken. Gå ned i tallene på det niveau, I har brug for.",
         visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
         visualAlt: "Produktionsrapport med OEE, skiftets tidslinje og stopfordeling",
         metricsTitle: "Typiske resultater",
         metrics: [
-          { metric: "15-25%", label: "Bedre OEE" },
+          { metric: "15-25%", label: "Bedre OEE det første år" },
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
-          { metric: "Live", label: "Tal at beslutte ud fra" },
+          { metric: "Live", label: "Tal, I kan styre efter" },
         ],
         stepsTitle: "Sådan kommer I i gang",
         steps: [
@@ -162,12 +162,12 @@ const solutions: LocalizedPage<StandardPage>[] = [
             description: "Vi finder de tab og de datakilder, der betyder mest.",
           },
           {
-            title: "Forbind",
+            title: "Kobl på",
             description: "Maskiner og systemer bliver koblet på, uden at driften bliver forstyrret.",
           },
           {
             title: "Forbedr",
-            description: "Teamet bruger tallene i hverdagen til at rette de rigtige steder.",
+            description: "Teamet bruger tallene i hverdagen og sætter ind de rigtige steder.",
           },
         ],
         darkHero: true,
@@ -264,15 +264,15 @@ const solutions: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Løsninger til OEM'er | OptiPeople",
         metaDescription:
-          "Gør maskinerne forbundne: fejlfinding på afstand, indblik i hvordan de kører, og service, I kan tage penge for.",
+          "Kobl jeres maskiner på: fejlfinding på afstand, indblik i, hvordan de kører, og service, I kan tage penge for.",
         eyebrow: "Til OEM'er og maskinbyggere",
-        heroTitle: "Gør maskiner til platforme",
+        heroTitle: "Gør maskinen til mere end jern",
         heroBody:
-          "Lever maskiner, der er koblet på, med indblikket bygget ind, hjælp før kunden ringer, og service, I kan sælge.",
+          "Lever maskiner, der er koblet på fra start. Følg dem ude hos kunderne, hjælp, før kunden ringer, og byg en fast indtægt på service oven på udstyret.",
         primaryLabel: "Book en demo",
         introTitle: "Det er ikke længere nok at sælge maskinen",
         introBody:
-          "Kunderne forventer hjælp på afstand, besked før noget går galt, og digitale services. Vi leverer det, der skal til, for at I beholder kontakten efter salget.",
+          "Konkurrenterne tilbyder allerede maskiner, der er koblet på. Kunderne forventer hjælp på afstand, besked, før noget går galt, og digitale services. Uden en platform lader I penge ligge og overlader kunden til andre efter salget. Med OptiPeople bliver hver maskine, I leverer, et produkt, der er koblet på.",
         capabilitiesTitle: "Alt til maskiner, der er koblet på",
         features: [
           {
@@ -282,7 +282,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
           },
           {
             icon: TrendingUp,
-            title: "Se hvordan maskinen kører",
+            title: "Se, hvordan maskinen kører",
             description:
               "Giv kunden indblik i, hvordan maskinen bliver brugt, hvad den laver, og hvor der er noget at hente.",
           },
@@ -293,15 +293,15 @@ const solutions: LocalizedPage<StandardPage>[] = [
               "Pak overvågning, alarmer og rapporter sammen til en service, kunden betaler for.",
           },
         ],
-        visualTitle: "Jeres maskiner, jeres navn, én platform",
+        visualTitle: "Jeres maskiner under jeres eget navn",
         visualBody:
-          "En portal, hvor kunden ser maskinens tal, servicehistorikken og hvordan den kører.",
+          "En portal med jeres eget brand, hvor kunden ser maskinens tal, servicehistorikken, og hvordan den kører.",
         visualImage: "/images/OpticloudOPSingle.jpg",
         visualAlt: "Maskinportal med eget brand",
         metricsTitle: "Det opnår maskinbyggere, der kobler maskinerne på",
         metrics: [
           { metric: "3x", label: "Større forretning på eftermarkedet" },
-          { metric: "60%", label: "Hurtigere løsning på problemerne" },
+          { metric: "60%", label: "Hurtigere fejlretning med fjernadgang" },
           { metric: "35%", label: "Flere kunder bliver hængende" },
         ],
         stepsTitle: "Sådan virker det",
@@ -312,7 +312,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
           },
           {
             title: "Lever",
-            description: "Maskinerne bliver leveret med OptiPeople Data Platform som det digitale lag.",
+            description: "Maskinerne bliver leveret med OptiPeople Data Platform indbygget, og kunden har sin egen portal fra første dag.",
           },
           {
             title: "Tjen på det",
@@ -416,56 +416,56 @@ const solutions: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Serviceløsninger | OptiPeople",
         metaDescription:
-          "Giv serviceholdet indblik i, hvordan maskinerne har det, vedligehold efter brug, og fejlfinding på afstand.",
+          "Se, hvordan maskinerne har det, planlæg vedligehold efter faktisk brug, og find fejlen på afstand. Færre akutte udkald og service, I tjener penge på.",
         eyebrow: "Til service og eftermarked",
         heroTitle: "Løs problemet, før kunden mærker det",
         heroBody:
-          "Planlæg vedligeholdet efter fakta, skær de akutte udkald ned, og gør service til noget, I vinder på.",
+          "Giv serviceteamet et ærligt billede af, hvordan maskinerne har det og bliver brugt. Så kan I planlægge efter fakta, rykke færre gange ud akut og gøre service til noget, I tjener på.",
         primaryLabel: "Book en demo",
-        introTitle: "At rykke ud, når det brænder, er dyrt",
+        introTitle: "Brandslukning er dyrt og slider på folk",
         introBody:
-          "Teknikerne skal ikke bruge tiden på at gætte. Med maskindata, alarmer og historik kan servicen planlægges, før kunden opdager, at der er noget galt.",
-        capabilitiesTitle: "Alt til service på forkant",
+          "Teknikerne bruger mere tid på at slukke brande end på at forebygge. Vedligeholdet følger kalenderen, ikke hvor meget maskinen faktisk har kørt. Med maskindata, alarmer og historik kan I gribe ind, før kunden opdager, at der er noget galt.",
+        capabilitiesTitle: "Service, der er på forkant",
         features: [
           {
             icon: HeartPulse,
-            title: "Hvordan har maskinen det",
+            title: "Hvordan har maskinen det?",
             description:
-              "Følg vibration, temperatur, energi og driftstimer, mens det sker.",
+              "Følg vibration, temperatur, energi og driftstimer, mens det sker, og se sliddet, før det ender i et nedbrud.",
           },
           {
             icon: MapPin,
             title: "Fejlfinding på afstand",
             description:
-              "Find fejlen hjemmefra, og mød op med de rigtige dele i bilen.",
+              "Find fejlen, før teknikeren kører, og mød op med de rigtige dele i bilen.",
           },
           {
             icon: FileText,
             title: "Servicerapporter",
             description:
-              "Lever rapporter med tallene bag, og læg serviceaftalerne på et sikkert grundlag.",
+              "Giv kunden servicerapporter med tal bag, og brug maskindata, når I skal sætte pris på serviceaftalerne.",
           },
         ],
         visualTitle: "Ét overblik over alle de maskiner, I servicerer",
         visualBody:
-          "Hvordan maskinerne har det, hvad der er lavet på dem, og hvad der venter forude, på tværs af alt det, I har ude at køre.",
+          "Hvordan maskinerne har det, hvad der er lavet på dem, og hvad der står for tur. For alle de maskiner, I har ude hos kunderne.",
         visualImage: "/images/report-mockrup-3.png",
         visualAlt: "Dashboard over maskinernes tilstand",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "50%", label: "Færre akutte udkald" },
-          { metric: "40 timer", label: "Sparet pr. maskine om året" },
-          { metric: "30%", label: "Mere værdi i serviceaftalerne" },
+          { metric: "40 timer", label: "Sparet på vedligehold pr. maskine om året" },
+          { metric: "30%", label: "Mere omsætning på serviceaftaler" },
         ],
         stepsTitle: "Sådan virker det",
         steps: [
           {
-            title: "Forbind",
+            title: "Kobl på",
             description: "Sensorer og maskindata bliver samlet i ét serviceoverblik.",
           },
           {
             title: "Hold øje",
-            description: "Alarmer og udviklingen viser, hvor teamet skal sætte ind.",
+            description: "Alarmer og kurver viser, hvor teamet skal sætte ind.",
           },
           {
             title: "Forebyg",

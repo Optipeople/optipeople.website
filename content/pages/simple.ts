@@ -56,7 +56,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Data, I kan tage med jer",
-          body: "Alt det, platformen samler op, kan I hente gennem API'et eller få sendt ud over MQTT. Så kan jeres produktionsdata også fodre Power BI, et datawarehouse eller jeres egne systemer. Platformen er et sted, hvor jeres data arbejder, ikke et sted, hvor de bliver låst inde.",
+          body: "Alt det, platformen samler op, kan I hente gennem API'et eller få sendt ud over MQTT. Så kan jeres produktionsdata også fodre Power BI, et datawarehouse eller jeres egne systemer. Jeres data arbejder i platformen. De bliver ikke låst inde i den.",
         },
       ],
       links: moduleIndexLinks("da"),
@@ -106,7 +106,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         "Se OptiPeople-funktionerne, fra produktionseffektivitet og stopårsager til AI-copiloter og maskinstyring.",
       eyebrow: "Funktioner",
       headline: "Fra rå maskinsignaler til noget, I kan bruge",
-      body: "Funktionerne her gør produktionen synlig og målbar, hver eneste dag. De starter alle sammen i noget, en maskine eller en operatør faktisk registrerer, og ender i et tal, nogen kan handle på.",
+      body: "Med funktionerne her kan I se, måle og forbedre produktionen hver dag. De starter alle sammen i noget, en maskine eller en operatør faktisk registrerer, og ender i et tal, nogen kan gøre noget ved.",
       linksTitle: "Se funktionerne",
       sections: [
         {
@@ -127,7 +127,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
       ],
       links: [
-        { title: "Produktionseffektivitet", href: "/features/production-efficiency", description: "Følg OEE live på tværs af skift, linjer og maskiner." },
+        { title: "Produktionseffektivitet", href: "/features/production-efficiency", description: "Følg OEE live for hvert skift, hver linje og hver maskine." },
         { title: "Stopårsager", href: "/features/stop-cause-registration", description: "Registrer årsagen til stoppet ude ved maskinen." },
         { title: "Vedligehold og opgaver", href: "/features/maintenance-and-tasks", description: "Planlæg vedligehold efter brug og tilstand." },
         { title: "Kvalitetsstyring", href: "/features/quality-management", description: "Registrer kvalitetsdata dér, hvor arbejdet sker." },
@@ -177,20 +177,20 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       metaDescription:
         "Fra idé til drift: OptiPeople laver smart operations, automation, BI og AI til produktionsvirksomheder.",
       eyebrow: "Services",
-      headline: "Services, der flytter driften fra idé til resultat",
+      headline: "Fra god idé til noget, der kører i driften",
       body: "Vi hjælper produktionsvirksomheder med at koble maskinerne på, få styr på data, automatisere processerne og gøre tallene brugbare i hverdagen. Vi er både ingeniører og softwarehus, og derfor kan vi tage ansvar for de dele af et projekt, der rører ved rigtigt udstyr.",
       linksTitle: "Det laver vi",
       sections: [
         {
           title: "Software og ingeniørarbejde i samme team",
-          body: "At koble en fabrik på er sjældent en ren softwareopgave. Der er styringer, tavler og sensorer, og der er udstyr, som ikke bare kan stå stille en uge. Vi laver både platformen og automationsarbejdet, så bliver overleveringen mellem de to ikke jeres problem.",
+          body: "At koble en fabrik på er sjældent en ren softwareopgave. Der er styringer, tavler og sensorer, og der er udstyr, som ikke bare kan stå stille en uge. Fordi vi laver både platformen og automationsarbejdet, bliver overleveringen mellem de to ikke jeres problem.",
         },
         {
           title: "Vi starter med det, I allerede har",
           body: "De fleste produktionsvirksomheder har flere data, end de bruger. De ligger i ERP'et, i styringerne og i ti års regneark. Et projekt starter derfor med at finde ud af, hvad der allerede er, og hvad der faktisk mangler. Ikke med at skifte systemer ud, som virker.",
         },
         {
-          title: "Skåret til et første resultat",
+          title: "Først ét resultat, så resten",
           body: "Vi beviser hellere noget på én linje end at skrive en plan, der rækker to år frem. Første etape er som regel et bestemt antal maskiner, et bestemt antal målinger og en dato, hvor I selv kan se, om det var det værd.",
         },
         {
@@ -199,8 +199,8 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
       ],
       links: [
-        { title: "Smart Operations", href: "/services/smart-operations", description: "Data i realtid, OEE, dashboards og bedre drift." },
-        { title: "Automation", href: "/services/automation", description: "PLC, HMI, SCADA og maskinstyring bygget til produktion." },
+        { title: "Smart Operations", href: "/services/smart-operations", description: "Live data, OEE og overblik over gulvet, så I kan beslutte ud fra det, maskinerne melder." },
+        { title: "Automation", href: "/services/automation", description: "PLC, HMI, SCADA og maskinstyring, der kører stabilt i produktionen." },
         { title: "Business Intelligence", href: "/services/business-intelligence", description: "Power BI, datamodeller og rapporter, der laver sig selv." },
         { title: "AI-agentløsninger", href: "/services/ai-solutions", description: "AI-agenter og copiloter tæt på jeres drift og data." },
       ],
@@ -266,7 +266,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
       ],
       links: [
-        { title: "Til produktionsvirksomheder", href: "/solutions/manufacturing", description: "Kend jeres fabrik i realtid: maskiner, OEE, kvalitet, energi og vedligehold." },
+        { title: "Til produktionsvirksomheder", href: "/solutions/manufacturing", description: "Se, hvordan det går på fabrikken lige nu: maskiner, OEE, kvalitet, energi og vedligehold." },
         { title: "Til OEM'er og maskinbyggere", href: "/solutions/oems", description: "Kobl maskinerne på, find fejl på afstand og tjen penge på service." },
         { title: "Til service og eftermarked", href: "/solutions/service", description: "Giv serviceholdet indblik i, hvordan maskinerne har det, og løs problemerne, før kunden opdager dem." },
       ],
