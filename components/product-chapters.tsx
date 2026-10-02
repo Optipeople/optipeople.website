@@ -223,7 +223,7 @@ function MesChapter({ locale }: { locale: Locale }) {
               >
                 <Link
                   href={moduleHref(id)}
-                  className="group flex items-baseline gap-5 py-3 sm:py-3.5"
+                  className="group flex items-center gap-5 py-3 sm:py-3.5"
                 >
                   <span
                     className="min-w-0 flex-1 truncate text-2xl font-normal tracking-tight text-white transition-transform duration-300 group-hover:translate-x-1.5 sm:text-3xl"
@@ -238,7 +238,7 @@ function MesChapter({ locale }: { locale: Locale }) {
                     {t.readings[id]}
                   </span>
                   <ArrowRight
-                    className="size-4 shrink-0 self-center text-white/35 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-white"
+                    className="size-4 shrink-0 text-white/35 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-white"
                     aria-hidden="true"
                   />
                 </Link>
