@@ -210,7 +210,7 @@ export default async function ContactPage({ params }: Props) {
             {/* The form is the brightest surface on the page. */}
             <div className="min-w-0 rounded-[1.5rem] bg-white p-6 shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08] sm:p-9 lg:rounded-[1.75rem] lg:p-10">
               <div className="space-y-3">
-                <LeadEmailForm showFineprint={false} />
+                <LeadEmailForm showFineprint={false} formName="contact_lead" />
                 <p className="px-1 text-sm text-foreground/70">{t.quickIntro}</p>
               </div>
 

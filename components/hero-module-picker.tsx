@@ -118,7 +118,11 @@ export function HeroModulePicker({
         ))}
       </div>
 
-      <LeadEmailForm className="mt-8 w-full max-w-md" modules={selectedLabels} />
+      <LeadEmailForm
+        className="mt-8 w-full max-w-md"
+        modules={selectedLabels}
+        formName="hero_lead"
+      />
     </div>
   )
 }

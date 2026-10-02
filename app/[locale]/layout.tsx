@@ -8,7 +8,9 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalizedCallToAction } from "@/components/localized-call-to-action";
 import { NewsletterPrompt } from "@/components/newsletter-prompt";
+import { ConsentBanner } from "@/components/consent-banner";
 import { routing, type Locale } from "@/i18n/routing";
+import { consentDefaultScript } from "@/lib/analytics";
 import { generalEmail } from "@/lib/contact";
 import { absoluteUrl, siteName, siteUrl } from "@/lib/seo";
 
@@ -87,6 +89,8 @@ export default async function LocaleLayout({
       className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} ${ibmPlexMono.variable}`}
     >
       <head>
+        {/* Consent Mode v2 defaults, before any tag could run. */}
+        <script dangerouslySetInnerHTML={{ __html: consentDefaultScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -111,6 +115,7 @@ export default async function LocaleLayout({
           <LocalizedCallToAction />
           <SiteFooter />
           <NewsletterPrompt />
+          <ConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

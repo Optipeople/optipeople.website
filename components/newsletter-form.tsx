@@ -5,6 +5,7 @@ import { ArrowRight, Check } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
+import { trackEvent } from "@/lib/analytics"
 
 type FormStatus = "idle" | "loading" | "success" | "error"
 
@@ -78,6 +79,8 @@ export function NewsletterForm() {
       if (!response.ok) {
         throw new Error("Failed to subscribe")
       }
+
+      trackEvent("sign_up", { form_name: "newsletter_form", method: "newsletter" })
 
       form.reset()
       setStatus("success")

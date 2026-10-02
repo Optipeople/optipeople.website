@@ -11,6 +11,7 @@ import { ArrowRight, Check, X } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { usePathname } from "@/i18n/navigation"
+import { CONSENT_CHANGE_EVENT, readConsent, trackEvent } from "@/lib/analytics"
 
 type PromptMode = "slide" | "modal"
 type FormStatus = "idle" | "loading" | "success" | "error"
@@ -83,6 +84,15 @@ export function NewsletterPrompt() {
   const [mode, setMode] = useState<PromptMode | null>(null)
   const [visible, setVisible] = useState(false)
   const triggered = useRef(false)
+  // Wait for the cookie banner to be answered, so the two never stack up.
+  const [consentAnswered, setConsentAnswered] = useState(false)
+
+  useEffect(() => {
+    const sync = () => setConsentAnswered(readConsent() !== null)
+    sync()
+    window.addEventListener(CONSENT_CHANGE_EVENT, sync)
+    return () => window.removeEventListener(CONSENT_CHANGE_EVENT, sync)
+  }, [])
 
   const normalizedPath = pathname || "/"
   const pathSuppressed = SUPPRESSED_PATHS.some(
@@ -98,7 +108,7 @@ export function NewsletterPrompt() {
   }, [])
 
   useEffect(() => {
-    if (pathSuppressed) return
+    if (pathSuppressed || !consentAnswered) return
     if (isSuppressed()) return
 
     let armed = true
@@ -153,7 +163,7 @@ export function NewsletterPrompt() {
       if (armTimer) clearTimeout(armTimer)
       cleanup()
     }
-  }, [pathSuppressed, open])
+  }, [pathSuppressed, consentAnswered, open])
 
   const close = useCallback(
     (reason: "dismissed" | "subscribed") => {
@@ -311,6 +321,10 @@ function PromptCard({
         body: JSON.stringify({ email, consent: true }),
       })
       if (!res.ok) throw new Error("failed")
+      trackEvent("sign_up", {
+        form_name: `newsletter_prompt_${variant}`,
+        method: "newsletter",
+      })
       setStatus("success")
       window.setTimeout(onSubscribed, 2200)
     } catch {
