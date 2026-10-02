@@ -144,7 +144,7 @@ function aiReferrals() {
 
 function deadUrls() {
   out.push("## Old URLs with traffic that would 404", "");
-  out.push("Paths from Search Console pages and GA4 landing pages, checked against the redirects in `next.config.ts`, the routes under `app/[locale]` and the files in `public/`.", "");
+  out.push("Paths from Search Console pages and GA4 landing pages, checked against the redirects in `next.config.ts` and `lib/legacy-redirects.ts`, the routes under `app/[locale]` and the files in `public/`.", "");
   const site = siteRoutes();
   const seen = new Map();
   const add = (raw, field, value) => {
@@ -184,12 +184,12 @@ function siteRoutes() {
   const routes = [];
   walk("app/[locale]", []);
   const blog = new Set(blogSlugs());
-  const redirects = [...readFileSync("next.config.ts", "utf8").matchAll(/source:\s*"([^"]+)"/g)].map((m) => m[1]);
+  const redirects = redirectSources().map(sourcePattern);
 
   return {
     resolves(p) {
       if (p.startsWith("/api/") || p === "/admin" || p.startsWith("/admin/")) return true;
-      if (redirects.includes(p)) return true;
+      if (redirects.some((re) => re.test(p))) return true;
       if (existsSync(path.join("public", decodeURIComponent(p))) && statSync(path.join("public", decodeURIComponent(p))).isFile()) return true;
       const parts = p.split("/").filter(Boolean);
       if (parts[0] === "da" || parts[0] === "en") parts.shift();
@@ -214,6 +214,32 @@ function siteRoutes() {
       }
     }
   }
+}
+
+// Sources from next.config.ts ({ source: "..." }) and, when it exists, the
+// WordPress redirect map in lib/legacy-redirects.ts (["/old", "/new"] pairs).
+function redirectSources() {
+  const sources = [...readFileSync("next.config.ts", "utf8").matchAll(/source:\s*"([^"]+)"/g)].map((m) => m[1]);
+  const legacy = "lib/legacy-redirects.ts";
+  if (existsSync(legacy)) {
+    const text = readFileSync(legacy, "utf8");
+    sources.push(...[...text.matchAll(/\[\s*"(\/[^"]*)",\s*"/g)].map((m) => m[1]));
+    sources.push(...[...text.matchAll(/source:\s*"([^"]+)"/g)].map((m) => m[1]));
+  }
+  return sources;
+}
+
+// Enough of Next's path-to-regexp syntax for redirect sources:
+// :name, :name(regex), :name* and :name+.
+function sourcePattern(source) {
+  let re = "";
+  for (const m of source.matchAll(/:(\w+)(\([^)]*\))?([*+?])?|[^:]+/g)) {
+    if (!m[1]) re += m[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    else if (m[3] === "*") re = re.replace(/\\?\/$/, "") + "(?:/.*)?";
+    else if (m[3] === "+") re += ".+";
+    else re += m[2] ?? "[^/]+";
+  }
+  return new RegExp(`^${re}/?$`);
 }
 
 function slugsIn(file) {

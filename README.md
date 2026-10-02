@@ -60,7 +60,8 @@ The report covers:
   `gsc-page-date.json`, which pulls made before this report do not have)
 - AI assistant referrals by source and landing page
 - old URLs with traffic that the new site would 404 on, checked against the
-  redirects in `next.config.ts`, the app routes and `public/`, with a
+  redirects in `next.config.ts` (and `lib/legacy-redirects.ts` once it exists),
+  the app routes and `public/`, with a
   `/blog/<slug>` target suggested where the slug matches a post
 
 ## Tech Notes
