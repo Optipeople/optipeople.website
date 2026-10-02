@@ -2,9 +2,6 @@ import type { CSSProperties } from "react"
 import type { LucideIcon } from "lucide-react"
 import {
   Antenna,
-  BadgeCheck,
-  Bot,
-  CalendarRange,
   ChartColumn,
   ChevronDown,
   ChevronRight,
@@ -12,13 +9,10 @@ import {
   Cpu,
   Database,
   FileText,
-  Gauge,
   Network,
   Server,
   Sparkles,
   Thermometer,
-  Wrench,
-  Zap,
 } from "lucide-react"
 
 import type { Locale } from "@/i18n/routing"
@@ -31,8 +25,8 @@ import { moduleCatalog } from "@/content/modules-catalog"
  * times. Each one takes the form of the thing it sells:
  *
  * - Modular MES is the core, on the deep green: a giant name, a customer
- *   result, and the modules as a grid that fills up as you scroll, which is
- *   what "modular" means.
+ *   result, and the modules as an index that fills up as you scroll, which
+ *   is what "modular" means.
  * - IoT is a system, so it is drawn as one, on a light band: everything a site
  *   already runs, wired into one data foundation, with data moving on the wires.
  * - Opti Assist is a conversation with the factory, back on the deep green:
@@ -104,10 +98,10 @@ const MES_COPY: Record<Locale, MesCopy> = {
     body: "Orders, OEE, planning and machine data on one foundation. Add the next module when you need it, with or without your ERP.",
     gridLabel: "Nine modules. One data foundation.",
     proof: {
-      value: "+5%",
-      label: "OEE in three months",
-      company: "Dansk Træemballage",
-      href: "/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud",
+      value: "−41%",
+      label: "unnecessary stops",
+      company: "Fiberline Composites",
+      href: "/blog/konkurrencekraft-og-tempo-pa-digital-transformation",
     },
     readings: {
       orders: "12 running",
@@ -127,10 +121,10 @@ const MES_COPY: Record<Locale, MesCopy> = {
     body: "Ordrer, OEE, planlægning og maskindata på samme fundament. Tag næste modul, når I har brug for det, med eller uden jeres ERP.",
     gridLabel: "Ni moduler. Ét datagrundlag.",
     proof: {
-      value: "+5%",
-      label: "OEE på tre måneder",
-      company: "Dansk Træemballage",
-      href: "/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud",
+      value: "−41%",
+      label: "unødvendige stop",
+      company: "Fiberline Composites",
+      href: "/blog/konkurrencekraft-og-tempo-pa-digital-transformation",
     },
     readings: {
       orders: "12 i gang",
@@ -146,17 +140,17 @@ const MES_COPY: Record<Locale, MesCopy> = {
   },
 }
 
-/** Tile order is the order they light up in: the usual first two, then the rest. */
-const MES_TILES: { id: string; icon: LucideIcon }[] = [
-  { id: "orders", icon: ClipboardList },
-  { id: "oee", icon: Gauge },
-  { id: "planning", icon: CalendarRange },
-  { id: "iot", icon: Cpu },
-  { id: "qms", icon: BadgeCheck },
-  { id: "ems", icon: Zap },
-  { id: "maintenance", icon: Wrench },
-  { id: "documents", icon: FileText },
-  { id: "ai-agents", icon: Bot },
+/** Row order is the order they light up in: the usual first two, then the rest. */
+const MES_MODULES = [
+  "orders",
+  "oee",
+  "planning",
+  "iot",
+  "qms",
+  "ems",
+  "maintenance",
+  "documents",
+  "ai-agents",
 ]
 
 function moduleLabel(id: string, locale: Locale) {
@@ -206,47 +200,45 @@ function MesChapter({ locale }: { locale: Locale }) {
         </div>
 
         <div className="lg:col-span-6">
-          <p className="mb-4 text-sm text-white/65">{t.gridLabel}</p>
-          <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
-            {MES_TILES.map(({ id, icon: Icon }, i) => (
-              <div
+          <p className="text-sm text-white/65">{t.gridLabel}</p>
+          {/* An index rather than a grid of cards: the module names set large
+              on hairlines, each with what it is reading right now. A row comes
+              on as it scrolls into view, so the list fills up from the top. */}
+          <ol className="mt-5 border-t border-white/12">
+            {MES_MODULES.map((id, i) => (
+              <li
                 key={id}
-                className="chapter-tile flex aspect-square flex-col justify-between rounded-2xl border p-3 sm:p-5"
+                className="chapter-tile flex items-center gap-4 border-b border-white/12 py-3 sm:py-3.5"
                 style={
                   {
-                    // Each tile switches on over its own slice of the scroll.
-                    animationRange: `cover ${4 + i * 2}% cover ${14 + i * 2}%`,
-                    backgroundColor:
-                      "color-mix(in oklab, var(--green-system) calc(var(--lit) * 16%), rgb(255 255 255 / 0.03))",
-                    borderColor:
-                      "color-mix(in oklab, var(--green-light2) calc(var(--lit) * 40%), rgb(255 255 255 / 0.1))",
+                    animationRange: `cover ${4 + i}% cover ${12 + i}%`,
                   } as CSSProperties
                 }
               >
                 <span
-                  className="grid size-9 place-items-center rounded-xl sm:size-10"
+                  className="size-1.5 shrink-0 rounded-full"
                   style={{
-                    backgroundColor: "rgb(255 255 255 / calc(0.04 + var(--lit) * 0.06))",
-                    color: "var(--green-light2)",
-                    opacity: "calc(0.45 + var(--lit) * 0.55)",
+                    backgroundColor:
+                      "color-mix(in oklab, var(--green-system) calc(var(--lit) * 100%), rgb(255 255 255 / 0.2))",
+                    boxShadow:
+                      "0 0 0 calc(var(--lit) * 4px) color-mix(in oklab, var(--green-system) 22%, transparent)",
                   }}
+                />
+                <span
+                  className="min-w-0 flex-1 truncate text-2xl font-normal tracking-tight text-white sm:text-3xl"
+                  style={{ opacity: "calc(0.28 + var(--lit) * 0.72)" }}
                 >
-                  <Icon className="size-[18px]" />
+                  {moduleLabel(id, locale)}
                 </span>
-                <span style={{ opacity: "calc(0.45 + var(--lit) * 0.55)" }}>
-                  <span className="block text-[13px] font-medium leading-tight text-white [overflow-wrap:anywhere] sm:truncate sm:text-base">
-                    {moduleLabel(id, locale)}
-                  </span>
-                  <span
-                    className="mt-0.5 block text-[11px] leading-tight tabular-nums sm:truncate sm:text-sm"
-                    style={{ color: "var(--green-light2)", opacity: "var(--lit)" }}
-                  >
-                    {t.readings[id]}
-                  </span>
+                <span
+                  className="shrink-0 text-right text-sm tabular-nums sm:text-base"
+                  style={{ color: "var(--green-light2)", opacity: "var(--lit)" }}
+                >
+                  {t.readings[id]}
                 </span>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </div>
     </section>
