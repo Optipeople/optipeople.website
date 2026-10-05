@@ -42,7 +42,10 @@ const posts: Pair[] = [
   ["/jbs", "/blog/jbs"],
   ["/expedit-opticloud-enables-decision-making-around-automations-and-investments", "/blog/expedit-opticloud-enables-decision-making-around-automations-and-investments"],
   ["/how-do-i-improve-my-oee-with-examples", "/blog/how-do-i-improve-my-oee-with-examples"],
-  ["/what-is-oee-for-manufacturing-and-maintenance", "/blog/what-is-oee-for-manufacturing-and-maintenance"],
+  // Merged into what-is-oee on 2026-10-05, so its old blog URLs move too.
+  ["/what-is-oee-for-manufacturing-and-maintenance", "/blog/what-is-oee"],
+  ["/blog/what-is-oee-for-manufacturing-and-maintenance", "/blog/what-is-oee"],
+  ["/da/blog/what-is-oee-for-manufacturing-and-maintenance", "/da/blog/what-is-oee"],
   ["/how-to-calculate-oee-for-manufacturing-and-maintenance", "/blog/how-to-calculate-oee-for-manufacturing-and-maintenance"],
   ["/what-are-the-effects-of-oee", "/blog/what-are-the-effects-of-oee"],
   ["/opticloud-api-how-to-use-it-step-by-step", "/blog/opticloud-api-how-to-use-it-step-by-step"],

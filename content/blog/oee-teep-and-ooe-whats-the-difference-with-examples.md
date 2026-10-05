@@ -1,85 +1,114 @@
 ---
-title: "OEE, TEEP, and OOE, What's the Difference? [With Examples]"
+title: "OOE vs OEE vs TEEP: Meaning, Formulas and Examples"
+description: "OOE stands for Overall Operations Effectiveness. How OOE differs from OEE and TEEP, the formula for each, and one example that compares all three."
 date: "2022-06-28"
+updated: "2026-10-05"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/oee1-vs-oee2.jpg"
 ---
 
-OEE, TEEP, and OOE are all ways of evaluating production availability and performance. Each of them compares what production could potentially achieve against what it actually achieves, helping teams identify improvement opportunities without investing in new equipment or facilities.
+OOE stands for Overall Operations Effectiveness. It uses the same formula as OEE (Availability x Performance x Quality), but measures against operations time: all the time the plant is open, including breaks and planned stops. OEE uses only planned production time, and TEEP uses all calendar time. So for one machine, OEE is always highest and TEEP lowest.
 
-## What Is OEE?
+## What does OOE stand for?
 
-OEE stands for **Overall Equipment Effectiveness**. It is one of the most widely used ways to assess how efficiently a manufacturing process is being used.
+OOE stands for **Overall Operations Effectiveness**. It measures how well the operation uses the time the plant is open and staffed, its operations time.
 
-OEE measures three core factors:
+The difference from OEE is what counts as a loss. OEE leaves planned stops out of the calculation: breaks, meetings, planned maintenance and team briefings. OOE counts them as lost time. That makes OOE the better number when you want to know how well the whole operation runs during opening hours, not just the machine while it is scheduled to produce.
 
-- **Availability:** how much scheduled manufacturing time is actually used for production
-- **Performance:** how fast the process runs compared to its ideal speed
-- **Quality:** how much of the output is good output
+## What does TEEP stand for?
 
-Those three measurements are combined to create the final OEE score.
+TEEP stands for **Total Effective Equipment Performance**. It measures production against all calendar time: 24 hours a day, 7 days a week, 365 days a year.
 
-## How to Calculate OEE
+TEEP counts every hour without production as a loss, including nights, weekends and holidays when the plant is closed. That makes it a capacity measure. It answers how much more the equipment could make if you ran it around the clock, which matters before you invest in a new machine or a new hall.
 
-There are multiple ways to calculate OEE, but the preferred method is:
+## What does OEE stand for?
 
-`OEE = Availability x Performance x Quality`
+OEE stands for **Overall Equipment Effectiveness**. It measures how much of the planned production time is truly productive: good parts, at full speed, with no stops. It is the most widely used of the three and the right number for daily improvement work. For the full explanation, see [what OEE is](/blog/what-is-oee).
 
-Example:
+## What is the difference between OOE, OEE and TEEP?
 
-- Availability: `62.5%`
-- Performance: `66.7%`
-- Quality: `75%`
+All three multiply availability, performance and quality. Only the time base changes, and with it what counts as lost time:
 
-Then:
+| Metric | Stands for | Time base | Counted as lost time | Answers |
+|---|---|---|---|---|
+| OEE | Overall Equipment Effectiveness | Planned production time | Unplanned stops, slow running, scrap | How well does the machine run when it is scheduled? |
+| OOE | Overall Operations Effectiveness | Operations time (the plant is open) | The OEE losses, plus breaks and planned stops | How well does the operation use its opening hours? |
+| TEEP | Total Effective Equipment Performance | All time (24/7/365) | The OOE losses, plus all hours the plant is closed | How much capacity is left in the equipment? |
 
-`OEE = 62.5% x 66.7% x 75% = 31.25%`
+Because each time base is larger than the one before, OEE is always at least as high as OOE, and OOE is always at least as high as TEEP.
 
-That means the plant has significantly more theoretical output potential than what is currently being realized.
+## What are the formulas for OEE, OOE and TEEP?
 
-## Losses Associated with OEE
+Performance and quality are the same in all three. Only availability changes:
 
-OEE is often used to identify the six big losses in production. These losses are usually grouped under:
+```text
+OEE  = Availability x Performance x Quality
 
-- availability losses
-- performance losses
-- quality losses
+Availability (OEE)  = Run time / Planned production time
+Availability (OOE)  = Run time / Operations time
+Availability (TEEP) = Run time / All time
 
-The purpose of OEE is not only to calculate a number, but to expose the reasons that keep production from operating at its full potential.
+Performance = (Ideal cycle time x Total count) / Run time
+Quality     = Good count / Total count
 
-## What Is OOE?
+TEEP = OEE x Utilization
+Utilization = Planned production time / All time
+```
 
-OOE stands for **Overall Operations Effectiveness**.
+## How do OEE, OOE and TEEP compare on the same machine?
 
-It is similar to OEE, but instead of measuring only planned production time, it looks at a broader picture of how effectively operations are running during loading time.
+Take one machine over one week:
 
-OOE is useful when teams want to understand operational efficiency in a wider sense, not just equipment performance during planned production.
+- All time: `168 hours` (7 days x 24 hours)
+- Operations time: `80 hours` (two 8-hour shifts, 5 days)
+- Planned stops (breaks, meetings, planned maintenance): `10 hours`
+- Planned production time: `70 hours`
+- Unplanned stops and changeovers: `14 hours`
+- Run time: `56 hours`
+- Performance: `90%`
+- Quality: `95%`
 
-## What Is TEEP?
+Performance x quality is 90% x 95% = 85.5% in all three. Availability is what moves:
 
-TEEP stands for **Total Effective Equipment Performance**.
+| Metric | Time base | Hours | Availability | Result |
+|---|---|---:|---:|---:|
+| OEE | Planned production time | 70 | 80.0% | 68.4% |
+| OOE | Operations time | 80 | 70.0% | 59.9% |
+| TEEP | All time | 168 | 33.3% | 28.5% |
 
-TEEP goes one step further than OEE by comparing output against all available time, including time where production was not scheduled.
+The same 56 hours of running give three different answers. OEE says the machine runs fairly well when it is scheduled. OOE shows that breaks and planned stops cost another 10 hours of opening time. TEEP shows that the machine runs only a third of the week, so there is room for more volume before anyone needs to buy a new machine.
 
-This makes TEEP useful when organizations want to understand total capacity utilization and long-term expansion potential.
+## When should you use OEE, OOE or TEEP?
 
-## OEE vs OOE vs TEEP
+- **OEE** for daily and weekly improvement on a machine or line. It focuses on the losses the operators and maintenance team can act on now.
+- **OOE** when you want to see how planned stops affect output: break cover, meeting length, how planned maintenance is scheduled.
+- **TEEP** for capacity planning, before adding shifts, investing in equipment or taking on a large order.
 
-The difference is mainly the time basis:
+Most plants start with OEE and add TEEP when the question becomes capacity. In Scandinavia you will also meet OEE1 and OEE2, where OEE1 uses all calendar time like TEEP. See [OEE1 vs OEE2](/blog/oee1-vs-oee2-whats-the-difference).
 
-- **OEE** focuses on planned production time
-- **OOE** focuses on operating time or loading time
-- **TEEP** focuses on all available time
+## How do you track OEE in practice?
 
-In practice:
+All three numbers depend on knowing the real run time and the reasons for every stop. The [OptiPeople OEE module](/modules/production) collects that data straight from the machines and shows availability, performance, quality and OEE live per machine, line and shift, with stop causes registered by the operators at the machine.
 
-- use **OEE** for day-to-day production improvement
-- use **OOE** for broader operational analysis
-- use **TEEP** for understanding total capacity opportunity
+## FAQ
 
-## Why It Matters
+### What is OOE in manufacturing?
 
-Understanding the distinction between OEE, OOE, and TEEP makes it easier to choose the right metric for the question you are trying to answer.
+OOE is Overall Operations Effectiveness: availability x performance x quality, measured against the time the plant is open. Unlike OEE, it counts breaks and planned stops as lost time.
 
-If the goal is improving shift performance, OEE is often the most practical. If the goal is understanding total capacity opportunity, TEEP becomes more relevant.
+### What is the difference between OOE and OEE?
+
+The time base. OEE measures against planned production time and leaves planned stops out. OOE measures against operations time, so planned stops count as a loss and OOE is lower than OEE.
+
+### What does TEEP mean?
+
+TEEP means Total Effective Equipment Performance. It measures production against all calendar time, 24 hours a day, 7 days a week, and shows how much capacity the equipment has left.
+
+### How do you calculate TEEP?
+
+TEEP = OEE x Utilization, where utilization is planned production time divided by all calendar time. An OEE of 68.4% on a machine planned for 70 of 168 hours gives a TEEP of 28.5%.
+
+### Which is better, OEE or TEEP?
+
+Neither. They answer different questions. Use OEE to improve how the machine runs when it is scheduled, and TEEP to see how much more it could produce if it ran more hours.
