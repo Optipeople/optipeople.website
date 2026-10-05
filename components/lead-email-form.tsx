@@ -5,6 +5,7 @@ import { ArrowRight, Check } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { Link } from "@/i18n/navigation"
+import { trackEvent } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 
 type FormStatus = "idle" | "loading" | "success" | "error"
@@ -20,12 +21,15 @@ export function LeadEmailForm({
   className,
   showFineprint = true,
   modules,
+  formName = "lead_email",
 }: {
   className?: string
   /** Hide the "or send a full message" line where it would be redundant. */
   showFineprint?: boolean
   /** Labels of any modules the visitor picked, sent along as lead context. */
   modules?: string[]
+  /** Reported to analytics so leads can be told apart by where they came from. */
+  formName?: string
 }) {
   const t = useTranslations("leadForm")
   const [status, setStatus] = useState<FormStatus>("idle")
@@ -60,6 +64,7 @@ export function LeadEmailForm({
         body: JSON.stringify({ email, modules: modules ?? [] }),
       })
       if (!res.ok) throw new Error("Failed to submit")
+      trackEvent("generate_lead", { form_name: formName })
       form.reset()
       setStatus("success")
     } catch {

@@ -8,8 +8,10 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalizedCallToAction } from "@/components/localized-call-to-action";
 import { NewsletterPrompt } from "@/components/newsletter-prompt";
+import { ConsentBanner } from "@/components/consent-banner";
 import { JsonLd } from "@/components/json-ld";
 import { routing } from "@/i18n/routing";
+import { consentDefaultScript } from "@/lib/analytics";
 import { isIndexableDeploy } from "@/lib/indexing";
 import { siteUrl } from "@/lib/seo";
 import { organizationSchema, websiteSchema } from "@/lib/structured-data";
@@ -68,6 +70,8 @@ export default async function LocaleLayout({
       className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} ${ibmPlexMono.variable}`}
     >
       <head>
+        {/* Consent Mode v2 defaults, before any tag could run. */}
+        <script dangerouslySetInnerHTML={{ __html: consentDefaultScript }} />
         <JsonLd data={organizationSchema(locale)} />
         <JsonLd data={websiteSchema(locale)} />
       </head>
@@ -82,6 +86,7 @@ export default async function LocaleLayout({
           <LocalizedCallToAction />
           <SiteFooter />
           <NewsletterPrompt />
+          <ConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
+import { trackEvent } from "@/lib/analytics"
 
 const fieldClass =
   "w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground text-base placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/50 focus:border-ring transition-colors"
@@ -48,6 +49,7 @@ export function ContactForm() {
         body: JSON.stringify({ name, email, phone, message }),
       })
       if (!res.ok) throw new Error("Failed to submit")
+      trackEvent("generate_lead", { form_name: "contact_form" })
       setStatus("success")
     } catch {
       setStatus("error")

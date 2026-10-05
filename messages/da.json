@@ -34,6 +34,12 @@
     "description": "Lad være med at gætte. Se, hvad der faktisk sker.",
     "primaryLabel": "Book en snak"
   },
+  "consent": {
+    "title": "Cookies til statistik",
+    "body": "Vi vil gerne bruge Google Analytics til at se, hvilke sider der bliver læst, så vi kan gøre sitet bedre. Der kommer kun cookies på, hvis du siger ja, og du kan altid fortryde. <link>Læs mere</link>",
+    "accept": "Ja tak",
+    "decline": "Nej tak"
+  },
   "newsletterPrompt": {
     "eyebrow": "Nyhedsbrev",
     "title": "Kan du lide det, du læser?",

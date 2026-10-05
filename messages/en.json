@@ -34,6 +34,12 @@
     "description": "Stop guessing. Start running on facts.",
     "primaryLabel": "Book a talk"
   },
+  "consent": {
+    "title": "Cookies for statistics",
+    "body": "We'd like to use Google Analytics to see which pages people use, so we can make the site better. It only sets cookies if you say yes, and you can change your mind any time. <link>Read more</link>",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "newsletterPrompt": {
     "eyebrow": "Newsletter",
     "title": "Enjoying the read?",
