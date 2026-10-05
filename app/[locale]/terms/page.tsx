@@ -4,6 +4,8 @@ import type { Locale } from "@/i18n/routing"
 import { Link } from "@/i18n/navigation"
 import { buildMetadata } from "@/lib/seo"
 import { LegalShell } from "@/components/legal-shell"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 const PATH = "/terms"
 type Props = { params: Promise<{ locale: string }> }
@@ -52,6 +54,7 @@ export default async function TermsPage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const l = locale as Locale
 
+  const m = meta[l]
   return (
     <LegalShell
       eyebrow={eyebrow[l]}
@@ -59,6 +62,11 @@ export default async function TermsPage({ params }: Props) {
       locale={l}
       updated={updated[l]}
     >
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(m.title), path: PATH },
+        ])}
+      />
       {l === "da" ? (
         <>
           <p>

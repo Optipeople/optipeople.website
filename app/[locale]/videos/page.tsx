@@ -7,6 +7,8 @@ import { VideoCarousel, type VideoData } from "@/components/video-carousel"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema } from "@/lib/structured-data"
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -185,6 +187,11 @@ export default async function VideosPage({ params }: Props) {
 
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: locale === "da" ? "Videoer" : "Videos", path: "/videos" },
+        ])}
+      />
       {/* Hero, on a tint that fades out before the first embed. */}
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">
         <div

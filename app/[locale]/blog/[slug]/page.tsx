@@ -13,7 +13,14 @@ import {
   TableOfContents,
   extractHeadings,
 } from "@/components/blog-post-content"
-import { absoluteUrl, buildMetadata } from "@/lib/seo"
+import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import {
+  articleSchema,
+  breadcrumbSchema,
+  extractFaq,
+  faqSchema,
+} from "@/lib/structured-data"
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>
@@ -27,6 +34,7 @@ type PostCopy = {
   relatedCases: string
   readMore: string
   by: string
+  updated: string
 }
 
 const copy: Record<Locale, PostCopy> = {
@@ -38,6 +46,7 @@ const copy: Record<Locale, PostCopy> = {
     relatedCases: "More customer stories",
     readMore: "Read",
     by: "by",
+    updated: "updated",
   },
   da: {
     backToBlog: "Blog",
@@ -47,6 +56,7 @@ const copy: Record<Locale, PostCopy> = {
     relatedCases: "Flere kundehistorier",
     readMore: "Læs",
     by: "af",
+    updated: "opdateret",
   },
 }
 
@@ -115,34 +125,42 @@ export default async function BlogPostPage({ params }: Props) {
     .filter((item) => item.slug !== post.slug)
     .slice(0, 3)
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": isCaseStudy ? "Article" : "BlogPosting",
-    headline: post.title,
-    description: post.summary,
-    datePublished: new Date(post.date).toISOString(),
-    dateModified: new Date(post.updated).toISOString(),
-    author: {
-      "@type": "Organization",
-      name: post.author,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "OptiPeople",
-    },
-    mainEntityOfPage: absoluteUrl(`/blog/${slug}`),
-    articleSection: post.category,
-    ...(post.image ? { image: [absoluteUrl(post.image)] } : {}),
-  }
+  const path = `/blog/${slug}`
+  const faq = extractFaq(post.content)
+  const byline = [
+    formatPostDate(post.date, locale),
+    post.updated && post.updated !== post.date
+      ? `${t.updated} ${formatPostDate(post.updated, locale)}`
+      : "",
+    post.author ? `${t.by} ${post.author}` : "",
+  ]
+    .filter(Boolean)
+    .join(" · ")
 
   return (
     <article className="min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema),
-        }}
+      <JsonLd
+        data={articleSchema({
+          type: isCaseStudy ? "Article" : "BlogPosting",
+          headline: post.title,
+          description: post.summary,
+          path,
+          locale: locale as Locale,
+          inLanguage: post.contentLocale,
+          datePublished: post.date,
+          dateModified: post.updated,
+          author: post.author,
+          section: post.category,
+          image: post.image,
+        })}
       />
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: backLabel, path: backHref },
+          { name: post.title, path },
+        ])}
+      />
+      {faq.length > 0 && <JsonLd data={faqSchema(locale as Locale, path, faq)} />}
 
       {isCaseStudy ? (
         /* Case study: the deep surface, leading with the measured result. */
@@ -176,8 +194,7 @@ export default async function BlogPostPage({ params }: Props) {
                   {post.title}
                 </h1>
                 <p className="mt-6 text-sm tabular-nums text-white/65">
-                  {formatPostDate(post.date, locale)}
-                  {post.author ? ` · ${t.by} ${post.author}` : ""}
+                  {byline}
                 </p>
               </div>
 
@@ -239,8 +256,7 @@ export default async function BlogPostPage({ params }: Props) {
                 {post.title}
               </h1>
               <p className="mt-7 text-sm tabular-nums text-foreground/65">
-                {formatPostDate(post.date, locale)}
-                {post.author ? ` · ${t.by} ${post.author}` : ""}
+                {byline}
               </p>
             </div>
           </div>

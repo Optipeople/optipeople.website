@@ -8,6 +8,8 @@ import { getSurface } from "@/lib/page-theme"
 import { generalEmail } from "@/lib/contact"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema } from "@/lib/structured-data"
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -156,6 +158,14 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          {
+            name: locale === "da" ? "Kontakt OptiPeople" : "Contact OptiPeople",
+            path: "/contact",
+          },
+        ])}
+      />
       {/* Hero and form share one tint wash. */}
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">
         <div

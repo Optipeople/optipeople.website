@@ -9,6 +9,8 @@ import type { Locale } from "@/i18n/routing"
 import { getSurface } from "@/lib/page-theme"
 import { SUPPORT_EMAIL } from "@/lib/contact"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, faqSchema, pageName } from "@/lib/structured-data"
 
 const PATH = "/get-help"
 type Props = { params: Promise<{ locale: string }> }
@@ -256,6 +258,12 @@ export default async function GetHelpPage({ params }: Props) {
 
   return (
     <div className="min-h-screen">
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(t.metaTitle), path: PATH },
+        ])}
+      />
+      <JsonLd data={faqSchema(locale as Locale, PATH, t.faq)} />
       {/* Hero on the tint. */}
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">
         <div

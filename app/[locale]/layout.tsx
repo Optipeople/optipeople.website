@@ -8,10 +8,11 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalizedCallToAction } from "@/components/localized-call-to-action";
 import { NewsletterPrompt } from "@/components/newsletter-prompt";
-import { routing, type Locale } from "@/i18n/routing";
-import { generalEmail } from "@/lib/contact";
+import { JsonLd } from "@/components/json-ld";
+import { routing } from "@/i18n/routing";
 import { isIndexableDeploy } from "@/lib/indexing";
-import { absoluteUrl, siteName, siteUrl } from "@/lib/seo";
+import { siteUrl } from "@/lib/seo";
+import { organizationSchema, websiteSchema } from "@/lib/structured-data";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -61,47 +62,14 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: siteName,
-    url: siteUrl,
-    logo: absoluteUrl("/favicon.ico"),
-    email: generalEmail(locale as Locale),
-    telephone: "+45 23 74 47 05",
-    sameAs: ["https://www.linkedin.com/company/optipeople-aps/"],
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteName,
-    url: siteUrl,
-    inLanguage: locale,
-    publisher: {
-      "@type": "Organization",
-      name: siteName,
-    },
-  };
-
   return (
     <html
       lang={locale}
       className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} ${ibmPlexMono.variable}`}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteSchema),
-          }}
-        />
+        <JsonLd data={organizationSchema(locale)} />
+        <JsonLd data={websiteSchema(locale)} />
       </head>
       {/* No `antialiased` here on purpose. Forcing
           -webkit-font-smoothing: antialiased thins every glyph on macOS, which

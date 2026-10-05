@@ -4,6 +4,8 @@ import { CaseArchive } from "@/components/case-archive"
 import { getCaseStudies } from "@/lib/blog-data"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -83,21 +85,28 @@ export default async function CasesPage({ params }: Props) {
   const prefix = locale === "da" ? "/da" : ""
 
   return (
-    <CaseArchive
-      cases={cases}
-      postBasePath={`${prefix}/blog`}
-      backHref={`${prefix}/`}
-      backLabel={t.backLabel}
-      eyebrow={t.eyebrow}
-      title={t.title}
-      subtitle={t.subtitle}
-      storiesLabel={t.storiesLabel}
-      measuredLabel={t.measuredLabel}
-      customersLabel={t.customersLabel}
-      moreLabel={t.moreLabel}
-      emptyTitle={t.emptyTitle}
-      emptyBody={t.emptyBody}
-      ctaLabel={t.ctaLabel}
-    />
+    <>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(t.metaTitle), path: "/cases" },
+        ])}
+      />
+      <CaseArchive
+        cases={cases}
+        postBasePath={`${prefix}/blog`}
+        backHref={`${prefix}/`}
+        backLabel={t.backLabel}
+        eyebrow={t.eyebrow}
+        title={t.title}
+        subtitle={t.subtitle}
+        storiesLabel={t.storiesLabel}
+        measuredLabel={t.measuredLabel}
+        customersLabel={t.customersLabel}
+        moreLabel={t.moreLabel}
+        emptyTitle={t.emptyTitle}
+        emptyBody={t.emptyBody}
+        ctaLabel={t.ctaLabel}
+      />
+    </>
   )
 }

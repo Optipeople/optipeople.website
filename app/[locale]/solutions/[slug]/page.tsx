@@ -5,6 +5,9 @@ import { StandardPageTemplate } from "@/components/templates/standard-page"
 import { getSolution, solutionSlugs } from "@/content/pages/solutions"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
+import { JsonLd } from "@/components/json-ld"
+import { breadcrumbSchema, pageName } from "@/lib/structured-data"
+import { getSimplePage } from "@/content/pages/simple"
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -31,11 +34,21 @@ export default async function SolutionPage({ params }: Props) {
   setRequestLocale(locale as Locale)
   const entry = getSolution(slug)
   if (!entry) notFound()
+  const c = entry.content[locale as Locale]
+  const solutions = getSimplePage("/solutions", locale as Locale)!
   return (
-    <StandardPageTemplate
-      page={entry.content[locale as Locale]}
-      family="solutions"
-      slug={entry.slug}
-    />
+    <>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: pageName(solutions.metaTitle), path: "/solutions" },
+          { name: pageName(c.metaTitle), path: entry.href },
+        ])}
+      />
+      <StandardPageTemplate
+        page={entry.content[locale as Locale]}
+        family="solutions"
+        slug={entry.slug}
+      />
+    </>
   )
 }
