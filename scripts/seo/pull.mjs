@@ -70,6 +70,8 @@ async function pull() {
     "gsc-query-country": { ...recent, dimensions: ["query", "country"] },
     "gsc-page-device": { ...recent, dimensions: ["page", "device"] },
     "gsc-monthly": { ...range, dimensions: ["date"] },
+    // Per page per day, so report.mjs can find pages losing impressions month over month.
+    "gsc-page-date": { ...range, dimensions: ["page", "date"] },
   };
   for (const [name, body] of Object.entries(gsc)) {
     const rows = await gscQuery(site, body);
