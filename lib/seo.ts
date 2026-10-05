@@ -23,6 +23,12 @@ type MetadataOptions = {
   keywords?: string[];
   type?: "website" | "article";
   locale?: Locale;
+  /**
+   * Locales that have a real version of this page. Defaults to every locale.
+   * A locale outside the list gets no hreflang alternate, and its URL is
+   * canonical to the English page instead of to itself.
+   */
+  availableLocales?: readonly Locale[];
 };
 
 export function absoluteUrl(path = "/") {
@@ -37,14 +43,16 @@ export function buildMetadata({
   keywords = [],
   type = "website",
   locale = "en",
+  availableLocales = ["en", "da"],
 }: MetadataOptions): Metadata {
   const unprefixedPath = removeLocalePrefix(path);
-  const localizedPath = addLocalePrefix(unprefixedPath, locale);
-  const canonical = absoluteUrl(localizedPath);
+  const canonicalLocale = availableLocales.includes(locale) ? locale : "en";
+  const canonical = absoluteUrl(addLocalePrefix(unprefixedPath, canonicalLocale));
   const isDefaultImage = !image;
   const socialImage = absoluteUrl(image ?? defaultOgImage[locale]);
   const englishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "en"));
   const danishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "da"));
+  const hasDanish = availableLocales.includes("da");
 
   return {
     title,
@@ -54,7 +62,7 @@ export function buildMetadata({
       canonical,
       languages: {
         en: englishUrl,
-        da: danishUrl,
+        ...(hasDanish && { da: danishUrl }),
         "x-default": englishUrl,
       },
     },
@@ -65,7 +73,8 @@ export function buildMetadata({
       description,
       siteName,
       locale: locale === "da" ? "da_DK" : "en_US",
-      alternateLocale: [locale === "da" ? "en_US" : "da_DK"],
+      alternateLocale:
+        locale === "da" ? ["en_US"] : hasDanish ? ["da_DK"] : [],
       images: [
         {
           url: socialImage,

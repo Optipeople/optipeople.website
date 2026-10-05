@@ -75,6 +75,9 @@ export async function generateMetadata({ params }: Props) {
     image: post.image,
     type: "article",
     locale: locale as Locale,
+    // An untranslated post shows English prose under /da, so only a real
+    // translation gets a Danish alternate and a canonical of its own.
+    availableLocales: post.translatedLocales,
   })
 }
 
@@ -118,6 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.summary,
     datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.updated).toISOString(),
     author: {
       "@type": "Organization",
       name: post.author,
