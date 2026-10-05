@@ -34,7 +34,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Manufacturing Solutions | OptiPeople",
         metaDescription:
-          "Connect machines, track OEE in real time, and run your production floor with data. See how OptiPeople helps manufacturing companies improve visibility and reduce downtime.",
+          "Connect machines, track OEE in real time and run your production floor on data. See how OptiPeople gives manufacturers better visibility and less downtime.",
         eyebrow: "For Manufacturing Companies",
         heroTitle: "Know Your Factory. In Real Time.",
         heroBody:
@@ -181,7 +181,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "OEM Solutions | OptiPeople",
         metaDescription:
-          "Ship connected machines with built-in intelligence. Monitor performance in the field, support customers proactively, and build recurring digital revenue with OptiPeople.",
+          "Ship connected machines with built-in intelligence. Monitor performance in the field, support customers proactively and build recurring digital revenue.",
         eyebrow: "For OEMs and Machine Builders",
         heroTitle: "Turn Machines Into Platforms",
         heroBody:
@@ -330,7 +330,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Service Solutions | OptiPeople",
         metaDescription:
-          "Give your service team real visibility into machine health and usage. Plan maintenance on facts, reduce emergency callouts, and turn service into a competitive advantage with OptiPeople.",
+          "Give your service team real visibility into machine health and usage. Plan maintenance on facts, cut emergency callouts and make service your edge.",
         eyebrow: "For Service and Aftermarket Teams",
         heroTitle: "Fix Problems Before Customers Feel Them",
         heroBody:

@@ -26,7 +26,7 @@ const services: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Smart Operations Advisory",
         metaDescription:
-          "Smart factory and smart operations advisory: process mapping, technical assessments, business cases, and pre-projects that decide what to build before anything is built.",
+          "Smart factory and operations advisory: process mapping, technical assessments, business cases and pre-projects that decide what to build first.",
         eyebrow: "Smart Operations",
         heroTitle: "Decide What to Build Before You Build It",
         heroBody:
@@ -182,7 +182,7 @@ const services: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Automation Advisory and Architecture",
         metaDescription:
-          "Automation advisory and the IT, software and IoT architecture around it. We scope and specify, and deliver the full solution together with automation partners.",
+          "Automation advisory plus the IT, software and IoT architecture around it. We scope and specify, then deliver the full solution with automation partners.",
         eyebrow: "Automation",
         heroTitle: "We Are Not an Automation House. We Are the Layer Around One",
         heroBody:
@@ -336,7 +336,7 @@ const services: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Business Intelligence Advisory",
         metaDescription:
-          "BI advisory and scoping for manufacturing: which decisions need which numbers, what the data can support, and which platform to build it on. Power BI, Tableau, or something else.",
+          "BI advisory for manufacturing: which decisions need which numbers, what your data can support, and which platform fits, be it Power BI, Tableau or another.",
         eyebrow: "Business Intelligence",
         heroTitle: "The Hard Part Is Deciding What to Report",
         heroBody:
