@@ -5,7 +5,7 @@ export const siteName = "OptiPeople";
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
-  "https://optipeople-website.vercel.app";
+  "https://optipeople.com";
 
 // Square, so link previews in Slack, Teams and LinkedIn show it whole instead of
 // cropping a wide screenshot. The headline matches the homepage hero per locale.

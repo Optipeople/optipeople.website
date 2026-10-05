@@ -1,5 +1,10 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import {
+  isIndexableDeploy,
+  noindexHeader,
+  vercelAppHostPattern,
+} from "./lib/indexing";
 
 import { legacyRedirects } from "./lib/legacy-redirects";
 
@@ -17,6 +22,20 @@ const nextConfig: NextConfig = {
     // full-width images look soft: every source pixel lands between two
     // destination pixels and gets averaged with its neighbour.
     deviceSizes: [640, 750, 828, 1080, 1140, 1200, 1920, 2048, 3840],
+  },
+  async headers() {
+    // Previews never get indexed, and neither does any *.vercel.app alias,
+    // including the production deploy's own one.
+    return [
+      ...(isIndexableDeploy
+        ? []
+        : [{ source: "/:path*", headers: [noindexHeader] }]),
+      {
+        source: "/:path*",
+        has: [{ type: "host" as const, value: vercelAppHostPattern }],
+        headers: [noindexHeader],
+      },
+    ];
   },
   async redirects() {
     return [
