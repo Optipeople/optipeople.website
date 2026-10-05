@@ -184,7 +184,9 @@ function siteRoutes() {
   const routes = [];
   walk("app/[locale]", []);
   const blog = new Set(blogSlugs());
-  const redirects = redirectSources().map(sourcePattern);
+  // Paths are compared without a trailing slash, so the slash-stripping
+  // catch-all in next.config.ts (a source ending in "/") never applies.
+  const redirects = redirectSources().filter((s) => !s.endsWith("/")).map(sourcePattern);
 
   return {
     resolves(p) {
@@ -219,7 +221,11 @@ function siteRoutes() {
 // Sources from next.config.ts ({ source: "..." }) and, when it exists, the
 // WordPress redirect map in lib/legacy-redirects.ts (["/old", "/new"] pairs).
 function redirectSources() {
-  const sources = [...readFileSync("next.config.ts", "utf8").matchAll(/source:\s*"([^"]+)"/g)].map((m) => m[1]);
+  // Only the redirects() block: headers() also has sources ("/:path*"),
+  // which would make every path look covered.
+  const config = readFileSync("next.config.ts", "utf8");
+  const redirectsBlock = config.slice(Math.max(0, config.indexOf("async redirects()")));
+  const sources = [...redirectsBlock.matchAll(/source:\s*"([^"]+)"/g)].map((m) => m[1]);
   const legacy = "lib/legacy-redirects.ts";
   if (existsSync(legacy)) {
     const text = readFileSync(legacy, "utf8");
@@ -237,7 +243,7 @@ function sourcePattern(source) {
     if (!m[1]) re += m[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     else if (m[3] === "*") re = re.replace(/\\?\/$/, "") + "(?:/.*)?";
     else if (m[3] === "+") re += ".+";
-    else re += m[2] ?? "[^/]+";
+    else re += m[2]?.replace(/\\\\/g, "\\") ?? "[^/]+"; // "\\d" in TS source is \d
   }
   return new RegExp(`^${re}/?$`);
 }
