@@ -9,8 +9,25 @@
 // written in Danish that have a .da.md translation here go to /da/blog, so a
 // Danish reader lands on Danish text. Everything else goes to English.
 //
+// On top of the sitemap, the lists carry every old path that Search Console
+// or GA4 still saw in the 16 months up to 2026-10 (scripts/seo/
+// check-redirects.mjs verifies them), including pages from the Danish site
+// before WordPress (/om-os, /nyheder/...).
+//
 // This list is a frozen record of what was indexed. Do not add new site
 // routes here.
+//
+// Two layers use it:
+//
+// - next.config.ts turns each pair into a redirect. Every source also matches
+//   with a trailing slash (Search Console reports /jbs/), so the old URL takes
+//   one 308 straight to its target instead of a slash redirect first.
+// - proxy.ts calls resolveLegacyPath() for the variants a plain source cannot
+//   express: the Polylang prefixes /en/... and /de/..., stray /da/... copies,
+//   dated permalinks (/2020/06/15/tavlemoeder) and emoji-suffixed slugs.
+//
+// Sources use three forms only: an exact path, a "/:rest*" tail, or a
+// ":name(regex)" segment. sourceToRegExp() below understands exactly these.
 
 type Pair = [source: string, destination: string]
 
@@ -117,6 +134,10 @@ const retiredPosts: Pair[] = [
   // The Dansand case is a draft here, so its /blog page 404s. Point this at
   // /blog/<slug> once the draft is published.
   ["/dansand-3-5-million-bags-of-sand-yearly-opticloud-enables-better-time-management", "/cases"],
+  // Two cases that were already gone from the old site (404 there on
+  // 2026-10-05) and never made it into this repo.
+  ["/ege-carpets-enhances-production-efficiency-and-quality-with-optipeoples-real-time-dashboards-and-proactive-maintenance-solutions", "/cases"],
+  ["/fog-veno-a-s-improving-uptime-on-a-packing-line-by-25-and-simultaneously-increasing-the-output-of-items-by-83", "/cases"],
 ]
 
 // Old pages. /cases, /about, /contact and /get-help keep their paths and
@@ -130,9 +151,23 @@ const pages: Pair[] = [
   ["/try-opticloud-free", "/contact"],
   ["/contact-us", "/contact"],
   ["/opticloud-math-expression-eval", "/get-help"],
-  ["/terms-and-conditions", "/terms"],
+  ["/terms-and-conditions/:rest*", "/terms"],
   ["/template-terms-and-conditions", "/terms"],
+  ["/terms-of-service", "/terms"],
   ["/privacy-policy", "/privacy"],
+  ["/cookie-og-privatlivspolitik-hos-optipeople-aps", "/da/privacy"],
+  ["/about-us", "/about"],
+  ["/imprint", "/about"],
+  ["/frequently-asked-questions", "/get-help"],
+  ["/opticloud-roadmap", "/platform"],
+  ["/manual-processes", "/services/automation"],
+  ["/industries", "/solutions/manufacturing"],
+  ["/retail", "/solutions/manufacturing"],
+  ["/case-studies", "/cases"],
+  ["/news", "/blog"],
+  ["/sample-page-2", "/"],
+  ["/product-and-services/efficiency-uptime-and-oee/:rest*", "/modules/production"],
+  ["/product-and-services/:rest*", "/modules"],
   ["/cloud-mes", "/modules/mes"],
   ["/opticloud-cloud-mes-platform", "/modules/mes"],
   ["/fact-based-performance", "/modules/production"],
@@ -165,9 +200,39 @@ const pages: Pair[] = [
   ["/software-development", "/services"],
 ]
 
+// The Danish site before WordPress. Its pages still draw the odd visit, so
+// each goes to the Danish page that covers the same ground.
+const danishSite: Pair[] = [
+  ["/om-os", "/da/about"],
+  ["/partnere", "/da/about"],
+  ["/profil/:rest*", "/da/about"],
+  ["/kontakt", "/da/contact"],
+  ["/kontakt-os/:rest*", "/da/contact"],
+  ["/opticloud-fordele", "/da/platform"],
+  ["/opticloud/:rest*", "/da/platform"],
+  ["/datalogger", "/da/modules/iot"],
+  ["/integrationslosninger", "/da/modules/erp-shopfloor"],
+  ["/kurser", "/da/services/business-intelligence"],
+  ["/services/avanceret-dataanalyse", "/da/services/business-intelligence"],
+  ["/hvorfor-oee-er-lig-effektivitet", "/da/modules/production"],
+  ["/prisen-for-nedetid", "/da/modules/production"],
+  ["/webinar-effektivisering-med-oee-maaling", "/da/modules/production"],
+  ["/produktionsoptimering/:rest*", "/da/modules/production"],
+  ["/referencer/:rest*", "/da/cases"],
+  ["/nyheder/:rest*", "/da/blog"],
+  ["/ledelse/:rest*", "/da/blog"],
+  // Old operator panel and dashboard logins. The header's login menu now
+  // lists the portals.
+  ["/operator", "/"],
+  ["/operator-panel/:rest*", "/"],
+  ["/portal-operator-panel/:rest*", "/"],
+  ["/realtime-dashboard/:rest*", "/"],
+]
+
 // Category and author archives. The :rest* tail also catches WordPress
 // pagination such as /category/cases/page/2.
 const archives: Pair[] = [
+  ["/category/cases-oee/:rest*", "/cases"],
   ["/category/cases/:rest*", "/cases"],
   ["/category/insights/:rest*", "/insights"],
   ["/category/news/:rest*", "/blog"],
@@ -181,10 +246,112 @@ const archives: Pair[] = [
   ["/category/product-and-services/predictive-maintenance-opticloud/:rest*", "/modules/maintenance"],
   ["/category/product-and-services/production-insights-and-recommendations/:rest*", "/features/ai-and-copilots"],
   ["/category/product-and-services/:rest*", "/modules"],
+  ["/category/efficiency-uptime-and-oee/:rest*", "/modules/production"],
+  ["/category/predictive-maintenance-opticloud/:rest*", "/modules/maintenance"],
+  ["/category/production-insights-and-recommendations/:rest*", "/features/ai-and-copilots"],
+  ["/category/energy-co2-and-sustainability/:rest*", "/modules/energy"],
   ["/category/:rest*", "/blog"],
   ["/author/:rest*", "/about"],
+  // Blog pagination (/page/7) from the old front page.
+  ["/page/:n(\\d+)", "/blog"],
 ]
 
-export const legacyRedirects = [...posts, ...retiredPosts, ...pages, ...archives].map(
-  ([source, destination]) => ({ source, destination, permanent: true }),
-)
+const rules = [...posts, ...retiredPosts, ...pages, ...danishSite, ...archives]
+
+// "{/}?" lets each source match with or without a trailing slash. That only
+// works because next.config.ts sets skipTrailingSlashRedirect; otherwise
+// Next strips the slash in a redirect of its own before these rules run.
+export const legacyRedirects = rules.map(([source, destination]) => ({
+  source: `${source}{/}?`,
+  destination,
+  permanent: true,
+}))
+
+// Old dated permalinks whose slug differs from the undated one by more than
+// the oe/aa spelling of ø and å.
+const datedSlugAliases: Record<string, string> = {
+  "detaljeret-viden-om-produktion-gav-medicinal-kunde-mulighed-for-at-hoeste-lavt-haengende-frugter":
+    "detaljeret-viden-om-produktion-giver-medicinal-kunde-mulighed-for-at-hoste-lavt-haengende-frugter",
+  "de-seks-store-effektiviseringsomrader": "de-seks-store-effektiviserings-omrader",
+}
+
+const compiled = rules.map(([source, destination]) => ({
+  pattern: sourceToRegExp(source),
+  destination,
+}))
+
+function sourceToRegExp(source: string): RegExp {
+  let pattern = ""
+  for (const part of source.split(/(\/:rest\*|:\w+\([^)]*\))/)) {
+    if (part === "/:rest*") pattern += "(?:/.*)?"
+    else if (part.startsWith(":")) pattern += part.replace(/^:\w+/, "")
+    else pattern += part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  }
+  return new RegExp(`^${pattern}$`, "i")
+}
+
+function matchRule(path: string): string | null {
+  // WordPress let editors end a slug with an emoji (".../by-83-👌"); the
+  // slug without it is the one in the map.
+  const trimmed = path.replace(/[^\x00-\x7f]+$/u, "").replace(/-+$/, "")
+  for (const candidate of new Set([path, trimmed])) {
+    const hit = compiled.find((rule) => rule.pattern.test(candidate))
+    if (hit) return hit.destination
+  }
+  return null
+}
+
+// WordPress permalinks from 2020 and 2021: /2020/06/15/tavlemoeder, sometimes
+// without the day. Their slugs spell ø and å as oe and aa, where the undated
+// slugs use o and a. Every dated post was Danish, so one with no post here
+// lands on the Danish blog.
+function matchDated(path: string): string | null {
+  const m = path.match(/^\/\d{4}\/\d{2}(?:\/\d{2})?(?:\/([^/]+))?(?:\/.*)?$/)
+  if (!m) return null
+  const slug = m[1]
+  if (!slug) return "/da/blog"
+  const base = slug.replace(/[^\x00-\x7f]+$/u, "").replace(/-+$/, "")
+  const candidates = [
+    slug,
+    base,
+    datedSlugAliases[base],
+    base.replace(/oe/g, "o").replace(/aa/g, "a"),
+  ].filter(Boolean)
+  for (const candidate of candidates) {
+    const hit = matchRule(`/${candidate}`)
+    if (hit) return hit
+  }
+  return "/da/blog"
+}
+
+function toDanish(destination: string): string {
+  if (destination === "/" || destination === "/da") return "/da"
+  return destination.startsWith("/da/") ? destination : `/da${destination}`
+}
+
+// Resolves an old URL that the plain redirects cannot express, or returns
+// null to let the request through. Only paths that are not app routes can
+// match: no legacy source collides with a route of the new site, so /en/blog
+// and /da/modules/... pass through untouched. That matters for /en in
+// particular: next-intl's language switcher links to /en/... to set the
+// locale cookie before it drops the prefix.
+export function resolveLegacyPath(pathname: string): string | null {
+  let path: string
+  try {
+    path = decodeURIComponent(pathname)
+  } catch {
+    path = pathname
+  }
+  path = path.toLowerCase().replace(/\/+$/, "") || "/"
+
+  // Polylang served the same Danish posts under /en and /de. A /da prefix
+  // also turns up on a few old paths; those get the Danish target.
+  const prefix = path.match(/^\/(en|de|da)(?=\/|$)/)?.[1]
+  const rest = prefix ? path.slice(prefix.length + 1) || "/" : path
+
+  if (rest === "/") return prefix === "de" ? "/" : null
+
+  const target = matchDated(rest) ?? matchRule(rest)
+  if (!target) return null
+  return prefix === "da" ? toDanish(target) : target
+}

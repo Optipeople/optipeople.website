@@ -78,9 +78,27 @@ The report covers:
   `gsc-page-date.json`, which pulls made before this report do not have)
 - AI assistant referrals by source and landing page
 - old URLs with traffic that the new site would 404 on, checked against the
-  redirects in `next.config.ts` (and `lib/legacy-redirects.ts` once it exists),
-  the app routes and `public/`, with a
-  `/blog/<slug>` target suggested where the slug matches a post
+  redirects in `next.config.ts` and `lib/legacy-redirects.ts`, the app routes
+  and `public/`, with a `/blog/<slug>` target suggested where the slug matches
+  a post. This is a static estimate: it does not know the variants `proxy.ts`
+  resolves (`/en/...`, `/de/...`, dated permalinks), so use the check below
+  for the real answer.
+
+**Check redirects** (`scripts/seo/check-redirects.mjs`) requests every old path
+in `seo-data/` from a running site and fails unless each one answers 200 or
+takes a single permanent redirect (301 or 308) to a page that answers 200. A
+path counts when it has a Search Console click, 5 or more impressions, or any
+GA4 session. Junk such as `/tel:...`, `//checkout` and `/wp-content/...` is
+skipped. Run it against a production build, not `next dev`:
+
+```bash
+npm run build && npm start                    # in one terminal
+node scripts/seo/check-redirects.mjs          # in another; --verbose lists every path
+BASE_URL=http://localhost:3001 node scripts/seo/check-redirects.mjs   # another port
+```
+
+The old URLs themselves live in `lib/legacy-redirects.ts`. When the check
+fails, add the path there (or a `/:rest*` rule for a whole old section).
 
 ## Tech Notes
 

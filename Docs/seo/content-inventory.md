@@ -174,5 +174,5 @@ Danish `.da.md` siblings have no data of their own (the old site had no Danish l
 
 ## Not covered here
 
-- Two old cases that are missing from this repo (Ege Carpets, Fog Veno) are handled by the legacy-redirects quest.
+- Two old cases that are missing from this repo (Ege Carpets, Fog Veno) were already gone from the old site (404 there on 2026-10-05), so `lib/legacy-redirects.ts` sends both to `/cases`.
 - Old non-blog pages with search traffic (`/predictive-maintenance-cmms-tpm/`, `/efficiency-and-oee/` and others) are redirect questions for `lib/legacy-redirects.ts`, not content decisions.
