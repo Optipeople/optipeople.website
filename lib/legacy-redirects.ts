@@ -1,0 +1,190 @@
+// Permanent redirects from the old WordPress site at optipeople.com.
+//
+// Taken from its sitemap (wp-sitemap.xml) on 2026-10-02. The old site kept
+// every post and page at the root (/jbs/, /cloud-mes/); here posts live under
+// /blog and product pages under /modules, /features and /services. Without
+// these, every indexed URL would 404 at launch and lose its ranking.
+//
+// The old site had no Danish locale, so there are no /da sources. Old posts
+// written in Danish that have a .da.md translation here go to /da/blog, so a
+// Danish reader lands on Danish text. Everything else goes to English.
+//
+// This list is a frozen record of what was indexed. Do not add new site
+// routes here.
+
+type Pair = [source: string, destination: string]
+
+// Old posts that exist here under the same slug.
+const posts: Pair[] = [
+  ["/detaljeret-viden-om-produktion-giver-medicinal-kunde-mulighed-for-at-hoste-lavt-haengende-frugter", "/da/blog/detaljeret-viden-om-produktion-giver-medicinal-kunde-mulighed-for-at-hoste-lavt-haengende-frugter"],
+  ["/realtidsbillede-af-produktionen-skaber-samarbejde-mellem-ledere-og-operatorer-pa-et-hojere-niveau", "/da/blog/realtidsbillede-af-produktionen-skaber-samarbejde-mellem-ledere-og-operatorer-pa-et-hojere-niveau"],
+  ["/konkurrencekraft-og-tempo-pa-digital-transformation", "/da/blog/konkurrencekraft-og-tempo-pa-digital-transformation"],
+  ["/digital-transformation-og-co2-partnerskab-det-er-en-nodvendighed", "/blog/digital-transformation-og-co2-partnerskab-det-er-en-nodvendighed"],
+  ["/krisestyring-med-oee", "/blog/krisestyring-med-oee"],
+  ["/fra-e-handel-til-industri-4-0", "/blog/fra-e-handel-til-industri-4-0"],
+  ["/ved-du-at-du-kan-have-din-fabrik-i-lommen", "/blog/ved-du-at-du-kan-have-din-fabrik-i-lommen"],
+  ["/sammenspillet-mellem-opticloud-og-ifix-fra-general-electrics", "/da/blog/sammenspillet-mellem-opticloud-og-ifix-fra-general-electrics"],
+  ["/supply-chain-management-og-effektivitet", "/blog/supply-chain-management-og-effektivitet"],
+  ["/hvad-er-industri-4-0", "/blog/hvad-er-industri-4-0"],
+  ["/emnetaeller", "/blog/emnetaeller"],
+  ["/bohica", "/blog/bohica"],
+  ["/nulfejlskultur", "/blog/nulfejlskultur"],
+  ["/fokus-pa-capex", "/blog/fokus-pa-capex"],
+  ["/tavlemoder", "/blog/tavlemoder"],
+  ["/skiftehold-uden-bovl", "/blog/skiftehold-uden-bovl"],
+  ["/fun-facts-hvad-koster-det", "/blog/fun-facts-hvad-koster-det"],
+  ["/de-seks-store-effektiviserings-omrader", "/blog/de-seks-store-effektiviserings-omrader"],
+  ["/fra-data-til-effektivitet", "/da/blog/fra-data-til-effektivitet"],
+  ["/efficiency-as-a-service", "/blog/efficiency-as-a-service"],
+  ["/cloud-mes-cloud-based-manufacturing-execution-system", "/blog/cloud-mes-cloud-based-manufacturing-execution-system"],
+  ["/iot-consultancy-and-development", "/blog/iot-consultancy-and-development"],
+  ["/microsoft-power-bi-consultancy-and-development", "/blog/microsoft-power-bi-consultancy-and-development"],
+  ["/jbs", "/blog/jbs"],
+  ["/expedit-opticloud-enables-decision-making-around-automations-and-investments", "/blog/expedit-opticloud-enables-decision-making-around-automations-and-investments"],
+  ["/how-do-i-improve-my-oee-with-examples", "/blog/how-do-i-improve-my-oee-with-examples"],
+  ["/what-is-oee-for-manufacturing-and-maintenance", "/blog/what-is-oee-for-manufacturing-and-maintenance"],
+  ["/how-to-calculate-oee-for-manufacturing-and-maintenance", "/blog/how-to-calculate-oee-for-manufacturing-and-maintenance"],
+  ["/what-are-the-effects-of-oee", "/blog/what-are-the-effects-of-oee"],
+  ["/opticloud-api-how-to-use-it-step-by-step", "/blog/opticloud-api-how-to-use-it-step-by-step"],
+  ["/which-operations-would-be-described-as-preventive-maintenance", "/blog/which-operations-would-be-described-as-preventive-maintenance"],
+  ["/opticloud-mqtt-json-schema", "/blog/opticloud-mqtt-json-schema"],
+  ["/what-are-the-5-principles-of-lean-manufacturing", "/blog/what-are-the-5-principles-of-lean-manufacturing"],
+  ["/the-fifth-industrial-revolution-industry-5-0", "/blog/the-fifth-industrial-revolution-industry-5-0"],
+  ["/how-to-increase-manufacturing-efficiency-in-your-facility-today", "/blog/how-to-increase-manufacturing-efficiency-in-your-facility-today"],
+  ["/what-is-the-difference-between-preventive-and-predictive-maintenance", "/blog/what-is-the-difference-between-preventive-and-predictive-maintenance"],
+  ["/what-are-the-advantages-and-disadvantages-of-predictive-maintenance", "/blog/what-are-the-advantages-and-disadvantages-of-predictive-maintenance"],
+  ["/what-are-the-examples-of-predictive-maintenance", "/blog/what-are-the-examples-of-predictive-maintenance"],
+  ["/how-does-predictive-maintenance-work", "/blog/how-does-predictive-maintenance-work"],
+  ["/predictive-maintenance-vs-reactive-maintenance", "/blog/predictive-maintenance-vs-reactive-maintenance"],
+  ["/what-is-the-definition-or-meaning-of-predictive-maintenance", "/blog/what-is-the-definition-or-meaning-of-predictive-maintenance"],
+  ["/what-are-predictive-maintenance-tools", "/blog/what-are-predictive-maintenance-tools"],
+  ["/oee-for-maintenance", "/blog/oee-for-maintenance"],
+  ["/oee-teep-and-ooe-whats-the-difference-with-examples", "/blog/oee-teep-and-ooe-whats-the-difference-with-examples"],
+  ["/predictive-maintenance-the-benefits-you-get-from-it", "/blog/predictive-maintenance-the-benefits-you-get-from-it"],
+  ["/the-four-types-of-predictive-maintenance-and-why-they-matter", "/blog/the-four-types-of-predictive-maintenance-and-why-they-matter"],
+  ["/cmms-the-ultimate-guide-for-facility-management-professionals-and-owners", "/blog/cmms-the-ultimate-guide-for-facility-management-professionals-and-owners"],
+  ["/dashboards", "/blog/dashboards"],
+  ["/units-produced-per-hour-v51", "/blog/units-produced-per-hour-v51"],
+  ["/kwh-per-produced-unit-v50", "/blog/kwh-per-produced-unit-v50"],
+  ["/oee1-vs-oee2-whats-the-difference", "/blog/oee1-vs-oee2-whats-the-difference"],
+  ["/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results", "/blog/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results"],
+  ["/what-is-oee", "/blog/what-is-oee"],
+  ["/opticlouds-efficiency-and-oee-module", "/blog/opticlouds-efficiency-and-oee-module"],
+  ["/maximize-productivity-with-opticlouds-predictive-maintenance", "/blog/maximize-productivity-with-opticlouds-predictive-maintenance"],
+  ["/opticloud-real-time-dashboard-powering-decision-making-enhancing-efficiency", "/blog/opticloud-real-time-dashboard-powering-decision-making-enhancing-efficiency"],
+  ["/opticlouds-enhanced-reporting-feature-your-businesss-new-best-friend", "/blog/opticlouds-enhanced-reporting-feature-your-businesss-new-best-friend"],
+  ["/optimizing-machine-performance-and-power-consumption-with-opticloud-at-steel-products", "/blog/optimizing-machine-performance-and-power-consumption-with-opticloud-at-steel-products"],
+  ["/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai", "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai"],
+  ["/danpres-boosting-production-by-reducing-tool-repair-time-by-50", "/blog/danpres-boosting-production-by-reducing-tool-repair-time-by-50"],
+  ["/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud", "/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud"],
+  ["/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud", "/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud"],
+  ["/dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights", "/blog/dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights"],
+  ["/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging", "/blog/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging"],
+  ["/ligna-2025", "/blog/ligna-2025"],
+  ["/kvik-case-study-og-video-fra-direktoren", "/da/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud"],
+]
+
+// Old short feature posts, release notes and videos with no post of their
+// own here. Each goes to the page that now covers the same feature.
+const retiredPosts: Pair[] = [
+  ["/energy-and-co2", "/modules/energy"],
+  ["/energy-and-co2-measurements", "/modules/energy"],
+  ["/indsamling-af-energidata", "/da/modules/energy"],
+  ["/predictive-maintenance-module", "/modules/maintenance"],
+  ["/optimizing-tpm-with-opticlouds-latest-api-additions-v53", "/modules/maintenance"],
+  ["/how-to-accept-tasks-on-the-operator-panel", "/features/maintenance-and-tasks"],
+  ["/operators-digital-log-book", "/features/maintenance-and-tasks"],
+  ["/split-and-edit-wastes", "/features/stop-cause-registration"],
+  ["/waste-reasons-and-stop-causes", "/features/stop-cause-registration"],
+  ["/waste-distrubution-general", "/features/stop-cause-registration"],
+  ["/shifts-and-shift-templates", "/features/production-efficiency"],
+  ["/skip-shifts-in-opticloud-better-planned-production-v53", "/features/production-efficiency"],
+  ["/performance-and-capacity", "/features/production-efficiency"],
+  ["/oee-real-time-and-historic-data", "/features/production-efficiency"],
+  ["/availability-real-time-data", "/features/production-efficiency"],
+  ["/availability-historic-and-daily-data", "/features/production-efficiency"],
+  ["/settings-oee-targets", "/features/production-efficiency"],
+  ["/comparing-machines-v50", "/features/production-efficiency"],
+  ["/quality-module", "/modules/quality"],
+  ["/custom-fields-for-unit-information-v52", "/modules/quality"],
+  ["/data-collection-of-any-value", "/modules/iot"],
+  ["/streamlining-oee-reporting-with-pdf-generation-v53", "/features/analysis-and-reporting"],
+  ["/how-to-create-a-dashboard-in-opticloud", "/features/analysis-and-reporting"],
+  ["/how-to-create-a-report-in-opticloud", "/features/analysis-and-reporting"],
+  ["/opti-insights-the-future-of-machine-prediction-v52", "/features/ai-and-copilots"],
+  ["/boosting-oee-and-production-efficiency-with-ai-and-gpt", "/features/ai-and-copilots"],
+  ["/opticloud-power-bi-kursus-for-begyndere", "/da/services/business-intelligence"],
+  // The Dansand case is a draft here, so its /blog page 404s. Point this at
+  // /blog/<slug> once the draft is published.
+  ["/dansand-3-5-million-bags-of-sand-yearly-opticloud-enables-better-time-management", "/cases"],
+]
+
+// Old pages. /cases, /about, /contact and /get-help keep their paths and
+// need no redirect.
+const pages: Pair[] = [
+  ["/opticloud", "/platform"],
+  ["/opticloud-features", "/features"],
+  ["/opticloud-manufacturing-solutions", "/solutions/manufacturing"],
+  ["/partners", "/about"],
+  ["/pricing", "/contact"],
+  ["/try-opticloud-free", "/contact"],
+  ["/contact-us", "/contact"],
+  ["/opticloud-math-expression-eval", "/get-help"],
+  ["/terms-and-conditions", "/terms"],
+  ["/template-terms-and-conditions", "/terms"],
+  ["/privacy-policy", "/privacy"],
+  ["/cloud-mes", "/modules/mes"],
+  ["/opticloud-cloud-mes-platform", "/modules/mes"],
+  ["/fact-based-performance", "/modules/production"],
+  ["/efficiency-and-oee", "/modules/production"],
+  ["/efficiency-oee-availability-stops-quality-units-etc", "/modules/production"],
+  ["/predictive-maintenance", "/modules/maintenance"],
+  ["/preventive-maintenance", "/modules/maintenance"],
+  ["/predictive-maintenance-cmms-tpm", "/modules/maintenance"],
+  ["/energy-efficiency", "/modules/energy"],
+  ["/energy-co2-and-sustainability", "/modules/energy"],
+  ["/energy-and-co2-ems-cts", "/modules/energy"],
+  ["/batch-information-and-traceability", "/modules/quality"],
+  ["/dataopsamling", "/da/modules/iot"],
+  ["/iot-devices-gateways-data-from-machines", "/modules/iot"],
+  ["/integrated-data-solutions", "/modules/erp-shopfloor"],
+  ["/stop-cause-registration", "/features/stop-cause-registration"],
+  ["/stop-cause-analysis", "/features/stop-cause-registration"],
+  ["/with-only-3-steps-you-can-identify-your-stop-reason", "/features/stop-cause-registration"],
+  ["/camera-addon-for-stop-analysis", "/features/stop-cause-registration"],
+  ["/video-feed-for-stop-analysis", "/features/stop-cause-registration"],
+  ["/dashboard", "/features/analysis-and-reporting"],
+  ["/customizable-dashboards", "/features/analysis-and-reporting"],
+  ["/customizable-reports", "/features/analysis-and-reporting"],
+  ["/interfaces-for-data-visualization", "/features/analysis-and-reporting"],
+  ["/production-insights-and-recommendations", "/features/ai-and-copilots"],
+  ["/forecasting-machine-learning", "/features/ai-and-copilots"],
+  ["/forecasting-with-machine-learning", "/features/ai-and-copilots"],
+  ["/business-intelligence", "/services/business-intelligence"],
+  ["/power-bi-consultancy", "/services/business-intelligence"],
+  ["/software-development", "/services"],
+]
+
+// Category and author archives. The :rest* tail also catches WordPress
+// pagination such as /category/cases/page/2.
+const archives: Pair[] = [
+  ["/category/cases/:rest*", "/cases"],
+  ["/category/insights/:rest*", "/insights"],
+  ["/category/news/:rest*", "/blog"],
+  ["/category/videos/:rest*", "/videos"],
+  ["/category/feature/:rest*", "/features"],
+  ["/category/ai/:rest*", "/features/ai-and-copilots"],
+  ["/category/oee/:rest*", "/modules/production"],
+  ["/category/energy-efficiency/:rest*", "/modules/energy"],
+  ["/category/predictive-maintenance/:rest*", "/modules/maintenance"],
+  ["/category/product-and-services/efficiency-uptime-and-oee/:rest*", "/modules/production"],
+  ["/category/product-and-services/predictive-maintenance-opticloud/:rest*", "/modules/maintenance"],
+  ["/category/product-and-services/production-insights-and-recommendations/:rest*", "/features/ai-and-copilots"],
+  ["/category/product-and-services/:rest*", "/modules"],
+  ["/category/:rest*", "/blog"],
+  ["/author/:rest*", "/about"],
+]
+
+export const legacyRedirects = [...posts, ...retiredPosts, ...pages, ...archives].map(
+  ([source, destination]) => ({ source, destination, permanent: true }),
+)
