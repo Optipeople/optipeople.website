@@ -1,68 +1,82 @@
 ---
-title: "Forudsigende vedligehold: det vinder I, og det koster"
+title: "Fordele og ulemper ved forudsigende vedligehold"
+description: "Fordele og ulemper ved forudsigende vedligehold i én tabel: mindre nedetid og længere levetid mod udgiften til at starte, data og nye kompetencer."
 ---
 
-Når en maskine kører hele tiden, bliver delene slidt. Forudsigende vedligehold viser jer, hvornår I skal gribe ind, før sliddet bliver til et nedbrud.
+Forudsigende vedligehold bruger data fra maskinen til at lave vedligeholdet, før den bryder ned. Fordelene er mindre uplanlagt nedetid, lavere udgifter til vedligehold og reservedele, maskiner der holder længere, og en sikrere og mere stabil drift. Ulemperne er udgiften til sensorer og software, kravet om gode data og nye kompetencer, og at det kun betaler sig på de kritiske maskiner.
 
-Som alle andre måder at vedligeholde på har det både fordele og ulemper.
+## Fordele og ulemper på én side
 
-## Hvad er forudsigende vedligehold?
+| Fordele | Ulemper |
+|---|---|
+| Mindre uplanlagt nedetid | Det koster at komme i gang: sensorer, opkobling og software |
+| Lavere udgifter til vedligehold og reservedele | Det kræver gode data, og nogen skal passe på dem |
+| Maskinerne holder længere | Teamet skal læres op og have nye kompetencer |
+| Færre akutte reparationer og et sikrere arbejde | Ikke alle fejl giver et varsel i data |
+| Mere stabil produktion og kvalitet | Det tager tid, før det betaler sig, og det kræver en historik over nedbrud |
+| Mindre spild af energi og materiale | En alarm hjælper kun, hvis nogen gør noget ved den |
+| Bedre planlægning af folk og reservedele | Det er for meget på billige maskiner, der ikke er kritiske |
 
-Forudsigende vedligehold bruger data fra sensorer, analyse, AI-modeller og maskinlæring til at vurdere, hvordan maskinen kommer til at have det. Så kan I se et nedbrud komme, før det sker.
+Er begrebet nyt? Start med [hvad forudsigende vedligehold betyder](/da/blog/what-is-the-definition-or-meaning-of-predictive-maintenance) og [hvordan det virker](/da/blog/how-does-predictive-maintenance-work).
 
-Pointen er at lave vedligeholdet på det rigtige tidspunkt og på den rigtige måde. Så slipper I for dyre reparationer, får mindre nedetid og højere tilgængelighed på maskinerne.
+## Hvad er fordelene ved forudsigende vedligehold?
 
-## Fordelene ved forudsigende vedligehold
+1. **Mindre uplanlagt nedetid.** Slid kan ses i data dage eller uger før et nedbrud. Så bliver reparationen lavet i et planlagt stop og ikke midt i et skift.
+2. **Lavere udgifter til vedligehold.** I servicerer det, der trænger, og springer resten over. I skifter færre dele for tidligt og har færre dyre akutte reparationer.
+3. **Maskinerne holder længere.** Delene bliver brugt tættere på, hvad de reelt kan holde, og små problemer bliver løst, før de ødelægger delene omkring dem.
+4. **Færre overraskelser og et sikrere arbejde.** Maskinerne kører sjældnere lige på kanten af et nedbrud. Det giver færre ulykker og færre følgeskader.
+5. **Mere stabil produktion og kvalitet.** En maskine i god stand holder farten og laver færre fejl og mindre kassation.
+6. **Mindre spild og lavere udledning.** Slidte lejer, utætte trykluftslanger og varme motorer bruger energi. Fanger I dem tidligt, sparer I både energi og materiale.
+7. **Bedre planlægning.** Når I ved, hvilken opgave der kommer, kan I booke teknikeren, bestille reservedelen og vælge stoppet i god tid.
 
-### Lavere udgifter til vedligehold
+Fordelene er gennemgået mere grundigt i [det får I ud af forudsigende vedligehold](/da/blog/predictive-maintenance-the-benefits-you-get-from-it).
 
-Forudsigende vedligehold bygger på data, der kommer ind løbende. Det fjerner gætteriet, så teamet kun bruger tid på det arbejde, der faktisk skal laves.
+## Hvad er ulemperne ved forudsigende vedligehold?
 
-### Ingen ubehagelige overraskelser
+1. **Det koster at komme i gang.** Sensorer, gateways, software og opkobling skal betales, før den første besparelse kommer.
+2. **Data skal passes.** En forudsigelse er aldrig bedre end de data, den bygger på. Maskinerne skal kobles på, målingerne skal gemmes, og nogen skal holde det hele kørende.
+3. **Nye kompetencer.** Teamet skal kunne læse en kurve, sætte fornuftige grænser og stole på alarmerne. Det kræver oplæring og tid.
+4. **Ikke alle fejl kan forudsiges.** Nogle fejl giver næsten intet varsel i data, for eksempel mange fejl i elektronik eller skader fra forkert brug.
+5. **Det tager tid, før det betaler sig.** Modeller og grænser bliver bedre, efterhånden som nedbrud bliver registreret. De første måneder giver tit falske alarmer eller varsler, der ikke kommer.
+6. **Arbejdsgangene skal ændres.** En alarm, som ingen ejer, gør ingen forskel. Det betaler sig først, når alarmen bliver til en planlagt vedligeholdsopgave.
+7. **For meget på billige maskiner.** En billig ventilator eller en pumpe med en reserve på hylden kan godt køre, til den står af.
 
-Når I opdager tidligt, at en maskine opfører sig unormalt, skal I sjældnere rykke ud til akutte reparationer.
+## Hvordan holder I ulemperne nede?
 
-### Mindre nedetid
+De fleste ulemper kommer af at starte for stort. Et par vaner holder udgiften og besværet nede:
 
-Modellerne hjælper jer med at få vedligeholdet lavet, før maskinen bryder ned uden varsel. Det giver mere oppetid.
+- **Start med de mest kritiske maskiner**, dem hvor et nedbrud stopper linjen eller tager dage at reparere.
+- **Brug de data, I allerede har.** Driftstimer, cyklustællere og strømforbrug kommer tit direkte fra maskinen eller PLC'en uden nye sensorer.
+- **Begynd med vedligehold efter brug**, og tilføj tilstandsovervågning, hvor det kan betale sig. Se [de fire typer forudsigende vedligehold](/da/blog/the-four-types-of-predictive-maintenance-and-why-they-matter).
+- **Send alarmen til en person, der gør noget ved den**, og kobl hver alarm til en vedligeholdsopgave.
 
-### Maskinerne holder længere
+[Vedligeholdsmodulet fra OptiPeople](/da/modules/maintenance) virker sådan: det læser driftstimer, cyklustællere og målinger fra maskinerne og laver alarmer og opgaver ud fra dem. [Kvik gik fra vedligehold efter kalenderen til vedligehold efter brug](/da/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud) på den måde og fik 5% mere oppetid.
 
-I kan bruge maskiner og dele, til de næsten er slidt helt op, uden at risikere, at de pludselig står af.
+## Hvornår kan forudsigende vedligehold betale sig?
 
-### Maskinerne kører bedre
+Det betaler sig som regel, når det meste af det her passer:
 
-Med data fra maskinen rammer I tidspunktet for vedligehold bedre. Det giver en højere og mere stabil ydelse.
+- et nedbrud stopper produktionen eller er dyrt at reparere
+- maskinen viser slid i noget, I kan måle, for eksempel vibration, temperatur, strøm eller antal cyklusser
+- maskinen bliver brugt nok til at slides på en forudsigelig måde
+- teamet kan nå at reagere, inden fejlen sker
 
-### Mere at tjene
+Passer det ikke, kan [forebyggende vedligehold](/da/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) efter en fast plan eller endda [reaktivt vedligehold](/da/blog/predictive-maintenance-vs-reactive-maintenance) være det rigtige valg.
 
-Forudsigende vedligehold kan kræve en investering i starten. Til gengæld taber I mindre på nedetid og maskiner, I ikke kan stole på.
+## Ofte stillede spørgsmål
 
-### Mindre spild og lavere udledning
+### Hvad er den største ulempe ved forudsigende vedligehold?
 
-Bedre vedligehold giver en mere jævn drift. Dårligt vedligeholdte maskiner spilder materiale og energi og udleder mere, og det kan I skære ned på.
+Udgiften til at komme i gang. Sensorer, opkobling, software og oplæring koster penge, før I har sparet en eneste time nedetid. Starter I med få kritiske maskiner og de data, maskinerne allerede giver, bliver udgiften lille.
 
-### Højere produktivitet
+### Kan forudsigende vedligehold betale sig?
 
-Når maskinerne bryder sjældnere ned, kører arbejdet mere stabilt, og teamet bruger mindre tid på at slukke ildebrande.
+På kritiske maskiner som regel ja. Besparelsen kommer fra de uplanlagte stop, I undgår, og en times stop koster tit langt mere end selve vedligeholdet. På billige maskiner, der ikke er kritiske, betaler det sig sjældent.
 
-### Bedre kvalitet
+### Hvad er fordelen ved forudsigende vedligehold frem for forebyggende?
 
-En maskine i god stand laver mere ensartede emner med færre fejl og mindre kassation.
+Forebyggende vedligehold servicerer maskinen efter en fast plan, uanset om den trænger eller ej. Forudsigende vedligehold servicerer den ud fra, hvordan den faktisk har det, eller hvor meget den er brugt. I skifter færre dele for tidligt, og færre nedbrud når at ske mellem to serviceeftersyn.
 
-## Ulemperne ved forudsigende vedligehold
+### Skal man bruge AI eller maskinlæring til forudsigende vedligehold?
 
-Forudsigende vedligehold er ikke gratis.
-
-De typiske ulemper er:
-
-- det koster mere at komme i gang
-- I skal have sensorer, infrastruktur og software
-- der kommer flere data og mere komplekse arbejdsgange
-- medarbejderne skal læres op og have nye kompetencer
-
-På nogle maskiner kan det koste mere, end det giver. Det gælder især, hvis maskinen ikke er kritisk eller er billig at skifte ud.
-
-## Hvornår det kan betale sig
-
-Forudsigende vedligehold giver mest, hvor et nedbrud er dyrt, hvor nedetid gør ondt, og hvor I kan måle maskinens tilstand ordentligt. På maskiner, der ikke er så kritiske, er en enklere form for vedligehold stadig ofte det rigtige valg.
+Nej. Mange fabrikker får det meste ud af simple regler på driftstimer, antal cyklusser eller en temperaturgrænse. Maskinlæring hjælper, når mange målinger spiller sammen, men det kræver flere data og en historik over nedbrud.

@@ -28,8 +28,11 @@ outcome: "Én produktionslinje, live oppetid på gulvet, og et OEE-løft på 5%.
 ---
 ```
 
-Translatable frontmatter: `title`, `author`, `image`, `customer`, `metric`,
+Translatable frontmatter: `title`, `description`, `author`, `image`, `customer`, `metric`,
 `metricLabel`, `quote`, `outcome`.
+
+`description` sets the meta description and the archive teaser. Without it, the
+first 157 characters of the body are used.
 
 `date`, `category`, and `draft` are deliberately **not** translatable.
 `lib/blog-data.ts` always reads them from the English source, so ordering, the

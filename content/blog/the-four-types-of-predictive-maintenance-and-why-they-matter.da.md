@@ -1,68 +1,78 @@
 ---
-title: "De fire typer forudsigende vedligehold, og hvornår I skal bruge hvilken"
+title: "Typer af forudsigende vedligehold: de fire vigtigste"
+description: "De fire typer forudsigende vedligehold: efter tilstand, tid, brug og model. Hvad der udløser vedligeholdet, hvilke data det kræver, og hvor det passer."
 ---
 
-Forudsigende vedligehold bruger data og analyse til at se, hvornår udstyret sandsynligvis går i stykker. Så kan I planlægge vedligeholdet, før det sker, og få mindre nedetid og færre af de udgifter, der følger med.
+Der er fire hovedtyper af forudsigende vedligehold: efter tilstand (sensorer holder øje med vibration, temperatur eller strøm), efter tid (historikken viser, hvornår en del er slidt), efter brug (driftstimer eller antal cyklusser udløser service) og efter model (maskinlæring forudsiger nedbrud ud fra mange målinger). De fleste fabrikker bruger to eller flere.
 
-Der er fire hovedtyper af forudsigende vedligehold:
+## De fire typer side om side
 
-- efter tilstand
-- efter tid
-- efter brug
-- efter model
+| Type | Hvad udløser vedligeholdet | Data, det kræver | Passer bedst til |
+|---|---|---|---|
+| Efter tilstand | En måling når over en grænse | Løbende målinger: vibration, temperatur, strøm, olie | Motorer, pumper, kompressorer, gearkasser |
+| Efter tid | Delen når sin forventede levetid | Historik over nedbrud og reparationer | Dele, der slides på en fast måde |
+| Efter brug | Et antal driftstimer eller cyklusser er nået | Driftstimer, cyklusser, producerede emner | Presser, kraner, gaffeltrucks, maskiner med skiftende belastning |
+| Efter model | En model ser risikoen for nedbrud stige | Mange målinger og registrerede nedbrud | Kritiske maskiner med komplekse fejl |
 
-## Vedligehold efter tilstand
+## Hvad er forudsigende vedligehold?
 
-Her følger sensorer udstyrets tilstand over tid. Fejlen bliver forudsagt ved, at tilstand og ydelse bliver målt hele tiden.
+Forudsigende vedligehold er vedligehold, der bliver styret af data fra maskinen i stedet for af kalenderen. Målet er at gribe ind lige før et nedbrud, så reparationen sker i et planlagt stop. Læs mere om [hvad forudsigende vedligehold betyder](/da/blog/what-is-the-definition-or-meaning-of-predictive-maintenance) og [hvordan det virker trin for trin](/da/blog/how-does-predictive-maintenance-work).
 
-Det er særligt nyttigt på roterende udstyr som:
+## Hvad er vedligehold efter tilstand?
 
-- turbiner
-- motorer
-- kompressorer
+Sensorer måler hele tiden, hvordan maskinen har det, og vedligeholdet bliver sat i gang, når en måling ryger uden for det normale. Typisk måler I vibration, temperatur, strømforbrug, tryk og oliens kvalitet.
 
-## Vedligehold efter tid
+Det passer til roterende udstyr som motorer, pumper, ventilatorer, kompressorer og turbiner. Her kan slid ses som mere vibration eller varme, længe før maskinen står. Ulempen er prisen: hvert målepunkt kræver en sensor og et sted at sende data hen. [Værktøjerne til tilstandsovervågning](/da/blog/what-are-predictive-maintenance-tools) har deres egen guide.
 
-Her bruger I historiske mønstre til at forudsige, hvornår en del sandsynligvis svigter.
+## Hvad er vedligehold efter tid?
 
-Det virker bedst, når fejlene kommer på et klart og gentageligt tidspunkt. Det gør de tit på visse mekaniske og elektriske dele.
+Her bruger I historikken over nedbrud til at regne ud, hvor længe en del holder, og skifter den, før den når dertil. Intervallet kommer fra jeres egne data og ikke fra et tal i manualen.
 
-## Vedligehold efter brug
+Det virker, når fejlene kommer på et klart og gentageligt tidspunkt. Det gør de på mange mekaniske og elektriske sliddele. Af de fire typer ligger det tættest på [forebyggende vedligehold](/da/blog/what-is-the-difference-between-preventive-and-predictive-maintenance), og det rammer forbi, når en maskine bliver kørt hårdere end normalt og slides hurtigere.
 
-Her er det, hvor meget udstyret bliver brugt, der afgør, hvornår det kan forventes at svigte.
+## Hvad er vedligehold efter brug?
 
-Det passer især til udstyr, der bliver belastet hårdt eller slides meget, for eksempel:
+Her bliver service sat i gang efter en bestemt mængde brug: driftstimer, cyklusser, slag eller producerede emner. En maskine, der kører i tre skift, får service før en, der kører i ét skift, selvom kalenderen siger det samme.
 
-- kraner
-- gaffeltrucks
+Det er tit det letteste sted at starte, fordi de fleste maskiner allerede kan melde driftstimer og antal cyklusser uden nye sensorer. Det passer til presser, pakkemaskiner, kraner, gaffeltrucks og alt udstyr, hvor belastningen skifter fra uge til uge. Køkkenproducenten [Kvik gik fra faste intervaller til vedligehold efter brug](/da/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud), fik 5% mere oppetid og sparede omkring fire unødvendige serviceeftersyn om året.
 
-## Vedligehold efter model
+## Hvad er vedligehold efter model?
 
-Her bruger I maskinlæringsmodeller til at forudsige fejl.
+Her bruger I statistiske modeller eller maskinlæring, der lægger mange målinger sammen og forudsiger risikoen for nedbrud, eller hvor længe en del har tilbage. Modellen kan se mønstre, som en enkelt grænse aldrig ville fange.
 
-Det bruges tit på udstyr, der går oftere i stykker. Her kan en statistisk model eller maskinlæring opdage problemerne tidligere, end en manuel inspektion kan alene.
+Det betaler sig på kritiske og dyre maskiner, hvor fejlene er komplekse. Til gengæld kræver det flest data: flere målinger over tid og en historik over rigtige nedbrud at lære af. Uden den historik har modellen intet at lære af.
 
-## Det får I ud af forudsigende vedligehold
+## Hvilken type skal I vælge?
 
-Forudsigende vedligehold giver flere fordele i driften:
+Vælg typen efter maskinen, ikke omvendt:
 
-- I får mere ud af udstyret
-- der er mindre risiko for nedbrud
-- vedligeholdet koster mindre
+1. **Start med vedligehold efter brug** på maskiner, hvor sliddet følger, hvor meget de kører. Det kræver ikke meget mere end at koble maskinen på.
+2. **Tilføj tilstandsovervågning** på kritisk roterende udstyr, hvor vibration eller temperatur giver et tidligt varsel.
+3. **Brug faste intervaller efter tid** til sliddele med en kendt og stabil levetid.
+4. **Gå over til modeller** på maskiner, hvor nedetid er meget dyr, og hvor I har data og historik nok til at bære det.
 
-Fordi I vedligeholder, før maskinen bryder ned, får I færre store havarier og slipper for at skifte dele unødigt. Samtidig kan I planlægge arbejdet bedre.
+Hold udgiften op mod den nedetid, I sparer. [Fordele og ulemper ved forudsigende vedligehold](/da/blog/what-are-the-advantages-and-disadvantages-of-predictive-maintenance) viser, hvor det betaler sig, og hvor det ikke gør, og [eksemplerne](/da/blog/what-are-the-examples-of-predictive-maintenance) viser typerne i brug.
 
-## Sådan kommer I i gang
+## Hvordan kommer I i gang?
 
-Før I går i gang, skal I finde ud af, hvilken type forudsigende vedligehold der passer bedst til udstyret.
+Vælg de maskiner, hvor et nedbrud gør mest ondt, kobl dem på, sæt grænserne, og sørg for, at hver alarm bliver til en vedligeholdsopgave med en ansvarlig. Følg så resultaterne, og juster grænserne, efterhånden som nedbrud bliver registreret.
 
-Et praktisk forløb ser tit sådan her ud:
+[Vedligeholdsmodulet fra OptiPeople](/da/modules/maintenance) kan både vedligehold efter brug og efter tilstand på samme maskine. Det læser driftstimer, cyklustællere, temperatur, vibration og strøm fra maskinerne og laver alarmer og opgaver, når en grænse er nået.
 
-1. Find det udstyr, der kræver opmærksomhed.
-2. Hold øje med det gennem inspektioner, sensorer eller dataopsamling.
-3. Brug data til at se, hvor risikoen er, og planlæg vedligeholdet, før noget svigter.
-4. Følg resultaterne, og juster arbejdsgangen hen ad vejen.
+## Ofte stillede spørgsmål
 
-## Konklusion
+### Hvad er de fire typer forudsigende vedligehold?
 
-Forudsigende vedligehold er vedligehold styret af data. Det hjælper jer med at gribe ind, før udstyret svigter. Vælger I den rigtige type og bruger den konsekvent, får I mindre nedetid, lavere udgifter og en mere stabil drift.
+Efter tilstand, efter tid, efter brug og efter model. Forskellen er, hvad der udløser arbejdet: en måling, delens forventede levetid, hvor meget maskinen er brugt, eller hvad en model forudsiger.
+
+### Er vedligehold efter brug forebyggende eller forudsigende?
+
+Det ligger midt imellem. Som forebyggende vedligehold er det planlagt på forhånd, men det er maskinens faktiske brug, der bestemmer tidspunktet, ikke kalenderen. Derfor bliver det tit regnet som en simpel form for forudsigende vedligehold.
+
+### Hvad er forskellen på tilstandsovervågning og forudsigende vedligehold?
+
+Tilstandsovervågning er selve målingen: at samle data om vibration, temperatur eller strøm. Forudsigende vedligehold er måden at bruge målingerne og andre data på, når I skal beslutte, hvornår I griber ind.
+
+### Hvilken type forudsigende vedligehold er mest udbredt?
+
+Vedligehold efter tilstand er mest udbredt, især målinger af vibration og temperatur på roterende udstyr. Vedligehold efter brug er det mest almindelige sted at starte, fordi det kræver mindst nyt udstyr.
