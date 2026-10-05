@@ -1,81 +1,109 @@
 ---
-title: "OEE, TEEP og OOE: Sådan adskiller de sig [Med eksempler]"
+title: "OOE, OEE og TEEP: Betydning, formler og eksempler"
+description: "OOE står for Overall Operations Effectiveness. Sådan adskiller OOE sig fra OEE og TEEP, formlen for hver, og ét eksempel, der regner alle tre ud."
 ---
 
-OEE, TEEP og OOE måler alle tre, hvor godt produktionen bliver udnyttet. De sammenligner det, produktionen kunne nå, med det, den faktisk når. Så kan I se, hvor der er noget at hente, uden at investere i nye maskiner eller nye haller.
+OOE står for Overall Operations Effectiveness. Formlen er den samme som for OEE (tilgængelighed x ydelse x kvalitet), men OOE måler mod driftstiden: al den tid, fabrikken har åbent, også pauser og planlagte stop. OEE bruger kun den planlagte produktionstid, og TEEP bruger al tid i kalenderen. På samme maskine er OEE derfor altid højest og TEEP lavest.
 
-## Hvad er OEE?
+## Hvad står OOE for?
 
-OEE står for **Overall Equipment Effectiveness**. Det er et af de mest udbredte mål for, hvor effektivt en produktionsproces bliver brugt.
+OOE står for **Overall Operations Effectiveness**. Tallet viser, hvor godt driften udnytter den tid, fabrikken har åbent og er bemandet. Den tid kaldes driftstiden.
 
-OEE ser på tre ting:
+Forskellen fra OEE er, hvad der tæller som tab. OEE lader de planlagte stop ude af regnestykket: pauser, møder, planlagt vedligehold og tavlemøder. OOE tæller dem med som tabt tid. Derfor er OOE det rigtige tal, når I vil vide, hvor godt hele driften kører i åbningstiden, og ikke kun hvordan maskinen kører, når der er planlagt produktion.
 
-- **Tilgængelighed:** hvor meget af den planlagte produktionstid, der faktisk bliver brugt til at producere
-- **Ydelse:** hvor hurtigt processen kører i forhold til den ideelle hastighed
-- **Kvalitet:** hvor stor en del af det producerede, der er godt
+## Hvad står TEEP for?
 
-De tre tal ganges sammen til det samlede OEE-tal.
+TEEP står for **Total Effective Equipment Performance**. Tallet holder produktionen op mod al tid i kalenderen: 24 timer i døgnet, 7 dage om ugen, 365 dage om året.
 
-## Sådan regner I OEE ud
+TEEP tæller hver time uden produktion som tab, også nætter, weekender og helligdage, hvor fabrikken er lukket. Det gør TEEP til et mål for kapacitet. Det svarer på, hvor meget mere maskinerne kunne lave, hvis de kørte døgnet rundt. Det er værd at vide, før I køber en ny maskine eller bygger en ny hal.
 
-Der er flere måder at regne OEE ud på, men den foretrukne er:
+## Hvad står OEE for?
 
-`OEE = Tilgængelighed x Ydelse x Kvalitet`
+OEE står for **Overall Equipment Effectiveness**. Tallet viser, hvor meget af den planlagte produktionstid der reelt er produktiv: gode emner, i fuld fart, uden stop. Det er det mest udbredte af de tre og det rigtige tal til det daglige forbedringsarbejde. Den fulde forklaring finder I under [hvad er OEE](/da/blog/what-is-oee).
 
-Et eksempel:
+## Hvad er forskellen på OOE, OEE og TEEP?
 
-- Tilgængelighed: `62,5%`
-- Ydelse: `66,7%`
-- Kvalitet: `75%`
+Alle tre ganger tilgængelighed, ydelse og kvalitet sammen. Det eneste, der skifter, er den tid, I regner ud fra, og dermed hvad der tæller som tabt tid:
 
-Så bliver regnestykket:
+| Tal | Står for | Regnes ud fra | Tæller som tabt tid | Svarer på |
+|---|---|---|---|---|
+| OEE | Overall Equipment Effectiveness | Planlagt produktionstid | Uplanlagte stop, langsom kørsel, kassation | Hvor godt kører maskinen, når der er planlagt produktion? |
+| OOE | Overall Operations Effectiveness | Driftstid (fabrikken har åbent) | Tabene i OEE plus pauser og planlagte stop | Hvor godt udnytter driften åbningstiden? |
+| TEEP | Total Effective Equipment Performance | Al tid (døgnet rundt, hele året) | Tabene i OOE plus alle timer, fabrikken er lukket | Hvor meget kapacitet er der tilbage i maskinerne? |
 
-`OEE = 62,5% x 66,7% x 75% = 31,25%`
+Hver tidsramme er større end den før. Derfor er OEE altid mindst lige så højt som OOE, og OOE altid mindst lige så højt som TEEP.
 
-Fabrikken kunne altså i teorien producere langt mere, end den gør i dag.
+## Hvad er formlerne for OEE, OOE og TEEP?
 
-## De tab, OEE viser
+Ydelse og kvalitet er de samme i alle tre. Det er kun tilgængeligheden, der skifter:
 
-OEE bruges tit til at finde de seks store tab i produktionen. De bliver typisk delt op i:
+```text
+OEE  = Tilgængelighed x Ydelse x Kvalitet
 
-- tab på tilgængelighed
-- tab på ydelse
-- tab på kvalitet
+Tilgængelighed (OEE)  = Køretid / Planlagt produktionstid
+Tilgængelighed (OOE)  = Køretid / Driftstid
+Tilgængelighed (TEEP) = Køretid / Al tid
 
-Pointen med OEE er ikke bare at få et tal. Det er at få øje på det, der holder produktionen tilbage.
+Ydelse   = (Ideel cyklustid x Antal emner) / Køretid
+Kvalitet = Gode emner / Antal emner
 
-## Hvad er OOE?
+TEEP = OEE x Udnyttelse
+Udnyttelse = Planlagt produktionstid / Al tid
+```
 
-OOE står for **Overall Operations Effectiveness**.
+## Hvordan ser OEE, OOE og TEEP ud på samme maskine?
 
-Det minder om OEE. Men hvor OEE kun ser på den planlagte produktionstid, ser OOE bredere på, hvor godt driften kører i den tid, maskinen er bemandet og klar.
+Tag én maskine over én uge:
 
-OOE er nyttigt, når I vil forstå effektiviteten i driften som helhed og ikke kun, hvordan maskinen kører i den planlagte tid.
+- Al tid: `168 timer` (7 dage x 24 timer)
+- Driftstid: `80 timer` (to skift på 8 timer, 5 dage)
+- Planlagte stop (pauser, møder, planlagt vedligehold): `10 timer`
+- Planlagt produktionstid: `70 timer`
+- Uplanlagte stop og omstillinger: `14 timer`
+- Køretid: `56 timer`
+- Ydelse: `90%`
+- Kvalitet: `95%`
 
-## Hvad er TEEP?
+Ydelse x kvalitet er 90% x 95% = 85,5% i alle tre. Det er tilgængeligheden, der flytter sig:
 
-TEEP står for **Total Effective Equipment Performance**.
+| Tal | Regnes ud fra | Timer | Tilgængelighed | Resultat |
+|---|---|---:|---:|---:|
+| OEE | Planlagt produktionstid | 70 | 80,0% | 68,4% |
+| OOE | Driftstid | 80 | 70,0% | 59,9% |
+| TEEP | Al tid | 168 | 33,3% | 28,5% |
 
-TEEP går et skridt videre end OEE. Her bliver produktionen holdt op mod al tid i døgnet, også den tid, hvor der slet ikke var planlagt produktion.
+De samme 56 timers kørsel giver tre forskellige svar. OEE siger, at maskinen kører nogenlunde, når der er planlagt produktion. OOE viser, at pauser og planlagte stop koster yderligere 10 timer af åbningstiden. TEEP viser, at maskinen kun kører en tredjedel af ugen. Der er altså plads til mere produktion, før nogen behøver at købe en ny maskine.
 
-Derfor er TEEP nyttigt, når I vil se, hvor meget af den samlede kapacitet I udnytter, og hvor meget plads der er til at vokse.
+## Hvornår skal I bruge OEE, OOE eller TEEP?
 
-## OEE, OOE og TEEP side om side
+- **OEE** til forbedringer fra dag til dag og uge til uge på en maskine eller en linje. Tallet viser de tab, operatørerne og vedligeholdet kan gøre noget ved nu.
+- **OOE**, når I vil se, hvad de planlagte stop koster: dækning i pauserne, hvor lange møderne er, hvornår det planlagte vedligehold ligger.
+- **TEEP** til kapacitetsplanlægning, før I sætter skift på, køber maskiner eller siger ja til en stor ordre.
 
-Forskellen ligger primært i, hvilken tid I regner ud fra:
+De fleste starter med OEE og tager TEEP med, når spørgsmålet bliver kapacitet. I Skandinavien møder I også OEE1 og OEE2, hvor OEE1 regner ud fra al tid ligesom TEEP. Se [OEE1 og OEE2](/da/blog/oee1-vs-oee2-whats-the-difference).
 
-- **OEE** ser på den planlagte produktionstid
-- **OOE** ser på driftstiden, altså den tid, maskinen er klar til at køre
-- **TEEP** ser på al tid
+## Hvordan følger I OEE i praksis?
 
-I praksis:
+Alle tre tal kræver, at I kender den rigtige køretid og årsagen til hvert eneste stop. [OptiPeoples OEE-modul](/da/modules/production) henter de data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen.
 
-- brug **OEE** til at forbedre produktionen fra dag til dag
-- brug **OOE** til at analysere driften bredere
-- brug **TEEP** til at se, hvor meget kapacitet der ligger ubrugt
+## Ofte stillede spørgsmål
 
-## Derfor er forskellen vigtig
+### Hvad er OOE i produktionen?
 
-Når I kender forskellen på OEE, OOE og TEEP, er det lettere at vælge det tal, der svarer på jeres spørgsmål.
+OOE er Overall Operations Effectiveness: tilgængelighed x ydelse x kvalitet, regnet ud fra den tid, fabrikken har åbent. I modsætning til OEE tæller pauser og planlagte stop som tabt tid.
 
-Vil I have skiftene til at køre bedre, er OEE som regel det mest praktiske. Vil I vide, hvor meget kapacitet der i alt er at hente, er TEEP det rigtige tal.
+### Hvad er forskellen på OOE og OEE?
+
+Den tid, I regner ud fra. OEE måler mod den planlagte produktionstid og lader de planlagte stop ude. OOE måler mod driftstiden, så de planlagte stop tæller som tab, og OOE bliver lavere end OEE.
+
+### Hvad betyder TEEP?
+
+TEEP betyder Total Effective Equipment Performance. Tallet måler produktionen mod al tid i kalenderen, døgnet rundt hele ugen, og viser, hvor meget kapacitet der er tilbage i maskinerne.
+
+### Hvordan regner man TEEP ud?
+
+TEEP = OEE x udnyttelse. Udnyttelsen er den planlagte produktionstid delt med al tid i kalenderen. En OEE på 68,4% på en maskine, der er planlagt i 70 af ugens 168 timer, giver en TEEP på 28,5%.
+
+### Hvad er bedst, OEE eller TEEP?
+
+Ingen af dem. De svarer på hvert sit spørgsmål. Brug OEE til at få maskinen til at køre bedre, når den er planlagt, og TEEP til at se, hvor meget mere den kunne lave, hvis den kørte flere timer.

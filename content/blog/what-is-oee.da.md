@@ -1,178 +1,132 @@
 ---
-title: "Hvad er OEE? En grundig guide med eksempler fra virkeligheden"
+title: "Hvad er OEE? Betydning, formel og eksempler"
+description: "OEE (Overall Equipment Effectiveness) er den del af den planlagte produktionstid, der reelt er produktiv. Formlen, regneeksempler og hvad et godt tal er."
 ---
 
-OEE er et af de vigtigste tal, når I vil vide, hvor godt produktionen kører. OEE står for **Overall Equipment Effectiveness** og viser, hvor effektivt en proces faktisk udnyttes. Tallet tager højde for nedetid, kvalitetsproblemer og hastighed, så I kan se, hvor der er noget at hente.
+OEE (Overall Equipment Effectiveness) er den del af den planlagte produktionstid, der reelt er produktiv: gode emner, i fuld fart, uden stop. Det regnes ud som tilgængelighed x ydelse x kvalitet. 100% er perfekt produktion, 85% regnes for verdensklasse, og en typisk fabrik ligger nærmere 60%.
 
-## Kort om OEE
+## Hvad står OEE for?
 
-OEE måler, hvor effektiv produktionen er. Tallet viser, hvor I kan forbedre jer, og giver jer noget at beslutte ud fra. Det betyder mere effektivitet og lavere omkostninger.
+OEE står for **Overall Equipment Effectiveness**. Det er det nøgletal, alle bruger, når de vil vide, hvor godt en maskine, en linje eller en fabrik udnytter den tid, der er planlagt produktion i. Ét tal viser, hvor langt I er fra perfekt. De tre dele viser, hvor tiden forsvinder.
 
-## Hvad er OEE?
+OEE kommer fra Total Productive Maintenance (TPM), som Seiichi Nakajima udviklede i Japan. I dag bruges det i produktion i alle brancher.
 
-OEE fortæller, hvor effektivt en produktionsproces kører. Tallet samler nedetid, kvalitetsproblemer og hastighed i ét. Når I forstår OEE, kan I se, hvor der skal sættes ind, og træffe bedre beslutninger.
+## Hvordan regner man OEE ud?
 
-## Hvor kommer OEE fra?
+OEE ganger tre tal sammen. Hvert tal er en procent af det ideelle:
 
-OEE blev udviklet af japanske producenter i 1960'erne som en måde at måle og forbedre effektiviteten i produktionen. Siden er det blevet et af de mest brugte nøgletal i industrien, uanset branche.
+```text
+OEE = Tilgængelighed x Ydelse x Kvalitet
 
-## Det får I ud af højere effektivitet
+Tilgængelighed = Køretid / Planlagt produktionstid
+Ydelse         = (Ideel cyklustid x Antal emner) / Køretid
+Kvalitet       = Gode emner / Antal emner
+```
 
-Når effektiviteten stiger, stiger produktiviteten, omkostningerne falder, og indtjeningen går op.
+Ganger I de tre ud, går det meste ud med hinanden, og I står tilbage med en genvej, der giver det samme:
 
-Gevinsterne er blandt andet:
+```text
+OEE = (Gode emner x Ideel cyklustid) / Planlagt produktionstid
+```
 
-- Højere effektivitet, fordi der er mindre nedetid, bedre kvalitet og højere hastighed.
-- Lavere omkostninger til arbejdstimer, energi, materialer og spild.
-- Bedre indtjening, fordi tid og ressourcer bliver brugt bedre.
+Hver del fanger sin slags tab. Tilsammen dækker de de seks store tab fra TPM:
 
-## Sådan regnes OEE ud
+| Del | Hvad den måler | Tab den fanger |
+|---|---|---|
+| Tilgængelighed | Køretid som andel af den planlagte produktionstid | Nedbrud, opstart og omstillinger |
+| Ydelse | Den faktiske hastighed mod den ideelle | Småstop, tomgang og nedsat hastighed |
+| Kvalitet | Gode emner som andel af alt, der er lavet | Kassation, omarbejde og opstartsspild |
 
-OEE består af tre dele:
+Flere regneeksempler finder I i [guiden til at regne OEE ud trin for trin](/da/blog/how-to-calculate-oee-for-manufacturing-and-maintenance).
 
-- **Tilgængelighed:** Hvor meget af tiden udstyret er klar til at køre.
-- **Ydelse:** Hvor hurtigt udstyret producerer det, det skal.
-- **Kvalitet:** Hvor meget af det producerede, der lever op til kravene.
+## Hvordan ser et regneeksempel ud?
 
-## Et regneeksempel
+Tag et skift på 8 timer på en maskine, der i bedste fald laver ét emne i minuttet:
 
-Lad os sige, at en proces har:
-
-- Tilgængelighed: `80%`
-- Ydelse: `80%`
-- Kvalitet: `90%`
-
-Så er:
-
-`OEE = Tilgængelighed x Ydelse x Kvalitet`
-
-`OEE = 80% x 80% x 90%`
-
-`OEE = 57,6%`
-
-Processen har altså en samlet effektivitet på `57,6%`.
-
-## Formlerne
-
-Formlen for OEE er:
-
-`OEE = Tilgængelighed x Ydelse x Kvalitet`
-
-Tilgængelighed:
-
-`Tilgængelighed = (Driftstid - Nedetid) / Driftstid`
-
-Ydelse:
-
-`Ydelse = (Faktisk produktion / Standardproduktion) x 100`
-
-Kvalitet:
-
-`Kvalitet = (Gode emner / Faktisk produktion) x 100`
-
-## Et mere detaljeret eksempel
-
-Forestil jer en proces med:
-
-- Driftstid: `8 timer`
-- Nedetid: `45 minutter`
-- Faktisk produktion: `400 enheder`
-- Standardproduktion: `500 enheder`
-- Gode enheder: `350 enheder`
+- Planlagt produktionstid: `480 minutter`
+- Nedetid (et nedbrud og en omstilling): `80 minutter`
+- Køretid: `400 minutter`
+- Antal emner: `360`
+- Gode emner: `342`
 
 Så er:
 
-`Tilgængelighed = (480 - 45) / 480 = 93,75%`
+```text
+Tilgængelighed = 400 / 480       = 83,3%
+Ydelse         = (1 x 360) / 400 = 90,0%
+Kvalitet       = 342 / 360       = 95,0%
 
-`Ydelse = 400 / 500 = 80%`
+OEE = 83,3% x 90,0% x 95,0%      = 71,3%
+```
 
-`Kvalitet = 350 / 400 = 87,5%`
+Genvejen giver det samme: 342 gode emner x 1 minut / 480 minutter = 71,3%. Af de 480 minutter blev kun omkring 342 brugt på at lave gode emner. Det største tab ligger i tilgængeligheden, så det er nedetiden, I skal tage fat i først.
 
-`OEE = 93,75% x 80% x 87,5% = 65,8%`
+## Hvad er et godt OEE-tal?
 
-Processen har altså en samlet effektivitet på `65,8%`.
+| OEE | Hvad det betyder |
+|---|---|
+| 100% | Perfekt produktion: kun gode emner, i fuld fart, uden stop |
+| 85% | Verdensklasse i stykproduktion og et langsigtet mål for de fleste |
+| 60% | Typisk i stykproduktion, med god plads til at blive bedre |
+| 40% | Almindeligt, når en fabrik lige er begyndt at måle, og let at hæve |
 
-## OEE-tal fra en rigtig maskine
+De 85% kommer fra 90% tilgængelighed, 95% ydelse og 99,9% kvalitet. Læs mere om, [hvad verdensklasse-OEE er](/da/blog/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results), og hvordan I kommer derhen.
+
+## Hvordan ser OEE-tal uge for uge ud?
+
+Her er én maskine over fire uger:
 
 | Uge | Tilgængelighed (%) | Ydelse (%) | Kvalitet (%) | OEE (%) |
 | --- | ---: | ---: | ---: | ---: |
-| 1 | 92 | 85 | 98 | 74,6 |
-| 2 | 88 | 80 | 95 | 59,2 |
-| 3 | 93 | 87 | 99 | 79,2 |
-| 4 | 90 | 82 | 97 | 72,3 |
+| 1 | 92 | 85 | 98 | 76,6 |
+| 2 | 88 | 80 | 95 | 66,9 |
+| 3 | 93 | 87 | 99 | 80,1 |
+| 4 | 90 | 82 | 97 | 71,6 |
 
-Her er maskinens OEE højest i uge 3 og lavest i uge 2. Når I har tallene foran jer, er det lettere at se, om det er tilgængelighed, ydelse eller kvalitet, der trækker mest ned.
+OEE er højest i uge 3 og lavest i uge 2. I uge 2 faldt alle tre tal på én gang. Så er spørgsmålet, hvad der var anderledes den uge: et nyt produkt, en ny operatør, en maskine, der trængte til at blive set efter.
 
-## Det kan I gøre ud fra tallene
+## Er OEE en KPI?
 
-1. Hæv tilgængeligheden ved at skære ned på planlagt nedetid og gøre omstillingerne hurtigere.
-2. Hæv ydelsen ved at køre maskinen hurtigere eller få mindre kassation og omarbejde.
-3. Hæv kvaliteten med bedre kontrol og en mere stabil proces.
-4. Tag de forbedringer først, der flytter jeres samlede OEE mest.
+Ja. OEE er en af de mest brugte KPI'er i produktionen, fordi den holder den faktiske produktion op mod den ideelle på én skala. Den viser, hvor godt maskiner, processer og folkene omkring dem spiller sammen.
 
-## Det kan også påvirke jeres OEE
-
-Flere ting kan flytte OEE markant:
-
-1. Hvor erfarne operatørerne er
-2. Hvor gamle maskinerne er, og hvordan de har det
-3. Vedligeholdelsesplanen
-4. Kvaliteten af råvarerne
-5. Hvordan produktionsprocessen er skruet sammen
-
-Der kan også være forhold, der hænger sammen med netop jeres produktion:
-
-1. Sæsonudsving i efterspørgslen
-2. Klima og vejr
-3. Udskiftning i medarbejderstaben
-4. Sikkerhedsregler
-5. Hvor stabil forsyningskæden er
-
-## Maskinernes effektivitet og OEE
-
-OEE er en god måde at vurdere maskinerne på, fordi nedetid, kvalitet og hastighed bliver samlet i ét billede. Når I forstår OEE, kan I få nedetiden ned, køre hurtigere og spare penge.
+Produktionen bruger tallet til at finde den maskine, det skift eller det produkt, der taber mest tid. Vedligeholdet bruger det til at se, hvordan maskinernes tilstand slår igennem på mængde og kvalitet: nedbrud viser sig i tilgængeligheden, og slidte maskiner viser sig tit som lavere hastighed og mere kassation. [OEE i vedligeholdet](/da/blog/oee-for-maintenance) går mere i dybden med den side.
 
 ## Hvorfor er OEE vigtigt?
 
-OEE giver jer en praktisk måde at måle, hvordan produktionen kører, og at forbedre den. I kan følge udviklingen, se de svage punkter og beslutte ud fra fakta.
+Når OEE stiger, får I kapacitet, I allerede ejer. Før I sætter flere skift på, beder om overarbejde eller køber nye maskiner, viser OEE, hvor meget mere de maskiner, I har, kan lave. Samtidig får operatører, produktion og vedligehold ét fælles tal at arbejde efter, i stedet for at hver afdeling har sine egne tal.
 
-## Hvad består OEE af?
+## Hvordan hæver man OEE?
 
-OEE består af tre dele:
+1. Mål det automatisk, så folk stoler på tallene, og de er friske.
+2. Find den del, der taber mest: tilgængelighed, ydelse eller kvalitet.
+3. Registrer stopårsager, og tag de største først.
+4. Gør omstillingerne kortere, og få bugt med småstoppene.
+5. Følg udviklingen pr. skift og pr. uge, ikke kun gennemsnittet for måneden.
 
-- **Tilgængelighed**
-- **Ydelse**
-- **Kvalitet**
+[Guiden til at hæve jeres OEE](/da/blog/how-do-i-improve-my-oee-with-examples) går trinene igennem med eksempler.
 
-Tilsammen giver de ét tal for, hvor effektiv processen er.
+## Hvordan måler man OEE automatisk?
 
-## Brug OEE til at få mere ud af maskinerne
+OEE regnet ud fra skiftesedler er langsomt og som regel for pænt, fordi korte stop og langsom kørsel ikke bliver skrevet ned. [OptiPeoples OEE-modul](/da/modules/production) henter data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen, så I ikke bare ser tallet, men også hvad der tog tiden.
 
-Med OEE kan I se, hvor I taber tid, kvalitet eller hastighed. Det giver bedre planlægning af vedligehold, bedre kvalitetskontrol og en mere effektiv produktion.
+## Ofte stillede spørgsmål
 
-## Det får I ud af at bruge OEE
+### Hvad står OEE for?
 
-De vigtigste gevinster er:
+OEE står for Overall Equipment Effectiveness. Tallet viser, hvor meget af den planlagte produktionstid der reelt er produktiv.
 
-- Højere effektivitet
-- Lavere produktionsomkostninger
-- Bedre indtjening
+### Hvad er formlen for OEE?
 
-## Gode råd til at hæve jeres OEE
+OEE = tilgængelighed x ydelse x kvalitet. Tilgængelighed er køretid delt med planlagt produktionstid. Ydelse er ideel cyklustid gange antal emner delt med køretid. Kvalitet er gode emner delt med antal emner.
 
-- Find ud af, hvor nedetiden, kvalitetstabet eller den langsomme kørsel opstår.
-- Følg udviklingen over tid.
-- Invester i den rigtige teknologi.
-- Lær medarbejderne, hvordan OEE virker, og hvorfor det betyder noget.
+### Hvad er en god OEE?
 
-## Software og hjælp til OEE
+85% regnes for verdensklasse i stykproduktion. Mange fabrikker ligger omkring 60%, og 40% er almindeligt, når man lige er begyndt at måle.
 
-Med OEE-software og den rette hjælp kan I finde spildet, følge udviklingen og optimere produktionen. Konsulenter og gode værktøjer kan også få forbedringerne hurtigere ud at virke.
+### Hvad er forskellen på OEE og TEEP?
 
-## OEE i praksis
+OEE måler mod den planlagte produktionstid. TEEP måler mod al tid i kalenderen, døgnet rundt hele ugen, og viser derfor også den kapacitet, der ikke bliver brugt. Se [OEE, OOE og TEEP side om side](/da/blog/oee-teep-and-ooe-whats-the-difference-with-examples).
 
-OEE bruges i produktionsvirksomheder over hele verden til at måle effektivitet og styre forbedringsarbejdet. Når I forstår, hvordan OEE virker, kan I køre bedre, sænke omkostningerne og tjene mere.
+### Kan OEE blive over 100%?
 
-## Til sidst
-
-OEE er et af de mest nyttige tal, hvis I vil forstå og forbedre jeres produktion. Fordi tilgængelighed, ydelse og kvalitet bliver samlet i ét tal, kan I se problemerne, gøre noget ved dem og producere mere over tid.
+Nej. Kommer OEE over 100%, er den ideelle cyklustid sat for langsomt. Brug den hurtigste cyklustid, maskinen stabilt kan køre, ikke gennemsnittet.
