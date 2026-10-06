@@ -178,6 +178,47 @@ export function moduleNavItems(locale: Locale) {
   }))
 }
 
+/**
+ * How the header's Platform and Modules panel groups the catalog. Every
+ * module id must appear exactly once, so a new catalog entry fails loudly here
+ * until someone decides which group it belongs to.
+ */
+const navGroups: { title: Record<Locale, string>; ids: string[] }[] = [
+  {
+    title: { en: "Production", da: "Produktion" },
+    ids: ["mes", "oee", "planning", "orders"],
+  },
+  {
+    title: { en: "Machines and energy", da: "Maskiner og energi" },
+    ids: ["iot", "maintenance", "ems"],
+  },
+  {
+    title: { en: "Quality and insight", da: "Kvalitet og indsigt" },
+    ids: ["qms", "documents", "analysis", "ai-agents"],
+  },
+]
+
+export function moduleNavGroups(locale: Locale) {
+  const grouped = navGroups.flatMap((group) => group.ids)
+  const missing = moduleCatalog.filter((entry) => !grouped.includes(entry.id))
+  if (missing.length > 0 || grouped.length !== moduleCatalog.length) {
+    throw new Error(
+      `Module nav groups out of sync with the catalog: ${missing
+        .map((entry) => entry.id)
+        .join(", ")}`
+    )
+  }
+
+  return navGroups.map((group) => ({
+    title: group.title[locale],
+    items: group.ids.map((id) => {
+      const entry = getModuleEntry(id)
+      if (!entry) throw new Error(`Unknown module id in nav groups: ${id}`)
+      return { title: entry.label[locale], href: entry.href }
+    }),
+  }))
+}
+
 /** Link-grid entries for the /modules index. */
 export function moduleIndexLinks(locale: Locale) {
   return moduleCatalog.map(({ href, label, blurb }) => ({

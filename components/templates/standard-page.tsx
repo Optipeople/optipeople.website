@@ -24,7 +24,10 @@ import { getPageTheme, type PageFamily } from "@/lib/page-theme"
  * Where the feature page leads with a screenshot, this one leads with an
  * editorial statement, these pages sell a scope, not a screen.
  *
- * Section flow: hero, proof strip, intro, capabilities, steps, visual.
+ * Section flow: hero, proof strip, intro, capabilities, deep dives, steps,
+ * visual. The deep dives only render when `deepDives` is passed: the module
+ * pages use it to link down to their feature pages, which the header no
+ * longer lists one by one.
  * The conversion CTA is appended globally by app/[locale]/layout.tsx, so the
  * template deliberately does not repeat it.
  *
@@ -40,10 +43,12 @@ export function StandardPageTemplate({
   page,
   family,
   slug,
+  deepDives,
 }: {
   page: StandardPage
   family: PageFamily
   slug: string
+  deepDives?: { title: string; description: string; href: string }[]
 }) {
   const t = useTranslations("pageTemplate")
   const locale = useLocale() as Locale
@@ -187,6 +192,35 @@ export function StandardPageTemplate({
           ))}
         </div>
       </section>
+
+      {deepDives && deepDives.length > 0 && (
+        <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
+          <h2 className="text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
+            {t("goDeeper")}
+          </h2>
+          <div className="mt-8 grid gap-px overflow-hidden rounded-2xl bg-black/[0.08] sm:grid-cols-2 lg:mt-10">
+            {deepDives.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group flex items-start justify-between gap-8 bg-background p-7 transition-colors hover:bg-[var(--gray-1)]"
+              >
+                <div>
+                  <h3 className="text-lg font-medium leading-snug tracking-tight text-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/72">
+                    {item.description}
+                  </p>
+                </div>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 text-foreground transition-colors group-hover:border-black/25">
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Steps, a numbered rail on hairlines instead of centred columns. */}
       <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">

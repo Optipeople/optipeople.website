@@ -1172,5 +1172,19 @@ export function featureNavItems(locale: Locale) {
   }))
 }
 
+/**
+ * The feature deep-dives that hang off one module, for the module page's own
+ * links down to them. A feature names its module through `parentHref`.
+ */
+export function featuresForModule(moduleHref: string, locale: Locale) {
+  return features
+    .filter((entry) => entry.content[locale].parentHref === moduleHref)
+    .map((entry) => ({
+      title: entry.content[locale].eyebrow,
+      description: entry.content[locale].heroBody,
+      href: entry.href,
+    }))
+}
+
 export const { slugs: featureSlugs, get: getFeature } = buildLookup(features)
 export { features }

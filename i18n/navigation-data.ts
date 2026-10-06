@@ -1,4 +1,4 @@
-import { moduleNavItems } from "@/content/modules-catalog"
+import { moduleNavGroups, moduleNavItems } from "@/content/modules-catalog"
 import { featureNavItems } from "@/content/pages/features"
 
 import type { Locale } from "./routing"
@@ -29,23 +29,19 @@ export type NavMenu = {
   items: NavItem[]
   /**
    * Panel layout. "list" (the default) is the narrow single-column dropdown;
-   * "mega" is a wide two-column panel that also renders item descriptions,
-   * used where the item count outgrows a comfortable list.
+   * "mega" is a wider panel that shows `groups` as headed columns, used where
+   * the item count outgrows a comfortable list.
    */
   layout?: "list" | "mega"
-  /** Optional full-width link pinned to the bottom of a mega panel. */
-  overview?: NavItem
   /**
-   * A second, denser group inside a mega panel, for pages that sit one level
-   * below the menu's own items, rendered under a heading beneath the main
-   * grid, titles only.
+   * The mega panel's columns. `items` still holds the same links flat, for
+   * the footer, which lists them without the grouping.
    */
-  secondary?: {
-    title: string
-    items: NavItem[]
-    /** Link to the group's index, shown beside the heading. */
-    overview?: NavItem
-  }
+  groups?: { title: string; items: NavItem[] }[]
+  /** Full-width link pinned to the bottom of a mega panel. */
+  overview?: NavItem
+  /** Quieter links beside `overview`, for indexes one level down. */
+  footerLinks?: NavItem[]
 }
 
 export const navigationMenus: Record<Locale, NavMenu[]> = {
@@ -66,14 +62,11 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       title: "Platform and Modules",
       layout: "mega",
       items: moduleNavItems("en"),
-      // The capability pages live here: each one is a deep-dive on part of a
-      // module, so they belong under Platform and Modules rather than in a menu
-      // of their own.
-      secondary: {
-        title: "Features",
-        items: featureNavItems("en"),
-        overview: { title: "All features", href: "/features" },
-      },
+      groups: moduleNavGroups("en"),
+      // The feature deep-dives are not listed one by one: each repeats part of
+      // a module, so the module pages link down to them and this one link
+      // covers the index.
+      footerLinks: [{ title: "All features", href: "/features" }],
       overview: { title: "See the whole data platform", href: "/platform" },
     },
     {
@@ -149,11 +142,8 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       title: "Platform og moduler",
       layout: "mega",
       items: moduleNavItems("da"),
-      secondary: {
-        title: "Funktioner",
-        items: featureNavItems("da"),
-        overview: { title: "Alle funktioner", href: "/features" },
-      },
+      groups: moduleNavGroups("da"),
+      footerLinks: [{ title: "Alle funktioner", href: "/features" }],
       overview: { title: "Se hele dataplatformen", href: "/platform" },
     },
     {
@@ -243,6 +233,8 @@ const footerCopy: Record<
   Locale,
   {
     platformOverview: string
+    features: string
+    allFeatures: string
     cases: string
     blog: string
     company: string
@@ -253,6 +245,8 @@ const footerCopy: Record<
 > = {
   en: {
     platformOverview: "Platform overview",
+    features: "Features",
+    allFeatures: "All features",
     cases: "Customer cases",
     blog: "Blog",
     company: "Company",
@@ -266,6 +260,8 @@ const footerCopy: Record<
   },
   da: {
     platformOverview: "Om platformen",
+    features: "Funktioner",
+    allFeatures: "Alle funktioner",
     cases: "Kundecases",
     blog: "Blog",
     company: "Virksomhed",
@@ -296,9 +292,9 @@ function itemByHref(items: NavItem[], href: string): NavItem {
 
 /**
  * Footer columns, in header order. Each column is built from the header's own
- * menus so the footer mirrors the header by construction: add a module, a
- * feature, or an AI page up there and it appears down here with the same
- * title.
+ * menus so the footer mirrors the header by construction: add a module or an
+ * AI page up there and it appears down here with the same title. Features are
+ * the exception: the header only links their index, the footer lists them all.
  *
  * The footer adds two things the header does not carry: the content archives
  * (cases, blog) under Resources, and the legal pages plus the login targets
@@ -311,11 +307,6 @@ function buildFooterColumns(locale: Locale): FooterColumn[] {
   const platform = menuById(locale, "platform")
   const services = menuById(locale, "services")
   const resources = menuById(locale, "resources")
-
-  const features = platform.secondary
-  if (!features) {
-    throw new Error(`Platform menu for locale ${locale} has no features group`)
-  }
 
   const insights = itemByHref(resources.items, "/insights")
   const otherResources = resources.items.filter(
@@ -332,10 +323,10 @@ function buildFooterColumns(locale: Locale): FooterColumn[] {
       ],
     },
     {
-      title: features.title,
+      title: copy.features,
       items: [
-        ...(features.overview ? [features.overview] : []),
-        ...features.items,
+        { title: copy.allFeatures, href: "/features" },
+        ...featureNavItems(locale),
       ],
     },
     { title: services.title, items: services.items },

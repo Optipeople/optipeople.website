@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 
 import { StandardPageTemplate } from "@/components/templates/standard-page"
+import { featuresForModule } from "@/content/pages/features"
 import { getModule, moduleSlugs } from "@/content/pages/modules"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
@@ -57,6 +58,7 @@ export default async function ModulePage({ params }: Props) {
         page={entry.content[locale as Locale]}
         family="modules"
         slug={entry.slug}
+        deepDives={featuresForModule(entry.href, locale as Locale)}
       />
     </>
   )

@@ -191,7 +191,7 @@ export function SiteHeader() {
                   }}
                   className={
                     menu.layout === "mega"
-                      ? `w-[44rem] p-3 ${PANEL_SHELL}`
+                      ? `w-[38rem] p-3 ${PANEL_SHELL}`
                       : `w-64 p-2 ${PANEL_SHELL}`
                   }
                   aria-label={t("submenuLabel", { title: menu.title })}
@@ -271,80 +271,29 @@ export function SiteHeader() {
   )
 }
 
-const MEGA_COLUMNS = 2
-
 function MegaMenuPanel({ menu }: { menu: NavMenu }) {
   const t = useTranslations("chrome")
-
-  // A single grid that flows column-major: DOM order runs down column one, then
-  // down column two, so Radix's arrow-key roving focus walks a column the way
-  // the eye does, while the shared grid rows keep the two columns aligned.
-  const rows = Math.ceil(menu.items.length / MEGA_COLUMNS)
+  const groups = menu.groups ?? [{ title: "", items: menu.items }]
+  const linkLabel = (item: NavItem) => t("linkLabel", { title: item.title })
 
   return (
     <>
+      {/* One column per group, titles only. DOM order runs down each column,
+          so Radix's arrow-key roving focus walks a group the way the eye does. */}
       <div
-        className="grid grid-flow-col gap-x-6"
+        className="grid gap-x-4"
         style={{
-          gridTemplateColumns: `repeat(${MEGA_COLUMNS}, minmax(0, 1fr))`,
-          gridTemplateRows: `repeat(${rows}, auto)`,
+          gridTemplateColumns: `repeat(${groups.length}, minmax(0, 1fr))`,
         }}
       >
-        {menu.items.map((item) => (
-          <DropdownMenuItem
-            key={item.href}
-            asChild
-            className="p-0 focus:bg-transparent"
-          >
-            <Link
-              href={item.href}
-              className={`cursor-pointer rounded-md px-3 py-2 transition-colors duration-150 hover:bg-foreground/[0.045] ${FOCUS_RING_INSET}`}
-              aria-label={t("linkLabel", { title: item.title })}
-            >
-              {/* One child element: the base item class carries `flex
-                  items-center gap-2`, which Radix's Slot concatenates rather
-                  than merges, so stacking happens in here instead. */}
-              <span className="block">
-                <span className="block text-sm font-medium text-foreground">
-                  {item.title}
-                </span>
-                {item.description && (
-                  <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">
-                    {item.description}
-                  </span>
-                )}
-              </span>
-            </Link>
-          </DropdownMenuItem>
-        ))}
-      </div>
-
-      {menu.secondary && (
-        <div className="mt-3 border-t border-border/60 pt-3">
-          <div className="flex items-baseline justify-between gap-4 px-3">
-            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              {menu.secondary.title}
-            </p>
-            {menu.secondary.overview && (
-              <DropdownMenuItem asChild className="p-0 focus:bg-transparent">
-                <Link
-                  href={menu.secondary.overview.href}
-                  className={`cursor-pointer rounded-md px-1.5 py-0.5 text-xs font-medium text-primary transition-colors duration-150 hover:bg-foreground/[0.045] ${FOCUS_RING_INSET}`}
-                  aria-label={t("linkLabel", {
-                    title: menu.secondary.overview.title,
-                  })}
-                >
-                  <span>{menu.secondary.overview.title}</span>
-                  <ArrowRight className="h-3 w-3" aria-hidden="true" />
-                </Link>
-              </DropdownMenuItem>
+        {groups.map((group) => (
+          <div key={group.title}>
+            {group.title && (
+              <p className="px-3 pb-1 pt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                {group.title}
+              </p>
             )}
-          </div>
-
-          {/* Titles only, three across: Danish capability names are long single
-              compounds that cannot wrap, so narrower columns would overflow. */}
-          <div className="mt-1 grid grid-cols-3 gap-x-2">
-            {menu.secondary.items.map((item) => (
+            {group.items.map((item) => (
               <DropdownMenuItem
                 key={item.href}
                 asChild
@@ -352,31 +301,47 @@ function MegaMenuPanel({ menu }: { menu: NavMenu }) {
               >
                 <Link
                   href={item.href}
-                  className={`cursor-pointer rounded-md px-3 py-1.5 text-xs leading-snug text-foreground/82 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
-                  aria-label={t("linkLabel", { title: item.title })}
+                  className={`block w-full cursor-pointer rounded-md px-3 py-2 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+                  aria-label={linkLabel(item)}
                 >
                   {item.title}
                 </Link>
               </DropdownMenuItem>
             ))}
           </div>
-        </div>
-      )}
+        ))}
+      </div>
 
-      {menu.overview && (
-        <DropdownMenuItem
-          asChild
-          className="mt-2 border-t border-border/60 p-0 pt-2 focus:bg-transparent"
-        >
-          <Link
-            href={menu.overview.href}
-            className={`cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-primary transition-colors duration-150 hover:bg-foreground/[0.045] ${FOCUS_RING_INSET}`}
-            aria-label={t("linkLabel", { title: menu.overview.title })}
-          >
-            <span>{menu.overview.title}</span>
-            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-          </Link>
-        </DropdownMenuItem>
+      {(menu.overview || menu.footerLinks) && (
+        <div className="mt-2 flex items-center justify-between gap-4 border-t border-border/60 pt-2">
+          {menu.overview && (
+            <DropdownMenuItem asChild className="p-0 focus:bg-transparent">
+              <Link
+                href={menu.overview.href}
+                className={`cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-primary transition-colors duration-150 hover:bg-foreground/[0.045] ${FOCUS_RING_INSET}`}
+                aria-label={linkLabel(menu.overview)}
+              >
+                <span>{menu.overview.title}</span>
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
+            </DropdownMenuItem>
+          )}
+          {menu.footerLinks?.map((item) => (
+            <DropdownMenuItem
+              key={item.href}
+              asChild
+              className="p-0 focus:bg-transparent"
+            >
+              <Link
+                href={item.href}
+                className={`cursor-pointer rounded-md px-3 py-2 text-xs font-medium text-foreground/72 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+                aria-label={linkLabel(item)}
+              >
+                {item.title}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </div>
       )}
     </>
   )
@@ -390,8 +355,8 @@ function MegaMenuPanel({ menu }: { menu: NavMenu }) {
  * site would have no navigation at all under 1024px, only the logo and the
  * "Talk to us" button.
  * This carries the full tree: every dropdown menu as a collapsible section
- * (including the platform panel's Features sub-list and overview link), the flat
- * links, the login targets, and the language switcher.
+ * (with the platform panel's groups and its bottom links), the flat links,
+ * the login targets, and the language switcher.
  */
 function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
   const t = useTranslations("chrome")
@@ -524,42 +489,44 @@ function MobileNavSection({ menu }: { menu: NavMenu }) {
       </summary>
 
       <div className="pb-4 pl-3">
-        <ul>
-          {menu.items.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href} className={linkClass}>
-                {item.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        {menu.secondary && (
-          <div className="mt-3 border-t border-border/40 pt-3">
-            <div className="flex items-baseline justify-between gap-3">
+        {menu.groups ? (
+          menu.groups.map((group, i) => (
+            <div key={group.title} className={i > 0 ? "mt-3" : ""}>
               <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                {menu.secondary.title}
+                {group.title}
               </p>
-              {menu.secondary.overview && (
-                <Link
-                  href={menu.secondary.overview.href}
-                  className={`text-xs font-medium text-primary ${FOCUS_RING_INSET}`}
-                >
-                  {menu.secondary.overview.title}
-                </Link>
-              )}
+              <ul className="mt-1">
+                {group.items.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className={linkClass}>
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="mt-1">
-              {menu.secondary.items.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className={linkClass}>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))
+        ) : (
+          <ul>
+            {menu.items.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className={linkClass}>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         )}
+
+        {menu.footerLinks?.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={`mt-3 block text-sm text-foreground/85 ${FOCUS_RING_INSET}`}
+          >
+            {item.title}
+          </Link>
+        ))}
 
         {menu.overview && (
           <Link
