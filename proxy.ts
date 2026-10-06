@@ -15,8 +15,8 @@ export default function proxy(request: NextRequest) {
   const legacy = resolveLegacyPath(pathname)
   if (legacy) return NextResponse.redirect(new URL(legacy + search, request.url), 308)
 
-  // next.config.ts leaves the trailing slash on /en, /de, /da and dated
-  // paths to this function, so a legacy match above takes a single hop.
+  // next.config.ts sets skipTrailingSlashRedirect and leaves the slash to
+  // this function, so a legacy match above takes a single hop.
   if (pathname.length > 1 && pathname.endsWith("/")) {
     const stripped = pathname.replace(/\/+$/, "") || "/"
     return NextResponse.redirect(new URL(stripped + search, request.url), 308)

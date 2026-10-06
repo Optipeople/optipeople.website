@@ -8,6 +8,8 @@
 //
 //   node scripts/seo/check-redirects.mjs <dir>              read another data folder
 //   BASE_URL=http://localhost:3001 node scripts/seo/check-redirects.mjs
+//   VERCEL_BYPASS=<secret> BASE_URL=<preview url> node scripts/seo/check-redirects.mjs
+//                                                         check a protected Vercel preview
 //   node scripts/seo/check-redirects.mjs --verbose          list every path, not only failures
 //
 // A path is checked when it has a Search Console click, 5 or more Search
@@ -22,6 +24,7 @@ const dataDir = process.argv.slice(2).find((a) => !a.startsWith("--")) || "seo-d
 const base = (process.env.BASE_URL || "http://localhost:3000").replace(/\/$/, "");
 const minImpressions = 5;
 const concurrency = 8;
+const headers = process.env.VERCEL_BYPASS ? { "x-vercel-protection-bypass": process.env.VERCEL_BYPASS } : {};
 
 // Paths that are not old pages: phone links resolved against the page URL,
 // theme assets, a mangled absolute URL, scraped HTML, typos of the login
@@ -70,7 +73,7 @@ const wanted = [...paths.values()].filter(
 const skipped = [...paths.values()].filter((r) => junk.some((re) => re.test(r.path))).length;
 
 try {
-  await fetch(base, { redirect: "manual" });
+  await fetch(base, { redirect: "manual", headers });
 } catch {
   console.error(`Nothing answers at ${base}. Start the site first: npm run build && npm start`);
   process.exit(2);
@@ -114,7 +117,7 @@ async function check(p) {
 }
 
 async function request(p) {
-  const res = await fetch(base + encodeURI(p), { redirect: "manual" });
+  const res = await fetch(base + encodeURI(p), { redirect: "manual", headers });
   await res.arrayBuffer();
   return { status: res.status, location: res.headers.get("location") };
 }

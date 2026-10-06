@@ -13,8 +13,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   // Next's own slash redirect runs before every other rule, so an old
   // WordPress URL like /jbs/ would take two hops (/jbs/ -> /jbs -> /blog/jbs).
-  // With it off, the legacy sources match the slash themselves and the
-  // catch-all at the end of redirects() strips it everywhere else.
+  // With it off, the legacy sources match the slash themselves and proxy.ts
+  // strips it everywhere else.
   skipTrailingSlashRedirect: true,
   images: {
     // AVIF first. On the product screenshots, WebP at quality 75 smears the
@@ -60,15 +60,9 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       ...legacyRedirects,
-      // Stands in for the slash redirect Next would add itself (see
-      // skipTrailingSlashRedirect above), after the legacy rules. Paths under
-      // /en, /de, /da and dated ones (/2020/...) are left to proxy.ts, which
-      // strips the slash in the same hop as any legacy redirect.
-      {
-        source: "/:path((?!(?:en|de|da)(?:/|$)|\\d{4}/).+)/",
-        destination: "/:path",
-        permanent: true,
-      },
+      // No slash-stripping rule here. On Vercel such a rule ran before the
+      // legacy rules above, so /jbs/ took two hops (/jbs/ -> /jbs -> /blog/jbs).
+      // proxy.ts strips the slash instead, in the same hop as any legacy match.
     ];
   },
 };
