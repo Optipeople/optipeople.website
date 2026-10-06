@@ -5,6 +5,7 @@
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 
 ## Lately
+- 2026-10-06 Hourly round: only the launch day checklist is open, still waiting on the human to go live. No aim open, nothing to file or cast.
 - 2026-10-06 Round after the site URL quest closed (unset on Vercel, fallback applies) and Dansand closed (post stays a draft). Only the launch day checklist is open, waiting on the human. No aim open, nothing to file. Day look-back: clean, nothing went wrong twice.
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
