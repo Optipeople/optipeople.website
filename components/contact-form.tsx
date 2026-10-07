@@ -25,6 +25,13 @@ export function ContactForm() {
     const email = formData.get("email") as string
     const phone = formData.get("phone") as string
     const message = formData.get("message") as string
+    const website = String(formData.get("website") ?? "")
+
+    if (website.trim()) {
+      setStatus("success")
+      form.reset()
+      return
+    }
 
     const newErrors: Record<string, string> = {}
     if (!name.trim()) newErrors.name = t("errorName")
@@ -46,7 +53,7 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message }),
+        body: JSON.stringify({ name, email, phone, message, website }),
       })
       if (!res.ok) throw new Error("Failed to submit")
       trackEvent("generate_lead", { form_name: "contact_form" })
@@ -78,6 +85,7 @@ export function ContactForm() {
         <input
           id="name"
           name="name"
+          maxLength={100}
           type="text"
           required
           className={fieldClass}
@@ -95,6 +103,7 @@ export function ContactForm() {
         <input
           id="email"
           name="email"
+          maxLength={254}
           type="email"
           required
           className={fieldClass}
@@ -115,6 +124,7 @@ export function ContactForm() {
         <input
           id="phone"
           name="phone"
+          maxLength={40}
           type="tel"
           className={fieldClass}
           placeholder={t("phonePlaceholder")}
