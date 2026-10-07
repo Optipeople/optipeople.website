@@ -100,6 +100,14 @@ Production uses it to find the machine, shift or product that loses the most tim
 
 Raising OEE frees capacity you already own. Before you add shifts, overtime or new machines, OEE shows how much more the current equipment could make. It also gives operators, production and maintenance a shared number to improve, instead of each team arguing from its own data.
 
+## What are the effects of OEE?
+
+OEE does not improve production by itself. Its effect is that it turns a broad problem into three specific ones: instead of asking why the plant underperforms, ask whether availability, performance or quality is the issue. Each score points at a group of the six big losses:
+
+- **Availability losses** are unplanned downtime and planned downtime such as setups and changeovers. Better preventive or predictive maintenance, stronger downtime tracking and faster changeovers lessen them.
+- **Performance losses** are small stoppages and reduced speed. Operator training, tracking of recurring slowdowns and clear standard procedures address them.
+- **Quality losses** are scrap, rework and startup waste. Tracking defect patterns, replacing worn tools and keeping the process consistent reduce them.
+
 ## How do you improve OEE?
 
 1. Measure it automatically, so the numbers are trusted and current.

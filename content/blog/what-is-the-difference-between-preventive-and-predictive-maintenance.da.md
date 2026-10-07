@@ -78,6 +78,20 @@ Forebyggende vedligehold sker med faste mellemrum.
 
 Forudsigende vedligehold sker, når tallene siger, at det er tid.
 
+## Reaktivt, forebyggende og forudsigende vedligehold sammenlignet
+
+Reaktivt vedligehold, også kaldet kør til nedbrud, reparerer først maskinen, når den er gået i stykker. Det ser billigst ud, fordi der bruges lidt før et nedbrud, og holdet kan være lille, men prisen er uplanlagt nedetid, dyrere reparationer, tabt produktion og risiko for sikkerheden.
+
+| | Reaktivt | Forebyggende | Forudsigende |
+|---|---|---|---|
+| Griber ind | Efter nedbrud | Efter en plan | Når data siger det |
+| Udløser | Nedbrud | Tid, alder, serviceinterval | Tilstand, brug, risiko for nedbrud |
+| Startudgift | Lavest | Lav | Højest |
+| Uplanlagt nedetid | Højest | Middel | Lavest |
+| Passer bedst til | Billige maskiner, der ikke er kritiske | Maskiner med forudsigeligt slid | Kritiske maskiner, hvor et nedbrud er dyrt |
+
+Kør til nedbrud er stadig det rigtige, når en maskine er billig, nem at skifte, ikke gør ondt, når den står, eller har en reserve andre steder i anlægget. Pærer er det klassiske eksempel. Vælg forudsigende vedligehold, når et nedbrud er dyrt, når nedetid rammer produktionen, når sikkerheden tæller, og når maskinens tilstand kan måles. [Vedligehold efter brug og efter tilstand](/da/blog/the-four-types-of-predictive-maintenance-and-why-they-matter) er den almindelige indgang.
+
 ## Hvad skal I vælge?
 
 Forebyggende vedligehold er enklere og lettere at organisere, men det kan give arbejde, der ikke var brug for. Forudsigende vedligehold er mere præcist, men kræver bedre data, bedre værktøjer og mere disciplin i processen. Det rigtige valg afhænger af, hvor kritisk maskinen er, hvad det koster, og hvor godt jeres processer er på plads.

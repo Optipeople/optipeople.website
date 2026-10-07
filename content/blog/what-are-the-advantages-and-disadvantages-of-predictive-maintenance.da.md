@@ -17,7 +17,7 @@ Forudsigende vedligehold bruger data fra maskinen til at lave vedligeholdet, fø
 | Mindre spild af energi og materiale | En alarm hjælper kun, hvis nogen gør noget ved den |
 | Bedre planlægning af folk og reservedele | Det er for meget på billige maskiner, der ikke er kritiske |
 
-Er begrebet nyt? Start med [hvad forudsigende vedligehold betyder](/da/blog/what-is-the-definition-or-meaning-of-predictive-maintenance) og [hvordan det virker](/da/blog/how-does-predictive-maintenance-work).
+Er begrebet nyt? Start med [hvad forudsigende vedligehold er, og hvordan det virker](/da/blog/the-four-types-of-predictive-maintenance-and-why-they-matter).
 
 ## Hvad er fordelene ved forudsigende vedligehold?
 
@@ -29,7 +29,11 @@ Er begrebet nyt? Start med [hvad forudsigende vedligehold betyder](/da/blog/what
 6. **Mindre spild og lavere udledning.** Slidte lejer, utætte trykluftslanger og varme motorer bruger energi. Fanger I dem tidligt, sparer I både energi og materiale.
 7. **Bedre planlægning.** Når I ved, hvilken opgave der kommer, kan I booke teknikeren, bestille reservedelen og vælge stoppet i god tid.
 
-Fordelene er gennemgået mere grundigt i [det får I ud af forudsigende vedligehold](/da/blog/predictive-maintenance-the-benefits-you-get-from-it).
+Kort sagt falder fordelene i tre grupper:
+
+- **Oppetid.** Vedligeholdet bliver planlagt før nedbruddet, så maskinerne står stille i kortere tid, og der går mindre produktion tabt, mens I venter på reparationer.
+- **Økonomi.** Serviceintervallerne bliver længere, der bliver færre akutte reparationer, dele bliver ikke skiftet for tidligt eller for sent, og uplanlagt nedetid koster mindre.
+- **Sikkerhed.** Maskiner bliver sjældnere kørt, når de er ved at gå i stykker, og det mindsker risikoen for personskade ved pludselige nedbrud.
 
 ## Hvad er ulemperne ved forudsigende vedligehold?
 
@@ -61,7 +65,7 @@ Det betaler sig som regel, når det meste af det her passer:
 - maskinen bliver brugt nok til at slides på en forudsigelig måde
 - teamet kan nå at reagere, inden fejlen sker
 
-Passer det ikke, kan [forebyggende vedligehold](/da/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) efter en fast plan eller endda [reaktivt vedligehold](/da/blog/predictive-maintenance-vs-reactive-maintenance) være det rigtige valg.
+Passer det ikke, kan [forebyggende vedligehold](/da/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) efter en fast plan eller endda [reaktivt vedligehold](/da/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) være det rigtige valg.
 
 ## Ofte stillede spørgsmål
 

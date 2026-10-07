@@ -67,7 +67,7 @@ Bestem, hvor I starter, ud fra:
 
 ### 3. Få det ind i et system
 
-Hver opgave skal have et interval eller en grænse, en beskrivelse og en ansvarlig. En tavle eller et regneark kan klare det for et par maskiner. Har I mange maskiner og mange opgaver, holder et [CMMS](/da/blog/cmms-the-ultimate-guide-for-facility-management-professionals-and-owners) eller et vedligeholdssystem styr på, hvad der skal laves, sender varsler og viser, hvad der er gjort.
+Hver opgave skal have et interval eller en grænse, en beskrivelse og en ansvarlig. En tavle eller et regneark kan klare det for et par maskiner. Har I mange maskiner og mange opgaver, holder et CMMS eller et vedligeholdssystem styr på, hvad der skal laves, sender varsler og viser, hvad der er gjort.
 
 ### 4. Fordel ansvaret
 

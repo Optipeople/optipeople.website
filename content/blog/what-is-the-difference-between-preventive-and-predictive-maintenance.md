@@ -82,6 +82,20 @@ Preventive maintenance happens on a fixed cadence.
 
 Predictive maintenance happens when data indicates it should.
 
+## Reactive, preventive and predictive maintenance compared
+
+Reactive maintenance, also called run-to-failure, fixes an asset only after it breaks. It looks cheapest, because little is spent before a failure and the team can be small, but the price is unscheduled downtime, costlier repairs, lost production and safety risk.
+
+| | Reactive | Preventive | Predictive |
+|---|---|---|---|
+| Acts | After failure | On a schedule | When data says so |
+| Trigger | Breakdown | Time, age, service interval | Condition, use, failure risk |
+| Upfront cost | Lowest | Low | Highest |
+| Unplanned downtime | Highest | Medium | Lowest |
+| Best for | Cheap, non-critical assets | Assets with predictable wear | Critical assets where failure is expensive |
+
+Run-to-failure is still the right call when an asset is cheap, easy to replace, has low consequence when it stops, or has a spare or redundancy elsewhere in the system. Light bulbs are the classic example. Choose predictive maintenance when failure is expensive, downtime hits production, safety matters and the asset's condition can be measured. [Usage-based and condition-based triggers](/blog/the-four-types-of-predictive-maintenance-and-why-they-matter) are the usual way in.
+
 ## Final Takeaway
 
 Preventive maintenance is simpler and easier to organize, but it can lead to unnecessary work. Predictive maintenance is more precise, but it requires better data, tooling, and process discipline. The right choice depends on asset criticality, cost, and operational maturity.

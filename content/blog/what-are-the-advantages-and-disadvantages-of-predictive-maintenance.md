@@ -21,7 +21,7 @@ Predictive maintenance uses machine data to service equipment before it fails. I
 | Less wasted energy and material | Alerts only help if the organisation acts on them |
 | Better planning of people and parts | Overkill on cheap or non-critical equipment |
 
-New to the term? Start with [what predictive maintenance means](/blog/what-is-the-definition-or-meaning-of-predictive-maintenance) and [how it works](/blog/how-does-predictive-maintenance-work).
+New to the term? Start with [what predictive maintenance is and how it works](/blog/the-four-types-of-predictive-maintenance-and-why-they-matter).
 
 ## What are the advantages of predictive maintenance?
 
@@ -33,7 +33,11 @@ New to the term? Start with [what predictive maintenance means](/blog/what-is-th
 6. **Less waste and lower emissions.** Worn bearings, leaking air and overheating motors burn energy. Catching them early saves both energy and material.
 7. **Better planning.** When you know which job is coming, you can book the technician, order the spare part and pick the stop in advance.
 
-The [benefits of predictive maintenance](/blog/predictive-maintenance-the-benefits-you-get-from-it) are covered in more depth in a separate guide.
+In short, the benefits fall into three groups:
+
+- **Uptime.** Maintenance is scheduled before the breakdown, so equipment is unavailable for less time and less output is lost waiting for repairs.
+- **Cost.** Service intervals stretch, emergency repairs drop, parts are not replaced too early or too late, and unplanned downtime costs less.
+- **Safety.** Equipment is less often run in a near-failure condition, which lowers the risk of injury from sudden breakdowns.
 
 ## What are the disadvantages of predictive maintenance?
 
@@ -65,7 +69,7 @@ It usually pays off when most of these are true:
 - the equipment is used enough to wear out in a predictable way
 - the team can act on an alert within the warning window
 
-When they are not true, [preventive maintenance](/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) on a fixed schedule or even [reactive maintenance](/blog/predictive-maintenance-vs-reactive-maintenance) can be the better fit.
+When they are not true, [preventive maintenance](/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) on a fixed schedule or even [reactive maintenance](/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) can be the better fit.
 
 ## Frequently asked questions
 

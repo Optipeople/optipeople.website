@@ -1,6 +1,6 @@
 # Blog content inventory
 
-Proposals only. Nothing has been deleted, merged or redirected. Each "merge" or "retire" below is a human call.
+The merges and retirements in the table below were approved and carried out on 2026-10-07: the merged and retired posts (and their `.da.md` files) are deleted, their sections folded into the targets, and `lib/legacy-redirects.ts` and `scripts/seo/old-paths.json` cover the old URLs. The inventory tables further down still show the pre-merge numbers.
 
 ## Data
 

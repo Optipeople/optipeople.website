@@ -72,7 +72,7 @@ Decide where to start based on:
 
 ### 3. Put it in a system
 
-Each task needs an interval or trigger, a description and an owner. A whiteboard or spreadsheet works for a few machines. With many machines and many tasks, a [CMMS](/blog/cmms-the-ultimate-guide-for-facility-management-professionals-and-owners) or maintenance software keeps track of what is due, sends alerts and shows what has been done.
+Each task needs an interval or trigger, a description and an owner. A whiteboard or spreadsheet works for a few machines. With many machines and many tasks, a CMMS or maintenance software keeps track of what is due, sends alerts and shows what has been done.
 
 ### 4. Assign responsibility
 

@@ -20,13 +20,27 @@ There are four main types of predictive maintenance: condition-based (sensors wa
 
 ## What is predictive maintenance?
 
-Predictive maintenance is maintenance timed by data about the machine instead of by the calendar. The goal is to act just before a failure, so the repair happens in a planned stop. For a fuller explanation, see [what predictive maintenance means](/blog/what-is-the-definition-or-meaning-of-predictive-maintenance) and [how it works step by step](/blog/how-does-predictive-maintenance-work).
+Predictive maintenance is maintenance timed by data about the machine instead of by the calendar. The goal is to act just before a failure, so the repair happens in a planned stop. It reduces both unexpected breakdowns and routine work that was never needed.
+
+It sits between two older approaches. Reactive maintenance fixes the machine after it fails. Preventive maintenance services it on a fixed schedule. Predictive maintenance uses condition and data to act at the right time, and prescriptive maintenance goes one step further, using advanced models to recommend the best action. The [comparison of preventive and predictive maintenance](/blog/what-is-the-difference-between-preventive-and-predictive-maintenance) sets the approaches side by side.
+
+Condition monitoring, the collection of data that shows the state of equipment over time, is a major part of it, but not all of it. Good predictive maintenance also needs someone who interprets the data, a repeatable workflow, and clear ownership of every detected issue.
+
+## How does predictive maintenance work?
+
+It works in three steps:
+
+1. **Collect data.** Sensors on key parts such as pumps, heaters, conveyors and compressors record vibration, speed, consumption and temperature. First establish a baseline: what the machine looks like when it runs normally.
+2. **Move the data somewhere it can be analysed.** That usually means IoT connectivity and cloud storage, plus dashboards or a maintenance system.
+3. **Compare live data to models.** The system flags deviations from the baseline that point to a coming failure and notifies staff early enough to plan the work.
+
+Predictive maintenance is not the right choice for every asset. Ask what a failure would cost in lost production, in repair and in replacement. Assets where all three are high are the best place to begin.
 
 ## What is condition-based predictive maintenance?
 
 Sensors measure the condition of a machine continuously, and maintenance is triggered when a value moves outside its normal range. Typical signals are vibration, temperature, current draw, pressure and oil quality.
 
-It suits rotating equipment such as motors, pumps, fans, compressors and turbines, where wear shows up as a change in vibration or heat long before the machine stops. The limit is cost: every monitored point needs a sensor and somewhere to send the data. The [tools used for condition monitoring](/blog/what-are-predictive-maintenance-tools) are covered in a separate guide.
+It suits rotating equipment such as motors, pumps, fans, compressors and turbines, where wear shows up as a change in vibration or heat long before the machine stops. The limit is cost: every monitored point needs a sensor and somewhere to send the data. The tools used for condition monitoring are covered further down.
 
 ## What is time-based predictive maintenance?
 
@@ -46,6 +60,32 @@ Model-based predictive maintenance uses statistical or machine learning models t
 
 It pays off on critical, expensive assets with complex failure modes. It needs the most data: several signals over time and a record of real failures to learn from. Without that history, the model has nothing to learn.
 
+## Predictive maintenance tools
+
+Predictive maintenance tools fall into three groups that work best together: sensors that detect change, systems that make sense of the data, and tools that turn insight into work.
+
+**IoT sensors** are the base. Position and configure them correctly, measure on a consistent schedule, capture baseline readings, and make sure the data flows into your analytics automatically. The main techniques are:
+
+- **Vibration analysis** for high-speed rotating machines. It reveals misalignment, loose shafts or parts, motor faults and imbalance.
+- **Ultrasonic analysis** captures high-frequency sound that people cannot hear and turns it into data.
+- **Thermal imaging** uses infrared data to show abnormal heat buildup before a part fails.
+- **Oil analysis** checks the condition of lubricants and the wear particles in them.
+
+**Monitoring and analytics systems** collect the sensor data, show trends, compare it over time and flag deviation from normal behaviour.
+
+**Maintenance management tools** such as a CMMS, scheduling and work-order systems turn an alert into a task with an owner. Without them even good insight changes nothing.
+
+## Examples of predictive maintenance
+
+Each type has a typical use:
+
+- **Usage-based, turbine manufacturer.** Shaft usage and operating hours are monitored, and maintenance is triggered when a threshold is reached. This cuts unnecessary service and total maintenance spend.
+- **Condition-based, tool manufacturer.** Historical alerts and faults are analysed to find repeating patterns and likely root causes, so the team can prioritise critical issues and trigger work orders.
+- **Vibration analysis, rotating equipment.** Vibration patterns are compared with known failure modes to find problems in bearings, shafts and rotating assemblies.
+- **Condition monitoring and oil analysis, industrial plant.** Oil quality and operating condition are tracked to plan maintenance, spot wear earlier and avoid replacing parts that are still good.
+
+The same principle runs through all four: monitor the right signals, detect deviations early and act before failure.
+
 ## Which type of predictive maintenance should you use?
 
 Match the type to the machine, not the other way round:
@@ -55,7 +95,7 @@ Match the type to the machine, not the other way round:
 3. **Use time-based intervals** for wear parts with a known, stable life.
 4. **Move to model-based** only on assets where downtime is very expensive and you have the data and failure history to support it.
 
-Weigh the cost against the downtime it saves. The [advantages and disadvantages of predictive maintenance](/blog/what-are-the-advantages-and-disadvantages-of-predictive-maintenance) sets out where it pays and where it does not, and [real examples](/blog/what-are-the-examples-of-predictive-maintenance) show each type in use.
+Weigh the cost against the downtime it saves. The [advantages and disadvantages of predictive maintenance](/blog/what-are-the-advantages-and-disadvantages-of-predictive-maintenance) sets out where it pays and where it does not.
 
 ## How do you put it into practice?
 
