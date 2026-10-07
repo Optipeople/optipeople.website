@@ -381,9 +381,9 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "One view of every machine you service",
         visualBody:
           "Machine health, service history, and upcoming maintenance across your entire installed base.",
-        visualImage: "/images/report-mockrup-3.png",
+        visualImage: "/images/report-mockup1.png",
         visualAlt:
-          "OptiPeople machine health dashboard showing temperature, energy consumption, and performance trend data",
+          "OptiPeople machine report showing availability, unit counters and output per hour",
         metricsTitle: "Typical Results",
         metrics: [
           { metric: "50%", label: "Fewer emergency service callouts" },
@@ -449,8 +449,8 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "Ét overblik over alle de maskiner, I servicerer",
         visualBody:
           "Hvordan maskinerne har det, hvad der er lavet på dem, og hvad der står for tur. For alle de maskiner, I har ude hos kunderne.",
-        visualImage: "/images/report-mockrup-3.png",
-        visualAlt: "Dashboard over maskinernes tilstand",
+        visualImage: "/images/report-mockup1.png",
+        visualAlt: "Maskinrapport med tilgængelighed, styktal og produktion pr. time",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "50%", label: "Færre akutte udkald" },

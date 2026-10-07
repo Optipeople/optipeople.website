@@ -548,8 +548,8 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Energy data meets production data",
         visualBody:
           "See energy consumption alongside production output, machine status, and environmental conditions in one unified view.",
-        visualImage: "/images/report-mockrup-3.png",
-        visualAlt: "Energy and telemetry dashboard",
+        visualImage: "/images/Telemetry-Chart.png",
+        visualAlt: "Energy use for one machine over 48 hours in OptiPeople Data Platform",
         metricsTitle: "Typical Results",
         metrics: [
           { metric: "10-20%", label: "Reduction in energy consumption" },
@@ -611,8 +611,8 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Energi holdt op mod det, I producerer",
         visualBody:
           "Sammenlign forbruget med maskinstatus, produktionstal og skift, og find ud af, hvad der trækker strømmen.",
-        visualImage: "/images/report-mockrup-3.png",
-        visualAlt: "Dashboard med energi og målinger",
+        visualImage: "/images/Telemetry-Chart.png",
+        visualAlt: "Energiforbrug for én maskine over 48 timer i OptiPeople Data Platform",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "10-20%", label: "Mindre spild af energi" },
@@ -1343,7 +1343,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "One row per entity, grouped by route",
         visualBody:
           "The board is grouped by production route and broken out per entity underneath it, so a drag from one station to another is a real decision rather than a line moving on a chart. Progress reports itself from the floor as the order moves along the route.",
-        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.png",
+        visualImage: "/images/Mockups/Planning-Timeline-Close.png",
         visualAlt: "Production planning overview in OptiPeople Data Platform",
         metricsTitle: "What Changes",
         metrics: [
@@ -1412,7 +1412,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Én række pr. enhed, samlet under sin rute",
         visualBody:
           "Tavlen er grupperet efter produktionsrute og delt op pr. enhed nedenunder, så når I trækker en ordre fra én station til en anden, er det en rigtig beslutning og ikke bare en streg, der flytter sig. Fremdriften melder sig selv fra gulvet, mens ordren bevæger sig ned ad ruten.",
-        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.png",
+        visualImage: "/images/Mockups/Planning-Timeline-Close.png",
         visualAlt: "Overblik over produktionsplanlægning i OptiPeople Data Platform",
         metricsTitle: "Hvad ændrer sig",
         metrics: [

@@ -745,9 +745,9 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Know What Your Machines Are Feeling",
         heroBody:
           "Connect energy, vibration, flow, and temperature directly to production. Spot waste, catch anomalies early, and find optimization opportunities hiding in the data.",
-        heroImage: "/images/report-mockrup-3.png",
+        heroImage: "/images/Telemetry-Chart.png",
         heroImageAlt:
-          "OptiPeople energy dashboard showing temperature, kWh readings, and OEE performance gauges",
+          "Energy chart showing kWh consumption over 48 hours for a Felder sliding table saw",
         valueTitle: "Energy and condition data without a separate system",
         valueBody:
           "Most factories monitor energy in one system, production in another, and machine health in a third, if at all. That separation makes it impossible to connect cause and effect. OptiPeople brings sensor data into the same platform as your production data, so every reading has context.",
@@ -775,9 +775,9 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Sensor Data Meets Production Data",
             description:
               "Energy and telemetry don't live in isolation. OptiPeople connects sensor readings directly to OEE, stop events, and shift data, so you can answer questions like: how much energy did that unplanned stop cost? Which shift runs most efficiently?",
-            image: "/images/report-mockrup-3.png",
+            image: "/images/Product/platform-report.png",
             imageAlt:
-              "Dashboard combining telemetry readings with OEE gauges and production performance metrics",
+              "Production and efficiency reports side by side in OptiPeople Data Platform",
           },
         ],
         metrics: [
@@ -816,8 +816,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Se, hvad maskinerne bruger, og hvad de fortæller",
         heroBody:
           "Kobl energimålere og sensorer sammen med produktionen, så spild, slid og det, der stikker ud, bliver til at få øje på.",
-        heroImage: "/images/report-mockrup-3.png",
-        heroImageAlt: "Energi og målinger",
+        heroImage: "/images/Telemetry-Chart.png",
+        heroImageAlt: "Energiforbrug for én maskine over 48 timer",
         valueTitle: "Energi og maskinernes tilstand uden et ekstra system",
         valueBody:
           "Mange fabrikker følger energien i ét system, produktionen i et andet og maskinernes tilstand i et tredje, hvis overhovedet. Så kan ingen se, hvad der hænger sammen med hvad. I OptiPeople ligger målingerne sammen med produktionstallene, så I kan se forskel på almindelige udsving og et rigtigt problem.",
@@ -840,8 +840,8 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Det, der stikker ud",
             description: "Find de mønstre, der peger på spild, slid eller en fejl på vej.",
-            image: "/images/report-mockrup-3.png",
-            imageAlt: "Rapport over afvigelser",
+            image: "/images/Product/platform-report.png",
+            imageAlt: "Rapporter over produktion og effektivitet side om side",
           },
         ],
         metrics: [
