@@ -1,10 +1,11 @@
 # Warriv's memory
 
 ## Rules
-- Steps that need the human's Vercel, Search Console or GA4 login stay with the human; no agent can do them (no Vercel CLI on this PC, seo-reader service account is Viewer only).
+- Steps that need the human's Vercel login or the GA4 UI stay with the human. Since 2026-10-06 the seo-reader service account is GA4 Admin and Search Console Full user, so API-reachable GA4 and Search Console steps (key events, sitemap submit) can go to agents.
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 
 ## Lately
+- 2026-10-07 Launch checklist blocked again after its pre-launch part landed (key events, MONDAY_API_TOKEN, 504 redirects verified). Noted what is left: trafficheap.cc unwanted referral (GA4 UI only) and the post-switch steps, which agents can now do.
 - 2026-10-07 Round after the image prune landed: only the merges (awaiting the human's row approval) and the launch checklist remain, both with the human. No aim, no ship stone; nothing to file or cast.
 - 2026-10-07 Round after the image shrink landed: prune quest in progress, merges and launch checklist still wait on the human. Nothing to file or cast.
 - 2026-10-07 Round after the OEE rewrites landed: images in progress, merges and launch checklist wait on the human. Nothing to file or cast.
@@ -35,4 +36,4 @@
 
 ## Open
 - Merges and retirements quest: handed to the human (approve all or name rows to skip). When answered, the session goes on; check that redirects land in lib/legacy-redirects.ts and the fixture.
-- Launch day SEO checklist: once the human says the site is live on optipeople.com, file agent quests for the 301 crawl of the top 200 old URLs and the week 1 and week 4 pull.mjs comparisons.
+- Launch day SEO checklist: human still to add trafficheap.cc to GA4 unwanted referrals. Once the site is live on optipeople.com, file agent quests for the sitemap resubmit via API, check-redirects against https://optipeople.com, and the week 1 and week 4 pull.mjs comparisons.
