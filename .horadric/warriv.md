@@ -5,6 +5,7 @@
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 
 ## Lately
+- 2026-10-07 Round as the human left: unchanged, merges and launch checklist both wait on the human. No aim, no check stone; nothing to file or cast.
 - 2026-10-07 Hourly round: unchanged, merges and launch checklist both wait on the human. 8 quests landed unchecked on main, but there is no check stone to cast. Nothing to file or cast.
 - 2026-10-07 Launch checklist blocked again after its pre-launch part landed (key events, MONDAY_API_TOKEN, 504 redirects verified). Noted what is left: trafficheap.cc unwanted referral (GA4 UI only) and the post-switch steps, which agents can now do.
 - 2026-10-07 Round after the image prune landed: only the merges (awaiting the human's row approval) and the launch checklist remain, both with the human. No aim, no ship stone; nothing to file or cast.
