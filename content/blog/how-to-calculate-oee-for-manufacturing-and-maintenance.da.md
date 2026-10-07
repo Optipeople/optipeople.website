@@ -1,119 +1,134 @@
 ---
-title: "Sådan regner I OEE ud for produktion og vedligehold"
+title: "Sådan regner I OEE ud: Formel og regneeksempel"
+description: "OEE = tilgængelighed x ydelse x kvalitet. Sådan regner I hver del ud trin for trin, med et eksempel fra ét skift og den genvej, der tjekker resultatet."
 ---
 
-OEE står for **Overall Equipment Effectiveness** og er et mål for, hvor effektiv produktionen er. Tallet viser, hvor godt en linje, et værktøj eller en maskine bliver udnyttet, ud fra tre ting:
+OEE regner I ud ved at gange tre tal: tilgængelighed x ydelse x kvalitet. Tilgængeligheden er køretiden delt med den planlagte produktionstid. Ydelsen er den ideelle cyklustid gange antal emner, delt med køretiden. Kvaliteten er de gode emner delt med alle emner. En maskine på 90% tilgængelighed, 90% ydelse og 98% kvalitet har en OEE på 79,4%.
 
-- tilgængelighed
-- ydelse
-- kvalitet
+## Hvad er formlen for OEE?
 
-## Sådan regnes OEE ud
+OEE (Overall Equipment Effectiveness) ganger tre tal sammen. Hvert tal er en procentdel af det ideelle:
 
-Standardformlen er:
+```text
+OEE = Tilgængelighed x Ydelse x Kvalitet
 
-`OEE = Tilgængelighed x Ydelse x Kvalitet`
+Tilgængelighed = Køretid / Planlagt produktionstid
+Ydelse         = (Ideel cyklustid x Antal emner) / Køretid
+Kvalitet       = Gode emner / Antal emner
+```
 
-Eller kort:
+De tre led går ud med hinanden, så der er en genvej, der giver det samme:
 
-`OEE = T x Y x K`
+```text
+OEE = (Gode emner x Ideel cyklustid) / Planlagt produktionstid
+```
 
-## Ydelse
+Genvejen er den hurtigste måde at tjekke jeres tal på. De tre dele er det, der viser jer, hvor tiden blev af. Hvad OEE måler, og hvorfor det betyder noget, kan I læse under [hvad er OEE](/da/blog/what-is-oee).
 
-Ydelsen viser, hvor godt maskinen kører i den tid, den faktisk kører.
+## Hvilke tal skal I bruge?
 
-En forenklet formel er:
+Fem tal pr. maskine og periode:
 
-`Ydelse = Producerede emner / (Driftstid x Ideel hastighed) x 100%`
+| Tal | Hvad det er | Hvor det typisk kommer fra |
+|---|---|---|
+| Planlagt produktionstid | Den tid, maskinen skal producere, når pauser og planlagte stop er trukket fra | Skiftplanen |
+| Køretid | Planlagt produktionstid minus alle uplanlagte stop og omstillinger | Signal fra maskinen eller stoploggen |
+| Ideel cyklustid | Den hurtigste tid pr. emne, maskinen kan køre stabilt | Maskinens data eller den bedste hastighed, I har set |
+| Antal emner | Alle emner, der er lavet, gode som dårlige | Tælleren på maskinen |
+| Gode emner | Emner, der er gode første gang | Kvalitetsregistreringen |
 
-Her sammenligner I det, der blev produceret, med det, der kunne være lavet ved ideel hastighed.
+Planlagte stop (pauser, møder, planlagt vedligehold) er trukket ud af den planlagte produktionstid, så de trækker ikke OEE ned. Vil I have dem med som tab, skal I bruge OOE. Se [OEE, OOE og TEEP](/da/blog/oee-teep-and-ooe-whats-the-difference-with-examples).
 
-## Tilgængelighed
+## Hvordan regner I tilgængeligheden ud?
 
-Tilgængeligheden viser, hvor stor en del af den planlagte produktionstid maskinen faktisk var klar til at køre.
+Tilgængeligheden er den del af den planlagte produktionstid, hvor maskinen rent faktisk kører.
 
-Formel:
+```text
+Tilgængelighed = Køretid / Planlagt produktionstid
+```
 
-`Tilgængelighed = Driftstid / Planlagt produktionstid`
+Hvert uplanlagt stop trækker den ned: nedbrud, ventetid på materiale, omstillinger og indkøring. De fleste tæller omstillinger med her, fordi maskinen ikke producerer, mens den bliver stillet om.
 
-Hvor:
+## Hvordan regner I ydelsen ud?
 
-`Driftstid = Planlagt produktionstid - Planlagt nedetid`
+Ydelsen sammenligner det, maskinen lavede, med det, den kunne have lavet i fuld fart i køretiden.
 
-## Kvalitet
+```text
+Ydelse = (Ideel cyklustid x Antal emner) / Køretid
+```
 
-Kvaliteten viser, hvor mange af de producerede emner der lever op til kravene.
+Kender I den ideelle hastighed i emner pr. minut i stedet for cyklustiden, deler I: Ydelse = Antal emner / (Køretid x Ideel hastighed). Det er her, langsom kørsel og de korte stop, ingen skriver ned, dukker op.
 
-Formel:
+## Hvordan regner I kvaliteten ud?
 
-`Kvalitet = Godkendte emner / Emner i alt x 100%`
+Kvaliteten er den del af emnerne, der er gode første gang.
 
-Hvor:
+```text
+Kvalitet = Gode emner / Antal emner
+```
 
-`Emner i alt = Godkendte emner + Uplanlagt kassation`
+Emner, der skal omarbejdes, tæller som dårlige, også selvom de bliver solgt til sidst. Den tid, det tog at lave dem, var ikke god produktion.
 
-## Et regneeksempel
+## Hvordan ser et regneeksempel ud trin for trin?
 
-Tag et skift på otte timer med:
+Tag ét skift på 8 timer:
 
-- 50 minutters planlagte pauser
-- 10 minutters uplanlagt nedetid
-- en ideel hastighed på 400 emner i minuttet
-- 150.000 producerede emner
-- 25.000 kasserede emner
+- Skiftets længde: `480 minutter`
+- Pauser: `30 minutter`
+- Uplanlagte stop og en omstilling: `45 minutter`
+- Ideel cyklustid: `1,5 sekund` pr. emne (40 emner i minuttet)
+- Antal emner: `14.580`
+- Kasserede emner: `292`
 
-Så ser regnestykket sådan ud:
+**1. Planlagt produktionstid:** 480 minus 30 minutters pauser giver `450 minutter`.
 
-### Tilgængelighed
+**2. Køretid:** 450 minus 45 minutters stop giver `405 minutter`.
 
-Planlagt produktionstid:
+**3. Tilgængelighed:** 405 / 450 = `90,0%`.
 
-`480 - 50 = 430 minutter`
+**4. Ydelse:** ved 40 emner i minuttet kunne 405 minutter give 16.200 emner. 14.580 / 16.200 = `90,0%`.
 
-Driftstid:
+**5. Kvalitet:** 14.580 minus 292 kasserede giver 14.288 gode emner. 14.288 / 14.580 = `98,0%`.
 
-`430 - 10 = 420 minutter`
+**6. OEE:** 90,0% x 90,0% x 98,0% = `79,4%`.
 
-Tilgængelighed:
+Genvejen giver det samme: 14.288 gode emner x 1,5 sekund er 21.432 sekunder, eller 357,2 minutter. 357,2 / 450 = 79,4%. Af de 450 planlagte minutter gav kun omkring 357 gode emner. Tilgængelighed og ydelse taber lige meget her. Næste skridt er derfor at holde stopårsagerne og de korte stop op mod hinanden.
 
-`420 / 430 = 97,67%`
+## Hvilke fejl laver man tit, når man regner OEE ud?
 
-### Ydelse
-
-Ideel produktion:
-
-`420 x 400 = 168.000 emner`
-
-Ydelse:
-
-`150.000 / 168.000 = 89,29%`
-
-### Kvalitet
-
-Gode emner:
-
-`150.000 - 25.000 = 125.000`
-
-Kvalitet:
-
-`125.000 / 150.000 = 83,33%`
-
-### Samlet OEE
-
-`OEE = 97,67% x 89,29% x 83,33% = 72,7%`
+- **En ideel cyklustid, der er for langsom.** Bruger I gennemsnittet eller den planlagte hastighed, ser ydelsen bedre ud, end den er, og OEE kan ende over 100%. Brug den hurtigste hastighed, maskinen kan køre stabilt.
+- **De korte stop bliver ikke talt med.** Et stop på et minut eller to bliver sjældent skrevet på skiftsedlen. Så gemmer det sig i ydelsen, og ingen ved, hvad der skete.
+- **Omarbejde tæller som godt.** Kvalitet er det, der er godt første gang. Et emne, der har været to gange igennem, har kostet tiden for to.
+- **Gennemsnit af OEE på tværs af maskiner.** To maskiner på 60% og 80% giver ikke 70% tilsammen, hvis de har kørt forskellige timer. Læg tiderne og antallene sammen først, og regn så.
 
 ## Kan OEE komme over 100%?
 
-Nej. En OEE på `100%` er den perfekte produktion:
+Nej. 100% er den perfekte produktion: kun gode emner, i fuld fart, uden stop. Får I mere end 100%, er den ideelle cyklustid sat for langsomt, eller også tæller I emner med, der er lavet uden for den planlagte tid.
 
-- ingen stop
-- fuld hastighed
-- ingen fejl
+## Hvordan regner I OEE ud automatisk?
 
-## Hvad betyder tallet?
+At regne OEE ud i hånden fra skiftsedler tager tid og giver som regel et for pænt tal, fordi de korte stop og den langsomme kørsel ikke bliver skrevet ned. [OptiPeoples OEE-modul](/da/modules/production) henter køretid og antal direkte fra maskinerne og regner tilgængelighed, ydelse, kvalitet og OEE ud live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen, så I kan se, hvad der tog tiden, og ikke kun tallet.
 
-- **Under 65%**: der er meget at hente
-- **65% til 85%**: det almindelige niveau, men stadig god plads til forbedring
-- **Over 85%**: regnes generelt for verdensklasse
+Når I har tallet, viser [guiden til at hæve OEE](/da/blog/how-do-i-improve-my-oee-with-examples), hvor I skal starte.
 
-Det vigtigste ved OEE er ikke selve tallet. Det er det, tallet viser jer om, hvor I taber tid, hastighed eller kvalitet.
+## Ofte stillede spørgsmål
+
+### Hvad er formlen for OEE?
+
+OEE = tilgængelighed x ydelse x kvalitet. Tilgængeligheden er køretid / planlagt produktionstid, ydelsen er (ideel cyklustid x antal emner) / køretid, og kvaliteten er gode emner / antal emner.
+
+### Hvordan regner man OEE ud i Excel?
+
+Skriv planlagt produktionstid, køretid, ideel cyklustid, antal emner og gode emner i fem celler. Regn hver af de tre dele ud i sin egen celle med formlerne ovenfor, og gang dem sammen. Brug den samme tidsenhed hele vejen, for eksempel minutter.
+
+### Tæller pauser med i OEE?
+
+Nej. Pauser og andre planlagte stop bliver trukket ud af den planlagte produktionstid, før I regner, så de trækker ikke OEE ned. OOE og TEEP tæller dem som tabt tid.
+
+### Hvad er en god OEE?
+
+85% regnes for verdensklasse i diskret produktion. Mange fabrikker ligger omkring 60%, og 40% er almindeligt, når man lige er begyndt at måle. Se [hvad world class OEE er](/da/blog/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results).
+
+### Regner man OEE pr. maskine eller pr. linje?
+
+Begge dele kan bruges. For en linje regner I OEE på flaskehalsen eller på det, der kommer ud for enden af linjen, fordi det er det, der bestemmer, hvor meget linjen kan lave.

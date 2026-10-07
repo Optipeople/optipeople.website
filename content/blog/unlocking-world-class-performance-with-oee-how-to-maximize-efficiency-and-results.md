@@ -1,78 +1,94 @@
 ---
-title: "Unlocking World-Class Performance with OEE: How to Maximize Efficiency and Results!"
+title: "World Class OEE: What Score Is It and How to Get There"
+description: "World class OEE is 85%: 90% availability, 95% performance and 99.9% quality. What typical plants score, and how to close the gap step by step."
 date: "2023-01-04"
+updated: "2026-10-07"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/oee-improvement.png"
 ---
 
-The term OEE can be a bit of a mystery to many, but it is a practical tool for businesses that want to maximize efficiency and results. OEE stands for **Overall Equipment Effectiveness**, and it is used to measure and optimize how well machines perform in a production process.
+A world class OEE score is 85%. The benchmark comes from 90% availability, 95% performance and 99.9% quality, multiplied together. Few plants reach it: a typical discrete manufacturer runs around 60%, and 40% is common when a plant first starts measuring. So 85% is a long-term goal, and the right first target is a few points above where you are today.
 
-## Benefits of OEE
+## What is a world class OEE score?
 
-OEE is a key performance indicator built from three factors:
+**85%.** It is the standard benchmark for discrete manufacturing, and it is built from three factor targets:
 
-- availability
-- performance
-- quality
+```text
+World class OEE = Availability x Performance x Quality
+                = 90%          x 95%         x 99.9%
+                = 85.4%
+```
 
-Tracking these factors helps businesses understand how machines are running and where improvement is needed. The result can be higher efficiency, stronger productivity, and better customer satisfaction.
+| Factor | World class | What it means in practice |
+|---|---:|---|
+| Availability | 90% | Unplanned stops and changeovers take no more than 1 hour in 10 of planned time |
+| Performance | 95% | The machine runs close to its ideal speed, with few short stops |
+| Quality | 99.9% | About 1 part in 1,000 is scrapped or reworked |
+| OEE | 85% | 85% of planned production time makes good parts at full speed |
 
-OEE also helps identify inefficiencies and waste in production. In industries where waste is a major issue, this makes it easier to pinpoint the source and reduce it.
+The benchmark goes back to Seiichi Nakajima and Total Productive Maintenance (TPM). For how OEE itself is defined, see [what OEE is](/blog/what-is-oee).
 
-Another benefit is safety. By tracking machine performance over time, businesses can identify malfunctions and potential hazards before they create accidents or extended downtime.
+## What OEE do most plants have?
 
-## OEE Statistics
+| OEE score | What it means |
+|---|---|
+| 85% | World class for discrete manufacturing |
+| 60% | Typical for discrete manufacturers, with plenty of room to improve |
+| 40% | Common when a plant first starts measuring |
 
-According to a study from the Association for Manufacturing Excellence, the average OEE score for manufacturers is around `75%`. That means many production environments are still operating below their full potential.
+In the OptiPeople Data Platform, factories that have just started measuring often see 30 to 40%. That is rarely because they run worse than others. It is because automatic measurement shows the short stops and slow running that shift sheets never recorded.
 
-In OptiPeople Data Platform, it is also common to see OEE values in the `30-40%` range for factories that are just beginning to work systematically with OEE.
+## Is 85% OEE the right target for every plant?
 
-Production losses caused by inefficiency can often range from `10-30%`, which means companies may be losing a substantial share of profit due to avoidable issues.
+No. 85% is a benchmark for discrete manufacturing with stable, repeating products. It fits less well when:
 
-## Strategies for Improving OEE
+- **You make many products in small batches.** More changeovers mean lower availability, even when each changeover is fast.
+- **You run a continuous process.** Process industry often aims higher than 85%, because there are few changeovers.
+- **The machine is not the bottleneck.** A machine that waits for others will have a low OEE no matter what, and raising it gains nothing.
 
-The first step is to identify the source of inefficiency by looking at availability, performance, and quality.
+A better target is your own number plus a few points, on the bottleneck machine first. Compare a machine with itself over time, not with a benchmark from another industry.
 
-Once the source is known, businesses can act:
+## Why does world class OEE matter?
 
-- fix machine malfunctions
-- improve maintenance practices
-- train employees on machine operation
-- invest in better technology and monitoring
+Because the gap between your OEE and 85% is capacity you already own. A machine at 60% that reaches 75% makes 25% more good parts in the same hours, with no new machine, no extra shift and no overtime.
 
-The point is not just to measure OEE, but to use it as the basis for continuous operational improvement.
+**Example:** a line planned for 80 hours a week runs at 60% OEE, which is 48 hours of good production. At 85% it would be 68 hours. The 20 hours in between are the size of the prize, and the three factors show where they are hidden.
 
-## World-Class OEE
+## How do you get to world class OEE?
 
-World-class OEE is generally used to describe a production process running at very high efficiency.
+1. **Measure automatically.** Manual numbers miss short stops and slow running, so you would be aiming at the wrong losses.
+2. **Start with the bottleneck.** That is where an extra hour becomes extra output.
+3. **Compare each factor with its world class target.** If availability is 75% and performance is 92%, the gap is in availability.
+4. **Register stop causes and fix the biggest first.** A few causes usually take most of the time.
+5. **Shorten changeovers** with SMED, and keep settings stable after start-up to cut scrap.
+6. **Move maintenance into planned time,** so breakdowns stop taking production hours.
+7. **Raise the target as each level holds.** World class is reached in steps, not in one jump.
 
-**World-class OEE typically refers to a score of `85-90%`.**
+The [guide to improving OEE](/blog/how-do-i-improve-my-oee-with-examples) goes through each step with examples.
 
-That means almost all machines in the process are operating close to their best practical performance level.
+## How do you track progress toward world class OEE?
 
-## How to Achieve World-Class OEE
+The [OptiPeople OEE module](/modules/production) collects run time, counts and stops straight from the machines and shows availability, performance, quality and OEE live per machine, line and shift. You see each factor against its target, and the stop causes registered by the operators show what is holding the number back.
 
-Achieving world-class OEE takes work, but it is possible.
+## FAQ
 
-The most effective path usually includes:
+### What is world class OEE?
 
-- identifying the real sources of inefficiency
-- improving maintenance and machine reliability
-- training employees
-- investing in better digital tools
+World class OEE is 85%, based on 90% availability, 95% performance and 99.9% quality. It is the standard benchmark for discrete manufacturing.
 
-It can also be valuable to use OEE software, which automates data collection and gives clearer insight into where losses occur.
+### What is a good OEE score?
 
-## OEE Software
+85% is world class. Around 60% is typical for discrete manufacturers, and 40% is common when a plant starts measuring. A good score is one that is rising on your bottleneck.
 
-OEE software helps businesses track and optimize production performance with less manual work.
+### What is the average OEE in manufacturing?
 
-It can:
+Around 60% for discrete manufacturers. Plants that have just started measuring automatically often see 30 to 40%, because short stops and slow running become visible.
 
-- automate OEE calculations
-- surface root causes of inefficiency
-- provide better production visibility
-- support more informed decision-making
+### Can OEE be 100%?
 
-For teams that want to move from assumptions to facts, OEE software becomes a practical tool for improving efficiency over time.
+Only in theory. 100% means only good parts, at full speed, with no stops at all. If a calculation gives more than 100%, the ideal cycle time is set too slow. See [how to calculate OEE](/blog/how-to-calculate-oee-for-manufacturing-and-maintenance).
+
+### How long does it take to reach world class OEE?
+
+Usually years, not months. The first 5 to 10 points often come within months of starting to measure. The last points need stable processes, fast changeovers and planned maintenance working together.
