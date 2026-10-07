@@ -5,6 +5,9 @@
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 
 ## Lately
+- 2026-10-07 Round after the OEE rewrites landed: images in progress, merges and launch checklist wait on the human. Nothing to file or cast.
+- 2026-10-07 Merges quest session asked for the per-row approval. Noted the table and handed it to the human with one question: approve all, or name rows to skip.
+- 2026-10-07 Round after the CI redirect check landed: images, OEE rewrites and merges are in progress, launch checklist still waits on the human. Nothing to file or cast.
 - 2026-10-07 Round after the monday merge fix landed: images, OEE rewrites and CI redirect check are in progress, merges quest not started. Launch checklist still waits on the human. Nothing to file or cast.
 - 2026-10-07 Monday message quest hit a merge conflict with the spam guard commit. Gave the fix-up quest sonnet and told it to keep both: guard first, then the message as a monday update, one length cap.
 - 2026-10-07 Round after the contact form guard landed: five new quests (images, OEE rewrites, CI redirect check, merges, monday message) had no Model line, gave each sonnet. Noted that the merges quest needs the human's per-row yes or no before deleting posts.
@@ -29,5 +32,5 @@
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
 ## Open
-- Merges and retirements quest: when its session starts and asks, hand the per-row yes or no in docs/seo/content-inventory.md to the human with quest blocked.
+- Merges and retirements quest: handed to the human (approve all or name rows to skip). When answered, the session goes on; check that redirects land in lib/legacy-redirects.ts and the fixture.
 - Launch day SEO checklist: once the human says the site is live on optipeople.com, file agent quests for the 301 crawl of the top 200 old URLs and the week 1 and week 4 pull.mjs comparisons.
