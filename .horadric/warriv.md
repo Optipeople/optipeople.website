@@ -5,6 +5,7 @@
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 
 ## Lately
+- 2026-10-07 Round after the image prune landed: only the merges (awaiting the human's row approval) and the launch checklist remain, both with the human. No aim, no ship stone; nothing to file or cast.
 - 2026-10-07 Round after the image shrink landed: prune quest in progress, merges and launch checklist still wait on the human. Nothing to file or cast.
 - 2026-10-07 Round after the OEE rewrites landed: images in progress, merges and launch checklist wait on the human. Nothing to file or cast.
 - 2026-10-07 Merges quest session asked for the per-row approval. Noted the table and handed it to the human with one question: approve all, or name rows to skip.
