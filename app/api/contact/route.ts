@@ -12,8 +12,12 @@ type ContactPayload = {
   name?: unknown
   email?: unknown
   phone?: unknown
+  message?: unknown
   website?: unknown
 }
+
+/** Matches the textarea's maxLength, so a tampered payload can't post an essay. */
+const MAX_MESSAGE_LENGTH = 5000
 
 export async function POST(request: Request) {
   try {
@@ -108,7 +112,16 @@ export async function POST(request: Request) {
       )
     }
 
-    return NextResponse.json({ success: true, id: data.data.create_item.id })
+    const itemId = data.data.create_item.id
+
+    // The board has no long-text column, so the message goes on as an update.
+    // Best-effort: a failed note must never cost us the lead itself.
+    const text = getString(payload.message).trim().slice(0, MAX_MESSAGE_LENGTH)
+    if (text) {
+      await addMessageNote(itemId, text, token)
+    }
+
+    return NextResponse.json({ success: true, id: itemId })
   } catch (err) {
     console.error("Contact API error:", err)
     return NextResponse.json(
@@ -120,4 +133,41 @@ export async function POST(request: Request) {
 
 function getString(value: unknown) {
   return typeof value === "string" ? value : ""
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+}
+
+async function addMessageNote(itemId: string, message: string, token: string) {
+  const query = `mutation ($itemId: ID!, $body: String!) {
+    create_update (item_id: $itemId, body: $body) {
+      id
+    }
+  }`
+
+  // Update bodies are HTML: escape the visitor's text and keep their line breaks.
+  const body = escapeHtml(message).replace(/\r?\n/g, "<br>")
+
+  try {
+    const response = await fetch(MONDAY_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: token,
+        "API-Version": "2024-10",
+      },
+      body: JSON.stringify({ query, variables: { itemId, body } }),
+    })
+    const raw = await response.text()
+    if (!response.ok || raw.includes('"errors"') || raw.includes('"error_code"')) {
+      console.error("Contact message note failed:", raw)
+    }
+  } catch (error) {
+    console.error("Contact message note error:", error)
+  }
 }

@@ -139,6 +139,7 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={5}
+          maxLength={5000}
           className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground text-base placeholder:text-muted-foreground resize-y focus:outline-none focus:ring-2 focus:ring-ring/50 focus:border-ring transition-colors"
           placeholder={t("messagePlaceholder")}
         />
