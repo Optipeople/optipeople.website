@@ -77,7 +77,7 @@ const services: LocalizedPage<StandardPage>[] = [
         visualTitle: "Advisory ends in something you can decide on",
         visualBody:
           "A mapped process, an assessment of what the site supports, a costed business case, and a scoped first step. If it goes ahead, this is the picture the build is aimed at.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         visualAlt: "OptiPeople efficiency report with availability, performance and OEE against target",
         metricsTitle: "What to Expect",
         metrics: [
@@ -146,7 +146,7 @@ const services: LocalizedPage<StandardPage>[] = [
         visualTitle: "Rådgivningen ender i noget, I kan beslutte ud fra",
         visualBody:
           "I får processen kortlagt, en vurdering af, hvad fabrikken kan bære, en business case med tal på og et afgrænset første skridt. Bliver projektet til noget, er det her, I sigter efter.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         visualAlt: "OptiPeople-rapport med tilgængelighed, ydelse og OEE holdt op mod målet",
         metricsTitle: "Hvad I kan forvente",
         metrics: [
@@ -543,7 +543,7 @@ const services: LocalizedPage<StandardPage>[] = [
         visualTitle: "Agents that work across your entire stack",
         visualBody:
           "From ERP and MES to email and spreadsheets, AI agents connect to your systems and act on data in real time.",
-        visualImage: "/images/report1.png",
+        visualImage: "/images/report1.webp",
         visualAlt: "AI-analyse på produktionsrapport",
         metricsTitle: "Typical Results",
         metrics: [
@@ -624,7 +624,7 @@ const services: LocalizedPage<StandardPage>[] = [
         visualTitle: "Agenter, der arbejder i alle jeres systemer",
         visualBody:
           "Fra ERP og MES til mail og regneark. Agenterne bliver koblet på jeres data og processer, med klare rammer for, hvad de må.",
-        visualImage: "/images/report1.png",
+        visualImage: "/images/report1.webp",
         visualAlt: "AI-analyse på produktionsrapport",
         metricsTitle: "Typiske resultater",
         metrics: [

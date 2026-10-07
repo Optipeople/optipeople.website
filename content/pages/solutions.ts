@@ -85,7 +85,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "One dashboard for your entire operation",
         visualBody:
           "From individual machines to plant-wide KPIs, drill into the data that matters, at any level.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
         visualAlt:
           "OptiPeople manufacturing report showing OEE gauges, a shift timeline and stop distribution",
         metricsTitle: "Typical Results",
@@ -147,7 +147,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "Hele driften på én skærm",
         visualBody:
           "Fra den enkelte maskine til nøgletallene for hele fabrikken. Gå ned i tallene på det niveau, I har brug for.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
         visualAlt: "Produktionsrapport med OEE, skiftets tidslinje og stopfordeling",
         metricsTitle: "Typiske resultater",
         metrics: [
@@ -381,7 +381,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "One view of every machine you service",
         visualBody:
           "Machine health, service history, and upcoming maintenance across your entire installed base.",
-        visualImage: "/images/report-mockrup-3.png",
+        visualImage: "/images/report-mockrup-3.webp",
         visualAlt:
           "OptiPeople machine health dashboard showing temperature, energy consumption, and performance trend data",
         metricsTitle: "Typical Results",
@@ -449,7 +449,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "Ét overblik over alle de maskiner, I servicerer",
         visualBody:
           "Hvordan maskinerne har det, hvad der er lavet på dem, og hvad der står for tur. For alle de maskiner, I har ude hos kunderne.",
-        visualImage: "/images/report-mockrup-3.png",
+        visualImage: "/images/report-mockrup-3.webp",
         visualAlt: "Dashboard over maskinernes tilstand",
         metricsTitle: "Typiske resultater",
         metrics: [

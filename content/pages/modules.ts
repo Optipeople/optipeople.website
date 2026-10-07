@@ -242,7 +242,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Quality data connected to production",
         visualBody:
           "Every inspection, deviation, and corrective action linked to the machine, batch, and operator that produced it.",
-        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.webp",
         visualAlt: "Quality checks and deviations registered in OptiPeople Data Platform",
         metricsTitle: "Typical Results",
         metrics: [
@@ -305,7 +305,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Kvaliteten hænger sammen med produktionen",
         visualBody:
           "Hver kontrol, hver afvigelse og hver handling hænger på den maskine, den batch og den operatør, den kom fra.",
-        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.webp",
         visualAlt: "Kvalitetskontroller og afvigelser registreret i OptiPeople Data Platform",
         metricsTitle: "Typiske resultater",
         metrics: [
@@ -392,7 +392,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Maintenance planning made visible",
         visualBody:
           "See upcoming tasks, overdue items, and machine health status at a glance across your entire facility.",
-        visualImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
+        visualImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
         visualAlt: "Maintenance tasks in OptiPeople Data Platform",
         metricsTitle: "Typical Results",
         metrics: [
@@ -461,7 +461,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Opgaver, udstyr og historik på samme skærm",
         visualBody:
           "Se den service, der venter, de opgaver, der er i gang, og det, der er lavet før.",
-        visualImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
+        visualImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
         visualAlt: "Vedligeholdsopgaver i OptiPeople Data Platform",
         metricsTitle: "Typiske resultater",
         metrics: [
@@ -548,7 +548,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Energy data meets production data",
         visualBody:
           "See energy consumption alongside production output, machine status, and environmental conditions in one unified view.",
-        visualImage: "/images/report-mockrup-3.png",
+        visualImage: "/images/report-mockrup-3.webp",
         visualAlt: "Energy and telemetry dashboard",
         metricsTitle: "Typical Results",
         metrics: [
@@ -611,7 +611,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Energi holdt op mod det, I producerer",
         visualBody:
           "Sammenlign forbruget med maskinstatus, produktionstal og skift, og find ud af, hvad der trækker strømmen.",
-        visualImage: "/images/report-mockrup-3.png",
+        visualImage: "/images/report-mockrup-3.webp",
         visualAlt: "Dashboard med energi og målinger",
         metricsTitle: "Typiske resultater",
         metrics: [
@@ -1003,7 +1003,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "The order list the floor actually works from",
         visualBody:
           "Priority, product, quantity, due date, station, and readiness in one list, whether the orders came from an ERP or were created here.",
-        visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
+        visualImage: "/images/Mockups/Work-Order-Management-Orders.webp",
         visualAlt: "The work order list on the panel at the machine",
         metricsTitle: "What Changes",
         metrics: [
@@ -1084,7 +1084,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Den ordreliste, gulvet arbejder efter",
         visualBody:
           "Prioritet, vare, antal, dato, station og om den kan startes, i én liste. Uanset om ordrerne kom fra et ERP eller blev oprettet her.",
-        visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
+        visualImage: "/images/Mockups/Work-Order-Management-Orders.webp",
         visualAlt: "Arbejdsordrer i OptiPeople Data Platform",
         metricsTitle: "Hvad ændrer sig",
         metrics: [
@@ -1343,7 +1343,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "One row per entity, grouped by route",
         visualBody:
           "The board is grouped by production route and broken out per entity underneath it, so a drag from one station to another is a real decision rather than a line moving on a chart. Progress reports itself from the floor as the order moves along the route.",
-        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.png",
+        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
         visualAlt: "Production planning overview in OptiPeople Data Platform",
         metricsTitle: "What Changes",
         metrics: [
@@ -1412,7 +1412,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Én række pr. enhed, samlet under sin rute",
         visualBody:
           "Tavlen er grupperet efter produktionsrute og delt op pr. enhed nedenunder, så når I trækker en ordre fra én station til en anden, er det en rigtig beslutning og ikke bare en streg, der flytter sig. Fremdriften melder sig selv fra gulvet, mens ordren bevæger sig ned ad ruten.",
-        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.png",
+        visualImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
         visualAlt: "Overblik over produktionsplanlægning i OptiPeople Data Platform",
         metricsTitle: "Hvad ændrer sig",
         metrics: [

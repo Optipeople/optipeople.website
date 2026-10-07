@@ -16,7 +16,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "See Where Production Time Is Lost",
         heroBody:
           "Track OEE live and understand performance across shifts, lines, and machines, based on real production data, not guesswork.",
-        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         heroImageAlt:
           "OptiPeople efficiency report with live availability, performance and OEE gauges against target",
         valueTitle: "Your production data should work as hard as your team",
@@ -38,7 +38,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "See What Happened, Hour by Hour",
             description:
               "Color-coded timelines show running, stopped, setup, and idle states for every machine. Spot patterns that shift reports miss, like the 20 minutes lost to changeover every morning that nobody talks about.",
-            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
             imageAlt:
               "Timeline chart showing running, stopped, setup and idle states across a full shift",
           },
@@ -46,7 +46,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Compare Shifts, Lines, and Machines",
             description:
               "Side-by-side performance data across any dimension you care about. See which shifts consistently outperform, which lines underdeliver, and where the gap between best and worst is widest.",
-            image: "/images/report-mockup2.png",
+            image: "/images/report-mockup2.webp",
             imageAlt:
               "Bar chart report comparing production performance across shifts and lines",
           },
@@ -54,7 +54,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "The full picture, from floor to management",
         showcaseBody:
           "Operators see their machine. Team leads see their line. Managers see the plant. Same data, right level of detail.",
-        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
+        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.webp",
         showcaseAlt:
           "OptiPeople production counter report with produced and rejected totals and an hourly output trend",
         metrics: [
@@ -93,7 +93,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Se, hvor produktionstiden går tabt",
         heroBody:
           "Følg OEE live, og se, hvordan hvert skift, hver linje og hver maskine klarer sig. Tallene kommer fra produktionen selv, ikke fra mavefornemmelser.",
-        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         heroImageAlt: "OptiPeople effektivitetsrapport med tilgængelighed, ydelse og OEE mod målet",
         valueTitle: "Tallene nytter mest, mens skiftet stadig kører",
         valueBody:
@@ -113,21 +113,21 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Se, hvad der skete, time for time",
             description:
               "Farvekodede tidslinjer viser, hvornår hver maskine kørte, stod stille, blev stillet om eller ventede. Så ser I også de 20 minutter til omstilling hver morgen, som ingen taler om.",
-            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
             imageAlt: "Tidslinje med kørsel, stop, omstilling og tomgang hen over et helt skift",
           },
           {
             title: "Sammenlign skift, linjer og maskiner",
             description:
               "Se tallene side om side: hvilke skift der klarer sig bedst, hvilke linjer der halter, og hvor afstanden mellem bedst og dårligst er størst.",
-            image: "/images/report-mockup2.png",
+            image: "/images/report-mockup2.webp",
             imageAlt: "Rapport med sammenligning af skift",
           },
         ],
         showcaseTitle: "Hele billedet, fra gulvet til ledelsen",
         showcaseBody:
           "Operatøren ser sin maskine. Teamlederen ser sin linje. Ledelsen ser fabrikken. Det er de samme tal, bare i den detaljegrad, hver især har brug for.",
-        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
+        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.webp",
         showcaseAlt: "Rapport med producerede og kasserede emner samt output pr. time",
         metrics: [
           { metric: "15-25%", label: "Bedre OEE det første år" },
@@ -190,7 +190,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Every Stop Gets a Reason",
             description:
               "Operators pick from a predefined list of stop causes, tailored to each machine. Setup, tool change, material wait, malfunction. Each entry captures the reason, duration, and optional notes. The result is structured data, not free-text guesswork.",
-            image: "/images/operatorpanel2.png",
+            image: "/images/operatorpanel2.webp",
             imageAlt:
               "Detailed stop log showing stop reasons, telemetry data, and operator notes across shifts",
           },
@@ -206,7 +206,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "Stop data feeds the bigger picture",
         showcaseBody:
           "Every registered stop flows into your production dashboard. Machine status, timelines, and performance metrics update in real time, giving the full story behind the numbers.",
-        showcaseImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        showcaseImage: "/images/Mockups/Report-Individual-Events-Desktop.webp",
         showcaseAlt:
           "Live production status dashboard showing machine states, timeline, and unit per hour chart",
         metrics: [
@@ -265,7 +265,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Hvert stop får en årsag",
             description:
               "Operatøren vælger årsagen fra en fast liste, der passer til lige den maskine: omstilling, værktøjsskift, venter på materiale, fejl. Så kan I regne på tallene bagefter i stedet for at tyde fritekst.",
-            image: "/images/operatorpanel2.png",
+            image: "/images/operatorpanel2.webp",
             imageAlt: "Stoplog på operatørpanel",
           },
           {
@@ -279,7 +279,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "Stoppene hænger sammen med resten af tallene",
         showcaseBody:
           "Hvert registreret stop lander i produktionsdashboardet, så I ser tallene og forklaringen bag dem side om side.",
-        showcaseImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        showcaseImage: "/images/Mockups/Report-Individual-Events-Desktop.webp",
         showcaseAlt: "Dashboard med stopdata",
         metrics: [
           { metric: "40%", label: "Mindre uplanlagt nedetid" },
@@ -320,7 +320,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Fix Things Before They Break",
         heroBody:
           "Plan and execute preventive maintenance based on real usage and condition. Assign tasks, track completion, and turn reactive firefighting into structured prevention.",
-        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
+        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
         heroImageAlt:
           "Tasks Management showing maintenance tasks triggered by counters and run hours, beside the lists they draw on",
         valueTitle: "Unplanned stops are the most expensive kind",
@@ -342,7 +342,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Maintenance Driven by Data, Not Calendars",
             description:
               "Schedule maintenance based on actual machine usage, run hours, and condition signals, not fixed intervals. When a threshold is reached, the task appears automatically. You maintain what needs it, when it needs it.",
-            image: "/images/Mockups/Tasls-Maintenance.png",
+            image: "/images/Mockups/Tasls-Maintenance.webp",
             imageAlt:
               "Task list where the When column reads after counter reached and production hour reached rather than a fixed date",
           },
@@ -391,7 +391,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Løs det, før det bryder ned",
         heroBody:
           "Planlæg vedligehold efter, hvor meget maskinen faktisk har kørt, og hvordan den har det. Fordel opgaverne, se dem blive lavet, og slip for at slukke ildebrande.",
-        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.png",
+        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
         heroImageAlt:
           "Opgavestyring med vedligeholdsopgaver, der udløses af tællere og driftstimer, ved siden af de lister, de trækker på",
         valueTitle: "Et uplanlagt stop koster mest",
@@ -405,7 +405,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Efter brug, ikke efter kalenderen",
             description:
               "Planlæg service efter driftstimer og antal cyklusser. Når grænsen er nået, dukker opgaven op af sig selv. Så laver I vedligehold på det, der trænger, når det trænger.",
-            image: "/images/Mockups/Tasls-Maintenance.png",
+            image: "/images/Mockups/Tasls-Maintenance.webp",
             imageAlt:
               "Opgavelisten med vedligehold planlagt efter tællere og driftstimer",
           },
@@ -420,7 +420,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Historik pr. maskine",
             description:
               "Se, hvad der før er lavet på maskinen, og hvilke fejl der bliver ved med at komme igen.",
-            image: "/images/backoffice1.png",
+            image: "/images/backoffice1.webp",
             imageAlt: "Backoffice-historik",
           },
         ],
@@ -463,7 +463,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Catch Quality Issues Where They Start",
         heroBody:
           "Register quality data at the machine, trace deviations back to their source, and build accountability into every shift.",
-        heroImage: "/images/backoffice1.png",
+        heroImage: "/images/backoffice1.webp",
         heroImageAlt:
           "OptiPeople quality tracking interface showing audit trail and device management",
         valueTitle: "Quality problems found late cost ten times more",
@@ -477,7 +477,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Register Quality Events at the Machine",
             description:
               "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine, order, and shift, so nothing gets lost between the floor and the office.",
-            image: "/images/operatorpanel2.png",
+            image: "/images/operatorpanel2.webp",
             imageAlt:
               "Operator panel showing detailed event log with quality notes, telemetry data, and shift information",
           },
@@ -485,7 +485,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Trace Every Deviation to Its Source",
             description:
               "When quality drops, you need to know why, fast. Filter by machine, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
-            image: "/images/report1.png",
+            image: "/images/report1.webp",
             imageAlt:
               "OptiPeople report showing OEE breakdown with availability, performance, and quality metrics alongside a timeline chart",
           },
@@ -493,7 +493,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Full Audit Trail, Always Available",
             description:
               "Every quality event, every change, every action is logged with who did what and when. Search and filter the complete activity history across machines and sites. Ready for audits, ready for continuous improvement.",
-            image: "/images/backoffice1.png",
+            image: "/images/backoffice1.webp",
             imageAlt:
               "Admin panel showing activity log with date range filters and a device list with machine IDs and locations",
           },
@@ -534,7 +534,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Fang fejlen, hvor den opstår",
         heroBody:
           "Registrer kvaliteten ude ved maskinen, og følg hver afvigelse tilbage til det skift, den batch og den maskine, den kom fra.",
-        heroImage: "/images/backoffice1.png",
+        heroImage: "/images/backoffice1.webp",
         heroImageAlt: "Kvalitetsstyring",
         valueTitle: "Jo senere I opdager fejlen, jo dyrere bliver den",
         valueBody:
@@ -546,19 +546,19 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Digitale skemaer",
             description: "Guidede kontroller sikrer, at det bliver registreret ens hver gang.",
-            image: "/images/backoffice1.png",
+            image: "/images/backoffice1.webp",
             imageAlt: "Digital formular",
           },
           {
             title: "Afvigelser og handlinger",
             description: "Skriv afvigelsen ned, og følg handlingen hele vejen, til den er lukket.",
-            image: "/images/report-mockup2.png",
+            image: "/images/report-mockup2.webp",
             imageAlt: "Afvigelsesrapport",
           },
           {
             title: "Sporbarhed",
             description: "Knyt kvalitetstjek og afvigelser til batch, maskine og skift.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
             imageAlt: "Sporbarhedsrapport med de enkelte registreringer pr. ordre og skift",
           },
         ],
@@ -615,7 +615,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "OEE Reports That Build Themselves",
             description:
               "Availability, performance, and quality broken down by machine, line, shift, or time period. Reports generate automatically from live production data. Pick a week, pick a machine, and the numbers are there.",
-            image: "/images/report1.png",
+            image: "/images/report1.webp",
             imageAlt:
               "OptiPeople report showing OEE gauges for availability, performance, and quality with a color-coded timeline chart",
           },
@@ -623,7 +623,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Compare Anything Against Anything",
             description:
               "Side-by-side bar charts across shifts, lines, weeks, or machines. See where performance diverges and where it converges. The comparisons that used to take a full afternoon in Excel now take one click.",
-            image: "/images/report-mockup2.png",
+            image: "/images/report-mockup2.webp",
             imageAlt:
               "Bar chart report comparing production metrics across different time periods and categories",
           },
@@ -631,7 +631,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "From Raw Data to Shared Insight",
             description:
               "Save report templates, schedule automatic delivery, and share with stakeholders who need the numbers but not the system. Management gets a weekly summary. Team leads get daily shift reports. Same data, right format.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
             imageAlt:
               "OptiPeople event report listing individual registered stops with cause, duration and shift",
           },
@@ -639,7 +639,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "Every angle of your production, one system",
         showcaseBody:
           "OEE dashboards, stop analysis, shift comparisons, and energy reports all generated from the same live data source.",
-        showcaseImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
+        showcaseImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
         showcaseAlt:
           "OptiPeople OEE report with availability, performance and quality broken down over a week",
         metrics: [
@@ -696,13 +696,13 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Hvor I taber mest",
             description: "Find de stop, de produkter og de linjer, der koster mest.",
-            image: "/images/report-mockup2.png",
+            image: "/images/report-mockup2.webp",
             imageAlt: "Tabsanalyse",
           },
           {
             title: "Klik dig ned i tallene",
             description: "Gå fra hele fabrikken ned til den enkelte maskine, det enkelte skift og det enkelte stop.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
             imageAlt: "Rapport med de enkelte registrerede stop, årsag, varighed og skift",
           },
         ],
@@ -745,7 +745,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Know What Your Machines Are Feeling",
         heroBody:
           "Connect energy, vibration, flow, and temperature directly to production. Spot waste, catch anomalies early, and find optimization opportunities hiding in the data.",
-        heroImage: "/images/report-mockrup-3.png",
+        heroImage: "/images/report-mockrup-3.webp",
         heroImageAlt:
           "OptiPeople energy dashboard showing temperature, kWh readings, and OEE performance gauges",
         valueTitle: "Energy and condition data without a separate system",
@@ -775,7 +775,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Sensor Data Meets Production Data",
             description:
               "Energy and telemetry don't live in isolation. OptiPeople connects sensor readings directly to OEE, stop events, and shift data, so you can answer questions like: how much energy did that unplanned stop cost? Which shift runs most efficiently?",
-            image: "/images/report-mockrup-3.png",
+            image: "/images/report-mockrup-3.webp",
             imageAlt:
               "Dashboard combining telemetry readings with OEE gauges and production performance metrics",
           },
@@ -816,7 +816,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Se, hvad maskinerne bruger, og hvad de fortæller",
         heroBody:
           "Kobl energimålere og sensorer sammen med produktionen, så spild, slid og det, der stikker ud, bliver til at få øje på.",
-        heroImage: "/images/report-mockrup-3.png",
+        heroImage: "/images/report-mockrup-3.webp",
         heroImageAlt: "Energi og målinger",
         valueTitle: "Energi og maskinernes tilstand uden et ekstra system",
         valueBody:
@@ -840,7 +840,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Det, der stikker ud",
             description: "Find de mønstre, der peger på spild, slid eller en fejl på vej.",
-            image: "/images/report-mockrup-3.png",
+            image: "/images/report-mockrup-3.webp",
             imageAlt: "Rapport over afvigelser",
           },
         ],
@@ -883,7 +883,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "AI Trained on Your Factory",
         heroBody:
           "Ask questions, detect patterns, and support decisions using AI that knows your machines, your shifts, and your production history.",
-        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         heroImageAlt:
           "Live OptiPeople efficiency report of the kind the AI assistant answers questions from",
         valueTitle: "Your best analyst can't look at everything at once",
@@ -897,7 +897,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Ask Your Data a Question",
             description:
               "Type a question in plain language and get an answer drawn from your production data. \"What caused the most downtime last week?\" \"Which line had the best OEE this month?\" No query language, no analyst needed, just the answer.",
-            image: "/images/report1.png",
+            image: "/images/report1.webp",
             imageAlt:
               "OptiPeople report showing OEE breakdown and timeline that AI can analyze and summarize",
           },
@@ -905,7 +905,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Patterns Humans Miss",
             description:
               "AI scans across machines, shifts, and time periods to surface correlations that are invisible in manual review. A slow drift in cycle time that predicts a breakdown. An energy pattern that signals a worn tool. The system flags it before it becomes a problem.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
             imageAlt:
               "Event report showing the recurring stop causes a pattern analysis is built from",
           },
@@ -913,7 +913,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Decisions Backed by Evidence",
             description:
               "Every AI insight links back to the underlying data. No black boxes. When the copilot suggests focusing on a specific machine or shift, you can drill into the exact numbers and timeline that support the recommendation.",
-            image: "/images/Mockups/Report-Production-Counters-Desktop.png",
+            image: "/images/Mockups/Report-Production-Counters-Desktop.webp",
             imageAlt:
               "Production status dashboard showing real-time machine states and performance data backing AI recommendations",
           },
@@ -954,7 +954,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "AI, der kender jeres fabrik",
         heroBody:
           "Spørg løs, og få svar fra en AI, der kender jeres maskiner, jeres skift og jeres historik. Den finder mønstrene og hjælper jer med at beslutte.",
-        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         heroImageAlt: "Live effektivitetsrapport, som AI-assistenten svarer ud fra",
         valueTitle: "Selv den bedste analytiker kan ikke se det hele på én gang",
         valueBody:
@@ -966,21 +966,21 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Spørg jeres data",
             description: "Skriv spørgsmålet med almindelige ord, f.eks. »Hvad gav mest nedetid i sidste uge?«, og få svaret med tallene bag.",
-            image: "/images/report1.png",
+            image: "/images/report1.webp",
             imageAlt: "Rapport til AI-analyse",
           },
           {
             title: "Mønstre, mennesker overser",
             description:
               "Den finder sammenhænge mellem cyklustid, energi, kassation og nedetid, som ingen ville opdage ved at gå tallene igennem i hånden. Og den siger til, før det bliver et problem.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
             imageAlt: "Rapport med de gentagne stopårsager, mønstrene bygger på",
           },
           {
             title: "Beslutninger med belæg",
             description:
               "Når AI'en peger på en maskine eller et skift, kan I klikke jer ned i de tal og den tidslinje, forslaget bygger på.",
-            image: "/images/Mockups/Report-Production-Counters-Desktop.png",
+            image: "/images/Mockups/Report-Production-Counters-Desktop.webp",
             imageAlt: "Dashboard med tallene bag",
           },
         ],

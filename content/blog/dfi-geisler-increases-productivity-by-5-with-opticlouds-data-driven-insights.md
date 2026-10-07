@@ -3,7 +3,7 @@ title: "DFI Geisler: Increases Productivity by 5% with OptiPeople Data Platformâ
 date: "2025-01-08"
 author: "OptiPeople Team"
 category: "Cases"
-image: "/images/blog and case/dfi-geisler-hero.png"
+image: "/images/blog and case/dfi-geisler-hero.jpg"
 customer: "DFI Geisler"
 metric: "+5%"
 metricLabel: "productivity over two years"

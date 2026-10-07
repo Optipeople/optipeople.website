@@ -3,7 +3,7 @@ title: "The interplay between OptiPeople Data Platform and iFix from General Ele
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
-image: "/images/blog/fiberline-ifix.png"
+image: "/images/blog/fiberline-ifix.jpg"
 customer: "OptiPeople Data Platform × iFix"
 metricLabel: "SCADA integration"
 outcome: "OptiPeople Data Platform structures machine and OEE data, then feeds it into a GE iFix SCADA environment for wider monitoring."

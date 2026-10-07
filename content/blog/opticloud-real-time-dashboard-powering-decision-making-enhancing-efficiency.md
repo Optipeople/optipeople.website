@@ -3,7 +3,7 @@ title: "OptiPeople Data Platform Real-Time Dashboard: Powering Decision-Making, 
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog and case/blog/dashboards-v51.png"
+image: "/images/blog and case/blog/dashboards-v51.jpg"
 ---
 
 ## Instant Data, Insightful Decisions

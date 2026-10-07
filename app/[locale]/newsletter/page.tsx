@@ -253,7 +253,7 @@ export default async function NewsletterPage({
             {/* The declared 1600x1000 was not the file's 2941x1706, so
                 object-cover was quietly shaving the sides off. */}
             <FramedImage
-              src="/images/Mockups/Report-OEE-Efficiency-With-Filter.png"
+              src="/images/Mockups/Report-OEE-Efficiency-With-Filter.webp"
               alt={t.dashboardAlt}
               boxSizes="(min-width: 1024px) 64rem, 100vw"
               cap="[--frame-cap:30rem] lg:[--frame-cap:40rem]"

@@ -3,7 +3,7 @@ title: "Units Produced Per Hour (v51)"
 date: "2022-11-16"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog and case/blog/units-produced-per-hour-v51.png"
+image: "/images/blog and case/blog/units-produced-per-hour-v51.jpg"
 ---
 
 Version 51 of OptiPeople Data Platform introduced a new graph for **units produced per hour**.

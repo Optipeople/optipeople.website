@@ -3,7 +3,7 @@ title: "OptiPeople Data Platform MQTT JSON Schema"
 date: "2022-06-15"
 author: "OptiPeople Team"
 category: "Insights"
-image: "/images/blog and case/blog/opticloud-api-code.png"
+image: "/images/blog and case/blog/opticloud-api-code.jpg"
 ---
 
 This is a guide to the JSON schema used when sending data to OptiPeople Data Platform over MQTT.

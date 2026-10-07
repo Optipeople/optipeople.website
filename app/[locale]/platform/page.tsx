@@ -361,7 +361,7 @@ export default async function PlatformPage({ params }: PageProps) {
             </p>
           </div>
           <FramedImage
-            src="/images/Mockups/Report-OEE-Efficiency-With-Filter.png"
+            src="/images/Mockups/Report-OEE-Efficiency-With-Filter.webp"
             alt={t.visual.title}
             boxSizes="(min-width: 1024px) 1140px, 100vw"
             cap="[--frame-cap:30rem] lg:[--frame-cap:42rem]"

@@ -3,7 +3,7 @@ title: "Fiberline Composites - 41% reduction in unnecessary stops - 6% reduction
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
-image: "/images/blog/fiberline-results.png"
+image: "/images/blog/fiberline-results.jpg"
 customer: "Fiberline Composites"
 metric: "−41%"
 metricLabel: "unnecessary stops"

@@ -236,7 +236,7 @@ function buildModuleSlides(
         title: label,
         description: slide?.description ?? entry.blurb[locale],
         moduleMockup: mockup,
-        imageSrc: mockup ? undefined : slide?.imageSrc ?? "/images/Mockups/Dashboard-Operator-Panel-Desktop.png",
+        imageSrc: mockup ? undefined : slide?.imageSrc ?? "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
         imageAlt: mockup ? undefined : slide?.imageAlt ?? label,
         imageFit: slide?.imageFit,
         imagePosition: slide?.imagePosition,
