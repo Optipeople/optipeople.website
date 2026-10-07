@@ -6,20 +6,25 @@
 //   npm run build && npm start               in one terminal
 //   node scripts/seo/check-redirects.mjs     in another, from the repo root
 //
-//   node scripts/seo/check-redirects.mjs <dir>              read another data folder
+//   node scripts/seo/check-redirects.mjs --refresh          rebuild the fixture from seo-data/
+//   node scripts/seo/check-redirects.mjs --refresh <dir>    rebuild it from another data folder
 //   BASE_URL=http://localhost:3001 node scripts/seo/check-redirects.mjs
 //   VERCEL_BYPASS=<secret> BASE_URL=<preview url> node scripts/seo/check-redirects.mjs
 //                                                         check a protected Vercel preview
 //   node scripts/seo/check-redirects.mjs --verbose          list every path, not only failures
 //
-// A path is checked when it has a Search Console click, 5 or more Search
-// Console impressions, or any GA4 session (a session is a visit, so it counts
-// like a click). Junk that no redirect should catch is skipped; see `junk`.
-// Exits 1 when anything fails.
+// The paths come from scripts/seo/old-paths.json, which is committed so CI
+// can run the check (seo-data/ is gitignored). --refresh rebuilds it from a
+// fresh pull: a path is kept when it has a Search Console click, 5 or more
+// Search Console impressions, or any GA4 session (a session is a visit, so it
+// counts like a click). Junk that no redirect should catch is dropped; see
+// `junk`. Exits 1 when anything fails.
 
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
+const fixture = path.join(import.meta.dirname, "old-paths.json");
+const refresh = process.argv.includes("--refresh");
 const dataDir = process.argv.slice(2).find((a) => !a.startsWith("--")) || "seo-data";
 const base = (process.env.BASE_URL || "http://localhost:3000").replace(/\/$/, "");
 const minImpressions = 5;
@@ -41,36 +46,44 @@ const junk = [
   /^\/idgsrl-(android|ios)$/,
 ];
 
-const load = (name) => {
-  const file = path.join(dataDir, `${name}.json`);
-  if (!existsSync(file)) throw new Error(`Missing ${file}. Run scripts/seo/pull.mjs --pull first.`);
-  return JSON.parse(readFileSync(file, "utf8"));
-};
-
-const paths = new Map();
-const add = (p, field, value) => {
-  const row = paths.get(p) ?? { path: p, clicks: 0, impressions: 0, sessions: 0 };
-  row[field] += value;
-  paths.set(p, row);
-};
-for (const r of load("gsc-pages")) {
-  // Keep the path exactly as Google has it, trailing slash included, since
-  // that is the URL it will recrawl.
-  const url = new URL(r.page);
-  if (!/(^|\.)optipeople\.com$/.test(url.hostname)) continue;
-  const p = decodeURIComponent(url.pathname);
-  add(p, "clicks", r.clicks);
-  add(p, "impressions", r.impressions);
-}
-for (const r of load("ga-landing-pages")) {
-  if (!r.landingPage?.startsWith("/")) continue; // "(not set)"
-  add(r.landingPage, "sessions", r.sessions);
+const wanted = refresh ? fromData() : JSON.parse(readFileSync(fixture, "utf8"));
+if (refresh) {
+  const lines = wanted.sort((a, b) => a.path.localeCompare(b.path)).map((r) => `  ${JSON.stringify(r)}`);
+  writeFileSync(fixture, `[\n${lines.join(",\n")}\n]\n`);
+  console.log(`Wrote ${wanted.length} paths to ${path.relative(process.cwd(), fixture)}.`);
 }
 
-const wanted = [...paths.values()].filter(
-  (r) => (r.clicks > 0 || r.impressions >= minImpressions || r.sessions > 0) && !junk.some((re) => re.test(r.path)),
-);
-const skipped = [...paths.values()].filter((r) => junk.some((re) => re.test(r.path))).length;
+function fromData() {
+  const load = (name) => {
+    const file = path.join(dataDir, `${name}.json`);
+    if (!existsSync(file)) throw new Error(`Missing ${file}. Run scripts/seo/pull.mjs --pull first.`);
+    return JSON.parse(readFileSync(file, "utf8"));
+  };
+
+  const paths = new Map();
+  const add = (p, field, value) => {
+    const row = paths.get(p) ?? { path: p, clicks: 0, impressions: 0, sessions: 0 };
+    row[field] += value;
+    paths.set(p, row);
+  };
+  for (const r of load("gsc-pages")) {
+    // Keep the path exactly as Google has it, trailing slash included, since
+    // that is the URL it will recrawl.
+    const url = new URL(r.page);
+    if (!/(^|\.)optipeople\.com$/.test(url.hostname)) continue;
+    const p = decodeURIComponent(url.pathname);
+    add(p, "clicks", r.clicks);
+    add(p, "impressions", r.impressions);
+  }
+  for (const r of load("ga-landing-pages")) {
+    if (!r.landingPage?.startsWith("/")) continue; // "(not set)"
+    add(r.landingPage, "sessions", r.sessions);
+  }
+
+  return [...paths.values()].filter(
+    (r) => (r.clicks > 0 || r.impressions >= minImpressions || r.sessions > 0) && !junk.some((re) => re.test(r.path)),
+  );
+}
 
 try {
   await fetch(base, { redirect: "manual", headers });
@@ -124,7 +137,7 @@ async function request(p) {
 
 const failed = results.filter((r) => !r.ok).sort((a, b) => b.clicks + b.sessions - (a.clicks + a.sessions));
 const direct = results.filter((r) => r.ok && r.outcome === "200").length;
-console.log(`Checked ${results.length} paths against ${base} (${skipped} junk paths skipped).`);
+console.log(`Checked ${results.length} paths against ${base}.`);
 console.log(`${direct} answer 200, ${results.length - direct - failed.length} take one permanent redirect, ${failed.length} fail.`);
 if (process.argv.includes("--verbose")) {
   for (const r of results.sort((a, b) => a.path.localeCompare(b.path))) console.log(`  ${r.ok ? "ok  " : "FAIL"} ${r.path}  ${r.outcome}`);

@@ -85,15 +85,19 @@ The report covers:
   for the real answer.
 
 **Check redirects** (`scripts/seo/check-redirects.mjs`) requests every old path
-in `seo-data/` from a running site and fails unless each one answers 200 or
-takes a single permanent redirect (301 or 308) to a page that answers 200. A
-path counts when it has a Search Console click, 5 or more impressions, or any
-GA4 session. Junk such as `/tel:...`, `//checkout` and `/wp-content/...` is
-skipped. Run it against a production build, not `next dev`:
+in `scripts/seo/old-paths.json` from a running site and fails unless each one
+answers 200 or takes a single permanent redirect (301 or 308) to a page that
+answers 200. CI runs it against the built site on every push and PR. The list
+is committed because `seo-data/` is gitignored; `--refresh` rebuilds it from a
+fresh pull. A path counts when it has a Search Console click, 5 or more
+impressions, or any GA4 session. Junk such as `/tel:...`, `//checkout` and
+`/wp-content/...` is dropped. Run it against a production build, not
+`next dev`:
 
 ```bash
 npm run build && npm start                    # in one terminal
 node scripts/seo/check-redirects.mjs          # in another; --verbose lists every path
+node scripts/seo/check-redirects.mjs --refresh   # rebuild old-paths.json from seo-data/ first
 BASE_URL=http://localhost:3001 node scripts/seo/check-redirects.mjs   # another port
 ```
 
