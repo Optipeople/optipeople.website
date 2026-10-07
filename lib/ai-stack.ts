@@ -436,12 +436,12 @@ export const aiCapabilities: AiCapability[] = [
         primaryCtaLabel: "Book a demo",
       },
       da: {
-        cardTitle: "Agents",
+        cardTitle: "Agenter",
         cardSubtitle: "AI, der tager de opgaver, som kommer igen.",
         metaTitle: "AI-agenter | AI, der tager de opgaver, som kommer igen",
         metaDescription:
           "Byg AI-agenter, der klarer de opgaver, som kommer igen i driften. De finder frem til det, de skal vide, læser dokumenterne, tænker sig om og kommer med et resultat. En del af Opti Assist.",
-        eyebrow: "Agents",
+        eyebrow: "Agenter",
         heroTitle: "AI, der tager de opgaver, som kommer igen",
         heroBody:
           "En agent er sat op til én opgave og løser den hele vejen igennem. Den søger i jeres kilder, læser dokumenterne, holder det op mod hinanden og skriver svaret. I forklarer opgaven én gang. Så gør agenten det på samme måde, hver gang der er brug for det.",

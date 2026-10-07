@@ -453,7 +453,7 @@ const copy: Record<Locale, HomeCopy> = {
     hero: {
       variants: {
         product: {
-          heading: "Styr produktionen efter det, der sker lige nu",
+          heading: "Produktion og drift styret af live data",
           subheading: "Alle i huset ser de samme tal, fra gulvet til ledelsen.",
         },
         category: {

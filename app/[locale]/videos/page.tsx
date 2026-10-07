@@ -89,7 +89,7 @@ const copy: Record<Locale, VideosCopy> = {
   da: {
     eyebrow: "Videoer",
     headline: "Se OptiPeople Data Platform i brug",
-    body: "Kunder og partnere fortæller, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret samme sted. Kundehistorierne er på dansk, og oplægget med Omron er på engelsk. Alle historierne kan I også læse i fuld længde her på sitet.",
+    body: "Kunder og partnere fortæller, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret samme sted. Alle historierne kan I også læse i fuld længde her på sitet.",
     watchLabel: "Se historierne",
     countLabel: (count) => `${count} videoer, på dansk og engelsk`,
     carouselTitle: "Kundehistorier",
