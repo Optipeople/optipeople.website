@@ -5,6 +5,7 @@
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 
 ## Lately
+- 2026-10-07 Monday message quest hit a merge conflict with the spam guard commit. Gave the fix-up quest sonnet and told it to keep both: guard first, then the message as a monday update, one length cap.
 - 2026-10-07 Round after the contact form guard landed: five new quests (images, OEE rewrites, CI redirect check, merges, monday message) had no Model line, gave each sonnet. Noted that the merges quest needs the human's per-row yes or no before deleting posts.
 - 2026-10-07 Hourly round: unchanged, launch day checklist still waits on the human going live. No aim, no check stone, nothing to file or cast.
 - 2026-10-07 Round as the human left: unchanged, launch day checklist still waits on the human going live. No aim, no check stone, nothing to file or cast.
