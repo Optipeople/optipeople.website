@@ -5,6 +5,7 @@
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 
 ## Lately
+- 2026-10-07 Woken again for the blocked launch checklist; nothing new in its notes, already settled and noted. Left it with the human.
 - 2026-10-07 Hourly round: unchanged, merges and launch checklist both wait on the human. No aim, no check stone; nothing to file or cast.
 - 2026-10-07 Round as the human left: unchanged, merges and launch checklist both wait on the human. No aim, no check stone; nothing to file or cast.
 - 2026-10-07 Hourly round: unchanged, merges and launch checklist both wait on the human. 8 quests landed unchecked on main, but there is no check stone to cast. Nothing to file or cast.
