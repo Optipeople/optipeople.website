@@ -3,8 +3,10 @@
 ## Rules
 - Steps that need the human's Vercel login or the GA4 UI stay with the human. Since 2026-10-06 the seo-reader service account is GA4 Admin and Search Console Full user, so API-reachable GA4 and Search Console steps (key events, sitemap submit) can go to agents.
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
+- Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-07 Round after the merges landed (c23c05c): 12 posts merged or retired, redirects in legacy-redirects.ts and old-paths.json. Wrote the human's approval as a rule. Log is all done, no aim, site not live yet; nothing to file or cast.
 - 2026-10-07 Woken again for the blocked launch checklist; nothing new in its notes, already settled and noted. Left it with the human.
 - 2026-10-07 Hourly round: unchanged, merges and launch checklist both wait on the human. No aim, no check stone; nothing to file or cast.
 - 2026-10-07 Round as the human left: unchanged, merges and launch checklist both wait on the human. No aim, no check stone; nothing to file or cast.
@@ -39,5 +41,4 @@
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
 ## Open
-- Merges and retirements quest: handed to the human (approve all or name rows to skip). When answered, the session goes on; check that redirects land in lib/legacy-redirects.ts and the fixture.
-- Launch day SEO checklist: human still to add trafficheap.cc to GA4 unwanted referrals. Once the site is live on optipeople.com, file agent quests for the sitemap resubmit via API, check-redirects against https://optipeople.com, and the week 1 and week 4 pull.mjs comparisons.
+- Launch day checklist was removed from the log (uncommitted edit, not by me). optipeople.com still serves WordPress on 2026-10-07. Once it serves the new site, file agent quests: sitemap resubmit via API, check-redirects against https://optipeople.com, pull.mjs comparisons at week 1 and week 4. trafficheap.cc unwanted referral stays with the human (GA4 UI).
