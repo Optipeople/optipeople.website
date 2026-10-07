@@ -6,6 +6,7 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-07 Round as the human left: log all done, no aim, optipeople.com still serves WordPress. No check stone for the 9 unchecked quests; nothing to file or cast.
 - 2026-10-07 Round after the merges landed (c23c05c): 12 posts merged or retired, redirects in legacy-redirects.ts and old-paths.json. Wrote the human's approval as a rule. Log is all done, no aim, site not live yet; nothing to file or cast.
 - 2026-10-07 Woken again for the blocked launch checklist; nothing new in its notes, already settled and noted. Left it with the human.
 - 2026-10-07 Hourly round: unchanged, merges and launch checklist both wait on the human. No aim, no check stone; nothing to file or cast.
