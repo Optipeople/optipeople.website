@@ -124,6 +124,10 @@ export const moduleCatalog: ModuleEntry[] = [
  * the lead, so a label is all one needs.
  */
 const heroOnlyChips: Record<string, Record<Locale, string>> = {
+  // Modular MES is the product the nine modules make up, not a module, but a
+  // visitor asking about the whole MES should be able to say so in the hero.
+  // This chip is the one place it stands next to the modules.
+  mes: { en: "Modular MES", da: "Modulært MES" },
   // Danish keeps the English term, the way the service pages already do.
   aftersales: { en: "Aftersales", da: "Aftersales" },
 }

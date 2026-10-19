@@ -262,8 +262,8 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "What do you want to run better?",
       moduleRows: [
-        ["orders", "oee", "planning", "qms", "iot"],
-        ["ems", "maintenance", "documents", "ai-agents"],
+        ["mes", "orders", "oee", "planning", "qms"],
+        ["iot", "ems", "maintenance", "documents", "ai-agents"],
       ],
     },
     advisory: {
@@ -445,8 +445,8 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "Hvad vil I have bedre styr på?",
       moduleRows: [
-        ["orders", "oee", "planning", "qms", "iot"],
-        ["ems", "maintenance", "documents", "ai-agents"],
+        ["mes", "orders", "oee", "planning", "qms"],
+        ["iot", "ems", "maintenance", "documents", "ai-agents"],
       ],
     },
     advisory: {
