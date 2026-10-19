@@ -30,27 +30,6 @@ const englishModules: ModuleNode[] = [
     features: ["Real-time data collection", "Secure cloud infrastructure", "Open API integrations"],
   },
   {
-    id: "production",
-    name: "OEE",
-    description: "See where time is lost",
-    pitch: "Track OEE in real-time and understand exactly where production time disappears. Stop guessing, start improving.",
-    features: ["Live OEE dashboards", "Stop cause registration", "Performance and quality losses"],
-  },
-  {
-    id: "mes",
-    name: "Modular MES",
-    description: "One module at a time",
-    pitch: "The modular MES the other ten plug into. Start with the module that answers the question you have now, and add the next one against data you are already collecting.",
-    features: ["Start with one module", "Shared data foundation", "No re-entry between modules"],
-  },
-  {
-    id: "quality",
-    name: "QMS",
-    description: "Build in accountability",
-    pitch: "Register quality data at the source and trace every deviation back to machines, batches, and shifts.",
-    features: ["Digital inspections", "Full traceability", "Deviation tracking"],
-  },
-  {
     id: "erp-shopfloor",
     name: "Orders",
     description: "Run them at the machine",
@@ -58,25 +37,25 @@ const englishModules: ModuleNode[] = [
     features: ["Start, stop and report at the machine", "Runs with or without an ERP", "Two-way ERP sync when you want it"],
   },
   {
-    id: "maintenance",
-    name: "Maintenance",
-    description: "Fix it before it breaks",
-    pitch: "Move from reactive firefighting to preventive maintenance, and to predictive where the machine signals support it. Less unplanned downtime, longer equipment life.",
-    features: ["Preventive and predictive", "Triggered by connected IoT data", "Mobile task management"],
+    id: "production",
+    name: "OEE",
+    description: "See where time is lost",
+    pitch: "Track OEE in real-time and understand exactly where production time disappears. Stop guessing, start improving.",
+    features: ["Live OEE dashboards", "Stop cause registration", "Performance and quality losses"],
   },
   {
-    id: "energy",
-    name: "EMS",
-    description: "Cut waste, not corners",
-    pitch: "Connect energy consumption directly to production output. Find anomalies and optimization opportunities automatically.",
-    features: ["Real-time kWh tracking", "Sensor telemetry", "Anomaly detection"],
+    id: "planning",
+    name: "Planning",
+    description: "Routes and timelines",
+    pitch: "Sequence orders across the entities of each production route, not on one flat timeline, against measured run rates and the hours a machine actually has available.",
+    features: ["Routes, not one flat timeline", "Run rates from real data", "Replan without rebuilding"],
   },
   {
-    id: "analysis",
-    name: "Analysis",
-    description: "From data to decisions",
-    pitch: "Turn raw production data into clear reports on performance, losses, and cost drivers, without spreadsheets.",
-    features: ["Automated reporting", "Cost analysis", "Investment planning"],
+    id: "quality",
+    name: "Quality",
+    description: "Build in accountability",
+    pitch: "Register quality data at the source and trace every deviation back to machines, batches, and shifts.",
+    features: ["Digital inspections", "Full traceability", "Deviation tracking"],
   },
   {
     id: "iot",
@@ -86,11 +65,18 @@ const englishModules: ModuleNode[] = [
     features: ["Consolidate existing hardware", "Consolidate existing systems", "A gateway only where it earns one"],
   },
   {
-    id: "planning",
-    name: "Planning",
-    description: "Routes and timelines",
-    pitch: "Sequence orders across the entities of each production route, not on one flat timeline, against measured run rates and the hours a machine actually has available.",
-    features: ["Routes, not one flat timeline", "Run rates from real data", "Replan without rebuilding"],
+    id: "energy",
+    name: "EMS",
+    description: "Cut waste, not corners",
+    pitch: "Connect energy consumption directly to production output. Find anomalies and optimization opportunities automatically.",
+    features: ["Real-time kWh tracking", "Sensor telemetry", "Anomaly detection"],
+  },
+  {
+    id: "maintenance",
+    name: "Maintenance",
+    description: "Fix it before it breaks",
+    pitch: "Move from reactive firefighting to preventive maintenance, and to predictive where the machine signals support it. Less unplanned downtime, longer equipment life.",
+    features: ["Preventive and predictive", "Triggered by connected IoT data", "Mobile task management"],
   },
   {
     id: "documents",
@@ -101,7 +87,7 @@ const englishModules: ModuleNode[] = [
   },
   {
     id: "ai-agents",
-    name: "AI agents",
+    name: "AI Agents",
     description: "Ask your own data",
     pitch: "Agents and copilots that work on your production data, answering questions in plain language and watching for the patterns nobody has time to look for.",
     features: ["Plain-language answers", "Pattern and anomaly alerts", "Grounded in your own data"],
@@ -117,30 +103,6 @@ const danishModules: ModuleNode[] = [
     features: ["Data opsamlet løbende", "Sikker drift i skyen", "Åbne API'er"],
   },
   {
-    id: "production",
-    name: "OEE",
-    description: "Se, hvor tiden går tabt",
-    pitch:
-      "Følg OEE, mens det sker, og se præcis, hvor produktionstiden forsvinder. Så kan I holde op med at gætte og begynde at forbedre.",
-    features: ["Live OEE på skærmen", "Stopårsager", "Tab på ydelse og kvalitet"],
-  },
-  {
-    id: "mes",
-    name: "Modulært MES",
-    description: "Ét modul ad gangen",
-    pitch:
-      "Det modulære MES, de andre ti kobler sig på. Start med det modul, der svarer på det, I vil vide nu, og byg det næste oven på de data, I allerede samler op.",
-    features: ["Start med ét modul", "Fælles datagrundlag", "Ingen dobbeltregistrering"],
-  },
-  {
-    id: "quality",
-    name: "QMS",
-    description: "Fang fejlen i tide",
-    pitch:
-      "Registrer kvalitetsdata ved kilden, og følg hver afvigelse tilbage til maskine, batch og skift.",
-    features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelser registreret"],
-  },
-  {
     id: "erp-shopfloor",
     name: "Ordrer",
     description: "Kør dem ved maskinen",
@@ -149,28 +111,27 @@ const danishModules: ModuleNode[] = [
     features: ["Start, stop og meld ved maskinen", "Kører med eller uden ERP", "Ordrer begge veje, når I vil"],
   },
   {
-    id: "maintenance",
-    name: "Vedligehold",
-    description: "Løs det, før det stopper",
+    id: "production",
+    name: "OEE",
+    description: "Se, hvor tiden går tabt",
     pitch:
-      "Gå fra brandslukning til forebyggende vedligehold, og til forudsigende vedligehold dér, hvor maskinens signaler kan bære det. Færre uplanlagte stop, og maskinerne holder længere.",
-    features: ["Forebyggende og forudsigende", "Sat i gang af IoT-data", "Opgaverne på mobilen"],
+      "Følg OEE, mens det sker, og se præcis, hvor produktionstiden forsvinder. Så kan I holde op med at gætte og begynde at forbedre.",
+    features: ["Live OEE på skærmen", "Stopårsager", "Tab på ydelse og kvalitet"],
   },
   {
-    id: "energy",
-    name: "EMS",
-    description: "Skær spild væk",
-    pitch:
-      "Kobl energiforbruget direkte sammen med det, der bliver produceret. Så finder systemet selv spildet og det, der stikker ud.",
-    features: ["kWh fulgt live", "Sensordata", "Besked, når noget stikker ud"],
+    id: "planning",
+    name: "Planlægning",
+    description: "Ruter og tidslinjer",
+    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, ikke bare på én flad tidslinje. Planen bygger på de kørehastigheder, der faktisk er målt, og den tid, maskinen reelt har ledig.",
+    features: ["Ruter, ikke én flad tidslinje", "Målte kørehastigheder", "Læg om uden at starte forfra"],
   },
   {
-    id: "analysis",
-    name: "Analyse",
-    description: "Tal at beslutte ud fra",
+    id: "quality",
+    name: "Kvalitet",
+    description: "Fang fejlen i tide",
     pitch:
-      "Gør rå produktionsdata til rapporter, folk kan læse: hvordan det går, hvor I taber, og hvad der koster mest. Uden regneark.",
-    features: ["Rapporter, der laver sig selv", "Hvad tingene koster", "Tal at investere ud fra"],
+      "Registrer kvalitetsdata ved kilden, og følg hver afvigelse tilbage til maskine, batch og skift.",
+    features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelser registreret"],
   },
   {
     id: "iot",
@@ -181,11 +142,20 @@ const danishModules: ModuleNode[] = [
     features: ["Brug det hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun, hvor der mangler noget"],
   },
   {
-    id: "planning",
-    name: "Planlægning",
-    description: "Ruter og tidslinjer",
-    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, ikke bare på én flad tidslinje. Planen bygger på de kørehastigheder, der faktisk er målt, og den tid, maskinen reelt har ledig.",
-    features: ["Ruter, ikke én flad tidslinje", "Målte kørehastigheder", "Læg om uden at starte forfra"],
+    id: "energy",
+    name: "EMS",
+    description: "Skær spild væk",
+    pitch:
+      "Kobl energiforbruget direkte sammen med det, der bliver produceret. Så finder systemet selv spildet og det, der stikker ud.",
+    features: ["kWh fulgt live", "Sensordata", "Besked, når noget stikker ud"],
+  },
+  {
+    id: "maintenance",
+    name: "Vedligehold",
+    description: "Løs det, før det stopper",
+    pitch:
+      "Gå fra brandslukning til forebyggende vedligehold, og til forudsigende vedligehold dér, hvor maskinens signaler kan bære det. Færre uplanlagte stop, og maskinerne holder længere.",
+    features: ["Forebyggende og forudsigende", "Sat i gang af IoT-data", "Opgaverne på mobilen"],
   },
   {
     id: "documents",
@@ -205,16 +175,16 @@ const danishModules: ModuleNode[] = [
 const platformIntro = {
   en: {
     eyebrow: "Platform",
-    title: "One modular platform, eleven modules",
+    title: "One modular platform, nine modules",
     description:
-      "Take one module or ten. Every module shares the same live data, so what one team registers, every team can use",
+      "Take one module or all nine. Every module shares the same live data, so what one team registers, every team can use",
     centerLabel: "OptiPeople Data Platform",
   },
   da: {
     eyebrow: "Platform",
-    title: "Én modulopbygget platform, elleve moduler",
+    title: "Én modulopbygget platform, ni moduler",
     description:
-      "Tag ét modul eller ti. Modulerne bruger de samme data, så det, ét team registrerer, kan de andre bruge",
+      "Tag ét modul eller alle ni. Modulerne bruger de samme data, så det, ét team registrerer, kan de andre bruge",
     centerLabel: "OptiPeople Data Platform",
   },
 } as const
@@ -225,18 +195,16 @@ const platformIntro = {
 // (Opticloud-Flower.svg). Colours are sampled from that original SVG.
 // ---------------------------------------------------------------------------
 
-// The data-infrastructure modules (the hub / MES / IoT) share the teal family;
+// The data-infrastructure modules (the hub / IoT) share the teal family;
 // functional modules each get a distinct hue, exactly like the original mark.
 const BRAND: Record<string, { fill: string; text: "light" | "dark" }> = {
   opticloud: { fill: "#024343", text: "light" },
-  mes: { fill: "#015D5D", text: "light" },
   iot: { fill: "#045050", text: "light" },
   quality: { fill: "#353F96", text: "light" },
   "erp-shopfloor": { fill: "#5460C6", text: "light" },
   production: { fill: "#D4D6EB", text: "dark" },
   maintenance: { fill: "#E0AC30", text: "dark" },
   energy: { fill: "#DC5E3C", text: "light" },
-  analysis: { fill: "#A3EEC8", text: "dark" },
   planning: { fill: "#7C86D3", text: "light" },
   documents: { fill: "#EFD9A6", text: "dark" },
   "ai-agents": { fill: "#0A7A6B", text: "light" },
@@ -318,20 +286,18 @@ const PETAL_R = 27
 const ORBIT = 96
 // The hub is a polygon with one flat edge facing each petal, so its side count
 // tracks the petal count and it is rotated half a step to line the edges up.
-const HUB_SIDES = 11
-// Petal order around the bloom, starting at the top going clockwise. Ordered so
-// the four pale modules land at intervals instead of bunching on one side.
+const HUB_SIDES = 9
+// Petal order around the bloom, starting at the top going clockwise: the nine
+// modules in catalog order (content/modules-catalog.ts).
 const PETAL_ORDER = [
-  "maintenance",
-  "mes",
-  "quality",
-  "production",
-  "energy",
-  "documents",
   "erp-shopfloor",
-  "analysis",
-  "iot",
+  "production",
   "planning",
+  "quality",
+  "iot",
+  "energy",
+  "maintenance",
+  "documents",
   "ai-agents",
 ]
 

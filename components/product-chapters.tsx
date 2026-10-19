@@ -153,13 +153,13 @@ const MES_COPY: Record<Locale, MesCopy> = {
   },
 }
 
-/** Row order is the order they light up in: the usual first two, then the rest. */
+/** All nine modules, in catalog order, which is also the order they light up in. */
 const MES_MODULES = [
   "orders",
   "oee",
   "planning",
-  "iot",
   "qms",
+  "iot",
   "ems",
   "maintenance",
   "documents",
@@ -330,7 +330,7 @@ const IOT_COPY: Record<Locale, IotCopy> = {
     ],
     foundation: { title: "One data foundation", sub: "1,284 live tags" },
     readers: [
-      { title: "Modular MES", sub: "Orders, OEE, planning" },
+      { title: "Modular MES", sub: "All nine modules" },
       { title: "Opti Assist", sub: "Answers from live data" },
       { title: "Your BI and ERP", sub: "Reports, APIs, exports" },
     ],
@@ -353,7 +353,7 @@ const IOT_COPY: Record<Locale, IotCopy> = {
     ],
     foundation: { title: "Ét datagrundlag", sub: "1.284 live tags" },
     readers: [
-      { title: "Modulært MES", sub: "Ordrer, OEE, planlægning" },
+      { title: "Modulært MES", sub: "Alle ni moduler" },
       { title: "Opti Assist", sub: "Svar ud fra live data" },
       { title: "Jeres BI og ERP", sub: "Rapporter, API'er, eksport" },
     ],

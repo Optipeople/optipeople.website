@@ -21,12 +21,12 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "Platform | OptiPeople",
     description:
-      "Explore the OptiPeople Data Platform: a modular MES with OEE, QMS, EMS, maintenance, planning, orders, IoT, documents, analysis, and AI agents, sharing data in one unified view of your operations.",
+      "Explore the OptiPeople Data Platform: a modular MES made of nine modules, Orders, OEE, Planning, Quality, IoT, EMS, Maintenance, Documents, and AI Agents, sharing data in one unified view of your operations.",
   },
   da: {
     title: "Platform til produktionsdata, OEE og MES | OptiPeople",
     description:
-      "Et MES bygget af moduler: OEE, kvalitet, energi, vedligehold, planlægning, ordrer, IoT og dokumenter. Alle modulerne bruger de samme data om jeres drift.",
+      "Et MES bygget af ni moduler: Ordrer, OEE, Planlægning, Kvalitet, IoT, EMS, Vedligehold, Dokumenter og AI-agenter. Alle modulerne bruger de samme data om jeres drift.",
   },
 }
 
@@ -45,14 +45,14 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "One modular platform for all your manufacturing operations",
-      lede: "The OptiPeople Data Platform connects production, planning, quality, maintenance, energy, and analysis on a single data foundation. Take one module or ten: every module works from the same live data, so what one team registers, every team can use.",
+      lede: "The OptiPeople Data Platform connects orders, OEE, planning, quality, IoT, energy, maintenance, documents, and AI agents on a single data foundation. Take one module or all nine: every module works from the same live data, so what one team registers, every team can use.",
       cta: "Book a demo",
       jump: "See the modules",
     },
     proof: {
       title: "What it runs on",
       items: [
-        { metric: "11", label: "Modules sharing one data foundation, switched on as you need them" },
+        { metric: "9", label: "Modules sharing one data foundation, switched on as you need them" },
         { metric: "1", label: "Structured record per machine, order, batch, and shift" },
         { metric: "Any", label: "Protocol or machine age, new PLCs and legacy equipment alike" },
       ],
@@ -103,14 +103,14 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "Én modulopbygget platform til hele produktionen",
-      lede: "OptiPeople Data Platform kobler produktion, planlægning, kvalitet, vedligehold, energi og analyse sammen på ét fælles datagrundlag. Tag ét modul eller ti. Alle modulerne henter fra de samme data, så det, ét team registrerer, kan de andre bruge.",
+      lede: "OptiPeople Data Platform kobler ordrer, OEE, planlægning, kvalitet, IoT, energi, vedligehold, dokumenter og AI-agenter sammen på ét fælles datagrundlag. Tag ét modul eller alle ni. Alle modulerne henter fra de samme data, så det, ét team registrerer, kan de andre bruge.",
       cta: "Book en demo",
       jump: "Se modulerne",
     },
     proof: {
       title: "Det, platformen kører på",
       items: [
-        { metric: "11", label: "Moduler, der deler de samme data. I slår dem til, når I får brug for dem" },
+        { metric: "9", label: "Moduler, der deler de samme data. I slår dem til, når I får brug for dem" },
         { metric: "1", label: "Samlet registrering pr. maskine, ordre, batch og skift" },
         { metric: "Alle", label: "Protokoller og maskiner, uanset alder. Nye PLC'er og gammelt udstyr" },
       ],

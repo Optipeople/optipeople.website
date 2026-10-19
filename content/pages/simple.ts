@@ -8,7 +8,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
     en: {
       metaTitle: "Modules",
       metaDescription:
-        "Explore the OptiPeople modules on one connected platform: modular MES, OEE, QMS, EMS, maintenance, planning, orders, IoT, documents, analysis, and AI agents.",
+        "Explore the nine OptiPeople modules on one connected platform: Orders, OEE, Planning, Quality, IoT, EMS, Maintenance, Documents, and AI Agents.",
       eyebrow: "Modules",
       headline: "One platform, every part of production",
       body: "Each module solves a specific operational need, and together they give you a single, connected view of the shopfloor. You do not have to take all of them at once. Most factories start with production monitoring on one line, then add the modules that answer the next question.",
@@ -34,9 +34,9 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       links: moduleIndexLinks("en"),
     },
     da: {
-      metaTitle: "Moduler til OEE, MES, kvalitet og vedligehold | OptiPeople",
+      metaTitle: "Moduler til ordrer, OEE, planlægning og kvalitet | OptiPeople",
       metaDescription:
-        "Start med OEE-måling på én linje, og slå resten til, når I får brug for det: MES, kvalitet, energi, vedligehold, planlægning, ordrer og dokumenter.",
+        "De ni moduler på én platform: Ordrer, OEE, Planlægning, Kvalitet, IoT, EMS, Vedligehold, Dokumenter og AI-agenter. Start med ét, og slå resten til, når I får brug for det.",
       eyebrow: "Moduler",
       headline: "Én platform til hele produktionen",
       body: "Hvert modul løser en konkret opgave i driften, og sammen giver de ét samlet overblik over gulvet. I skal ikke tage dem alle på én gang. De fleste starter med at overvåge én linje og tager så de moduler med, der svarer på det næste spørgsmål.",

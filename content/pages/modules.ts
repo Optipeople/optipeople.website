@@ -6,7 +6,6 @@ import {
   BarChart3,
   Bell,
   Cable,
-  Calculator,
   Calendar,
   ClipboardCheck,
   Clock,
@@ -19,13 +18,13 @@ import {
   Leaf,
   Monitor,
   Network,
-  PieChart,
   Plug,
   RefreshCw,
   Search,
   Shield,
   ShieldCheck,
   Smartphone,
+  Sparkles,
   Target,
   Thermometer,
   TrendingUp,
@@ -641,156 +640,6 @@ const modules: LocalizedPage<StandardPage>[] = [
     },
   },
   {
-    slug: "analysis",
-    href: "/modules/analysis",
-    content: {
-      en: {
-        metaTitle: "Analysis Module",
-        metaDescription:
-          "Turn production data into automated reports, cost analysis, loss categorization, and improvement planning for manufacturing teams.",
-        eyebrow: "Analysis Module",
-        heroTitle: "From Data to Decisions",
-        heroBody:
-          "Turn raw production data into clear reports on performance, losses, and cost drivers, without spreadsheets or manual work.",
-        primaryLabel: "Request a Demo",
-        introTitle: "Data is only valuable if it drives action",
-        introBody:
-          "Collecting production data is one thing. Turning it into decisions is another. When reporting takes hours of manual work and insights arrive too late, the data loses its value. The Analysis module transforms live production data into actionable reports that reach the right people at the right time.",
-        capabilitiesTitle: "Everything you need for production intelligence",
-        features: [
-          {
-            icon: FileText,
-            title: "Automated Reporting",
-            description:
-              "Generate daily, weekly, and monthly reports automatically. No more manual data collection or spreadsheet formatting.",
-          },
-          {
-            icon: Calculator,
-            title: "Cost Analysis",
-            description:
-              "Understand the true cost of downtime, scrap, and inefficiency. Translate production data into financial impact.",
-          },
-          {
-            icon: Target,
-            title: "Investment Planning",
-            description:
-              "Use data to build the business case for improvements. Show exactly where investment will have the greatest return.",
-          },
-          {
-            icon: PieChart,
-            title: "Loss Categorization",
-            description:
-              "Break down losses by type, availability, performance, quality. Prioritize improvements based on actual impact.",
-          },
-          {
-            icon: TrendingUp,
-            title: "Trend Analysis",
-            description:
-              "Track performance over time and identify patterns. See whether improvements stick and where new opportunities emerge.",
-          },
-          {
-            icon: BarChart3,
-            title: "Custom Dashboards",
-            description:
-              "Build dashboards for different roles, from operators to management. Everyone sees the data relevant to their decisions.",
-          },
-        ],
-        visualTitle: "Reports that write themselves",
-        visualBody:
-          "From shift summaries to monthly management reports, automated, accurate, and always up to date.",
-        visualImage: "/images/report-mockup1.png",
-        visualAlt: "Reporting in OptiPeople Data Platform",
-        metricsTitle: "Typical Results",
-        metrics: [
-          { metric: "2 hrs", label: "Saved daily on manual reporting" },
-          { metric: "100%", label: "Data-driven decision coverage" },
-          { metric: "3x", label: "Faster root cause identification" },
-        ],
-        stepsTitle: "How It Works",
-        steps: [
-          {
-            title: "Collect",
-            description:
-              "Production data flows automatically from machines and operators into a single, structured data platform.",
-          },
-          {
-            title: "Analyze",
-            description:
-              "Turn raw data into clear insights with automated reports, loss analysis, and trend tracking. No spreadsheets needed.",
-          },
-          {
-            title: "Decide",
-            description:
-              "Make investment and improvement decisions based on facts. Track the impact of every change you implement.",
-          },
-        ],
-      },
-      da: {
-        metaTitle: "Produktionsrapporter og tabsanalyse | OptiPeople",
-        metaDescription:
-          "Rapporterne laver sig selv: hvordan produktionen kører, hvor I taber tid, hvad tabet koster, og hvad der er værd at gøre bedre.",
-        eyebrow: "Analysemodul",
-        heroTitle: "Rapporter, der faktisk bliver læst",
-        heroBody:
-          "Lad rapporterne lave sig selv, og få svar på, hvordan det går, hvor I taber, og hvad der koster mest. Uden regneark.",
-        primaryLabel: "Book en demo",
-        introTitle: "En rapport skal bruges til noget",
-        introBody:
-          "Når nogen først skal trække tallene i hånden, kommer svaret for sent. Her opdaterer tallene sig selv, så I hele tiden kan se, hvor der er noget at hente.",
-        capabilitiesTitle: "Rapportering, der bliver brugt",
-        features: [
-          {
-            icon: BarChart3,
-            title: "Rapporter, der laver sig selv",
-            description:
-              "Dags-, uge- og månedsrapporter går af sig selv ud til dem, der skal bruge dem.",
-          },
-          {
-            icon: Search,
-            title: "Hvor taber I mest",
-            description:
-              "Se, hvilke stop, produkter og linjer der koster mest.",
-          },
-          {
-            icon: PieChart,
-            title: "Noget at beslutte ud fra",
-            description:
-              "Brug tallene til at vælge de projekter, der betaler sig, og til at vise bagefter, at de gjorde det.",
-          },
-        ],
-        visualTitle: "Rapporter uden regnearkskaos",
-        visualBody:
-          "Klik dig fra ledelsens overblik ned til den enkelte maskine og det enkelte skift. Det er de samme data hele vejen.",
-        visualImage: "/images/report-mockup1.png",
-        visualAlt: "Rapportering i OptiPeople Data Platform",
-        metricsTitle: "Typiske resultater",
-        metrics: [
-          { metric: "80%", label: "Mindre tid på rapportering i hånden" },
-          { metric: "Live", label: "Tal, der opdaterer sig selv" },
-          { metric: "1 skærm", label: "Samlet billede af driften" },
-        ],
-        stepsTitle: "Sådan virker det",
-        steps: [
-          {
-            title: "Saml",
-            description:
-              "Data fra produktion, kvalitet, energi og vedligehold bliver samlet ét sted.",
-          },
-          {
-            title: "Forklar",
-            description:
-              "Rapporterne viser både, hvordan det gik, og hvorfor det gik sådan.",
-          },
-          {
-            title: "Prioriter",
-            description:
-              "Brug det til at vælge de forbedringer, der flytter mest.",
-          },
-        ],
-      },
-    },
-  },
-  {
     slug: "iot",
     href: "/modules/iot",
     content: {
@@ -870,7 +719,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Activate",
             description:
-              "With data flowing, activate any platform module against it: OEE, orders, planning, quality, maintenance, energy, or analysis.",
+              "With data flowing, activate the other modules against it: Orders, OEE, Planning, Quality, EMS, Maintenance, Documents, and AI Agents.",
           },
         ],
         darkHero: true,
@@ -939,7 +788,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Brug det",
             description:
-              "Data bliver til dashboards, rapporter, alarmer og automatik, i de moduler, I har brug for.",
+              "Data bliver til dashboards, rapporter, alarmer og automatik i de andre moduler: Ordrer, OEE, Planlægning, Kvalitet, EMS, Vedligehold, Dokumenter og AI-agenter.",
           },
         ],
       },
@@ -1120,15 +969,15 @@ const modules: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Modular MES",
         metaDescription:
-          "A modular MES: orders, OEE and efficiency, IoT and machine control, and planning with routes and timelines, switched on one module at a time.",
+          "A modular MES made of nine modules, Orders, OEE, Planning, Quality, IoT, EMS, Maintenance, Documents, and AI Agents, switched on one module at a time.",
         eyebrow: "Modular MES",
         heroTitle: "Your Modular MES Platform",
         heroBody:
-          "Manufacturing execution you switch on one module at a time. Orders, efficiency, IoT, and planning on one data foundation, turned into something every level of the organization can act on.",
+          "Manufacturing execution you switch on one module at a time. Orders, OEE, Planning, Quality, IoT, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
         primaryLabel: "Request a Demo",
         introTitle: "Nobody needs a whole MES on day one",
         introBody:
-          "The classic MES is an all-or-nothing project: eighteen months, every process at once, and a scope nobody on the floor recognises by the end of it. A modular MES is the opposite. Start with the module that answers the question you have this quarter, whether that is orders, OEE, machine data, or the plan, and add the next one when the next question turns up. Every module you add reads the data the earlier ones already collect.",
+          "The classic MES is an all-or-nothing project: eighteen months, every process at once, and a scope nobody on the floor recognises by the end of it. A modular MES is the opposite. Start with the module that answers the question you have this quarter, whether that is orders, OEE, the plan, or machine data, and add the next one when the next question turns up. Every module you add reads the data the earlier ones already collect.",
         capabilitiesTitle: "The modules a modular MES is made of",
         features: [
           {
@@ -1139,43 +988,61 @@ const modules: LocalizedPage<StandardPage>[] = [
           },
           {
             icon: Gauge,
-            title: "OEE & Efficiency",
+            title: "OEE",
             description:
               "Track availability, performance, and quality across every machine, line, and shift. Understand exactly where production time is gained and lost.",
           },
           {
-            icon: Cpu,
-            title: "IoT & Machine Control",
-            description:
-              "Connect new controls, retrofitted sensors, and the systems you already run. Read machine state, and control start, stop, and setup from the panel.",
-          },
-          {
             icon: Calendar,
-            title: "Planning, Routes & Timelines",
+            title: "Planning",
             description:
               "Sequence work orders across the entities of each production route, on a timeline the floor can see, against the capacity the machines actually have.",
           },
           {
-            icon: Monitor,
-            title: "Customizable Dashboards",
+            icon: ShieldCheck,
+            title: "Quality",
             description:
-              "Give operators, managers, and directors the view they need. From shopfloor screens to boardroom reports, one platform, every perspective.",
+              "Digital checks and deviations registered where the work happens, traced back to machine, batch, and shift.",
           },
           {
-            icon: BarChart3,
-            title: "Automated Reporting",
+            icon: Cpu,
+            title: "IoT",
             description:
-              "Eliminate manual spreadsheets. Identify patterns, trends, and outliers automatically and deliver reports to stakeholders on schedule.",
+              "Connect new controls, retrofitted sensors, and the systems you already run. Read machine state, and control start, stop, and setup from the panel.",
+          },
+          {
+            icon: Zap,
+            title: "EMS",
+            description:
+              "Energy consumption measured per machine and held up against what it produced, so waste shows up as kWh per unit.",
+          },
+          {
+            icon: Wrench,
+            title: "Maintenance",
+            description:
+              "Preventive and predictive maintenance triggered by running hours and machine condition instead of the calendar.",
+          },
+          {
+            icon: FileText,
+            title: "Documents",
+            description:
+              "Work instructions, drawings, and certificates at the machine, always in the version that applies to the job.",
+          },
+          {
+            icon: Sparkles,
+            title: "AI Agents",
+            description:
+              "Agents and copilots that answer questions in plain language and watch for patterns in your own production data.",
           },
         ],
         visualTitle: "One module registers it, every module has it",
         visualBody:
-          "This is what makes it modular rather than eleven separate products: a stop registered at the machine lands once, and orders, OEE, maintenance, and the monthly report all read the same record.",
+          "This is what makes it modular rather than nine separate products: a stop registered at the machine lands once, and orders, OEE, maintenance, and the monthly report all read the same record.",
         visualDrawn: "mes",
         metricsTitle: "What Modular Means",
         metrics: [
           { metric: "1", label: "Module is a valid place to start" },
-          { metric: "11", label: "Modules on the same data foundation" },
+          { metric: "9", label: "Modules on the same data foundation" },
           { metric: "0", label: "Re-entry between them" },
         ],
         stepsTitle: "How It Works",
@@ -1200,11 +1067,11 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Modulært MES-system til produktionen | OptiPeople",
         metaDescription:
-          "Et MES, I tager i brug ét modul ad gangen: ordrer, OEE, IoT og maskinstyring, og planlægning med ruter og tidslinjer. Start dér, hvor det gør ondt.",
+          "Et MES, I tager i brug ét modul ad gangen: Ordrer, OEE, Planlægning, Kvalitet, IoT, EMS, Vedligehold, Dokumenter og AI-agenter. Start dér, hvor det gør ondt.",
         eyebrow: "Modulært MES",
         heroTitle: "Jeres modulære MES",
         heroBody:
-          "Et MES, I slår til ét modul ad gangen. Ordrer, effektivitet, IoT og planlægning på ét fælles datagrundlag.",
+          "Et MES, I slår til ét modul ad gangen. Ordrer, OEE, Planlægning, Kvalitet, IoT, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
         primaryLabel: "Book en demo",
         introTitle: "Ingen har brug for et helt MES fra dag ét",
         introBody:
@@ -1219,43 +1086,61 @@ const modules: LocalizedPage<StandardPage>[] = [
           },
           {
             icon: Gauge,
-            title: "OEE og effektivitet",
+            title: "OEE",
             description:
               "Se tilgængelighed, ydelse og kvalitet for hver maskine, hver linje og hvert skift, og se præcis, hvor tiden bliver vundet og tabt.",
           },
           {
-            icon: Cpu,
-            title: "IoT og maskinstyring",
-            description:
-              "Kobl nye styringer, eftermonterede sensorer og jeres eksisterende systemer på. Læs maskinens tilstand, og styr start, stop og omstilling fra panelet.",
-          },
-          {
             icon: Calendar,
-            title: "Planlægning, ruter og tidslinjer",
+            title: "Planlægning",
             description:
               "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, på en tidslinje, gulvet kan se.",
           },
           {
-            icon: Monitor,
-            title: "Dashboards, I selv sætter op",
+            icon: ShieldCheck,
+            title: "Kvalitet",
             description:
-              "Fra tavleskærmen på gulvet til rapporten til ledelsen. Samme data, hver sin vinkel.",
+              "Digitale kontroller og afvigelser registreret dér, hvor arbejdet sker, og fulgt tilbage til maskine, batch og skift.",
           },
           {
-            icon: BarChart3,
-            title: "Rapporter, der laver sig selv",
+            icon: Cpu,
+            title: "IoT",
             description:
-              "Slut med regneark i hånden. Mønstre og afvigelser bliver fundet af sig selv, og rapporterne går ud til tiden.",
+              "Kobl nye styringer, eftermonterede sensorer og jeres eksisterende systemer på. Læs maskinens tilstand, og styr start, stop og omstilling fra panelet.",
+          },
+          {
+            icon: Zap,
+            title: "EMS",
+            description:
+              "Energiforbruget målt pr. maskine og holdt op mod det, der blev produceret, så spildet står som kWh pr. enhed.",
+          },
+          {
+            icon: Wrench,
+            title: "Vedligehold",
+            description:
+              "Forebyggende og forudsigende vedligehold, sat i gang af driftstimer og maskinens tilstand i stedet for kalenderen.",
+          },
+          {
+            icon: FileText,
+            title: "Dokumenter",
+            description:
+              "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder for opgaven.",
+          },
+          {
+            icon: Sparkles,
+            title: "AI-agenter",
+            description:
+              "Agenter og copiloter, der svarer i almindeligt sprog og holder øje med mønstre i jeres egne produktionsdata.",
           },
         ],
         visualTitle: "Ét modul registrerer det, alle moduler har det",
         visualBody:
-          "Det er det, der gør det modulært i stedet for elleve løsrevne produkter: et stop registreret ved maskinen lander én gang, og ordrer, OEE, vedligehold og månedsrapporten læser den samme registrering.",
+          "Det er det, der gør det modulært i stedet for ni løsrevne produkter: et stop registreret ved maskinen lander én gang, og ordrer, OEE, vedligehold og månedsrapporten læser den samme registrering.",
         visualDrawn: "mes",
         metricsTitle: "Hvad modulært betyder",
         metrics: [
           { metric: "1", label: "Modul er et fint sted at starte" },
-          { metric: "11", label: "Moduler på det samme datagrundlag" },
+          { metric: "9", label: "Moduler på det samme datagrundlag" },
           { metric: "0", label: "Gange, I taster det samme igen" },
         ],
         stepsTitle: "Sådan virker det",

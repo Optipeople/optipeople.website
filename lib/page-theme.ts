@@ -60,7 +60,6 @@ const ASSIGNMENTS: Record<PageFamily, Record<string, SurfaceName>> = {
     quality: "purple",
     maintenance: "blue",
     energy: "teal",
-    analysis: "sand",
     iot: "slate",
     "erp-shopfloor": "clay",
     mes: "sage",
