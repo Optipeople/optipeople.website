@@ -80,7 +80,11 @@ function hexToRgba(hex: string, alpha: number): string {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
 
-export type NavigationType = "tabs" | "dots" | "arrows" | ("tabs" | "dots" | "arrows")[]
+// "side-arrows" sets a large, translucent arrow box over the cards' right edge
+// (and one on the left once there is something to go back to), vertically
+// centred on the cards, for sliders where the small arrows below get missed.
+type NavigationKind = "tabs" | "dots" | "arrows" | "side-arrows"
+export type NavigationType = NavigationKind | NavigationKind[]
 
 type SlideCarouselProps = {
   slides: SlideData[]
@@ -182,6 +186,7 @@ export function SlideCarousel({
   const hasTabs = navigationTypes.includes("tabs")
   const hasDots = navigationTypes.includes("dots")
   const hasArrows = navigationTypes.includes("arrows")
+  const hasSideArrows = navigationTypes.includes("side-arrows")
 
   const tabIds = useMemo(
     () => slides.map((s, i) => `carousel-tab-${i}-${s.tab?.toLowerCase().replace(/\s+/g, "-") ?? i}`),
@@ -382,11 +387,43 @@ export function SlideCarousel({
     )
   }
 
+  const sideArrowClass =
+    "absolute top-1/2 z-10 flex size-14 -translate-y-1/2 cursor-pointer items-center justify-center rounded-xl border border-black/10 bg-white/70 text-foreground/80 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.35)] backdrop-blur-sm transition-colors hover:bg-white/90 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:size-16"
+
+  const renderSideArrows = () => {
+    if (!hasSideArrows) return null
+
+    return (
+      <>
+        {canScrollPrev && (
+          <button
+            type="button"
+            onClick={() => api?.scrollPrev()}
+            className={`${sideArrowClass} left-4 sm:left-6`}
+            aria-label="Previous slide"
+          >
+            <ChevronRight className="size-7 rotate-180" />
+          </button>
+        )}
+        {canScrollNext && (
+          <button
+            type="button"
+            onClick={() => api?.scrollNext()}
+            className={`${sideArrowClass} right-4 sm:right-6`}
+            aria-label="Next slide"
+          >
+            <ChevronRight className="size-7" />
+          </button>
+        )}
+      </>
+    )
+  }
+
   return (
     <section className={className}>
       {hasTabs && renderTabNavigation()}
 
-      <div className={hasTabs ? "mt-10" : ""}>
+      <div className={`relative ${hasTabs ? "mt-10" : ""}`}>
         <Carousel
           setApi={setApi}
           opts={{
@@ -744,6 +781,7 @@ export function SlideCarousel({
             })}
           </CarouselContent>
         </Carousel>
+        {renderSideArrows()}
       </div>
 
       {renderArrows()}
