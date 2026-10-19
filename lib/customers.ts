@@ -18,5 +18,6 @@ export const customerLogos: LogoItem[] = [
   { name: "Steel Products", logoSrc: "/images/logos/Steel-Products.png" },
   { name: "TCM-Group", logoSrc: "/images/logos/TCM-Group.png" },
   { name: "The Whole Company", logoSrc: "/images/logos/The-Whole-Company.png" },
+  { name: "VOLA", logoSrc: "/images/logos/Vola.png" },
   { name: "Xellia", logoSrc: "/images/logos/Xellia.png" },
 ]

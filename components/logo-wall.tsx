@@ -34,12 +34,12 @@ export function LogoWall({
           </h2>
         )}
 
-        {/* Logo grid, two rows of 7 on desktop. First/last in each row align to
+        {/* Logo grid, three rows of 5 on desktop. First/last in each row align to
             the container edges so the wall lines up with content above and below. */}
         <div
           className={cn(
-            "grid grid-cols-3 items-center justify-items-center gap-6 sm:grid-cols-4 sm:gap-8 lg:grid-cols-7 lg:gap-10",
-            "lg:[&>*:nth-child(7n+1)]:justify-self-start lg:[&>*:nth-child(7n)]:justify-self-end",
+            "grid grid-cols-3 items-center justify-items-center gap-6 sm:grid-cols-4 sm:gap-8 lg:grid-cols-5 lg:gap-10",
+            "lg:[&>*:nth-child(5n+1)]:justify-self-start lg:[&>*:nth-child(5n)]:justify-self-end",
             title && "mt-16 lg:mt-20",
           )}
         >
