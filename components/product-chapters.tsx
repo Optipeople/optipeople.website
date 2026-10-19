@@ -89,7 +89,6 @@ type MesCopy = {
   tagline: string
   body: string
   gridLabel: string
-  proof: { value: string; label: string; company: string; href: string }
   /** Alt text for the two real screenshots under the index. */
   shots: { timeline: string; oee: string }
   /** Live reading on each tile, keyed by module id. */
@@ -99,18 +98,12 @@ type MesCopy = {
 const MES_COPY: Record<Locale, MesCopy> = {
   en: {
     name: "Modular MES",
-    tagline: "Run the floor on facts. Start with one line.",
-    body: "Orders, OEE, planning and machine data on one foundation. Add the next module when you need it, with or without your ERP.",
+    tagline: "Run the floor on facts.",
+    body: "All modules on one foundation. Add the next module when you need it, with or without your ERP.",
     gridLabel: "Nine modules. One data foundation.",
     shots: {
       timeline: "OptiPeople production timeline with work orders planned across each production route",
       oee: "OptiPeople MES report for CNC Drilling with availability over time, OEE, performance and quality",
-    },
-    proof: {
-      value: "−41%",
-      label: "unnecessary stops",
-      company: "Fiberline Composites",
-      href: "/blog/konkurrencekraft-og-tempo-pa-digital-transformation",
     },
     readings: {
       orders: "12 running",
@@ -126,18 +119,12 @@ const MES_COPY: Record<Locale, MesCopy> = {
   },
   da: {
     name: "Modulært MES",
-    tagline: "Styr gulvet efter fakta. Start med én linje.",
-    body: "Ordrer, OEE, planlægning og maskindata på samme fundament. Tag næste modul, når I har brug for det, med eller uden jeres ERP.",
+    tagline: "Styr gulvet efter fakta.",
+    body: "Alle moduler på samme fundament. Tag næste modul, når I har brug for det, med eller uden jeres ERP.",
     gridLabel: "Ni moduler. Ét datagrundlag.",
     shots: {
       timeline: "OptiPeoples produktionstidslinje med arbejdsordrer lagt ud på hver produktionsrute",
       oee: "OptiPeoples MES-rapport for CNC-boring med tilgængelighed over tid, OEE, ydelse og kvalitet",
-    },
-    proof: {
-      value: "−41%",
-      label: "unødvendige stop",
-      company: "Fiberline Composites",
-      href: "/blog/konkurrencekraft-og-tempo-pa-digital-transformation",
     },
     readings: {
       orders: "12 i gang",
@@ -198,25 +185,6 @@ function MesChapter({ locale }: { locale: Locale }) {
           </p>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-white/70">{t.body}</p>
           <ChapterLinks href="/modules/mes" locale={locale} tone="light" className="mt-8" />
-
-          {/* One customer result, the way the best product pages lead with proof */}
-          <Link
-            href={t.proof.href}
-            className="group mt-14 flex max-w-md items-end gap-4 border-t border-white/12 pt-8 sm:gap-6"
-          >
-            <span
-              className="shrink-0 text-5xl font-light leading-none tracking-tight tabular-nums sm:text-6xl"
-              style={{ color: "var(--green-light2)" }}
-            >
-              {t.proof.value}
-            </span>
-            <span className="pb-1">
-              <span className="block whitespace-nowrap text-base text-white">{t.proof.label}</span>
-              <span className="block text-sm text-white/65 transition-colors group-hover:text-white/88">
-                {t.proof.company}
-              </span>
-            </span>
-          </Link>
         </div>
 
         <div className="lg:col-span-6">
