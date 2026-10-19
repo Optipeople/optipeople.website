@@ -8,6 +8,7 @@ import { LogoWall } from "@/components/logo-wall"
 import { CustomerVoices, type CustomerVoice } from "@/components/customer-voices"
 import { HeroModulePicker } from "@/components/hero-module-picker"
 import { ProductChapters } from "@/components/product-chapters"
+import { WhoWeAreStats } from "@/components/who-we-are-stats"
 import { hasModuleMockup } from "@/components/module-mockups"
 import { Button } from "@/components/ui/button"
 import { moduleCatalog, moduleChipRows } from "@/content/modules-catalog"
@@ -241,7 +242,7 @@ type HeroVariant = "product" | "category" | "outcome"
 const heroVariant: HeroVariant = "product"
 
 /** Chips picked before the visitor touches anything. Locale-independent. */
-const heroDefaultModules: string[] = []
+const heroDefaultModules = ["mes"]
 
 const copy: Record<Locale, HomeCopy> = {
   en: {
@@ -297,7 +298,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       qms: {
         description:
-          "Register quality data where it happens. Trace deviations back to machine, batch, and shift, and turn checks into documentation instead of paperwork.",
+          "Register quality data where it happens. Trace deviations back to machine or workstation, batch, and shift, and turn checks into documentation instead of paperwork.",
       },
       ems: {
         description:
@@ -313,7 +314,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       orders: {
         description:
-          "Two-way sync between ERP and the floor. Orders reach the machine, and progress, scrap, and time flow straight back without anyone re-typing them.",
+          "Two-way sync between ERP and the floor. Orders reach the workstation, and progress, scrap, and time flow straight back without anyone re-typing them.",
       },
       iot: {
         description:
@@ -321,7 +322,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       documents: {
         description:
-          "Work instructions, drawings, and certificates at the machine, always in the current version. The operator sees what applies to the order in front of them.",
+          "Work instructions, drawings, and certificates at the machine or workstation, always in the current version. The operator sees what applies to the order in front of them.",
       },
       "ai-agents": {
         description:
@@ -480,7 +481,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       qms: {
         description:
-          "Registrer kvalitetsdata dér, hvor arbejdet sker. Følg afvigelsen tilbage til maskine, batch og skift. Kontrollen bliver selv dokumentationen, så papirarbejdet forsvinder.",
+          "Registrer kvalitetsdata dér, hvor arbejdet sker. Følg afvigelsen tilbage til maskine eller arbejdsstation, batch og skift. Kontrollen bliver selv dokumentationen, så papirarbejdet forsvinder.",
       },
       ems: {
         description:
@@ -496,7 +497,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       orders: {
         description:
-          "ERP og gulvet taler sammen begge veje. Ordren kommer ud på maskinen, og status, kassation og tid går direkte tilbage, uden at nogen taster det ind igen.",
+          "ERP og gulvet taler sammen begge veje. Ordren kommer ud på arbejdsstationen, og status, kassation og tid går direkte tilbage, uden at nogen taster det ind igen.",
       },
       iot: {
         description:
@@ -504,7 +505,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       documents: {
         description:
-          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder. Operatøren ser lige præcis det, der hører til den ordre, der kører.",
+          "Arbejdsinstruktioner, tegninger og certifikater ved maskinen eller arbejdsstationen, altid i den version, der gælder. Operatøren ser lige præcis det, der hører til den ordre, der kører.",
       },
       "ai-agents": {
         description:
@@ -720,6 +721,9 @@ export default async function Home({
           </p>
         </div>
       </section>
+
+      {/* Who we are: the same three columns as the About page. */}
+      <WhoWeAreStats locale={loc} className="pb-8 lg:pb-12" />
 
       {/* Customer Logo Wall */}
       <LogoWall logos={customerLogos} className="pb-0 lg:pb-0" />

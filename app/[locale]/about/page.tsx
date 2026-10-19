@@ -7,6 +7,7 @@ import { employees } from "@/lib/employees"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import { JsonLd } from "@/components/json-ld"
+import { WhoWeAreStats } from "@/components/who-we-are-stats"
 import { breadcrumbSchema, pageName } from "@/lib/structured-data"
 
 type PageProps = { params: Promise<{ locale: string }> }
@@ -23,8 +24,6 @@ const copy: Record<
     valuesHeading: string
     teamHeading: string
     values: { title: string; description: string }[]
-    stats: { metric: string; label: string; detail?: string }[]
-    statsTitle: string
     cta: string
     visual: { eyebrow: string; title: string; body: string }
   }
@@ -66,17 +65,6 @@ const copy: Record<
           "We avoid buzzwords and vague promises. When we say a system will improve OEE, we show how, by how much, and what it takes. Decisions should be based on facts, including the decision to work with us.",
       },
     ],
-    stats: [
-      { metric: "100+", label: "Factories" },
-      { metric: "10+", label: "Years of experience" },
-      {
-        metric: "5",
-        label: "Disciplines",
-        detail:
-          "Automation, IoT, software, operations implementation, operations consulting",
-      },
-    ],
-    statsTitle: "Who we are",
     cta: "Talk to us",
     visual: {
       eyebrow: "What we build",
@@ -121,17 +109,6 @@ const copy: Record<
           "Vi holder os fra buzzwords og løse løfter. Når vi siger, at et system kan forbedre OEE, viser vi, hvordan det sker, hvor meget det giver, og hvad det kræver. Beslutninger skal bygge på fakta. Også beslutningen om at arbejde med os.",
       },
     ],
-    stats: [
-      { metric: "100+", label: "Fabrikker" },
-      { metric: "10+", label: "Års erfaring" },
-      {
-        metric: "5",
-        label: "Fagområder",
-        detail:
-          "Automation, IoT, software, implementering i driften og driftsrådgivning",
-      },
-    ],
-    statsTitle: "Hvem vi er",
     cta: "Tal med os",
     visual: {
       eyebrow: "Det, vi bygger",
@@ -216,33 +193,7 @@ export default async function AboutPage({ params }: PageProps) {
 
       {/* Proof strip. These numbers used to sit alone at the very bottom of
           the page, after the last section, with nothing following them. */}
-      <section className="px-[var(--edge)] pt-16 lg:pt-20">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
-          {t.statsTitle}
-        </p>
-        <dl className="mt-6 grid grid-cols-1 divide-y divide-black/[0.08] border-y border-black/[0.08] sm:grid-cols-3 sm:divide-y-0">
-          {t.stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className={`py-8 sm:py-10 ${
-                i > 0 ? "sm:border-l sm:border-black/[0.08] sm:pl-8" : ""
-              } ${i < t.stats.length - 1 ? "sm:pr-8" : ""}`}
-            >
-              <dt className="text-4xl font-light leading-none tracking-tight tabular-nums text-foreground lg:text-5xl">
-                {stat.metric}
-              </dt>
-              <dd className="mt-3 max-w-[26ch] text-sm leading-relaxed text-foreground/70">
-                {stat.label}
-                {stat.detail ? (
-                  <span className="mt-1 block text-foreground/60">
-                    {stat.detail}
-                  </span>
-                ) : null}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <WhoWeAreStats locale={locale as Locale} className="pt-16 lg:pt-20" />
 
       {/* Mission: asymmetric, replacing the centred max-w-3xl block. */}
       <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-32">
