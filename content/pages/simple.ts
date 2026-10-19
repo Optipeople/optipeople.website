@@ -74,11 +74,11 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       sections: [
         {
           title: "Measured, not estimated",
-          body: "A machine either ran or it did not, and the signal says which. OptiPeople Data Platform builds its numbers from what equipment reports and what operators register at the machine, so the OEE figure in a Monday meeting traces back to specific minutes on a specific line rather than to someone's recollection of the week.",
+          body: "A machine either ran or it did not, and the signal says which. OptiPeople Data Platform builds its numbers from what equipment reports and what operators register at the machine or workstation, so the OEE figure in a Monday meeting traces back to specific minutes on a specific line rather than to someone's recollection of the week.",
         },
         {
           title: "Registered where the work happens",
-          body: "Stop causes, quality checks, and maintenance tasks are captured at the machine, on a panel or a phone, in the seconds after they happen. Data collected at the source is data people trust, and it does not depend on anyone remembering to fill in a spreadsheet at the end of a shift.",
+          body: "Stop causes, quality checks, and maintenance tasks are captured at the machine or workstation, on a panel or a phone, in the seconds after they happen. Data collected at the source is data people trust, and it does not depend on anyone remembering to fill in a spreadsheet at the end of a shift.",
         },
         {
           title: "The same numbers for everyone",
@@ -91,7 +91,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       ],
       links: [
         { title: "Production efficiency", href: "/features/production-efficiency", description: "Track OEE live across shifts, lines, and machines." },
-        { title: "Stop-cause registration", href: "/features/stop-cause-registration", description: "Capture downtime causes at the source, on the machine." },
+        { title: "Stop-cause registration", href: "/features/stop-cause-registration", description: "Capture downtime causes at the source, on the machine or workstation." },
         { title: "Maintenance & tasks", href: "/features/maintenance-and-tasks", description: "Plan preventive maintenance by usage and condition." },
         { title: "Quality management", href: "/features/quality-management", description: "Register quality data where the work happens." },
         { title: "Analysis & reporting", href: "/features/analysis-and-reporting", description: "Turn production data into clear reports." },
@@ -111,11 +111,11 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       sections: [
         {
           title: "Målt, ikke gættet",
-          body: "Enten kørte maskinen, eller også gjorde den ikke. Signalet siger hvad. OptiPeople Data Platform bygger tallene på det, udstyret melder, og det, operatørerne registrerer ved maskinen. OEE-tallet på mandagsmødet kan følges hele vejen tilbage til bestemte minutter på en bestemt linje, i stedet for til hvad nogen kan huske om ugen.",
+          body: "Enten kørte maskinen, eller også gjorde den ikke. Signalet siger hvad. OptiPeople Data Platform bygger tallene på det, udstyret melder, og det, operatørerne registrerer ved maskinen eller arbejdsstationen. OEE-tallet på mandagsmødet kan følges hele vejen tilbage til bestemte minutter på en bestemt linje, i stedet for til hvad nogen kan huske om ugen.",
         },
         {
           title: "Registreret dér, hvor arbejdet sker",
-          body: "Stopårsager, kvalitetstjek og vedligeholdsopgaver bliver registreret ved maskinen, på et panel eller en telefon, i sekunderne efter det sker. Data, der bliver samlet op ved kilden, er data, folk tror på. Og de afhænger ikke af, at nogen husker at udfylde et regneark, når skiftet er ved at være slut.",
+          body: "Stopårsager, kvalitetstjek og vedligeholdsopgaver bliver registreret ved maskinen eller arbejdsstationen, på et panel eller en telefon, i sekunderne efter det sker. Data, der bliver samlet op ved kilden, er data, folk tror på. Og de afhænger ikke af, at nogen husker at udfylde et regneark, når skiftet er ved at være slut.",
         },
         {
           title: "De samme tal for alle",
@@ -128,7 +128,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       ],
       links: [
         { title: "Produktionseffektivitet", href: "/features/production-efficiency", description: "Følg OEE live for hvert skift, hver linje og hver maskine." },
-        { title: "Stopårsager", href: "/features/stop-cause-registration", description: "Registrer årsagen til stoppet ude ved maskinen." },
+        { title: "Stopårsager", href: "/features/stop-cause-registration", description: "Registrer årsagen til stoppet ude ved maskinen eller arbejdsstationen." },
         { title: "Vedligehold og opgaver", href: "/features/maintenance-and-tasks", description: "Planlæg vedligehold efter brug og tilstand." },
         { title: "Kvalitetsstyring", href: "/features/quality-management", description: "Registrer kvalitetsdata dér, hvor arbejdet sker." },
         { title: "Analyse og rapportering", href: "/features/analysis-and-reporting", description: "Gør produktionsdata til rapporter, folk kan læse." },

@@ -55,13 +55,13 @@ const solutions: LocalizedPage<StandardPage>[] = [
             icon: Gauge,
             title: "Automatic OEE Tracking",
             description:
-              "Availability, performance, and quality calculated automatically. Drill down by shift, line, or machine without touching a spreadsheet.",
+              "Availability, performance, and quality calculated automatically. Drill down by shift, line, machine, or workstation without touching a spreadsheet.",
           },
           {
             icon: Wrench,
             title: "Stop Cause Registration",
             description:
-              "Operators register downtime reasons at the machine. You get clean data on where time is lost and can prioritize the improvements that matter.",
+              "Operators register downtime reasons at the machine or workstation. You get clean data on where time is lost and can prioritize the improvements that matter.",
           },
           {
             icon: BarChart3,
@@ -84,8 +84,8 @@ const solutions: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One dashboard for your entire operation",
         visualBody:
-          "From individual machines to plant-wide KPIs, drill into the data that matters, at any level.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
+          "From individual machines or workstations to plant-wide KPIs, drill into the data that matters, at any level.",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
         visualAlt:
           "OptiPeople manufacturing report showing OEE gauges, a shift timeline and stop distribution",
         metricsTitle: "Typical Results",
@@ -146,8 +146,8 @@ const solutions: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Hele driften på én skærm",
         visualBody:
-          "Fra den enkelte maskine til nøgletallene for hele fabrikken. Gå ned i tallene på det niveau, I har brug for.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
+          "Fra den enkelte maskine eller arbejdsstation til nøgletallene for hele fabrikken. Gå ned i tallene på det niveau, I har brug for.",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
         visualAlt: "Produktionsrapport med OEE, skiftets tidslinje og stopfordeling",
         metricsTitle: "Typiske resultater",
         metrics: [

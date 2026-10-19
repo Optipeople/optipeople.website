@@ -130,7 +130,7 @@ export const aiCapabilities: AiCapability[] = [
               "A team lead asks for yesterday's OEE per line and the top three stop causes. The summary is ready before the board meeting starts. No one spent the morning pulling numbers.",
           },
           {
-            title: "At the machine",
+            title: "At the machine or workstation",
             description:
               "An operator hits an unfamiliar fault and asks how it was handled before. Opti Assist finds the relevant entries in the maintenance log and the matching SOP section.",
           },
@@ -199,7 +199,7 @@ export const aiCapabilities: AiCapability[] = [
               "En teamleder spørger om OEE pr. linje i går og de tre største stopårsager. Overblikket er klar, før tavlemødet går i gang, og ingen har brugt morgenen på at trække tal.",
           },
           {
-            title: "Ude ved maskinen",
+            title: "Ude ved maskinen eller arbejdsstationen",
             description:
               "En operatør står med en fejl, hun ikke har set før, og spørger, hvordan den blev klaret sidst. Opti Assist finder de rigtige poster i vedligeholdsloggen og det afsnit i arbejdsbeskrivelsen, der handler om det.",
           },
@@ -244,7 +244,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Trigger on real events",
             description:
-              "Start a workflow from a downtime event, a schedule, a new document or an inbound request. The trigger carries its context, machine, order, shift, so every step downstream knows what it's working on.",
+              "Start a workflow from a downtime event, a schedule, a new document or an inbound request. The trigger carries its context, machine or workstation, order, shift, so every step downstream knows what it's working on.",
           },
           {
             title: "AI where it adds value",
@@ -254,7 +254,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Branch, loop and combine",
             description:
-              "Route long stops one way and short stops another. Loop over every machine on a line or every order in a batch. Combine data steps, AI steps and notifications in one flow.",
+              "Route long stops one way and short stops another. Loop over every machine or workstation on a line or every order in a batch. Combine data steps, AI steps and notifications in one flow.",
           },
           {
             title: "People in the loop",
@@ -313,7 +313,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Starter, når der faktisk sker noget",
             description:
-              "Et workflow kan gå i gang på et stop, på et fast tidspunkt, på et nyt dokument eller på en forespørgsel fra en kollega. Workflowet ved fra start, hvad det handler om: hvilken maskine, hvilken ordre, hvilket skift. Så ved alle de næste trin, hvad de arbejder på.",
+              "Et workflow kan gå i gang på et stop, på et fast tidspunkt, på et nyt dokument eller på en forespørgsel fra en kollega. Workflowet ved fra start, hvad det handler om: hvilken maskine eller arbejdsstation, hvilken ordre, hvilket skift. Så ved alle de næste trin, hvad de arbejder på.",
           },
           {
             title: "AI, hvor det gør en forskel",
@@ -323,7 +323,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Del op og gentag",
             description:
-              "Send de lange stop den ene vej og de korte den anden. Kør det samme trin igennem alle maskiner på en linje eller alle ordrer i en serie. Bland dataopslag, AI og beskeder i det samme flow.",
+              "Send de lange stop den ene vej og de korte den anden. Kør det samme trin igennem alle maskiner og arbejdsstationer på en linje eller alle ordrer i en serie. Bland dataopslag, AI og beskeder i det samme flow.",
           },
           {
             title: "Et menneske siger god for det",

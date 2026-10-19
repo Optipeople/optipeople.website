@@ -53,7 +53,7 @@ const copy: Record<Locale, PlatformCopy> = {
       title: "What it runs on",
       items: [
         { metric: "9", label: "Modules sharing one data foundation, switched on as you need them" },
-        { metric: "1", label: "Structured record per machine, order, batch, and shift" },
+        { metric: "1", label: "Structured record per machine or workstation, order, batch, and shift" },
         { metric: "Any", label: "Protocol or machine age, new PLCs and legacy equipment alike" },
       ],
     },
@@ -72,7 +72,7 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Collect",
           description:
-            "Data lands in one structured foundation, tied to machines, orders, batches, and shifts, instead of scattered across systems and spreadsheets.",
+            "Data lands in one structured foundation, tied to machines or workstations, orders, batches, and shifts, instead of scattered across systems and spreadsheets.",
         },
         {
           title: "Analyze",
@@ -111,7 +111,7 @@ const copy: Record<Locale, PlatformCopy> = {
       title: "Det, platformen kører på",
       items: [
         { metric: "9", label: "Moduler, der deler de samme data. I slår dem til, når I får brug for dem" },
-        { metric: "1", label: "Samlet registrering pr. maskine, ordre, batch og skift" },
+        { metric: "1", label: "Samlet registrering pr. maskine eller arbejdsstation, ordre, batch og skift" },
         { metric: "Alle", label: "Protokoller og maskiner, uanset alder. Nye PLC'er og gammelt udstyr" },
       ],
     },
@@ -130,7 +130,7 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Saml",
           description:
-            "Data lander ét sted, koblet til maskiner, ordrer, batches og skift, i stedet for spredt ud over systemer og regneark.",
+            "Data lander ét sted, koblet til maskiner eller arbejdsstationer, ordrer, batches og skift, i stedet for spredt ud over systemer og regneark.",
         },
         {
           title: "Følg med",
