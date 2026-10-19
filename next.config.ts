@@ -44,6 +44,27 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Removed from the site: the Danpres case and the Ligna 2025 post.
+      {
+        source: "/blog/danpres-boosting-production-by-reducing-tool-repair-time-by-50",
+        destination: "/cases",
+        permanent: true,
+      },
+      {
+        source: "/da/blog/danpres-boosting-production-by-reducing-tool-repair-time-by-50",
+        destination: "/da/cases",
+        permanent: true,
+      },
+      {
+        source: "/blog/ligna-2025",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/da/blog/ligna-2025",
+        destination: "/da/blog",
+        permanent: true,
+      },
       // Analysis is no longer one of the nine modules; its reporting now
       // belongs with OEE.
       {

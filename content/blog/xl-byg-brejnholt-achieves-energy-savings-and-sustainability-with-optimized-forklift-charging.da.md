@@ -1,12 +1,12 @@
 ---
 title: "XL-BYG Brejnholt sparer energi og CO2 med smartere opladning af trucks"
-metricLabel: "På vej mod fossilfri drift"
-outcome: "Trucks lades op, når strømmen er billig, og solcellerne leverer. Det sænker energiregningen og bringer XL-BYG tættere på fossilfri drift."
+metricLabel: "Anslået besparelse på elregningen"
+outcome: "Trucks lades op, når strømmen er billig, og solcellerne leverer. Det anslås at halvere elregningen og bringer XL-BYG tættere på fossilfri drift."
 ---
 
 ## Kort fortalt
 
-XL-BYG Brejnholt bruger OptiPeople Data Platform til at bruge mindre energi og komme tættere på helt fossilfri drift.
+XL-BYG Brejnholt bruger OptiPeople Data Platform til at bruge mindre energi og komme tættere på helt fossilfri drift. Samarbejdet anslås at have sparet dem omkring 50% på elregningen.
 
 ## Sådan bruger XL-BYG Brejnholt OptiPeople Data Platform
 
@@ -23,7 +23,7 @@ Den omfatter:
 
 Løsningen giver:
 
-- en lavere elregning til trucks
+- en anslået besparelse på 50% på elregningen
 - opladning af trucks med solenergi
 - ROI-beregninger på energitiltag og mulige tilskud
 - besparelser på ekstra ampere på adressen, f.eks. til elbiler

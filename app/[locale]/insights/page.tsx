@@ -9,7 +9,6 @@ import {
   getLatestPostsByCategory,
   getPostsByCategory,
 } from "@/lib/blog-data"
-import { formatPostDate } from "@/lib/format-date"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import { JsonLd } from "@/components/json-ld"
@@ -281,10 +280,7 @@ export default async function InsightsPage({
                             )}
                           </span>
                           <span className="min-w-0">
-                            <span className="block text-xs tabular-nums text-foreground/65">
-                              {formatPostDate(post.date, locale)}
-                            </span>
-                            <span className="mt-1.5 line-clamp-2 block text-sm font-medium leading-snug text-foreground/88 transition-colors group-hover:text-foreground">
+                            <span className="line-clamp-2 block text-sm font-medium leading-snug text-foreground/88 transition-colors group-hover:text-foreground">
                               {post.title}
                             </span>
                           </span>
@@ -329,9 +325,6 @@ export default async function InsightsPage({
                   className="group grid gap-x-8 gap-y-2 border-b border-black/[0.08] py-6 transition-colors hover:bg-[var(--gray-1)] sm:grid-cols-[9rem_minmax(0,1fr)_2.25rem] sm:items-center"
                 >
                   <span className="flex items-baseline gap-3">
-                    <span className="text-sm tabular-nums text-foreground/65">
-                      {formatPostDate(post.date, locale)}
-                    </span>
                     <span className="shrink-0 rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/65">
                       {t.typeLabels[post.category] ?? post.category}
                     </span>

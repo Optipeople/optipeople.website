@@ -4,7 +4,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import type { BlogPost } from "@/lib/blog-data"
 import { getSurface, rotateSurface } from "@/lib/page-theme"
-import { formatPostYear } from "@/lib/format-date"
 
 type CaseArchiveProps = {
   cases: BlogPost[]
@@ -178,9 +177,6 @@ export function CaseArchive({
                       customer={featured.customer}
                       logo={featured.logo}
                     />
-                    <span className="text-sm tabular-nums text-foreground/60">
-                      {formatPostYear(featured.date)}
-                    </span>
                   </div>
 
                   {featured.metric ? (
@@ -324,9 +320,6 @@ function CaseCard({
       <div>
         <div className="flex h-7 items-center justify-between gap-4">
           <CustomerMark customer={post.customer} logo={post.logo} />
-          <span className="shrink-0 text-sm tabular-nums text-foreground/50">
-            {formatPostYear(post.date)}
-          </span>
         </div>
 
         <div className="mt-8">

@@ -95,12 +95,12 @@ const posts: Pair[] = [
   ["/opticlouds-enhanced-reporting-feature-your-businesss-new-best-friend", "/blog/opticlouds-enhanced-reporting-feature-your-businesss-new-best-friend"],
   ["/optimizing-machine-performance-and-power-consumption-with-opticloud-at-steel-products", "/blog/optimizing-machine-performance-and-power-consumption-with-opticloud-at-steel-products"],
   ["/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai", "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai"],
-  ["/danpres-boosting-production-by-reducing-tool-repair-time-by-50", "/blog/danpres-boosting-production-by-reducing-tool-repair-time-by-50"],
+  ["/danpres-boosting-production-by-reducing-tool-repair-time-by-50", "/cases"],
   ["/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud", "/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud"],
   ["/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud", "/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud"],
   ["/dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights", "/blog/dfi-geisler-increases-productivity-by-5-with-opticlouds-data-driven-insights"],
   ["/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging", "/blog/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging"],
-  ["/ligna-2025", "/blog/ligna-2025"],
+  ["/ligna-2025", "/blog"],
   ["/kvik-case-study-og-video-fra-direktoren", "/da/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud"],
 ]
 
