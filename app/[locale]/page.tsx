@@ -771,7 +771,7 @@ export default async function Home({
 
         <SlideCarousel
           slides={moduleSlides}
-          navigationType={["arrows"]}
+          navigationType={["side-arrows"]}
           ariaLabel={t.platform.ariaLabel}
           className="mt-8"
           storageKey="home-modules"
