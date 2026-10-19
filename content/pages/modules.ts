@@ -57,13 +57,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Gauge,
             title: "Live OEE Dashboards",
             description:
-              "See availability, performance, and quality in real time across every machine, line, and shift. No more waiting for end-of-day reports.",
+              "See availability, performance, and quality in real time across every machine or workstation, line, and shift. No more waiting for end-of-day reports.",
           },
           {
             icon: AlertTriangle,
             title: "Stop Cause Registration",
             description:
-              "Operators register downtime reasons directly at the machine. Clean, structured data you can actually use to drive improvements.",
+              "Operators register downtime reasons directly at the machine or workstation. Clean, structured data you can actually use to drive improvements.",
           },
           {
             icon: Activity,
@@ -81,7 +81,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Target,
             title: "Performance and Quality Losses",
             description:
-              "Availability is the easy third. See the speed losses and the scrap that quietly take the rest, per machine, item, and setup.",
+              "Availability is the easy third. See the speed losses and the scrap that quietly take the rest, per machine or workstation, item, and setup.",
           },
           {
             icon: BarChart3,
@@ -137,13 +137,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Gauge,
             title: "Live OEE på skærmen",
             description:
-              "Se tilgængelighed, ydelse og kvalitet for hver maskine og hvert skift, uden at vente på dagsrapporten.",
+              "Se tilgængelighed, ydelse og kvalitet for hver maskine eller arbejdsstation og hvert skift, uden at vente på dagsrapporten.",
           },
           {
             icon: Bell,
             title: "Stopårsager",
             description:
-              "Operatøren registrerer årsagen ude ved maskinen, så forbedringerne bygger på noget, I kan regne på.",
+              "Operatøren registrerer årsagen ude ved maskinen eller arbejdsstationen, så forbedringerne bygger på noget, I kan regne på.",
           },
           {
             icon: Activity,
@@ -194,7 +194,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Quality Module",
         heroTitle: "Build Accountability Into Production",
         heroBody:
-          "Register quality data at the source and trace every deviation back to machines, batches, and shifts. Make quality everyone's responsibility.",
+          "Register quality data at the source and trace every deviation back to machines or workstations, batches, and shifts. Make quality everyone's responsibility.",
         primaryLabel: "Request a Demo",
         introTitle: "Quality issues shouldn't surface after the fact",
         introBody:
@@ -211,7 +211,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: GitBranch,
             title: "Full Traceability",
             description:
-              "Trace every product back to its machine, batch, operator, and shift. Build a complete quality genealogy without manual effort.",
+              "Trace every product back to its machine or workstation, batch, operator, and shift. Build a complete quality genealogy without manual effort.",
           },
           {
             icon: AlertCircle,
@@ -240,7 +240,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Quality data connected to production",
         visualBody:
-          "Every inspection, deviation, and corrective action linked to the machine, batch, and operator that produced it.",
+          "Every inspection, deviation, and corrective action linked to the machine or workstation, batch, and operator that produced it.",
         visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
         visualAlt: "Quality checks and deviations registered in OptiPeople Data Platform",
         metricsTitle: "Typical Results",
@@ -259,7 +259,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Trace",
             description:
-              "Link every quality event to machines, batches, and operators. Build full traceability without additional manual effort.",
+              "Link every quality event to machines or workstations, batches, and operators. Build full traceability without additional manual effort.",
           },
           {
             title: "Improve",
@@ -271,11 +271,11 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Kvalitetsstyring og sporbarhed i produktionen | OptiPeople",
         metaDescription:
-          "Kvalitetskontrol på skærmen ved maskinen i stedet for på papir. Følg afvigelserne, og spor hvert emne tilbage til maskine, batch og skift.",
+          "Kvalitetskontrol på skærmen ved maskinen eller arbejdsstationen i stedet for på papir. Følg afvigelserne, og spor hvert emne tilbage til maskine eller arbejdsstation, batch og skift.",
         eyebrow: "Kvalitetsmodul",
         heroTitle: "Fang fejlen, mens den er billig",
         heroBody:
-          "Registrer kvaliteten ude ved maskinen, og følg hver afvigelse tilbage til maskine, batch og skift.",
+          "Registrer kvaliteten ude ved maskinen eller arbejdsstationen, og følg hver afvigelse tilbage til maskine, batch og skift.",
         primaryLabel: "Book en demo",
         introTitle: "Kvalitetsfejl skal ikke først opdages bagefter",
         introBody:
@@ -286,13 +286,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: ClipboardCheck,
             title: "Digitale kontroller",
             description:
-              "Skift papiret ud med guidede skemaer og faste tjekpunkter ude ved maskinen.",
+              "Skift papiret ud med guidede skemaer og faste tjekpunkter ude ved maskinen eller arbejdsstationen.",
           },
           {
             icon: GitBranch,
             title: "Fuld sporbarhed",
             description:
-              "Følg produktet tilbage til maskine, batch, operatør og skift, uden ekstra arbejde.",
+              "Følg produktet tilbage til maskine eller arbejdsstation, batch, operatør og skift, uden ekstra arbejde.",
           },
           {
             icon: ShieldCheck,
@@ -303,7 +303,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Kvaliteten hænger sammen med produktionen",
         visualBody:
-          "Hver kontrol, hver afvigelse og hver handling hænger på den maskine, den batch og den operatør, den kom fra.",
+          "Hver kontrol, hver afvigelse og hver handling hænger på den maskine eller arbejdsstation, den batch og den operatør, den kom fra.",
         visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
         visualAlt: "Kvalitetskontroller og afvigelser registreret i OptiPeople Data Platform",
         metricsTitle: "Typiske resultater",
@@ -322,7 +322,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Spor",
             description:
-              "Kvalitetstjek og afvigelser bliver knyttet til maskine, batch og operatør af sig selv.",
+              "Kvalitetstjek og afvigelser bliver knyttet til maskine eller arbejdsstation, batch og operatør af sig selv.",
           },
           {
             title: "Forbedr",
@@ -691,7 +691,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Shield,
             title: "One Structured Foundation",
             description:
-              "However many sources it took, the data lands tied to machines, orders, batches, and shifts, encrypted in transit and at rest, in one record every module reads.",
+              "However many sources it took, the data lands tied to machines or workstations, orders, batches, and shifts, encrypted in transit and at rest, in one record every module reads.",
           },
         ],
         visualTitle: "Where the data comes from, and where it ends up",
@@ -801,34 +801,34 @@ const modules: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Orders Module",
         metaDescription:
-          "Run production orders on the floor: start, stop, and report at the machine. Works standalone, and syncs two ways with your ERP if you want it to.",
+          "Run production orders on the floor: start, stop, and report at the machine or workstation. Works standalone, and syncs two ways with your ERP if you want it to.",
         eyebrow: "Orders Module",
-        heroTitle: "The Orders to Run, on the Screen at the Machine",
+        heroTitle: "The Orders to Run, on the Screen at the Machine or Workstation",
         heroBody:
           "Operators see what to produce next, start and stop the job, and report quantities and scrap where the work happens. It runs on its own, and it connects to your ERP if you want it to.",
         primaryLabel: "Request a Demo",
-        introTitle: "A finance ERP is a poor fit for a machine",
+        introTitle: "A finance ERP is a poor fit for a machine or workstation",
         introBody:
           "Plenty of factories have never wanted their finance ERP on the shopfloor, and they are right not to: it is built for month-end, not for an operator with gloves on at 05:40. So the orders live on paper, on a whiteboard, or in a spreadsheet the planner keeps. The Orders module gives the floor its own screen for that job. Where an ERP already holds the orders, we sync with it in both directions. Where it does not, or where you would rather keep it out of production, the module holds the orders itself.",
         capabilitiesTitle: "Orders on the floor, ERP optional",
         features: [
           {
             icon: Monitor,
-            title: "Start and Stop at the Machine",
+            title: "Start and Stop at the Machine or Workstation",
             description:
-              "One screen at the machine: what to run next, start the job, stop it, and register why it stopped. Nothing to learn beyond the buttons an operator actually needs.",
+              "One screen at the machine or workstation: what to run next, start the job, stop it, and register why it stopped. Nothing to learn beyond the buttons an operator actually needs.",
           },
           {
             icon: Clock,
             title: "The Order List for This Station",
             description:
-              "Filtered to the machine in front of you, in priority order, with quantity, product, and due date. What is ready to start, what is waiting, what is blocked.",
+              "Filtered to the machine or workstation in front of you, in priority order, with quantity, product, and due date. What is ready to start, what is waiting, what is blocked.",
           },
           {
             icon: ClipboardCheck,
             title: "Report Quantities and Scrap",
             description:
-              "Good parts, scrap, and reason codes registered as the job runs, so the completion figure is the one the machine produced rather than an estimate typed in later.",
+              "Good parts, scrap, and reason codes registered as the job runs, so the completion figure is the one the machine or workstation produced rather than an estimate typed in later.",
           },
           {
             icon: Cable,
@@ -853,7 +853,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualBody:
           "Priority, product, quantity, due date, station, and readiness in one list, whether the orders came from an ERP or were created here.",
         visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
-        visualAlt: "The work order list on the panel at the machine",
+        visualAlt: "The work order list on the panel at the machine or workstation",
         metricsTitle: "What Changes",
         metrics: [
           { metric: "0", label: "ERP integrations required to start" },
@@ -865,7 +865,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Start on the floor",
             description:
-              "The panel goes up at the machine with the order list on it. Operators start, stop, and report from day one, with no integration project in front of it.",
+              "The panel goes up at the machine or workstation with the order list on it. Operators start, stop, and report from day one, with no integration project in front of it.",
           },
           {
             title: "Decide about the ERP",
@@ -882,26 +882,26 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Ordrestyring på gulvet med ERP-integration | OptiPeople",
         metaDescription:
-          "Kør produktionsordrerne ved maskinen: start, stop og meld tilbage dér. Virker alene og taler med jeres ERP begge veje, hvis I vil.",
+          "Kør produktionsordrerne ved maskinen eller arbejdsstationen: start, stop og meld tilbage dér. Virker alene og taler med jeres ERP begge veje, hvis I vil.",
         eyebrow: "Ordremodul",
-        heroTitle: "Ordrerne står på skærmen ved maskinen",
+        heroTitle: "Ordrerne står på skærmen ved maskinen eller arbejdsstationen",
         heroBody:
           "Operatøren ser, hvad der skal produceres, starter og stopper jobbet og melder antal og kassation der, hvor arbejdet sker. Det kører alene, og det kan kobles på jeres ERP, hvis I vil.",
         primaryLabel: "Book en demo",
-        introTitle: "Et økonomi-ERP hører ikke hjemme ude ved maskinen",
+        introTitle: "Et økonomi-ERP hører ikke hjemme ude ved maskinen eller arbejdsstationen",
         introBody:
           "Mange fabrikker har aldrig ønsket økonomisystemet ud på gulvet, og det er der god grund til: det er bygget til månedsafslutning, ikke til en operatør med handsker på klokken 05.40. Så ordrerne ender på papir, på en tavle eller i planlæggerens regneark. Ordremodulet giver gulvet sin egen skærm til det. Ligger ordrerne allerede i et ERP, kobler vi os på begge veje. Gør de ikke, eller vil I helst holde ERP ude af produktionen, holder modulet selv ordrerne.",
         capabilitiesTitle: "Ordrer på gulvet, med eller uden ERP",
         features: [
           {
             icon: Monitor,
-            title: "Start og stop ved maskinen",
+            title: "Start og stop ved maskinen eller arbejdsstationen",
             description:
-              "Én skærm ved maskinen: hvad der skal køres, start, stop og hvorfor den stoppede. Ikke mere end de knapper, en operatør har brug for.",
+              "Én skærm ved maskinen eller arbejdsstationen: hvad der skal køres, start, stop og hvorfor den stoppede. Ikke mere end de knapper, en operatør har brug for.",
           },
           {
             icon: Clock,
-            title: "Ordrelisten for netop den maskine",
+            title: "Ordrelisten for netop den maskine eller arbejdsstation",
             description:
               "Sorteret efter, hvad der er vigtigst, med antal, vare og leveringsdato. Hvad kan startes, hvad venter, og hvad er gået i stå.",
           },
@@ -909,7 +909,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: ClipboardCheck,
             title: "Meld antal og kassation",
             description:
-              "Gode emner, kassation og årsag bliver registreret, mens jobbet kører, så færdigmeldingen er det, maskinen lavede.",
+              "Gode emner, kassation og årsag bliver registreret, mens jobbet kører, så færdigmeldingen er det, maskinen eller arbejdsstationen lavede.",
           },
           {
             icon: Cable,
@@ -946,7 +946,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Start på gulvet",
             description:
-              "Panelet kommer op ved maskinen med ordrelisten på. Operatørerne starter, stopper og melder tilbage fra dag ét, uden et integrationsprojekt foran sig.",
+              "Panelet kommer op ved maskinen eller arbejdsstationen med ordrelisten på. Operatørerne starter, stopper og melder tilbage fra dag ét, uden et integrationsprojekt foran sig.",
           },
           {
             title: "Tag stilling til ERP",
@@ -984,25 +984,25 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: ClipboardCheck,
             title: "Orders",
             description:
-              "The orders to run, on the panel at the machine. Start, stop, and report quantities and scrap where the work happens, with or without an ERP behind it.",
+              "The orders to run, on the panel at the machine or workstation. Start, stop, and report quantities and scrap where the work happens, with or without an ERP behind it.",
           },
           {
             icon: Gauge,
             title: "OEE",
             description:
-              "Track availability, performance, and quality across every machine, line, and shift. Understand exactly where production time is gained and lost.",
+              "Track availability, performance, and quality across every machine or workstation, line, and shift. Understand exactly where production time is gained and lost.",
           },
           {
             icon: Calendar,
             title: "Planning",
             description:
-              "Sequence work orders across the entities of each production route, on a timeline the floor can see, against the capacity the machines actually have.",
+              "Sequence work orders across the entities of each production route, on a timeline the floor can see, against the capacity the machines and workstations actually have.",
           },
           {
             icon: ShieldCheck,
             title: "Quality",
             description:
-              "Digital checks and deviations registered where the work happens, traced back to machine, batch, and shift.",
+              "Digital checks and deviations registered where the work happens, traced back to machine or workstation, batch, and shift.",
           },
           {
             icon: Cpu,
@@ -1026,7 +1026,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: FileText,
             title: "Documents",
             description:
-              "Work instructions, drawings, and certificates at the machine, always in the version that applies to the job.",
+              "Work instructions, drawings, and certificates at the machine or workstation, always in the version that applies to the job.",
           },
           {
             icon: Sparkles,
@@ -1037,7 +1037,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "One module registers it, every module has it",
         visualBody:
-          "This is what makes it modular rather than nine separate products: a stop registered at the machine lands once, and orders, OEE, maintenance, and the monthly report all read the same record.",
+          "This is what makes it modular rather than nine separate products: a stop registered at the machine or workstation lands once, and orders, OEE, maintenance, and the monthly report all read the same record.",
         visualDrawn: "mes",
         metricsTitle: "What Modular Means",
         metrics: [
@@ -1060,7 +1060,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Keep one version of the truth",
             description:
-              "However many modules end up running, there is one record per machine, order, batch, and shift, and every view reads from it.",
+              "However many modules end up running, there is one record per machine or workstation, order, batch, and shift, and every view reads from it.",
           },
         ],
       },
@@ -1082,13 +1082,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: ClipboardCheck,
             title: "Ordrer",
             description:
-              "Ordrerne står på panelet ved maskinen. Start, stop, meld antal og kassation, med eller uden ERP bagved.",
+              "Ordrerne står på panelet ved maskinen eller arbejdsstationen. Start, stop, meld antal og kassation, med eller uden ERP bagved.",
           },
           {
             icon: Gauge,
             title: "OEE",
             description:
-              "Se tilgængelighed, ydelse og kvalitet for hver maskine, hver linje og hvert skift, og se præcis, hvor tiden bliver vundet og tabt.",
+              "Se tilgængelighed, ydelse og kvalitet for hver maskine eller arbejdsstation, hver linje og hvert skift, og se præcis, hvor tiden bliver vundet og tabt.",
           },
           {
             icon: Calendar,
@@ -1100,7 +1100,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: ShieldCheck,
             title: "Kvalitet",
             description:
-              "Digitale kontroller og afvigelser registreret dér, hvor arbejdet sker, og fulgt tilbage til maskine, batch og skift.",
+              "Digitale kontroller og afvigelser registreret dér, hvor arbejdet sker, og fulgt tilbage til maskine eller arbejdsstation, batch og skift.",
           },
           {
             icon: Cpu,
@@ -1124,7 +1124,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: FileText,
             title: "Dokumenter",
             description:
-              "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder for opgaven.",
+              "Arbejdsinstruktioner, tegninger og certifikater ved maskinen eller arbejdsstationen, altid i den version, der gælder for opgaven.",
           },
           {
             icon: Sparkles,
@@ -1135,7 +1135,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Ét modul registrerer det, alle moduler har det",
         visualBody:
-          "Det er det, der gør det modulært i stedet for ni løsrevne produkter: et stop registreret ved maskinen lander én gang, og ordrer, OEE, vedligehold og månedsrapporten læser den samme registrering.",
+          "Det er det, der gør det modulært i stedet for ni løsrevne produkter: et stop registreret ved maskinen eller arbejdsstationen lander én gang, og ordrer, OEE, vedligehold og månedsrapporten læser den samme registrering.",
         visualDrawn: "mes",
         metricsTitle: "Hvad modulært betyder",
         metrics: [
@@ -1158,7 +1158,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Alle ser de samme tal",
             description:
-              "Uanset hvor mange moduler der ender med at køre, er der én registrering pr. maskine, ordre, batch og skift.",
+              "Uanset hvor mange moduler der ender med at køre, er der én registrering pr. maskine eller arbejdsstation, ordre, batch og skift.",
           },
         ],
       },
@@ -1179,7 +1179,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         primaryLabel: "Request a Demo",
         introTitle: "A product does not pass through one machine, so why plan as if it does",
         introBody:
-          "Most production plans are built from standard times that were set years ago and a capacity figure nobody has re-measured since. The plan looks fine on Monday and has drifted by Wednesday. When planning reads from the same data as the shopfloor, the numbers underneath it are the ones the machines actually produced, so the plan starts realistic and stays that way.",
+          "Most production plans are built from standard times that were set years ago and a capacity figure nobody has re-measured since. The plan looks fine on Monday and has drifted by Wednesday. When planning reads from the same data as the shopfloor, the numbers underneath it are the ones the machines and workstations actually produced, so the plan starts realistic and stays that way.",
         capabilitiesTitle: "Planning that stays connected to the floor",
         features: [
           {
@@ -1192,13 +1192,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Calendar,
             title: "Capacity-Based Scheduling",
             description:
-              "Schedule against real available hours per machine and line, planned maintenance, shift patterns, and known downtime already accounted for.",
+              "Schedule against real available hours per machine or workstation and per line, planned maintenance, shift patterns, and known downtime already accounted for.",
           },
           {
             icon: Gauge,
             title: "Run Rates From Real Data",
             description:
-              "Standard times come from what the machine has actually produced, per item and per setup, instead of an estimate someone typed in once.",
+              "Standard times come from what the machine or workstation has actually produced, per item and per setup, instead of an estimate someone typed in once.",
           },
           {
             icon: ArrowLeftRight,
@@ -1210,7 +1210,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: AlertTriangle,
             title: "Conflicts Surface Early",
             description:
-              "Overloaded machines, colliding orders, and missing capacity show up while there is still time to move something.",
+              "Overloaded machines or workstations, colliding orders, and missing capacity show up while there is still time to move something.",
           },
           {
             icon: RefreshCw,
@@ -1222,7 +1222,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Monitor,
             title: "One Plan, Visible on the Floor",
             description:
-              "Operators see the same sequence the planner sees, on the panel at the machine, no printed plan from the morning meeting going stale in a folder.",
+              "Operators see the same sequence the planner sees, on the panel at the machine or workstation, no printed plan from the morning meeting going stale in a folder.",
           },
         ],
         visualTitle: "One row per entity, grouped by route",
@@ -1241,7 +1241,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Measure",
             description:
-              "The platform builds run rates and available hours per machine from production data you are already collecting.",
+              "The platform builds run rates and available hours per machine or workstation from production data you are already collecting.",
           },
           {
             title: "Plan",
@@ -1266,7 +1266,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         primaryLabel: "Book en demo",
         introTitle: "En vare går ikke kun gennem én maskine. Hvorfor planlægge, som om den gør?",
         introBody:
-          "De fleste planer bygger på standardtider, der blev sat for år tilbage, og en kapacitet, ingen har målt siden. Når planlægningen læser de samme data som gulvet, er tallene under planen dem, maskinerne faktisk har lavet.",
+          "De fleste planer bygger på standardtider, der blev sat for år tilbage, og en kapacitet, ingen har målt siden. Når planlægningen læser de samme data som gulvet, er tallene under planen dem, maskinerne og arbejdsstationerne faktisk har lavet.",
         capabilitiesTitle: "Planlægning, der hænger sammen med gulvet",
         features: [
           {
@@ -1279,13 +1279,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Calendar,
             title: "Planlæg efter reel kapacitet",
             description:
-              "Planlæg efter de timer, maskinen reelt er ledig. Skiftplaner, planlagt vedligehold og kendt nedetid er regnet med.",
+              "Planlæg efter de timer, maskinen eller arbejdsstationen reelt er ledig. Skiftplaner, planlagt vedligehold og kendt nedetid er regnet med.",
           },
           {
             icon: Gauge,
             title: "Kørehastigheder fra virkeligheden",
             description:
-              "Standardtiderne kommer fra det, maskinen faktisk har produceret, pr. vare og pr. opstilling.",
+              "Standardtiderne kommer fra det, maskinen eller arbejdsstationen faktisk har produceret, pr. vare og pr. opstilling.",
           },
           {
             icon: RefreshCw,
@@ -1310,7 +1310,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Mål",
             description:
-              "Platformen regner kørehastigheder og ledige timer ud pr. maskine ud fra de data, I allerede samler op.",
+              "Platformen regner kørehastigheder og ledige timer ud pr. maskine eller arbejdsstation ud fra de data, I allerede samler op.",
           },
           {
             title: "Planlæg",
@@ -1333,7 +1333,7 @@ const modules: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Documents Module",
         metaDescription:
-          "Work instructions, drawings, and certificates at the machine, always the current version, tied to the order and the operator in front of it.",
+          "Work instructions, drawings, and certificates at the machine or workstation, always the current version, tied to the order and the operator in front of it.",
         eyebrow: "Documents Module",
         heroTitle: "The Right Instruction, at the Right Place",
         heroBody:
@@ -1341,14 +1341,14 @@ const modules: LocalizedPage<StandardPage>[] = [
         primaryLabel: "Request a Demo",
         introTitle: "Documentation on the floor goes stale quietly",
         introBody:
-          "Instructions live in binders by the machine, in a shared drive nobody trusts, and in the head of whoever set the job up last time. When a drawing is revised, the old print stays on the floor until someone notices. Tying documents to the machine and the order means the operator opens what applies right now, and the revision reaches the floor the moment it is approved.",
+          "Instructions live in binders by the machine or workstation, in a shared drive nobody trusts, and in the head of whoever set the job up last time. When a drawing is revised, the old print stays on the floor until someone notices. Tying documents to the machine and the order means the operator opens what applies right now, and the revision reaches the floor the moment it is approved.",
         capabilitiesTitle: "Documentation that follows the work",
         features: [
           {
             icon: FileText,
-            title: "Instructions at the Machine",
+            title: "Instructions at the Machine or Workstation",
             description:
-              "Open the setup sheet, drawing, or work instruction from the panel at the machine, filtered to the order being run.",
+              "Open the setup sheet, drawing, or work instruction from the panel at the machine or workstation, filtered to the order being run.",
           },
           {
             icon: History,
@@ -1358,9 +1358,9 @@ const modules: LocalizedPage<StandardPage>[] = [
           },
           {
             icon: Search,
-            title: "Find It by Machine or Order",
+            title: "Find It by Machine, Workstation, or Order",
             description:
-              "Documents are linked to machines, items, and orders, so finding the right one does not depend on knowing a folder structure.",
+              "Documents are linked to machines or workstations, items, and orders, so finding the right one does not depend on knowing a folder structure.",
           },
           {
             icon: ClipboardCheck,
@@ -1396,12 +1396,12 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Upload",
             description:
-              "Bring in instructions, drawings, and certificates, and link them to the machines, items, and orders they apply to.",
+              "Bring in instructions, drawings, and certificates, and link them to the machines or workstations, items, and orders they apply to.",
           },
           {
             title: "Publish",
             description:
-              "Approve a version and it becomes the one the floor sees. Earlier versions stay in the history, not on the machine.",
+              "Approve a version and it becomes the one the floor sees. Earlier versions stay in the history, not on the machine or workstation.",
           },
           {
             title: "Confirm",
@@ -1411,24 +1411,24 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Digitale arbejdsinstruktioner ved maskinen | OptiPeople",
+        metaTitle: "Digitale arbejdsinstruktioner ved maskinen eller arbejdsstationen | OptiPeople",
         metaDescription:
-          "Arbejdsinstruktioner, tegninger og certifikater på skærmen ved maskinen. Altid den version, der gælder, og knyttet til ordren, operatøren står med.",
+          "Arbejdsinstruktioner, tegninger og certifikater på skærmen ved maskinen eller arbejdsstationen. Altid den version, der gælder, og knyttet til ordren, operatøren står med.",
         eyebrow: "Dokumentmodul",
         heroTitle: "Den rigtige instruktion på det rigtige sted",
         heroBody:
           "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen, på stationen, på linjen, på lageret eller i laboratoriet, i den version, der gælder for den opgave, man står med.",
         primaryLabel: "Book en demo",
-        introTitle: "Papirerne ved maskinen bliver forældede, uden at nogen opdager det",
+        introTitle: "Papirerne ved maskinen eller arbejdsstationen bliver forældede, uden at nogen opdager det",
         introBody:
-          "Instruktionerne ligger i en mappe ved maskinen, på et fællesdrev, ingen stoler på, og i hovedet på den, der sidst stillede om. Når dokumenterne hænger på maskinen og ordren, åbner operatøren det, der gælder nu, og en ny version er på gulvet, så snart den er godkendt.",
+          "Instruktionerne ligger i en mappe ved maskinen eller arbejdsstationen, på et fællesdrev, ingen stoler på, og i hovedet på den, der sidst stillede om. Når dokumenterne hænger på maskinen og ordren, åbner operatøren det, der gælder nu, og en ny version er på gulvet, så snart den er godkendt.",
         capabilitiesTitle: "Dokumenterne følger arbejdet",
         features: [
           {
             icon: FileText,
-            title: "Instruktionen ved maskinen",
+            title: "Instruktionen ved maskinen eller arbejdsstationen",
             description:
-              "Åbn opstillingsarket, tegningen eller instruktionen fra panelet ved maskinen, filtreret til den ordre, der kører.",
+              "Åbn opstillingsarket, tegningen eller instruktionen fra panelet ved maskinen eller arbejdsstationen, filtreret til den ordre, der kører.",
           },
           {
             icon: History,
@@ -1458,12 +1458,12 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Læg ind",
             description:
-              "Hent instruktioner, tegninger og certifikater ind, og knyt dem til de maskiner, varer og ordrer, de gælder for.",
+              "Hent instruktioner, tegninger og certifikater ind, og knyt dem til de maskiner eller arbejdsstationer, varer og ordrer, de gælder for.",
           },
           {
             title: "Udgiv",
             description:
-              "Godkend en version, og det er den, gulvet ser. De gamle bliver i historikken, ikke ude på maskinen.",
+              "Godkend en version, og det er den, gulvet ser. De gamle bliver i historikken, ikke ude på maskinen eller arbejdsstationen.",
           },
           {
             title: "Bekræft",

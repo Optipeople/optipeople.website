@@ -36,8 +36,8 @@ export const moduleCatalog: ModuleEntry[] = [
     href: "/modules/erp-shopfloor",
     label: { en: "Orders", da: "Ordrer" },
     blurb: {
-      en: "Start, stop, and report at the machine. ERP optional.",
-      da: "Start, stop og meld tilbage ved maskinen. Med eller uden ERP.",
+      en: "Start, stop, and report at the machine or workstation. ERP optional.",
+      da: "Start, stop og meld tilbage ved maskinen eller arbejdsstationen. Med eller uden ERP.",
     },
   },
   {

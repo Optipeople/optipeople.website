@@ -32,9 +32,9 @@ const englishModules: ModuleNode[] = [
   {
     id: "erp-shopfloor",
     name: "Orders",
-    description: "Run them at the machine",
-    pitch: "The orders to run, on the screen at the machine. Operators start, stop, and report quantities and scrap where the work happens. It runs on its own, and connects to your ERP if you want it to.",
-    features: ["Start, stop and report at the machine", "Runs with or without an ERP", "Two-way ERP sync when you want it"],
+    description: "At the machine or workstation",
+    pitch: "The orders to run, on the screen at the machine or workstation. Operators start, stop, and report quantities and scrap where the work happens. It runs on its own, and connects to your ERP if you want it to.",
+    features: ["Start, stop and report at the machine or workstation", "Runs with or without an ERP", "Two-way ERP sync when you want it"],
   },
   {
     id: "production",
@@ -54,7 +54,7 @@ const englishModules: ModuleNode[] = [
     id: "quality",
     name: "Quality",
     description: "Build in accountability",
-    pitch: "Register quality data at the source and trace every deviation back to machines, batches, and shifts.",
+    pitch: "Register quality data at the source and trace every deviation back to machines or workstations, batches, and shifts.",
     features: ["Digital inspections", "Full traceability", "Deviation tracking"],
   },
   {
@@ -82,7 +82,7 @@ const englishModules: ModuleNode[] = [
     id: "documents",
     name: "Documents",
     description: "Right version, right place",
-    pitch: "Work instructions, drawings, and certificates where the work happens: at a machine, a station, a line, a warehouse, or a lab, in the version that applies to the job in front of the person doing it.",
+    pitch: "Work instructions, drawings, and certificates where the work happens: at a machine, a workstation, a line, a warehouse, or a lab, in the version that applies to the job in front of the person doing it.",
     features: ["Wherever the work happens", "One current version", "Audit-ready records"],
   },
   {
@@ -105,10 +105,10 @@ const danishModules: ModuleNode[] = [
   {
     id: "erp-shopfloor",
     name: "Ordrer",
-    description: "Kør dem ved maskinen",
+    description: "Ved maskine eller arbejdsstation",
     pitch:
-      "Ordrerne står på skærmen ved maskinen. Operatøren starter, stopper og melder antal og kassation, dér, hvor arbejdet sker. Det kører fint uden ERP, men kan kobles på jeres ERP, hvis I vil.",
-    features: ["Start, stop og meld ved maskinen", "Kører med eller uden ERP", "Ordrer begge veje, når I vil"],
+      "Ordrerne står på skærmen ved maskinen eller arbejdsstationen. Operatøren starter, stopper og melder antal og kassation, dér, hvor arbejdet sker. Det kører fint uden ERP, men kan kobles på jeres ERP, hvis I vil.",
+    features: ["Start, stop og meld ved maskinen eller arbejdsstationen", "Kører med eller uden ERP", "Ordrer begge veje, når I vil"],
   },
   {
     id: "production",
@@ -130,7 +130,7 @@ const danishModules: ModuleNode[] = [
     name: "Kvalitet",
     description: "Fang fejlen i tide",
     pitch:
-      "Registrer kvalitetsdata ved kilden, og følg hver afvigelse tilbage til maskine, batch og skift.",
+      "Registrer kvalitetsdata ved kilden, og følg hver afvigelse tilbage til maskine eller arbejdsstation, batch og skift.",
     features: ["Digitale kontroller", "Fuld sporbarhed", "Afvigelser registreret"],
   },
   {
@@ -161,7 +161,7 @@ const danishModules: ModuleNode[] = [
     id: "documents",
     name: "Dokumenter",
     description: "Rette version, rette sted",
-    pitch: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen, på stationen, på linjen, på lageret eller i laboratoriet, i den version, der gælder for den, der står med opgaven.",
+    pitch: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen eller arbejdsstationen, på linjen, på lageret eller i laboratoriet, i den version, der gælder for den, der står med opgaven.",
     features: ["Dér, hvor arbejdet sker", "Én gældende version", "Klar til audit"],
   },
   {

@@ -9,13 +9,13 @@ const features: LocalizedPage<FeaturePage>[] = [
       en: {
         metaTitle: "Production Efficiency | OptiPeople",
         metaDescription:
-          "Track OEE in real time, see where production time is lost, and understand performance across shifts, lines, and machines, based on real production data.",
+          "Track OEE in real time, see where production time is lost, and understand performance across shifts, lines, and machines or workstations, based on real production data.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Production Efficiency",
         heroTitle: "See Where Production Time Is Lost",
         heroBody:
-          "Track OEE live and understand performance across shifts, lines, and machines, based on real production data, not guesswork.",
+          "Track OEE live and understand performance across shifts, lines, and machines or workstations, based on real production data, not guesswork.",
         heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         heroImageAlt:
           "OptiPeople efficiency report with live availability, performance and OEE gauges against target",
@@ -29,7 +29,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Live OEE in One View",
             description:
-              "Availability, performance, and quality calculated automatically from machine signals. Your OEE score updates as production runs, with drill-down by machine, line, or area. No spreadsheets. No waiting for the shift report.",
+              "Availability, performance, and quality calculated automatically from machine signals. Your OEE score updates as production runs, with drill-down by machine or workstation, line, or area. No spreadsheets. No waiting for the shift report.",
             image: "/images/report-mockup1.png",
             imageAlt:
               "OptiPeople OEE dashboard showing availability gauge, unit counter, and parts per hour chart",
@@ -53,7 +53,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
         showcaseTitle: "The full picture, from floor to management",
         showcaseBody:
-          "Operators see their machine. Team leads see their line. Managers see the plant. Same data, right level of detail.",
+          "Operators see their machine or workstation. Team leads see their line. Managers see the plant. Same data, right level of detail.",
         showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
         showcaseAlt:
           "OptiPeople production counter report with produced and rejected totals and an hourly output trend",
@@ -78,7 +78,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Quality Management",
             description:
-              "Register quality data where it happens. Trace deviations back to machines, batches, and shifts.",
+              "Register quality data where it happens. Trace deviations back to machines or workstations, batches, and shifts.",
             href: "/features/quality-management",
           },
         ],
@@ -86,13 +86,13 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Produktionseffektivitet | OptiPeople",
         metaDescription:
-          "Følg OEE, mens produktionen kører. Se, hvor tiden går tabt, og hvordan skift, linjer og maskiner klarer sig.",
+          "Følg OEE, mens produktionen kører. Se, hvor tiden går tabt, og hvordan skift, linjer og maskiner eller arbejdsstationer klarer sig.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Produktionseffektivitet",
         heroTitle: "Se, hvor produktionstiden går tabt",
         heroBody:
-          "Følg OEE live, og se, hvordan hvert skift, hver linje og hver maskine klarer sig. Tallene kommer fra produktionen selv, ikke fra mavefornemmelser.",
+          "Følg OEE live, og se, hvordan hvert skift, hver linje og hver maskine eller arbejdsstation klarer sig. Tallene kommer fra produktionen selv, ikke fra mavefornemmelser.",
         heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
         heroImageAlt: "OptiPeople effektivitetsrapport med tilgængelighed, ydelse og OEE mod målet",
         valueTitle: "Tallene nytter mest, mens skiftet stadig kører",
@@ -126,7 +126,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
         showcaseTitle: "Hele billedet, fra gulvet til ledelsen",
         showcaseBody:
-          "Operatøren ser sin maskine. Teamlederen ser sin linje. Ledelsen ser fabrikken. Det er de samme tal, bare i den detaljegrad, hver især har brug for.",
+          "Operatøren ser sin maskine eller arbejdsstation. Teamlederen ser sin linje. Ledelsen ser fabrikken. Det er de samme tal, bare i den detaljegrad, hver især har brug for.",
         showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
         showcaseAlt: "Rapport med producerede og kasserede emner samt output pr. time",
         metrics: [
@@ -137,7 +137,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         related: [
           {
             title: "Stopårsager",
-            description: "Registrer årsagen til stoppet ude ved maskinen.",
+            description: "Registrer årsagen til stoppet ude ved maskinen eller arbejdsstationen.",
             href: "/features/stop-cause-registration",
           },
           {
@@ -161,13 +161,13 @@ const features: LocalizedPage<FeaturePage>[] = [
       en: {
         metaTitle: "Stop Cause Registration | OptiPeople",
         metaDescription:
-          "Make downtime visible at the source. Operators register stops directly at the machine, giving you clean data you can actually act on.",
+          "Make downtime visible at the source. Operators register stops directly at the machine or workstation, giving you clean data you can actually act on.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Stop Cause Registration",
         heroTitle: "Make Downtime Visible at the Source",
         heroBody:
-          "Operators register stops directly at the machine, while the context is fresh. You get clean, structured data you can actually act on.",
+          "Operators register stops directly at the machine or workstation, while the context is fresh. You get clean, structured data you can actually act on.",
         heroImage: "/images/Stop-Screen-Select.png",
         heroImageAlt:
           "Operator panel showing stop cause selection screen with predefined reason categories",
@@ -189,7 +189,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Every Stop Gets a Reason",
             description:
-              "Operators pick from a predefined list of stop causes, tailored to each machine. Setup, tool change, material wait, malfunction. Each entry captures the reason, duration, and optional notes. The result is structured data, not free-text guesswork.",
+              "Operators pick from a predefined list of stop causes, tailored to each machine or workstation. Setup, tool change, material wait, malfunction. Each entry captures the reason, duration, and optional notes. The result is structured data, not free-text guesswork.",
             image: "/images/operatorpanel2.png",
             imageAlt:
               "Detailed stop log showing stop reasons, telemetry data, and operator notes across shifts",
@@ -197,7 +197,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "A Complete Picture of Every Shift",
             description:
-              "All stops appear on a color-coded timeline, filterable by shift, machine, and severity. Hover over any block to see exactly what happened, when, and for how long. Patterns that were invisible in shift handover notes become obvious at a glance.",
+              "All stops appear on a color-coded timeline, filterable by shift, machine or workstation, and severity. Hover over any block to see exactly what happened, when, and for how long. Patterns that were invisible in shift handover notes become obvious at a glance.",
             image: "/images/Stop-Screen-Timeline.png",
             imageAlt:
               "Color-coded stop timeline showing all stops across a shift with details on hover",
@@ -218,7 +218,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Production Efficiency",
             description:
-              "Track OEE live and understand performance across shifts, lines, and machines.",
+              "Track OEE live and understand performance across shifts, lines, and machines or workstations.",
             href: "/features/production-efficiency",
           },
           {
@@ -238,13 +238,13 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Stopårsager | OptiPeople",
         metaDescription:
-          "Få styr på nedetiden ude ved maskinen. Operatøren registrerer stoppet med det samme, så I får tal, I kan bruge.",
+          "Få styr på nedetiden ude ved maskinen eller arbejdsstationen. Operatøren registrerer stoppet med det samme, så I får tal, I kan bruge.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
         eyebrow: "Stopårsager",
-        heroTitle: "Få styr på nedetiden ude ved maskinen",
+        heroTitle: "Få styr på nedetiden ude ved maskinen eller arbejdsstationen",
         heroBody:
-          "Operatøren registrerer stoppet direkte på maskinen, mens det stadig står klart, hvad der skete. Så får I tal, der er til at stole på og til at gøre noget ved.",
+          "Operatøren registrerer stoppet direkte på maskinen eller arbejdsstationen, mens det stadig står klart, hvad der skete. Så får I tal, der er til at stole på og til at gøre noget ved.",
         heroImage: "/images/Stop-Screen-Select.png",
         heroImageAlt: "Skærm til valg af stopårsag",
         valueTitle: "Det, I ikke kan se, kan I ikke rette",
@@ -264,7 +264,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Hvert stop får en årsag",
             description:
-              "Operatøren vælger årsagen fra en fast liste, der passer til lige den maskine: omstilling, værktøjsskift, venter på materiale, fejl. Så kan I regne på tallene bagefter i stedet for at tyde fritekst.",
+              "Operatøren vælger årsagen fra en fast liste, der passer til lige den maskine eller arbejdsstation: omstilling, værktøjsskift, venter på materiale, fejl. Så kan I regne på tallene bagefter i stedet for at tyde fritekst.",
             image: "/images/operatorpanel2.png",
             imageAlt: "Stoplog på operatørpanel",
           },
@@ -289,7 +289,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         related: [
           {
             title: "Produktionseffektivitet",
-            description: "Følg OEE live på alle skift, linjer og maskiner.",
+            description: "Følg OEE live på alle skift, linjer og maskiner eller arbejdsstationer.",
             href: "/features/production-efficiency",
           },
           {
@@ -456,27 +456,27 @@ const features: LocalizedPage<FeaturePage>[] = [
       en: {
         metaTitle: "Quality Management | OptiPeople",
         metaDescription:
-          "Register quality data where it happens. Trace deviations back to machines, batches, and shifts, and build accountability into production.",
+          "Register quality data where it happens. Trace deviations back to machines or workstations, batches, and shifts, and build accountability into production.",
         parentLabel: "Quality",
         parentHref: "/modules/quality",
         eyebrow: "Quality Management",
         heroTitle: "Catch Quality Issues Where They Start",
         heroBody:
-          "Register quality data at the machine, trace deviations back to their source, and build accountability into every shift.",
+          "Register quality data at the machine or workstation, trace deviations back to their source, and build accountability into every shift.",
         heroImage: "/images/backoffice1.png",
         heroImageAlt:
           "OptiPeople quality tracking interface showing audit trail and device management",
         valueTitle: "Quality problems found late cost ten times more",
         valueBody:
-          "When quality data lives in paper forms and disconnected systems, deviations surface too late to prevent waste. By the time the report reaches quality management, the batch is finished and the damage is done. OptiPeople captures quality events in real time, linked to the machine, the shift, and the conditions that caused them.",
+          "When quality data lives in paper forms and disconnected systems, deviations surface too late to prevent waste. By the time the report reaches quality management, the batch is finished and the damage is done. OptiPeople captures quality events in real time, linked to the machine or workstation, the shift, and the conditions that caused them.",
         capabilitiesTitle: "From floor event to traceable record",
         capabilitiesBody:
           "Quality data captured at the source, structured for analysis, and always audit-ready.",
         capabilities: [
           {
-            title: "Register Quality Events at the Machine",
+            title: "Register Quality Events at the Machine or Workstation",
             description:
-              "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine, order, and shift, so nothing gets lost between the floor and the office.",
+              "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine or workstation, order, and shift, so nothing gets lost between the floor and the office.",
             image: "/images/operatorpanel2.png",
             imageAlt:
               "Operator panel showing detailed event log with quality notes, telemetry data, and shift information",
@@ -484,7 +484,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Trace Every Deviation to Its Source",
             description:
-              "When quality drops, you need to know why, fast. Filter by machine, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
+              "When quality drops, you need to know why, fast. Filter by machine or workstation, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
             image: "/images/report1.png",
             imageAlt:
               "OptiPeople report showing OEE breakdown with availability, performance, and quality metrics alongside a timeline chart",
@@ -500,7 +500,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
         metrics: [
           { metric: "30%", label: "Reduction in quality-related scrap" },
-          { metric: "100%", label: "Traceability across machines and shifts" },
+          { metric: "100%", label: "Traceability across machines, workstations, and shifts" },
           { metric: "< 5 min", label: "From deviation to documented root cause" },
         ],
         related: [
@@ -527,21 +527,21 @@ const features: LocalizedPage<FeaturePage>[] = [
       da: {
         metaTitle: "Kvalitetsstyring | OptiPeople",
         metaDescription:
-          "Registrer kvalitetsdata dér, hvor arbejdet sker, og følg en afvigelse tilbage til maskine, batch og skift.",
+          "Registrer kvalitetsdata dér, hvor arbejdet sker, og følg en afvigelse tilbage til maskine eller arbejdsstation, batch og skift.",
         parentLabel: "Kvalitet",
         parentHref: "/modules/quality",
         eyebrow: "Kvalitetsstyring",
         heroTitle: "Fang fejlen, hvor den opstår",
         heroBody:
-          "Registrer kvaliteten ude ved maskinen, og følg hver afvigelse tilbage til det skift, den batch og den maskine, den kom fra.",
+          "Registrer kvaliteten ude ved maskinen eller arbejdsstationen, og følg hver afvigelse tilbage til det skift, den batch og den maskine, den kom fra.",
         heroImage: "/images/backoffice1.png",
         heroImageAlt: "Kvalitetsstyring",
         valueTitle: "Jo senere I opdager fejlen, jo dyrere bliver den",
         valueBody:
-          "Ligger kvalitetsdata i papirskemaer og spredte systemer, opdager I afvigelsen for sent: batchen er kørt, og skaden er sket. Her bliver hver afvigelse registreret med det samme og koblet til maskinen, skiftet og det, der gik forud.",
+          "Ligger kvalitetsdata i papirskemaer og spredte systemer, opdager I afvigelsen for sent: batchen er kørt, og skaden er sket. Her bliver hver afvigelse registreret med det samme og koblet til maskinen eller arbejdsstationen, skiftet og det, der gik forud.",
         capabilitiesTitle: "Fra hændelse på gulvet til et spor, I kan følge",
         capabilitiesBody:
-          "Hver registrering hænger sammen med maskine, produkt, operatør og skift.",
+          "Hver registrering hænger sammen med maskine eller arbejdsstation, produkt, operatør og skift.",
         capabilities: [
           {
             title: "Digitale skemaer",
@@ -557,7 +557,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           },
           {
             title: "Sporbarhed",
-            description: "Knyt kvalitetstjek og afvigelser til batch, maskine og skift.",
+            description: "Knyt kvalitetstjek og afvigelser til batch, maskine eller arbejdsstation og skift.",
             image: "/images/Mockups/Report-Individual-Events-Desktop.png",
             imageAlt: "Sporbarhedsrapport med de enkelte registreringer pr. ordre og skift",
           },
@@ -614,7 +614,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "OEE Reports That Build Themselves",
             description:
-              "Availability, performance, and quality broken down by machine, line, shift, or time period. Reports generate automatically from live production data. Pick a week, pick a machine, and the numbers are there.",
+              "Availability, performance, and quality broken down by machine or workstation, line, shift, or time period. Reports generate automatically from live production data. Pick a week, pick a machine, and the numbers are there.",
             image: "/images/report1.png",
             imageAlt:
               "OptiPeople report showing OEE gauges for availability, performance, and quality with a color-coded timeline chart",
@@ -622,7 +622,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Compare Anything Against Anything",
             description:
-              "Side-by-side bar charts across shifts, lines, weeks, or machines. See where performance diverges and where it converges. The comparisons that used to take a full afternoon in Excel now take one click.",
+              "Side-by-side bar charts across shifts, lines, weeks, machines, or workstations. See where performance diverges and where it converges. The comparisons that used to take a full afternoon in Excel now take one click.",
             image: "/images/report-mockup2.png",
             imageAlt:
               "Bar chart report comparing production metrics across different time periods and categories",
@@ -701,7 +701,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           },
           {
             title: "Klik dig ned i tallene",
-            description: "Gå fra hele fabrikken ned til den enkelte maskine, det enkelte skift og det enkelte stop.",
+            description: "Gå fra hele fabrikken ned til den enkelte maskine eller arbejdsstation, det enkelte skift og det enkelte stop.",
             image: "/images/Mockups/Report-Individual-Events-Desktop.png",
             imageAlt: "Rapport med de enkelte registrerede stop, årsag, varighed og skift",
           },
