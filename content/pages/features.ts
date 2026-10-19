@@ -457,7 +457,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Quality Management | OptiPeople",
         metaDescription:
           "Register quality data where it happens. Trace deviations back to machines, batches, and shifts, and build accountability into production.",
-        parentLabel: "QMS",
+        parentLabel: "Quality",
         parentHref: "/modules/quality",
         eyebrow: "Quality Management",
         heroTitle: "Catch Quality Issues Where They Start",
@@ -528,7 +528,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Kvalitetsstyring | OptiPeople",
         metaDescription:
           "Registrer kvalitetsdata dér, hvor arbejdet sker, og følg en afvigelse tilbage til maskine, batch og skift.",
-        parentLabel: "QMS",
+        parentLabel: "Kvalitet",
         parentHref: "/modules/quality",
         eyebrow: "Kvalitetsstyring",
         heroTitle: "Fang fejlen, hvor den opstår",
@@ -595,8 +595,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Analysis and Reporting | OptiPeople",
         metaDescription:
           "Turn production data into clear reports on performance, losses, and cost drivers, without spreadsheets or manual work.",
-        parentLabel: "Analysis",
-        parentHref: "/modules/analysis",
+        parentLabel: "OEE",
+        parentHref: "/modules/production",
         eyebrow: "Analysis and Reporting",
         heroTitle: "Reports That Write Themselves",
         heroBody:
@@ -672,8 +672,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Analyse og rapportering | OptiPeople",
         metaDescription:
           "Få rapporter, folk kan læse: hvordan det går, hvor tiden går tabt, og hvad det koster. Uden regneark og uden håndarbejde.",
-        parentLabel: "Analyse",
-        parentHref: "/modules/analysis",
+        parentLabel: "OEE",
+        parentHref: "/modules/production",
         eyebrow: "Analyse og rapportering",
         heroTitle: "Rapporterne skriver sig selv",
         heroBody:
@@ -877,7 +877,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "AI and Copilots | OptiPeople",
         metaDescription:
           "Ask questions, detect patterns, and support decisions using AI trained on your own production data.",
-        parentLabel: "AI agents",
+        parentLabel: "AI Agents",
         parentHref: "/ai/agents",
         eyebrow: "AI and Copilots",
         heroTitle: "AI Trained on Your Factory",

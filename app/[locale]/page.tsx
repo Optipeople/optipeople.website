@@ -171,53 +171,40 @@ type ModuleSlideCopy = {
 /**
  * One card colour per module. The family is the AI section's, deep greens and
  * teals against a charcoal, a pale blue and a warm sand, because that section
- * is the better looking of the two. It is extended rather than cycled: eleven
+ * is the better looking of the two. It is extended rather than cycled: nine
  * slides over five colours meant the same card turned up three times, and the
  * sequence is deliberately not the AI section's own, since both carousels sit
  * on the same page and should not read as the same run of colour twice.
  *
  * Keyed by module id, not by position, so a module keeps its colour when the
  * catalog is reordered. The alternation of light and dark is tuned for the
- * current order in content/modules-catalog.ts, so a reorder is worth a look
- * here. `tone` decides the title, the supporting line and the arrow button.
- *
- * MES, IoT and AI agents keep their colours for when they are shown, but the
- * homepage leaves them out (see CHAPTER_MODULE_IDS), so the alternation is
- * tuned for the eight that remain: Maintenance and Planning took the sage and
- * the sand those three freed up. OEE sits on the deepest green because its
- * gauges carry the most colour of any slide.
+ * current order in content/modules-catalog.ts, pale on the odd slides and
+ * dark on the even ones, so a reorder is worth a look here. `tone` decides
+ * the title, the supporting line and the arrow button. OEE sits on the
+ * deepest green because its gauges carry the most colour of any slide.
  */
 type ModuleAccent = { bg: string; tone: "light" | "dark" }
 
 const MODULE_SLIDE_ACCENTS: Record<string, ModuleAccent> = {
-  mes: { bg: "#163b40", tone: "light" },
-  iot: { bg: "#c7d9cd", tone: "dark" },
+  orders: { bg: "#d8d4c6", tone: "dark" },
   oee: { bg: "#243b2f", tone: "light" },
-  "ai-agents": { bg: "#d8d4c6", tone: "dark" },
-  maintenance: { bg: "#c7d9cd", tone: "dark" },
+  planning: { bg: "#c7d9cd", tone: "dark" },
+  qms: { bg: "#1c1f26", tone: "light" },
+  iot: { bg: "#c5d8e8", tone: "dark" },
   ems: { bg: "#0f2f33", tone: "light" },
-  qms: { bg: "#c5d8e8", tone: "dark" },
-  orders: { bg: "#1c1f26", tone: "light" },
-  planning: { bg: "#d8d4c6", tone: "dark" },
-  documents: { bg: "#e4ded4", tone: "dark" },
-  analysis: { bg: "#3d4436", tone: "light" },
+  maintenance: { bg: "#e4ded4", tone: "dark" },
+  documents: { bg: "#163b40", tone: "light" },
+  "ai-agents": { bg: "#d8d4c6", tone: "dark" },
 }
-
-/**
- * Modules that have a product chapter of their own above the carousel. The
- * carousel is where the visitor explores the rest of the platform, so these
- * are left out of it rather than told twice. AI agents has the AI section.
- */
-const CHAPTER_MODULE_IDS = new Set(["mes", "iot", "ai-agents"])
 
 /** A module added to the catalog before it is given a colour still gets a card. */
 const MODULE_SLIDE_FALLBACK: ModuleAccent = { bg: "#243b2f", tone: "light" }
 
 /**
  * Builds the module carousel by walking the catalog, so the slides are always
- * the modules the hero chips and the nav offer, in the same order, minus the
- * ones that have a chapter of their own. A module with no copy yet still gets
- * a slide, falling back to its catalog blurb.
+ * the nine modules the hero chips and the nav offer, in the same order. A
+ * module with no copy yet still gets a slide, falling back to its catalog
+ * blurb.
  */
 function buildModuleSlides(
   locale: Locale,
@@ -225,7 +212,6 @@ function buildModuleSlides(
   ctaTemplate: string
 ): SlideData[] {
   return moduleCatalog
-    .filter((entry) => !CHAPTER_MODULE_IDS.has(entry.id))
     .map((entry) => {
       const label = entry.label[locale]
       const slide = copyById[entry.id]
@@ -255,7 +241,7 @@ type HeroVariant = "product" | "category" | "outcome"
 const heroVariant: HeroVariant = "product"
 
 /** Chips picked before the visitor touches anything. Locale-independent. */
-const heroDefaultModules = ["mes"]
+const heroDefaultModules: string[] = []
 
 const copy: Record<Locale, HomeCopy> = {
   en: {
@@ -276,8 +262,8 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "What do you want to run better?",
       moduleRows: [
-        ["mes", "iot", "ai-agents", "oee", "qms"],
-        ["orders", "planning", "ems", "maintenance", "documents"],
+        ["orders", "oee", "planning", "qms", "iot"],
+        ["ems", "maintenance", "documents", "ai-agents"],
       ],
     },
     advisory: {
@@ -305,10 +291,6 @@ const copy: Record<Locale, HomeCopy> = {
     // No slide takes a screenshot any more: every module draws its
     // visual in code, see components/module-mockups.tsx
     moduleSlides: {
-      mes: {
-        description:
-          "The cloud MES the other modules run on. Start with one line, add modules as the next question comes up, same data foundation, no re-implementation.",
-      },
       oee: {
         description:
           "See where production time is lost and why. Track availability, performance, and quality live across shifts, lines, and machines, built from real machine signals.",
@@ -340,10 +322,6 @@ const copy: Record<Locale, HomeCopy> = {
       documents: {
         description:
           "Work instructions, drawings, and certificates at the machine, always in the current version. The operator sees what applies to the order in front of them.",
-      },
-      analysis: {
-        description:
-          "Turn production data into clear reports on performance, losses, and cost drivers, automatically, without spreadsheets or manual work.",
       },
       "ai-agents": {
         description:
@@ -467,8 +445,8 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "Hvad vil I have bedre styr på?",
       moduleRows: [
-        ["mes", "iot", "ai-agents", "oee", "qms"],
-        ["orders", "planning", "ems", "maintenance", "documents"],
+        ["orders", "oee", "planning", "qms", "iot"],
+        ["ems", "maintenance", "documents", "ai-agents"],
       ],
     },
     advisory: {
@@ -496,10 +474,6 @@ const copy: Record<Locale, HomeCopy> = {
     // Ingen slides bruger screenshots: hvert modul tegner sit visuelle
     // udtryk i kode, se components/module-mockups.tsx
     moduleSlides: {
-      mes: {
-        description:
-          "Et MES i skyen, som alle de andre moduler bygger på. Start med én linje, og tag flere moduler med, når næste spørgsmål melder sig. Data er de samme hele vejen, så intet skal laves forfra.",
-      },
       oee: {
         description:
           "Se, hvor produktionstiden forsvinder, og hvorfor. Følg tilgængelighed, ydelse og kvalitet live for hvert skift, hver linje og hver maskine, målt direkte på maskinernes signaler.",
@@ -531,10 +505,6 @@ const copy: Record<Locale, HomeCopy> = {
       documents: {
         description:
           "Arbejdsinstruktioner, tegninger og certifikater ved maskinen, altid i den version, der gælder. Operatøren ser lige præcis det, der hører til den ordre, der kører.",
-      },
-      analysis: {
-        description:
-          "Rapporter, folk faktisk kan læse: hvordan det går, hvor I taber tid, og hvad der koster mest. De laver sig selv, uden regneark.",
       },
       "ai-agents": {
         description:

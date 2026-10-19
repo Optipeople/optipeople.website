@@ -128,7 +128,7 @@ const panel =
 
 /* ── Modular MES ────────────────────────────────────────
    The one slide that cannot be a screen, because the MES is not a screen: it is
-   the thing the other ten run on. Drawing a dashboard for it says nothing that
+   the product the nine modules make up. Drawing a dashboard for it says nothing that
    the OEE slide does not already say better. So this draws the mechanism
    instead, and takes the platform section's own sentence literally: a stop
    registered on the floor lands in OEE, in the maintenance history and in the
@@ -139,32 +139,30 @@ const panel =
 const MES_READERS = [
   { module: "OEE", effect: "Availability -1.4%", icon: Gauge },
   { module: "Maintenance", effect: "Task created", icon: Wrench },
-  { module: "Analysis", effect: "In this month's report", icon: FileText },
+  { module: "Planning", effect: "Plan moved 20 min", icon: CalendarClock },
 ]
 
-/** Every module, with the four this line has switched on. */
+/** All nine modules in catalog order, with the four this line has switched on. */
 const MES_STRIP = [
-  { label: "MES", on: true },
+  { label: "Orders", on: true },
   { label: "OEE", on: true },
-  { label: "QMS", on: false },
+  { label: "Planning", on: true },
+  { label: "Quality", on: false },
+  { label: "IoT", on: false },
   { label: "EMS", on: false },
   { label: "Maintenance", on: true },
-  { label: "Planning", on: false },
-  { label: "Orders", on: false },
-  { label: "IoT", on: false },
   { label: "Documents", on: false },
-  { label: "Analysis", on: true },
-  { label: "AI", on: false },
+  { label: "AI Agents", on: false },
 ]
 
 /** What else has landed on this line today. */
 const MES_FEED = [
   { at: "09:42", event: "Stop registered", into: "OEE" },
   { at: "09:30", event: "Order 45-1182 started", into: "Orders" },
-  { at: "09:12", event: "QA check passed", into: "QMS" },
-  { at: "08:55", event: "Counter 1 240 units", into: "Analysis" },
+  { at: "09:12", event: "QA check passed", into: "Quality" },
+  { at: "08:55", event: "Counter 1 240 units", into: "OEE" },
   { at: "08:20", event: "Tool change logged", into: "Maintenance" },
-  { at: "07:58", event: "Shift 2 signed in", into: "MES" },
+  { at: "07:58", event: "Shift 2 signed in", into: "Orders" },
 ]
 
 /**
@@ -205,7 +203,7 @@ function MesMockup() {
           Modular MES
         </p>
         <span className="ml-auto shrink-0 rounded-full bg-slate-100 px-1.5 py-[2px] text-[6px] font-medium leading-none text-slate-600">
-          4 of 11 modules
+          4 of 9 modules
         </span>
       </div>
       <p className="mt-[3px] text-[6.5px] leading-none text-slate-400">
@@ -352,7 +350,7 @@ export function MesVisual() {
             Registered once at the machine, read by every module
           </span>
           <span className="ml-auto shrink-0 rounded-full bg-slate-100 px-[0.7em] py-[0.2em] text-[0.75em] font-medium text-slate-600">
-            4 of 11 modules
+            4 of 9 modules
           </span>
         </div>
 

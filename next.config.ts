@@ -44,6 +44,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Analysis is no longer one of the nine modules; its reporting now
+      // belongs with OEE.
+      {
+        source: "/modules/analysis",
+        destination: "/modules/production",
+        permanent: true,
+      },
+      {
+        source: "/da/modules/analysis",
+        destination: "/da/modules/production",
+        permanent: true,
+      },
       {
         source: "/people",
         destination: "/resources/people",

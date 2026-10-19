@@ -13,11 +13,11 @@ import type { Locale } from "@/i18n/routing"
  * product vocabulary; the URLs stay put so existing links and search results
  * keep working.
  *
- * The order is deliberate and reads as an argument: the foundation, how the
- * data arrives, the number people came for, the assistant that reads all of
- * it, then shopfloor to office. It also alternates the mockup silhouettes on
- * the homepage carousel, where three or four cards are visible at once, so no
- * two neighbours look alike. Reordering here moves the carousel, the header
+ * The modules are the nine below, always in this order: Orders, OEE,
+ * Planning, Quality, IoT, EMS, Maintenance, Documents, AI Agents. "Modular
+ * MES" is the name of the product these nine make up, not a module of its
+ * own, so it has no entry here. Wherever the site lists the modules, it lists
+ * all nine in this order. Reordering here moves the carousel, the header
  * dropdown, the footer column and the /modules index together.
  */
 export type ModuleEntry = {
@@ -32,21 +32,12 @@ export type ModuleEntry = {
 
 export const moduleCatalog: ModuleEntry[] = [
   {
-    id: "mes",
-    href: "/modules/mes",
-    label: { en: "Modular MES", da: "Modulært MES" },
+    id: "orders",
+    href: "/modules/erp-shopfloor",
+    label: { en: "Orders", da: "Ordrer" },
     blurb: {
-      en: "The modular MES foundation every other module plugs into.",
-      da: "Det MES, alle de andre moduler bygger på.",
-    },
-  },
-  {
-    id: "iot",
-    href: "/modules/iot",
-    label: { en: "IoT", da: "IoT" },
-    blurb: {
-      en: "Consolidate the machines, hardware, and systems you already run.",
-      da: "Få data fra de maskiner, den hardware og de systemer, I allerede har.",
+      en: "Start, stop, and report at the machine. ERP optional.",
+      da: "Start, stop og meld tilbage ved maskinen. Med eller uden ERP.",
     },
   },
   {
@@ -59,21 +50,30 @@ export const moduleCatalog: ModuleEntry[] = [
     },
   },
   {
-    id: "ai-agents",
-    href: "/ai/agents",
-    label: { en: "AI agents", da: "AI-agenter" },
+    id: "planning",
+    href: "/modules/planning",
+    label: { en: "Planning", da: "Planlægning" },
     blurb: {
-      en: "Agents and copilots that work on your own production data.",
-      da: "Agenter og copiloter, der arbejder med jeres egne produktionsdata.",
+      en: "Routes, timelines, and the capacity you actually have.",
+      da: "Ruter, tidslinjer og den kapacitet, I faktisk har.",
     },
   },
   {
-    id: "maintenance",
-    href: "/modules/maintenance",
-    label: { en: "Maintenance", da: "Vedligehold" },
+    id: "qms",
+    href: "/modules/quality",
+    label: { en: "Quality", da: "Kvalitet" },
     blurb: {
-      en: "Preventive and predictive planning, driven by IoT data.",
-      da: "Forebyggende og forudsigende vedligehold ud fra maskinernes data.",
+      en: "Digital checks, deviations, and full traceability.",
+      da: "Digitale kontroller, afvigelser og fuld sporbarhed.",
+    },
+  },
+  {
+    id: "iot",
+    href: "/modules/iot",
+    label: { en: "IoT", da: "IoT" },
+    blurb: {
+      en: "Consolidate the machines, hardware, and systems you already run.",
+      da: "Få data fra de maskiner, den hardware og de systemer, I allerede har.",
     },
   },
   {
@@ -86,30 +86,12 @@ export const moduleCatalog: ModuleEntry[] = [
     },
   },
   {
-    id: "qms",
-    href: "/modules/quality",
-    label: { en: "QMS", da: "QMS" },
+    id: "maintenance",
+    href: "/modules/maintenance",
+    label: { en: "Maintenance", da: "Vedligehold" },
     blurb: {
-      en: "Digital checks, deviations, and full traceability.",
-      da: "Digitale kontroller, afvigelser og fuld sporbarhed.",
-    },
-  },
-  {
-    id: "orders",
-    href: "/modules/erp-shopfloor",
-    label: { en: "Orders", da: "Ordrer" },
-    blurb: {
-      en: "Start, stop, and report at the machine. ERP optional.",
-      da: "Start, stop og meld tilbage ved maskinen. Med eller uden ERP.",
-    },
-  },
-  {
-    id: "planning",
-    href: "/modules/planning",
-    label: { en: "Planning", da: "Planlægning" },
-    blurb: {
-      en: "Routes, timelines, and the capacity you actually have.",
-      da: "Ruter, tidslinjer og den kapacitet, I faktisk har.",
+      en: "Preventive and predictive planning, driven by IoT data.",
+      da: "Forebyggende og forudsigende vedligehold ud fra maskinernes data.",
     },
   },
   {
@@ -122,12 +104,12 @@ export const moduleCatalog: ModuleEntry[] = [
     },
   },
   {
-    id: "analysis",
-    href: "/modules/analysis",
-    label: { en: "Analysis", da: "Analyse" },
+    id: "ai-agents",
+    href: "/ai/agents",
+    label: { en: "AI Agents", da: "AI-agenter" },
     blurb: {
-      en: "Automated reports on performance, loss, and cost.",
-      da: "Rapporter, der laver sig selv, om drift, tab og omkostninger.",
+      en: "Agents and copilots that work on your own production data.",
+      da: "Agenter og copiloter, der arbejder med jeres egne produktionsdata.",
     },
   },
 ]
@@ -181,20 +163,21 @@ export function moduleNavItems(locale: Locale) {
 /**
  * How the header's Platform and Modules panel groups the catalog. Every
  * module id must appear exactly once, so a new catalog entry fails loudly here
- * until someone decides which group it belongs to.
+ * until someone decides which group it belongs to. Read top to bottom, the
+ * groups keep the catalog order.
  */
 const navGroups: { title: Record<Locale, string>; ids: string[] }[] = [
   {
     title: { en: "Production", da: "Produktion" },
-    ids: ["mes", "oee", "planning", "orders"],
+    ids: ["orders", "oee", "planning"],
   },
   {
-    title: { en: "Machines and energy", da: "Maskiner og energi" },
-    ids: ["iot", "maintenance", "ems"],
+    title: { en: "Quality, machines and energy", da: "Kvalitet, maskiner og energi" },
+    ids: ["qms", "iot", "ems"],
   },
   {
-    title: { en: "Quality and insight", da: "Kvalitet og indsigt" },
-    ids: ["qms", "documents", "analysis", "ai-agents"],
+    title: { en: "Maintenance and knowledge", da: "Vedligehold og viden" },
+    ids: ["maintenance", "documents", "ai-agents"],
   },
 ]
 
