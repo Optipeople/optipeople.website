@@ -5,13 +5,14 @@ author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/xl-byg-768x500.jpg"
 customer: "XL-BYG Brejnholt"
-metricLabel: "Toward fossil-free operation"
-outcome: "Smart forklift charging on cheap, solar energy cuts energy costs and supports fossil-free operation."
+metric: "−50%"
+metricLabel: "Estimated saving on the electricity bill"
+outcome: "Smart forklift charging on cheap, solar energy is estimated to halve the electricity bill and supports fossil-free operation."
 ---
 
 ## At a Glance
 
-XL-BYG Brejnholt uses OptiPeople Data Platform to reduce energy consumption and support its move toward full fossil-free operation.
+XL-BYG Brejnholt uses OptiPeople Data Platform to reduce energy consumption and support its move toward full fossil-free operation. The collaboration is estimated to have cut their electricity bills by around 50%.
 
 ## How OptiPeople Data Platform Is Used
 
@@ -28,7 +29,7 @@ It includes:
 
 The solution supports:
 
-- savings on forklift electricity bills
+- an estimated 50% saving on electricity bills
 - charging forklifts using solar energy
 - ROI calculations on energy initiatives and subsidy opportunities
 - savings on additional amperage at the site, for example for electric vehicles

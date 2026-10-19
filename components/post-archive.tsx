@@ -4,7 +4,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import type { BlogPost } from "@/lib/blog-data"
 import { getSurface } from "@/lib/page-theme"
-import { formatPostDate } from "@/lib/format-date"
 
 type PostArchiveProps = {
   posts: BlogPost[]
@@ -64,7 +63,6 @@ export function PostArchive({
   nextLabel = "Next",
   subtitle,
   countLabel,
-  locale = "en",
   listLabel,
 }: PostArchiveProps) {
   const theme = getSurface("sand")
@@ -154,10 +152,7 @@ export function PostArchive({
                 </div>
 
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/65">
-                    {formatPostDate(featured.date, locale)}
-                  </p>
-                  <h2 className="mt-5 text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+                  <h2 className=" text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
                     {featured.title}
                   </h2>
                   <p className="mt-5 max-w-md text-base leading-relaxed text-foreground/72">
@@ -215,10 +210,7 @@ export function PostArchive({
                         />
                       )}
                     </div>
-                    <p className="mt-5 text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/65">
-                      {formatPostDate(post.date, locale)}
-                    </p>
-                    <h3 className="mt-3 text-xl font-normal leading-snug tracking-tight text-foreground transition-colors group-hover:text-foreground/82 lg:text-2xl">
+                    <h3 className="mt-5 text-xl font-normal leading-snug tracking-tight text-foreground transition-colors group-hover:text-foreground/82 lg:text-2xl">
                       {post.title}
                     </h3>
                   </Link>
@@ -238,11 +230,8 @@ export function PostArchive({
                     <li key={post.slug}>
                       <Link
                         href={`${postBasePath}/${post.slug}`}
-                        className="group grid gap-x-8 gap-y-2 border-b border-black/[0.08] py-6 transition-colors hover:bg-[var(--gray-1)] sm:grid-cols-[9rem_minmax(0,1fr)_2.25rem] sm:items-center lg:py-7"
+                        className="group grid gap-x-8 gap-y-2 border-b border-black/[0.08] py-6 transition-colors hover:bg-[var(--gray-1)] sm:grid-cols-[minmax(0,1fr)_2.25rem] sm:items-center lg:py-7"
                       >
-                        <span className="text-sm tabular-nums text-foreground/65">
-                          {formatPostDate(post.date, locale)}
-                        </span>
                         <span className="min-w-0">
                           <span className="block text-lg font-normal leading-snug tracking-tight text-foreground lg:text-xl">
                             {post.title}

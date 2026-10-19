@@ -84,8 +84,9 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
     },
     {
       id: "customers",
-      title: "Customers",
+      title: "Cases",
       items: [
+        { title: "All cases", href: "/cases" },
         {
           title: "Carl Hansen & Søn",
           href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai",
@@ -161,8 +162,9 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
     },
     {
       id: "customers",
-      title: "Kunder",
+      title: "Cases",
       items: [
+        { title: "Alle cases", href: "/cases" },
         {
           title: "Carl Hansen & Søn",
           href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai",

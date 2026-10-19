@@ -1,6 +1,6 @@
 ---
 title: "Tallene viste vejen til næsten dobbelt så høj OEE"
-customer: "Anonymiseret case"
+customer: "Industrivirksomhed"
 metricLabel: "OEE, næsten fordoblet"
 outcome: "OEE opgjort per seriestørrelse viste, at der skulle en maskine nummer to til. Bagefter steg OEE fra 21% til 41%."
 ---

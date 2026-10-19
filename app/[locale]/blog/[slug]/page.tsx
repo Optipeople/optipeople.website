@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { type Locale } from "@/i18n/routing"
 import { getAllSlugs, getPostBySlug, getPostsByCategory } from "@/lib/blog-data"
-import { formatPostDate, formatPostYear } from "@/lib/format-date"
 import { getSurface } from "@/lib/page-theme"
 import {
   MarkdownContent,
@@ -127,15 +126,8 @@ export default async function BlogPostPage({ params }: Props) {
 
   const path = `/blog/${slug}`
   const faq = extractFaq(post.content)
-  const byline = [
-    formatPostDate(post.date, locale),
-    post.updated && post.updated !== post.date
-      ? `${t.updated} ${formatPostDate(post.updated, locale)}`
-      : "",
-    post.author ? `${t.by} ${post.author}` : "",
-  ]
-    .filter(Boolean)
-    .join(" · ")
+  // Posts and cases show no dates, only who wrote them.
+  const byline = post.author ? `${t.by} ${post.author}` : ""
 
   return (
     <article className="min-h-screen">
@@ -179,7 +171,7 @@ export default async function BlogPostPage({ params }: Props) {
               </Link>
               <span aria-hidden>/</span>
               <span className="text-white/88">
-                {post.customer ?? formatPostYear(post.date)}
+                {post.customer ?? post.title}
               </span>
             </nav>
 
@@ -244,7 +236,7 @@ export default async function BlogPostPage({ params }: Props) {
               </Link>
               <span aria-hidden>/</span>
               <span className="text-foreground/88">
-                {formatPostYear(post.date)}
+                {post.category}
               </span>
             </nav>
 
@@ -318,7 +310,7 @@ export default async function BlogPostPage({ params }: Props) {
               >
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.2em] tabular-nums text-foreground/60">
-                    {formatPostDate(item.date, locale)}
+                    {item.customer ?? item.category}
                   </p>
                   <h3 className="mt-4 text-lg font-medium leading-snug tracking-tight text-foreground">
                     {item.outcome ?? item.title}
