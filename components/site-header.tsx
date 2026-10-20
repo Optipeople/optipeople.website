@@ -65,6 +65,15 @@ const PANEL_SHELL =
  */
 const HEADER_GUTTER = "px-6 lg:px-10"
 
+// Fixed trigger ids for the header dropdowns. Radix would otherwise mint them
+// with React's useId, and those ids land in the server HTML. When the client
+// tree differs even slightly above the header, the minted ids no longer match
+// and React reports a hydration mismatch (GitHub issue #1). The header renders
+// once per page, so plain constants are unique. Each content gets a matching
+// aria-labelledby, since Radix points it at the id it would have minted.
+const LOGIN_MENU_TRIGGER_ID = "site-header-login-trigger"
+const navMenuTriggerId = (index: number) => `site-header-menu-trigger-${index}`
+
 export function SiteHeader() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const locale = useLocale() as Locale
@@ -154,7 +163,7 @@ export function SiteHeader() {
             role="navigation"
             aria-label={t("navigationLabel")}
           >
-            {dropdownMenus.map((menu) => (
+            {dropdownMenus.map((menu, index) => (
               <DropdownMenu
                 key={menu.title}
                 open={openDropdown === menu.title}
@@ -163,7 +172,7 @@ export function SiteHeader() {
                 }
                 modal={false}
               >
-                <DropdownMenuTrigger asChild>
+                <DropdownMenuTrigger asChild id={navMenuTriggerId(index)}>
                   <button
                     type="button"
                     className={`flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-2 transition-colors duration-200 ease-out data-[state=open]:bg-foreground/[0.055] data-[state=open]:text-foreground xl:gap-2 xl:px-3 ${HOVER_WASH} ${FOCUS_RING}`}
@@ -181,6 +190,7 @@ export function SiteHeader() {
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent
+                  aria-labelledby={navMenuTriggerId(index)}
                   align="start"
                   sideOffset={8}
                   collisionPadding={16}
@@ -547,7 +557,7 @@ function LoginMenu() {
 
   return (
     <DropdownMenu modal={false}>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger asChild id={LOGIN_MENU_TRIGGER_ID}>
         <button
           type="button"
           // Full bar height, so the tap target is the 28px strip rather than
@@ -561,6 +571,7 @@ function LoginMenu() {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
+        aria-labelledby={LOGIN_MENU_TRIGGER_ID}
         align="end"
         sideOffset={8}
         className={`w-48 p-2 ${PANEL_SHELL}`}
