@@ -85,7 +85,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "One dashboard for your entire operation",
         visualBody:
           "From individual machines or workstations to plant-wide KPIs, drill into the data that matters, at any level.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
         visualAlt:
           "OptiPeople manufacturing report showing OEE gauges, a shift timeline and stop distribution",
         metricsTitle: "Typical Results",
@@ -147,7 +147,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualTitle: "Hele driften på én skærm",
         visualBody:
           "Fra den enkelte maskine eller arbejdsstation til nøgletallene for hele fabrikken. Gå ned i tallene på det niveau, I har brug for.",
-        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.png",
+        visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
         visualAlt: "Produktionsrapport med OEE, skiftets tidslinje og stopfordeling",
         metricsTitle: "Typiske resultater",
         metrics: [

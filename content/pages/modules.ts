@@ -241,7 +241,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Quality data connected to production",
         visualBody:
           "Every inspection, deviation, and corrective action linked to the machine or workstation, batch, and operator that produced it.",
-        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.webp",
         visualAlt: "Quality checks and deviations registered in OptiPeople Data Platform",
         metricsTitle: "Typical Results",
         metrics: [
@@ -304,7 +304,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "Kvaliteten hænger sammen med produktionen",
         visualBody:
           "Hver kontrol, hver afvigelse og hver handling hænger på den maskine eller arbejdsstation, den batch og den operatør, den kom fra.",
-        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.png",
+        visualImage: "/images/Mockups/Report-Individual-Events-Desktop.webp",
         visualAlt: "Kvalitetskontroller og afvigelser registreret i OptiPeople Data Platform",
         metricsTitle: "Typiske resultater",
         metrics: [
@@ -852,7 +852,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualTitle: "The order list the floor actually works from",
         visualBody:
           "Priority, product, quantity, due date, station, and readiness in one list, whether the orders came from an ERP or were created here.",
-        visualImage: "/images/Mockups/Work-Order-Management-Orders.png",
+        visualImage: "/images/Mockups/Work-Order-Management-Orders.webp",
         visualAlt: "The work order list on the panel at the machine or workstation",
         metricsTitle: "What Changes",
         metrics: [

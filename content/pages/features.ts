@@ -16,7 +16,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "See Where Production Time Is Lost",
         heroBody:
           "Track OEE live and understand performance across shifts, lines, and machines or workstations, based on real production data, not guesswork.",
-        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         heroImageAlt:
           "OptiPeople efficiency report with live availability, performance and OEE gauges against target",
         valueTitle: "Your production data should work as hard as your team",
@@ -54,7 +54,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "The full picture, from floor to management",
         showcaseBody:
           "Operators see their machine or workstation. Team leads see their line. Managers see the plant. Same data, right level of detail.",
-        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
+        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.webp",
         showcaseAlt:
           "OptiPeople production counter report with produced and rejected totals and an hourly output trend",
         metrics: [
@@ -93,7 +93,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Se, hvor produktionstiden går tabt",
         heroBody:
           "Følg OEE live, og se, hvordan hvert skift, hver linje og hver maskine eller arbejdsstation klarer sig. Tallene kommer fra produktionen selv, ikke fra mavefornemmelser.",
-        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.png",
+        heroImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         heroImageAlt: "OptiPeople effektivitetsrapport med tilgængelighed, ydelse og OEE mod målet",
         valueTitle: "Tallene nytter mest, mens skiftet stadig kører",
         valueBody:
@@ -127,7 +127,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         showcaseTitle: "Hele billedet, fra gulvet til ledelsen",
         showcaseBody:
           "Operatøren ser sin maskine eller arbejdsstation. Teamlederen ser sin linje. Ledelsen ser fabrikken. Det er de samme tal, bare i den detaljegrad, hver især har brug for.",
-        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.png",
+        showcaseImage: "/images/Mockups/Report-Production-Counters-Desktop.webp",
         showcaseAlt: "Rapport med producerede og kasserede emner samt output pr. time",
         metrics: [
           { metric: "15-25%", label: "Bedre OEE det første år" },
@@ -190,7 +190,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Every Stop Gets a Reason",
             description:
               "Operators pick from a predefined list of stop causes, tailored to each machine or workstation. Setup, tool change, material wait, malfunction. Each entry captures the reason, duration, and optional notes. The result is structured data, not free-text guesswork.",
-            image: "/images/operatorpanel2.png",
+            image: "/images/operatorpanel2.webp",
             imageAlt:
               "Detailed stop log showing stop reasons, telemetry data, and operator notes across shifts",
           },
@@ -265,7 +265,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Hvert stop får en årsag",
             description:
               "Operatøren vælger årsagen fra en fast liste, der passer til lige den maskine eller arbejdsstation: omstilling, værktøjsskift, venter på materiale, fejl. Så kan I regne på tallene bagefter i stedet for at tyde fritekst.",
-            image: "/images/operatorpanel2.png",
+            image: "/images/operatorpanel2.webp",
             imageAlt: "Stoplog på operatørpanel",
           },
           {
@@ -463,7 +463,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Catch Quality Issues Where They Start",
         heroBody:
           "Register quality data at the machine or workstation, trace deviations back to their source, and build accountability into every shift.",
-        heroImage: "/images/backoffice1.png",
+        heroImage: "/images/backoffice1.webp",
         heroImageAlt:
           "OptiPeople quality tracking interface showing audit trail and device management",
         valueTitle: "Quality problems found late cost ten times more",
@@ -477,7 +477,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Register Quality Events at the Machine or Workstation",
             description:
               "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine or workstation, order, and shift, so nothing gets lost between the floor and the office.",
-            image: "/images/operatorpanel2.png",
+            image: "/images/operatorpanel2.webp",
             imageAlt:
               "Operator panel showing detailed event log with quality notes, telemetry data, and shift information",
           },
@@ -485,7 +485,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Trace Every Deviation to Its Source",
             description:
               "When quality drops, you need to know why, fast. Filter by machine or workstation, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
-            image: "/images/report1.png",
+            image: "/images/report1.webp",
             imageAlt:
               "OptiPeople report showing OEE breakdown with availability, performance, and quality metrics alongside a timeline chart",
           },
@@ -534,7 +534,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroTitle: "Fang fejlen, hvor den opstår",
         heroBody:
           "Registrer kvaliteten ude ved maskinen eller arbejdsstationen, og følg hver afvigelse tilbage til det skift, den batch og den maskine, den kom fra.",
-        heroImage: "/images/backoffice1.png",
+        heroImage: "/images/backoffice1.webp",
         heroImageAlt: "Kvalitetsstyring",
         valueTitle: "Jo senere I opdager fejlen, jo dyrere bliver den",
         valueBody:
@@ -558,7 +558,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Sporbarhed",
             description: "Knyt kvalitetstjek og afvigelser til batch, maskine eller arbejdsstation og skift.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
             imageAlt: "Sporbarhedsrapport med de enkelte registreringer pr. ordre og skift",
           },
         ],
@@ -615,7 +615,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "OEE Reports That Build Themselves",
             description:
               "Availability, performance, and quality broken down by machine or workstation, line, shift, or time period. Reports generate automatically from live production data. Pick a week, pick a machine, and the numbers are there.",
-            image: "/images/report1.png",
+            image: "/images/report1.webp",
             imageAlt:
               "OptiPeople report showing OEE gauges for availability, performance, and quality with a color-coded timeline chart",
           },
@@ -623,7 +623,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Compare Anything Against Anything",
             description:
               "Side-by-side bar charts across shifts, lines, weeks, machines, or workstations. See where performance diverges and where it converges. The comparisons that used to take a full afternoon in Excel now take one click.",
-            image: "/images/report-mockup2.png",
+            image: "/images/report-mockup2.webp",
             imageAlt:
               "Bar chart report comparing production metrics across different time periods and categories",
           },
@@ -702,7 +702,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Klik dig ned i tallene",
             description: "Gå fra hele fabrikken ned til den enkelte maskine eller arbejdsstation, det enkelte skift og det enkelte stop.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.png",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
             imageAlt: "Rapport med de enkelte registrerede stop, årsag, varighed og skift",
           },
         ],
