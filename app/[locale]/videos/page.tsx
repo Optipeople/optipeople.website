@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 import { Link } from "@/i18n/navigation"
 import { VideoCarousel, type VideoData } from "@/components/video-carousel"
+import { RoleVideoGrid, type RoleVideo } from "@/components/role-video-grid"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
@@ -18,6 +19,10 @@ type VideosCopy = {
   body: string
   watchLabel: string
   countLabel: (count: number) => string
+  rolesTitle: string
+  rolesBody: string
+  playLabel: string
+  roleVideos: RoleVideo[]
   carouselTitle: string
   carouselBody: string
   videos: VideoData[]
@@ -26,6 +31,57 @@ type VideosCopy = {
   moreLinks: { title: string; description: string; href: string }[]
 }
 
+// Persona shorts, one per role, in the order they should appear. All are in
+// Danish; the English titles are translations of the YouTube titles.
+const roleVideoIds = [
+  "siSXdSd0G3o",
+  "IXDN_Ai6Ank",
+  "kqMOxAQ02e0",
+  "tnoy3-B0s8I",
+  "aD9I-Rdedjo",
+  "I_GInMVfuN8",
+  "zwa7gHegd0s",
+  "6IUQ7bcRjjo",
+  "nx6AtYqqcoE",
+  "hJc5P5No_u0",
+  "2gLBRps2SX0",
+  "u0KXgYzEfVQ",
+]
+
+const roleTitles: Record<Locale, string[]> = {
+  en: [
+    "Are you a CEO?",
+    "Are you a COO?",
+    "Are you a plant manager?",
+    "Are you a production manager?",
+    "Do you work with Operational Excellence or Continuous Improvement?",
+    "Are you an IT manager?",
+    "Do you work with IT or OT?",
+    "Are you a maintenance manager?",
+    "Are you a CEO, COO or salesperson at a machine builder?",
+    "Do you work in aftersales?",
+    "Are you a planner?",
+    "Do you work in supply chain?",
+  ],
+  da: [
+    "Er du CEO?",
+    "Er du COO?",
+    "Er du fabrikschef?",
+    "Er du produktionschef?",
+    "Er du ansvarlig for Operational Excellence eller Continuous Improvement?",
+    "Er du IT-chef?",
+    "Arbejder du med IT eller OT?",
+    "Er du vedligeholdelseschef?",
+    "Er du CEO, COO eller sælger hos en maskinbygger?",
+    "Arbejder du med aftersales?",
+    "Er du planlægger?",
+    "Arbejder du med supply chain?",
+  ],
+}
+
+const roleVideos = (locale: Locale): RoleVideo[] =>
+  roleVideoIds.map((videoId, i) => ({ videoId, title: roleTitles[locale][i] }))
+
 // Video titles match the published titles on the OptiPeople YouTube channel.
 // The two customer stories are in Danish, the Omron talk is in English; the
 // language tag on each card says which, on both locales.
@@ -33,9 +89,14 @@ const copy: Record<Locale, VideosCopy> = {
   en: {
     eyebrow: "Videos",
     headline: "See OptiPeople Data Platform in action",
-    body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place. The customer stories are in Danish and the Omron talk is in English, and every story below is also written up in full on the site.",
+    body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place, plus short videos for your role. The customer stories and role videos are in Danish, the Omron talk is in English.",
     watchLabel: "Watch the stories",
     countLabel: (count) => `${count} videos, in Danish and English`,
+    rolesTitle: "Find the video for your role",
+    rolesBody:
+      "One short video per role, on what OptiPeople Data Platform changes in your job, from the CEO to the planner. In Danish.",
+    playLabel: "Play",
+    roleVideos: roleVideos("en"),
     carouselTitle: "Customer stories",
     carouselBody:
       "Manufacturers describing the work in their own words: what they measured before, what they connected, and what they do differently now.",
@@ -89,9 +150,14 @@ const copy: Record<Locale, VideosCopy> = {
   da: {
     eyebrow: "Videoer",
     headline: "Se OptiPeople Data Platform i brug",
-    body: "Kunder og partnere fortæller, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret samme sted. Alle historierne kan I også læse i fuld længde her på sitet.",
+    body: "Kunder og partnere fortæller, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret samme sted. Og der er en kort video til netop din rolle.",
     watchLabel: "Se historierne",
     countLabel: (count) => `${count} videoer, på dansk og engelsk`,
+    rolesTitle: "Find videoen til din rolle",
+    rolesBody:
+      "En kort video til hver rolle om, hvad OptiPeople Data Platform ændrer i dit job, fra direktøren til planlæggeren.",
+    playLabel: "Afspil",
+    roleVideos: roleVideos("da"),
     carouselTitle: "Kundehistorier",
     carouselBody:
       "Producenter fortæller med egne ord, hvad de målte før, hvad de har koblet på, og hvad de gør anderledes i dag.",
@@ -152,7 +218,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return buildMetadata({
       title: "Videoer | OptiPeople",
       description:
-        "Se kundehistorier fra Glaseksperten og Nicholaisen og oplægget med Omron om, hvordan produktionsdata kan give en fordel over konkurrenterne.",
+        "Korte videoer til din rolle, kundehistorier fra Glaseksperten og Nicholaisen og oplægget med Omron om, hvordan produktionsdata kan give en fordel over konkurrenterne.",
       path: "/videos",
       locale: "da",
     })
@@ -161,7 +227,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title: "Videos",
     description:
-      "Watch OptiPeople customer stories from Glaseksperten and Nicholaisen, plus the Omron talk on turning production data into a competitive advantage.",
+      "Short videos for your role, OptiPeople customer stories from Glaseksperten and Nicholaisen, plus the Omron talk on turning production data into a competitive advantage.",
     path: "/videos",
     locale: "en",
   })
@@ -224,7 +290,7 @@ export default async function VideosPage({ params }: Props) {
               {t.watchLabel}
             </Link>
             <p className="text-sm tabular-nums text-foreground/65">
-              {t.countLabel(t.videos.length)}
+              {t.countLabel(t.roleVideos.length + t.videos.length)}
             </p>
           </div>
         </div>
@@ -244,6 +310,22 @@ export default async function VideosPage({ params }: Props) {
         </div>
 
         <VideoCarousel videos={t.videos} />
+      </section>
+
+      {/* Role videos. Vertical shorts in a grid, so every role is visible at once. */}
+      <section id="roles" className="scroll-mt-24 pb-16 sm:pb-20 lg:pb-28">
+        <div className="px-[var(--edge)]">
+          <div className="mb-10 max-w-2xl lg:mb-14">
+            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+              {t.rolesTitle}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-foreground/72">
+              {t.rolesBody}
+            </p>
+          </div>
+
+          <RoleVideoGrid videos={t.roleVideos} playLabel={t.playLabel} />
+        </div>
       </section>
 
       {/* Closing deep band: the written versions of the same stories. */}
