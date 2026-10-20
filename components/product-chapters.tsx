@@ -535,7 +535,7 @@ const ASSIST_COPY: Record<Locale, AssistCopy> = {
   en: {
     name: "Opti Assist",
     tagline: "The colleague who has read every manual.",
-    body: "AI that knows your machines, your procedures and your live production data. Ask in plain words, get the answer and the source.",
+    body: "AI that knows your machines, your procedures and your live production data. Ask in plain words, or scan the QR code on a machine and ask about that one. Get the answer and the source.",
     question: "Why did CNC Drilling stop so often last night?",
     chart: {
       title: "Stops last night, shift 3",
@@ -553,7 +553,7 @@ const ASSIST_COPY: Record<Locale, AssistCopy> = {
   da: {
     name: "Opti Assist",
     tagline: "Kollegaen, der har læst alle manualerne.",
-    body: "AI, der kender jeres maskiner, jeres procedurer og tallene fra gulvet lige nu. Spørg med almindelige ord, og få svaret og kilden.",
+    body: "AI, der kender jeres maskiner, jeres procedurer og tallene fra gulvet lige nu. Spørg med almindelige ord, eller scan QR-koden på maskinen og spørg om netop den. Få svaret og kilden.",
     question: "Hvorfor stoppede CNC-boringen så tit i nat?",
     chart: {
       title: "Stop i nat, skift 3",
