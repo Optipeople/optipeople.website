@@ -7,6 +7,7 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-20 Round after the squash sync landed: log all done, no aim. Main is 59 ahead, 12 behind origin, origin not an ancestor. Noted on the quest that pushing needs a merge or force push, the human's call. Nothing to file or cast.
 - 2026-10-20 Sync fix-up conflicted again: its branch holds a merge commit, so rebasing replays origin's commits. Gave the second fix-up sonnet and told it to land the sync as one squash commit, no push.
 - 2026-10-20 Round after the header id fix landed: sync quest hit conflicts; gave its fix-up quest sonnet and noted to resolve as the sync did, without pushing. Day look-back: clean, nothing went wrong twice; the day gave 2 lore notes (worktree path and node_modules trap, origin/main drift and how to merge it).
 - 2026-10-07 Round as the human left: log all done, no aim, optipeople.com still serves WordPress. No check stone for the 9 unchecked quests; nothing to file or cast.
@@ -45,5 +46,5 @@
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
 ## Open
-- Second fix-up of the origin/main sync (squash commit) is in progress. Once it lands, local main is ahead of origin and unpushed, and origin/main is not its ancestor, so a push needs a merge with origin/main first. Whether to push is the human's call: leave a note, not a quest.
+- Sync landed as a squash (2026-10-20); main is 59 ahead, 12 behind origin/main. Push (merge with origin/main or force) waits on the human; noted under the last fix-up quest. Check next round whether they pushed.
 - Launch day checklist was removed from the log (uncommitted edit, not by me). optipeople.com still serves WordPress on 2026-10-07. Once it serves the new site, file agent quests: sitemap resubmit via API, check-redirects against https://optipeople.com, pull.mjs comparisons at week 1 and week 4. trafficheap.cc unwanted referral stays with the human (GA4 UI).
