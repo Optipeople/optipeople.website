@@ -7,6 +7,7 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-20 Round as the human left: log all done, no aim. Main 60 ahead, 12 behind origin, still not pushed; that stays the human's call. Nothing to file or cast.
 - 2026-10-20 Round after the squash sync landed: log all done, no aim. Main is 59 ahead, 12 behind origin, origin not an ancestor. Noted on the quest that pushing needs a merge or force push, the human's call. Nothing to file or cast.
 - 2026-10-20 Sync fix-up conflicted again: its branch holds a merge commit, so rebasing replays origin's commits. Gave the second fix-up sonnet and told it to land the sync as one squash commit, no push.
 - 2026-10-20 Round after the header id fix landed: sync quest hit conflicts; gave its fix-up quest sonnet and noted to resolve as the sync did, without pushing. Day look-back: clean, nothing went wrong twice; the day gave 2 lore notes (worktree path and node_modules trap, origin/main drift and how to merge it).
