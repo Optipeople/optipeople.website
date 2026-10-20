@@ -397,7 +397,9 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
       >
         {isCenter && <OptiMark className="mb-1.5 h-11 w-11" />}
         <span className={cn("font-bold tracking-tight", isCenter ? "text-2xl" : "text-lg")}>{m.name}</span>
-        {!isCenter && <span className="mt-1 text-sm font-medium leading-snug opacity-95">{m.description}</span>}
+        {/* Capped below the full petal width: a pentagon narrows away from its
+            middle, so a long line that fits the box still spills past the shape. */}
+        {!isCenter && <span className="mt-1 max-w-[78%] text-balance text-sm font-medium leading-snug opacity-95">{m.description}</span>}
       </button>
     )
   }
