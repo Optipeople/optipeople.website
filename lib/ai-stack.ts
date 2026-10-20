@@ -109,7 +109,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Built for the shopfloor",
             description:
-              "An operator can ask why a machine stopped last shift, what the setup sheet says for the next order, or how a fault was fixed last time. Short questions, concrete answers, no query language.",
+              "Put a QR code on each machine or workstation. An operator scans it and Opti Assist already knows which machine they mean, so they can ask why it stopped last shift, what the setup sheet says for the next order, or how a fault was fixed last time. Short questions, concrete answers, no query language.",
           },
           {
             title: "Works on your data only",
@@ -132,7 +132,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "At the machine or workstation",
             description:
-              "An operator hits an unfamiliar fault and asks how it was handled before. Opti Assist finds the relevant entries in the maintenance log and the matching SOP section.",
+              "An operator hits an unfamiliar fault, scans the QR code on the machine and asks how it was handled before. Opti Assist knows which machine it is and finds the relevant entries in the maintenance log and the matching SOP section.",
           },
           {
             title: "For the weekly report",
@@ -178,7 +178,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Lavet til gulvet",
             description:
-              "En operatør kan spørge, hvorfor maskinen stoppede i går, hvad opstillingsarket siger til næste ordre, eller hvordan fejlen blev løst sidst. Korte spørgsmål, konkrete svar. Man skal ikke kunne kode for at spørge.",
+              "Sæt en QR-kode på hver maskine og arbejdsstation. Operatøren scanner den, og så ved Opti Assist allerede, hvilken maskine det handler om. Spørg, hvorfor den stoppede i går, hvad opstillingsarket siger til næste ordre, eller hvordan fejlen blev løst sidst. Korte spørgsmål, konkrete svar. Man skal ikke kunne kode for at spørge.",
           },
           {
             title: "Kun jeres egne data",
@@ -201,7 +201,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Ude ved maskinen eller arbejdsstationen",
             description:
-              "En operatør står med en fejl, hun ikke har set før, og spørger, hvordan den blev klaret sidst. Opti Assist finder de rigtige poster i vedligeholdsloggen og det afsnit i arbejdsbeskrivelsen, der handler om det.",
+              "En operatør står med en fejl, hun ikke har set før. Hun scanner QR-koden på maskinen og spørger, hvordan den blev klaret sidst. Opti Assist ved, hvilken maskine det er, og finder de rigtige poster i vedligeholdsloggen og det afsnit i arbejdsbeskrivelsen, der handler om det.",
           },
           {
             title: "Til ugerapporten",
