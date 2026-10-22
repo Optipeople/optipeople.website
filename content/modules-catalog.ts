@@ -13,7 +13,7 @@ import type { Locale } from "@/i18n/routing"
  * product vocabulary; the URLs stay put so existing links and search results
  * keep working.
  *
- * The modules are the nine below, always in this order: Orders, Planning,
+ * The modules are the nine below, always in this order: Planning, Orders,
  * Quality, IoT, OEE, EMS, Maintenance, Documents, AI Agents. "Modular
  * MES" is the name of the product these nine make up, not a module of its
  * own, so it has no entry here. Wherever the site lists the modules, it lists
@@ -32,21 +32,21 @@ export type ModuleEntry = {
 
 export const moduleCatalog: ModuleEntry[] = [
   {
-    id: "orders",
-    href: "/modules/erp-shopfloor",
-    label: { en: "Orders", da: "Ordrer" },
-    blurb: {
-      en: "Start, stop, and report at the machine or workstation. ERP optional.",
-      da: "Start, stop og meld tilbage ved maskinen eller arbejdsstationen. Med eller uden ERP.",
-    },
-  },
-  {
     id: "planning",
     href: "/modules/planning",
     label: { en: "Planning", da: "Planlægning" },
     blurb: {
       en: "Routes, timelines, and the capacity you actually have.",
       da: "Ruter, tidslinjer og den kapacitet, I faktisk har.",
+    },
+  },
+  {
+    id: "orders",
+    href: "/modules/erp-shopfloor",
+    label: { en: "Orders", da: "Ordrer" },
+    blurb: {
+      en: "Start, stop, and report at the machine or workstation. ERP optional.",
+      da: "Start, stop og meld tilbage ved maskinen eller arbejdsstationen. Med eller uden ERP.",
     },
   },
   {

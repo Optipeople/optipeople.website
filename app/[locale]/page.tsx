@@ -640,12 +640,12 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "OptiPeople | Run manufacturing and operations on live data",
     description:
-      "A modular MES on one data foundation for the whole factory. Connect machines and workstations with IoT, and run orders, planning, and quality on the same numbers, from the floor to management.",
+      "A modular MES on one data foundation for the whole factory. Connect machines and workstations with IoT, and run planning, orders, and quality on the same numbers, from the floor to management.",
   },
   da: {
     title: "Modulært MES og IoT til produktionen | OptiPeople",
     description:
-      "Et modulært MES på ét fælles datagrundlag. Kobl maskiner og arbejdsstationer på med IoT, og styr ordrer, planlægning og kvalitet efter de samme tal, fra gulvet til ledelsen.",
+      "Et modulært MES på ét fælles datagrundlag. Kobl maskiner og arbejdsstationer på med IoT, og styr planlægning, ordrer og kvalitet efter de samme tal, fra gulvet til ledelsen.",
   },
 }
 

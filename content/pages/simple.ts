@@ -8,7 +8,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
     en: {
       metaTitle: "Modules",
       metaDescription:
-        "Explore the nine OptiPeople modules on one connected platform: Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents.",
+        "Explore the nine OptiPeople modules on one connected platform: Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents.",
       eyebrow: "Modules",
       headline: "One platform, every part of production",
       body: "Each module solves a specific operational need, and together they give you a single, connected view of the shop floor. You do not have to take all of them at once. Most factories start with production monitoring on one line, then add the modules that answer the next question.",
@@ -34,9 +34,9 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       links: moduleIndexLinks("en"),
     },
     da: {
-      metaTitle: "Moduler til ordrer, planlægning, kvalitet og IoT | OptiPeople",
+      metaTitle: "Moduler til planlægning, ordrer, kvalitet og IoT | OptiPeople",
       metaDescription:
-        "De ni moduler på én platform: Ordrer, Planlægning, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Start med ét, og slå resten til, når I får brug for det.",
+        "De ni moduler på én platform: Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Start med ét, og slå resten til, når I får brug for det.",
       eyebrow: "Moduler",
       headline: "Én platform til hele produktionen",
       body: "Hvert modul løser en konkret opgave i driften, og sammen giver de ét samlet overblik over gulvet. I skal ikke tage dem alle på én gang. De fleste starter med at overvåge én linje og tager så de moduler med, der svarer på det næste spørgsmål.",
@@ -66,7 +66,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
     en: {
       metaTitle: "Features",
       metaDescription:
-        "Explore OptiPeople features, from order management and production planning to quality, machine control, and AI copilots.",
+        "Explore OptiPeople features, from production planning and order management to quality, machine control, and AI copilots.",
       eyebrow: "Features",
       headline: "From raw machine and workstation data to real understanding",
       body: "Explore the capabilities that make production visible, measurable, and improvable, every day. Each one starts from something a machine or an operator actually records, and ends in a number someone can act on.",
@@ -90,8 +90,8 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
       ],
       links: [
-        { title: "Order management", href: "/features/order-management", description: "Run orders at the machine or workstation, with instructions, SOPs, and traceability." },
         { title: "Production planning", href: "/features/production-planning", description: "Plan each production route on the capacity you actually have." },
+        { title: "Order management", href: "/features/order-management", description: "Run orders at the machine or workstation, with instructions, SOPs, and traceability." },
         { title: "Quality management", href: "/features/quality-management", description: "Register quality data where the work happens." },
         { title: "Machine control", href: "/features/machine-control", description: "Integrate with machine controls for tighter loops." },
         { title: "Production efficiency", href: "/features/production-efficiency", description: "Track OEE live across shifts, lines, and machines." },
@@ -105,7 +105,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
     da: {
       metaTitle: "Funktioner | OptiPeople",
       metaDescription:
-        "Se OptiPeople-funktionerne, fra ordrestyring og produktionsplanlægning til kvalitet, maskinstyring og AI-copiloter.",
+        "Se OptiPeople-funktionerne, fra produktionsplanlægning og ordrestyring til kvalitet, maskinstyring og AI-copiloter.",
       eyebrow: "Funktioner",
       headline: "Fra rå data fra maskiner og arbejdsstationer til noget, I kan bruge",
       body: "Med funktionerne her kan I se, måle og forbedre produktionen hver dag. De starter alle sammen i noget, en maskine eller en operatør faktisk registrerer, og ender i et tal, nogen kan gøre noget ved.",
@@ -129,8 +129,8 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
       ],
       links: [
-        { title: "Ordrestyring", href: "/features/order-management", description: "Kør ordrerne ved maskinen eller arbejdsstationen med instruktioner og sporbarhed." },
         { title: "Produktionsplanlægning", href: "/features/production-planning", description: "Planlæg hver rute efter den kapacitet, I faktisk har." },
+        { title: "Ordrestyring", href: "/features/order-management", description: "Kør ordrerne ved maskinen eller arbejdsstationen med instruktioner og sporbarhed." },
         { title: "Kvalitetsstyring", href: "/features/quality-management", description: "Registrer kvalitetsdata dér, hvor arbejdet sker." },
         { title: "Maskinstyring", href: "/features/machine-control", description: "Kobl jer på maskinstyringen og luk sløjfen." },
         { title: "Produktionseffektivitet", href: "/features/production-efficiency", description: "Følg OEE live for hvert skift, hver linje og hver maskine." },

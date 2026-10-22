@@ -3,6 +3,148 @@ import type { Locale } from "@/i18n/routing"
 
 const features: LocalizedPage<FeaturePage>[] = [
   {
+    slug: "production-planning",
+    href: "/features/production-planning",
+    content: {
+      en: {
+        metaTitle: "Production planning | OptiPeople",
+        metaDescription:
+          "Sequence work orders across every entity of each production route, against measured run rates and real availability, and share one plan with the floor.",
+        parentLabel: "Planning",
+        parentHref: "/modules/planning",
+        eyebrow: "Production planning",
+        heroTitle: "Plan on the capacity you actually have",
+        heroBody:
+          "Sequence orders across every entity on each production route, built on measured run rates and real availability of machines and workstations, and share the same plan with everyone who has to deliver it.",
+        heroImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+        heroImageAlt: "Production planning board in OptiPeople Data Platform",
+        valueTitle: "A plan is only as good as the numbers under it",
+        valueBody:
+          "Most plans are built from standard times set years ago and a capacity figure nobody has re-measured. The plan looks fine on Monday and has drifted by Wednesday. When planning reads from the same data as the floor, the run rates and the available hours are the ones the machines and workstations actually delivered, so the plan starts realistic and stays that way.",
+        capabilitiesTitle: "Planning that stays connected to the floor",
+        capabilitiesBody:
+          "The plan, the orders, and the registrations from the floor share one data foundation, so a change in one shows up in the others.",
+        capabilities: [
+          {
+            title: "Routes, not one flat timeline",
+            description:
+              "Each product has a route: cut, mill, glue, assemble, pack. Orders are sequenced across every entity on that route, so a slip at station two is visibly a problem at station five.",
+            image: "/images/Mockups/Planning-Timeline-Close.png",
+            imageAlt: "Planning timeline grouped by production route",
+          },
+          {
+            title: "Capacity and run rates from real data",
+            description:
+              "Schedule against real available hours per machine or workstation, with shift patterns and planned maintenance accounted for. Standard times come from what was actually produced, per item and per setup.",
+            image: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+            imageAlt: "Work orders scheduled against available capacity",
+          },
+          {
+            title: "One plan, visible on the floor",
+            description:
+              "Operators see the same sequence the planner sees, on the panel at the machine or workstation. When a breakdown or a rush order hits, replan the affected window and see the knock-on effects right away.",
+            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
+            imageAlt: "Operator panel showing the planned sequence",
+          },
+        ],
+        showcaseTitle: "One row per entity, grouped by route",
+        showcaseBody:
+          "Progress reports itself from the floor as the order moves along the route, so the plan always shows where each order actually is.",
+        showcaseDrawn: "routes",
+        metrics: [
+          { metric: "Per route", label: "Sequenced across every entity, not one flat line" },
+          { metric: "Measured", label: "Capacity from real output, not estimates" },
+          { metric: "One plan", label: "Shared by planning and the shopfloor" },
+        ],
+        related: [
+          {
+            title: "Order management",
+            description: "Run orders at the machine or workstation with instructions, SOPs, and traceability.",
+            href: "/features/order-management",
+          },
+          {
+            title: "Production efficiency",
+            description: "Track OEE in real time and see where production time is lost.",
+            href: "/features/production-efficiency",
+          },
+          {
+            title: "Maintenance and tasks",
+            description: "Plan preventive maintenance by usage and condition.",
+            href: "/features/maintenance-and-tasks",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Produktionsplanlægning | OptiPeople",
+        metaDescription:
+          "Læg ordrerne gennem hele produktionsruten efter målte kørehastigheder og den kapacitet, I faktisk har, og del den samme plan med gulvet.",
+        parentLabel: "Planlægning",
+        parentHref: "/modules/planning",
+        eyebrow: "Produktionsplanlægning",
+        heroTitle: "Planlæg efter den kapacitet, I faktisk har",
+        heroBody:
+          "Læg ordrerne gennem hver station på produktionsruten, ud fra de kørehastigheder og den tid, maskiner og arbejdsstationer reelt har. Alle, der skal levere planen, ser den samme.",
+        heroImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+        heroImageAlt: "Planlægningstavlen i OptiPeople Data Platform",
+        valueTitle: "Planen er ikke bedre end tallene under den",
+        valueBody:
+          "De fleste planer bygger på standardtider, der blev sat for mange år siden, og en kapacitet, ingen har målt siden. Planen ser fin ud mandag og er skredet onsdag. Når planlægningen læser de samme data som gulvet, er kørehastigheder og ledige timer dem, maskinerne og arbejdsstationerne faktisk leverede. Så starter planen realistisk og bliver ved med at være det.",
+        capabilitiesTitle: "Planlægning, der hænger sammen med gulvet",
+        capabilitiesBody:
+          "Planen, ordrerne og det, der bliver registreret på gulvet, ligger på de samme data. Ændrer det ene sig, kan I se det i det andet.",
+        capabilities: [
+          {
+            title: "Ruter, ikke én flad tidslinje",
+            description:
+              "Hvert produkt har sin rute: skære, fræse, lime, samle, pakke. Ordrerne bliver lagt gennem hver station på ruten, så en forsinkelse på station to tydeligt er et problem på station fem.",
+            image: "/images/Mockups/Planning-Timeline-Close.png",
+            imageAlt: "Tidslinje grupperet efter produktionsrute",
+          },
+          {
+            title: "Kapacitet og kørehastigheder fra rigtige data",
+            description:
+              "Planlæg efter de timer, hver maskine eller arbejdsstation reelt har, med skiftmønstre og planlagt vedligehold regnet med. Standardtiderne kommer fra det, der faktisk blev produceret, pr. vare og pr. omstilling.",
+            image: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+            imageAlt: "Ordrer lagt ind efter ledig kapacitet",
+          },
+          {
+            title: "Én plan, som gulvet også ser",
+            description:
+              "Operatøren ser den samme rækkefølge som planlæggeren, på skærmen ved maskinen eller arbejdsstationen. Kommer der et nedbrud eller en hasteordre, lægger I det berørte stykke om og ser med det samme, hvad det betyder for resten.",
+            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
+            imageAlt: "Operatørpanel med den planlagte rækkefølge",
+          },
+        ],
+        showcaseTitle: "Én række pr. station, grupperet efter rute",
+        showcaseBody:
+          "Fremdriften melder sig selv fra gulvet, mens ordren bevæger sig gennem ruten. Så viser planen altid, hvor hver ordre faktisk er.",
+        showcaseDrawn: "routes",
+        metrics: [
+          { metric: "Pr. rute", label: "Lagt gennem hver station, ikke én flad linje" },
+          { metric: "Målt", label: "Kapacitet ud fra det, der reelt blev lavet" },
+          { metric: "Én plan", label: "Fælles for planlægning og gulvet" },
+        ],
+        related: [
+          {
+            title: "Ordrestyring",
+            description: "Kør ordrerne ved maskinen eller arbejdsstationen med instruktioner og sporbarhed.",
+            href: "/features/order-management",
+          },
+          {
+            title: "Produktionseffektivitet",
+            description: "Følg OEE live, og se, hvor tiden går tabt.",
+            href: "/features/production-efficiency",
+          },
+          {
+            title: "Vedligehold og opgaver",
+            description: "Planlæg vedligeholdet efter brug og tilstand.",
+            href: "/features/maintenance-and-tasks",
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "order-management",
     href: "/features/order-management",
     content: {
@@ -142,148 +284,6 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Stopårsager",
             description: "Registrer årsagen til stoppet ude ved maskinen eller arbejdsstationen.",
             href: "/features/stop-cause-registration",
-          },
-        ],
-      },
-    },
-  },
-  {
-    slug: "production-planning",
-    href: "/features/production-planning",
-    content: {
-      en: {
-        metaTitle: "Production planning | OptiPeople",
-        metaDescription:
-          "Sequence work orders across every entity of each production route, against measured run rates and real availability, and share one plan with the floor.",
-        parentLabel: "Planning",
-        parentHref: "/modules/planning",
-        eyebrow: "Production planning",
-        heroTitle: "Plan on the capacity you actually have",
-        heroBody:
-          "Sequence orders across every entity on each production route, built on measured run rates and real availability of machines and workstations, and share the same plan with everyone who has to deliver it.",
-        heroImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
-        heroImageAlt: "Production planning board in OptiPeople Data Platform",
-        valueTitle: "A plan is only as good as the numbers under it",
-        valueBody:
-          "Most plans are built from standard times set years ago and a capacity figure nobody has re-measured. The plan looks fine on Monday and has drifted by Wednesday. When planning reads from the same data as the floor, the run rates and the available hours are the ones the machines and workstations actually delivered, so the plan starts realistic and stays that way.",
-        capabilitiesTitle: "Planning that stays connected to the floor",
-        capabilitiesBody:
-          "The plan, the orders, and the registrations from the floor share one data foundation, so a change in one shows up in the others.",
-        capabilities: [
-          {
-            title: "Routes, not one flat timeline",
-            description:
-              "Each product has a route: cut, mill, glue, assemble, pack. Orders are sequenced across every entity on that route, so a slip at station two is visibly a problem at station five.",
-            image: "/images/Mockups/Planning-Timeline-Close.png",
-            imageAlt: "Planning timeline grouped by production route",
-          },
-          {
-            title: "Capacity and run rates from real data",
-            description:
-              "Schedule against real available hours per machine or workstation, with shift patterns and planned maintenance accounted for. Standard times come from what was actually produced, per item and per setup.",
-            image: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
-            imageAlt: "Work orders scheduled against available capacity",
-          },
-          {
-            title: "One plan, visible on the floor",
-            description:
-              "Operators see the same sequence the planner sees, on the panel at the machine or workstation. When a breakdown or a rush order hits, replan the affected window and see the knock-on effects right away.",
-            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
-            imageAlt: "Operator panel showing the planned sequence",
-          },
-        ],
-        showcaseTitle: "One row per entity, grouped by route",
-        showcaseBody:
-          "Progress reports itself from the floor as the order moves along the route, so the plan always shows where each order actually is.",
-        showcaseDrawn: "routes",
-        metrics: [
-          { metric: "Per route", label: "Sequenced across every entity, not one flat line" },
-          { metric: "Measured", label: "Capacity from real output, not estimates" },
-          { metric: "One plan", label: "Shared by planning and the shopfloor" },
-        ],
-        related: [
-          {
-            title: "Order management",
-            description: "Run orders at the machine or workstation with instructions, SOPs, and traceability.",
-            href: "/features/order-management",
-          },
-          {
-            title: "Production efficiency",
-            description: "Track OEE in real time and see where production time is lost.",
-            href: "/features/production-efficiency",
-          },
-          {
-            title: "Maintenance and tasks",
-            description: "Plan preventive maintenance by usage and condition.",
-            href: "/features/maintenance-and-tasks",
-          },
-        ],
-      },
-      da: {
-        metaTitle: "Produktionsplanlægning | OptiPeople",
-        metaDescription:
-          "Læg ordrerne gennem hele produktionsruten efter målte kørehastigheder og den kapacitet, I faktisk har, og del den samme plan med gulvet.",
-        parentLabel: "Planlægning",
-        parentHref: "/modules/planning",
-        eyebrow: "Produktionsplanlægning",
-        heroTitle: "Planlæg efter den kapacitet, I faktisk har",
-        heroBody:
-          "Læg ordrerne gennem hver station på produktionsruten, ud fra de kørehastigheder og den tid, maskiner og arbejdsstationer reelt har. Alle, der skal levere planen, ser den samme.",
-        heroImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
-        heroImageAlt: "Planlægningstavlen i OptiPeople Data Platform",
-        valueTitle: "Planen er ikke bedre end tallene under den",
-        valueBody:
-          "De fleste planer bygger på standardtider, der blev sat for mange år siden, og en kapacitet, ingen har målt siden. Planen ser fin ud mandag og er skredet onsdag. Når planlægningen læser de samme data som gulvet, er kørehastigheder og ledige timer dem, maskinerne og arbejdsstationerne faktisk leverede. Så starter planen realistisk og bliver ved med at være det.",
-        capabilitiesTitle: "Planlægning, der hænger sammen med gulvet",
-        capabilitiesBody:
-          "Planen, ordrerne og det, der bliver registreret på gulvet, ligger på de samme data. Ændrer det ene sig, kan I se det i det andet.",
-        capabilities: [
-          {
-            title: "Ruter, ikke én flad tidslinje",
-            description:
-              "Hvert produkt har sin rute: skære, fræse, lime, samle, pakke. Ordrerne bliver lagt gennem hver station på ruten, så en forsinkelse på station to tydeligt er et problem på station fem.",
-            image: "/images/Mockups/Planning-Timeline-Close.png",
-            imageAlt: "Tidslinje grupperet efter produktionsrute",
-          },
-          {
-            title: "Kapacitet og kørehastigheder fra rigtige data",
-            description:
-              "Planlæg efter de timer, hver maskine eller arbejdsstation reelt har, med skiftmønstre og planlagt vedligehold regnet med. Standardtiderne kommer fra det, der faktisk blev produceret, pr. vare og pr. omstilling.",
-            image: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
-            imageAlt: "Ordrer lagt ind efter ledig kapacitet",
-          },
-          {
-            title: "Én plan, som gulvet også ser",
-            description:
-              "Operatøren ser den samme rækkefølge som planlæggeren, på skærmen ved maskinen eller arbejdsstationen. Kommer der et nedbrud eller en hasteordre, lægger I det berørte stykke om og ser med det samme, hvad det betyder for resten.",
-            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
-            imageAlt: "Operatørpanel med den planlagte rækkefølge",
-          },
-        ],
-        showcaseTitle: "Én række pr. station, grupperet efter rute",
-        showcaseBody:
-          "Fremdriften melder sig selv fra gulvet, mens ordren bevæger sig gennem ruten. Så viser planen altid, hvor hver ordre faktisk er.",
-        showcaseDrawn: "routes",
-        metrics: [
-          { metric: "Pr. rute", label: "Lagt gennem hver station, ikke én flad linje" },
-          { metric: "Målt", label: "Kapacitet ud fra det, der reelt blev lavet" },
-          { metric: "Én plan", label: "Fælles for planlægning og gulvet" },
-        ],
-        related: [
-          {
-            title: "Ordrestyring",
-            description: "Kør ordrerne ved maskinen eller arbejdsstationen med instruktioner og sporbarhed.",
-            href: "/features/order-management",
-          },
-          {
-            title: "Produktionseffektivitet",
-            description: "Følg OEE live, og se, hvor tiden går tabt.",
-            href: "/features/production-efficiency",
-          },
-          {
-            title: "Vedligehold og opgaver",
-            description: "Planlæg vedligeholdet efter brug og tilstand.",
-            href: "/features/maintenance-and-tasks",
           },
         ],
       },

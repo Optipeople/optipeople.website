@@ -732,7 +732,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Activate",
             description:
-              "With data flowing, activate the other modules against it: Orders, Planning, Quality, OEE, EMS, Maintenance, Documents, and AI Agents.",
+              "With data flowing, activate the other modules against it: Planning, Orders, Quality, OEE, EMS, Maintenance, Documents, and AI Agents.",
           },
         ],
         darkHero: true,
@@ -801,7 +801,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Brug det",
             description:
-              "Data bliver til dashboards, rapporter, alarmer og automatik i de andre moduler: Ordrer, Planlægning, Kvalitet, OEE, EMS, Vedligehold, Dokumenter og AI-agenter.",
+              "Data bliver til dashboards, rapporter, alarmer og automatik i de andre moduler: Planlægning, Ordrer, Kvalitet, OEE, EMS, Vedligehold, Dokumenter og AI-agenter.",
           },
         ],
       },
@@ -1006,11 +1006,11 @@ const modules: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Modular MES",
         metaDescription:
-          "A modular MES made of nine modules (Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents), switched on one module at a time.",
+          "A modular MES made of nine modules (Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents), switched on one module at a time.",
         eyebrow: "Modular MES",
         heroTitle: "Your Modular MES platform",
         heroBody:
-          "Manufacturing execution you switch on one module at a time. Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
+          "Manufacturing execution you switch on one module at a time. Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
         primaryLabel: "Request a demo",
         introTitle: "Nobody needs a whole MES on day one",
         introBody:
@@ -1104,11 +1104,11 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Modulært MES-system til produktionen | OptiPeople",
         metaDescription:
-          "Et MES, I tager i brug ét modul ad gangen: Ordrer, Planlægning, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Start dér, hvor det gør ondt.",
+          "Et MES, I tager i brug ét modul ad gangen: Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Start dér, hvor det gør ondt.",
         eyebrow: "Modulært MES",
         heroTitle: "Jeres modulære MES",
         heroBody:
-          "Et MES, I slår til ét modul ad gangen. Ordrer, Planlægning, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
+          "Et MES, I slår til ét modul ad gangen. Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
         primaryLabel: "Book en demo",
         introTitle: "Ingen har brug for et helt MES fra dag ét",
         introBody:

@@ -21,12 +21,12 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "Platform | OptiPeople",
     description:
-      "Explore the OptiPeople Data Platform: a modular MES made of nine modules (Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents) sharing data in one unified view of your operations.",
+      "Explore the OptiPeople Data Platform: a modular MES made of nine modules (Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents) sharing data in one unified view of your operations.",
   },
   da: {
     title: "Modulært MES og IoT-platform til produktionen | OptiPeople",
     description:
-      "Et MES bygget af ni moduler: Ordrer, Planlægning, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Alle modulerne bruger de samme data om jeres drift.",
+      "Et MES bygget af ni moduler: Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Alle modulerne bruger de samme data om jeres drift.",
   },
 }
 
@@ -45,7 +45,7 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "One modular platform for all your manufacturing operations",
-      lede: "The OptiPeople Data Platform connects orders, planning, quality, IoT, OEE, energy, maintenance, documents, and AI agents on a single data foundation. Take one module or all nine: every module works from the same live data, so what one team registers, every team can use.",
+      lede: "The OptiPeople Data Platform connects planning, orders, quality, IoT, OEE, energy, maintenance, documents, and AI agents on a single data foundation. Take one module or all nine: every module works from the same live data, so what one team registers, every team can use.",
       cta: "Book a demo",
       jump: "See the modules",
     },
@@ -103,7 +103,7 @@ const copy: Record<Locale, PlatformCopy> = {
     hero: {
       eyebrow: "Platform",
       title: "Én modulopbygget platform til hele produktionen",
-      lede: "OptiPeople Data Platform kobler ordrer, planlægning, kvalitet, IoT, OEE, energi, vedligehold, dokumenter og AI-agenter sammen på ét fælles datagrundlag. Tag ét modul eller alle ni. Alle modulerne henter fra de samme data, så det, ét team registrerer, kan de andre bruge.",
+      lede: "OptiPeople Data Platform kobler planlægning, ordrer, kvalitet, IoT, OEE, energi, vedligehold, dokumenter og AI-agenter sammen på ét fælles datagrundlag. Tag ét modul eller alle ni. Alle modulerne henter fra de samme data, så det, ét team registrerer, kan de andre bruge.",
       cta: "Book en demo",
       jump: "Se modulerne",
     },

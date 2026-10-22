@@ -30,18 +30,18 @@ const englishModules: ModuleNode[] = [
     features: ["Real-time data collection", "Secure cloud infrastructure", "Open API integrations"],
   },
   {
-    id: "erp-shopfloor",
-    name: "Orders",
-    description: "At the machine or workstation",
-    pitch: "The orders to run, on the screen at the machine or workstation. Operators start, stop, and report quantities and scrap where the work happens. It runs on its own, and connects to your ERP if you want it to.",
-    features: ["Start, stop and report at the machine or workstation", "Runs with or without an ERP", "Two-way ERP sync when you want it"],
-  },
-  {
     id: "planning",
     name: "Planning",
     description: "Routes and timelines",
     pitch: "Sequence orders across the entities of each production route, not on one flat timeline, against measured run rates and the hours a machine actually has available.",
     features: ["Routes, not one flat timeline", "Run rates from real data", "Replan without rebuilding"],
+  },
+  {
+    id: "erp-shopfloor",
+    name: "Orders",
+    description: "At the machine or workstation",
+    pitch: "The orders to run, on the screen at the machine or workstation. Operators start, stop, and report quantities and scrap where the work happens. It runs on its own, and connects to your ERP if you want it to.",
+    features: ["Start, stop and report at the machine or workstation", "Runs with or without an ERP", "Two-way ERP sync when you want it"],
   },
   {
     id: "quality",
@@ -103,19 +103,19 @@ const danishModules: ModuleNode[] = [
     features: ["Data opsamlet løbende", "Sikker drift i skyen", "Åbne API'er"],
   },
   {
+    id: "planning",
+    name: "Planlægning",
+    description: "Ruter og tidslinjer",
+    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, ikke bare på én flad tidslinje. Planen bygger på de kørehastigheder, der faktisk er målt, og den tid, maskinen reelt har ledig.",
+    features: ["Ruter, ikke én flad tidslinje", "Målte kørehastigheder", "Læg om uden at starte forfra"],
+  },
+  {
     id: "erp-shopfloor",
     name: "Ordrer",
     description: "Ved maskine eller arbejdsstation",
     pitch:
       "Ordrerne står på skærmen ved maskinen eller arbejdsstationen. Operatøren starter, stopper og melder antal og kassation, dér, hvor arbejdet sker. Det kører fint uden ERP, men kan kobles på jeres ERP, hvis I vil.",
     features: ["Start, stop og meld ved maskinen eller arbejdsstationen", "Kører med eller uden ERP", "Ordrer begge veje, når I vil"],
-  },
-  {
-    id: "planning",
-    name: "Planlægning",
-    description: "Ruter og tidslinjer",
-    pitch: "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, ikke bare på én flad tidslinje. Planen bygger på de kørehastigheder, der faktisk er målt, og den tid, maskinen reelt har ledig.",
-    features: ["Ruter, ikke én flad tidslinje", "Målte kørehastigheder", "Læg om uden at starte forfra"],
   },
   {
     id: "quality",
@@ -294,8 +294,8 @@ const HUB_SIDES = 9
 // Petal order around the bloom, starting at the top going clockwise: the nine
 // modules in catalog order (content/modules-catalog.ts).
 const PETAL_ORDER = [
-  "erp-shopfloor",
   "planning",
+  "erp-shopfloor",
   "quality",
   "iot",
   "production",
