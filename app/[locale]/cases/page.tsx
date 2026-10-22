@@ -23,6 +23,7 @@ type CasesCopy = {
   measuredLabel: string
   customersLabel: string
   moreLabel: string
+  videoLabel: string
   emptyTitle: string
   emptyBody: string
   ctaLabel: string
@@ -42,6 +43,7 @@ const copy: Record<Locale, CasesCopy> = {
     measuredLabel: "with a measured result on the line",
     customersLabel: "Manufacturers in these stories",
     moreLabel: "More stories",
+    videoLabel: "Video",
     emptyTitle: "No case studies yet",
     emptyBody: "Customer stories will appear here as they are published.",
     ctaLabel: "Read story",
@@ -59,6 +61,7 @@ const copy: Record<Locale, CasesCopy> = {
     measuredLabel: "med et målt resultat på linjen",
     customersLabel: "Virksomhederne i historierne",
     moreLabel: "Flere historier",
+    videoLabel: "Video",
     emptyTitle: "Ingen cases endnu",
     emptyBody: "Kundehistorierne kommer her, når de bliver udgivet.",
     ctaLabel: "Læs historien",
@@ -103,6 +106,7 @@ export default async function CasesPage({ params }: Props) {
         measuredLabel={t.measuredLabel}
         customersLabel={t.customersLabel}
         moreLabel={t.moreLabel}
+        videoLabel={t.videoLabel}
         emptyTitle={t.emptyTitle}
         emptyBody={t.emptyBody}
         ctaLabel={t.ctaLabel}

@@ -12,6 +12,7 @@ import {
   TableOfContents,
   extractHeadings,
 } from "@/components/blog-post-content"
+import { CaseVideo } from "@/components/case-video"
 import { buildMetadata } from "@/lib/seo"
 import { JsonLd } from "@/components/json-ld"
 import {
@@ -34,6 +35,7 @@ type PostCopy = {
   readMore: string
   by: string
   updated: string
+  playVideo: string
 }
 
 const copy: Record<Locale, PostCopy> = {
@@ -46,6 +48,7 @@ const copy: Record<Locale, PostCopy> = {
     readMore: "Read",
     by: "by",
     updated: "updated",
+    playVideo: "Play the video",
   },
   da: {
     backToBlog: "Blog",
@@ -56,6 +59,7 @@ const copy: Record<Locale, PostCopy> = {
     readMore: "Læs",
     by: "af",
     updated: "opdateret",
+    playVideo: "Afspil videoen",
   },
 }
 
@@ -255,9 +259,24 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
       )}
 
+      {/* A case told on film leads with the video instead of the image, in
+          the same floating frame. */}
+      {post.video && (
+        <div className={isCaseStudy ? "-mt-8 lg:-mt-12" : "mt-2"}>
+          <div className="px-[var(--edge)]">
+            <CaseVideo
+              videoId={post.video}
+              title={post.title}
+              poster={post.image}
+              playLabel={t.playVideo}
+            />
+          </div>
+        </div>
+      )}
+
       {/* Lead image, floating rather than boxed. On the case variant it laps
           up over the edge of the deep header. */}
-      {post.image && (
+      {post.image && !post.video && (
         <div className={isCaseStudy ? "-mt-8 lg:-mt-12" : "mt-2"}>
           <div className="px-[var(--edge)]">
             <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-white shadow-[0_28px_70px_-30px_rgba(0,0,0,0.45)] ring-1 ring-black/[0.08]">

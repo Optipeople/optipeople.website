@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight, Play } from "lucide-react"
 
 import type { BlogPost } from "@/lib/blog-data"
 import { getSurface, rotateSurface } from "@/lib/page-theme"
@@ -24,6 +24,8 @@ type CaseArchiveProps = {
   customersLabel?: string
   /** Heading above the grid of remaining stories. */
   moreLabel?: string
+  /** Tag on stories told on video. */
+  videoLabel?: string
 }
 
 /**
@@ -55,6 +57,7 @@ export function CaseArchive({
   measuredLabel,
   customersLabel,
   moreLabel,
+  videoLabel,
 }: CaseArchiveProps) {
   const theme = getSurface("green")
   const [featured, ...rest] = cases
@@ -177,6 +180,7 @@ export function CaseArchive({
                       customer={featured.customer}
                       logo={featured.logo}
                     />
+                    {featured.video && videoLabel && <VideoTag label={videoLabel} />}
                   </div>
 
                   {featured.metric ? (
@@ -251,6 +255,7 @@ export function CaseArchive({
                     post={post}
                     postBasePath={postBasePath}
                     ctaLabel={ctaLabel}
+                    videoLabel={videoLabel}
                     // Offset by one so the first card does not repeat the lead
                     // story's green.
                     tint={rotateSurface(i + 1).tint}
@@ -262,6 +267,16 @@ export function CaseArchive({
         </>
       )}
     </div>
+  )
+}
+
+/** Small tag marking a story that is told on video. */
+function VideoTag({ label }: { label: string }) {
+  return (
+    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-black/10 bg-white/60 px-2.5 py-1 text-xs font-medium text-foreground/78">
+      <Play className="h-3 w-3 fill-current" />
+      {label}
+    </span>
   )
 }
 
@@ -304,11 +319,13 @@ function CaseCard({
   post,
   postBasePath,
   ctaLabel,
+  videoLabel,
   tint,
 }: {
   post: BlogPost
   postBasePath: string
   ctaLabel: string
+  videoLabel?: string
   tint: string
 }) {
   return (
@@ -320,6 +337,7 @@ function CaseCard({
       <div>
         <div className="flex h-7 items-center justify-between gap-4">
           <CustomerMark customer={post.customer} logo={post.logo} />
+          {post.video && videoLabel && <VideoTag label={videoLabel} />}
         </div>
 
         <div className="mt-8">

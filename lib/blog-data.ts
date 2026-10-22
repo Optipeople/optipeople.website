@@ -26,6 +26,8 @@ export type BlogPost = {
   logo?: string
   quote?: string
   outcome?: string
+  /** YouTube video id: the case is told on video, played above the text. */
+  video?: string
 }
 
 const postsDirectory = path.join(process.cwd(), "content/blog")
@@ -127,6 +129,7 @@ function caseFields(data: Record<string, unknown>) {
     logo: resolveAssetPath(data.logo),
     quote: typeof data.quote === "string" ? data.quote : undefined,
     outcome: typeof data.outcome === "string" ? data.outcome : undefined,
+    video: typeof data.video === "string" ? data.video : undefined,
   }
 }
 
