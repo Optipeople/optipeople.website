@@ -82,10 +82,10 @@ export const aiCapabilities: AiCapability[] = [
         metaTitle: "Opti Assist | AI chat for your operation",
         metaDescription:
           "Opti Assist is a model-agnostic AI chat for your whole team, grounded in your production data, documents and company knowledge.",
-        eyebrow: "Chat · Opti Assist",
-        heroTitle: "AI chat for everyone in your operation",
+        eyebrow: "Opti Assist – Chat and QR codes",
+        heroTitle: "AI chat and QR codes for everyone in your operation",
         heroBody:
-          "Opti Assist gives every team a single, model-agnostic chat, grounded in your production data, documents and company knowledge. Ask about last night's OEE, a recurring stop cause on line 3 or the right changeover procedure, and get an answer with sources, in plain language.",
+          "Opti Assist gives every team a single, model-agnostic chat, grounded in your orders, standard operating procedures and work order instructions. Ask what the next order needs, which procedure applies to the changeover, or how a step in the work order should be done, and get an answer with sources, in plain language. Scan the QR code on a machine or workstation, and Opti Assist already knows which one you mean.",
         valueTitle: "One assistant for the whole company",
         valueBody:
           "Operators, planners and managers shouldn't need a data analyst to get an answer. Most of the knowledge in a factory is spread across dashboards, SOPs, maintenance logs and the heads of a few experienced people. Opti Assist puts it in one place. It connects your documented knowledge with your live operations in the OptiPeople Data Platform, so anyone can ask a question, see where the answer came from and act on it, whether they sit in the office or stand at the machine.",
@@ -95,6 +95,11 @@ export const aiCapabilities: AiCapability[] = [
             title: "Model-agnostic by design",
             description:
               "Switch between the best available models for the task at hand. You're never locked to a single vendor, and new models are available as they ship, without changing how your team works.",
+          },
+          {
+            title: "Your knowledge bank for the work",
+            description:
+              "Opti Assist works as your company's knowledge bank. Work order instructions, standard operating procedures, service requests and quality checks live in one place, and the team uses them as tools: pull up the instruction for the order in front of you, follow the procedure step by step, raise a service request or run a quality check.",
           },
           {
             title: "Grounded in your knowledge",
@@ -151,10 +156,10 @@ export const aiCapabilities: AiCapability[] = [
         metaTitle: "Opti Assist | AI-chat til jeres drift",
         metaDescription:
           "Opti Assist er en AI-chat til hele teamet. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, virksomheden ved i forvejen.",
-        eyebrow: "Chat · Opti Assist",
-        heroTitle: "En AI-chat, alle i driften kan bruge",
+        eyebrow: "Opti Assist – Chat og QR-koder",
+        heroTitle: "AI-chat og QR-koder, alle i driften kan bruge",
         heroBody:
-          "Opti Assist er én chat til hele huset. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, I selv har skrevet ned. Spørg om nattens OEE, om den stopårsag, der bliver ved med at komme igen på linje 3, eller om hvordan omstillingen skal laves. I får svaret i almindeligt sprog og kan se, hvor det kommer fra.",
+          "Opti Assist er én chat til hele huset. Den svarer ud fra jeres ordrer, standardprocedurer og arbejdsinstruktioner. Spørg, hvad den næste ordre kræver, hvilken procedure der gælder for omstillingen, eller hvordan et trin i arbejdsordren skal udføres. I får svaret i almindeligt sprog og kan se, hvor det kommer fra. Scan QR-koden på maskinen eller arbejdsstationen, så ved Opti Assist allerede, hvilken det handler om.",
         valueTitle: "Én assistent til hele virksomheden",
         valueBody:
           "Ingen skal have en dataanalytiker ved siden af sig for at få et svar. Det meste af det, en fabrik ved, ligger spredt: i dashboards, i arbejdsbeskrivelser, i vedligeholdsloggen og i hovedet på et par erfarne kolleger. Når spørgsmålet kommer midt i et skift, er der ikke tid til at lede fire steder. Opti Assist samler trådene. Den kobler det, I har skrevet ned, sammen med det, der sker i OptiPeople Data Platform lige nu. Så kan alle spørge, se, hvor svaret kommer fra, og gøre noget ved det. Også dem, der står ude ved maskinen.",
@@ -164,6 +169,11 @@ export const aiCapabilities: AiCapability[] = [
             title: "I vælger selv AI-modellen",
             description:
               "Skift til den model, der er bedst til opgaven. I er ikke bundet til én leverandør, og nye modeller kan tages i brug, så snart de er der, uden at teamet skal lave noget om.",
+          },
+          {
+            title: "Jeres vidensbank til arbejdet",
+            description:
+              "Opti Assist er virksomhedens vidensbank. Arbejdsinstruktioner, standardprocedurer, serviceanmodninger og kvalitetstjek ligger samme sted, og teamet bruger dem som værktøjer: find instruktionen til den ordre, der kører, følg proceduren trin for trin, opret en serviceanmodning, eller lav et kvalitetstjek.",
           },
           {
             title: "Svar ud fra det, I ved",
@@ -230,7 +240,7 @@ export const aiCapabilities: AiCapability[] = [
         eyebrow: "Workflows",
         heroTitle: "Build powerful AI automations",
         heroBody:
-          "Turn production events into action with visual AI workflows. A stop on a line, a finished shift, an incoming document: each can trigger a chain of steps that gathers data, applies AI where it helps and delivers a result. Chain steps, branch on conditions, loop over items, no code required.",
+          "Turn production events into action with visual AI workflows. A stop on a line, a finished shift, an incoming document: each can trigger a chain of steps that gathers data, applies AI where it helps and delivers a result.",
         valueTitle: "From event to action, automatically",
         valueBody:
           "Most operational work is repetitive: a stop happens, a report is needed, a task gets created, someone gets notified. Today those patterns run on habit and memory, which means they run late, or not at all, on a busy shift. Workflows let you wire the pattern once and let it run every time: pull the data from the OptiPeople Data Platform, let AI summarize or classify it, and push the result to the people and systems that need it. Your team keeps the judgment calls; the workflow keeps the routine.",

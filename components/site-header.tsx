@@ -7,6 +7,7 @@ import {
   ChevronDown,
   LogIn,
   Menu,
+  Mail,
   MessageCircle,
   X,
 } from "lucide-react"
@@ -24,6 +25,7 @@ import { Link, usePathname } from "@/i18n/navigation"
 import {
   loginTargets,
   navigationLinks,
+  newsletterLink,
   navigationMenus,
 } from "@/i18n/navigation-data"
 import type { NavItem, NavMenu } from "@/i18n/navigation-data"
@@ -245,6 +247,17 @@ export function SiteHeader() {
           <div className="flex items-center gap-1 md:gap-2">
             <Button asChild size="sm" className="px-3 md:px-4">
               <Link
+                href={newsletterLink[locale].href}
+                className="cursor-pointer"
+                aria-label={newsletterLink[locale].title}
+              >
+                <Mail className="h-4 w-4 md:hidden" aria-hidden="true" />
+                <span className="hidden md:inline">{newsletterLink[locale].title}</span>
+                <span className="sr-only md:hidden">{newsletterLink[locale].title}</span>
+              </Link>
+            </Button>
+            <Button asChild size="sm" className="px-3 md:px-4">
+              <Link
                 href="/contact"
                 className="cursor-pointer"
                 aria-label={t("talkToUs")}
@@ -258,7 +271,10 @@ export function SiteHeader() {
               </Link>
             </Button>
 
-            <MobileNav menus={dropdownMenus} links={navigationItems} />
+            <MobileNav
+              menus={dropdownMenus}
+              links={[...navigationItems, newsletterLink[locale]]}
+            />
           </div>
         </div>
 

@@ -143,10 +143,10 @@ const MES_COPY: Record<Locale, MesCopy> = {
 /** All nine modules, in catalog order, which is also the order they light up in. */
 const MES_MODULES = [
   "orders",
-  "oee",
   "planning",
   "qms",
   "iot",
+  "oee",
   "ems",
   "maintenance",
   "documents",

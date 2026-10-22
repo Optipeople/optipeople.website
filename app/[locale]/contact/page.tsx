@@ -30,7 +30,7 @@ type ContactCopy = {
 
 const copy: Record<Locale, ContactCopy> = {
   en: {
-    eyebrow: "Talk to us",
+    eyebrow: "Contact",
     headline: "Let's talk about your operations",
     body: "Tell us about your situation and we'll get back to you within one business day. No sales sequence, no gatekeeping: you talk to the people who run the platform.",
     formTitle: "Send a message",
@@ -60,7 +60,7 @@ const copy: Record<Locale, ContactCopy> = {
     officeLine2: "8362 Hørning, Denmark",
   },
   da: {
-    eyebrow: "Tal med os",
+    eyebrow: "Kontakt",
     headline: "Lad os tage en snak om jeres drift",
     body: "Fortæl, hvor I står, så vender vi tilbage inden for én arbejdsdag. Ingen sælgerforløb og ingen mellemled: I taler direkte med dem, der står for platformen.",
     formTitle: "Skriv til os",

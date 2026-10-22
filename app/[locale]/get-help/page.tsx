@@ -104,7 +104,7 @@ const copy: Record<Locale, HelpCopy> = {
       {
         question: "How is OEE calculated in the platform?",
         answer:
-          "Availability, performance, and quality are calculated from actual machine signals and registered stops, not from manual estimates. If you want to understand the arithmetic and the choices behind it, the calculation is written up in full with worked examples.",
+          "Availability, performance, and quality are calculated from actual data from machines and workstations and registered stops, not from manual estimates. If you want to understand the arithmetic and the choices behind it, the calculation is written up in full with worked examples.",
         linkLabel: "How to calculate OEE",
         linkHref: "/blog/how-to-calculate-oee-for-manufacturing-and-maintenance",
       },
@@ -191,7 +191,7 @@ const copy: Record<Locale, HelpCopy> = {
       {
         question: "Hvordan regner platformen OEE ud?",
         answer:
-          "Tilgængelighed, ydelse og kvalitet bliver regnet ud fra maskinernes egne signaler og de stop, der er registreret. Ikke ud fra skøn. Vil I se hele regnestykket og de valg, der ligger bag, har vi skrevet det hele ud med regneeksempler.",
+          "Tilgængelighed, ydelse og kvalitet bliver regnet ud fra data fra maskiner og arbejdsstationer og de stop, der er registreret. Ikke ud fra skøn. Vil I se hele regnestykket og de valg, der ligger bag, har vi skrevet det hele ud med regneeksempler.",
         linkLabel: "Sådan beregnes OEE",
         linkHref: "/blog/how-to-calculate-oee-for-manufacturing-and-maintenance",
       },

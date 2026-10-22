@@ -34,7 +34,7 @@ const copy: Record<Locale, CasesCopy> = {
     metaDescription:
       "See how manufacturers use OptiPeople and OptiPeople Data Platform to improve OEE, reduce downtime, and make better production decisions.",
     backLabel: "Home",
-    eyebrow: "Customer stories",
+    eyebrow: "Cases",
     title: "Results from the factory floor",
     subtitle:
       "How manufacturers use OptiPeople Data Platform to lift OEE, cut downtime, and turn production data into better decisions.",
@@ -51,7 +51,7 @@ const copy: Record<Locale, CasesCopy> = {
     metaDescription:
       "Se, hvordan producenter bruger OptiPeople Data Platform til at få OEE op, mindske nedetiden og træffe bedre beslutninger i produktionen.",
     backLabel: "Forsiden",
-    eyebrow: "Kundehistorier",
+    eyebrow: "Cases",
     title: "Resultater fra gulvet",
     subtitle:
       "Sådan bruger producenter OptiPeople Data Platform til at få OEE op, mindske nedetiden og træffe bedre beslutninger ud fra produktionstallene.",

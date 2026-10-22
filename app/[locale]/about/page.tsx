@@ -34,7 +34,7 @@ const copy: Record<
       description:
         "Meet the team behind OptiPeople and learn how we help manufacturers connect systems, improve shopfloor visibility, and turn operational data into action.",
     },
-    eyebrow: "About",
+    eyebrow: "About us",
     title: "We make industrial operations work",
     intro:
       "OptiPeople is a digital operations company. We build software, connect systems, and help industrial teams turn data into better decisions, from the shopfloor to the boardroom.",

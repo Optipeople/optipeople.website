@@ -19,6 +19,7 @@ import {
   Monitor,
   Network,
   Plug,
+  Recycle,
   RefreshCw,
   Search,
   Shield,
@@ -211,7 +212,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: GitBranch,
             title: "Full Traceability",
             description:
-              "Trace every product back to its machine or workstation, batch, operator, and shift. Build a complete quality genealogy without manual effort.",
+              "Trace every product back to its machine or workstation, batch, operator, and shift, and to the material it was made from. Build a complete quality genealogy without manual effort.",
+          },
+          {
+            icon: Recycle,
+            title: "Managing and Decreasing Material Waste",
+            description:
+              "Measure the actual material and resource waste all the way from purchasing to the finished product. See where material is lost, at which step and on which order, and act where it brings the waste down.",
           },
           {
             icon: AlertCircle,
@@ -292,7 +299,13 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: GitBranch,
             title: "Fuld sporbarhed",
             description:
-              "Følg produktet tilbage til maskine eller arbejdsstation, batch, operatør og skift, uden ekstra arbejde.",
+              "Følg produktet tilbage til maskine eller arbejdsstation, batch, operatør og skift og helt tilbage til det materiale, det blev lavet af, uden ekstra arbejde.",
+          },
+          {
+            icon: Recycle,
+            title: "Mindre spild af materialer og ressourcer",
+            description:
+              "Mål det reelle materialespild hele vejen fra indkøb til færdigt produkt. Se, hvor materialet forsvinder, i hvilket trin og på hvilken ordre, og sæt ind dér, hvor det bringer spildet ned.",
           },
           {
             icon: ShieldCheck,
@@ -497,7 +510,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaTitle: "Energy Module",
         metaDescription:
           "Track kWh usage, monitor telemetry, detect anomalies, and connect energy performance to production output in real time.",
-        eyebrow: "Energy Module",
+        eyebrow: "EMS Module",
         heroTitle: "Cut Waste, Not Corners",
         heroBody:
           "Connect energy consumption directly to production output. Find anomalies and optimization opportunities automatically.",
@@ -578,7 +591,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaTitle: "Energiovervågning i produktionen | OptiPeople",
         metaDescription:
           "Se energiforbruget pr. maskine, pr. ordre og pr. produkt, og hold det op mod det, I producerer. Så kan I se, hvor strømmen går til spilde.",
-        eyebrow: "Energimodul",
+        eyebrow: "EMS-modul",
         heroTitle: "Skær spildet væk, ikke kvaliteten",
         heroBody:
           "Mål energien løbende, og hold forbruget op mod det, I producerer: pr. produkt, pr. maskine og pr. skift.",
@@ -719,7 +732,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Activate",
             description:
-              "With data flowing, activate the other modules against it: Orders, OEE, Planning, Quality, EMS, Maintenance, Documents, and AI Agents.",
+              "With data flowing, activate the other modules against it: Orders, Planning, Quality, OEE, EMS, Maintenance, Documents, and AI Agents.",
           },
         ],
         darkHero: true,
@@ -788,7 +801,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           {
             title: "Brug det",
             description:
-              "Data bliver til dashboards, rapporter, alarmer og automatik i de andre moduler: Ordrer, OEE, Planlægning, Kvalitet, EMS, Vedligehold, Dokumenter og AI-agenter.",
+              "Data bliver til dashboards, rapporter, alarmer og automatik i de andre moduler: Ordrer, Planlægning, Kvalitet, OEE, EMS, Vedligehold, Dokumenter og AI-agenter.",
           },
         ],
       },
@@ -805,7 +818,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Orders Module",
         heroTitle: "The Orders to Run, on the Screen at the Machine or Workstation",
         heroBody:
-          "Operators see what to produce next, start and stop the job, and report quantities and scrap where the work happens. It runs on its own, and it connects to your ERP if you want it to.",
+          "The Orders module is the basis for both planning production and executing the plan. Operators see what to produce next, with the work order instructions and standard operating procedures that belong to it, start and stop the job, and report quantities and scrap where the work happens. It runs on its own, and it connects to your ERP if you want it to.",
         primaryLabel: "Request a Demo",
         introTitle: "A finance ERP is a poor fit for a machine or workstation",
         introBody:
@@ -829,6 +842,18 @@ const modules: LocalizedPage<StandardPage>[] = [
             title: "Report Quantities and Scrap",
             description:
               "Good parts, scrap, and reason codes registered as the job runs, so the completion figure is the one the machine or workstation produced rather than an estimate typed in later.",
+          },
+          {
+            icon: FileText,
+            title: "Work Order Instructions and SOPs",
+            description:
+              "Each order carries its work order instructions and standard operating procedures to the machine or workstation, so the operator executes the plan the same way every time, in the version that applies.",
+          },
+          {
+            icon: GitBranch,
+            title: "Traceability on Every Order",
+            description:
+              "Every order records which machine or workstation ran it, which operator, which shift, and which batch, so you can trace a finished product back through production when a customer or an auditor asks.",
           },
           {
             icon: Cable,
@@ -886,7 +911,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Ordremodul",
         heroTitle: "Ordrerne står på skærmen ved maskinen eller arbejdsstationen",
         heroBody:
-          "Operatøren ser, hvad der skal produceres, starter og stopper jobbet og melder antal og kassation der, hvor arbejdet sker. Det kører alene, og det kan kobles på jeres ERP, hvis I vil.",
+          "Ordremodulet er grundlaget for både at planlægge produktionen og at føre planen ud i livet. Operatøren ser, hvad der skal produceres, sammen med de arbejdsinstruktioner og standardprocedurer, der hører til, starter og stopper jobbet og melder antal og kassation der, hvor arbejdet sker. Det kører alene, og det kan kobles på jeres ERP, hvis I vil.",
         primaryLabel: "Book en demo",
         introTitle: "Et økonomi-ERP hører ikke hjemme ude ved maskinen eller arbejdsstationen",
         introBody:
@@ -910,6 +935,18 @@ const modules: LocalizedPage<StandardPage>[] = [
             title: "Meld antal og kassation",
             description:
               "Gode emner, kassation og årsag bliver registreret, mens jobbet kører, så færdigmeldingen er det, maskinen eller arbejdsstationen lavede.",
+          },
+          {
+            icon: FileText,
+            title: "Arbejdsinstruktioner og standardprocedurer",
+            description:
+              "Hver ordre har sine arbejdsinstruktioner og standardprocedurer med ud til maskinen eller arbejdsstationen. Så bliver planen udført på samme måde hver gang og efter den version, der gælder.",
+          },
+          {
+            icon: GitBranch,
+            title: "Sporbarhed på hver ordre",
+            description:
+              "Hver ordre gemmer, hvilken maskine eller arbejdsstation der kørte den, hvilken operatør, hvilket skift og hvilken batch. Så kan I spore et færdigt produkt tilbage gennem produktionen, når kunden eller auditoren spørger.",
           },
           {
             icon: Cable,
@@ -969,15 +1006,15 @@ const modules: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Modular MES",
         metaDescription:
-          "A modular MES made of nine modules, Orders, OEE, Planning, Quality, IoT, EMS, Maintenance, Documents, and AI Agents, switched on one module at a time.",
+          "A modular MES made of nine modules, Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents, switched on one module at a time.",
         eyebrow: "Modular MES",
         heroTitle: "Your Modular MES Platform",
         heroBody:
-          "Manufacturing execution you switch on one module at a time. Orders, OEE, Planning, Quality, IoT, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
+          "Manufacturing execution you switch on one module at a time. Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
         primaryLabel: "Request a Demo",
         introTitle: "Nobody needs a whole MES on day one",
         introBody:
-          "The classic MES is an all-or-nothing project: eighteen months, every process at once, and a scope nobody on the floor recognises by the end of it. A modular MES is the opposite. Start with the module that answers the question you have this quarter, whether that is orders, OEE, the plan, or machine data, and add the next one when the next question turns up. Every module you add reads the data the earlier ones already collect.",
+          "The classic MES is an all-or-nothing project: eighteen months, every process at once, and a scope nobody on the floor recognises by the end of it. A modular MES is the opposite. Start with the module that answers the question you have this quarter, whether that is orders, the plan, machine and workstation data, or OEE, and add the next one when the next question turns up. Every module you add reads the data the earlier ones already collect.",
         capabilitiesTitle: "The modules a modular MES is made of",
         features: [
           {
@@ -985,12 +1022,6 @@ const modules: LocalizedPage<StandardPage>[] = [
             title: "Orders",
             description:
               "The orders to run, on the panel at the machine or workstation. Start, stop, and report quantities and scrap where the work happens, with or without an ERP behind it.",
-          },
-          {
-            icon: Gauge,
-            title: "OEE",
-            description:
-              "Track availability, performance, and quality across every machine or workstation, line, and shift. Understand exactly where production time is gained and lost.",
           },
           {
             icon: Calendar,
@@ -1009,6 +1040,12 @@ const modules: LocalizedPage<StandardPage>[] = [
             title: "IoT",
             description:
               "Connect new controls, retrofitted sensors, and the systems you already run. Read machine state, and control start, stop, and setup from the panel.",
+          },
+          {
+            icon: Gauge,
+            title: "OEE",
+            description:
+              "Track availability, performance, and quality across every machine or workstation, line, and shift. Understand exactly where production time is gained and lost.",
           },
           {
             icon: Zap,
@@ -1067,11 +1104,11 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Modulært MES-system til produktionen | OptiPeople",
         metaDescription:
-          "Et MES, I tager i brug ét modul ad gangen: Ordrer, OEE, Planlægning, Kvalitet, IoT, EMS, Vedligehold, Dokumenter og AI-agenter. Start dér, hvor det gør ondt.",
+          "Et MES, I tager i brug ét modul ad gangen: Ordrer, Planlægning, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Start dér, hvor det gør ondt.",
         eyebrow: "Modulært MES",
         heroTitle: "Jeres modulære MES",
         heroBody:
-          "Et MES, I slår til ét modul ad gangen. Ordrer, OEE, Planlægning, Kvalitet, IoT, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
+          "Et MES, I slår til ét modul ad gangen. Ordrer, Planlægning, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
         primaryLabel: "Book en demo",
         introTitle: "Ingen har brug for et helt MES fra dag ét",
         introBody:
@@ -1083,12 +1120,6 @@ const modules: LocalizedPage<StandardPage>[] = [
             title: "Ordrer",
             description:
               "Ordrerne står på panelet ved maskinen eller arbejdsstationen. Start, stop, meld antal og kassation, med eller uden ERP bagved.",
-          },
-          {
-            icon: Gauge,
-            title: "OEE",
-            description:
-              "Se tilgængelighed, ydelse og kvalitet for hver maskine eller arbejdsstation, hver linje og hvert skift, og se præcis, hvor tiden bliver vundet og tabt.",
           },
           {
             icon: Calendar,
@@ -1107,6 +1138,12 @@ const modules: LocalizedPage<StandardPage>[] = [
             title: "IoT",
             description:
               "Kobl nye styringer, eftermonterede sensorer og jeres eksisterende systemer på. Læs maskinens tilstand, og styr start, stop og omstilling fra panelet.",
+          },
+          {
+            icon: Gauge,
+            title: "OEE",
+            description:
+              "Se tilgængelighed, ydelse og kvalitet for hver maskine eller arbejdsstation, hver linje og hvert skift, og se præcis, hvor tiden bliver vundet og tabt.",
           },
           {
             icon: Zap,

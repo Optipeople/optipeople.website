@@ -48,9 +48,9 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
   en: [
     {
       id: "ai",
-      title: "AI",
+      title: "AI and QR codes",
       items: [
-        { title: "Opti Assist Chat", href: "/ai/chat" },
+        { title: "Opti Assist – Chat and QR codes", href: "/ai/chat" },
         { title: "Workflows", href: "/ai/workflows" },
         { title: "Agents", href: "/ai/agents" },
         { title: "Integrations", href: "/ai/integrations" },
@@ -115,23 +115,22 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
     },
     {
       id: "resources",
-      title: "Resources",
+      title: "About",
       items: [
         { title: "Insights", href: "/insights" },
-        { title: "Newsletter", href: "/newsletter" },
         { title: "People", href: "/resources/people" },
         { title: "Get Help", href: "/get-help" },
         { title: "Contact", href: "/contact" },
-        { title: "About", href: "/about" },
+        { title: "About us", href: "/about" },
       ],
     },
   ],
   da: [
     {
       id: "ai",
-      title: "AI",
+      title: "AI og QR-koder",
       items: [
-        { title: "Opti Assist Chat", href: "/ai/chat" },
+        { title: "Opti Assist – Chat og QR-koder", href: "/ai/chat" },
         { title: "Workflows", href: "/ai/workflows" },
         { title: "Agenter", href: "/ai/agents" },
         { title: "Integrationer", href: "/ai/integrations" },
@@ -193,10 +192,9 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
     },
     {
       id: "resources",
-      title: "Ressourcer",
+      title: "Om",
       items: [
         { title: "Viden", href: "/insights" },
-        { title: "Nyhedsbrev", href: "/newsletter" },
         { title: "Holdet", href: "/resources/people" },
         { title: "Få hjælp", href: "/get-help" },
         { title: "Kontakt", href: "/contact" },
@@ -210,6 +208,13 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
 export const navigationLinks: Record<Locale, NavItem[]> = {
   en: [{ title: "Videos", href: "/videos" }],
   da: [{ title: "Videoer", href: "/videos" }],
+}
+
+// The newsletter sits in the header's top-right corner, beside "Talk to us",
+// rather than in a dropdown. The footer lists it under the About column.
+export const newsletterLink: Record<Locale, NavItem> = {
+  en: { title: "Newsletter", href: "/newsletter" },
+  da: { title: "Nyhedsbrev", href: "/newsletter" },
 }
 
 // Portal targets shown under "Log in" in the header (labelled by the
@@ -339,6 +344,7 @@ function buildFooterColumns(locale: Locale): FooterColumn[] {
         { title: copy.cases, href: "/cases" },
         { title: copy.blog, href: "/blog" },
         ...navigationLinks[locale],
+        newsletterLink[locale],
         ...otherResources,
       ],
     },

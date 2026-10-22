@@ -3,6 +3,580 @@ import type { Locale } from "@/i18n/routing"
 
 const features: LocalizedPage<FeaturePage>[] = [
   {
+    slug: "order-management",
+    href: "/features/order-management",
+    content: {
+      en: {
+        metaTitle: "Order Management | OptiPeople",
+        metaDescription:
+          "Run production orders at the machine or workstation, with work order instructions, standard operating procedures and traceability on every order. ERP optional.",
+        parentLabel: "Orders",
+        parentHref: "/modules/erp-shopfloor",
+        eyebrow: "Order Management",
+        heroTitle: "Every Order, From Plan to Finished Product",
+        heroBody:
+          "Orders are the basis for both planning production and executing the plan. Operators see what to run next, with the work order instructions and standard operating procedures that belong to it, and report quantities and scrap where the work happens.",
+        heroImage: "/images/Mockups/Work-Order-Management-Orders.webp",
+        heroImageAlt: "The work order list on the panel at the machine or workstation",
+        valueTitle: "The order is where planning and the floor meet",
+        valueBody:
+          "In many factories the order lives in three places: the ERP, the planner's spreadsheet and a printout at the machine. None of them agree by the afternoon. When the order itself carries the plan, the instructions and the registrations from the floor, everyone works from the same order, and every finished job leaves real run times, real output and full traceability behind.",
+        capabilitiesTitle: "From order list to finished job",
+        capabilitiesBody:
+          "One screen at the machine or workstation for everything the operator needs to run the order, and one record behind it that planning, quality and management read from.",
+        capabilities: [
+          {
+            title: "The Order List for This Station",
+            description:
+              "Filtered to the machine or workstation in front of you, in priority order, with quantity, product and due date. Start the job, stop it and register why it stopped, without anything to learn beyond the buttons an operator needs.",
+            image: "/images/Mockups/Work-Order-Management-Orders.webp",
+            imageAlt: "Work order list with priority, product, quantity and due date",
+          },
+          {
+            title: "Work Order Instructions and SOPs",
+            description:
+              "Each order brings its work order instructions and standard operating procedures to the machine or workstation, in the version that applies. The plan is executed the same way every time, whoever is on shift.",
+            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
+            imageAlt: "Operator panel at the machine or workstation",
+          },
+          {
+            title: "Quantities, Scrap and Traceability",
+            description:
+              "Good parts, scrap and reason codes are registered as the job runs. Every order records which machine or workstation ran it, which operator, which shift and which batch, so a finished product can be traced back through production.",
+            image: "/images/Mockups/Report-Production-Counters-Desktop.webp",
+            imageAlt: "Produced and rejected totals per order with an hourly output trend",
+          },
+        ],
+        showcaseTitle: "With or without an ERP",
+        showcaseBody:
+          "Create and manage orders in the platform itself, or sync them two ways with your ERP so orders flow down and actual quantities, scrap and times flow back.",
+        showcaseImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+        showcaseAlt: "Work orders in OptiPeople Data Platform",
+        metrics: [
+          { metric: "0", label: "ERP integrations required to start" },
+          { metric: "1 screen", label: "For the operator: what to run, how, and what was made" },
+          { metric: "Every order", label: "Traceable to machine or workstation, operator, shift and batch" },
+        ],
+        related: [
+          {
+            title: "Production Planning",
+            description: "Sequence orders across each production route, against the capacity you actually have.",
+            href: "/features/production-planning",
+          },
+          {
+            title: "Quality Management",
+            description:
+              "Register quality data where it happens. Trace deviations back to machines or workstations, batches, and shifts.",
+            href: "/features/quality-management",
+          },
+          {
+            title: "Stop Cause Registration",
+            description: "Capture downtime reasons at the source. Clean data you can actually act on.",
+            href: "/features/stop-cause-registration",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Ordrestyring | OptiPeople",
+        metaDescription:
+          "Kør produktionsordrerne ved maskinen eller arbejdsstationen, med arbejdsinstruktioner, standardprocedurer og sporbarhed på hver ordre. Med eller uden ERP.",
+        parentLabel: "Ordrer",
+        parentHref: "/modules/erp-shopfloor",
+        eyebrow: "Ordrestyring",
+        heroTitle: "Hver ordre, fra plan til færdigt produkt",
+        heroBody:
+          "Ordrerne er grundlaget for både at planlægge produktionen og at føre planen ud i livet. Operatøren ser, hvad der skal køres, sammen med de arbejdsinstruktioner og standardprocedurer, der hører til, og melder antal og kassation dér, hvor arbejdet sker.",
+        heroImage: "/images/Mockups/Work-Order-Management-Orders.webp",
+        heroImageAlt: "Ordrelisten på skærmen ved maskinen eller arbejdsstationen",
+        valueTitle: "Det er i ordren, planen og gulvet mødes",
+        valueBody:
+          "På mange fabrikker ligger ordren tre steder: i ERP'et, i planlæggerens regneark og på et print ved maskinen. Ved frokosttid passer de ikke længere sammen. Når selve ordren har planen, instruktionerne og registreringerne fra gulvet med sig, arbejder alle ud fra den samme ordre. Og hvert færdigt job efterlader reelle tider, reelle antal og fuld sporbarhed.",
+        capabilitiesTitle: "Fra ordreliste til færdigt job",
+        capabilitiesBody:
+          "Én skærm ved maskinen eller arbejdsstationen med det, operatøren skal bruge for at køre ordren. Bagved ligger én registrering, som planlægning, kvalitet og ledelse læser fra.",
+        capabilities: [
+          {
+            title: "Ordrelisten for netop den station",
+            description:
+              "Sorteret efter, hvad der er vigtigst, med antal, vare og leveringsdato. Start jobbet, stop det, og meld, hvorfor det stoppede. Ikke flere knapper, end en operatør har brug for.",
+            image: "/images/Mockups/Work-Order-Management-Orders.webp",
+            imageAlt: "Ordreliste med prioritet, vare, antal og leveringsdato",
+          },
+          {
+            title: "Arbejdsinstruktioner og standardprocedurer",
+            description:
+              "Hver ordre har sine arbejdsinstruktioner og standardprocedurer med ud til maskinen eller arbejdsstationen, i den version, der gælder. Så bliver planen udført på samme måde hver gang, uanset hvem der har skiftet.",
+            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
+            imageAlt: "Operatørpanelet ved maskinen eller arbejdsstationen",
+          },
+          {
+            title: "Antal, kassation og sporbarhed",
+            description:
+              "Gode emner, kassation og årsag bliver registreret, mens jobbet kører. Hver ordre gemmer, hvilken maskine eller arbejdsstation der kørte den, hvilken operatør, hvilket skift og hvilken batch. Så kan et færdigt produkt spores tilbage gennem produktionen.",
+            image: "/images/Mockups/Report-Production-Counters-Desktop.webp",
+            imageAlt: "Producerede og kasserede emner pr. ordre og output pr. time",
+          },
+        ],
+        showcaseTitle: "Med eller uden ERP",
+        showcaseBody:
+          "Opret og styr ordrerne i platformen, eller kobl jeres ERP på begge veje, så ordrerne kommer ned på gulvet, og antal, kassation og tider går tilbage.",
+        showcaseImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+        showcaseAlt: "Arbejdsordrer i OptiPeople Data Platform",
+        metrics: [
+          { metric: "0", label: "ERP-koblinger, før I kan komme i gang" },
+          { metric: "1 skærm", label: "Til operatøren: hvad skal køre, hvordan, og hvad blev lavet" },
+          { metric: "Hver ordre", label: "Kan spores til maskine eller arbejdsstation, operatør, skift og batch" },
+        ],
+        related: [
+          {
+            title: "Produktionsplanlægning",
+            description: "Læg ordrerne gennem hele ruten efter den kapacitet, I faktisk har.",
+            href: "/features/production-planning",
+          },
+          {
+            title: "Kvalitetsstyring",
+            description: "Registrer kvalitetsdata dér, hvor arbejdet sker.",
+            href: "/features/quality-management",
+          },
+          {
+            title: "Stopårsager",
+            description: "Registrer årsagen til stoppet ude ved maskinen eller arbejdsstationen.",
+            href: "/features/stop-cause-registration",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "production-planning",
+    href: "/features/production-planning",
+    content: {
+      en: {
+        metaTitle: "Production Planning | OptiPeople",
+        metaDescription:
+          "Sequence work orders across every entity of each production route, against measured run rates and real availability, and share one plan with the floor.",
+        parentLabel: "Planning",
+        parentHref: "/modules/planning",
+        eyebrow: "Production Planning",
+        heroTitle: "Plan on the Capacity You Actually Have",
+        heroBody:
+          "Sequence orders across every entity on each production route, built on measured run rates and real availability of machines and workstations, and share the same plan with everyone who has to deliver it.",
+        heroImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+        heroImageAlt: "Production planning board in OptiPeople Data Platform",
+        valueTitle: "A plan is only as good as the numbers under it",
+        valueBody:
+          "Most plans are built from standard times set years ago and a capacity figure nobody has re-measured. The plan looks fine on Monday and has drifted by Wednesday. When planning reads from the same data as the floor, the run rates and the available hours are the ones the machines and workstations actually delivered, so the plan starts realistic and stays that way.",
+        capabilitiesTitle: "Planning that stays connected to the floor",
+        capabilitiesBody:
+          "The plan, the orders and the registrations from the floor share one data foundation, so a change in one shows up in the others.",
+        capabilities: [
+          {
+            title: "Routes, Not One Flat Timeline",
+            description:
+              "Each product has a route: cut, mill, glue, assemble, pack. Orders are sequenced across every entity on that route, so a slip at station two is visibly a problem at station five.",
+            image: "/images/Mockups/Planning-Timeline-Close.png",
+            imageAlt: "Planning timeline grouped by production route",
+          },
+          {
+            title: "Capacity and Run Rates From Real Data",
+            description:
+              "Schedule against real available hours per machine or workstation, with shift patterns and planned maintenance accounted for. Standard times come from what was actually produced, per item and per setup.",
+            image: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+            imageAlt: "Work orders scheduled against available capacity",
+          },
+          {
+            title: "One Plan, Visible on the Floor",
+            description:
+              "Operators see the same sequence the planner sees, on the panel at the machine or workstation. When a breakdown or a rush order hits, replan the affected window and see the knock-on effects right away.",
+            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
+            imageAlt: "Operator panel showing the planned sequence",
+          },
+        ],
+        showcaseTitle: "One row per entity, grouped by route",
+        showcaseBody:
+          "Progress reports itself from the floor as the order moves along the route, so the plan always shows where each order actually is.",
+        showcaseDrawn: "routes",
+        metrics: [
+          { metric: "Per route", label: "Sequenced across every entity, not one flat line" },
+          { metric: "Measured", label: "Capacity from real output, not estimates" },
+          { metric: "One plan", label: "Shared by planning and the shopfloor" },
+        ],
+        related: [
+          {
+            title: "Order Management",
+            description: "Run orders at the machine or workstation with instructions, SOPs and traceability.",
+            href: "/features/order-management",
+          },
+          {
+            title: "Production Efficiency",
+            description: "Track OEE in real time and see where production time is lost.",
+            href: "/features/production-efficiency",
+          },
+          {
+            title: "Maintenance and Tasks",
+            description: "Plan preventive maintenance by usage and condition.",
+            href: "/features/maintenance-and-tasks",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Produktionsplanlægning | OptiPeople",
+        metaDescription:
+          "Læg ordrerne gennem hele produktionsruten efter målte kørehastigheder og den kapacitet, I faktisk har, og del den samme plan med gulvet.",
+        parentLabel: "Planlægning",
+        parentHref: "/modules/planning",
+        eyebrow: "Produktionsplanlægning",
+        heroTitle: "Planlæg efter den kapacitet, I faktisk har",
+        heroBody:
+          "Læg ordrerne gennem hver station på produktionsruten, ud fra de kørehastigheder og den tid, maskiner og arbejdsstationer reelt har. Alle, der skal levere planen, ser den samme.",
+        heroImage: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+        heroImageAlt: "Planlægningstavlen i OptiPeople Data Platform",
+        valueTitle: "Planen er ikke bedre end tallene under den",
+        valueBody:
+          "De fleste planer bygger på standardtider, der blev sat for mange år siden, og en kapacitet, ingen har målt siden. Planen ser fin ud mandag og er skredet onsdag. Når planlægningen læser de samme data som gulvet, er kørehastigheder og ledige timer dem, maskinerne og arbejdsstationerne faktisk leverede. Så starter planen realistisk og bliver ved med at være det.",
+        capabilitiesTitle: "Planlægning, der hænger sammen med gulvet",
+        capabilitiesBody:
+          "Planen, ordrerne og det, der bliver registreret på gulvet, ligger på de samme data. Ændrer det ene sig, kan I se det i det andet.",
+        capabilities: [
+          {
+            title: "Ruter, ikke én flad tidslinje",
+            description:
+              "Hvert produkt har sin rute: skære, fræse, lime, samle, pakke. Ordrerne bliver lagt gennem hver station på ruten, så en forsinkelse på station to tydeligt er et problem på station fem.",
+            image: "/images/Mockups/Planning-Timeline-Close.png",
+            imageAlt: "Tidslinje grupperet efter produktionsrute",
+          },
+          {
+            title: "Kapacitet og kørehastigheder fra rigtige data",
+            description:
+              "Planlæg efter de timer, hver maskine eller arbejdsstation reelt har, med skiftmønstre og planlagt vedligehold regnet med. Standardtiderne kommer fra det, der faktisk blev produceret, pr. vare og pr. omstilling.",
+            image: "/images/Mockups/Work-Order-Management-Planning-Desktop.webp",
+            imageAlt: "Ordrer lagt ind efter ledig kapacitet",
+          },
+          {
+            title: "Én plan, som gulvet også ser",
+            description:
+              "Operatøren ser den samme rækkefølge som planlæggeren, på skærmen ved maskinen eller arbejdsstationen. Kommer der et nedbrud eller en hasteordre, lægger I det berørte stykke om og ser med det samme, hvad det betyder for resten.",
+            image: "/images/Mockups/Dashboard-Operator-Panel-Desktop.webp",
+            imageAlt: "Operatørpanel med den planlagte rækkefølge",
+          },
+        ],
+        showcaseTitle: "Én række pr. station, grupperet efter rute",
+        showcaseBody:
+          "Fremdriften melder sig selv fra gulvet, mens ordren bevæger sig gennem ruten. Så viser planen altid, hvor hver ordre faktisk er.",
+        showcaseDrawn: "routes",
+        metrics: [
+          { metric: "Pr. rute", label: "Lagt gennem hver station, ikke én flad linje" },
+          { metric: "Målt", label: "Kapacitet ud fra det, der reelt blev lavet" },
+          { metric: "Én plan", label: "Fælles for planlægning og gulvet" },
+        ],
+        related: [
+          {
+            title: "Ordrestyring",
+            description: "Kør ordrerne ved maskinen eller arbejdsstationen med instruktioner og sporbarhed.",
+            href: "/features/order-management",
+          },
+          {
+            title: "Produktionseffektivitet",
+            description: "Følg OEE live, og se, hvor tiden går tabt.",
+            href: "/features/production-efficiency",
+          },
+          {
+            title: "Vedligehold og opgaver",
+            description: "Planlæg vedligeholdet efter brug og tilstand.",
+            href: "/features/maintenance-and-tasks",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "quality-management",
+    href: "/features/quality-management",
+    content: {
+      en: {
+        metaTitle: "Quality Management | OptiPeople",
+        metaDescription:
+          "Register quality data where it happens. Trace deviations back to machines or workstations, batches, and shifts, and build accountability into production.",
+        parentLabel: "Quality",
+        parentHref: "/modules/quality",
+        eyebrow: "Quality Management",
+        heroTitle: "Catch Quality Issues Where They Start",
+        heroBody:
+          "Register quality data at the machine or workstation, trace deviations back to their source, and build accountability into every shift.",
+        heroImage: "/images/backoffice1.webp",
+        heroImageAlt:
+          "OptiPeople quality tracking interface showing audit trail and device management",
+        valueTitle: "Quality problems found late cost ten times more",
+        valueBody:
+          "When quality data lives in paper forms and disconnected systems, deviations surface too late to prevent waste. By the time the report reaches quality management, the batch is finished and the damage is done. OptiPeople captures quality events in real time, linked to the machine or workstation, the shift, and the conditions that caused them.",
+        capabilitiesTitle: "From floor event to traceable record",
+        capabilitiesBody:
+          "Quality data captured at the source, structured for analysis, and always audit-ready.",
+        capabilities: [
+          {
+            title: "Register Quality Events at the Machine or Workstation",
+            description:
+              "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine or workstation, order, and shift, so nothing gets lost between the floor and the office.",
+            image: "/images/operatorpanel2.webp",
+            imageAlt:
+              "Operator panel showing detailed event log with quality notes, telemetry data, and shift information",
+          },
+          {
+            title: "Trace Every Deviation to Its Source",
+            description:
+              "When quality drops, you need to know why, fast. Filter by machine or workstation, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
+            image: "/images/report1.webp",
+            imageAlt:
+              "OptiPeople report showing OEE breakdown with availability, performance, and quality metrics alongside a timeline chart",
+          },
+          {
+            title: "Full Audit Trail, Always Available",
+            description:
+              "Every quality event, every change, every action is logged with who did what and when. Search and filter the complete activity history across machines and sites. Ready for audits, ready for continuous improvement.",
+            image: "/images/backoffice1.webp",
+            imageAlt:
+              "Admin panel showing activity log with date range filters and a device list with machine IDs and locations",
+          },
+        ],
+        metrics: [
+          { metric: "30%", label: "Reduction in quality-related scrap" },
+          { metric: "100%", label: "Traceability across machines, workstations, and shifts" },
+          { metric: "< 5 min", label: "From deviation to documented root cause" },
+        ],
+        related: [
+          {
+            title: "Production Efficiency",
+            description:
+              "Track OEE live. Quality is one of the three pillars of overall equipment effectiveness.",
+            href: "/features/production-efficiency",
+          },
+          {
+            title: "Stop Cause Registration",
+            description:
+              "Capture downtime reasons alongside quality events for a complete production picture.",
+            href: "/features/stop-cause-registration",
+          },
+          {
+            title: "Analysis and Reporting",
+            description:
+              "Turn quality data into trend reports that drive continuous improvement.",
+            href: "/features/analysis-and-reporting",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Kvalitetsstyring | OptiPeople",
+        metaDescription:
+          "Registrer kvalitetsdata dér, hvor arbejdet sker, og følg en afvigelse tilbage til maskine eller arbejdsstation, batch og skift.",
+        parentLabel: "Kvalitet",
+        parentHref: "/modules/quality",
+        eyebrow: "Kvalitetsstyring",
+        heroTitle: "Fang fejlen, hvor den opstår",
+        heroBody:
+          "Registrer kvaliteten ude ved maskinen eller arbejdsstationen, og følg hver afvigelse tilbage til det skift, den batch og den maskine, den kom fra.",
+        heroImage: "/images/backoffice1.webp",
+        heroImageAlt: "Kvalitetsstyring",
+        valueTitle: "Jo senere I opdager fejlen, jo dyrere bliver den",
+        valueBody:
+          "Ligger kvalitetsdata i papirskemaer og spredte systemer, opdager I afvigelsen for sent: batchen er kørt, og skaden er sket. Her bliver hver afvigelse registreret med det samme og koblet til maskinen eller arbejdsstationen, skiftet og det, der gik forud.",
+        capabilitiesTitle: "Fra hændelse på gulvet til et spor, I kan følge",
+        capabilitiesBody:
+          "Hver registrering hænger sammen med maskine eller arbejdsstation, produkt, operatør og skift.",
+        capabilities: [
+          {
+            title: "Digitale skemaer",
+            description: "Guidede kontroller sikrer, at det bliver registreret ens hver gang.",
+            image: "/images/backoffice1.webp",
+            imageAlt: "Digital formular",
+          },
+          {
+            title: "Afvigelser og handlinger",
+            description: "Skriv afvigelsen ned, og følg handlingen hele vejen, til den er lukket.",
+            image: "/images/report-mockup2.webp",
+            imageAlt: "Afvigelsesrapport",
+          },
+          {
+            title: "Sporbarhed",
+            description: "Knyt kvalitetstjek og afvigelser til batch, maskine eller arbejdsstation og skift.",
+            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
+            imageAlt: "Sporbarhedsrapport med de enkelte registreringer pr. ordre og skift",
+          },
+        ],
+        metrics: [
+          { metric: "60%", label: "Mindre omarbejde" },
+          { metric: "90%", label: "Hurtigere svar på afvigelser" },
+          { metric: "100%", label: "Digital sporbarhed" },
+        ],
+        related: [
+          {
+            title: "Produktionseffektivitet",
+            description: "Se kvaliteten i sammenhæng med OEE.",
+            href: "/features/production-efficiency",
+          },
+          {
+            title: "Analyse og rapportering",
+            description: "Følg kvaliteten og afvigelserne over tid.",
+            href: "/features/analysis-and-reporting",
+          },
+          {
+            title: "Maskinstyring",
+            description: "Giv operatøren besked ude ved maskinen.",
+            href: "/features/machine-control",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "machine-control",
+    href: "/features/machine-control",
+    content: {
+      en: {
+        metaTitle: "Machine Control | OptiPeople",
+        metaDescription:
+          "Integrate with machine control systems to enable feedback, automation, and tighter production loops across the factory.",
+        parentLabel: "IoT",
+        parentHref: "/modules/iot",
+        eyebrow: "Machine Control",
+        heroTitle: "Close the Loop Between System and Floor",
+        heroBody:
+          "Integrate with machine control systems to enable operator authentication, real-time feedback, and tighter production loops across the factory.",
+        heroImage: "/images/Start-Machine.png",
+        heroImageAlt:
+          "OptiPeople machine control panel showing the start machine interface for a Homag machine",
+        valueTitle: "Data collection starts at the machine. Control should too",
+        valueBody:
+          "When your production system and your machine control live in separate worlds, gaps appear. Operators work without feedback. Events go unrecorded. Start and stop times drift from reality. OptiPeople connects directly to the machine control layer, so the digital system and the physical factory move together.",
+        capabilitiesTitle: "From machine and workstation data to operator action and back",
+        capabilitiesBody:
+          "A two-way connection between your production system and every machine on the floor.",
+        capabilities: [
+          {
+            title: "Secure Machine Authentication",
+            description:
+              "Every operator authenticates at the machine with a unique key before starting production. You know who is running what, when, and on which machine, creating accountability and traceability from the first moment of a shift.",
+            image: "/images/Login-Machine-Key.png",
+            imageAlt:
+              "Machine key authentication screen where operators enter their unique key to access the machine",
+          },
+          {
+            title: "Start, Stop, and Status in One Place",
+            description:
+              "Operators control machine start and stop directly from the panel. The system confirms the machine is ready, the operator is authenticated, and all prerequisites are met. One tap to start production, with a full digital trail.",
+            image: "/images/Start-Machine.png",
+            imageAlt:
+              "Operator panel showing the start machine button with green indicator for a Homag machine",
+          },
+          {
+            title: "Real-Time Feedback to the Floor",
+            description:
+              "Machine status flows back to the operator in real time. Green means everything checks out. When conditions change, a sensor threshold, a quality alert or a maintenance trigger, the operator sees it immediately. No surprises, no lag between event and awareness.",
+            image: "/images/Everything-is-okay.png",
+            imageAlt:
+              "Operator panel showing green checkmark with everything is okay confirmation for a Homag machine",
+          },
+        ],
+        showcaseTitle: "The route step being run, and the files that go with it",
+        showcaseBody:
+          "An order does not arrive at a machine on its own. It arrives as one step on a production route, with the NC program, the setup sheet, and the drawing revision that belong to that step, on the machine the operator is authenticated at.",
+        showcaseDrawn: "routes",
+        metrics: [
+          { metric: "100%", label: "Digital traceability of operator-machine sessions" },
+          { metric: "< 1s", label: "Machine event to operator notification" },
+          { metric: "0", label: "Paper-based machine logs needed" },
+        ],
+        related: [
+          {
+            title: "Stop Cause Registration",
+            description:
+              "When a machine stops, the control integration triggers stop registration automatically.",
+            href: "/features/stop-cause-registration",
+          },
+          {
+            title: "Maintenance and Tasks",
+            description:
+              "Machine signals trigger maintenance tasks when thresholds are reached.",
+            href: "/features/maintenance-and-tasks",
+          },
+          {
+            title: "Energy and Telemetry",
+            description:
+              "Sensor data from the machine control layer feeds directly into telemetry dashboards.",
+            href: "/features/energy-and-telemetry",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Maskinstyring | OptiPeople",
+        metaDescription:
+          "Kobl OptiPeople på maskinstyringen. Operatøren logger ind ved maskinen, får besked med det samme, og systemet passer med det, der sker på gulvet.",
+        parentLabel: "IoT",
+        parentHref: "/modules/iot",
+        eyebrow: "Maskinstyring",
+        heroTitle: "Få system og gulv til at følges ad",
+        heroBody:
+          "Kobl OptiPeople på maskinstyringen. Så logger operatøren ind ved maskinen, får besked med det samme, og det, der står i systemet, passer med det, der sker på gulvet.",
+        heroImage: "/images/Start-Machine.png",
+        heroImageAlt: "Maskinstyringspanel",
+        valueTitle: "Når data kommer fra maskinen, skal styringen også sidde der",
+        valueBody:
+          "Når systemet og maskinstyringen lever hver for sig, opstår der huller. Operatøren får ingen besked, hændelser bliver ikke registreret, og start- og stoptider passer ikke med virkeligheden. OptiPeople kobler sig direkte på maskinstyringen, så systemet og fabrikken følges ad.",
+        capabilitiesTitle: "Fra maskiner og arbejdsstationer til operatør og tilbage igen",
+        capabilitiesBody:
+          "En forbindelse, der går begge veje, mellem produktionssystemet og maskinerne på gulvet.",
+        capabilities: [
+          {
+            title: "Sikkert login ved maskinen",
+            description:
+              "Operatøren logger ind ved maskinen med sin egen nøgle, før produktionen starter. Så ved I fra skiftets første minut, hvem der kører hvad, hvornår og på hvilken maskine.",
+            image: "/images/Login-Machine-Key.png",
+            imageAlt: "Maskinlogin",
+          },
+          {
+            title: "Start, stop og status",
+            description:
+              "Operatøren starter og stopper maskinen direkte fra panelet. Systemet tjekker først, at maskinen er klar, og at operatøren er logget ind. Ét tryk, og det hele bliver registreret.",
+            image: "/images/Start-Machine.png",
+            imageAlt: "Start maskine",
+          },
+          {
+            title: "Besked med det samme",
+            description:
+              "Grønt betyder, at alt er i orden. Når noget ændrer sig, f.eks. en sensor over grænsen, en kvalitetsalarm eller et serviceinterval, der er nået, ser operatøren det med det samme.",
+            image: "/images/Everything-is-okay.png",
+            imageAlt: "Operatørpanel, der viser, at alt er i orden",
+          },
+        ],
+        showcaseTitle: "Det rutetrin, der kører, og filerne, der hører til",
+        showcaseBody:
+          "En ordre lander ikke ved maskinen af sig selv. Den lander som ét trin på en produktionsrute, med det NC-program, det opstillingsark og den tegningsversion, der hører til netop det trin, på den maskine, operatøren er logget ind ved.",
+        showcaseDrawn: "routes",
+        metrics: [
+          { metric: "100%", label: "Digital sporbarhed på hver session" },
+          { metric: "< 1s", label: "Fra det sker på maskinen, til beskeden er ude" },
+          { metric: "0", label: "Papirlister ved maskinen" },
+        ],
+        related: [
+          {
+            title: "Stopårsager",
+            description: "Et maskinstop kan sætte registreringen i gang af sig selv.",
+            href: "/features/stop-cause-registration",
+          },
+          {
+            title: "Vedligehold og opgaver",
+            description: "Maskinens signaler kan oprette vedligeholdsopgaven.",
+            href: "/features/maintenance-and-tasks",
+          },
+          {
+            title: "Energi og målinger",
+            description: "Sensordata går direkte ind i jeres dashboards.",
+            href: "/features/energy-and-telemetry",
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "production-efficiency",
     href: "/features/production-efficiency",
     content: {
@@ -29,7 +603,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Live OEE in One View",
             description:
-              "Availability, performance, and quality calculated automatically from machine signals. Your OEE score updates as production runs, with drill-down by machine or workstation, line, or area. No spreadsheets. No waiting for the shift report.",
+              "Availability, performance, and quality calculated automatically from machine and workstation data. Your OEE score updates as production runs, with drill-down by machine or workstation, line, or area. No spreadsheets. No waiting for the shift report.",
             image: "/images/report-mockup1.png",
             imageAlt:
               "OptiPeople OEE dashboard showing availability gauge, unit counter, and parts per hour chart",
@@ -98,14 +672,14 @@ const features: LocalizedPage<FeaturePage>[] = [
         valueTitle: "Tallene nytter mest, mens skiftet stadig kører",
         valueBody:
           "De fleste fabrikker stykker stadig tallene sammen fra overleveringssedler, regneark og dagsrapporter. Når nogen endelig ser dem, er det for sent at gøre noget. Her ser I, hvordan det går lige nu, mens I stadig kan nå at rette op.",
-        capabilitiesTitle: "Fra maskinsignal til noget, I kan bruge",
+        capabilitiesTitle: "Fra data fra maskiner og arbejdsstationer til noget, I kan bruge",
         capabilitiesBody:
           "Hver maskine har noget at fortælle. Vi laver det om til tal, tidslinjer og sammenligninger, I kan bruge til noget.",
         capabilities: [
           {
             title: "OEE live på én skærm",
             description:
-              "Tilgængelighed, ydelse og kvalitet bliver regnet ud fra maskinernes egne signaler og opdateret, mens produktionen kører. Ingen regneark, og ingen venten på skiftrapporten.",
+              "Tilgængelighed, ydelse og kvalitet bliver regnet ud fra data fra maskiner og arbejdsstationer og opdateret, mens produktionen kører. Ingen regneark, og ingen venten på skiftrapporten.",
             image: "/images/report-mockup1.png",
             imageAlt: "OEE-dashboard",
           },
@@ -307,287 +881,6 @@ const features: LocalizedPage<FeaturePage>[] = [
     },
   },
   {
-    slug: "maintenance-and-tasks",
-    href: "/features/maintenance-and-tasks",
-    content: {
-      en: {
-        metaTitle: "Maintenance and Tasks | OptiPeople",
-        metaDescription:
-          "Plan and execute preventive maintenance based on usage and condition. Assign tasks, track completion, and reduce unplanned downtime.",
-        parentLabel: "Maintenance",
-        parentHref: "/modules/maintenance",
-        eyebrow: "Maintenance and Tasks",
-        heroTitle: "Fix Things Before They Break",
-        heroBody:
-          "Plan and execute preventive maintenance based on real usage and condition. Assign tasks, track completion, and turn reactive firefighting into structured prevention.",
-        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
-        heroImageAlt:
-          "Tasks Management showing maintenance tasks triggered by counters and run hours, beside the lists they draw on",
-        valueTitle: "Unplanned stops are the most expensive kind",
-        valueBody:
-          "Every unplanned stop costs more than a planned one, in lost production, emergency parts, and scrambled schedules. Most factories know this but still run maintenance off spreadsheets and memory. OptiPeople puts every task in one place, triggered by real machine data, tracked to completion.",
-        capabilitiesTitle: "From condition signal to completed task",
-        capabilitiesBody:
-          "A maintenance workflow that starts with the machine and ends with a verified fix, no paper, no guesswork.",
-        capabilities: [
-          {
-            title: "One List for Every Task on the Floor",
-            description:
-              "Search, filter, and prioritize across all open tasks, by machine, urgency, or type. Operators see exactly what needs doing and how much time is left. No more whiteboards, no more forgotten follow-ups.",
-            image: "/images/taskapp1.png",
-            imageAlt:
-              "Task list on a phone with search and machine filter, showing each open task and the time left on it",
-          },
-          {
-            title: "Maintenance Driven by Data, Not Calendars",
-            description:
-              "Schedule maintenance based on actual machine usage, run hours, and condition signals, not fixed intervals. When a threshold is reached, the task appears automatically. You maintain what needs it, when it needs it.",
-            image: "/images/Mockups/Tasls-Maintenance.webp",
-            imageAlt:
-              "Task list where the When column reads after counter reached and production hour reached rather than a fixed date",
-          },
-          {
-            title: "Close the Loop at the Machine",
-            description:
-              "When maintenance is complete and the machine checks out, operators see it immediately. Green status means ready to run. The feedback loop from task creation to verified completion happens in one system, with a full audit trail.",
-            image: "/images/Everything-is-okay.png",
-            imageAlt:
-              "Operator panel showing green checkmark with everything is okay status after maintenance completion",
-          },
-        ],
-        metrics: [
-          { metric: "40%", label: "Reduction in unplanned downtime" },
-          { metric: "3x", label: "More preventive vs. reactive maintenance" },
-          { metric: "100%", label: "Task traceability and audit trail" },
-        ],
-        related: [
-          {
-            title: "Production Efficiency",
-            description:
-              "Track OEE live and see how maintenance impacts availability and performance.",
-            href: "/features/production-efficiency",
-          },
-          {
-            title: "Stop Cause Registration",
-            description:
-              "Capture downtime reasons at the source. Turn stop data into maintenance priorities.",
-            href: "/features/stop-cause-registration",
-          },
-          {
-            title: "Energy and Telemetry",
-            description:
-              "Monitor vibration, temperature, and energy to trigger condition-based maintenance.",
-            href: "/features/energy-and-telemetry",
-          },
-        ],
-      },
-      da: {
-        metaTitle: "Vedligehold og opgaver | OptiPeople",
-        metaDescription:
-          "Planlæg vedligehold efter, hvor meget maskinen har kørt, og hvordan den har det. Fordel opgaverne, følg dem til dørs, og få færre uplanlagte stop.",
-        parentLabel: "Vedligehold",
-        parentHref: "/modules/maintenance",
-        eyebrow: "Vedligehold og opgaver",
-        heroTitle: "Løs det, før det bryder ned",
-        heroBody:
-          "Planlæg vedligehold efter, hvor meget maskinen faktisk har kørt, og hvordan den har det. Fordel opgaverne, se dem blive lavet, og slip for at slukke ildebrande.",
-        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
-        heroImageAlt:
-          "Opgavestyring med vedligeholdsopgaver, der udløses af tællere og driftstimer, ved siden af de lister, de trækker på",
-        valueTitle: "Et uplanlagt stop koster mest",
-        valueBody:
-          "Et uplanlagt stop koster mere: tabt produktion, hasteordrer på reservedele og en plan, der vælter. Når driftstimer, alarmer og opgaver ligger samme sted, kan teknikerne tage det vigtigste først, i stedet for at stole på et regneark og hukommelsen.",
-        capabilitiesTitle: "Fra signal til færdig opgave",
-        capabilitiesBody:
-          "Det starter ved maskinen og slutter med en reparation, der er tjekket. Uden papir og uden gætteri.",
-        capabilities: [
-          {
-            title: "Efter brug, ikke efter kalenderen",
-            description:
-              "Planlæg service efter driftstimer og antal cyklusser. Når grænsen er nået, dukker opgaven op af sig selv. Så laver I vedligehold på det, der trænger, når det trænger.",
-            image: "/images/Mockups/Tasls-Maintenance.webp",
-            imageAlt:
-              "Opgavelisten med vedligehold planlagt efter tællere og driftstimer",
-          },
-          {
-            title: "Opgaverne på mobilen",
-            description:
-              "Teknikeren ser opgaven, noterne og den tid, der er tilbage, dér hvor arbejdet bliver lavet. Ingen whiteboards og ingen glemte opfølgninger.",
-            image: "/images/taskapp1.png",
-            imageAlt: "Opgaverne på telefonen med resttid pr. opgave",
-          },
-          {
-            title: "Historik pr. maskine",
-            description:
-              "Se, hvad der før er lavet på maskinen, og hvilke fejl der bliver ved med at komme igen.",
-            image: "/images/backoffice1.webp",
-            imageAlt: "Backoffice-historik",
-          },
-        ],
-        metrics: [
-          { metric: "50%", label: "Mindre uplanlagt nedetid" },
-          { metric: "40 timer", label: "Ekstra produktionstid om året" },
-          { metric: "30%", label: "Færre hasteopgaver" },
-        ],
-        related: [
-          {
-            title: "Energi og målinger",
-            description: "Brug sensorerne til at opdage slid, før det bliver til nedbrud.",
-            href: "/features/energy-and-telemetry",
-          },
-          {
-            title: "Maskinstyring",
-            description: "Lad maskinens signaler oprette opgaven.",
-            href: "/features/machine-control",
-          },
-          {
-            title: "Analyse og rapportering",
-            description: "Følg nedetiden, og se om vedligeholdet virker.",
-            href: "/features/analysis-and-reporting",
-          },
-        ],
-      },
-    },
-  },
-  {
-    slug: "quality-management",
-    href: "/features/quality-management",
-    content: {
-      en: {
-        metaTitle: "Quality Management | OptiPeople",
-        metaDescription:
-          "Register quality data where it happens. Trace deviations back to machines or workstations, batches, and shifts, and build accountability into production.",
-        parentLabel: "Quality",
-        parentHref: "/modules/quality",
-        eyebrow: "Quality Management",
-        heroTitle: "Catch Quality Issues Where They Start",
-        heroBody:
-          "Register quality data at the machine or workstation, trace deviations back to their source, and build accountability into every shift.",
-        heroImage: "/images/backoffice1.webp",
-        heroImageAlt:
-          "OptiPeople quality tracking interface showing audit trail and device management",
-        valueTitle: "Quality problems found late cost ten times more",
-        valueBody:
-          "When quality data lives in paper forms and disconnected systems, deviations surface too late to prevent waste. By the time the report reaches quality management, the batch is finished and the damage is done. OptiPeople captures quality events in real time, linked to the machine or workstation, the shift, and the conditions that caused them.",
-        capabilitiesTitle: "From floor event to traceable record",
-        capabilitiesBody:
-          "Quality data captured at the source, structured for analysis, and always audit-ready.",
-        capabilities: [
-          {
-            title: "Register Quality Events at the Machine or Workstation",
-            description:
-              "Operators log deviations, scrap, and rework directly at the point of production. Every entry is timestamped and linked to the machine or workstation, order, and shift, so nothing gets lost between the floor and the office.",
-            image: "/images/operatorpanel2.webp",
-            imageAlt:
-              "Operator panel showing detailed event log with quality notes, telemetry data, and shift information",
-          },
-          {
-            title: "Trace Every Deviation to Its Source",
-            description:
-              "When quality drops, you need to know why, fast. Filter by machine or workstation, time range, and event type to see exactly where deviations cluster. Connect quality issues to specific batches, operators, and conditions.",
-            image: "/images/report1.webp",
-            imageAlt:
-              "OptiPeople report showing OEE breakdown with availability, performance, and quality metrics alongside a timeline chart",
-          },
-          {
-            title: "Full Audit Trail, Always Available",
-            description:
-              "Every quality event, every change, every action is logged with who did what and when. Search and filter the complete activity history across machines and sites. Ready for audits, ready for continuous improvement.",
-            image: "/images/backoffice1.webp",
-            imageAlt:
-              "Admin panel showing activity log with date range filters and a device list with machine IDs and locations",
-          },
-        ],
-        metrics: [
-          { metric: "30%", label: "Reduction in quality-related scrap" },
-          { metric: "100%", label: "Traceability across machines, workstations, and shifts" },
-          { metric: "< 5 min", label: "From deviation to documented root cause" },
-        ],
-        related: [
-          {
-            title: "Production Efficiency",
-            description:
-              "Track OEE live. Quality is one of the three pillars of overall equipment effectiveness.",
-            href: "/features/production-efficiency",
-          },
-          {
-            title: "Stop Cause Registration",
-            description:
-              "Capture downtime reasons alongside quality events for a complete production picture.",
-            href: "/features/stop-cause-registration",
-          },
-          {
-            title: "Analysis and Reporting",
-            description:
-              "Turn quality data into trend reports that drive continuous improvement.",
-            href: "/features/analysis-and-reporting",
-          },
-        ],
-      },
-      da: {
-        metaTitle: "Kvalitetsstyring | OptiPeople",
-        metaDescription:
-          "Registrer kvalitetsdata dér, hvor arbejdet sker, og følg en afvigelse tilbage til maskine eller arbejdsstation, batch og skift.",
-        parentLabel: "Kvalitet",
-        parentHref: "/modules/quality",
-        eyebrow: "Kvalitetsstyring",
-        heroTitle: "Fang fejlen, hvor den opstår",
-        heroBody:
-          "Registrer kvaliteten ude ved maskinen eller arbejdsstationen, og følg hver afvigelse tilbage til det skift, den batch og den maskine, den kom fra.",
-        heroImage: "/images/backoffice1.webp",
-        heroImageAlt: "Kvalitetsstyring",
-        valueTitle: "Jo senere I opdager fejlen, jo dyrere bliver den",
-        valueBody:
-          "Ligger kvalitetsdata i papirskemaer og spredte systemer, opdager I afvigelsen for sent: batchen er kørt, og skaden er sket. Her bliver hver afvigelse registreret med det samme og koblet til maskinen eller arbejdsstationen, skiftet og det, der gik forud.",
-        capabilitiesTitle: "Fra hændelse på gulvet til et spor, I kan følge",
-        capabilitiesBody:
-          "Hver registrering hænger sammen med maskine eller arbejdsstation, produkt, operatør og skift.",
-        capabilities: [
-          {
-            title: "Digitale skemaer",
-            description: "Guidede kontroller sikrer, at det bliver registreret ens hver gang.",
-            image: "/images/backoffice1.webp",
-            imageAlt: "Digital formular",
-          },
-          {
-            title: "Afvigelser og handlinger",
-            description: "Skriv afvigelsen ned, og følg handlingen hele vejen, til den er lukket.",
-            image: "/images/report-mockup2.webp",
-            imageAlt: "Afvigelsesrapport",
-          },
-          {
-            title: "Sporbarhed",
-            description: "Knyt kvalitetstjek og afvigelser til batch, maskine eller arbejdsstation og skift.",
-            image: "/images/Mockups/Report-Individual-Events-Desktop.webp",
-            imageAlt: "Sporbarhedsrapport med de enkelte registreringer pr. ordre og skift",
-          },
-        ],
-        metrics: [
-          { metric: "60%", label: "Mindre omarbejde" },
-          { metric: "90%", label: "Hurtigere svar på afvigelser" },
-          { metric: "100%", label: "Digital sporbarhed" },
-        ],
-        related: [
-          {
-            title: "Produktionseffektivitet",
-            description: "Se kvaliteten i sammenhæng med OEE.",
-            href: "/features/production-efficiency",
-          },
-          {
-            title: "Analyse og rapportering",
-            description: "Følg kvaliteten og afvigelserne over tid.",
-            href: "/features/analysis-and-reporting",
-          },
-          {
-            title: "Maskinstyring",
-            description: "Giv operatøren besked ude ved maskinen.",
-            href: "/features/machine-control",
-          },
-        ],
-      },
-    },
-  },
-  {
     slug: "analysis-and-reporting",
     href: "/features/analysis-and-reporting",
     content: {
@@ -607,7 +900,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         valueTitle: "The data exists. It just needs a better format",
         valueBody:
           "Your machines generate thousands of data points every day. But if turning that into a useful report takes a person, a spreadsheet, and half a morning, the data stays locked up. OptiPeople generates production reports automatically, accurate, consistent, and ready when you are.",
-        capabilitiesTitle: "From machine signal to management report",
+        capabilitiesTitle: "From machine and workstation data to management report",
         capabilitiesBody:
           "Every report is built from live production data. No manual entry, no copy-paste, no version confusion.",
         capabilities: [
@@ -870,6 +1163,149 @@ const features: LocalizedPage<FeaturePage>[] = [
     },
   },
   {
+    slug: "maintenance-and-tasks",
+    href: "/features/maintenance-and-tasks",
+    content: {
+      en: {
+        metaTitle: "Maintenance and Tasks | OptiPeople",
+        metaDescription:
+          "Plan and execute preventive maintenance based on usage and condition. Assign tasks, track completion, and reduce unplanned downtime.",
+        parentLabel: "Maintenance",
+        parentHref: "/modules/maintenance",
+        eyebrow: "Maintenance and Tasks",
+        heroTitle: "Fix Things Before They Break",
+        heroBody:
+          "Plan and execute preventive maintenance based on real usage and condition. Assign tasks, track completion, and turn reactive firefighting into structured prevention.",
+        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
+        heroImageAlt:
+          "Tasks Management showing maintenance tasks triggered by counters and run hours, beside the lists they draw on",
+        valueTitle: "Unplanned stops are the most expensive kind",
+        valueBody:
+          "Every unplanned stop costs more than a planned one, in lost production, emergency parts, and scrambled schedules. Most factories know this but still run maintenance off spreadsheets and memory. OptiPeople puts every task in one place, triggered by real machine data, tracked to completion.",
+        capabilitiesTitle: "From condition signal to completed task",
+        capabilitiesBody:
+          "A maintenance workflow that starts with the machine and ends with a verified fix, no paper, no guesswork.",
+        capabilities: [
+          {
+            title: "One List for Every Task on the Floor",
+            description:
+              "Search, filter, and prioritize across all open tasks, by machine, urgency, or type. Operators see exactly what needs doing and how much time is left. No more whiteboards, no more forgotten follow-ups.",
+            image: "/images/taskapp1.png",
+            imageAlt:
+              "Task list on a phone with search and machine filter, showing each open task and the time left on it",
+          },
+          {
+            title: "Maintenance Driven by Data, Not Calendars",
+            description:
+              "Schedule maintenance based on actual machine usage, run hours, and condition signals, not fixed intervals. When a threshold is reached, the task appears automatically. You maintain what needs it, when it needs it.",
+            image: "/images/Mockups/Tasls-Maintenance.webp",
+            imageAlt:
+              "Task list where the When column reads after counter reached and production hour reached rather than a fixed date",
+          },
+          {
+            title: "Close the Loop at the Machine",
+            description:
+              "When maintenance is complete and the machine checks out, operators see it immediately. Green status means ready to run. The feedback loop from task creation to verified completion happens in one system, with a full audit trail.",
+            image: "/images/Everything-is-okay.png",
+            imageAlt:
+              "Operator panel showing green checkmark with everything is okay status after maintenance completion",
+          },
+        ],
+        metrics: [
+          { metric: "40%", label: "Reduction in unplanned downtime" },
+          { metric: "3x", label: "More preventive vs. reactive maintenance" },
+          { metric: "100%", label: "Task traceability and audit trail" },
+        ],
+        related: [
+          {
+            title: "Production Efficiency",
+            description:
+              "Track OEE live and see how maintenance impacts availability and performance.",
+            href: "/features/production-efficiency",
+          },
+          {
+            title: "Stop Cause Registration",
+            description:
+              "Capture downtime reasons at the source. Turn stop data into maintenance priorities.",
+            href: "/features/stop-cause-registration",
+          },
+          {
+            title: "Energy and Telemetry",
+            description:
+              "Monitor vibration, temperature, and energy to trigger condition-based maintenance.",
+            href: "/features/energy-and-telemetry",
+          },
+        ],
+      },
+      da: {
+        metaTitle: "Vedligehold og opgaver | OptiPeople",
+        metaDescription:
+          "Planlæg vedligehold efter, hvor meget maskinen har kørt, og hvordan den har det. Fordel opgaverne, følg dem til dørs, og få færre uplanlagte stop.",
+        parentLabel: "Vedligehold",
+        parentHref: "/modules/maintenance",
+        eyebrow: "Vedligehold og opgaver",
+        heroTitle: "Løs det, før det bryder ned",
+        heroBody:
+          "Planlæg vedligehold efter, hvor meget maskinen faktisk har kørt, og hvordan den har det. Fordel opgaverne, se dem blive lavet, og slip for at slukke ildebrande.",
+        heroImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
+        heroImageAlt:
+          "Opgavestyring med vedligeholdsopgaver, der udløses af tællere og driftstimer, ved siden af de lister, de trækker på",
+        valueTitle: "Et uplanlagt stop koster mest",
+        valueBody:
+          "Et uplanlagt stop koster mere: tabt produktion, hasteordrer på reservedele og en plan, der vælter. Når driftstimer, alarmer og opgaver ligger samme sted, kan teknikerne tage det vigtigste først, i stedet for at stole på et regneark og hukommelsen.",
+        capabilitiesTitle: "Fra signal til færdig opgave",
+        capabilitiesBody:
+          "Det starter ved maskinen og slutter med en reparation, der er tjekket. Uden papir og uden gætteri.",
+        capabilities: [
+          {
+            title: "Efter brug, ikke efter kalenderen",
+            description:
+              "Planlæg service efter driftstimer og antal cyklusser. Når grænsen er nået, dukker opgaven op af sig selv. Så laver I vedligehold på det, der trænger, når det trænger.",
+            image: "/images/Mockups/Tasls-Maintenance.webp",
+            imageAlt:
+              "Opgavelisten med vedligehold planlagt efter tællere og driftstimer",
+          },
+          {
+            title: "Opgaverne på mobilen",
+            description:
+              "Teknikeren ser opgaven, noterne og den tid, der er tilbage, dér hvor arbejdet bliver lavet. Ingen whiteboards og ingen glemte opfølgninger.",
+            image: "/images/taskapp1.png",
+            imageAlt: "Opgaverne på telefonen med resttid pr. opgave",
+          },
+          {
+            title: "Historik pr. maskine",
+            description:
+              "Se, hvad der før er lavet på maskinen, og hvilke fejl der bliver ved med at komme igen.",
+            image: "/images/backoffice1.webp",
+            imageAlt: "Backoffice-historik",
+          },
+        ],
+        metrics: [
+          { metric: "50%", label: "Mindre uplanlagt nedetid" },
+          { metric: "40 timer", label: "Ekstra produktionstid om året" },
+          { metric: "30%", label: "Færre hasteopgaver" },
+        ],
+        related: [
+          {
+            title: "Energi og målinger",
+            description: "Brug sensorerne til at opdage slid, før det bliver til nedbrud.",
+            href: "/features/energy-and-telemetry",
+          },
+          {
+            title: "Maskinstyring",
+            description: "Lad maskinens signaler oprette opgaven.",
+            href: "/features/machine-control",
+          },
+          {
+            title: "Analyse og rapportering",
+            description: "Følg nedetiden, og se om vedligeholdet virker.",
+            href: "/features/analysis-and-reporting",
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "ai-and-copilots",
     href: "/features/ai-and-copilots",
     content: {
@@ -1008,156 +1444,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
       },
     },
-  },
-  {
-    slug: "machine-control",
-    href: "/features/machine-control",
-    content: {
-      en: {
-        metaTitle: "Machine Control | OptiPeople",
-        metaDescription:
-          "Integrate with machine control systems to enable feedback, automation, and tighter production loops across the factory.",
-        parentLabel: "IoT",
-        parentHref: "/modules/iot",
-        eyebrow: "Machine Control",
-        heroTitle: "Close the Loop Between System and Floor",
-        heroBody:
-          "Integrate with machine control systems to enable operator authentication, real-time feedback, and tighter production loops across the factory.",
-        heroImage: "/images/Start-Machine.png",
-        heroImageAlt:
-          "OptiPeople machine control panel showing the start machine interface for a Homag machine",
-        valueTitle: "Data collection starts at the machine. Control should too",
-        valueBody:
-          "When your production system and your machine control live in separate worlds, gaps appear. Operators work without feedback. Events go unrecorded. Start and stop times drift from reality. OptiPeople connects directly to the machine control layer, so the digital system and the physical factory move together.",
-        capabilitiesTitle: "From machine signal to operator action and back",
-        capabilitiesBody:
-          "A two-way connection between your production system and every machine on the floor.",
-        capabilities: [
-          {
-            title: "Secure Machine Authentication",
-            description:
-              "Every operator authenticates at the machine with a unique key before starting production. You know who is running what, when, and on which machine, creating accountability and traceability from the first moment of a shift.",
-            image: "/images/Login-Machine-Key.png",
-            imageAlt:
-              "Machine key authentication screen where operators enter their unique key to access the machine",
-          },
-          {
-            title: "Start, Stop, and Status in One Place",
-            description:
-              "Operators control machine start and stop directly from the panel. The system confirms the machine is ready, the operator is authenticated, and all prerequisites are met. One tap to start production, with a full digital trail.",
-            image: "/images/Start-Machine.png",
-            imageAlt:
-              "Operator panel showing the start machine button with green indicator for a Homag machine",
-          },
-          {
-            title: "Real-Time Feedback to the Floor",
-            description:
-              "Machine status flows back to the operator in real time. Green means everything checks out. When conditions change, a sensor threshold, a quality alert or a maintenance trigger, the operator sees it immediately. No surprises, no lag between event and awareness.",
-            image: "/images/Everything-is-okay.png",
-            imageAlt:
-              "Operator panel showing green checkmark with everything is okay confirmation for a Homag machine",
-          },
-        ],
-        showcaseTitle: "The route step being run, and the files that go with it",
-        showcaseBody:
-          "An order does not arrive at a machine on its own. It arrives as one step on a production route, with the NC program, the setup sheet, and the drawing revision that belong to that step, on the machine the operator is authenticated at.",
-        showcaseDrawn: "routes",
-        metrics: [
-          { metric: "100%", label: "Digital traceability of operator-machine sessions" },
-          { metric: "< 1s", label: "Machine event to operator notification" },
-          { metric: "0", label: "Paper-based machine logs needed" },
-        ],
-        related: [
-          {
-            title: "Stop Cause Registration",
-            description:
-              "When a machine stops, the control integration triggers stop registration automatically.",
-            href: "/features/stop-cause-registration",
-          },
-          {
-            title: "Maintenance and Tasks",
-            description:
-              "Machine signals trigger maintenance tasks when thresholds are reached.",
-            href: "/features/maintenance-and-tasks",
-          },
-          {
-            title: "Energy and Telemetry",
-            description:
-              "Sensor data from the machine control layer feeds directly into telemetry dashboards.",
-            href: "/features/energy-and-telemetry",
-          },
-        ],
-      },
-      da: {
-        metaTitle: "Maskinstyring | OptiPeople",
-        metaDescription:
-          "Kobl OptiPeople på maskinstyringen. Operatøren logger ind ved maskinen, får besked med det samme, og systemet passer med det, der sker på gulvet.",
-        parentLabel: "IoT",
-        parentHref: "/modules/iot",
-        eyebrow: "Maskinstyring",
-        heroTitle: "Få system og gulv til at følges ad",
-        heroBody:
-          "Kobl OptiPeople på maskinstyringen. Så logger operatøren ind ved maskinen, får besked med det samme, og det, der står i systemet, passer med det, der sker på gulvet.",
-        heroImage: "/images/Start-Machine.png",
-        heroImageAlt: "Maskinstyringspanel",
-        valueTitle: "Når data kommer fra maskinen, skal styringen også sidde der",
-        valueBody:
-          "Når systemet og maskinstyringen lever hver for sig, opstår der huller. Operatøren får ingen besked, hændelser bliver ikke registreret, og start- og stoptider passer ikke med virkeligheden. OptiPeople kobler sig direkte på maskinstyringen, så systemet og fabrikken følges ad.",
-        capabilitiesTitle: "Fra maskinsignal til operatør og tilbage igen",
-        capabilitiesBody:
-          "En forbindelse, der går begge veje, mellem produktionssystemet og maskinerne på gulvet.",
-        capabilities: [
-          {
-            title: "Sikkert login ved maskinen",
-            description:
-              "Operatøren logger ind ved maskinen med sin egen nøgle, før produktionen starter. Så ved I fra skiftets første minut, hvem der kører hvad, hvornår og på hvilken maskine.",
-            image: "/images/Login-Machine-Key.png",
-            imageAlt: "Maskinlogin",
-          },
-          {
-            title: "Start, stop og status",
-            description:
-              "Operatøren starter og stopper maskinen direkte fra panelet. Systemet tjekker først, at maskinen er klar, og at operatøren er logget ind. Ét tryk, og det hele bliver registreret.",
-            image: "/images/Start-Machine.png",
-            imageAlt: "Start maskine",
-          },
-          {
-            title: "Besked med det samme",
-            description:
-              "Grønt betyder, at alt er i orden. Når noget ændrer sig, f.eks. en sensor over grænsen, en kvalitetsalarm eller et serviceinterval, der er nået, ser operatøren det med det samme.",
-            image: "/images/Everything-is-okay.png",
-            imageAlt: "Operatørpanel, der viser, at alt er i orden",
-          },
-        ],
-        showcaseTitle: "Det rutetrin, der kører, og filerne, der hører til",
-        showcaseBody:
-          "En ordre lander ikke ved maskinen af sig selv. Den lander som ét trin på en produktionsrute, med det NC-program, det opstillingsark og den tegningsversion, der hører til netop det trin, på den maskine, operatøren er logget ind ved.",
-        showcaseDrawn: "routes",
-        metrics: [
-          { metric: "100%", label: "Digital sporbarhed på hver session" },
-          { metric: "< 1s", label: "Fra det sker på maskinen, til beskeden er ude" },
-          { metric: "0", label: "Papirlister ved maskinen" },
-        ],
-        related: [
-          {
-            title: "Stopårsager",
-            description: "Et maskinstop kan sætte registreringen i gang af sig selv.",
-            href: "/features/stop-cause-registration",
-          },
-          {
-            title: "Vedligehold og opgaver",
-            description: "Maskinens signaler kan oprette vedligeholdsopgaven.",
-            href: "/features/maintenance-and-tasks",
-          },
-          {
-            title: "Energi og målinger",
-            description: "Sensordata går direkte ind i jeres dashboards.",
-            href: "/features/energy-and-telemetry",
-          },
-        ],
-      },
-    },
-  },
+  }
 ]
 
 /**
@@ -1183,6 +1470,8 @@ export function featuresForModule(moduleHref: string, locale: Locale) {
       title: entry.content[locale].eyebrow,
       description: entry.content[locale].heroBody,
       href: entry.href,
+      image: entry.content[locale].heroImage,
+      imageAlt: entry.content[locale].heroImageAlt,
     }))
 }
 

@@ -13,8 +13,8 @@ import type { Locale } from "@/i18n/routing"
  * product vocabulary; the URLs stay put so existing links and search results
  * keep working.
  *
- * The modules are the nine below, always in this order: Orders, OEE,
- * Planning, Quality, IoT, EMS, Maintenance, Documents, AI Agents. "Modular
+ * The modules are the nine below, always in this order: Orders, Planning,
+ * Quality, IoT, OEE, EMS, Maintenance, Documents, AI Agents. "Modular
  * MES" is the name of the product these nine make up, not a module of its
  * own, so it has no entry here. Wherever the site lists the modules, it lists
  * all nine in this order. Reordering here moves the carousel, the header
@@ -38,15 +38,6 @@ export const moduleCatalog: ModuleEntry[] = [
     blurb: {
       en: "Start, stop, and report at the machine or workstation. ERP optional.",
       da: "Start, stop og meld tilbage ved maskinen eller arbejdsstationen. Med eller uden ERP.",
-    },
-  },
-  {
-    id: "oee",
-    href: "/modules/production",
-    label: { en: "OEE", da: "OEE" },
-    blurb: {
-      en: "Live OEE, downtime, losses, and shift performance.",
-      da: "OEE, nedetid og tab, live og skift for skift.",
     },
   },
   {
@@ -74,6 +65,15 @@ export const moduleCatalog: ModuleEntry[] = [
     blurb: {
       en: "Consolidate the machines, hardware, and systems you already run.",
       da: "Få data fra de maskiner, den hardware og de systemer, I allerede har.",
+    },
+  },
+  {
+    id: "oee",
+    href: "/modules/production",
+    label: { en: "OEE", da: "OEE" },
+    blurb: {
+      en: "Live OEE, downtime, losses, and shift performance.",
+      da: "OEE, nedetid og tab, live og skift for skift.",
     },
   },
   {
@@ -173,11 +173,11 @@ export function moduleNavItems(locale: Locale) {
 const navGroups: { title: Record<Locale, string>; ids: string[] }[] = [
   {
     title: { en: "Production", da: "Produktion" },
-    ids: ["orders", "oee", "planning"],
+    ids: ["orders", "planning", "qms"],
   },
   {
-    title: { en: "Quality, machines and energy", da: "Kvalitet, maskiner og energi" },
-    ids: ["qms", "iot", "ems"],
+    title: { en: "Machines, OEE and energy", da: "Maskiner, OEE og energi" },
+    ids: ["iot", "oee", "ems"],
   },
   {
     title: { en: "Maintenance and knowledge", da: "Vedligehold og viden" },

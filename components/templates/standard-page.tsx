@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -48,7 +49,13 @@ export function StandardPageTemplate({
   page: StandardPage
   family: PageFamily
   slug: string
-  deepDives?: { title: string; description: string; href: string }[]
+  deepDives?: {
+    title: string
+    description: string
+    href: string
+    image?: string
+    imageAlt?: string
+  }[]
 }) {
   const t = useTranslations("pageTemplate")
   const locale = useLocale() as Locale
@@ -218,6 +225,22 @@ export function StandardPageTemplate({
                 </span>
               </Link>
             ))}
+            {/* An odd count leaves the grid's last cell empty, so it shows
+                the last deep dive's screenshot instead of a blank grey box. */}
+            {deepDives.length % 2 === 1 && deepDives[deepDives.length - 1].image && (
+              <div
+                className="relative hidden min-h-[14rem] overflow-hidden sm:block"
+                style={{ backgroundColor: theme.tint }}
+              >
+                <Image
+                  src={deepDives[deepDives.length - 1].image!}
+                  alt={deepDives[deepDives.length - 1].imageAlt ?? ""}
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover object-left-top"
+                />
+              </div>
+            )}
           </div>
         </section>
       )}

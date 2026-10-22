@@ -181,17 +181,16 @@ type ModuleSlideCopy = {
  * catalog is reordered. The alternation of light and dark is tuned for the
  * current order in content/modules-catalog.ts, pale on the odd slides and
  * dark on the even ones, so a reorder is worth a look here. `tone` decides
- * the title, the supporting line and the arrow button. OEE sits on the
- * deepest green because its gauges carry the most colour of any slide.
+ * the title, the supporting line and the arrow button.
  */
 type ModuleAccent = { bg: string; tone: "light" | "dark" }
 
 const MODULE_SLIDE_ACCENTS: Record<string, ModuleAccent> = {
   orders: { bg: "#d8d4c6", tone: "dark" },
-  oee: { bg: "#243b2f", tone: "light" },
-  planning: { bg: "#c7d9cd", tone: "dark" },
-  qms: { bg: "#1c1f26", tone: "light" },
-  iot: { bg: "#c5d8e8", tone: "dark" },
+  planning: { bg: "#243b2f", tone: "light" },
+  qms: { bg: "#c7d9cd", tone: "dark" },
+  iot: { bg: "#1c1f26", tone: "light" },
+  oee: { bg: "#c5d8e8", tone: "dark" },
   ems: { bg: "#0f2f33", tone: "light" },
   maintenance: { bg: "#e4ded4", tone: "dark" },
   documents: { bg: "#163b40", tone: "light" },
@@ -263,8 +262,8 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "What do you want to run better?",
       moduleRows: [
-        ["mes", "orders", "oee", "planning", "qms"],
-        ["iot", "ems", "maintenance", "documents", "ai-agents"],
+        ["mes", "orders", "planning", "qms", "iot"],
+        ["oee", "ems", "maintenance", "documents", "ai-agents"],
       ],
     },
     advisory: {
@@ -285,7 +284,7 @@ const copy: Record<Locale, HomeCopy> = {
       eyebrow: "Explore the platform",
       title: "Every module. The same data.",
       subtitle:
-        "Each module answers a specific operational question, and they all read from the same machine signals, so a stop registered on the floor lands in OEE, in the maintenance history, and in the monthly report without anyone re-entering it.",
+        "Each module answers a specific operational question, and they all work on the same data. An order goes from the plan to the machine or workstation, quality is checked along the way, and performance is measured while it runs, so planning, quality, and the monthly report all see the same order without anyone re-entering it.",
       ariaLabel: "Platform modules",
     },
     moduleCta: "Explore {module}",
@@ -294,7 +293,7 @@ const copy: Record<Locale, HomeCopy> = {
     moduleSlides: {
       oee: {
         description:
-          "See where production time is lost and why. Track availability, performance, and quality live across shifts, lines, and machines, built from real machine signals.",
+          "See where production time is lost and why. Track availability, performance, and quality live across shifts, lines, and machines, built from real data from machines and workstations.",
       },
       qms: {
         description:
@@ -391,8 +390,8 @@ const copy: Record<Locale, HomeCopy> = {
         },
         {
           company: "XL-BYG Brejnholt",
-          value: "−50%",
-          unit: "electricity bill, estimated",
+          value: "−30%",
+          unit: "electricity bills on trucks, estimated",
           note: "Forklifts charge when power is cheapest and the solar panels deliver.",
           slug: "xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging",
           span: "narrow",
@@ -446,8 +445,8 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "Hvad vil I have bedre styr på?",
       moduleRows: [
-        ["mes", "orders", "oee", "planning", "qms"],
-        ["iot", "ems", "maintenance", "documents", "ai-agents"],
+        ["mes", "orders", "planning", "qms", "iot"],
+        ["oee", "ems", "maintenance", "documents", "ai-agents"],
       ],
     },
     advisory: {
@@ -468,7 +467,7 @@ const copy: Record<Locale, HomeCopy> = {
       eyebrow: "Platformen",
       title: "Alle moduler læser de samme data",
       subtitle:
-        "Hvert modul svarer på et konkret spørgsmål i driften, og de læser alle de samme maskinsignaler. Et stop, der bliver registreret på gulvet, dukker op i OEE, i vedligeholdshistorikken og i månedsrapporten, uden at nogen taster det ind igen.",
+        "Hvert modul svarer på et konkret spørgsmål i driften, og de arbejder alle på de samme data. Ordren går fra planen ud til maskinen eller arbejdsstationen, kvaliteten bliver tjekket undervejs, og ydelsen bliver målt, mens den kører. Planlægning, kvalitet og månedsrapporten ser den samme ordre, uden at nogen taster den ind igen.",
       ariaLabel: "Platformmoduler",
     },
     moduleCta: "Mere om {module}",
@@ -477,7 +476,7 @@ const copy: Record<Locale, HomeCopy> = {
     moduleSlides: {
       oee: {
         description:
-          "Se, hvor produktionstiden forsvinder, og hvorfor. Følg tilgængelighed, ydelse og kvalitet live for hvert skift, hver linje og hver maskine, målt direkte på maskinernes signaler.",
+          "Se, hvor produktionstiden forsvinder, og hvorfor. Følg tilgængelighed, ydelse og kvalitet live for hvert skift, hver linje og hver maskine, målt direkte på data fra maskiner og arbejdsstationer.",
       },
       qms: {
         description:
@@ -574,8 +573,8 @@ const copy: Record<Locale, HomeCopy> = {
         },
         {
           company: "XL-BYG Brejnholt",
-          value: "−50%",
-          unit: "på elregningen, anslået",
+          value: "−30%",
+          unit: "på elregningen til trucks, anslået",
           note: "Trucks lades op, når strømmen er billigst, og solcellerne leverer.",
           slug: "xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging",
           span: "narrow",
@@ -641,12 +640,12 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "OptiPeople | Run manufacturing and operations on live data",
     description:
-      "One data foundation for the whole factory. Connect your machines, follow OEE live, and put every team on the same numbers, from the floor to management.",
+      "A modular MES on one data foundation for the whole factory. Connect machines and workstations with IoT, and run orders, planning, and quality on the same numbers, from the floor to management.",
   },
   da: {
-    title: "Produktionsovervågning, OEE og MES | OptiPeople",
+    title: "Modulært MES og IoT til produktionen | OptiPeople",
     description:
-      "Kobl maskinerne på, og følg OEE, stop og nedetid, mens det sker. Ét datagrundlag for produktion, kvalitet, vedligehold og energi, fra gulvet til ledelsen.",
+      "Et modulært MES på ét fælles datagrundlag. Kobl maskiner og arbejdsstationer på med IoT, og styr ordrer, planlægning og kvalitet efter de samme tal, fra gulvet til ledelsen.",
   },
 }
 
@@ -798,7 +797,7 @@ export default async function Home({
 
         <SlideCarousel
           slides={aiStackSlides(loc)}
-          navigationType={["arrows"]}
+          navigationType={["side-arrows"]}
           ariaLabel={t.ai.ariaLabel}
           className="mt-8"
           storageKey="home-ai"

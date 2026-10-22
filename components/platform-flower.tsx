@@ -37,13 +37,6 @@ const englishModules: ModuleNode[] = [
     features: ["Start, stop and report at the machine or workstation", "Runs with or without an ERP", "Two-way ERP sync when you want it"],
   },
   {
-    id: "production",
-    name: "OEE",
-    description: "See where time is lost",
-    pitch: "Track OEE in real-time and understand exactly where production time disappears. Stop guessing, start improving.",
-    features: ["Live OEE dashboards", "Stop cause registration", "Performance and quality losses"],
-  },
-  {
     id: "planning",
     name: "Planning",
     description: "Routes and timelines",
@@ -63,6 +56,13 @@ const englishModules: ModuleNode[] = [
     description: "Get data from anything",
     pitch: "Consolidate the machines, hardware, and data systems you already run into one foundation. PLCs, existing sensor setups, historians, and supplier portals, whatever the protocol or age. New hardware only where a machine has nothing to read from.",
     features: ["Consolidate existing hardware", "Consolidate existing systems", "A gateway only where it earns one"],
+  },
+  {
+    id: "production",
+    name: "OEE",
+    description: "See where time is lost",
+    pitch: "Track OEE in real-time and understand exactly where production time disappears. Stop guessing, start improving.",
+    features: ["Live OEE dashboards", "Stop cause registration", "Performance and quality losses"],
   },
   {
     id: "energy",
@@ -111,14 +111,6 @@ const danishModules: ModuleNode[] = [
     features: ["Start, stop og meld ved maskinen eller arbejdsstationen", "Kører med eller uden ERP", "Ordrer begge veje, når I vil"],
   },
   {
-    id: "production",
-    name: "OEE",
-    description: "Se, hvor tiden går tabt",
-    pitch:
-      "Følg OEE, mens det sker, og se præcis, hvor produktionstiden forsvinder. Så kan I holde op med at gætte og begynde at forbedre.",
-    features: ["Live OEE på skærmen", "Stopårsager", "Tab på ydelse og kvalitet"],
-  },
-  {
     id: "planning",
     name: "Planlægning",
     description: "Ruter og tidslinjer",
@@ -140,6 +132,14 @@ const danishModules: ModuleNode[] = [
     pitch:
       "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, de sensorer, der allerede sidder der, historikdatabaser og leverandørportaler, uanset protokol og alder. Nyt udstyr sætter vi kun op, hvor maskinen ikke har noget at læse fra i forvejen.",
     features: ["Brug det hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun, hvor der mangler noget"],
+  },
+  {
+    id: "production",
+    name: "OEE",
+    description: "Se, hvor tiden går tabt",
+    pitch:
+      "Følg OEE, mens det sker, og se præcis, hvor produktionstiden forsvinder. Så kan I holde op med at gætte og begynde at forbedre.",
+    features: ["Live OEE på skærmen", "Stopårsager", "Tab på ydelse og kvalitet"],
   },
   {
     id: "energy",
@@ -291,10 +291,10 @@ const HUB_SIDES = 9
 // modules in catalog order (content/modules-catalog.ts).
 const PETAL_ORDER = [
   "erp-shopfloor",
-  "production",
   "planning",
   "quality",
   "iot",
+  "production",
   "energy",
   "maintenance",
   "documents",

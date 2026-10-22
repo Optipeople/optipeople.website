@@ -3,7 +3,8 @@ import { setRequestLocale } from "next-intl/server"
 import { ArrowRight } from "lucide-react"
 
 import { Link } from "@/i18n/navigation"
-import { VideoCarousel, type VideoData } from "@/components/video-carousel"
+import type { VideoData } from "@/components/video-carousel"
+import { VideoGrid } from "@/components/video-grid"
 import { RoleVideoGrid, type RoleVideo } from "@/components/role-video-grid"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
@@ -296,10 +297,10 @@ export default async function VideosPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Carousel. Heading on the edge column, track full-bleed. */}
+      {/* Customer stories, in a grid like the role shorts below. */}
       <section id="stories" className="scroll-mt-24 pb-16 sm:pb-20 lg:pb-28">
-        <div className="mb-10 px-[var(--edge)] lg:mb-14">
-          <div className="max-w-2xl">
+        <div className="px-[var(--edge)]">
+          <div className="mb-10 max-w-2xl lg:mb-14">
             <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
               {t.carouselTitle}
             </h2>
@@ -307,9 +308,9 @@ export default async function VideosPage({ params }: Props) {
               {t.carouselBody}
             </p>
           </div>
-        </div>
 
-        <VideoCarousel videos={t.videos} />
+          <VideoGrid videos={t.videos} playLabel={t.playLabel} />
+        </div>
       </section>
 
       {/* Role videos. Vertical shorts in a grid, so every role is visible at once. */}

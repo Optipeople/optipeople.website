@@ -52,7 +52,7 @@ const copy: Record<
       {
         title: "Connected factories",
         description:
-          "Machine data, integrations, and dashboards: the systems that make operations easier to run.",
+          "Machine and workstation data, integrations, and dashboards: the systems that make operations easier to run.",
       },
       {
         title: "Maintenance & uptime",
@@ -86,7 +86,7 @@ const copy: Record<
       {
         title: "Den opkoblede fabrik",
         description:
-          "Maskindata, integrationer og dashboards: de systemer, der gør driften lettere at styre.",
+          "Data fra maskiner og arbejdsstationer, integrationer og dashboards: de systemer, der gør driften lettere at styre.",
       },
       {
         title: "Vedligehold og oppetid",
