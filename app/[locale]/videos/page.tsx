@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation"
 import type { VideoData } from "@/components/video-carousel"
 import { VideoGrid } from "@/components/video-grid"
 import { RoleVideoGrid, type RoleVideo } from "@/components/role-video-grid"
+import { personas } from "@/content/personas"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
@@ -27,61 +28,18 @@ type VideosCopy = {
   carouselTitle: string
   carouselBody: string
   videos: VideoData[]
+  productTitle: string
+  productBody: string
+  productVideos: VideoData[]
   moreTitle: string
   moreBody: string
   moreLinks: { title: string; description: string; href: string }[]
 }
 
-// Persona shorts, one per role, in the order they should appear. All are in
-// Danish; the English titles are translations of the YouTube titles.
-const roleVideoIds = [
-  "siSXdSd0G3o",
-  "IXDN_Ai6Ank",
-  "kqMOxAQ02e0",
-  "tnoy3-B0s8I",
-  "aD9I-Rdedjo",
-  "I_GInMVfuN8",
-  "zwa7gHegd0s",
-  "6IUQ7bcRjjo",
-  "nx6AtYqqcoE",
-  "hJc5P5No_u0",
-  "2gLBRps2SX0",
-  "u0KXgYzEfVQ",
-]
-
-const roleTitles: Record<Locale, string[]> = {
-  en: [
-    "Are you a CEO?",
-    "Are you a COO?",
-    "Are you a plant manager?",
-    "Are you a production manager?",
-    "Do you work with Operational Excellence or Continuous Improvement?",
-    "Are you an IT manager?",
-    "Do you work with IT or OT?",
-    "Are you a maintenance manager?",
-    "Are you a CEO, COO or salesperson at a machine builder?",
-    "Do you work in aftersales?",
-    "Are you a planner?",
-    "Do you work in supply chain?",
-  ],
-  da: [
-    "Er du CEO?",
-    "Er du COO?",
-    "Er du fabrikschef?",
-    "Er du produktionschef?",
-    "Er du ansvarlig for Operational Excellence eller Continuous Improvement?",
-    "Er du IT-chef?",
-    "Arbejder du med IT eller OT?",
-    "Er du vedligeholdelseschef?",
-    "Er du CEO, COO eller sælger hos en maskinbygger?",
-    "Arbejder du med aftersales?",
-    "Er du planlægger?",
-    "Arbejder du med supply chain?",
-  ],
-}
-
+// Persona shorts, one per role, from the personas catalog. All are in Danish;
+// the English titles are translations of the YouTube titles.
 const roleVideos = (locale: Locale): RoleVideo[] =>
-  roleVideoIds.map((videoId, i) => ({ videoId, title: roleTitles[locale][i] }))
+  personas.map((p) => ({ videoId: p.videoId, title: p.content[locale].question }))
 
 // Video titles match the published titles on the OptiPeople YouTube channel.
 // The two customer stories are in Danish, the Omron talk is in English; the
@@ -122,6 +80,46 @@ const copy: Record<Locale, VideosCopy> = {
         description:
           "A joint talk with Omron on how production data becomes a real advantage: what to measure, and how to turn it into decisions.",
         languageLabel: "English",
+      },
+    ],
+    productTitle: "Product information",
+    productBody:
+      "Short videos on Opti Assist, the AI assistant at the machine: how operators ask it questions, how it shows its sources, and how machine builders can build it into their own machines. In Danish.",
+    productVideos: [
+      {
+        videoId: "8foUVAL4zv4",
+        title: "Spørg maskinen: Opti Assist hos Omron på AUTOMATIK 2026",
+        description:
+          "Opti Assist on the Omron stand at AUTOMATIK 2026: ask the machine a question and get an answer from its own documentation.",
+        languageLabel: "Danish",
+      },
+      {
+        videoId: "Llk6kkFCx80",
+        title: "Svar du kan stole på: Opti Assists kildehenvisninger",
+        description:
+          "Every answer from Opti Assist points to the manual page or document it came from, so the operator can check it.",
+        languageLabel: "Danish",
+      },
+      {
+        videoId: "otlyS_yw6GI",
+        title: "Tilkald service direkte fra maskinen med Opti Assist",
+        description:
+          "When the answer is not enough, the operator calls service straight from the machine, with the context already attached.",
+        languageLabel: "Danish",
+      },
+      {
+        videoId: "rsOV6eiTj2w",
+        title: "Opti Assist til systemintegratorer: byg en AI-assistent ind i maskinen",
+        description:
+          "For system integrators and machine builders: how to ship an AI assistant as part of the machine you deliver.",
+        languageLabel: "Danish",
+      },
+      {
+        videoId: "vP0ao7JwdNY",
+        title: "Opti Assist på telefonen: én QR-kode ved maskinen",
+        description:
+          "Scan the QR code on the machine and Opti Assist opens on your phone, already knowing which machine you are standing at.",
+        languageLabel: "Danish",
       },
     ],
     moreTitle: "Read the stories instead",
@@ -183,6 +181,46 @@ const copy: Record<Locale, VideosCopy> = {
         description:
           "Oplæg sammen med Omron om, hvordan produktionsdata kan give en reel fordel over konkurrenterne: hvad I skal måle, og hvordan I træffer beslutninger ud fra det.",
         languageLabel: "Engelsk",
+      },
+    ],
+    productTitle: "Produktinformation",
+    productBody:
+      "Korte videoer om Opti Assist, AI-assistenten ved maskinen: hvordan operatøren stiller spørgsmål, hvordan svarene viser deres kilder, og hvordan maskinbyggere kan bygge den ind i deres egne maskiner.",
+    productVideos: [
+      {
+        videoId: "8foUVAL4zv4",
+        title: "Spørg maskinen: Opti Assist hos Omron på AUTOMATIK 2026",
+        description:
+          "Opti Assist på Omrons stand på AUTOMATIK 2026: stil maskinen et spørgsmål og få svar fra dens egen dokumentation.",
+        languageLabel: "Dansk",
+      },
+      {
+        videoId: "Llk6kkFCx80",
+        title: "Svar du kan stole på: Opti Assists kildehenvisninger",
+        description:
+          "Hvert svar fra Opti Assist henviser til den side i manualen eller det dokument, det kommer fra, så operatøren selv kan tjekke det.",
+        languageLabel: "Dansk",
+      },
+      {
+        videoId: "otlyS_yw6GI",
+        title: "Tilkald service direkte fra maskinen med Opti Assist",
+        description:
+          "Når svaret ikke er nok, tilkalder operatøren service direkte fra maskinen, og sammenhængen følger med.",
+        languageLabel: "Dansk",
+      },
+      {
+        videoId: "rsOV6eiTj2w",
+        title: "Opti Assist til systemintegratorer: byg en AI-assistent ind i maskinen",
+        description:
+          "Til systemintegratorer og maskinbyggere: sådan leverer I en AI-assistent som en del af maskinen.",
+        languageLabel: "Dansk",
+      },
+      {
+        videoId: "vP0ao7JwdNY",
+        title: "Opti Assist på telefonen: én QR-kode ved maskinen",
+        description:
+          "Scan QR-koden på maskinen, så åbner Opti Assist på telefonen og ved allerede, hvilken maskine du står ved.",
+        languageLabel: "Dansk",
       },
     ],
     moreTitle: "Hellere læse historierne?",
@@ -291,7 +329,9 @@ export default async function VideosPage({ params }: Props) {
               {t.watchLabel}
             </Link>
             <p className="text-sm tabular-nums text-foreground/65">
-              {t.countLabel(t.roleVideos.length + t.videos.length)}
+              {t.countLabel(
+                t.roleVideos.length + t.videos.length + t.productVideos.length
+              )}
             </p>
           </div>
         </div>
@@ -310,6 +350,22 @@ export default async function VideosPage({ params }: Props) {
           </div>
 
           <VideoGrid videos={t.videos} playLabel={t.playLabel} />
+        </div>
+      </section>
+
+      {/* Product information: landscape videos about Opti Assist. */}
+      <section id="product" className="scroll-mt-24 pb-16 sm:pb-20 lg:pb-28">
+        <div className="px-[var(--edge)]">
+          <div className="mb-10 max-w-2xl lg:mb-14">
+            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+              {t.productTitle}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-foreground/72">
+              {t.productBody}
+            </p>
+          </div>
+
+          <VideoGrid videos={t.productVideos} playLabel={t.playLabel} />
         </div>
       </section>
 
