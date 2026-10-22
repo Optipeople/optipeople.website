@@ -84,7 +84,7 @@ const copy: Record<Locale, VideosCopy> = {
     ],
     productTitle: "Product information",
     productBody:
-      "Short videos on Opti Assist, the AI assistant at the machine: how operators ask it questions, how it shows its sources, and how machine builders can build it into their own machines. In Danish.",
+      "Short videos on Opti Assist, the knowledge bank at the machine: how operators ask it questions, how it shows its sources, and how machine builders can build it into their own machines. In Danish.",
     productVideos: [
       {
         videoId: "8foUVAL4zv4",
@@ -185,7 +185,7 @@ const copy: Record<Locale, VideosCopy> = {
     ],
     productTitle: "Produktinformation",
     productBody:
-      "Korte videoer om Opti Assist, AI-assistenten ved maskinen: hvordan operatøren stiller spørgsmål, hvordan svarene viser deres kilder, og hvordan maskinbyggere kan bygge den ind i deres egne maskiner.",
+      "Korte videoer om Opti Assist, vidensbanken ved maskinen: hvordan operatøren stiller spørgsmål, hvordan svarene viser deres kilder, og hvordan maskinbyggere kan bygge den ind i deres egne maskiner.",
     productVideos: [
       {
         videoId: "8foUVAL4zv4",

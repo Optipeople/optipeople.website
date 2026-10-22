@@ -48,7 +48,7 @@ function ChatMockup() {
     <div className={`${panel} w-full p-3`}>
       <div className="inline-flex items-center gap-1.5 rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-600">
         <FileText className="size-3.5 text-blue-600" />
-        OEE Report Q1.pdf
+        Work instruction WI-114.pdf
         <span className="text-slate-400">×</span>
       </div>
       <div className="mt-3 flex items-center gap-2">
@@ -65,11 +65,11 @@ function ChatMockup() {
         </span>
         <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 px-2 py-1 text-[10px] font-medium text-slate-600">
           <Sparkles className="size-3" />
-          Company knowledge
+          Knowledge bank
         </span>
         <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 px-2 py-1 text-[10px] font-medium text-slate-600">
-          <Search className="size-3" />
-          Deep research
+          <CheckCircle2 className="size-3" />
+          Quality check
         </span>
       </div>
     </div>

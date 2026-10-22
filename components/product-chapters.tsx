@@ -4,7 +4,9 @@ import {
   Antenna,
   ArrowRight,
   ChartColumn,
+  CheckCircle2,
   ChevronDown,
+  Circle,
   ChevronRight,
   ClipboardList,
   Cpu,
@@ -32,8 +34,9 @@ import { moduleCatalog } from "@/content/modules-catalog"
  *   is what "modular" means.
  * - IoT is a system, so it is drawn as one, on a light band: everything a site
  *   already runs, wired into one data foundation, with data moving on the wires.
- * - Opti Assist is a conversation with the factory, back on the deep green:
- *   one huge line, with the pieces of an answer floating around it.
+ * - Opti Assist is the company's knowledge bank, back on the deep green:
+ *   one huge line, with the pieces of an answer floating around it (the
+ *   question, the quality check, the work instruction, the answer).
  *
  * Copy lives here per locale, like components/platform-architecture.tsx.
  * Motion is in app/globals.css (`chapter-*`): reduced motion, or a browser
@@ -299,7 +302,7 @@ const IOT_COPY: Record<Locale, IotCopy> = {
     foundation: { title: "One data foundation", sub: "1,284 live tags" },
     readers: [
       { title: "Modular MES", sub: "All nine modules" },
-      { title: "Opti Assist", sub: "Answers from live data" },
+      { title: "Opti Assist", sub: "Instructions, procedures and checks" },
       { title: "Your BI and ERP", sub: "Reports, APIs, exports" },
     ],
     stats: [
@@ -322,7 +325,7 @@ const IOT_COPY: Record<Locale, IotCopy> = {
     foundation: { title: "Ét datagrundlag", sub: "1.284 live tags" },
     readers: [
       { title: "Modulært MES", sub: "Alle ni moduler" },
-      { title: "Opti Assist", sub: "Svar ud fra live data" },
+      { title: "Opti Assist", sub: "Instruktioner, procedurer og tjek" },
       { title: "Jeres BI og ERP", sub: "Rapporter, API'er, eksport" },
     ],
     stats: [
@@ -525,7 +528,7 @@ type AssistCopy = {
   tagline: string
   body: string
   question: string
-  chart: { title: string; rows: { label: string; count: number }[] }
+  check: { title: string; items: { label: string; done: boolean }[] }
   manual: { title: string; page: string; highlight: string }
   answer: string
   sources: string[]
@@ -535,38 +538,38 @@ const ASSIST_COPY: Record<Locale, AssistCopy> = {
   en: {
     name: "Opti Assist",
     tagline: "The colleague who has read every manual.",
-    body: "AI that knows your machines, your procedures and your live production data. Ask in plain words, or scan the QR code on a machine and ask about that one. Get the answer and the source.",
-    question: "Why did CNC Drilling stop so often last night?",
-    chart: {
-      title: "Stops last night, shift 3",
-      rows: [
-        { label: "Tool error", count: 4 },
-        { label: "Waiting for material", count: 1 },
-        { label: "Setup", count: 1 },
+    body: "Your company's knowledge bank: work order instructions, procedures, service requests and quality checks in one place. Scan the QR code on a machine, ask in plain words, and get the step, the check or the service request, with the source.",
+    question: "Order 4471 is next on CNC Drilling. What do I need?",
+    check: {
+      title: "Quality check, first part",
+      items: [
+        { label: "Hole diameter 8.00 ±0.05 mm", done: true },
+        { label: "Edges free of burrs", done: true },
+        { label: "Sign off the first part", done: false },
       ],
     },
-    manual: { title: "Machine manual", page: "p. 42", highlight: "Torque the collet to 18 Nm." },
+    manual: { title: "Work instruction WI-114", page: "Step 3", highlight: "Torque the collet to 18 Nm." },
     answer:
-      "Four of six stops were tool errors, all after the bit change at 23:10. The manual says to torque the collet to 18 Nm. Check that first.",
-    sources: ["Stop log, shift 3", "Machine manual, p. 42"],
+      "Order 4471 needs the 8 mm bit. Follow work instruction WI-114, and torque the collet to 18 Nm at step 3. Before the run starts, the quality check asks you to measure the first part.",
+    sources: ["Work instruction WI-114", "Quality check, order 4471"],
   },
   da: {
     name: "Opti Assist",
     tagline: "Kollegaen, der har læst alle manualerne.",
-    body: "AI, der kender jeres maskiner, jeres procedurer og tallene fra gulvet lige nu. Spørg med almindelige ord, eller scan QR-koden på maskinen og spørg om netop den. Få svaret og kilden.",
-    question: "Hvorfor stoppede CNC-boringen så tit i nat?",
-    chart: {
-      title: "Stop i nat, skift 3",
-      rows: [
-        { label: "Værktøjsfejl", count: 4 },
-        { label: "Venter på materiale", count: 1 },
-        { label: "Omstilling", count: 1 },
+    body: "Virksomhedens vidensbank: arbejdsinstruktioner, procedurer, serviceanmodninger og kvalitetstjek samlet ét sted. Scan QR-koden på maskinen, spørg med almindelige ord, og få trinnet, tjekket eller serviceanmodningen. Med kilden.",
+    question: "Ordre 4471 er den næste på CNC-boringen. Hvad skal jeg bruge?",
+    check: {
+      title: "Kvalitetstjek, første emne",
+      items: [
+        { label: "Huldiameter 8,00 ±0,05 mm", done: true },
+        { label: "Kanter uden grater", done: true },
+        { label: "Godkend første emne", done: false },
       ],
     },
-    manual: { title: "Maskinmanual", page: "s. 42", highlight: "Spænd spændetangen til 18 Nm." },
+    manual: { title: "Arbejdsinstruktion WI-114", page: "Trin 3", highlight: "Spænd spændetangen til 18 Nm." },
     answer:
-      "Fire af de seks stop var værktøjsfejl, alle efter borskiftet kl. 23.10. Ifølge manualen skal spændetangen spændes til 18 Nm. Tjek den først.",
-    sources: ["Stoplog, skift 3", "Maskinmanual, s. 42"],
+      "Ordre 4471 skal bruge 8 mm-boret. Følg arbejdsinstruktion WI-114, og spænd spændetangen til 18 Nm i trin 3. Før produktionen går i gang, skal første emne måles i kvalitetstjekket.",
+    sources: ["Arbejdsinstruktion WI-114", "Kvalitetstjek, ordre 4471"],
   },
 }
 
@@ -581,27 +584,22 @@ function QuestionFragment({ text }: { text: string }) {
   )
 }
 
-function ChartFragment({ chart }: { chart: AssistCopy["chart"] }) {
-  const max = Math.max(...chart.rows.map((r) => r.count))
+function CheckFragment({ check }: { check: AssistCopy["check"] }) {
   return (
     <div className="rounded-2xl bg-white/[0.06] p-4 ring-1 ring-white/10 backdrop-blur-sm">
-      <p className="text-xs font-medium text-white/72">{chart.title}</p>
-      <div className="mt-3 space-y-2.5">
-        {chart.rows.map((row) => (
-          <div key={row.label}>
-            <div className="flex justify-between text-xs text-white/82">
-              <span>{row.label}</span>
-              <span className="tabular-nums">{row.count}</span>
-            </div>
-            <div className="mt-1 h-1.5 rounded-full bg-white/10">
-              <div
-                className="h-full rounded-full"
-                style={{ width: `${(row.count / max) * 100}%`, backgroundColor: "var(--green-light2)" }}
-              />
-            </div>
-          </div>
+      <p className="text-xs font-medium text-white/72">{check.title}</p>
+      <ul className="mt-3 space-y-2.5">
+        {check.items.map((item) => (
+          <li key={item.label} className="flex items-center gap-2 text-xs text-white/82">
+            {item.done ? (
+              <CheckCircle2 className="size-3.5 shrink-0" style={{ color: "var(--green-light2)" }} />
+            ) : (
+              <Circle className="size-3.5 shrink-0 text-white/40" />
+            )}
+            {item.label}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }
@@ -697,7 +695,7 @@ function AssistChapter({ locale }: { locale: Locale }) {
               <QuestionFragment text={t.question} />
             </div>
             <div className="chapter-float max-w-[16rem]" style={float("-3s")}>
-              <ChartFragment chart={t.chart} />
+              <CheckFragment check={t.check} />
             </div>
           </div>
           {heading}
@@ -718,7 +716,7 @@ function AssistChapter({ locale }: { locale: Locale }) {
             <div className="sm:col-span-2 sm:ml-auto sm:max-w-sm">
               <QuestionFragment text={t.question} />
             </div>
-            <ChartFragment chart={t.chart} />
+            <CheckFragment check={t.check} />
             <div className="hidden sm:block">
               <ManualFragment manual={t.manual} />
             </div>

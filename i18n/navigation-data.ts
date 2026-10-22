@@ -50,7 +50,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       id: "ai",
       title: "AI and QR codes",
       items: [
-        { title: "Opti Assist – Chat and QR codes", href: "/ai/chat" },
+        { title: "Opti Assist – Knowledge bank and QR codes", href: "/ai/chat" },
         { title: "Workflows", href: "/ai/workflows" },
         { title: "Agents", href: "/ai/agents" },
         { title: "Integrations", href: "/ai/integrations" },
@@ -143,7 +143,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       id: "ai",
       title: "AI og QR-koder",
       items: [
-        { title: "Opti Assist: Chat og QR-koder", href: "/ai/chat" },
+        { title: "Opti Assist: Vidensbank og QR-koder", href: "/ai/chat" },
         { title: "Workflows", href: "/ai/workflows" },
         { title: "Agenter", href: "/ai/agents" },
         { title: "Integrationer", href: "/ai/integrations" },

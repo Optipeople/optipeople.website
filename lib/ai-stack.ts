@@ -78,150 +78,140 @@ export const aiCapabilities: AiCapability[] = [
     content: {
       en: {
         cardTitle: "Chat",
-        cardSubtitle: "Model-agnostic AI assistant for everyone in the company.",
-        metaTitle: "Opti Assist | AI chat for your operation",
+        cardSubtitle: "Your company's knowledge bank, one scan away at every machine.",
+        metaTitle: "Opti Assist | Knowledge bank for the shopfloor",
         metaDescription:
-          "Opti Assist is a model-agnostic AI chat for your whole team, grounded in your production data, documents and company knowledge.",
-        eyebrow: "Opti Assist – Chat and QR codes",
-        heroTitle: "AI chat and QR codes for everyone in your operation",
+          "Opti Assist is your company's knowledge bank: work order instructions, standard operating procedures, service requests and quality checks in one place, one QR scan away at every machine.",
+        eyebrow: "Opti Assist – Knowledge bank and QR codes",
+        heroTitle: "Everything your company knows, at every machine",
         heroBody:
-          "Opti Assist gives every team a single, model-agnostic chat, grounded in your orders, standard operating procedures and work order instructions. Ask what the next order needs, which procedure applies to the changeover, or how a step in the work order should be done, and get an answer with sources, in plain language. Scan the QR code on a machine or workstation, and Opti Assist already knows which one you mean.",
-        valueTitle: "One assistant for the whole company",
+          "Opti Assist is your company's knowledge bank. Work order instructions, standard operating procedures, service requests and quality checks live in one place, and the team uses them as tools in the work: pull up the instruction for the order in front of you, follow the procedure step by step, raise a service request or run a quality check. Scan the QR code on a machine or workstation, and Opti Assist already knows which one you mean.",
+        valueTitle: "One knowledge bank for the whole company",
         valueBody:
-          "Operators, planners and managers shouldn't need a data analyst to get an answer. Most of the knowledge in a factory is spread across dashboards, SOPs, maintenance logs and the heads of a few experienced people. Opti Assist puts it in one place. It connects your documented knowledge with your live operations in the OptiPeople Data Platform, so anyone can ask a question, see where the answer came from and act on it, whether they sit in the office or stand at the machine.",
+          "Most of what a factory knows is spread across binders, shared drives, old emails and the heads of a few experienced people. When a question comes up in the middle of a shift, nobody has time to look in four places. Opti Assist puts it in one place and makes it usable: the right instruction for the order, the procedure for the changeover, the check that has to be done before the run starts. Ask in plain words, see where the answer came from, and get on with the job, whether you sit in the office or stand at the machine.",
         capabilitiesTitle: "What Opti Assist can do",
         capabilities: [
           {
-            title: "Model-agnostic by design",
+            title: "Work order instructions",
             description:
-              "Switch between the best available models for the task at hand. You're never locked to a single vendor, and new models are available as they ship, without changing how your team works.",
+              "The instruction for the order in front of you, step by step, with the setup sheet that belongs to it. No hunting through folders for the right revision.",
           },
           {
-            title: "Your knowledge bank for the work",
+            title: "Standard operating procedures",
             description:
-              "Opti Assist works as your company's knowledge bank. Work order instructions, standard operating procedures, service requests and quality checks live in one place, and the team uses them as tools: pull up the instruction for the order in front of you, follow the procedure step by step, raise a service request or run a quality check.",
+              "Changeovers, cleaning, start-up and shutdown. Ask how it is done here, and Opti Assist walks you through your own procedure, one step at a time.",
           },
           {
-            title: "Grounded in your knowledge",
+            title: "Service requests",
             description:
-              "Attach documents, SOPs and reports, or query company knowledge directly. Answers cite the sources they came from, so you can open the original and check it yourself.",
+              "Something is wrong with the machine? Raise a service request straight from Opti Assist. It already knows which machine it is, so the right people get the request with the context they need.",
           },
           {
-            title: "Connected to live operations",
+            title: "Quality checks",
             description:
-              "Ask about OEE, downtime causes or shift performance and get answers from your real production data in the platform, not last week's spreadsheet. The numbers you get are the numbers on the floor.",
+              "Run the quality check the order calls for, with the limits and the method from your own documents.",
           },
           {
-            title: "Built for the shopfloor",
+            title: "A QR code on every machine",
             description:
-              "Put a QR code on each machine or workstation. An operator scans it and Opti Assist already knows which machine they mean, so they can ask why it stopped last shift, what the setup sheet says for the next order, or how a fault was fixed last time. Short questions, concrete answers, no query language.",
+              "Put a QR code on each machine or workstation. An operator scans it and Opti Assist already knows which machine they mean, so the instructions, procedures and checks for exactly that machine are right there.",
           },
           {
-            title: "Works on your data only",
+            title: "Answers with sources, from your own knowledge",
             description:
-              "Opti Assist answers from your own production data (OEE, stop causes, maintenance logs, energy data) and your own documents. Access follows the permissions you set.",
-          },
-          {
-            title: "From answer to action",
-            description:
-              "A good answer is often the start of a task: draft the shift summary, list the top stop causes for the morning meeting, or hand the result to a workflow or agent that carries it further.",
+              "Opti Assist answers from your own documents and your own data, and every answer shows where it came from, so you can open the original and check it. Access follows the permissions you set, and you choose the AI model.",
           },
         ],
         useCasesTitle: "How teams use it",
         useCases: [
           {
-            title: "Before the morning meeting",
+            title: "When a new order starts",
             description:
-              "A team lead asks for yesterday's OEE per line and the top three stop causes. The summary is ready before the board meeting starts. No one spent the morning pulling numbers.",
+              "An operator scans the QR code on the machine and asks what the next order needs. Opti Assist pulls up the work order instruction, the setup sheet and the procedure for the changeover.",
           },
           {
-            title: "At the machine or workstation",
+            title: "Before the run starts",
             description:
-              "An operator hits an unfamiliar fault, scans the QR code on the machine and asks how it was handled before. Opti Assist knows which machine it is and finds the relevant entries in the maintenance log and the matching SOP section.",
+              "The first part is off the machine. Opti Assist brings up the quality check for the order, with the dimensions to measure and the limits to hold, so the run starts on a checked part.",
           },
           {
-            title: "For the weekly report",
+            title: "When something goes wrong",
             description:
-              "A plant manager asks for the week's performance against last week: downtime, output and energy per unit. The answer is grounded in live data, with sources to check.",
+              "A fault nobody on the shift has seen before. The operator asks how it was handled last time, follows the procedure, and raises a service request from the same place if it needs a technician.",
           },
         ],
-        ctaTitle: "Put an AI assistant in every team's hands",
+        ctaTitle: "Put your company's knowledge at every machine",
         ctaBody:
-          "See how Opti Assist answers questions from your own production data in a short demo, with your machines, your stop causes and your documents.",
+          "See in a short demo how Opti Assist works as a knowledge bank, with your own instructions, procedures and quality checks.",
         primaryCtaLabel: "Book a demo",
       },
       da: {
         cardTitle: "Chat",
-        cardSubtitle: "En AI-assistent til alle i virksomheden.",
-        metaTitle: "Opti Assist | AI-chat til jeres drift",
+        cardSubtitle: "Virksomhedens vidensbank, et scan væk ved hver maskine.",
+        metaTitle: "Opti Assist | Vidensbank til produktionen",
         metaDescription:
-          "Opti Assist er en AI-chat til hele teamet. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, virksomheden ved i forvejen.",
-        eyebrow: "Opti Assist: Chat og QR-koder",
-        heroTitle: "AI-chat og QR-koder, alle i driften kan bruge",
+          "Opti Assist er virksomhedens vidensbank: arbejdsinstruktioner, standardprocedurer, serviceanmodninger og kvalitetstjek samlet ét sted, et QR-scan væk ved hver maskine.",
+        eyebrow: "Opti Assist: Vidensbank og QR-koder",
+        heroTitle: "Alt det, virksomheden ved, ude ved maskinen",
         heroBody:
-          "Opti Assist er én chat til hele huset. Den svarer ud fra jeres ordrer, standardprocedurer og arbejdsinstruktioner. Spørg, hvad den næste ordre kræver, hvilken procedure der gælder for omstillingen, eller hvordan et trin i arbejdsordren skal udføres. I får svaret i almindeligt sprog og kan se, hvor det kommer fra. Scan QR-koden på maskinen eller arbejdsstationen, så ved Opti Assist allerede, hvilken det handler om.",
-        valueTitle: "Én assistent til hele virksomheden",
+          "Opti Assist er virksomhedens vidensbank. Arbejdsinstruktioner, standardprocedurer, serviceanmodninger og kvalitetstjek ligger samme sted, og teamet bruger dem som værktøjer i arbejdet: find instruktionen til den ordre, der kører, følg proceduren trin for trin, opret en serviceanmodning, eller lav et kvalitetstjek. Scan QR-koden på maskinen eller arbejdsstationen, så ved Opti Assist allerede, hvilken det handler om.",
+        valueTitle: "Én vidensbank til hele virksomheden",
         valueBody:
-          "Ingen skal have en dataanalytiker ved siden af sig for at få et svar. Det meste af det, en fabrik ved, ligger spredt: i dashboards, i arbejdsbeskrivelser, i vedligeholdsloggen og i hovedet på et par erfarne kolleger. Når spørgsmålet kommer midt i et skift, er der ikke tid til at lede fire steder. Opti Assist samler trådene. Den kobler det, I har skrevet ned, sammen med det, der sker i OptiPeople Data Platform lige nu. Så kan alle spørge, se, hvor svaret kommer fra, og gøre noget ved det. Også dem, der står ude ved maskinen.",
+          "Det meste af det, en fabrik ved, ligger spredt: i ringbind, på fællesdrevet, i gamle mails og i hovedet på et par erfarne kolleger. Når spørgsmålet kommer midt i et skift, er der ikke tid til at lede fire steder. Opti Assist samler det ét sted og gør det til noget, man kan bruge: den rigtige instruktion til ordren, proceduren til omstillingen, tjekket, der skal laves, før produktionen går i gang. Spørg med almindelige ord, se, hvor svaret kommer fra, og kom videre. Også dem, der står ude ved maskinen.",
         capabilitiesTitle: "Det kan Opti Assist",
         capabilities: [
           {
-            title: "I vælger selv AI-modellen",
+            title: "Arbejdsinstruktioner",
             description:
-              "Skift til den model, der er bedst til opgaven. I er ikke bundet til én leverandør, og nye modeller kan tages i brug, så snart de er der, uden at teamet skal lave noget om.",
+              "Instruktionen til den ordre, der kører, trin for trin, med det opstillingsark, der hører til. Ingen skal lede i mapperne efter den rigtige revision.",
           },
           {
-            title: "Jeres vidensbank til arbejdet",
+            title: "Standardprocedurer",
             description:
-              "Opti Assist er virksomhedens vidensbank. Arbejdsinstruktioner, standardprocedurer, serviceanmodninger og kvalitetstjek ligger samme sted, og teamet bruger dem som værktøjer: find instruktionen til den ordre, der kører, følg proceduren trin for trin, opret en serviceanmodning, eller lav et kvalitetstjek.",
+              "Omstilling, rengøring, opstart og nedlukning. Spørg, hvordan det gøres her, så tager Opti Assist jer igennem jeres egen procedure, ét trin ad gangen.",
           },
           {
-            title: "Svar ud fra det, I ved",
+            title: "Serviceanmodninger",
             description:
-              "Vedhæft dokumenter, arbejdsbeskrivelser og rapporter, eller søg direkte i det, virksomheden har liggende. Svaret siger, hvor det kommer fra, så I selv kan åbne originalen og tjekke efter.",
+              "Er der noget galt med maskinen? Opret en serviceanmodning direkte fra Opti Assist. Den ved allerede, hvilken maskine det er, så de rigtige folk får anmodningen med det, de skal vide.",
           },
           {
-            title: "Tallene er dem fra i dag",
+            title: "Kvalitetstjek",
             description:
-              "Spørg om OEE, stopårsager eller hvordan skiftet gik, og få svar fra de data, der ligger i platformen lige nu. Ikke fra sidste uges regneark. Tallene i svaret er tallene på gulvet.",
+              "Lav det kvalitetstjek, ordren kræver, med de grænser og den metode, der står i jeres egne dokumenter.",
           },
           {
-            title: "Lavet til gulvet",
+            title: "En QR-kode på hver maskine",
             description:
-              "Sæt en QR-kode på hver maskine og arbejdsstation. Operatøren scanner den, og så ved Opti Assist allerede, hvilken maskine det handler om. Spørg, hvorfor den stoppede i går, hvad opstillingsarket siger til næste ordre, eller hvordan fejlen blev løst sidst. Korte spørgsmål, konkrete svar. Man skal ikke kunne kode for at spørge.",
+              "Sæt en QR-kode på hver maskine og arbejdsstation. Operatøren scanner den, og så ved Opti Assist allerede, hvilken maskine det handler om. Instruktioner, procedurer og tjek til netop den maskine ligger lige der.",
           },
           {
-            title: "Kun jeres egne data",
+            title: "Svar med kilder, ud fra det, I ved",
             description:
-              "Opti Assist svarer ud fra det, I selv har: OEE, stopårsager, vedligeholdslogs, energital og jeres egne dokumenter. Hvem der kan se hvad, følger de rettigheder, I selv sætter.",
-          },
-          {
-            title: "Svaret kan sætte noget i gang",
-            description:
-              "Et godt svar er tit starten på en opgave. Lad den skrive udkastet til skiftrapporten, samle de største stopårsager til morgenmødet eller sende resultatet videre til et workflow eller en agent.",
+              "Opti Assist svarer ud fra jeres egne dokumenter og jeres egne data, og hvert svar viser, hvor det kommer fra, så I selv kan åbne originalen og tjekke efter. Hvem der kan se hvad, følger de rettigheder, I sætter, og I vælger selv AI-modellen.",
           },
         ],
         useCasesTitle: "Sådan bliver det brugt",
         useCases: [
           {
-            title: "Før morgenmødet",
+            title: "Når en ny ordre starter",
             description:
-              "En teamleder spørger om OEE pr. linje i går og de tre største stopårsager. Overblikket er klar, før tavlemødet går i gang, og ingen har brugt morgenen på at trække tal.",
+              "Operatøren scanner QR-koden på maskinen og spørger, hvad den næste ordre kræver. Opti Assist finder arbejdsinstruktionen, opstillingsarket og proceduren til omstillingen.",
           },
           {
-            title: "Ude ved maskinen eller arbejdsstationen",
+            title: "Før produktionen går i gang",
             description:
-              "En operatør står med en fejl, hun ikke har set før. Hun scanner QR-koden på maskinen og spørger, hvordan den blev klaret sidst. Opti Assist ved, hvilken maskine det er, og finder de rigtige poster i vedligeholdsloggen og det afsnit i arbejdsbeskrivelsen, der handler om det.",
+              "Første emne er af maskinen. Opti Assist finder kvalitetstjekket til ordren, med de mål, der skal tages, og de grænser, der skal holdes. Så starter produktionen på et emne, der er tjekket.",
           },
           {
-            title: "Til ugerapporten",
+            title: "Når noget går galt",
             description:
-              "En fabrikschef spørger, hvordan ugen gik sammenlignet med ugen før: nedetid, produceret antal og energi pr. enhed. Svaret bygger på de aktuelle tal, og kilderne kan tjekkes.",
+              "En fejl, ingen på skiftet har set før. Operatøren spørger, hvordan den blev klaret sidst, følger proceduren og opretter en serviceanmodning samme sted, hvis der skal en tekniker til.",
           },
         ],
-        ctaTitle: "Giv hele teamet en AI-assistent",
+        ctaTitle: "Giv hver maskine adgang til det, virksomheden ved",
         ctaBody:
-          "Se på en kort demo, hvordan Opti Assist svarer på spørgsmål om jeres egen produktion, med jeres maskiner, jeres stopårsager og jeres dokumenter.",
+          "Se på en kort demo, hvordan Opti Assist virker som vidensbank, med jeres egne instruktioner, procedurer og kvalitetstjek.",
         primaryCtaLabel: "Book en demo",
       },
     },
