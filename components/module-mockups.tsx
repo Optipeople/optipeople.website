@@ -1525,7 +1525,7 @@ const PLAN_GROUPS: PlanGroup[] = [
     ],
   },
   {
-    route: "Aluminium facade",
+    route: "Aluminum facade",
     rows: [
       { entity: "CNC Cutter", bars: [{ start: 0.7, span: 1.4, tone: PLAN_TONES.ready }] },
       {
@@ -1896,7 +1896,7 @@ const ORDER_ROWS: OrderRow[] = [
   },
   {
     id: "WO-10482",
-    product: "Wood/aluminium window A12",
+    product: "Wood/aluminum window A12",
     due: "Fri 3 Jul",
     edge: "#e05b52",
     status: "In progress",
@@ -1930,7 +1930,7 @@ const ORDER_ROWS: OrderRow[] = [
   },
   {
     id: "WO-10492",
-    product: "Aluminium window AW-7",
+    product: "Aluminum window AW-7",
     due: "Thu 9 Jul",
     edge: "#e8a94e",
     status: "Planned",
@@ -1938,7 +1938,7 @@ const ORDER_ROWS: OrderRow[] = [
   },
   {
     id: "WO-10485",
-    product: "Wood/aluminium window A14",
+    product: "Wood/aluminum window A14",
     due: "Fri 10 Jul",
     edge: "#e8a94e",
     status: "Planned",
@@ -1946,7 +1946,7 @@ const ORDER_ROWS: OrderRow[] = [
   },
   {
     id: "WO-10494",
-    product: "Wood/aluminium window A16",
+    product: "Wood/aluminum window A16",
     due: "Mon 13 Jul",
     edge: "#e8a94e",
     status: "Planned",

@@ -56,7 +56,7 @@ export const aiStackSliderCopy: Record<
   en: {
     eyebrow: "OptiPeople AI",
     title: "The essential AI stack for your operation.",
-    subtitle: "Simple for every team. Ready for advanced production use-cases.",
+    subtitle: "Simple for every team. Ready for advanced production use cases.",
   },
   da: {
     eyebrow: "OptiPeople AI",
@@ -119,7 +119,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Works on your data only",
             description:
-              "Opti Assist answers from your own production data, OEE, stop causes, maintenance logs, energy data, and your own documents. Access follows the permissions you set.",
+              "Opti Assist answers from your own production data (OEE, stop causes, maintenance logs, energy data) and your own documents. Access follows the permissions you set.",
           },
           {
             title: "From answer to action",
@@ -142,7 +142,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "For the weekly report",
             description:
-              "A plant manager asks for the week's performance against last week, downtime, output, energy per unit. The answer is grounded in live data, with sources to check.",
+              "A plant manager asks for the week's performance against last week: downtime, output and energy per unit. The answer is grounded in live data, with sources to check.",
           },
         ],
         ctaTitle: "Put an AI assistant in every team's hands",
@@ -156,7 +156,7 @@ export const aiCapabilities: AiCapability[] = [
         metaTitle: "Opti Assist | AI-chat til jeres drift",
         metaDescription:
           "Opti Assist er en AI-chat til hele teamet. Den svarer ud fra jeres egne produktionsdata, jeres dokumenter og det, virksomheden ved i forvejen.",
-        eyebrow: "Opti Assist – Chat og QR-koder",
+        eyebrow: "Opti Assist: Chat og QR-koder",
         heroTitle: "AI-chat og QR-koder, alle i driften kan bruge",
         heroBody:
           "Opti Assist er én chat til hele huset. Den svarer ud fra jeres ordrer, standardprocedurer og arbejdsinstruktioner. Spørg, hvad den næste ordre kræver, hvilken procedure der gælder for omstillingen, eller hvordan et trin i arbejdsordren skal udføres. I får svaret i almindeligt sprog og kan se, hvor det kommer fra. Scan QR-koden på maskinen eller arbejdsstationen, så ved Opti Assist allerede, hvilken det handler om.",
@@ -254,7 +254,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Trigger on real events",
             description:
-              "Start a workflow from a downtime event, a schedule, a new document or an inbound request. The trigger carries its context, machine or workstation, order, shift, so every step downstream knows what it's working on.",
+              "Start a workflow from a downtime event, a schedule, a new document or an inbound request. The trigger carries its context (machine or workstation, order, shift), so every step downstream knows what it's working on.",
           },
           {
             title: "AI where it adds value",
@@ -269,7 +269,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "People in the loop",
             description:
-              "Not everything should run unattended. Add approval steps so a person confirms before a task is created or a report is sent. The workflow does the legwork, you keep the sign-off.",
+              "Not everything should run unattended. Add approval steps so a person confirms before a task is created or a report is sent. The workflow does the legwork; you keep the sign-off.",
           },
           {
             title: "Connected to your systems",
@@ -381,11 +381,11 @@ export const aiCapabilities: AiCapability[] = [
         cardSubtitle: "Custom AI for recurring tasks.",
         metaTitle: "AI Agents | Custom AI for recurring tasks",
         metaDescription:
-          "Build custom AI agents that handle recurring operational tasks, searching, reading, reasoning and acting on your data. Part of Opti Assist.",
+          "Build custom AI agents that handle recurring operational tasks: searching, reading, reasoning and acting on your data. Part of Opti Assist.",
         eyebrow: "Agents",
         heroTitle: "Custom AI for recurring tasks",
         heroBody:
-          "Agents are purpose-built assistants that handle a recurring job end to end, searching your sources, reading documents, reasoning over the result and generating the response. You describe the task once; the agent runs it the same way every time it's needed.",
+          "Agents are purpose-built assistants that handle a recurring job end to end: searching your sources, reading documents, reasoning over the result and generating the response. You describe the task once; the agent runs it the same way every time it's needed.",
         valueTitle: "Hand off the routine, keep the oversight",
         valueBody:
           "Some tasks come back every day: reviewing offers, comparing specs, drafting the morning summary, checking new fault reports against the maintenance history. They aren't hard. They're just time-consuming, and they compete with the work that actually needs a person. An agent does the legwork the same way every time, shows every step it took, and hands you a result you can check before anything happens with it. The difference from a chat is persistence: you set the task up once, and the agent is ready whenever the job comes back.",
@@ -399,7 +399,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Reads and reasons over your data",
             description:
-              "Agents search folders, open documents and pull from connected systems before they answer, production data, maintenance logs, specs. The output is grounded in what they actually found.",
+              "Agents search folders, open documents and pull from connected systems before they answer: production data, maintenance logs, specs. The output is grounded in what they actually found.",
           },
           {
             title: "Transparent, step by step",
@@ -427,7 +427,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "The morning summary agent",
             description:
-              "Every morning it reads the last 24 hours of production data, OEE per line, the biggest stops, orders behind plan, and drafts the summary the team lead used to write by hand.",
+              "Every morning it reads the last 24 hours of production data (OEE per line, the biggest stops, orders behind plan) and drafts the summary the team lead used to write by hand.",
           },
           {
             title: "The fault triage agent",
@@ -463,7 +463,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Én opgave, gjort ordentligt",
             description:
-              "Giv agenten en klar opgave, de kilder den må bruge, og de værktøjer, den skal have. Så kører den den samme fremgangsmåde hver gang. Ingen skal forklare den opgaven forfra, og den finder ikke selv på noget undervejs.",
+              "Giv agenten en klar opgave, de kilder, den må bruge, og de værktøjer, den skal have. Så kører den den samme fremgangsmåde hver gang. Ingen skal forklare den opgaven forfra, og den finder ikke selv på noget undervejs.",
           },
           {
             title: "Læser jeres data, før den svarer",
@@ -526,11 +526,11 @@ export const aiCapabilities: AiCapability[] = [
         cardSubtitle: "Connects with the ERP systems you already run.",
         metaTitle: "Integrations | Connect your ERP and tools",
         metaDescription:
-          "OptiPeople integrates with the major ERP systems, SAP, Microsoft Dynamics, Business Central and more, plus MQTT, OPC-UA and a REST API for everything else.",
+          "OptiPeople integrates with the major ERP systems (SAP, Microsoft Dynamics, Business Central and more), plus MQTT, OPC-UA and a REST API for everything else.",
         eyebrow: "Integrations",
         heroTitle: "Connects with the systems you already run",
         heroBody:
-          "OptiPeople plugs into the big ERP systems, speaks the machine protocols on your floor, MQTT and OPC-UA, and offers a REST API for everything else. Production data, orders and documents flow between systems without manual re-keying.",
+          "OptiPeople plugs into the big ERP systems, speaks the machine protocols on your floor (MQTT and OPC-UA) and offers a REST API for everything else. Production data, orders and documents flow between systems without manual re-keying.",
         valueTitle: "Your AI is only as good as its connections",
         valueBody:
           "An assistant that can't see your ERP is just a chatbot, and a dashboard that can't hear your machines is just a picture. Real operational AI needs both ends connected: the business systems that hold orders, items and plans, and the machines that produce them. We connect to the systems of record in your back office and to the PLCs and sensors on your floor, so the OptiPeople Data Platform, and every AI capability built on it, works from the same data your business already trusts. One integration, maintained once, feeding everything.",
@@ -554,7 +554,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "A REST API for the rest",
             description:
-              "Anything without a standard connector can integrate through the REST API, pull production data out or push data in, in plain JSON.",
+              "Anything without a standard connector can integrate through the REST API: pull production data out or push data in, in plain JSON.",
           },
           {
             title: "The tools around them",
@@ -564,7 +564,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Two-way by design",
             description:
-              "Read live data in and write actions back, create orders, update tasks and post results where your teams already look. Integration isn't just import.",
+              "Read live data in and write actions back: create orders, update tasks and post results where your teams already look. Integration isn't just import.",
           },
         ],
         useCasesTitle: "How teams use it",
@@ -572,7 +572,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Orders from ERP, results back",
             description:
-              "Production orders flow from the ERP into the platform, operators run them on the floor, and progress and quantities are reported back, nobody re-keys an order number twice.",
+              "Production orders flow from the ERP into the platform, operators run them on the floor, and progress and quantities are reported back. Nobody re-keys an order number twice.",
           },
           {
             title: "Machines onto the platform",
@@ -671,20 +671,20 @@ export const aiCapabilities: AiCapability[] = [
         cardSubtitle: "A public REST API to build on your data.",
         metaTitle: "API | Build on your OptiPeople data",
         metaDescription:
-          "OptiPeople offers a public REST API so you can build on top of your production data, OEE, machines, stops, shifts and telemetry, in plain JSON.",
+          "OptiPeople offers a public REST API so you can build on top of your production data (OEE, machines, stops, shifts and telemetry) in plain JSON.",
         eyebrow: "API",
         heroTitle: "A public REST API to build on your data",
         heroBody:
-          "Everything you see in the OptiPeople Data Platform is available programmatically. Pull OEE, machines, stops, shifts and telemetry into your own apps, dashboards and automations with a documented REST API, plain JSON over HTTPS, authenticated with an access key you create in the portal.",
+          "Everything you see in the OptiPeople Data Platform is available programmatically. Pull OEE, machines, stops, shifts and telemetry into your own apps, dashboards and automations with a documented REST API: plain JSON over HTTPS, authenticated with an access key you create in the portal.",
         valueTitle: "Your data, on your terms",
         valueBody:
-          "Sometimes the value is in your own system: a BI model your controllers maintain, a shopfloor screen your operators watch, an internal app your IT team owns. The platform REST API gives developers direct, authenticated access to production data, so you can extend the platform however your business needs. The data flows both ways, export what OptiPeople Data Platform has collected, or send machine states, part counters and telemetry in from your own systems over MQTT with a documented JSON schema. No black-box lock-in: the data is yours, and the API proves it.",
+          "Sometimes the value is in your own system: a BI model your controllers maintain, a shopfloor screen your operators watch, an internal app your IT team owns. The platform REST API gives developers direct, authenticated access to production data, so you can extend the platform however your business needs. The data flows both ways: export what OptiPeople Data Platform has collected, or send machine states, part counters and telemetry in from your own systems over MQTT with a documented JSON schema. No black-box lock-in: the data is yours, and the API proves it.",
         capabilitiesTitle: "Developer-ready",
         capabilities: [
           {
             title: "Clean REST endpoints",
             description:
-              "Predictable, resource-based endpoints with JSON responses for machines, OEE, stops, telemetry and more. Test a connection directly in the browser, if the endpoint returns JSON, you're connected.",
+              "Predictable, resource-based endpoints with JSON responses for machines, OEE, stops, telemetry and more. Test a connection directly in the browser: if the endpoint returns JSON, you're connected.",
           },
           {
             title: "Documented with Swagger",
@@ -704,7 +704,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Filter to what you need",
             description:
-              "Query parameters like machineId, from and to limit a response to one machine or one time window, pull a single line's night shift instead of the whole plant's history.",
+              "Query parameters like machineId, from and to limit a response to one machine or one time window. Pull a single line's night shift instead of the whole plant's history.",
           },
           {
             title: "Send data in over MQTT",
@@ -722,7 +722,7 @@ export const aiCapabilities: AiCapability[] = [
           {
             title: "Your own screens and apps",
             description:
-              "IT builds a shopfloor display or an internal app on live production data, the API serves the same numbers the platform shows, so the two never disagree.",
+              "IT builds a shopfloor display or an internal app on live production data. The API serves the same numbers the platform shows, so the two never disagree.",
           },
           {
             title: "Feeding data in",

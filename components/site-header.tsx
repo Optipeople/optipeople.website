@@ -151,7 +151,7 @@ export function SiteHeader() {
           <Link href="/" className="flex cursor-pointer items-center gap-3">
             <Image
               src={logo}
-              alt="Optipeople"
+              alt="OptiPeople"
               width={140}
               height={28}
               className="h-7 w-auto"
@@ -425,7 +425,7 @@ function MobileNav({ menus, links }: { menus: NavMenu[]; links: NavItem[] }) {
           <div className="flex h-16 shrink-0 items-center justify-between border-b border-border/60 px-6">
             <Image
               src={logo}
-              alt="Optipeople"
+              alt="OptiPeople"
               width={140}
               height={28}
               className="h-7 w-auto"

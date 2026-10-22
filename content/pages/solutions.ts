@@ -32,14 +32,14 @@ const solutions: LocalizedPage<StandardPage>[] = [
     href: "/solutions/manufacturing",
     content: {
       en: {
-        metaTitle: "Manufacturing Solutions | OptiPeople",
+        metaTitle: "Manufacturing solutions | OptiPeople",
         metaDescription:
           "Connect machines, track OEE in real time and run your production floor on data. See how OptiPeople gives manufacturers better visibility and less downtime.",
-        eyebrow: "For Manufacturing Companies",
-        heroTitle: "Know Your Factory. In Real Time.",
+        eyebrow: "For manufacturing companies",
+        heroTitle: "Know your factory in real time",
         heroBody:
           "Connect every machine, capture manufacturing data automatically, and give your team the visibility to act on problems while they still matter.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Most factories still run on yesterday's numbers",
         introBody:
           "Shift reports arrive late. Downtime reasons live in notebooks. OEE is calculated in spreadsheets that nobody trusts. By the time you see the data, the moment to act has already passed. OptiPeople replaces guesswork with live signals from every machine, every shift, every line.",
@@ -47,37 +47,37 @@ const solutions: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Activity,
-            title: "Live Production Monitoring",
+            title: "Live production monitoring",
             description:
               "See machine status, production counts, and line performance in real time. Know what is running, what is stopped, and why.",
           },
           {
             icon: Gauge,
-            title: "Automatic OEE Tracking",
+            title: "Automatic OEE tracking",
             description:
               "Availability, performance, and quality calculated automatically. Drill down by shift, line, machine, or workstation without touching a spreadsheet.",
           },
           {
             icon: Wrench,
-            title: "Stop Cause Registration",
+            title: "Stop cause registration",
             description:
               "Operators register downtime reasons at the machine or workstation. You get clean data on where time is lost and can prioritize the improvements that matter.",
           },
           {
             icon: BarChart3,
-            title: "Shift and Production Reports",
+            title: "Shift and production reports",
             description:
               "Automated daily, weekly, and monthly reports delivered to the right people. No manual compilation, no conflicting numbers.",
           },
           {
             icon: Radio,
-            title: "Machine Connectivity",
+            title: "Machine connectivity",
             description:
               "Connect any machine, new or legacy, through OPC-UA, Modbus, IO-Link, or simple sensor kits. No rip-and-replace required.",
           },
           {
             icon: Bell,
-            title: "Smart Alerts and Escalation",
+            title: "Smart alerts and escalation",
             description:
               "Get notified the moment a line goes down or performance drops below target. Route alerts to the right person automatically.",
           },
@@ -88,13 +88,13 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualImage: "/images/Mockups/Report-OEE-Efficiency-No-Filter.webp",
         visualAlt:
           "OptiPeople manufacturing report showing OEE gauges, a shift timeline and stop distribution",
-        metricsTitle: "Typical Results",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "15-25%", label: "OEE improvement in first year" },
           { metric: "40%", label: "Reduction in unplanned downtime" },
           { metric: "2 hrs", label: "Saved daily on manual reporting" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Connect",
@@ -179,14 +179,14 @@ const solutions: LocalizedPage<StandardPage>[] = [
     href: "/solutions/oems",
     content: {
       en: {
-        metaTitle: "OEM Solutions | OptiPeople",
+        metaTitle: "OEM solutions | OptiPeople",
         metaDescription:
           "Ship connected machines with built-in intelligence. Monitor performance in the field, support customers proactively and build recurring digital revenue.",
-        eyebrow: "For OEMs and Machine Builders",
-        heroTitle: "Turn Machines Into Platforms",
+        eyebrow: "For OEMs and machine builders",
+        heroTitle: "Turn machines into platforms",
         heroBody:
           "Ship connected machines with built-in intelligence. Monitor performance in the field, support customers before they call, and build recurring digital revenue on top of your equipment.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Selling machines is not enough anymore",
         introBody:
           "Your competitors are offering connected solutions. Your customers expect remote support, predictive insights, and digital services. Without a platform, you are leaving revenue on the table and letting others own the relationship after the sale. OptiPeople gives you the infrastructure to turn every machine you ship into a connected product.",
@@ -194,37 +194,37 @@ const solutions: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Globe,
-            title: "Remote Fleet Monitoring",
+            title: "Remote fleet monitoring",
             description:
               "See the status and performance of every machine you have shipped, across every customer site, from a single dashboard.",
           },
           {
             icon: Shield,
-            title: "Proactive Customer Support",
+            title: "Proactive customer support",
             description:
               "Detect anomalies and performance degradation before your customer notices. Reach out with a solution before they file a ticket.",
           },
           {
             icon: TrendingUp,
-            title: "Usage and Performance Analytics",
+            title: "Usage and performance analytics",
             description:
               "Give customers deep insight into how their machines perform. Drive engagement and make your machines indispensable.",
           },
           {
             icon: RefreshCw,
-            title: "Digital Service Packages",
+            title: "Digital service packages",
             description:
               "Bundle monitoring, alerts, and analytics into subscription offerings. Turn aftermarket into a revenue stream, not a cost center.",
           },
           {
             icon: Lock,
-            title: "Multi-Tenant Data Isolation",
+            title: "Multi-tenant data isolation",
             description:
               "Each customer's data stays separate and secure. Role-based access ensures the right people see the right information.",
           },
           {
             icon: Plug,
-            title: "Open Integration Layer",
+            title: "Open integration layer",
             description:
               "Connect through OPC-UA, MQTT, REST APIs, or direct PLC integration. Works with your existing machine architecture.",
           },
@@ -235,13 +235,13 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualImage: "/images/OpticloudOPSingle.jpg",
         visualAlt:
           "OptiPeople white-label portal showing machine data tables and OEE dashboard for connected equipment",
-        metricsTitle: "What Connected Machine Builders Achieve",
+        metricsTitle: "What connected machine builders achieve",
         metrics: [
           { metric: "3x", label: "Growth in aftermarket revenue" },
           { metric: "60%", label: "Faster issue resolution with remote diagnostics" },
           { metric: "35%", label: "Higher customer retention with digital services" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Integrate",
@@ -328,14 +328,14 @@ const solutions: LocalizedPage<StandardPage>[] = [
     href: "/solutions/service",
     content: {
       en: {
-        metaTitle: "Service Solutions | OptiPeople",
+        metaTitle: "Service solutions | OptiPeople",
         metaDescription:
           "Give your service team real visibility into machine health and usage. Plan maintenance on facts, cut emergency callouts and make service your edge.",
-        eyebrow: "For Service and Aftermarket Teams",
-        heroTitle: "Fix Problems Before Customers Feel Them",
+        eyebrow: "For service and aftermarket teams",
+        heroTitle: "Fix problems before customers feel them",
         heroBody:
           "Give your service team real visibility into machine health and usage. Plan maintenance on facts, reduce emergency callouts, and turn service from a cost center into a competitive advantage.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Reactive service is expensive and exhausting",
         introBody:
           "Your technicians spend more time firefighting than preventing. Maintenance schedules are based on calendar intervals, not actual usage. When a machine goes down at a customer site, you scramble. OptiPeople gives your service team the data to act before failures happen and the tools to plan maintenance that actually prevents problems.",
@@ -343,37 +343,37 @@ const solutions: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: HeartPulse,
-            title: "Machine Health Monitoring",
+            title: "Machine health monitoring",
             description:
               "Track vibration, temperature, energy consumption, and operating parameters in real time. See degradation trends before they become breakdowns.",
           },
           {
             icon: Calendar,
-            title: "Usage-Based Maintenance",
+            title: "Usage-based maintenance",
             description:
               "Schedule maintenance based on actual operating hours and conditions, not arbitrary calendar intervals. Do the right work at the right time.",
           },
           {
             icon: MapPin,
-            title: "Remote Diagnostics",
+            title: "Remote diagnostics",
             description:
               "Diagnose issues remotely before dispatching a technician. Arrive prepared with the right parts and the right knowledge.",
           },
           {
             icon: ClipboardCheck,
-            title: "Service Task Management",
+            title: "Service task management",
             description:
               "Assign, track, and document service tasks digitally. Build a complete service history for every machine.",
           },
           {
             icon: BellRing,
-            title: "Automated Service Alerts",
+            title: "Automated service alerts",
             description:
               "Get notified when a machine crosses a threshold or shows early signs of failure. Respond before the customer even notices.",
           },
           {
             icon: FileText,
-            title: "Service Contracts and Reporting",
+            title: "Service contracts and reporting",
             description:
               "Deliver data-backed service reports to customers. Use machine data to design and price service agreements with confidence.",
           },
@@ -384,7 +384,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
         visualImage: "/images/report-mockup1.png",
         visualAlt:
           "OptiPeople machine report showing availability, unit counters and output per hour",
-        metricsTitle: "Typical Results",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "50%", label: "Fewer emergency service callouts" },
           {
@@ -393,7 +393,7 @@ const solutions: LocalizedPage<StandardPage>[] = [
           },
           { metric: "30%", label: "Increase in service contract revenue" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Connect",

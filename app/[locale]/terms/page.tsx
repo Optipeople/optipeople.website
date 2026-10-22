@@ -16,7 +16,7 @@ type Props = { params: Promise<{ locale: string }> }
 // and must be updated there when this draft is approved.
 const meta: Record<Locale, { title: string; description: string }> = {
   en: {
-    title: "Terms of Service",
+    title: "Terms of service",
     description:
       "The terms that govern your use of the OptiPeople website and its content.",
   },
@@ -33,7 +33,7 @@ const updated: Record<Locale, string> = {
   da: "24. august 2026",
 }
 const heading: Record<Locale, string> = {
-  en: "Terms of Service",
+  en: "Terms of service",
   da: "Vilkår",
 }
 
@@ -220,13 +220,13 @@ export default async function TermsPage({ params }: Props) {
             <a href="mailto:hi@optipeople.dk">hi@optipeople.dk</a> or
             +45 23 74 47 05.
           </p>
-          <h2>Use of the website and content licence</h2>
+          <h2>Use of the website and content license</h2>
           <p>
             The content on this site is provided as general information about
             OptiPeople, the OptiPeople Data Platform, and our other activities. We grant you a
             limited, revocable, non-exclusive right to view, download, and print
             content from the site for your personal use and for internal use
-            within your organisation. You may not resell, republish, or otherwise
+            within your organization. You may not resell, republish, or otherwise
             commercially exploit the content without our prior written
             permission.
           </p>
@@ -242,7 +242,7 @@ export default async function TermsPage({ params }: Props) {
             software, and other material on this site are owned by OptiPeople
             ApS or our licensors and are protected by applicable
             intellectual-property laws. Nothing in these terms transfers any
-            rights to you beyond the limited licence described above. The
+            rights to you beyond the limited license described above. The
             &quot;OptiPeople&quot; and &quot;OptiPeople Data Platform&quot; names and logos may not be used
             without our written consent.
           </p>
@@ -250,7 +250,7 @@ export default async function TermsPage({ params }: Props) {
           <p>When using the website, you must not:</p>
           <ul>
             <li>
-              attempt to gain unauthorised access to the site, the servers it
+              attempt to gain unauthorized access to the site, the servers it
               runs on, or any connected systems,
             </li>
             <li>
@@ -274,7 +274,7 @@ export default async function TermsPage({ params }: Props) {
             contact form and sign up for our newsletter. You are responsible for
             ensuring that the information you provide is accurate and that you
             only share information you are entitled to share. Submitting an
-            enquiry through the site does not by itself create a customer or
+            inquiry through the site does not by itself create a customer or
             advisory relationship. If you subscribe to the newsletter, you can
             unsubscribe at any time. How we handle personal data is described in
             our <Link href="/privacy">privacy policy</Link>.
@@ -284,7 +284,7 @@ export default async function TermsPage({ params }: Props) {
             Use of the OptiPeople Data Platform, as well as trials, subscriptions,
             support, and other commercial services, is governed exclusively by
             the separate written agreements entered into between your
-            organisation and OptiPeople. These website terms do not apply to the
+            organization and OptiPeople. These website terms do not apply to the
             platform, and nothing on the website amends or supplements those
             agreements. In the event of any conflict, the written agreement
             prevails.

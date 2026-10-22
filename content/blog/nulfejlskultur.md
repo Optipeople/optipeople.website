@@ -10,7 +10,7 @@ Efficiency and optimization are not only about technology. They also depend on p
 
 The article argues that one of the biggest barriers to improvement is fear: fear of making mistakes and fear of speaking openly about problems.
 
-## Data Should Support Improvement, Not Surveillance
+## Data should support improvement, not surveillance
 
 Production data should not be used to monitor employees for its own sake.
 
@@ -22,7 +22,7 @@ Instead, data can help teams:
 
 When data is used transparently, it becomes a tool for learning rather than control.
 
-## Process Improvements Need Openness
+## Process improvements need openness
 
 The article contrasts productive factory culture with environments where people are rewarded when others fail.
 
@@ -34,7 +34,7 @@ That kind of zero-fault culture weakens improvement work. In a stronger producti
 
 The point is not to avoid every mistake. The point is to improve the process continuously.
 
-## Celebrate Results and Learn From Failed Changes
+## Celebrate results and learn from failed changes
 
 Some process changes create good outcomes. Others do not.
 
@@ -45,7 +45,7 @@ Both cases are useful if the team treats them as feedback:
 
 The article frames improvement work as an ongoing journey rather than a one-off project.
 
-## Culture Creates Long-Term Productivity
+## Culture creates long-term productivity
 
 New employees adapt quickly to the culture they enter.
 

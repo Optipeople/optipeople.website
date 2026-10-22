@@ -1,5 +1,5 @@
 ---
-title: "DFI Geisler: Increases Productivity by 5% with OptiPeople Data Platform’s Data-Driven Insights"
+title: "DFI Geisler: Increases productivity by 5% with OptiPeople Data Platform’s data-driven insights"
 date: "2025-01-08"
 author: "OptiPeople Team"
 category: "Cases"
@@ -11,13 +11,13 @@ quote: "Accurate data and downtime registration are crucial for us to address th
 outcome: "Weekly machine reports on the shopfloor turned production data into a daily improvement habit."
 ---
 
-## At a Glance
+## At a glance
 
 DFI Geisler uses OptiPeople Data Platform to track performance on seven selected processing machines in its countertop production on Mors.
 
 Over the past two years, that systematic use of production data has helped the company increase productivity by approximately **5%**.
 
-## The Situation
+## The situation
 
 DFI Geisler wanted a clearer view of how its key machines were performing from day to day.
 
@@ -29,7 +29,7 @@ The team needed a shared way to follow:
 
 That visibility had to support both managers and operators, not just reporting after the fact.
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 OptiPeople Data Platform is used as part of the daily operating rhythm around the seven machines.
 
@@ -37,7 +37,7 @@ Department production managers print weekly machine reports and place them on bo
 
 Managers and employees review the data together and use it to discuss performance, downtime, and possible improvements.
 
-## What Made the Setup Work
+## What made the setup work
 
 Two elements stand out in the DFI Geisler setup.
 
@@ -57,7 +57,7 @@ Instead of treating stops as isolated incidents, the team uses patterns in the d
 
 Production managers also review trends in machine breakdown causes over time, which supports more focused improvement work.
 
-## The Result
+## The result
 
 The result has been a measurable productivity improvement of around **5%** over two years.
 
@@ -67,7 +67,7 @@ The company sees that better data alone is not enough. The value comes from comb
 
 > "For some of our operators, recording accurate data has become a kind of competition to maximize productivity."
 
-## Key Takeaway
+## Key takeaway
 
 At DFI Geisler, OptiPeople Data Platform works because the data is visible, discussed regularly, and tied directly to action.
 

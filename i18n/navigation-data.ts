@@ -59,7 +59,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
     },
     {
       id: "platform",
-      title: "Platform and Modules",
+      title: "Platform and modules",
       layout: "mega",
       items: moduleNavItems("en"),
       groups: moduleNavGroups("en"),
@@ -71,7 +71,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
     },
     {
       id: "services",
-      title: "Services & Advisory",
+      title: "Services & advisory",
       items: [
         { title: "Smart Operations", href: "/services/smart-operations" },
         { title: "AI Agentic Solutions", href: "/services/ai-solutions" },
@@ -120,7 +120,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
         { title: "Insights", href: "/insights" },
         { title: "People", href: "/resources/people" },
         { title: "Personas", href: "/about/personas" },
-        { title: "Get Help", href: "/get-help" },
+        { title: "Get help", href: "/get-help" },
         { title: "Contact", href: "/contact" },
         { title: "About us", href: "/about" },
       ],
@@ -131,7 +131,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       id: "ai",
       title: "AI og QR-koder",
       items: [
-        { title: "Opti Assist – Chat og QR-koder", href: "/ai/chat" },
+        { title: "Opti Assist: Chat og QR-koder", href: "/ai/chat" },
         { title: "Workflows", href: "/ai/workflows" },
         { title: "Agenter", href: "/ai/agents" },
         { title: "Integrationer", href: "/ai/integrations" },
@@ -259,8 +259,8 @@ const footerCopy: Record<
     cases: "Customer cases",
     blog: "Blog",
     company: "Company",
-    privacy: "Privacy Policy",
-    terms: "Terms of Service",
+    privacy: "Privacy policy",
+    terms: "Terms of service",
     login: {
       portal: "Log in to Portal",
       platform: "Log in to Platform",

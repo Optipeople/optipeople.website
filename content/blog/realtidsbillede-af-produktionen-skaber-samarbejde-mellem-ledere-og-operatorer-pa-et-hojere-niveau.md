@@ -10,19 +10,19 @@ logo: "/images/logos/Broen.png"
 outcome: "A live production picture on key machines brought managers and operators around the same numbers."
 ---
 
-## At a Glance
+## At a glance
 
 Broen wanted better visibility into stop causes and a real-time production picture that managers and operators could use together.
 
 OptiPeople Data Platform helped create that shared operational view.
 
-## The Situation
+## The situation
 
 Broen A/S produces valves for a range of applications and needed clearer insight into why production machines stopped.
 
 The company also wanted a real-time overview of key figures such as produced items and OEE.
 
-## Why It Mattered
+## Why it mattered
 
 That visibility was important for:
 
@@ -31,13 +31,13 @@ That visibility was important for:
 - strengthening competitiveness
 - supporting digital transformation across the factory
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 OptiPeople Data Platform was installed on selected key machines.
 
 The platform collects data from those machines while operators can register stop causes directly. Managers can then get a quick overview of production status and performance.
 
-## The Result
+## The result
 
 The setup gives Broen:
 

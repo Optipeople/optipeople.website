@@ -6,14 +6,14 @@ category: "Insights"
 image: "/images/blog and case/blog/dashboards-v51.jpg"
 ---
 
-Version 51 introduced a new concept in OptiPeople Data Platform: **custom flexible real-time dashboards**.
+Version 51 introduced a new concept in OptiPeople Data Platform: **custom, flexible, real-time dashboards**.
 
 The concept was created to solve two problems:
 
 1. Customers use the platform in very different ways across the organization.
 2. Sharing data is often harder than it should be.
 
-## Solving the First Problem
+## Solving the first problem
 
 OptiPeople Data Platform is used by many kinds of roles:
 
@@ -26,7 +26,7 @@ OptiPeople Data Platform is used by many kinds of roles:
 
 They all want better production performance, but they need different views of the same factory data.
 
-## Creating a Dashboard
+## Creating a dashboard
 
 You can create as many dashboards as you need.
 
@@ -39,7 +39,7 @@ To create one:
 5. Drag, drop, resize, and arrange them as needed.
 6. Press `Save`, then `View`.
 
-## Why This Matters
+## Why this matters
 
 A system like this makes it possible to build dashboards for different purposes very quickly.
 

@@ -1,5 +1,5 @@
 ---
-title: "What Is the Difference Between Preventive and Predictive Maintenance?"
+title: "What is the difference between preventive and predictive maintenance?"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
@@ -11,32 +11,32 @@ Preventive and predictive maintenance both aim to act before failure occurs. The
 - **Preventive maintenance** is scheduled routinely
 - **Predictive maintenance** is scheduled based on actual asset condition
 
-## What Is Preventive Maintenance?
+## What is preventive maintenance?
 
 Preventive maintenance is planned in advance and performed at regular intervals, typically based on time, operating age, or service recommendations.
 
 The goal is to keep equipment as close to ideal operating condition as possible.
 
-### Challenges of Preventive Maintenance
+### Challenges of preventive maintenance
 
 - maintenance may be done when it is not actually needed
-- maintenance may still happen too late if wear progressed faster than expected
+- maintenance may still happen too late if wear progresses faster than expected
 - planned downtime increases because tasks are tied to a schedule
 
-## What Is Predictive Maintenance?
+## What is predictive maintenance?
 
 Predictive maintenance focuses on actual equipment state rather than fixed time intervals.
 
 It is used to predict failure before it happens and gives teams time to plan service in advance.
 
-### Challenges of Predictive Maintenance
+### Challenges of predictive maintenance
 
 - may require new technology and sensor infrastructure
 - may require more training
 - is more complex than preventive maintenance
 - can be costly to implement initially
 
-## How Preventive Maintenance Differs from Predictive Maintenance
+## How preventive maintenance differs from predictive maintenance
 
 ### Approach
 
@@ -44,7 +44,7 @@ Preventive maintenance focuses on preserving the asset through routine intervent
 
 Predictive maintenance focuses on preventing breakdown by observing actual machine condition and using that information to decide when to act.
 
-### Maintenance Trigger
+### Maintenance trigger
 
 Preventive maintenance is triggered by:
 
@@ -66,7 +66,7 @@ Preventive maintenance is more schedule-driven and often requires repeated labor
 
 Predictive maintenance relies more on monitoring, analytics, and targeted action.
 
-### Maintenance Techniques
+### Maintenance techniques
 
 Predictive maintenance can use methods such as:
 
@@ -96,6 +96,6 @@ Reactive maintenance, also called run-to-failure, fixes an asset only after it b
 
 Run-to-failure is still the right call when an asset is cheap, easy to replace, has low consequence when it stops, or has a spare or redundancy elsewhere in the system. Light bulbs are the classic example. Choose predictive maintenance when failure is expensive, downtime hits production, safety matters and the asset's condition can be measured. [Usage-based and condition-based triggers](/blog/the-four-types-of-predictive-maintenance-and-why-they-matter) are the usual way in.
 
-## Final Takeaway
+## Final takeaway
 
 Preventive maintenance is simpler and easier to organize, but it can lead to unnecessary work. Predictive maintenance is more precise, but it requires better data, tooling, and process discipline. The right choice depends on asset criticality, cost, and operational maturity.

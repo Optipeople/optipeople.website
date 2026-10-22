@@ -2,8 +2,6 @@
 title: "Rapporter, der kun viser det, I har brug for"
 ---
 
-Video: Demo af rapportskabeloner, I selv kan tilpasse
-
 OptiPeople Data Platform har fået en ny og bedre rapportfunktion: rapportskabeloner, I selv kan tilpasse. Så kan I skrue rapporterne sammen, så de kun viser de tal, der betyder noget for jer.
 
 ## Én funktion, mange muligheder

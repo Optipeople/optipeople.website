@@ -21,7 +21,7 @@ const metadataCopy: Record<Locale, { title: string; description: string }> = {
   en: {
     title: "Platform | OptiPeople",
     description:
-      "Explore the OptiPeople Data Platform: a modular MES made of nine modules, Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents, sharing data in one unified view of your operations.",
+      "Explore the OptiPeople Data Platform: a modular MES made of nine modules (Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents) sharing data in one unified view of your operations.",
   },
   da: {
     title: "Modulært MES og IoT-platform til produktionen | OptiPeople",
@@ -89,7 +89,7 @@ const copy: Record<Locale, PlatformCopy> = {
     modules: {
       title: "The modules",
       subtitle:
-        "Each module solves a specific operational need, and together they give you a single, connected view of the shopfloor.",
+        "Each module solves a specific operational need, and together they give you a single, connected view of the shop floor.",
       cards: moduleIndexLinks("en"),
     },
     visual: {

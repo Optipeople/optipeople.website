@@ -1,5 +1,5 @@
 ---
-title: "The Six Major Efficiency Areas"
+title: "The six major efficiency areas"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
@@ -20,7 +20,7 @@ The formula remains:
 
 `Availability x Performance x Quality = OEE`
 
-## 1. Setup and Adjustments
+## 1. Setup and adjustments
 
 These are planned stoppages such as:
 
@@ -32,7 +32,7 @@ These are planned stoppages such as:
 
 They cannot be eliminated entirely, but they can often be reduced or improved.
 
-## 2. Equipment or Production Defects
+## 2. Equipment or production defects
 
 Unplanned stops caused by equipment issues, missing materials, or production failures create large efficiency losses.
 
@@ -41,11 +41,11 @@ It is often useful to distinguish between:
 - very short stops
 - larger faults or breakdowns
 
-## 3. Waiting Time and Small Stops
+## 3. Waiting time and small stops
 
 Minor disturbances may last only a minute or two, but because they happen frequently, their cumulative effect can be significant.
 
-## 4. Reduced Production Rate
+## 4. Reduced production rate
 
 Even when machines are running, they may run below realistic target speed because of:
 
@@ -55,11 +55,11 @@ Even when machines are running, they may run below realistic target speed becaus
 - poor materials
 - lack of operator experience
 
-## 5. Quality Loss During Start-Up
+## 5. Quality loss during start-up
 
 Start-up often creates scrap or rework before the process stabilizes. That counts as quality loss in OEE terms.
 
-## 6. Quality Loss During Stable Production
+## 6. Quality loss during stable production
 
 Even stable production can lose quality because of:
 
@@ -68,7 +68,7 @@ Even stable production can lose quality because of:
 - poor materials
 - process instability
 
-## Use Common Sense
+## Use common sense
 
 Different machines have different stop reasons and waste patterns. The article emphasizes the importance of defining causes per machine and giving operators the ability to register stop reasons when automation alone cannot explain the issue.
 

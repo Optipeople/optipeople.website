@@ -1,5 +1,5 @@
 ---
-title: "OEE1 vs OEE2: What OEE Stands For and the Difference"
+title: "OEE1 vs OEE2: What OEE stands for and the difference"
 description: "OEE stands for Overall Equipment Effectiveness. OEE1 uses all calendar time, OEE2 only planned production time. The formula, an example and when to use each."
 date: "2022-12-13"
 updated: "2026-10-05"

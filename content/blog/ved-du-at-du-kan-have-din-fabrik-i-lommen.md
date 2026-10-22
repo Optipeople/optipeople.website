@@ -1,5 +1,5 @@
 ---
-title: "Do you know you can have your factory in your pocket?"
+title: "Did you know you can have your factory in your pocket?"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
@@ -10,7 +10,7 @@ The article positions OptiPeople Data Platform as a way to keep your factory clo
 
 Instead of relying on delayed reports or physical presence, teams can access live production information from a computer or mobile phone.
 
-## Real-Time Production Data Anywhere
+## Real-time production data anywhere
 
 The central idea is that OptiPeople Data Platform can collect the production data a company wants to monitor, as long as the required signals can be captured technically.
 
@@ -20,7 +20,7 @@ That data can then be used to:
 - spot problems as they happen
 - support faster decisions
 
-## Visibility on the Floor and Away From It
+## Visibility on the floor and away from it
 
 The article highlights the practical value of mobile access.
 
@@ -32,6 +32,6 @@ No one can look at every machine at the same time. A mobile overview helps when:
 
 Both graphs and underlying figures are presented as available on demand.
 
-## The Main Point
+## The main point
 
 The message is straightforward: when production data is always available, it becomes easier to manage daily operations, react faster, and stay connected to what is happening in the factory.

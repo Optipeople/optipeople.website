@@ -90,7 +90,7 @@ export function SiteFooter() {
             <Link href="/" className="inline-block mb-6">
               <Image
                 src={logo}
-                alt="Optipeople"
+                alt="OptiPeople"
                 width={140}
                 height={28}
                 className="h-7 w-auto brightness-0 invert"

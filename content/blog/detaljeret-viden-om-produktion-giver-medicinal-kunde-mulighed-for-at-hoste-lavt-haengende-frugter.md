@@ -1,21 +1,21 @@
 ---
-title: "Detailed knowledge of production allows medicinal customer to harvest low hanging fruit"
+title: "Detailed knowledge of production allows a pharmaceutical customer to harvest low-hanging fruit"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
 image: "/images/blog/medicinal-customer.jpg"
-customer: "Medicinal producer"
+customer: "Animal medicine producer"
 metricLabel: "Low-hanging fruit, made visible"
 outcome: "Real-time stop and uptime data let an animal-medicine producer act on efficiency gains without pressuring staff."
 ---
 
-## At a Glance
+## At a glance
 
 An animal medicine producer needed more detailed and timely production insight to improve efficiency without increasing pressure on employees.
 
 OptiPeople Data Platform provided the real-time operational data needed to support that shift.
 
-## The Situation
+## The situation
 
 The company already had a production overview, but not at the level of detail required.
 
@@ -30,17 +30,17 @@ The missing visibility included:
 - startup times
 - shutdown times
 
-## Why It Mattered
+## Why it mattered
 
 To remain competitive, the customer wanted to improve production efficiency while keeping the focus on practical, low-effort improvements first.
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 OptiPeople Data Platform collects data from each machine line in production, while employees use the platform to enter stop causes.
 
 That creates a stronger operational picture for both management and operators.
 
-## The Result
+## The result
 
 The setup gives the customer:
 

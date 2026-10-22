@@ -317,7 +317,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       iot: {
         description:
-          "Get data from anything, modern controls over standard industrial protocols, and older machines through sensors that measure the signal directly.",
+          "Get data from anything: modern controls over standard industrial protocols, and older machines through sensors that measure the signal directly.",
       },
       documents: {
         description:

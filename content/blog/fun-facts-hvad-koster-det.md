@@ -1,5 +1,5 @@
 ---
-title: "Fun Facts: What Are the Costs?"
+title: "Fun facts: What are the costs?"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
@@ -10,7 +10,7 @@ This article uses real production figures to illustrate what inefficiency can co
 
 The example looks only at **availability**, not performance or quality.
 
-## Uptime and Stops
+## Uptime and stops
 
 Across a four-week period, the article reports:
 
@@ -28,7 +28,7 @@ Using an assumed downtime cost of `2,000 DKK` per hour, the calculated loss beco
 
 `84,594,000 DKK`
 
-## Why This Matters
+## Why this matters
 
 The article makes the point that even if the exact downtime price varies by machine or industry, the cost of low availability is still substantial.
 

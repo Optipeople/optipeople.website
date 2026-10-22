@@ -1,5 +1,5 @@
 ---
-title: "OEE for Maintenance"
+title: "OEE for maintenance"
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"
@@ -10,7 +10,7 @@ High-performing manufacturing plants depend on performance, quality, and availab
 
 One of the most practical KPIs for maintenance teams is **OEE**, or Overall Equipment Effectiveness.
 
-## How Is OEE Used for Maintenance?
+## How is OEE used for maintenance?
 
 Running an OEE evaluation can reveal how maintenance work is planned, organized, and executed.
 
@@ -29,7 +29,7 @@ Low performance can point to issues such as:
 
 Low quality often points to process failures or lack of standardization.
 
-## Begin with a Plan
+## Begin with a plan
 
 No matter what is produced, all manufacturing plants face the same challenge: machines degrade with time and use.
 
@@ -40,7 +40,7 @@ Because OEE is an **overall** measure, no machine or asset should be ignored. Bu
 
 Both groups need structured attention if a plant wants stable performance.
 
-## Key Performance Parameters
+## Key performance parameters
 
 When machines are maintained to the right standard, they hold resilience longer, reduce scrap, and improve consistency.
 
@@ -52,7 +52,7 @@ Knowing these parameters helps teams:
 - reduce unplanned downtime
 - protect product quality
 
-## Maintenance and Reliability Planning
+## Maintenance and reliability planning
 
 Most plants use a combination of maintenance approaches:
 
@@ -63,7 +63,7 @@ Most plants use a combination of maintenance approaches:
 
 A strong reliability strategy usually combines these approaches, with preventive and predictive maintenance playing the biggest role in sustaining OEE.
 
-## Why OEE Matters for Maintenance
+## Why OEE matters for maintenance
 
 OEE helps maintenance teams move from guesswork to evidence.
 

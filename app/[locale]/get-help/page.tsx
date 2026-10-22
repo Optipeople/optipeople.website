@@ -49,10 +49,10 @@ type HelpCopy = {
 
 const copy: Record<Locale, HelpCopy> = {
   en: {
-    metaTitle: "Get Help",
+    metaTitle: "Get help",
     metaDescription:
       "Support for the OptiPeople Data Platform: how to reach us, response times, and answers to common questions about machine connections, OEE, data, and the API.",
-    eyebrow: "Get Help",
+    eyebrow: "Get help",
     headline: "How can we help?",
     body: "Whether you are running the OptiPeople Data Platform today or still working out whether it fits your production, you can reach a person here. We answer support requests on business days, and for anything urgent on a running installation, the phone is faster than email.",
     jumpLabel: "Common questions",

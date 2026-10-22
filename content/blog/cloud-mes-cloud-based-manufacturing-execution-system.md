@@ -1,5 +1,5 @@
 ---
-title: "Cloud MES - Cloud-Based Manufacturing Execution System"
+title: "Cloud MES: Cloud-based manufacturing execution system"
 date: "2022-02-16"
 author: "OptiPeople Team"
 category: "Insights"
@@ -8,7 +8,7 @@ image: "/images/blog and case/blog/oee-manufacturing.jpg"
 
 Production, resources, waste, shifts, operators, maintenance, machine control, and orders are all difficult to plan when they are disconnected across departments. A cloud MES helps bring these areas together.
 
-## What Is Cloud MES?
+## What is cloud MES?
 
 Cloud MES stands for **cloud-based Manufacturing Execution System**.
 
@@ -22,7 +22,7 @@ A cloud MES typically integrates with systems such as:
 
 It supports the kind of interconnectivity often associated with Industry 4.0 and creates a stronger operational bridge toward Industry 5.0.
 
-## Why Use a Cloud MES?
+## Why use a cloud MES?
 
 A cloud MES helps organizations answer questions such as:
 
@@ -33,7 +33,7 @@ A cloud MES helps organizations answer questions such as:
 
 Instead of relying on intuition alone, teams can base these decisions on operational data.
 
-## OptiPeople Data Platform as a Cloud MES
+## OptiPeople Data Platform as a cloud MES
 
 The article positions OptiPeople Data Platform as a cloud MES that can be introduced step by step, without requiring a large all-at-once IT project.
 
@@ -50,7 +50,7 @@ From there, additional steps can be added such as:
 - maintenance scheduling
 - predictive alarms
 
-## Practical Advantage
+## Practical advantage
 
 The key advantage of a cloud MES is that it can be built incrementally.
 

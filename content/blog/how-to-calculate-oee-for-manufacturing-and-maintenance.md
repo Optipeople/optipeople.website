@@ -1,5 +1,5 @@
 ---
-title: "How to Calculate OEE: Formula and Worked Example"
+title: "How to calculate OEE: Formula and worked example"
 description: "OEE = Availability x Performance x Quality. How to calculate each factor step by step, with a worked shift example and the shortcut that checks it."
 date: "2022-04-06"
 updated: "2026-10-07"
@@ -103,7 +103,7 @@ The shortcut confirms it: 14,288 good parts x 1.5 seconds is 21,432 seconds, or 
 
 - **An ideal cycle time that is too slow.** Using the average or the planned speed makes performance look better than it is, and can push OEE above 100%. Use the fastest rate the machine can reliably run.
 - **Leaving out short stops.** Stops of a minute or two are rarely written on a shift sheet. They then end up hidden in performance, and nobody knows what caused them.
-- **Counting rework as good.** Quality is first-pass yield. A part that went round twice cost the time of two.
+- **Counting rework as good.** Quality is first-pass yield. A part that went around twice cost the time of two.
 - **Averaging OEE across machines.** Two machines at 60% and 80% are not 70% together if they ran different hours. Add up the times and counts first, then calculate.
 
 ## Can OEE be over 100%?

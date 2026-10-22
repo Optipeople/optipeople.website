@@ -1,5 +1,5 @@
 ---
-title: "Kvik: Maximizing Uptime and Efficiency with Usage-Based Maintenance Through OptiPeople Data Platform"
+title: "Kvik: Maximizing uptime and efficiency with usage-based maintenance through OptiPeople Data Platform"
 date: "2024-12-18"
 author: "OptiPeople Team"
 category: "Cases"
@@ -12,11 +12,11 @@ quote: "We now perform maintenance based on desired operating hours instead of f
 outcome: "Usage-based maintenance raised uptime 5% and removed around four unnecessary services a year on 24/7 machines."
 ---
 
-## At a Glance
+## At a glance
 
 Kvik uses OptiPeople Data Platform to move from time-based maintenance to usage-based maintenance, increasing uptime while reducing unnecessary service work.
 
-## The Challenge
+## The challenge
 
 Kvik faced two related problems.
 
@@ -32,13 +32,13 @@ Kvik faced two related problems.
 - manual entry of downtime reasons
 - invalid data
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 Kvik uses the OptiPeople Data Platform service module to trigger maintenance notifications based on desired operating hours instead of fixed time intervals.
 
 The module sends an email to a dedicated Outlook calendar. A day is automatically booked seven days ahead, giving the service team time to plan the exact maintenance date.
 
-## The Result
+## The result
 
 ### Extra production time
 

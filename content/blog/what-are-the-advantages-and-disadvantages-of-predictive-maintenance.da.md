@@ -3,7 +3,7 @@ title: "Fordele og ulemper ved forudsigende vedligehold"
 description: "Fordele og ulemper ved forudsigende vedligehold i én tabel: mindre nedetid og længere levetid mod udgiften til at starte, data og nye kompetencer."
 ---
 
-Forudsigende vedligehold bruger data fra maskinen til at lave vedligeholdet, før den bryder ned. Fordelene er mindre uplanlagt nedetid, lavere udgifter til vedligehold og reservedele, maskiner der holder længere, og en sikrere og mere stabil drift. Ulemperne er udgiften til sensorer og software, kravet om gode data og nye kompetencer, og at det kun betaler sig på de kritiske maskiner.
+Forudsigende vedligehold bruger data fra maskinen til at lave vedligeholdet, før den bryder ned. Fordelene er mindre uplanlagt nedetid, lavere udgifter til vedligehold og reservedele, maskiner, der holder længere, og en sikrere og mere stabil drift. Ulemperne er udgiften til sensorer og software, kravet om gode data og nye kompetencer, og at det kun betaler sig på de kritiske maskiner.
 
 ## Fordele og ulemper på én side
 
@@ -49,7 +49,7 @@ Kort sagt falder fordelene i tre grupper:
 
 De fleste ulemper kommer af at starte for stort. Et par vaner holder udgiften og besværet nede:
 
-- **Start med de mest kritiske maskiner**, dem hvor et nedbrud stopper linjen eller tager dage at reparere.
+- **Start med de mest kritiske maskiner**, dem, hvor et nedbrud stopper linjen eller tager dage at reparere.
 - **Brug de data, I allerede har.** Driftstimer, cyklustællere og strømforbrug kommer tit direkte fra maskinen eller PLC'en uden nye sensorer.
 - **Begynd med vedligehold efter brug**, og tilføj tilstandsovervågning, hvor det kan betale sig. Se [de fire typer forudsigende vedligehold](/da/blog/the-four-types-of-predictive-maintenance-and-why-they-matter).
 - **Send alarmen til en person, der gør noget ved den**, og kobl hver alarm til en vedligeholdsopgave.

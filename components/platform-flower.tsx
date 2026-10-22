@@ -61,7 +61,7 @@ const englishModules: ModuleNode[] = [
     id: "production",
     name: "OEE",
     description: "See where time is lost",
-    pitch: "Track OEE in real-time and understand exactly where production time disappears. Stop guessing, start improving.",
+    pitch: "Track OEE in real time and understand exactly where production time disappears. Stop guessing, start improving.",
     features: ["Live OEE dashboards", "Stop cause registration", "Performance and quality losses"],
   },
   {
@@ -130,8 +130,8 @@ const danishModules: ModuleNode[] = [
     name: "IoT",
     description: "Få data fra alt",
     pitch:
-      "Saml de maskiner, det hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, de sensorer, der allerede sidder der, historikdatabaser og leverandørportaler, uanset protokol og alder. Nyt udstyr sætter vi kun op, hvor maskinen ikke har noget at læse fra i forvejen.",
-    features: ["Brug det hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun, hvor der mangler noget"],
+      "Saml de maskiner, den hardware og de datasystemer, I allerede har, i ét datagrundlag. PLC'er, de sensorer, der allerede sidder der, historikdatabaser og leverandørportaler, uanset protokol og alder. Nyt udstyr sætter vi kun op, hvor maskinen ikke har noget at læse fra i forvejen.",
+    features: ["Brug den hardware, I har", "Brug de systemer, I har", "Nyt udstyr kun, hvor der mangler noget"],
   },
   {
     id: "production",
@@ -160,7 +160,7 @@ const danishModules: ModuleNode[] = [
   {
     id: "documents",
     name: "Dokumenter",
-    description: "Rette version, rette sted",
+    description: "Den rette version, det rette sted",
     pitch: "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen eller arbejdsstationen, på linjen, på lageret eller i laboratoriet, i den version, der gælder for den, der står med opgaven.",
     features: ["Dér, hvor arbejdet sker", "Én gældende version", "Klar til audit"],
   },
@@ -177,14 +177,14 @@ const platformIntro = {
     eyebrow: "Platform",
     title: "One modular platform, nine modules",
     description:
-      "Take one module or all nine. Every module shares the same live data, so what one team registers, every team can use",
+      "Take one module or all nine. Every module shares the same live data, so what one team registers, every team can use.",
     centerLabel: "OptiPeople Data Platform",
   },
   da: {
     eyebrow: "Platform",
     title: "Én modulopbygget platform, ni moduler",
     description:
-      "Tag ét modul eller alle ni. Modulerne bruger de samme data, så det, ét team registrerer, kan de andre bruge",
+      "Tag ét modul eller alle ni. Modulerne bruger de samme data, så det, ét team registrerer, kan de andre bruge.",
     centerLabel: "OptiPeople Data Platform",
   },
 } as const

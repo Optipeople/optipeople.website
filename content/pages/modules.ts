@@ -41,14 +41,14 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/production",
     content: {
       en: {
-        metaTitle: "OEE Module",
+        metaTitle: "OEE module",
         metaDescription:
           "Track OEE, downtime, losses, and shift performance with an OEE module built for real-time manufacturing visibility.",
-        eyebrow: "OEE Module",
-        heroTitle: "See Where Production Time Is Lost",
+        eyebrow: "OEE module",
+        heroTitle: "See where production time is lost",
         heroBody:
           "Track OEE in real time and understand exactly where production time disappears. Stop guessing, start improving.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Your production data shouldn't live in spreadsheets",
         introBody:
           "Most factories still rely on manual logs, whiteboards, and end-of-shift reports to understand what happened on the floor. By the time the data reaches a decision-maker, the moment to act has passed. The OEE module replaces guesswork with live signals from every machine, every shift.",
@@ -56,37 +56,37 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Gauge,
-            title: "Live OEE Dashboards",
+            title: "Live OEE dashboards",
             description:
               "See availability, performance, and quality in real time across every machine or workstation, line, and shift. No more waiting for end-of-day reports.",
           },
           {
             icon: AlertTriangle,
-            title: "Stop Cause Registration",
+            title: "Stop cause registration",
             description:
               "Operators register downtime reasons directly at the machine or workstation. Clean, structured data you can actually use to drive improvements.",
           },
           {
             icon: Activity,
-            title: "Shift Performance",
+            title: "Shift performance",
             description:
               "Compare performance across shifts, teams, and time periods. Identify best practices and replicate success across the organization.",
           },
           {
             icon: TrendingUp,
-            title: "Continuous Improvement",
+            title: "Continuous improvement",
             description:
               "Run targeted improvement cycles with data. Track the impact of every change and build a culture of measurable progress.",
           },
           {
             icon: Target,
-            title: "Performance and Quality Losses",
+            title: "Performance and quality losses",
             description:
               "Availability is the easy third. See the speed losses and the scrap that quietly take the rest, per machine or workstation, item, and setup.",
           },
           {
             icon: BarChart3,
-            title: "Production Reports",
+            title: "Production reports",
             description:
               "Automated daily, weekly, and monthly reports delivered to stakeholders with the KPIs that matter most.",
           },
@@ -95,18 +95,18 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualBody:
           "Availability, performance, and OEE against target, the shift on a timeline, and every stop that cost it, in one view.",
         visualDrawn: "oee",
-        metricsTitle: "Typical Results",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "15-25%", label: "OEE improvement in first year" },
           { metric: "40%", label: "Reduction in unplanned downtime" },
           { metric: "2 hrs", label: "Saved daily on manual reporting" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Connect",
             description:
-              "We integrate with your existing machines and PLCs, no production disruption, no hardware overhaul.",
+              "We integrate with your existing machines and PLCs. No production disruption, no hardware overhaul.",
           },
           {
             title: "Visualize",
@@ -189,14 +189,14 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/quality",
     content: {
       en: {
-        metaTitle: "Quality Module",
+        metaTitle: "Quality module",
         metaDescription:
           "Digitize inspections, trace deviations, monitor trends, and build quality traceability directly into production workflows.",
-        eyebrow: "Quality Module",
-        heroTitle: "Build Accountability Into Production",
+        eyebrow: "Quality module",
+        heroTitle: "Build accountability into production",
         heroBody:
           "Register quality data at the source and trace every deviation back to machines or workstations, batches, and shifts. Make quality everyone's responsibility.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Quality issues shouldn't surface after the fact",
         introBody:
           "When quality data lives in spreadsheets and paper forms, problems hide until they become expensive. Deviations get lost, traceability gaps appear during audits, and root causes stay unknown. The Quality module captures data where it happens and connects it to the full production context.",
@@ -204,43 +204,43 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: ClipboardCheck,
-            title: "Digital Inspections",
+            title: "Digital inspections",
             description:
               "Replace paper checklists with digital quality forms. Capture data at the source with guided workflows and mandatory checkpoints.",
           },
           {
             icon: GitBranch,
-            title: "Full Traceability",
+            title: "Full traceability",
             description:
               "Trace every product back to its machine or workstation, batch, operator, and shift, and to the material it was made from. Build a complete quality genealogy without manual effort.",
           },
           {
             icon: Recycle,
-            title: "Managing and Decreasing Material Waste",
+            title: "Managing and decreasing material waste",
             description:
               "Measure the actual material and resource waste all the way from purchasing to the finished product. See where material is lost, at which step and on which order, and act where it brings the waste down.",
           },
           {
             icon: AlertCircle,
-            title: "Deviation Tracking",
+            title: "Deviation tracking",
             description:
               "Log deviations as they happen and link them to root causes. Track corrective actions and ensure nothing slips through the cracks.",
           },
           {
             icon: Search,
-            title: "SPC and Trend Analysis",
+            title: "SPC and trend analysis",
             description:
               "Monitor quality trends in real time with statistical process control. Catch drift before it becomes a defect.",
           },
           {
             icon: ShieldCheck,
-            title: "Compliance Ready",
+            title: "Compliance ready",
             description:
               "Built-in audit trails and documentation support ISO, FDA, and industry-specific compliance requirements out of the box.",
           },
           {
             icon: FileText,
-            title: "Quality Reports",
+            title: "Quality reports",
             description:
               "Generate quality reports automatically, by product, line, or time period. Share insights with customers and auditors instantly.",
           },
@@ -250,13 +250,13 @@ const modules: LocalizedPage<StandardPage>[] = [
           "Every inspection, deviation, and corrective action linked to the machine or workstation, batch, and operator that produced it.",
         visualImage: "/images/Mockups/Report-Individual-Events-Desktop.webp",
         visualAlt: "Quality checks and deviations registered in OptiPeople Data Platform",
-        metricsTitle: "Typical Results",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "60%", label: "Reduction in quality-related rework" },
           { metric: "90%", label: "Faster deviation response time" },
           { metric: "100%", label: "Digital traceability coverage" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Digitize",
@@ -351,14 +351,14 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/maintenance",
     content: {
       en: {
-        metaTitle: "Maintenance Module",
+        metaTitle: "Maintenance module",
         metaDescription:
           "Plan preventive maintenance, receive predictive alerts, manage tasks, and reduce unplanned downtime with connected maintenance workflows.",
-        eyebrow: "Maintenance Module",
-        heroTitle: "Fix It Before It Breaks",
+        eyebrow: "Maintenance module",
+        heroTitle: "Fix it before it breaks",
         heroBody:
           "Move from reactive firefighting to planned maintenance. Reduce unplanned downtime and extend equipment life.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Maintenance shouldn't be a fire drill",
         introBody:
           "When maintenance is reactive, every breakdown is an emergency. Technicians scramble, production stops, and costs spiral. The Maintenance module gives your team the tools to plan ahead, track tasks, and prevent problems before they impact the line.",
@@ -366,37 +366,37 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Calendar,
-            title: "Preventive Scheduling",
+            title: "Preventive scheduling",
             description:
               "Plan maintenance based on operating hours, production cycles, or calendar intervals. Never miss a scheduled service again.",
           },
           {
             icon: Cable,
-            title: "Connect IoT Data to Maintenance",
+            title: "Connect IoT data to maintenance",
             description:
               "Running hours, cycle counts, temperature, vibration, and current draw come straight off the machines through the IoT module, so plans trigger on measured condition instead of a date in a calendar.",
           },
           {
             icon: Bell,
-            title: "Predictive Alerts",
+            title: "Predictive alerts",
             description:
               "Get notified before breakdowns happen. Those same machine signals, read against usage patterns, flag the failure while there is still time to plan around it.",
           },
           {
             icon: Smartphone,
-            title: "Mobile Task Management",
+            title: "Mobile task management",
             description:
               "Technicians receive and complete tasks on mobile devices. Capture notes, photos, and completion data directly in the field.",
           },
           {
             icon: Wrench,
-            title: "Spare Parts Tracking",
+            title: "Spare parts tracking",
             description:
               "Link maintenance tasks to spare parts inventory. Know what you need before you need it and avoid costly production stops.",
           },
           {
             icon: History,
-            title: "Maintenance History",
+            title: "Maintenance history",
             description:
               "Full history of every maintenance event per machine. Understand patterns, predict failures, and optimize service intervals.",
           },
@@ -406,13 +406,13 @@ const modules: LocalizedPage<StandardPage>[] = [
           "See upcoming tasks, overdue items, and machine health status at a glance across your entire facility.",
         visualImage: "/images/Mockups/Tasks-Maintenance-Lists.webp",
         visualAlt: "Maintenance tasks in OptiPeople Data Platform",
-        metricsTitle: "Typical Results",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "50%", label: "Reduction in unplanned downtime" },
           { metric: "40 hrs", label: "Extra production hours per year" },
           { metric: "30%", label: "Fewer emergency service calls" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Register",
@@ -507,14 +507,14 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/energy",
     content: {
       en: {
-        metaTitle: "Energy Module",
+        metaTitle: "Energy module",
         metaDescription:
           "Track kWh usage, monitor telemetry, detect anomalies, and connect energy performance to production output in real time.",
-        eyebrow: "EMS Module",
-        heroTitle: "Cut Waste, Not Corners",
+        eyebrow: "EMS module",
+        heroTitle: "Cut waste, not corners",
         heroBody:
           "Connect energy consumption directly to production output. Find anomalies and optimization opportunities automatically.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "You can't reduce what you can't see",
         introBody:
           "Energy is often the second-largest cost in manufacturing, yet most factories have no visibility into where it goes. Monthly utility bills tell you nothing about which machines waste energy or when consumption spikes. The Energy module connects real-time consumption data directly to your production.",
@@ -522,31 +522,31 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Zap,
-            title: "Real-Time kWh Tracking",
+            title: "Real-time kWh tracking",
             description:
               "Monitor energy consumption per machine, line, or facility in real time. Understand exactly where energy is used, and wasted.",
           },
           {
             icon: Thermometer,
-            title: "Sensor Telemetry",
+            title: "Sensor telemetry",
             description:
               "Connect temperature, vibration, flow, and pressure sensors directly to production. See the full picture beyond just energy.",
           },
           {
             icon: AlertTriangle,
-            title: "Anomaly Detection",
+            title: "Anomaly detection",
             description:
               "Automatically detect unusual consumption patterns. Get alerted to leaks, inefficiencies, or equipment degradation early.",
           },
           {
             icon: Activity,
-            title: "Energy per Unit Produced",
+            title: "Energy per unit produced",
             description:
               "Link energy consumption to production output. Understand your true cost per unit and identify optimization opportunities.",
           },
           {
             icon: Leaf,
-            title: "Sustainability Reporting",
+            title: "Sustainability reporting",
             description:
               "Generate energy and carbon reports for ESG compliance. Track progress against sustainability targets with real data.",
           },
@@ -562,13 +562,13 @@ const modules: LocalizedPage<StandardPage>[] = [
           "See energy consumption alongside production output, machine status, and environmental conditions in one unified view.",
         visualImage: "/images/Telemetry-Chart.png",
         visualAlt: "Energy use for one machine over 48 hours in OptiPeople Data Platform",
-        metricsTitle: "Typical Results",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "10-20%", label: "Reduction in energy consumption" },
           { metric: "Real-time", label: "Visibility into energy waste" },
           { metric: "100%", label: "ESG reporting data coverage" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Measure",
@@ -657,14 +657,14 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/iot",
     content: {
       en: {
-        metaTitle: "IoT Module",
+        metaTitle: "IoT module",
         metaDescription:
           "Consolidate the machines, hardware, and data systems a site already runs into one structured data foundation, and add sensors only where there is nothing to read from.",
-        eyebrow: "IoT Module",
-        heroTitle: "Get Data from Anything You Already Run",
+        eyebrow: "IoT module",
+        heroTitle: "Get data from anything you already run",
         heroBody:
           "Most sites are not starting from nothing. They have controls, sensor kits, historians, and a system or two that already collects something. The IoT module consolidates what is there, and adds hardware only where a machine has nothing to read from.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "You probably have more data than you think, in more places than you want",
         introBody:
           "The usual picture is not a blank site. It is three generations of controls, a sensor setup someone installed for one project, a historian nobody queries, and a machine supplier's own portal that only covers their machines. Each one is a partial answer in its own silo. The work is rarely putting hardware on machines: it is consolidating what already reports something into one structured foundation, then filling the genuine gaps.",
@@ -672,37 +672,37 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Layers,
-            title: "Consolidate the Hardware You Have",
+            title: "Consolidate the hardware you have",
             description:
               "Existing PLC setups, sensor kits, data loggers, and I/O modules from earlier projects keep doing their job. We read from them instead of installing a second set alongside.",
           },
           {
             icon: Network,
-            title: "Consolidate the Systems You Have",
+            title: "Consolidate the systems you have",
             description:
               "Historians, SCADA, a machine supplier's own portal, an ERP, a homegrown database. If a system already holds part of the answer, it becomes a source rather than something to replace.",
           },
           {
             icon: Cable,
-            title: "Plug-and-Play Connectors",
+            title: "Plug-and-play connectors",
             description:
               "Pre-built connectors for Siemens, Fanuc, Mitsubishi, OPC-UA, MQTT, REST, and more. Most machines and systems are online in hours, not weeks.",
           },
           {
             icon: Cpu,
-            title: "Protocol-Agnostic Ingestion",
+            title: "Protocol-agnostic ingestion",
             description:
               "Modbus, Profinet, EtherNet/IP, a file drop, or a proprietary protocol. We handle the translation, so the difference stops being your problem.",
           },
           {
             icon: Wifi,
-            title: "A Gateway Only Where It Earns One",
+            title: "A gateway only where it earns one",
             description:
               "Where a machine has nothing readable, a small edge gateway or a retrofitted sensor measures the signal directly. Where the data already flows, no new box goes on the wall.",
           },
           {
             icon: Shield,
-            title: "One Structured Foundation",
+            title: "One structured foundation",
             description:
               "However many sources it took, the data lands tied to machines or workstations, orders, batches, and shifts, encrypted in transit and at rest, in one record every module reads.",
           },
@@ -711,13 +711,13 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualBody:
           "Machines, existing hardware, operator devices, and the systems you already run, consolidated into one data container per company, read by your team, your systems, and your AI assistants.",
         visualSection: "architecture",
-        metricsTitle: "Typical Results",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "200+", label: "Machine types connected" },
           { metric: "Reused", label: "Existing hardware and systems, wherever they already report" },
           { metric: "<1 day", label: "Typical time to first data" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Map what exists",
@@ -753,7 +753,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Layers,
-            title: "Brug det hardware, I har",
+            title: "Brug den hardware, I har",
             description:
               "PLC-opsæt, sensorer, dataloggere og I/O-moduler fra tidligere projekter bliver ved med at gøre deres arbejde. Vi læser fra dem i stedet for at sætte et sæt mere op ved siden af.",
           },
@@ -778,12 +778,12 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         visualTitle: "Hvor data kommer fra, og hvor de ender",
         visualBody:
-          "Maskiner, det hardware, I har, operatørernes enheder og de systemer, der allerede kører, samlet i én datacontainer pr. virksomhed, som jeres team, jeres systemer og jeres AI-assistenter læser fra.",
+          "Maskiner, den hardware, I har, operatørernes enheder og de systemer, der allerede kører, samlet i én datacontainer pr. virksomhed, som jeres team, jeres systemer og jeres AI-assistenter læser fra.",
         visualSection: "architecture",
         metricsTitle: "Typiske resultater",
         metrics: [
           { metric: "Alle aldre", label: "Nye og gamle maskiner" },
-          { metric: "Genbrugt", label: "Det hardware og de systemer, der allerede melder noget" },
+          { metric: "Genbrugt", label: "Den hardware og de systemer, der allerede melder noget" },
           { metric: "< 1 min", label: "Fra signal til skærm" },
         ],
         stepsTitle: "Sådan virker det",
@@ -812,14 +812,14 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/erp-shopfloor",
     content: {
       en: {
-        metaTitle: "Orders Module",
+        metaTitle: "Orders module",
         metaDescription:
           "Run production orders on the floor: start, stop, and report at the machine or workstation. Works standalone, and syncs two ways with your ERP if you want it to.",
-        eyebrow: "Orders Module",
-        heroTitle: "The Orders to Run, on the Screen at the Machine or Workstation",
+        eyebrow: "Orders module",
+        heroTitle: "The orders to run, on the screen at the machine or workstation",
         heroBody:
           "The Orders module is the basis for both planning production and executing the plan. Operators see what to produce next, with the work order instructions and standard operating procedures that belong to it, start and stop the job, and report quantities and scrap where the work happens. It runs on its own, and it connects to your ERP if you want it to.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "A finance ERP is a poor fit for a machine or workstation",
         introBody:
           "Plenty of factories have never wanted their finance ERP on the shopfloor, and they are right not to: it is built for month-end, not for an operator with gloves on at 05:40. So the orders live on paper, on a whiteboard, or in a spreadsheet the planner keeps. The Orders module gives the floor its own screen for that job. Where an ERP already holds the orders, we sync with it in both directions. Where it does not, or where you would rather keep it out of production, the module holds the orders itself.",
@@ -827,49 +827,49 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: Monitor,
-            title: "Start and Stop at the Machine or Workstation",
+            title: "Start and stop at the machine or workstation",
             description:
               "One screen at the machine or workstation: what to run next, start the job, stop it, and register why it stopped. Nothing to learn beyond the buttons an operator actually needs.",
           },
           {
             icon: Clock,
-            title: "The Order List for This Station",
+            title: "The order list for this station",
             description:
               "Filtered to the machine or workstation in front of you, in priority order, with quantity, product, and due date. What is ready to start, what is waiting, what is blocked.",
           },
           {
             icon: ClipboardCheck,
-            title: "Report Quantities and Scrap",
+            title: "Report quantities and scrap",
             description:
               "Good parts, scrap, and reason codes registered as the job runs, so the completion figure is the one the machine or workstation produced rather than an estimate typed in later.",
           },
           {
             icon: FileText,
-            title: "Work Order Instructions and SOPs",
+            title: "Work order instructions and SOPs",
             description:
               "Each order carries its work order instructions and standard operating procedures to the machine or workstation, so the operator executes the plan the same way every time, in the version that applies.",
           },
           {
             icon: GitBranch,
-            title: "Traceability on Every Order",
+            title: "Traceability on every order",
             description:
               "Every order records which machine or workstation ran it, which operator, which shift, and which batch, so you can trace a finished product back through production when a customer or an auditor asks.",
           },
           {
             icon: Cable,
-            title: "Runs With or Without an ERP",
+            title: "Runs with or without an ERP",
             description:
               "No ERP connection required. Create and manage orders in the module itself, and keep your finance system out of production entirely if that suits you better.",
           },
           {
             icon: ArrowLeftRight,
-            title: "Two-Way ERP Sync, When You Want It",
+            title: "Two-way ERP sync, when you want it",
             description:
               "If the orders already live in an ERP, they flow down to the floor and actual quantities, scrap, and completion times flow back automatically. Optional, and added when it earns its keep.",
           },
           {
             icon: Gauge,
-            title: "Every Order Carries Its Own Numbers",
+            title: "Every order carries its own numbers",
             description:
               "Because the same registration feeds OEE, each order ends up with real run time, real stops, and real output behind it, without anyone filling in a form for it.",
           },
@@ -879,13 +879,13 @@ const modules: LocalizedPage<StandardPage>[] = [
           "Priority, product, quantity, due date, station, and readiness in one list, whether the orders came from an ERP or were created here.",
         visualImage: "/images/Mockups/Work-Order-Management-Orders.webp",
         visualAlt: "The work order list on the panel at the machine or workstation",
-        metricsTitle: "What Changes",
+        metricsTitle: "What changes",
         metrics: [
           { metric: "0", label: "ERP integrations required to start" },
           { metric: "1 screen", label: "For the operator: what to run, start, stop, report" },
           { metric: "2 ways", label: "Order sync with your ERP, if and when you want it" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Start on the floor",
@@ -911,7 +911,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Ordremodul",
         heroTitle: "Ordrerne står på skærmen ved maskinen eller arbejdsstationen",
         heroBody:
-          "Ordremodulet er grundlaget for både at planlægge produktionen og at føre planen ud i livet. Operatøren ser, hvad der skal produceres, sammen med de arbejdsinstruktioner og standardprocedurer, der hører til, starter og stopper jobbet og melder antal og kassation der, hvor arbejdet sker. Det kører alene, og det kan kobles på jeres ERP, hvis I vil.",
+          "Ordremodulet er grundlaget for både at planlægge produktionen og at føre planen ud i livet. Operatøren ser, hvad der skal produceres, sammen med de arbejdsinstruktioner og standardprocedurer, der hører til, starter og stopper jobbet og melder antal og kassation dér, hvor arbejdet sker. Det kører alene, og det kan kobles på jeres ERP, hvis I vil.",
         primaryLabel: "Book en demo",
         introTitle: "Et økonomi-ERP hører ikke hjemme ude ved maskinen eller arbejdsstationen",
         introBody:
@@ -1006,15 +1006,15 @@ const modules: LocalizedPage<StandardPage>[] = [
       en: {
         metaTitle: "Modular MES",
         metaDescription:
-          "A modular MES made of nine modules, Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents, switched on one module at a time.",
+          "A modular MES made of nine modules (Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents), switched on one module at a time.",
         eyebrow: "Modular MES",
-        heroTitle: "Your Modular MES Platform",
+        heroTitle: "Your Modular MES platform",
         heroBody:
           "Manufacturing execution you switch on one module at a time. Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Nobody needs a whole MES on day one",
         introBody:
-          "The classic MES is an all-or-nothing project: eighteen months, every process at once, and a scope nobody on the floor recognises by the end of it. A modular MES is the opposite. Start with the module that answers the question you have this quarter, whether that is orders, the plan, machine and workstation data, or OEE, and add the next one when the next question turns up. Every module you add reads the data the earlier ones already collect.",
+          "The classic MES is an all-or-nothing project: eighteen months, every process at once, and a scope nobody on the floor recognizes by the end of it. A modular MES is the opposite. Start with the module that answers the question you have this quarter, whether that is orders, the plan, machine and workstation data, or OEE, and add the next one when the next question turns up. Every module you add reads the data the earlier ones already collect.",
         capabilitiesTitle: "The modules a modular MES is made of",
         features: [
           {
@@ -1076,13 +1076,13 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualBody:
           "This is what makes it modular rather than nine separate products: a stop registered at the machine or workstation lands once, and orders, OEE, maintenance, and the monthly report all read the same record.",
         visualDrawn: "mes",
-        metricsTitle: "What Modular Means",
+        metricsTitle: "What modular means",
         metrics: [
           { metric: "1", label: "Module is a valid place to start" },
           { metric: "9", label: "Modules on the same data foundation" },
           { metric: "0", label: "Re-entry between them" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Start with one",
@@ -1206,60 +1206,60 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/planning",
     content: {
       en: {
-        metaTitle: "Planning Module",
+        metaTitle: "Planning module",
         metaDescription:
           "Sequence work orders across the entities of each production route, not just one flat timeline, against measured run rates and real machine availability.",
-        eyebrow: "Planning Module",
-        heroTitle: "Plan the Whole Route, Not Just One Timeline",
+        eyebrow: "Planning module",
+        heroTitle: "Plan the whole route, not just one timeline",
         heroBody:
           "Most schedulers give you a single production timeline. This one plans across the entities of each production route, on measured run rates and real machine availability, visible to everyone who has to deliver it.",
-        primaryLabel: "Request a Demo",
-        introTitle: "A product does not pass through one machine, so why plan as if it does",
+        primaryLabel: "Request a demo",
+        introTitle: "A product does not pass through one machine, so why plan as if it does?",
         introBody:
           "Most production plans are built from standard times that were set years ago and a capacity figure nobody has re-measured since. The plan looks fine on Monday and has drifted by Wednesday. When planning reads from the same data as the shopfloor, the numbers underneath it are the ones the machines and workstations actually produced, so the plan starts realistic and stays that way.",
         capabilitiesTitle: "Planning that stays connected to the floor",
         features: [
           {
             icon: GitBranch,
-            title: "Routes, Not One Flat Timeline",
+            title: "Routes, not one flat timeline",
             description:
               "Each product has a route: cut, mill, glue, assemble, glaze, pack. Orders are sequenced across every entity on that route, so a slip at station two is visibly a problem at station five.",
           },
           {
             icon: Calendar,
-            title: "Capacity-Based Scheduling",
+            title: "Capacity-based scheduling",
             description:
               "Schedule against real available hours per machine or workstation and per line, planned maintenance, shift patterns, and known downtime already accounted for.",
           },
           {
             icon: Gauge,
-            title: "Run Rates From Real Data",
+            title: "Run rates from real data",
             description:
               "Standard times come from what the machine or workstation has actually produced, per item and per setup, instead of an estimate someone typed in once.",
           },
           {
             icon: ArrowLeftRight,
-            title: "Sequencing and Changeovers",
+            title: "Sequencing and changeovers",
             description:
               "Order the queue to cut setup time. See what a resequence costs in changeover minutes before you commit to it.",
           },
           {
             icon: AlertTriangle,
-            title: "Conflicts Surface Early",
+            title: "Conflicts surface early",
             description:
               "Overloaded machines or workstations, colliding orders, and missing capacity show up while there is still time to move something.",
           },
           {
             icon: RefreshCw,
-            title: "Replan Without Rebuilding",
+            title: "Replan without rebuilding",
             description:
               "A breakdown or a rush order does not mean starting the plan over. Adjust the affected window and see the knock-on effects immediately.",
           },
           {
             icon: Monitor,
-            title: "One Plan, Visible on the Floor",
+            title: "One plan, visible on the floor",
             description:
-              "Operators see the same sequence the planner sees, on the panel at the machine or workstation, no printed plan from the morning meeting going stale in a folder.",
+              "Operators see the same sequence the planner sees, on the panel at the machine or workstation. No printed plan from the morning meeting going stale in a folder.",
           },
         ],
         visualTitle: "One row per entity, grouped by route",
@@ -1267,13 +1267,13 @@ const modules: LocalizedPage<StandardPage>[] = [
           "The board is grouped by production route and broken out per entity underneath it, so a drag from one station to another is a real decision rather than a line moving on a chart. Progress reports itself from the floor as the order moves along the route.",
         visualImage: "/images/Mockups/Planning-Timeline-Close.png",
         visualAlt: "Production planning overview in OptiPeople Data Platform",
-        metricsTitle: "What Changes",
+        metricsTitle: "What changes",
         metrics: [
           { metric: "Per route", label: "Sequenced across every entity, not one flat line" },
           { metric: "Measured", label: "Capacity from real output, not estimates" },
           { metric: "One plan", label: "Shared by planning and the shopfloor" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Measure",
@@ -1299,7 +1299,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Planlægningsmodul",
         heroTitle: "Planlæg hele ruten, ikke bare én tidslinje",
         heroBody:
-          "De fleste planlægningssystemer giver jer én produktionstidslinje. Her planlægger I hen over de enheder, hver produktionsrute går igennem, efter målte kørehastigheder og den tid, maskinerne reelt er ledige.",
+          "De fleste planlægningssystemer giver jer én produktionstidslinje. Her planlægger I hen over de enheder, hver produktionsrute går igennem, efter målte kørehastigheder og den tid, hvor maskinerne reelt er ledige.",
         primaryLabel: "Book en demo",
         introTitle: "En vare går ikke kun gennem én maskine. Hvorfor planlægge, som om den gør?",
         introBody:
@@ -1316,7 +1316,7 @@ const modules: LocalizedPage<StandardPage>[] = [
             icon: Calendar,
             title: "Planlæg efter reel kapacitet",
             description:
-              "Planlæg efter de timer, maskinen eller arbejdsstationen reelt er ledig. Skiftplaner, planlagt vedligehold og kendt nedetid er regnet med.",
+              "Planlæg efter de timer, hvor maskinen eller arbejdsstationen reelt er ledig. Skiftplaner, planlagt vedligehold og kendt nedetid er regnet med.",
           },
           {
             icon: Gauge,
@@ -1355,7 +1355,7 @@ const modules: LocalizedPage<StandardPage>[] = [
               "Læg ordrerne i rækkefølge efter den kapacitet, med opstillingstid og planlagt vedligehold i samme billede.",
           },
           {
-            title: "Justér",
+            title: "Juster",
             description:
               "Fremdriften melder sig selv fra gulvet. Går noget skævt, ser I, hvad det betyder, og lægger den del af planen om.",
           },
@@ -1368,14 +1368,14 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/documents",
     content: {
       en: {
-        metaTitle: "Documents Module",
+        metaTitle: "Documents module",
         metaDescription:
           "Work instructions, drawings, and certificates at the machine or workstation, always the current version, tied to the order and the operator in front of it.",
-        eyebrow: "Documents Module",
-        heroTitle: "The Right Instruction, at the Right Place",
+        eyebrow: "Documents module",
+        heroTitle: "The right instruction, at the right place",
         heroBody:
           "Work instructions, drawings, and certificates where the work happens: at a machine, a station, a line, a warehouse, or a lab, in the version that applies to the job in front of the person doing it.",
-        primaryLabel: "Request a Demo",
+        primaryLabel: "Request a demo",
         introTitle: "Documentation on the floor goes stale quietly",
         introBody:
           "Instructions live in binders by the machine or workstation, in a shared drive nobody trusts, and in the head of whoever set the job up last time. When a drawing is revised, the old print stays on the floor until someone notices. Tying documents to the machine and the order means the operator opens what applies right now, and the revision reaches the floor the moment it is approved.",
@@ -1383,37 +1383,37 @@ const modules: LocalizedPage<StandardPage>[] = [
         features: [
           {
             icon: FileText,
-            title: "Instructions at the Machine or Workstation",
+            title: "Instructions at the machine or workstation",
             description:
               "Open the setup sheet, drawing, or work instruction from the panel at the machine or workstation, filtered to the order being run.",
           },
           {
             icon: History,
-            title: "Versions That Cannot Drift",
+            title: "Versions that cannot drift",
             description:
               "One current version, one history. Approve a revision and the floor has it immediately, no printed copy outliving it.",
           },
           {
             icon: Search,
-            title: "Find It by Machine, Workstation, or Order",
+            title: "Find it by machine, workstation, or order",
             description:
               "Documents are linked to machines or workstations, items, and orders, so finding the right one does not depend on knowing a folder structure.",
           },
           {
             icon: ClipboardCheck,
-            title: "Read and Understood",
+            title: "Read and understood",
             description:
               "Ask for confirmation on the documents that need it, and see who acknowledged which version and when.",
           },
           {
             icon: ShieldCheck,
-            title: "Audit-Ready by Default",
+            title: "Audit-ready by default",
             description:
               "Certificates, calibration records, and signed-off instructions sit with the production data they belong to, ready when an auditor asks.",
           },
           {
             icon: Smartphone,
-            title: "Panel, Tablet, or Phone",
+            title: "Panel, tablet, or phone",
             description:
               "The same document set on the operator panel, on a tablet at the line, and on a phone in maintenance.",
           },
@@ -1422,13 +1422,13 @@ const modules: LocalizedPage<StandardPage>[] = [
         visualBody:
           "The instruction for a job, the stops registered on it, and the quality checks that followed all sit on the same order, so a question about what happened has one place to go.",
         visualDrawn: "documents",
-        metricsTitle: "What Changes",
+        metricsTitle: "What changes",
         metrics: [
           { metric: "Current", label: "One approved version, everywhere" },
           { metric: "Paperless", label: "Binders off the shopfloor" },
           { metric: "Traceable", label: "Who read what, and when" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Upload",

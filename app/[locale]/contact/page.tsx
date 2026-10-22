@@ -64,7 +64,7 @@ const copy: Record<Locale, ContactCopy> = {
     headline: "Lad os tage en snak om jeres drift",
     body: "Fortæl, hvor I står, så vender vi tilbage inden for én arbejdsdag. Ingen sælgerforløb og ingen mellemled: I taler direkte med dem, der står for platformen.",
     formTitle: "Skriv til os",
-    quickIntro: "Skriv din e-mail, så kontakter vi dig. Du behøver ikke udfylde en formular.",
+    quickIntro: "Skriv jeres e-mail, så kontakter vi jer. I behøver ikke udfylde en formular.",
     orDivider: "eller",
     stepsTitle: "Sådan foregår det",
     steps: [

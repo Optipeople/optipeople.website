@@ -10,7 +10,7 @@ Normal production planning is often not enough when conditions become unstable.
 
 The article argues that in a crisis, manufacturers need better visibility and faster decisions if they want to protect productivity and stay competitive.
 
-## Why Real-Time Data Matters More in a Crisis
+## Why real-time data matters more in a crisis
 
 The article uses the pressures of the corona period as an example:
 
@@ -22,7 +22,7 @@ The article uses the pressures of the corona period as an example:
 
 Under those conditions, real-time production data becomes much more valuable.
 
-## How OEE Supports Faster Action
+## How OEE supports faster action
 
 The article highlights several practical benefits of real-time monitoring:
 
@@ -33,7 +33,7 @@ The article highlights several practical benefits of real-time monitoring:
 
 This makes it easier to solve problems while they are still small.
 
-## Focus on the Few Issues That Matter Most
+## Focus on the few issues that matter most
 
 One of the article's main points is that a relatively small share of stoppages can often explain a large share of lost production time.
 

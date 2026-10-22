@@ -10,7 +10,7 @@ The article presents green transition as both a business opportunity and a busin
 
 It argues that sustainability is no longer optional for industrial companies because customers, regulations, and market expectations are all moving in the same direction.
 
-## Why Sustainability Has Become Strategic
+## Why sustainability has become strategic
 
 The article cites a Ramboll survey of large Danish industrial companies, where the main reasons for working with sustainability were:
 
@@ -20,7 +20,7 @@ The article cites a Ramboll survey of large Danish industrial companies, where t
 
 The conclusion is that sustainability work has to be connected to the broader company strategy if it is going to produce lasting business value.
 
-## Data Is the Basis for Green Transition
+## Data is the basis for green transition
 
 The article links digital transformation directly to CO2 reduction.
 
@@ -33,7 +33,7 @@ Measured energy data can be used to:
 
 That makes data collection a practical foundation for climate work rather than just a reporting exercise.
 
-## Partnership as an Execution Model
+## Partnership as an execution model
 
 The article describes OptiPeople as working together with a Danish energy consultancy to help companies:
 

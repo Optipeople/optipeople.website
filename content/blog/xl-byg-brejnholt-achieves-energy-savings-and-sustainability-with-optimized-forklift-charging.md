@@ -1,5 +1,5 @@
 ---
-title: "XL-BYG Brejnholt Achieves Energy Savings and Sustainability with Optimized Forklift Charging"
+title: "XL-BYG Brejnholt achieves energy savings and sustainability with optimized forklift charging"
 date: "2024-12-10"
 author: "OptiPeople Team"
 category: "Cases"
@@ -7,14 +7,14 @@ image: "/images/blog/xl-byg-768x500.jpg"
 customer: "XL-BYG Brejnholt"
 metric: "−30%"
 metricLabel: "Estimated saving on electricity bills for the trucks"
-outcome: "Smart forklift charging on cheap, solar energy is estimated to cut the electricity bills on trucks by 30% and supports fossil-free operation."
+outcome: "Smart forklift charging on cheap solar energy is estimated to cut the electricity bills on trucks by 30% and supports fossil-free operation."
 ---
 
-## At a Glance
+## At a glance
 
-XL-BYG Brejnholt uses OptiPeople Data Platform to reduce energy consumption and support its move toward full fossil-free operation. The collaboration is estimated to have cut the electricity bills for their trucks by around 30%.
+XL-BYG Brejnholt uses OptiPeople Data Platform to reduce energy consumption and support its move toward full fossil-free operation. The collaboration is estimated to have cut the electricity bills for its trucks by around 30%.
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 The setup is designed to optimize forklift charging and give the business a stronger energy overview.
 
@@ -25,7 +25,7 @@ It includes:
 - measurement of electricity, water, and heating
 - a main meter for energy data
 
-## The Result
+## The result
 
 The solution supports:
 

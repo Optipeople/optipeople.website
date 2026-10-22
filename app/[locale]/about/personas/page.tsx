@@ -41,9 +41,9 @@ const copy: Record<
       "De roller, vi arbejder med i produktionen, fra direktøren til planlæggeren: en kort video til hver og de problemer, OptiPeople Data Platform hjælper med i jobbet.",
     about: "Om",
     eyebrow: "Personaer",
-    headline: "Find din rolle",
+    headline: "Find jeres rolle",
     body: "En kort video til hver af de roller, vi arbejder med, og de problemer i hverdagen, vi hjælper med at løse i netop det job.",
-    readMore: "Se hvordan vi hjælper",
+    readMore: "Se, hvordan vi hjælper",
   },
 }
 

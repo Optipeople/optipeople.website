@@ -10,7 +10,7 @@ CAPEX refers to **capital expenditure**, or capital investment.
 
 The article argues that production measurement and optimization can help manufacturers avoid unnecessary capital investments.
 
-## Why CAPEX Matters
+## Why CAPEX matters
 
 Buying another machine may appear to be a good way to increase production, but it also creates:
 
@@ -20,7 +20,7 @@ Buying another machine may appear to be a good way to increase production, but i
 
 If production can instead be made more efficient with existing equipment, revenue can increase without increasing capital exposure.
 
-## Avoid Unnecessary Risk
+## Avoid unnecessary risk
 
 The article gives a simple example:
 
@@ -28,7 +28,7 @@ If a company buys a machine to satisfy increased demand, but the customer behind
 
 That makes the investment risky if it was avoidable.
 
-## The Better Way
+## The better way
 
 The preferred approach described is:
 
@@ -42,7 +42,7 @@ This approach can result in:
 - better use of existing capacity
 - stronger financial discipline
 
-## CAPEX and Production Efficiency
+## CAPEX and production efficiency
 
 The article also connects efficient production with sustainability and job satisfaction:
 

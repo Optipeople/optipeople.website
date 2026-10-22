@@ -1,5 +1,5 @@
 ---
-title: "Types of Predictive Maintenance: The 4 Main Approaches"
+title: "Types of predictive maintenance: The 4 main approaches"
 description: "The four types of predictive maintenance compared: condition-, time-, usage- and model-based. What triggers each, what data it needs, where it fits."
 date: "2022-09-05"
 author: "OptiPeople Team"
@@ -31,7 +31,7 @@ Condition monitoring, the collection of data that shows the state of equipment o
 It works in three steps:
 
 1. **Collect data.** Sensors on key parts such as pumps, heaters, conveyors and compressors record vibration, speed, consumption and temperature. First establish a baseline: what the machine looks like when it runs normally.
-2. **Move the data somewhere it can be analysed.** That usually means IoT connectivity and cloud storage, plus dashboards or a maintenance system.
+2. **Move the data somewhere it can be analyzed.** That usually means IoT connectivity and cloud storage, plus dashboards or a maintenance system.
 3. **Compare live data to models.** The system flags deviations from the baseline that point to a coming failure and notifies staff early enough to plan the work.
 
 Predictive maintenance is not the right choice for every asset. Ask what a failure would cost in lost production, in repair and in replacement. Assets where all three are high are the best place to begin.
@@ -71,7 +71,7 @@ Predictive maintenance tools fall into three groups that work best together: sen
 - **Thermal imaging** uses infrared data to show abnormal heat buildup before a part fails.
 - **Oil analysis** checks the condition of lubricants and the wear particles in them.
 
-**Monitoring and analytics systems** collect the sensor data, show trends, compare it over time and flag deviation from normal behaviour.
+**Monitoring and analytics systems** collect the sensor data, show trends, compare it over time and flag deviation from normal behavior.
 
 **Maintenance management tools** such as a CMMS, scheduling and work-order systems turn an alert into a task with an owner. Without them even good insight changes nothing.
 
@@ -80,7 +80,7 @@ Predictive maintenance tools fall into three groups that work best together: sen
 Each type has a typical use:
 
 - **Usage-based, turbine manufacturer.** Shaft usage and operating hours are monitored, and maintenance is triggered when a threshold is reached. This cuts unnecessary service and total maintenance spend.
-- **Condition-based, tool manufacturer.** Historical alerts and faults are analysed to find repeating patterns and likely root causes, so the team can prioritise critical issues and trigger work orders.
+- **Condition-based, tool manufacturer.** Historical alerts and faults are analyzed to find repeating patterns and likely root causes, so the team can prioritize critical issues and trigger work orders.
 - **Vibration analysis, rotating equipment.** Vibration patterns are compared with known failure modes to find problems in bearings, shafts and rotating assemblies.
 - **Condition monitoring and oil analysis, industrial plant.** Oil quality and operating condition are tracked to plan maintenance, spot wear earlier and avoid replacing parts that are still good.
 
@@ -88,7 +88,7 @@ The same principle runs through all four: monitor the right signals, detect devi
 
 ## Which type of predictive maintenance should you use?
 
-Match the type to the machine, not the other way round:
+Match the type to the machine, not the other way around:
 
 1. **Start with usage-based** on machines where wear follows how much they run. It needs little more than a connection to the machine.
 2. **Add condition-based monitoring** on critical rotating equipment, where vibration or temperature gives an early warning.

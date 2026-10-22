@@ -1,5 +1,5 @@
 ---
-title: "Board Meetings"
+title: "Board meetings"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
@@ -10,7 +10,7 @@ OptiPeople Data Platform is positioned here as a support tool for better product
 
 The core idea is simple: production data should be visible and discussable so that improvement becomes a shared process rather than a vague conversation.
 
-## How OptiPeople Data Platform Supports Board Meetings
+## How OptiPeople Data Platform supports board meetings
 
 Data can be:
 
@@ -26,7 +26,7 @@ Typical areas to follow in a board meeting include:
 - individual item numbers
 - stop reasons
 
-## Why the Meeting Matters
+## Why the meeting matters
 
 If the goal is to discuss trends and improvement opportunities, then production data is often most useful in a weekly rhythm rather than constant daily discussion.
 

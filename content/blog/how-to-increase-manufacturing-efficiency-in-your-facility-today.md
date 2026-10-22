@@ -1,5 +1,5 @@
 ---
-title: "How to Increase Manufacturing Efficiency in Your Facility Today"
+title: "How to increase manufacturing efficiency in your facility today"
 date: "2022-06-27"
 author: "OptiPeople Team"
 category: "Insights"
@@ -15,7 +15,7 @@ There are four main areas to focus on when trying to improve manufacturing effic
 - maintenance and repair processes
 - automation
 
-## Asset Utilization
+## Asset utilization
 
 Using assets more effectively can increase output while reducing waste.
 
@@ -26,7 +26,7 @@ Ways to improve asset utilization include:
 - increasing operator training
 - implementing preventive maintenance programs
 
-## Quality Control
+## Quality control
 
 Improving quality control reduces defects and helps improve customer satisfaction.
 
@@ -37,7 +37,7 @@ Ways to improve quality control include:
 - training employees on quality procedures
 - inspecting products at each stage of production
 
-## Maintenance and Repair Processes
+## Maintenance and repair processes
 
 Streamlining maintenance and repair processes reduces downtime and improves asset availability.
 
@@ -58,6 +58,6 @@ Ways to automate include:
 - implementing asset tracking
 - using predictive analytics
 
-## Start Where the Gains Are Clearest
+## Start where the gains are clearest
 
 Even implementing one or two of these improvements can make a noticeable difference. Manufacturing efficiency improves when operations use better data, stronger maintenance routines, and clearer process control across the facility.

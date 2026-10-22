@@ -11,11 +11,11 @@ quote: "When we run optimization projects we can measure them. That is key to ma
 outcome: "CNC- and ERP-integrated data give a clear capacity overview and avoid unnecessary machine investment."
 ---
 
-## At a Glance
+## At a glance
 
 Gurit uses OptiPeople Data Platform in its core material kitting business to create a clearer overview of production capacity and support better operational decisions.
 
-## The Situation
+## The situation
 
 Gurit wanted a stronger basis for optimization work and more reliable insight into how production resources were being used.
 
@@ -23,7 +23,7 @@ The need was not only to see what was happening, but to measure improvement effo
 
 > "When we are doing optimization projects, we can measure them - that is key to being able to make the right decisions for effective and streamlined production."
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 OptiPeople Data Platform is set up around the production environment with:
 
@@ -31,7 +31,7 @@ OptiPeople Data Platform is set up around the production environment with:
 - full ERP integration
 - uptime and stop-cause registration
 
-## The Result
+## The result
 
 The setup gives Gurit:
 

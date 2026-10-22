@@ -1,5 +1,5 @@
 ---
-title: "Expedit: OptiPeople Data Platform enables decision making around automations and investments"
+title: "Expedit: OptiPeople Data Platform enables decision-making around automations and investments"
 date: "2022-04-07"
 author: "OptiPeople Team"
 category: "Cases"
@@ -10,19 +10,19 @@ quote: "With the solution we have been able to analyze what we can do to get a b
 outcome: "Wood and metal lines share one live view, giving a stronger basis for automation and investment decisions."
 ---
 
-## At a Glance
+## At a glance
 
 Expedit uses OptiPeople Data Platform to understand production flow better, reduce errors, and create a stronger basis for automation and investment decisions.
 
 > "With the solution we have been able to analyze what we can do to get a better production flow and minimize errors."
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 OptiPeople Data Platform is connected to wood and metal lines at Expedit's manufacturing facility in Hadsten, Denmark.
 
 That gives operators and managers a shared view of machine status and production performance.
 
-## The Result
+## The result
 
 The setup gives Expedit:
 

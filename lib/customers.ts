@@ -7,7 +7,7 @@ import type { LogoItem } from "@/components/logo-wall"
 export const customerLogos: LogoItem[] = [
   { name: "Alfix", logoSrc: "/images/logos/Alfix-logo.png" },
   { name: "Broen", logoSrc: "/images/logos/Broen.png" },
-  { name: "Carl Hansen og Søn", logoSrc: "/images/logos/Carl Hansen og Søn.png" },
+  { name: "Carl Hansen & Søn", logoSrc: "/images/logos/Carl Hansen og Søn.png" },
   { name: "CS Wind Offshore", logoSrc: "/images/logos/CS Wind Offshore.png" },
   { name: "Ege Carpets", logoSrc: "/images/logos/Ege.png" },
   { name: "Elektro-Isola", logoSrc: "/images/logos/Elektro-Isola.png" },

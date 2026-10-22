@@ -1,18 +1,18 @@
 ---
-title: "OptiPeople Data Platform’s Efficiency and OEE Module"
+title: "OptiPeople Data Platform’s efficiency and OEE module"
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/oee-module-report.png"
 ---
 
-## OptiPeople Data Platform’s OEE Module: A Powerful Tool for Enhanced Efficiency
+## OptiPeople Data Platform’s OEE module: A powerful tool for enhanced efficiency
 
-Understanding Overall Equipment Efficiency, or OEE, is fundamental to manufacturing optimization. OptiPeople Data Platform’s OEE Module provides a real-time view of machine performance by combining availability, quality, and performance.
+Understanding Overall Equipment Effectiveness, or OEE, is fundamental to manufacturing optimization. OptiPeople Data Platform’s OEE Module provides a real-time view of machine performance by combining availability, quality, and performance.
 
-![](/images/blog and case/blog/oee-module-report.png)
+![](/images/blog/oee-module-report.png)
 
-## Benefits of Using OptiPeople Data Platform’s OEE Module
+## Benefits of using OptiPeople Data Platform’s OEE module
 
 **Accurate real-time data:** Get live updates from the factory floor and act quickly on changes that affect productivity.
 
@@ -22,11 +22,11 @@ Understanding Overall Equipment Efficiency, or OEE, is fundamental to manufactur
 
 Video: [OEE real-time and historic walkthrough](https://player.vimeo.com/video/678151922?dnt=1&app_id=122963)
 
-## A Case from One of Our Customers
+## A case from one of our customers
 
-![](/images/blog and case/blog/oee-module-case.png)
+![](/images/blog/oee-module-case.png)
 
-## A Step-by-Step Guide to Using the Module
+## A step-by-step guide to using the module
 
 **Step 1: Deploy and monitor**
 
@@ -35,7 +35,7 @@ Video: [OEE real-time and historic walkthrough](https://player.vimeo.com/video/6
 **Step 2: Understand your OEE score**
 
 - The OEE score provides an immediate snapshot of factory efficiency.
-- **Availability:** Shows how much scheduled time the equipment is actually available to operate.
+- **Availability:** Shows how much of the scheduled time the equipment is actually available to operate.
 - **Performance:** Reflects how fast work centers operate relative to designed speed.
 - **Quality:** Shows the share of good units compared with total units started.
 

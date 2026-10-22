@@ -1,5 +1,5 @@
 ---
-title: "OptiPeople Data Platform MQTT JSON Schema"
+title: "OptiPeople Data Platform MQTT JSON schema"
 date: "2022-06-15"
 author: "OptiPeople Team"
 category: "Insights"
@@ -8,24 +8,24 @@ image: "/images/blog and case/blog/opticloud-api-code.jpg"
 
 This is a guide to the JSON schema used when sending data to OptiPeople Data Platform over MQTT.
 
-## Basic Message Structure
+## Basic message structure
 
 ```json
 {
-  "time": "timestamp ISO8601 yy-mm-ddThh-mm-ssz",
+  "time": "timestamp ISO 8601 YYYY-MM-DDThh:mm:ssZ",
   "inputType": "string[30]",
   "functions": [
     {
       "deviceId": "string[30]",
       "name": "string[30]",
       "value": "string[128]",
-      "time": "timestamp ISO8601 yy-mm-ddThh-mm-ssz"
+      "time": "timestamp ISO 8601 YYYY-MM-DDThh:mm:ssZ"
     }
   ]
 }
 ```
 
-## Field Definitions
+## Field definitions
 
 ### `time`
 
@@ -76,7 +76,7 @@ For machine states, it can be:
 - `Downtime`
 - any stop reason text
 
-## Message Example: Machine State
+## Message example: Machine state
 
 ```json
 {
@@ -93,7 +93,7 @@ For machine states, it can be:
 }
 ```
 
-## Message Example: Part Counters
+## Message example: Part counters
 
 ```json
 {
@@ -116,7 +116,7 @@ For machine states, it can be:
 }
 ```
 
-## Message Example: Add Part Information
+## Message example: Add part information
 
 ```json
 {
@@ -136,7 +136,7 @@ For machine states, it can be:
 
 Use the `name` field to send order or item details. `expectedSpeed` indicates how many units the machine is expected to produce per hour.
 
-## Message Example: Telemetry
+## Message example: Telemetry
 
 ```json
 {
@@ -167,7 +167,7 @@ The `type` field can be:
 - `2` for decimals
 - `3` for text
 
-## Message Example: Part Rejection
+## Message example: Part rejection
 
 ```json
 {

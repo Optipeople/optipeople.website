@@ -1,5 +1,5 @@
 ---
-title: "Fiberline Composites - 41% reduction in unnecessary stops - 6% reduction in average time per stop"
+title: "Fiberline Composites: 41% reduction in unnecessary stops and 6% reduction in average time per stop"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"
@@ -11,7 +11,7 @@ quote: "Now stop reasons are being registered and we have a much better overview
 outcome: "Software-to-software machine data cut unnecessary stops by 41% and average time per stop by 6%."
 ---
 
-## At a Glance
+## At a glance
 
 Fiberline Composites wanted better visibility into when and why machines were stopping.
 
@@ -21,7 +21,7 @@ With OptiPeople Data Platform, the company gained that insight and achieved a **
 
 Johnny Nielsen, Fiberline Composites
 
-## The Goal
+## The goal
 
 Fiberline wanted to:
 
@@ -30,13 +30,13 @@ Fiberline wanted to:
 - increase competitiveness
 - speed up digital transformation
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
-Data is collected from the machines through a software-to-software integration and sent to the OptiPeople Data Platform platform.
+Data is collected from the machines through a software-to-software integration and sent to OptiPeople Data Platform.
 
 That creates a stronger basis for tracking stops, downtime, and breakdown patterns.
 
-## The Result
+## The result
 
 Fiberline achieved:
 

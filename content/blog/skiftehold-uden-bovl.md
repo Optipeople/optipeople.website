@@ -1,5 +1,5 @@
 ---
-title: "Shifts Without Hassle"
+title: "Shifts without hassle"
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
@@ -10,7 +10,7 @@ Many companies find that knowledge transfer between shifts is too weak, even tho
 
 The article presents the OptiPeople Data Platform operator panel as a tool to make shift handover easier.
 
-## What the Operator Panel Helps With
+## What the operator panel helps with
 
 The panel provides a clear list of stop reasons from the latest shift, which gives the next operator a concrete starting point for understanding:
 
@@ -20,7 +20,7 @@ The panel provides a clear list of stop reasons from the latest shift, which giv
 
 Operators can also specify stop reasons directly, making the handover more useful and less dependent on memory or verbal explanation alone.
 
-## Why It Matters
+## Why it matters
 
 This reduces unnecessary repeated work. For example, if maintenance has already been called, the next shift does not need to escalate the same issue again.
 

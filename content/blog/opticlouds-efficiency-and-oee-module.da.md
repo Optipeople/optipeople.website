@@ -6,7 +6,7 @@ title: "OEE-modulet i OptiPeople Data Platform: Se, hvor effektiviteten går tab
 
 Når I vil optimere produktionen, skal I kende jeres OEE (Overall Equipment Effectiveness). OEE-modulet i OptiPeople Data Platform viser live, hvordan maskinerne kører, ved at samle tilgængelighed, kvalitet og ydelse i ét tal.
 
-![](/images/blog and case/blog/oee-module-report.png)
+![](/images/blog/oee-module-report.png)
 
 ## Det får I ud af OEE-modulet
 
@@ -20,7 +20,7 @@ Video: [Gennemgang af OEE live og historisk](https://player.vimeo.com/video/6781
 
 ## En case fra en af vores kunder
 
-![](/images/blog and case/blog/oee-module-case.png)
+![](/images/blog/oee-module-case.png)
 
 ## Sådan bruger I modulet, trin for trin
 

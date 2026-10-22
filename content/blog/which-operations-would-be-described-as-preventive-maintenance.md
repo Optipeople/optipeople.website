@@ -1,5 +1,5 @@
 ---
-title: "Which Operations Are Preventive Maintenance? 10 Examples"
+title: "Which operations are preventive maintenance? 10 examples"
 description: "Preventive maintenance is planned work done before a failure. 10 examples: inspection, cleaning, lubrication, oil changes, adjusting and new wear parts."
 date: "2022-05-30"
 updated: "2026-10-02"
@@ -54,7 +54,7 @@ Preventive maintenance is planned in one of three ways, depending on what trigge
 
 **Usage-based** maintenance follows how much the machine has actually run. A machine that runs three shifts is serviced more often than one that runs one. This needs running hours or cycle counts from the machine. [Kvik switched from calendar-based to usage-based maintenance](/blog/kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud) and raised uptime by 5%.
 
-**Condition-based** maintenance is triggered by what you measure, such as vibration, current (amperes) or temperature. It is more precise than a fixed schedule and is the step towards [predictive maintenance](/blog/what-is-the-difference-between-preventive-and-predictive-maintenance).
+**Condition-based** maintenance is triggered by what you measure, such as vibration, current (amperes) or temperature. It is more precise than a fixed schedule and is the step toward [predictive maintenance](/blog/what-is-the-difference-between-preventive-and-predictive-maintenance).
 
 ## How do you set up preventive maintenance?
 
@@ -62,7 +62,7 @@ Preventive maintenance is planned in one of three ways, depending on what trigge
 
 List the machines and parts that will need attention at some point: moving parts, fixed parts, supporting components and wear items.
 
-### 2. Prioritise
+### 2. Prioritize
 
 Decide where to start based on:
 
@@ -81,7 +81,7 @@ Preventive maintenance involves several roles:
 - **Operators** handle daily tasks such as cleaning, checks and lubrication.
 - **Mechanics and electricians** handle the deeper technical work.
 - **Engineers** set intervals and improve the plan.
-- **Managers** plan, prioritise and coordinate.
+- **Managers** plan, prioritize and coordinate.
 
 ### 5. Follow up
 

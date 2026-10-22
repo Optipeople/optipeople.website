@@ -11,7 +11,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         "Explore the nine OptiPeople modules on one connected platform: Orders, Planning, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents.",
       eyebrow: "Modules",
       headline: "One platform, every part of production",
-      body: "Each module solves a specific operational need, and together they give you a single, connected view of the shopfloor. You do not have to take all of them at once. Most factories start with production monitoring on one line, then add the modules that answer the next question.",
+      body: "Each module solves a specific operational need, and together they give you a single, connected view of the shop floor. You do not have to take all of them at once. Most factories start with production monitoring on one line, then add the modules that answer the next question.",
       linksTitle: "Explore the modules",
       sections: [
         {
@@ -113,11 +113,11 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
       sections: [
         {
           title: "Målt, ikke gættet",
-          body: "Enten kørte maskinen, eller også gjorde den ikke. Signalet siger hvad. OptiPeople Data Platform bygger tallene på det, udstyret melder, og det, operatørerne registrerer ved maskinen eller arbejdsstationen. OEE-tallet på mandagsmødet kan følges hele vejen tilbage til bestemte minutter på en bestemt linje, i stedet for til hvad nogen kan huske om ugen.",
+          body: "Enten kørte maskinen, eller også gjorde den ikke. Signalet siger hvad. OptiPeople Data Platform bygger tallene på det, udstyret melder, og det, operatørerne registrerer ved maskinen eller arbejdsstationen. OEE-tallet på mandagsmødet kan følges hele vejen tilbage til bestemte minutter på en bestemt linje, i stedet for til, hvad nogen kan huske om ugen.",
         },
         {
           title: "Registreret dér, hvor arbejdet sker",
-          body: "Stopårsager, kvalitetstjek og vedligeholdsopgaver bliver registreret ved maskinen eller arbejdsstationen, på et panel eller en telefon, i sekunderne efter det sker. Data, der bliver samlet op ved kilden, er data, folk tror på. Og de afhænger ikke af, at nogen husker at udfylde et regneark, når skiftet er ved at være slut.",
+          body: "Stopårsager, kvalitetstjek og vedligeholdsopgaver bliver registreret ved maskinen eller arbejdsstationen, på et panel eller en telefon, i sekunderne, efter det sker. Data, der bliver samlet op ved kilden, er data, folk tror på. Og de afhænger ikke af, at nogen husker at udfylde et regneark, når skiftet er ved at være slut.",
         },
         {
           title: "De samme tal for alle",
@@ -125,7 +125,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "Brugbart fra dag ét, bedre med tiden",
-          body: "En linje, der er koblet på, fortæller jer noget med det samme: hvor meget den kørte, hvornår den stoppede, hvor lang tid omstillingerne tog. Efterhånden som historikken vokser, kan I også se mønstrene: stopårsager der bliver ved med at komme igen, maskiner der taber fart, energi pr. enhed der kryber op.",
+          body: "En linje, der er koblet på, fortæller jer noget med det samme: hvor meget den kørte, hvornår den stoppede, hvor lang tid omstillingerne tog. Efterhånden som historikken vokser, kan I også se mønstrene: stopårsager, der bliver ved med at komme igen, maskiner, der taber fart, energi pr. enhed, der kryber op.",
         },
       ],
       links: [
@@ -158,7 +158,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
         {
           title: "We start with what you already have",
-          body: "Most manufacturers already own more data than they use, in the ERP, in the controls, in a decade of spreadsheets. A project usually starts by finding out what is already there and what is genuinely missing, rather than by replacing systems that work.",
+          body: "Most manufacturers already own more data than they use: in the ERP, in the controls, in a decade of spreadsheets. A project usually starts by finding out what is already there and what is genuinely missing, rather than by replacing systems that work.",
         },
         {
           title: "Scoped to a first result",
@@ -170,7 +170,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         },
       ],
       links: [
-        { title: "Smart Operations", href: "/services/smart-operations", description: "Real-time data, OEE, dashboards, and shopfloor visibility that turn machine and workstation data into better decisions." },
+        { title: "Smart Operations", href: "/services/smart-operations", description: "Real-time data, OEE, dashboards, and shop floor visibility that turn machine and workstation data into better decisions." },
         { title: "Automation", href: "/services/automation", description: "PLC, HMI, SCADA, and machine control engineering built to run reliably in production." },
         { title: "Business Intelligence", href: "/services/business-intelligence", description: "Power BI dashboards, data models, and automated reporting that bring scattered data into one view." },
         { title: "AI Agentic Solutions", href: "/services/ai-solutions", description: "AI agents and copilots that work close to your operations and your production data." },
@@ -217,7 +217,7 @@ export const simplePages: Record<string, Record<Locale, SimplePage>> = {
         "OptiPeople solutions for manufacturers, OEMs and machine builders, and service and aftermarket teams.",
       eyebrow: "Solutions",
       headline: "Built for how you make and service products",
-      body: "Whether you run a factory, build machines, or service an installed base, OptiPeople gives you the operational data to act faster. The platform is the same in all three cases, what changes is whose machines you are watching and what you need to decide.",
+      body: "Whether you run a factory, build machines, or service an installed base, OptiPeople gives you the operational data to act faster. The platform is the same in all three cases. What changes is whose machines you are watching and what you need to decide.",
       linksTitle: "Find your starting point",
       sections: [
         {

@@ -1,6 +1,6 @@
 ---
 title: "Industri 5.0: Hvad er den femte industrielle revolution?"
-description: "Den femte industrielle revolution, Industri 5.0, sætter mennesket i centrum af den opkoblede fabrik: produktion der er menneskelig, bæredygtig og robust."
+description: "Den femte industrielle revolution, Industri 5.0, sætter mennesket i centrum af den opkoblede fabrik: produktion, der er menneskelig, bæredygtig og robust."
 ---
 
 Den femte industrielle revolution, eller Industri 5.0, er næste skridt efter Industri 4.0. Den opkoblede fabrik med data er der stadig, men målet er et andet: teknologien skal arbejde sammen med folk, ikke erstatte dem. EU-Kommissionen beskriver det med tre mål: produktionen skal være menneskelig, bæredygtig og robust.
@@ -61,7 +61,7 @@ Det fundament kommer først. I kan ikke sætte mennesket i centrum af en fabrik,
 - at operatører og ledere ser det samme billede af, hvad der foregår
 - at bruge det billede til at blive bedre sammen
 
-[OptiPeoples IoT-modul](/da/modules/iot) henter data fra de maskiner og systemer, fabrikken allerede kører med. [Produktionsmodulet](/da/modules/production) gør det til live OEE og stopårsager på skærme ved linjen, til dem der kører den.
+[OptiPeoples IoT-modul](/da/modules/iot) henter data fra de maskiner og systemer, fabrikken allerede kører med. [Produktionsmodulet](/da/modules/production) gør det til live OEE og stopårsager på skærme ved linjen, til dem, der kører den.
 
 ## Hvad er fordele og ulemper ved Industri 5.0?
 

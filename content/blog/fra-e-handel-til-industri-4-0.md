@@ -10,7 +10,7 @@ The article argues that manufacturing is going through the same kind of disrupti
 
 Traditional production methods are being replaced by data-driven ways of working, where processes can be measured while they happen.
 
-## Data Changes How Production Is Managed
+## Data changes how production is managed
 
 The article highlights how modern data collection can create visibility across:
 
@@ -21,7 +21,7 @@ The article highlights how modern data collection can create visibility across:
 
 It also points to item-level traceability, where a company can follow a unit through the entire production flow instead of relying on partial sampling.
 
-## What E-Commerce Has to Do With It
+## What e-commerce has to do with it
 
 The comparison to e-commerce is deliberate.
 
@@ -34,7 +34,7 @@ The article describes how smartphones and the financial crisis accelerated onlin
 
 That shift was driven by better use of data rather than intuition alone.
 
-## Factories Face the Same Choice
+## Factories face the same choice
 
 The article frames today's industrial challenge in the same way.
 

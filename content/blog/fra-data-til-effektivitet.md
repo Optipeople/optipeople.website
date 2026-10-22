@@ -7,16 +7,16 @@ image: "/images/blog/fra-data-til-effektivitet.jpg"
 customer: "Industrial company"
 metric: "21→41%"
 metricLabel: "OEE, nearly doubled"
-outcome: "Analysing OEE by series size justified a second machine, and lifted OEE from 21% to 41%."
+outcome: "Analyzing OEE by series size justified a second machine, and lifted OEE from 21% to 41%."
 ---
 
-## At a Glance
+## At a glance
 
 This anonymized case shows how a factory used OptiPeople Data Platform data to uncover efficiency opportunities, improve OEE, and make a better-informed equipment investment.
 
 The core result was an increase in OEE from **21%** to **41%**.
 
-## The Situation
+## The situation
 
 The machine in focus produced both small and large series sizes.
 
@@ -24,7 +24,7 @@ Because changeovers were expensive, the factory suspected there was room for imp
 
 OptiPeople Data Platform was introduced to create that decision basis.
 
-## What the Data Showed
+## What the data showed
 
 Once data collection began, it became clear that the machine's productivity was closely linked to series size.
 
@@ -32,7 +32,7 @@ The many changeovers were a major cause of low efficiency. Smaller series absorb
 
 Service checks also played a role. After checks in October and February, OEE moved to a higher level.
 
-## How the Improvement Was Created
+## How the improvement was created
 
 The analysis showed that it made sense to buy an additional smaller machine for small elements.
 
@@ -40,7 +40,7 @@ That smaller machine had no setup time, even though it produced more slowly than
 
 After the investment, the factory no longer depended on one machine that spent too much time idle or in setup mode. Instead, it had two machines better suited to different production patterns.
 
-## Why the Analysis Mattered
+## Why the analysis mattered
 
 An important insight was that OEE had to be evaluated by series size, not only at machine level.
 
@@ -48,7 +48,7 @@ One machine can perform well for some product types while being dragged down by 
 
 In this case, the strongest OEE results appeared in the series sizes where **500 items or more** were produced before changeover.
 
-## The Result
+## The result
 
 The factory saw several measurable gains:
 
@@ -57,7 +57,7 @@ The factory saw several measurable gains:
 - daily production time for that volume dropped from **24 hours** to **18.5 hours**
 - that corresponds to a saving of **5.5 hours per day**
 
-## The Business Case
+## The business case
 
 Two payback perspectives were considered.
 
@@ -65,7 +65,7 @@ Using a fixed-cost approach, a total investment of **DKK 3.5 million** and an an
 
 Using an earnings-maximization approach, the additional production capacity was valued at **DKK 2.96 million per year**. If that extra output could be sold, payback time was **1.2 years**.
 
-## Key Takeaway
+## Key takeaway
 
 The case shows that production optimization starts with data.
 

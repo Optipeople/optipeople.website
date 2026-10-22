@@ -118,7 +118,7 @@ export async function generateMetadata({
   }
 
   return buildMetadata({
-    title: "OptiPeople Newsletter",
+    title: "OptiPeople newsletter",
     description:
       "Sign up for practical OptiPeople updates about production data, OEE, maintenance, and digital operations for manufacturers.",
     path: "/newsletter",
@@ -149,7 +149,7 @@ export default async function NewsletterPage({
       <JsonLd
         data={breadcrumbSchema(locale as Locale, [
           {
-            name: locale === "da" ? "OptiPeople nyhedsbrev" : "OptiPeople Newsletter",
+            name: locale === "da" ? "OptiPeople nyhedsbrev" : "OptiPeople newsletter",
             path: "/newsletter",
           },
         ])}

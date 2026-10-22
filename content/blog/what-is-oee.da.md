@@ -115,7 +115,7 @@ OEE gør ikke produktionen bedre af sig selv. Virkningen er, at et bredt problem
 
 ## Hvordan måler man OEE automatisk?
 
-OEE regnet ud fra skiftesedler er langsomt og som regel for pænt, fordi korte stop og langsom kørsel ikke bliver skrevet ned. [OptiPeoples OEE-modul](/da/modules/production) henter data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen, så I ikke bare ser tallet, men også hvad der tog tiden.
+OEE regnet ud fra skiftsedler er langsomt og som regel for pænt, fordi korte stop og langsom kørsel ikke bliver skrevet ned. [OptiPeoples OEE-modul](/da/modules/production) henter data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen, så I ikke bare ser tallet, men også hvad der tog tiden.
 
 ## Ofte stillede spørgsmål
 

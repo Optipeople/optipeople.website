@@ -1,5 +1,5 @@
 ---
-title: "What Is OEE? Meaning, Formula and Examples"
+title: "What is OEE? Meaning, formula and examples"
 description: "OEE (Overall Equipment Effectiveness) is the share of planned production time that is truly productive. The formula, worked examples and what a good score is."
 date: "2023-01-18"
 updated: "2026-10-05"
@@ -75,7 +75,7 @@ The shortcut confirms it: 342 good parts x 1 minute / 480 minutes = 71.3%. Of th
 | 60% | Typical for discrete manufacturers, with plenty of room to improve |
 | 40% | Common when a plant first starts measuring, and easy to raise |
 
-The 85% benchmark comes from 90% availability, 95% performance and 99.9% quality. Read more about [what a world class OEE score is](/blog/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results) and how to get there.
+The 85% benchmark comes from 90% availability, 95% performance and 99.9% quality. Read more about [what a world-class OEE score is](/blog/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results) and how to get there.
 
 ## What does weekly OEE data look like?
 

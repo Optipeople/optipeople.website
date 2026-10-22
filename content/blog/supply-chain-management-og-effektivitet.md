@@ -18,13 +18,13 @@ The article connects supply chain efficiency with practical operational goals su
 
 When one or more of these areas improve, the result can be shorter lead times, better capacity use, and smoother production flow.
 
-## What Supply Chain Efficiency Means
+## What supply chain efficiency means
 
 Efficiency is described as the amount of work required to complete a process and how well available resources are used.
 
 The article stresses that efficiency must still serve the final customer. A process is not truly efficient if it is internally optimized but produces the wrong outcome.
 
-## Just in Time Requires Better Flow
+## Just in time requires better flow
 
 The article revisits the just-in-time principle through a productivity lens.
 
@@ -37,7 +37,7 @@ Higher efficiency makes it possible to:
 
 That also means factory layout and floor discipline matter. If goods, materials, or work-in-progress block the flow, high tempo becomes difficult.
 
-## Three Practical Suggestions
+## Three practical suggestions
 
 The article closes with three concrete suggestions:
 

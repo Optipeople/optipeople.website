@@ -1,5 +1,5 @@
 ---
-title: "How to Improve OEE: 7 Steps with Examples"
+title: "How to improve OEE: 7 steps with examples"
 description: "How to improve OEE: measure it automatically, find the factor that loses most, fix the biggest stop causes, and cut changeovers, short stops and scrap."
 date: "2022-03-23"
 updated: "2026-10-07"
@@ -60,7 +60,7 @@ Changeovers often take the largest single share of availability. The standard me
 
 - Separate the work that has to be done with the machine stopped from the work that can be done while it runs.
 - Move as much as possible to while the machine runs: fetching tools, material and the next program.
-- Standardise the rest, with a checklist and the same steps every time.
+- Standardize the rest, with a checklist and the same steps every time.
 
 **Example:** a changeover that takes 60 minutes, three times a day, costs 3 hours of a 24-hour plan. Cutting it to 30 minutes gives 1.5 hours back, which on its own lifts availability by more than 6 points.
 
@@ -82,7 +82,7 @@ Breakdowns lower availability, and worn equipment often shows up as lower speed 
 
 ## How much can OEE improve?
 
-A plant that starts measuring at 40 to 50% can often gain 5 to 10 points in the first months, mainly from seeing the stops and acting on them. [Dansk Træemballage](/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud) raised OEE by 5% in three months on its first line. After that, gains come slower and from deeper work on changeovers and process stability. The long-term reference is [world class OEE](/blog/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results) at 85%.
+A plant that starts measuring at 40 to 50% can often gain 5 to 10 points in the first months, mainly from seeing the stops and acting on them. [Dansk Træemballage](/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud) raised OEE by 5% in three months on its first line. After that, gains come more slowly and from deeper work on changeovers and process stability. The long-term reference is [world-class OEE](/blog/unlocking-world-class-performance-with-oee-how-to-maximize-efficiency-and-results) at 85%.
 
 ## How do you track OEE improvement?
 

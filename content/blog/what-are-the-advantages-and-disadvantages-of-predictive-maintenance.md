@@ -1,5 +1,5 @@
 ---
-title: "Advantages and Disadvantages of Predictive Maintenance"
+title: "Advantages and disadvantages of predictive maintenance"
 description: "Pros and cons of predictive maintenance in one table: less downtime and longer equipment life against upfront cost, data work and new skills."
 date: "2022-06-28"
 author: "OptiPeople Team"
@@ -18,7 +18,7 @@ Predictive maintenance uses machine data to service equipment before it fails. I
 | Longer equipment life | New skills and training for the maintenance team |
 | Fewer emergency repairs and safer work | Not every failure gives a warning signal |
 | More stable output and quality | Payback takes time and needs failure history |
-| Less wasted energy and material | Alerts only help if the organisation acts on them |
+| Less wasted energy and material | Alerts only help if the organization acts on them |
 | Better planning of people and parts | Overkill on cheap or non-critical equipment |
 
 New to the term? Start with [what predictive maintenance is and how it works](/blog/the-four-types-of-predictive-maintenance-and-why-they-matter).
@@ -46,7 +46,7 @@ In short, the benefits fall into three groups:
 3. **New skills.** The team needs to read trends, set sensible thresholds and trust the alerts. That takes training and time.
 4. **Not every failure is predictable.** Some faults, such as many electronic failures or damage from misuse, give little or no warning in the data.
 5. **Slow payback and a learning period.** Models and thresholds improve as failures are recorded. The first months often bring false alarms or missed warnings.
-6. **Organisational change.** An alert that nobody owns does nothing. Predictive maintenance only pays when alerts turn into planned work orders.
+6. **Organizational change.** An alert that nobody owns does nothing. Predictive maintenance only pays when alerts turn into planned work orders.
 7. **Overkill on low-value equipment.** For a cheap fan or a pump with a spare on the shelf, running it to failure can be the better deal.
 
 ## How can you reduce the disadvantages?

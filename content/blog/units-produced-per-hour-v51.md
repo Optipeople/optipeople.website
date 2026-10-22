@@ -1,5 +1,5 @@
 ---
-title: "Units Produced Per Hour (v51)"
+title: "Units produced per hour (v51)"
 date: "2022-11-16"
 author: "OptiPeople Team"
 category: "Insights"
@@ -10,7 +10,7 @@ Version 51 of OptiPeople Data Platform introduced a new graph for **units produc
 
 This graph aggregates output over time and makes it easy to visualize production speed at the right level of detail.
 
-## How the Graph Works
+## How the graph works
 
 The graph automatically adjusts based on the selected time range:
 
@@ -20,7 +20,7 @@ The graph automatically adjusts based on the selected time range:
 
 This means you can always see production speed clearly, whether you need detailed hourly visibility or a larger management overview.
 
-## Why It Matters
+## Why it matters
 
 The graph also includes:
 

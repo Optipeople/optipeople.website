@@ -19,7 +19,7 @@ Og så forfra. For hver runde flytter det største tab sig et nyt sted hen.
 
 ## Hvorfor skal I måle OEE automatisk?
 
-Fordi OEE regnet i hånden er for pæn. Skiftsedlerne fanger ikke stop på et minut eller to, og heller ikke den tid, maskinen kører under fuld fart. Det er tit de største tab, og på papiret forsvinder de.
+Fordi OEE regnet i hånden er for pæn. Skiftsedlerne fanger ikke stop på et minut eller to, og heller ikke den tid, maskinen kører langsommere end fuld fart. Det er tit de største tab, og på papiret forsvinder de.
 
 Når tallet kommer direkte fra maskinen, er det også friskt. Operatørerne ser det skift, de står i, og ikke sidste måneds gennemsnit. Så kan de handle, mens stoppet stadig står på. Er I i tvivl om, hvordan tallet bliver regnet ud, så se [sådan regner I OEE ud](/da/blog/how-to-calculate-oee-for-manufacturing-and-maintenance).
 
@@ -61,13 +61,13 @@ Omstillinger tager tit den største enkelte bid af tilgængeligheden. Den kendte
 
 ## Hvordan kommer I af med korte stop og langsom kørsel?
 
-Korte stop (en fastkørsel, en føler der slår fra, et emne der ligger skævt) varer sekunder eller minutter, så ingen skriver dem ned. De viser sig som lav ydelse. Den eneste sikre måde at se, hvor tit de sker, og på hvilket produkt, er at måle dem automatisk.
+Korte stop (en fastkørsel, en føler, der slår fra, et emne, der ligger skævt) varer sekunder eller minutter, så ingen skriver dem ned. De viser sig som lav ydelse. Den eneste sikre måde at se, hvor tit de sker, og på hvilket produkt, er at måle dem automatisk.
 
 Langsom kørsel kommer tit af, at maskinen engang blev skruet ned for at undgå et problem og aldrig blev skruet op igen. Hold den faktiske hastighed op mod den ideelle pr. produkt, og spørg, hvorfor hvert hul er der.
 
 ## Hvordan skærer I ned på kassation og omarbejde?
 
-Det meste kassation sker lige efter en omstilling eller en opstart, mens processen finder sig til rette. Registrér, hvornår der bliver kasseret, og ikke kun hvor meget. Ligger det samlet efter omstillinger, er løsningen bedre indstillinger og en hurtigere vej til en stabil proces, ikke mere kontrol.
+Den meste kassation sker lige efter en omstilling eller en opstart, mens processen finder sig til rette. Registrér, hvornår der bliver kasseret, og ikke kun hvor meget. Ligger det samlet efter omstillinger, er løsningen bedre indstillinger og en hurtigere vej til en stabil proces, ikke mere kontrol.
 
 Tæl omarbejde som dårlige emner i kvaliteten. Den tid, det tager at lave et emne to gange, er tabt tid.
 

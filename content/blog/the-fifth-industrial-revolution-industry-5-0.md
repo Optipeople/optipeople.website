@@ -1,6 +1,6 @@
 ---
-title: "Industry 5.0: What Is the Fifth Industrial Revolution?"
-description: "The fifth industrial revolution, Industry 5.0, puts people back at the centre of the connected factory: human-centric, sustainable and resilient production."
+title: "Industry 5.0: What is the fifth industrial revolution?"
+description: "The fifth industrial revolution, Industry 5.0, puts people back at the center of the connected factory: human-centric, sustainable and resilient production."
 date: "2022-06-21"
 updated: "2026-10-02"
 author: "OptiPeople Team"
@@ -12,7 +12,7 @@ The fifth industrial revolution, or Industry 5.0, is the next stage after Indust
 
 ## What is the fifth industrial revolution?
 
-Industry 5.0 is a way of running manufacturing where people and smart machines work side by side. Robots, sensors and software take the repetitive, heavy and precise work. People bring judgement, creativity and the ability to handle the unexpected.
+Industry 5.0 is a way of running manufacturing where people and smart machines work side by side. Robots, sensors and software take the repetitive, heavy and precise work. People bring judgment, creativity and the ability to handle the unexpected.
 
 The term became widely used after the European Commission published its report *Industry 5.0: Towards a sustainable, human-centric and resilient European industry* in January 2021. It is less a new technology than a new purpose for the technology factories already have.
 
@@ -26,7 +26,7 @@ Its three pillars:
 
 | Revolution | When | What changed |
 |---|---|---|
-| 1st: Industry 1.0 | Late 1700s | Steam power and mechanised production |
+| 1st: Industry 1.0 | Late 1700s | Steam power and mechanized production |
 | 2nd: Industry 2.0 | Late 1800s | Electricity, assembly lines and mass production |
 | 3rd: Industry 3.0 | 1970s | Electronics, computers and programmable automation (PLCs) |
 | 4th: Industry 4.0 | 2010s | Connected machines, IoT, cloud and data across the factory |
@@ -34,7 +34,7 @@ Its three pillars:
 
 ## What is the difference between Industry 4.0 and Industry 5.0?
 
-[Industry 4.0](/blog/hvad-er-industri-4-0) is about connecting machines and digitalising production. Its main goals are efficiency and automation.
+[Industry 4.0](/blog/hvad-er-industri-4-0) is about connecting machines and digitalizing production. Its main goals are efficiency and automation.
 
 Industry 5.0 builds on that foundation and asks what the technology is for. Instead of the "lights-out" factory with no people, it aims to combine machine precision with human skill. It also adds goals that go beyond output: the wellbeing of the people on the floor, energy use and the ability to keep running when things go wrong.
 
@@ -44,7 +44,7 @@ Industry 5.0 builds on that foundation and asks what the technology is for. Inst
 | Role of people | Often replaced by automation | Work alongside machines and decide |
 | Typical technology | IoT, cloud, big data, automation | Collaborative robots (cobots), AI assistants, real-time data for operators |
 | Main goal | Efficiency and productivity | Efficiency plus wellbeing, sustainability and robustness |
-| Products | Mass production | More customisation and smaller batches |
+| Products | Mass production | More customization and smaller batches |
 
 ## Which technologies are part of Industry 5.0?
 
@@ -53,13 +53,13 @@ Industry 5.0 builds on that foundation and asks what the technology is for. Inst
 - **Real-time production data** on screens at the machine, so operators see what is happening and react.
 - **Digital twins and simulation** to test changes before they reach the line.
 - **Energy and resource monitoring** to cut consumption and waste.
-- **3D printing** for spare parts and customised products.
+- **3D printing** for spare parts and customized products.
 
 ## Are we in Industry 4.0 or 5.0?
 
 Most manufacturers are still building their Industry 4.0 foundation. Many machines are not connected yet, and data often lives in spreadsheets or on paper.
 
-That foundation comes first. You cannot put people at the centre of a data-driven factory without the data. In practice that means:
+That foundation comes first. You cannot put people at the center of a data-driven factory without the data. In practice that means:
 
 - connecting machines and reading the data they already produce
 - making production, stops and energy use visible in real time
@@ -73,8 +73,8 @@ The [OptiPeople IoT module](/modules/iot) collects data from the machines and sy
 | Advantages | Disadvantages |
 |---|---|
 | Safer, less repetitive work for people | Investment in new technology and training |
-| Better quality from machine precision plus human judgement | Skills gap: people need to learn new tools |
-| More customised products and smaller batches | Some jobs change or disappear |
+| Better quality from machine precision plus human judgment | Skills gap: people need to learn new tools |
+| More customized products and smaller batches | Some jobs change or disappear |
 | Lower energy use and less waste | Uneven access for smaller companies |
 | Factories that recover faster from disruption | More complex to set up in the early stages |
 

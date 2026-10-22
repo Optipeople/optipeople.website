@@ -10,7 +10,7 @@ The article uses the expression "Bohica" to describe what many employees feel wh
 
 Too many change projects promise better efficiency, but lose impact once the consultants leave and the daily pressure returns.
 
-## Improvement Needs Shared Ownership
+## Improvement needs shared ownership
 
 The article argues that long-term change cannot rest on one person alone.
 
@@ -22,7 +22,7 @@ In many organizations, continuous improvement fails because:
 
 Real change needs broad involvement and a culture that keeps the work alive after the kickoff phase.
 
-## Communication Makes Progress Visible
+## Communication makes progress visible
 
 Improvement work only sticks when people can clearly see that it is producing results.
 
@@ -34,7 +34,7 @@ That is why visible production data matters. The article highlights the value of
 
 Board meetings and common production reviews are presented as practical ways to keep teams aligned on current performance and next actions.
 
-## No Backing, No Lasting Effect
+## No backing, no lasting effect
 
 Without support from leadership, improvement programs typically lose time, energy, and credibility.
 

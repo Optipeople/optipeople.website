@@ -10,7 +10,7 @@ Many factories use a part counter to determine whether a machine is running and 
 
 The article points out that this can be useful, but also misleading if it becomes the main way of judging performance.
 
-## Why a Part Counter Can Be Misleading
+## Why a part counter can be misleading
 
 A machine can appear to be running well while still producing too slowly.
 
@@ -22,7 +22,7 @@ If operators can influence machine speed, uptime alone may give a false sense of
 
 That is the main limitation of relying only on a part counter.
 
-## Why OEE Gives a Better Picture
+## Why OEE gives a better picture
 
 The article recommends OEE as a more useful production metric because it combines:
 
@@ -32,7 +32,7 @@ The article recommends OEE as a more useful production metric because it combine
 
 That creates a more realistic view of whether the machine is truly producing effectively, not just running.
 
-## Where a Part Counter Still Helps
+## Where a part counter still helps
 
 The article does not dismiss the part counter entirely.
 

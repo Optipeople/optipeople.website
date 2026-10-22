@@ -1,5 +1,5 @@
 ---
-title: "OptiPeople Data Platform API: How to Use It Step by Step"
+title: "OptiPeople Data Platform API: How to use it step by step"
 date: "2022-05-11"
 author: "OptiPeople Team"
 category: "Insights"
@@ -10,7 +10,7 @@ OptiPeople Data Platform exposes APIs for data exchange, whether the data is sim
 
 All APIs are REST-based and use JSON.
 
-## How to Get Data and Test Connection
+## How to get data and test connection
 
 To get data from OptiPeople Data Platform, the original guide lists four prerequisites:
 
@@ -21,7 +21,7 @@ To get data from OptiPeople Data Platform, the original guide lists four prerequ
 
 Once that is done, a connection can be tested directly in a browser by opening a REST endpoint over HTTPS on port `443`.
 
-## Testing the Connection
+## Testing the connection
 
 The original article uses a demo account and a sample URL to verify access.
 
@@ -33,7 +33,7 @@ https://dataexport.optipeople.dk/api/DataExport/<Endpoint>?access_code=<ACCESS_K
 
 If the endpoint returns JSON, the connection is working.
 
-## Adding Parameters
+## Adding parameters
 
 The API supports extra parameters such as:
 
@@ -43,7 +43,7 @@ The API supports extra parameters such as:
 
 These can be added to limit the response to a machine or time period.
 
-## Common APIs Mentioned in the Guide
+## Common APIs mentioned in the guide
 
 ### `GetEventExport`
 
@@ -66,7 +66,7 @@ It includes information related to:
 
 The article notes that this API is often used with BI tools such as Power BI.
 
-### Main Data Areas Mentioned
+### Main data areas mentioned
 
 The article describes several important arrays or data tables:
 
@@ -81,7 +81,7 @@ These support reporting on shifts, counters, orders, and waste or stop events.
 
 The article also mentions TPM alert export as a separate API for predictive-maintenance or task-related alert data.
 
-## Practical Takeaway
+## Practical takeaway
 
 The overall API model is straightforward:
 

@@ -1,5 +1,5 @@
 ---
-title: "OOE vs OEE vs TEEP: Meaning, Formulas and Examples"
+title: "OOE vs OEE vs TEEP: Meaning, formulas and examples"
 description: "OOE stands for Overall Operations Effectiveness. How OOE differs from OEE and TEEP, the formula for each, and one example that compares all three."
 date: "2022-06-28"
 updated: "2026-10-05"

@@ -44,7 +44,7 @@ export const personas: Persona[] = [
         name: "CEO",
         question: "Are you a CEO?",
         intro:
-          "As CEO you need to know where to invest, which orders you actually make money on, and how the organisation is performing.",
+          "As CEO you need to know where to invest, which orders you actually make money on, and how the organization is performing.",
         pains: [
           {
             title: "Investing without the full picture",
@@ -55,26 +55,26 @@ export const personas: Persona[] = [
             body: "Actual time, stops, and scrap are recorded per order, so you can see which orders and products earn money and which ones cost it.",
           },
           {
-            title: "Digitalisation and AI without a direction",
-            body: "We show where digitalisation and AI make a difference in your production, and start where the effect is greatest.",
+            title: "Digitalization and AI without a direction",
+            body: "We show where digitalization and AI make a difference in your production, and start where the effect is greatest.",
           },
         ],
         metaDescription:
-          "How OptiPeople helps CEOs: where to invest, which orders make money, transparency in performance, and where digitalisation and AI pay off.",
+          "How OptiPeople helps CEOs: where to invest, which orders make money, transparency in performance, and where digitalization and AI pay off.",
       },
       da: {
         name: "CEO",
         question: "Er du CEO?",
         intro:
-          "Som CEO skal du vide, hvor I skal investere, hvilke ordrer I tjener jeres penge på, og hvordan organisationen performer.",
+          "I direktionen skal I vide, hvor I skal investere, hvilke ordrer I tjener jeres penge på, og hvordan organisationen performer.",
         pains: [
           {
             title: "Investeringer uden det fulde billede",
-            body: "Data fra maskiner, ordrer og stop ligger samme sted. Du kan se, hvor kapaciteten forsvinder, før du beslutter, hvor næste krone skal hen.",
+            body: "Data fra maskiner, ordrer og stop ligger samme sted. I kan se, hvor kapaciteten forsvinder, før I beslutter, hvor næste krone skal hen.",
           },
           {
             title: "I ved ikke, hvilke ordrer I tjener penge på",
-            body: "Den faktiske tid, stop og kassation bliver registreret på hver ordre. Du kan se, hvilke ordrer og varer der tjener penge, og hvilke der koster.",
+            body: "Den faktiske tid, stop og kassation bliver registreret på hver ordre. I kan se, hvilke ordrer og varer der tjener penge, og hvilke der koster.",
           },
           {
             title: "Digitalisering og AI uden en retning",
@@ -106,21 +106,21 @@ export const personas: Persona[] = [
             body: "Production, maintenance, quality, and planning work from the same data set, so the meeting is about what to do, not whose numbers are right.",
           },
           {
-            title: "How do digitalisation and AI help day to day?",
-            body: "We show concretely where digitalisation and AI save time in your daily operations, and build it on your own production data.",
+            title: "How do digitalization and AI help day to day?",
+            body: "We show concretely where digitalization and AI save time in your daily operations, and build it on your own production data.",
           },
         ],
         metaDescription:
-          "How OptiPeople helps COOs: the right data to decide from, one data set shared with production, maintenance, quality, and planning, and digitalisation that helps day to day.",
+          "How OptiPeople helps COOs: the right data to decide from, one data set shared with production, maintenance, quality, and planning, and digitalization that helps day to day.",
       },
       da: {
         name: "COO",
         question: "Er du COO?",
         intro:
-          "Som COO skal du vide, hvilke data og informationer du skal tage beslutninger ud fra, og tale ud fra de samme fakta som dine kolleger.",
+          "I driftsledelsen skal I vide, hvilke data og informationer I skal tage beslutninger ud fra, og tale ud fra de samme fakta som jeres kolleger.",
         pains: [
           {
-            title: "Uklart, hvad du skal beslutte ud fra",
+            title: "Uklart, hvad I skal beslutte ud fra",
             body: "Data fra produktion, vedligehold, kvalitet og planlægning ligger på én platform. Beslutningen starter fra data, ikke fra den, der argumenterer bedst.",
           },
           {
@@ -133,7 +133,7 @@ export const personas: Persona[] = [
           },
         ],
         metaDescription:
-          "Sådan hjælper OptiPeople COO'er: de rigtige data at beslutte ud fra, ét datasæt sammen med produktion, vedligehold, kvalitet og planlægning og digitalisering, der hjælper i hverdagen.",
+          "Sådan hjælper OptiPeople COO'er: de rigtige data at beslutte ud fra, ét datasæt sammen med produktion, vedligehold, kvalitet og planlægning, og digitalisering, der hjælper i hverdagen.",
       },
     },
   },
@@ -168,11 +168,11 @@ export const personas: Persona[] = [
         name: "Fabrikschef",
         question: "Er du fabrikschef?",
         intro:
-          "Som fabrikschef skal du kunne se, hvor produktionen performer, og hvor den ikke gør.",
+          "I fabriksledelsen skal I kunne se, hvor produktionen performer, og hvor den ikke gør.",
         pains: [
           {
             title: "Svært at se, hvor produktionen halter",
-            body: "Produktionsdata er samlet ét sted og vist live for hver linje og maskine. Du kan se, hvor det kører, og hvor det ikke gør.",
+            body: "Produktionsdata er samlet ét sted og vist live for hver linje og maskine. I kan se, hvor det kører, og hvor det ikke gør.",
           },
           {
             title: "Alle arbejder ud fra deres egne tal",
@@ -184,7 +184,7 @@ export const personas: Persona[] = [
           },
         ],
         metaDescription:
-          "Sådan hjælper OptiPeople fabrikschefer: se, hvor produktionen performer, og hvor den ikke gør, de samme fakta for operatører og ledelse og hurtigere handling.",
+          "Sådan hjælper OptiPeople fabrikschefer: se, hvor produktionen performer, og hvor den ikke gør, de samme fakta for operatører og ledelse, og hurtigere handling.",
       },
     },
   },
@@ -209,21 +209,21 @@ export const personas: Persona[] = [
           },
           {
             title: "Discussing the numbers instead of improving",
-            body: "When nobody doubts the numbers, the time goes on optimising production, not on arguing about the figures.",
+            body: "When nobody doubts the numbers, the time goes on optimizing production, not on arguing about the figures.",
           },
         ],
         metaDescription:
-          "How OptiPeople helps production managers: see what actually happened, one place for data and registrations, and more time to optimise.",
+          "How OptiPeople helps production managers: see what actually happened, one place for data and registrations, and more time to optimize.",
       },
       da: {
         name: "Produktionschef",
         question: "Er du produktionschef?",
         intro:
-          "Hvor meget tid bruger du på at finde ud af, hvad der rent faktisk er sket i produktionen, frem for at gøre noget ved det?",
+          "Hvor meget tid bruger I på at finde ud af, hvad der rent faktisk er sket i produktionen, frem for at gøre noget ved det?",
         pains: [
           {
             title: "Tiden går med at finde ud af, hvad der skete",
-            body: "Stop, output og registreringer bliver registreret ved maskinen, mens det sker. Du kan se, hvad der skete, uden at spørge dig frem.",
+            body: "Stop, output og registreringer bliver lagt ind ved maskinen, mens det sker. I kan se, hvad der skete, uden at spørge jer frem.",
           },
           {
             title: "Data og registreringer mange steder",
@@ -235,7 +235,7 @@ export const personas: Persona[] = [
           },
         ],
         metaDescription:
-          "Sådan hjælper OptiPeople produktionschefer: se, hvad der faktisk er sket, ét sted til data og registreringer og mere tid til at optimere.",
+          "Sådan hjælper OptiPeople produktionschefer: se, hvad der faktisk er sket, ét sted til data og registreringer, og mere tid til at optimere.",
       },
     },
   },
@@ -272,7 +272,7 @@ export const personas: Persona[] = [
         question:
           "Er du ansvarlig for Operational Excellence eller Continuous Improvement?",
         intro:
-          "Arbejder du med Operational Excellence eller Continuous Improvement, mangler du ofte data til at se, hvor I skal starte, og om det virkede.",
+          "Arbejder I med Operational Excellence eller Continuous Improvement, mangler I ofte data til at se, hvor I skal starte, og om det virkede.",
         pains: [
           {
             title: "I mangler data fra produktionsgulvet",
@@ -288,7 +288,7 @@ export const personas: Persona[] = [
           },
         ],
         metaDescription:
-          "Sådan hjælper OptiPeople Operational Excellence og CI: data fra produktionsgulvet, ét sted at samle dem og effekten af hvert tiltag gjort synlig.",
+          "Sådan hjælper OptiPeople Operational Excellence og CI: data fra produktionsgulvet, ét sted at samle dem, og effekten af hvert tiltag gjort synlig.",
       },
     },
   },
@@ -320,10 +320,10 @@ export const personas: Persona[] = [
           "How OptiPeople helps IT managers: less time patching systems together, reporting automated by AI agents, and an IT architecture built for the future.",
       },
       da: {
-        name: "IT-chef",
-        question: "Er du IT-chef?",
+        name: "It-chef",
+        question: "Er du it-chef?",
         intro:
-          "Som IT-chef bruger du og dit team nok meget tid på at lappe systemer sammen.",
+          "I it-afdelingen bruger I nok meget tid på at lappe systemer sammen.",
         pains: [
           {
             title: "Tiden går med at lappe systemer sammen",
@@ -335,11 +335,11 @@ export const personas: Persona[] = [
           },
           {
             title: "Lappeløsninger i stedet for arkitektur",
-            body: "Resultatet er en IT-arkitektur, der er bygget til fremtiden, og ikke en lappeløsning.",
+            body: "Resultatet er en it-arkitektur, der er bygget til fremtiden, og ikke en lappeløsning.",
           },
         ],
         metaDescription:
-          "Sådan hjælper OptiPeople IT-chefer: mindre tid på at lappe systemer sammen, rapportering automatiseret med AI-agenter og en IT-arkitektur bygget til fremtiden.",
+          "Sådan hjælper OptiPeople it-chefer: mindre tid på at lappe systemer sammen, rapportering automatiseret med AI-agenter og en it-arkitektur bygget til fremtiden.",
       },
     },
   },
@@ -374,7 +374,7 @@ export const personas: Persona[] = [
         name: "IT og OT",
         question: "Arbejder du med IT eller OT?",
         intro:
-          "Er du IT- eller OT-ansvarlig, kender du sikkert følelsen af at tale forbi hinanden, fordi I ikke deler de samme data.",
+          "Er I IT- eller OT-ansvarlige, kender I sikkert følelsen af at tale forbi hinanden, fordi I ikke deler de samme data.",
         pains: [
           {
             title: "IT og OT taler forbi hinanden",
@@ -390,7 +390,7 @@ export const personas: Persona[] = [
           },
         ],
         metaDescription:
-          "Sådan hjælper OptiPeople IT og OT: en bro mellem de to, maskindata og forretningsdata i én strøm og et samarbejde bygget på fakta.",
+          "Sådan hjælper OptiPeople IT og OT: en bro mellem de to, maskindata og forretningsdata i én strøm, og et samarbejde bygget på fakta.",
       },
     },
   },
@@ -403,14 +403,14 @@ export const personas: Persona[] = [
         name: "Maintenance manager",
         question: "Are you a maintenance manager?",
         intro:
-          "Responsible for maintenance, you need to know that the operator tasks get done, and be able to prioritise the tasks that matter most.",
+          "Responsible for maintenance, you need to know that the operator tasks get done, and be able to prioritize the tasks that matter most.",
         pains: [
           {
             title: "You do not know if operator tasks get done",
             body: "Operator tasks are ticked off at the machine, so you can see what has been done and what is missing.",
           },
           {
-            title: "Hard to prioritise the tasks",
+            title: "Hard to prioritize the tasks",
             body: "With tasks, history, and machine data in one place, you can see which tasks matter most right now.",
           },
           {
@@ -419,21 +419,21 @@ export const personas: Persona[] = [
           },
         ],
         metaDescription:
-          "How OptiPeople helps maintenance managers: see that operator tasks get done, prioritise the right tasks, and gather maintenance data for preventive maintenance.",
+          "How OptiPeople helps maintenance managers: see that operator tasks get done, prioritize the right tasks, and gather maintenance data for preventive maintenance.",
       },
       da: {
         name: "Vedligeholdelseschef",
         question: "Er du vedligeholdelseschef?",
         intro:
-          "Som vedligeholdelsesansvarlig skal du vide, at operatøropgaverne bliver udført, og kunne prioritere de opgaver, der er vigtigst.",
+          "Som vedligeholdelsesansvarlige skal I vide, at operatøropgaverne bliver udført, og kunne prioritere de opgaver, der er vigtigst.",
         pains: [
           {
-            title: "Du ved ikke, om operatøropgaverne bliver udført",
-            body: "Operatøropgaverne bliver kvitteret ved maskinen. Du kan se, hvad der er gjort, og hvad der mangler.",
+            title: "I ved ikke, om operatøropgaverne bliver udført",
+            body: "Operatøropgaverne bliver kvitteret ved maskinen. I kan se, hvad der er gjort, og hvad der mangler.",
           },
           {
             title: "Svært at prioritere opgaverne",
-            body: "Opgaver, historik og maskindata ligger samme sted. Du kan se, hvilke opgaver der er vigtigst lige nu.",
+            body: "Opgaver, historik og maskindata ligger samme sted. I kan se, hvilke opgaver der er vigtigst lige nu.",
           },
           {
             title: "Vedligeholdsdata spredt over flere systemer",
@@ -476,7 +476,7 @@ export const personas: Persona[] = [
         name: "Maskinbyggere",
         question: "Er du CEO, COO eller sælger hos en maskinbygger?",
         intro:
-          "Er du ansvarlig for forretningsudvikling hos en maskinbygger, oplever du måske, at I mest konkurrerer på pris.",
+          "Er I ansvarlige for forretningsudvikling hos en maskinbygger, oplever I måske, at I mest konkurrerer på pris.",
         pains: [
           {
             title: "I konkurrerer kun på pris",
@@ -505,7 +505,7 @@ export const personas: Persona[] = [
         name: "Aftersales",
         question: "Do you work in aftersales?",
         intro:
-          "Head of service or aftersales, you may be missing data from your equipment out at your customers.",
+          "As head of service or aftersales, you may be missing data from your equipment out at your customers.",
         pains: [
           {
             title: "No data from equipment at the customer",
@@ -527,7 +527,7 @@ export const personas: Persona[] = [
         name: "Aftersales",
         question: "Arbejder du med aftersales?",
         intro:
-          "Er du servicechef eller står for aftersales, mangler du måske data fra jeres anlæg ude hos kunderne.",
+          "Står I for service eller aftersales, mangler I måske data fra jeres anlæg ude hos kunderne.",
         pains: [
           {
             title: "Ingen data fra anlæggene hos kunden",
@@ -578,19 +578,19 @@ export const personas: Persona[] = [
         name: "Planlægger",
         question: "Er du planlægger?",
         intro:
-          "Som planlægger skal du kunne planlægge produktionen ud fra det, der faktisk sker på gulvet.",
+          "Som planlæggere skal I kunne planlægge produktionen ud fra det, der faktisk sker på gulvet.",
         pains: [
           {
             title: "Planen bygger ikke på gulvet",
             body: "Data fra gulvet er samlet ét sted. Planen bygger på det, der faktisk sker.",
           },
           {
-            title: "Du kender ikke de reelle omstillings- og produktionstider",
-            body: "Omstillingstider og produktionstider bliver registreret, mens det sker. Du planlægger med de rigtige tider, ikke med skøn.",
+            title: "I kender ikke de reelle omstillings- og produktionstider",
+            body: "Omstillingstider og produktionstider bliver registreret, mens det sker. I planlægger med de rigtige tider, ikke med skøn.",
           },
           {
             title: "Ingen live ordrestatus",
-            body: "Operatørerne melder tilbage ved maskinen. Du kan følge status på hver ordre i realtid.",
+            body: "Operatørerne melder tilbage ved maskinen. I kan følge status på hver ordre i realtid.",
           },
         ],
         metaDescription:
@@ -645,7 +645,7 @@ export const personas: Persona[] = [
           },
         ],
         metaDescription:
-          "Sådan hjælper OptiPeople supply chain: den reelle kostpris på hver vare, live data når plan og lager ændrer sig og slut med at samle op i hånden.",
+          "Sådan hjælper OptiPeople supply chain: den reelle kostpris på hver vare, live data, når plan og lager ændrer sig, og slut med at samle op i hånden.",
       },
     },
   },

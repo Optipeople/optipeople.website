@@ -24,52 +24,52 @@ const services: LocalizedPage<StandardPage>[] = [
     href: "/services/smart-operations",
     content: {
       en: {
-        metaTitle: "Smart Operations Advisory",
+        metaTitle: "Smart Operations advisory",
         metaDescription:
           "Smart factory and operations advisory: process mapping, technical assessments, business cases and pre-projects that decide what to build first.",
         eyebrow: "Smart Operations",
-        heroTitle: "Decide What to Build Before You Build It",
+        heroTitle: "Decide what to build before you build it",
         heroBody:
           "We advise on smart factory and smart operations: mapping the processes, assessing what the site can technically support, and writing the business case that says whether it is worth doing at all.",
-        primaryLabel: "Book an Advisory Session",
-        introTitle: "Most digitalisation projects fail in the scoping, not the software",
+        primaryLabel: "Book an advisory session",
+        introTitle: "Most digitalization projects fail in the scoping, not the software",
         introBody:
-          "The pattern is familiar. A platform gets bought, three integrations get built, dashboards go up, and eighteen months later nobody uses them, because nobody mapped which decisions were actually being made and what they needed to be made well. Advisory work is the cheap part of the project and it decides the expensive part. We walk the processes, look at what the equipment and the systems can genuinely deliver, quantify the loss that is worth attacking, and put a scope and a business case in front of you. Sometimes the answer is a pre-project. Sometimes it is that the money belongs somewhere else this year.",
+          "The pattern is familiar. A platform gets bought, three integrations get built, dashboards go up, and eighteen months later nobody uses them, because nobody mapped which decisions were actually being made and what they needed to be made well. Advisory work is the cheap part of the project, and it decides the expensive part. We walk the processes, look at what the equipment and the systems can genuinely deliver, quantify the loss that is worth attacking, and put a scope and a business case in front of you. Sometimes the answer is a pre-project. Sometimes it is that the money belongs somewhere else this year.",
         capabilitiesTitle: "What the advisory work covers",
         features: [
           {
             icon: Workflow,
-            title: "Process Mapping",
+            title: "Process mapping",
             description:
               "We walk the flow with the people who run it: what actually happens between order and pallet, where the handovers are, which registrations exist, and which decisions are being made on a feeling because the number is not there.",
           },
           {
             icon: Search,
-            title: "Technical Assessments",
+            title: "Technical assessments",
             description:
               "What can this site actually deliver? Controls, protocols, network, existing sensors and systems, and what each machine can be measured on without a rebuild. The honest version, including the machines that will need hardware.",
           },
           {
             icon: FileBarChart,
-            title: "Business Cases",
+            title: "Business cases",
             description:
               "The loss quantified, the intervention costed, and a payback period you can take to a board. Written so the numbers can be argued with, rather than a vendor slide with a percentage on it.",
           },
           {
             icon: ScanLine,
-            title: "Pre-Projects",
+            title: "Pre-projects",
             description:
               "A bounded first step on one line or one machine, with a defined question it exists to answer. Cheap enough to be wrong, real enough to prove whether the full scope is worth committing to.",
           },
           {
             icon: PieChart,
-            title: "KPI and Target Design",
+            title: "KPI and target design",
             description:
-              "Which numbers this organisation should be run on, how they are defined, who owns each one, and what happens in the daily meeting when one of them moves. Measurement nobody trusts changes nothing.",
+              "Which numbers this organization should be run on, how they are defined, who owns each one, and what happens in the daily meeting when one of them moves. Measurement nobody trusts changes nothing.",
           },
           {
             icon: Users,
-            title: "Roadmap and Ways of Working",
+            title: "Roadmap and ways of working",
             description:
               "The order to do things in, and how the new numbers land in the shift handover, the board meeting, and the improvement work. This is usually the difference between a project and a habit.",
           },
@@ -79,13 +79,13 @@ const services: LocalizedPage<StandardPage>[] = [
           "A mapped process, an assessment of what the site supports, a costed business case, and a scoped first step. If it goes ahead, this is the picture the build is aimed at.",
         visualImage: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
         visualAlt: "OptiPeople efficiency report with availability, performance and OEE against target",
-        metricsTitle: "What to Expect",
+        metricsTitle: "What to expect",
         metrics: [
           { metric: "2-4 weeks", label: "From first walk-through to a costed scope" },
           { metric: "1 line", label: "Is usually the right size for a pre-project" },
           { metric: "0", label: "Obligation to buy anything at the end of it" },
         ],
-        stepsTitle: "How We Work",
+        stepsTitle: "How we work",
         steps: [
           {
             title: "Map",
@@ -100,7 +100,7 @@ const services: LocalizedPage<StandardPage>[] = [
           {
             title: "Scope",
             description:
-              "A prioritised roadmap and a bounded first step, whether that is a pre-project with us, a project with a partner, or nothing this year.",
+              "A prioritized roadmap and a bounded first step, whether that is a pre-project with us, a project with a partner, or nothing this year.",
           },
         ],
       },
@@ -180,52 +180,52 @@ const services: LocalizedPage<StandardPage>[] = [
     href: "/services/automation",
     content: {
       en: {
-        metaTitle: "Automation Advisory and Architecture",
+        metaTitle: "Automation advisory and architecture",
         metaDescription:
           "Automation advisory plus the IT, software and IoT architecture around it. We scope and specify, then deliver the full solution with automation partners.",
         eyebrow: "Automation",
-        heroTitle: "We Are Not an Automation House. We Are the Layer Around One",
+        heroTitle: "We are not an automation house. We are the layer around one",
         heroBody:
           "We advise on automation and we deliver whole solutions together with partners who build the mechanics and the control cabinets. Our part is the IT, software, and IoT architecture that decides whether the result is a connected line or an island.",
-        primaryLabel: "Discuss Your Project",
+        primaryLabel: "Discuss your project",
         introTitle: "The machine is rarely what goes wrong. The layer around it is",
         introBody:
-          "Automation houses are good at what they do, and we do not compete with them: we do not design machines, write the motion control, or build panels. What repeatedly goes wrong sits one level up. The line gets commissioned and then nobody specified how it reports, which signals leave the PLC, who owns the data model, how it reaches the ERP, or what happens when a second supplier's machine joins the same line. That is our scope. We specify it up front, sit on your side of the table while the automation partner builds, and make sure the finished cell is readable by the rest of the operation.",
+          "Automation houses are good at what they do, and we do not compete with them: we do not design machines, write the motion control, or build panels. What repeatedly goes wrong sits one level up. The line gets commissioned and then nobody has specified how it reports, which signals leave the PLC, who owns the data model, how it reaches the ERP, or what happens when a second supplier's machine joins the same line. That is our scope. We specify it up front, sit on your side of the table while the automation partner builds, and make sure the finished cell is readable by the rest of the operation.",
         capabilitiesTitle: "Where we sit in an automation project",
         features: [
           {
             icon: Search,
-            title: "Automation Advisory",
+            title: "Automation advisory",
             description:
               "Whether to automate this step at all, what it is worth, and what has to be true first. Often the honest answer is that the process needs fixing before a robot is pointed at it.",
           },
           {
             icon: Workflow,
-            title: "Requirements and Specification",
+            title: "Requirements and specification",
             description:
               "We write the spec the automation partner quotes against, including the data and integration requirements that otherwise surface after commissioning as a change order.",
           },
           {
             icon: Cpu,
-            title: "IT, Software and IoT Architecture",
+            title: "IT, software and IoT architecture",
             description:
               "Which signals leave the control system, in what structure, over which protocol, into which system, and who owns each layer. This is the part we deliver ourselves.",
           },
           {
             icon: Users,
-            title: "Partner Selection and Delivery",
+            title: "Partner selection and delivery",
             description:
               "We bring in machine builders, integrators, and electrical partners we have worked with, and we stay on your side of the table through build, commissioning, and handover.",
           },
           {
             icon: ScanLine,
-            title: "Connecting the New Cell",
+            title: "Connecting the new cell",
             description:
               "A commissioned line that reports nothing is half a project. States, counters, and alarms come out of the new equipment and into the same structure as the rest of the site.",
           },
           {
             icon: ShieldCheck,
-            title: "Documentation and Ownership",
+            title: "Documentation and ownership",
             description:
               "Interfaces, data models, and access documented so your own team, or the next supplier, can work on it without reverse-engineering somebody's cabinet.",
           },
@@ -234,13 +234,13 @@ const services: LocalizedPage<StandardPage>[] = [
         visualBody:
           "The mechanics and the cabinet belong to the automation partner. Everything from the signal leaving the control system to the number reaching a person is the part we specify and deliver.",
         visualSection: "architecture",
-        metricsTitle: "Our Scope",
+        metricsTitle: "Our scope",
         metrics: [
           { metric: "0", label: "Machines designed by us. That is the partner's job" },
           { metric: "1 spec", label: "Written before anyone quotes the build" },
           { metric: "Your side", label: "Of the table, through build and handover" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Advise and scope",
@@ -334,54 +334,54 @@ const services: LocalizedPage<StandardPage>[] = [
     href: "/services/business-intelligence",
     content: {
       en: {
-        metaTitle: "Business Intelligence Advisory",
+        metaTitle: "Business Intelligence advisory",
         metaDescription:
           "BI advisory for manufacturing: which decisions need which numbers, what your data can support, and which platform fits, be it Power BI, Tableau or another.",
         eyebrow: "Business Intelligence",
-        heroTitle: "The Hard Part Is Deciding What to Report",
+        heroTitle: "The hard part is deciding what to report",
         heroBody:
           "We work with BI teams as advisors first: which decisions need which numbers, what your data can honestly support, and what to scope. The platform question comes after that, and the answer is not always Power BI.",
-        primaryLabel: "Get in Touch",
+        primaryLabel: "Get in touch",
         introTitle: "A dashboard is an answer. Somebody has to get the question right first",
         introBody:
-          "Most BI work we are called into does not fail on the technical side. The measures are correct, the refresh runs, and the report is beautiful, and it still goes unused, because the number on it was not the one the meeting turns on, or three teams define it differently, or nobody agreed who acts when it moves. So we start with advisory and scoping: the decisions, the definitions, the owners, and what the underlying data can actually carry. Then we build, on the platform that fits. We do a lot of Power BI because a lot of our clients are on Microsoft, but Tableau, Fabric, or your existing warehouse stack are all fine answers if that is where the organisation already is.",
+          "Most BI work we are called into does not fail on the technical side. The measures are correct, the refresh runs, and the report is beautiful, and it still goes unused, because the number on it was not the one the meeting turns on, or three teams define it differently, or nobody agreed who acts when it moves. So we start with advisory and scoping: the decisions, the definitions, the owners, and what the underlying data can actually carry. Then we build, on the platform that fits. We do a lot of Power BI because a lot of our clients are on Microsoft, but Tableau, Fabric, or your existing warehouse stack are all fine answers if that is where the organization already is.",
         capabilitiesTitle: "Advisory first, build second",
         features: [
           {
             icon: Search,
-            title: "Decision and Requirement Mapping",
+            title: "Decision and requirement mapping",
             description:
               "Which decisions are made in which meetings, on what evidence, and how often they are made without it. Everything else follows from getting this list right.",
           },
           {
             icon: PieChart,
-            title: "KPI Definition and Ownership",
+            title: "KPI definition and ownership",
             description:
               "One definition per number, written down, with an owner and a stated action when it moves. Three departments quietly computing OEE differently is a scoping problem, not a reporting problem.",
           },
           {
             icon: Search,
-            title: "Data Readiness Assessment",
+            title: "Data readiness assessment",
             description:
               "What your sources can honestly support today, where the gaps are, and which questions cannot yet be answered at all. Better to know before the first sprint than during the first review.",
           },
           {
             icon: Workflow,
-            title: "Platform and Tooling Choice",
+            title: "Platform and tooling choice",
             description:
-              "Power BI, Tableau, Fabric, or the warehouse and tooling you already run. We recommend against your existing stack, licences, and in-house skills rather than against our own preference.",
+              "Power BI, Tableau, Fabric, or the warehouse and tooling you already run. We recommend against your existing stack, licenses, and in-house skills rather than against our own preference.",
           },
           {
             icon: BarChart3,
-            title: "Build and Data Modelling",
+            title: "Build and data modeling",
             description:
               "Then the delivery: semantic models, reports, and pipelines built on the scope above, with scheduled refreshes and error handling that does not need a person watching it.",
           },
           {
             icon: Users,
-            title: "Handover and Enablement",
+            title: "Handover and enablement",
             description:
-              "Your BI team should be able to extend and maintain what we build. Documentation, modelling conventions, and training, so this is not a dependency.",
+              "Your BI team should be able to extend and maintain what we build. Documentation, modeling conventions, and training, so this is not a dependency.",
           },
         ],
         visualTitle: "Scoped first, then built on whatever fits",
@@ -389,13 +389,13 @@ const services: LocalizedPage<StandardPage>[] = [
           "The report is the last step. What decides whether it gets used is the definition behind each number, the owner attached to it, and whether the source data can carry the question at all.",
         visualImage: "/images/report-mockup1.png",
         visualAlt: "A report being designed, with KPI widgets and a template being edited",
-        metricsTitle: "What Shapes the Work",
+        metricsTitle: "What shapes the work",
         metrics: [
           { metric: "Advisory", label: "First. The platform decision comes after the scope" },
           { metric: "1", label: "Definition per number, with an owner attached" },
           { metric: "Any", label: "Platform: Power BI, Tableau, Fabric, your existing stack" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Scope",
@@ -490,52 +490,52 @@ const services: LocalizedPage<StandardPage>[] = [
     href: "/services/ai-solutions",
     content: {
       en: {
-        metaTitle: "AI Solutions Services",
+        metaTitle: "AI solutions services",
         metaDescription:
           "Use AI agents for reporting, planning, workflow automation, and data-driven decision support in manufacturing operations.",
         eyebrow: "AI Agentic Solutions",
-        heroTitle: "AI Agents That Run Your Operations",
+        heroTitle: "AI agents that run your operations",
         heroBody:
           "We build autonomous AI agents that automate processes, generate reports, optimize planning, and deliver business intelligence, so your team can focus on what matters.",
-        primaryLabel: "Talk to Us",
+        primaryLabel: "Talk to us",
         introTitle: "Your team shouldn't be the bottleneck",
         introBody:
-          "Production operations generate a constant stream of tasks that demand attention, pulling reports, updating schedules, chasing data across systems, flagging quality issues. These tasks are critical, but they don't need a human in the loop. AI agents handle them autonomously, accurately, and around the clock, freeing your people to focus on decisions that actually require judgment.",
+          "Production operations generate a constant stream of tasks that demand attention: pulling reports, updating schedules, chasing data across systems, flagging quality issues. These tasks are critical, but they don't need a human in the loop. AI agents handle them autonomously, accurately, and around the clock, freeing your people to focus on decisions that actually require judgment.",
         capabilitiesTitle: "Agents built for production operations",
         features: [
           {
             icon: Bot,
-            title: "Process Automation Agents",
+            title: "Process automation agents",
             description:
               "AI agents that handle repetitive operational tasks end-to-end, from data entry and order processing to inventory updates, without human intervention.",
           },
           {
             icon: FileBarChart,
-            title: "Automated Reporting",
+            title: "Automated reporting",
             description:
-              "Agents that collect data from multiple sources, generate production reports, shift summaries, and KPI dashboards delivered on schedule, every time.",
+              "Agents that collect data from multiple sources and generate production reports, shift summaries, and KPI dashboards, delivered on schedule, every time.",
           },
           {
             icon: BrainCircuit,
-            title: "Intelligent BI Agents",
+            title: "Intelligent BI agents",
             description:
               "Go beyond static dashboards. AI agents that proactively surface anomalies, explain trends, and recommend actions based on your production data.",
           },
           {
             icon: CalendarClock,
-            title: "Planning & Scheduling Agents",
+            title: "Planning & scheduling agents",
             description:
               "Agents that optimize production schedules, balance workloads, and adjust plans in real time as conditions change on the shop floor.",
           },
           {
             icon: Workflow,
-            title: "Workflow Orchestration",
+            title: "Workflow orchestration",
             description:
-              "Connect agents across systems, ERP, MES, SCADA, and more. Build multi-step workflows where agents hand off tasks to each other autonomously.",
+              "Connect agents across systems: ERP, MES, SCADA, and more. Build multi-step workflows where agents hand off tasks to each other autonomously.",
           },
           {
             icon: ShieldCheck,
-            title: "Quality & Compliance Agents",
+            title: "Quality & compliance agents",
             description:
               "Automate quality checks, flag deviations before they escalate, and keep audit trails complete, reducing risk and rework.",
           },
@@ -544,14 +544,14 @@ const services: LocalizedPage<StandardPage>[] = [
         visualBody:
           "From ERP and MES to email and spreadsheets, AI agents connect to your systems and act on data in real time.",
         visualImage: "/images/report1.webp",
-        visualAlt: "AI-analyse på produktionsrapport",
-        metricsTitle: "Typical Results",
+        visualAlt: "AI analysis of a production report",
+        metricsTitle: "Typical results",
         metrics: [
           { metric: "70%", label: "Reduction in manual reporting effort" },
           { metric: "24/7", label: "Agents working around the clock" },
           { metric: "10x", label: "Faster response to production issues" },
         ],
-        stepsTitle: "How It Works",
+        stepsTitle: "How it works",
         steps: [
           {
             title: "Identify",

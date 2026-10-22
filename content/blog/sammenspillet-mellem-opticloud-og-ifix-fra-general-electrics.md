@@ -9,13 +9,13 @@ metricLabel: "SCADA integration"
 outcome: "OptiPeople Data Platform structures machine and OEE data, then feeds it into a GE iFix SCADA environment for wider monitoring."
 ---
 
-## At a Glance
+## At a glance
 
 This case shows how OptiPeople Data Platform can work together with iFix from General Electric to create a broader factory monitoring setup.
 
 OptiPeople Data Platform handles data capture and structuring, while iFix can use that data as part of a wider SCADA environment.
 
-## The Situation
+## The situation
 
 Many factories already have machines with built-in PLCs and isolated machine-specific views of production data.
 
@@ -23,7 +23,7 @@ That can be useful, but it does not automatically create a complete overview acr
 
 In projects where OEE data needs to feed a larger monitoring environment, a SCADA system such as iFix may already be in place.
 
-## How OptiPeople Data Platform Is Used
+## How OptiPeople Data Platform is used
 
 OptiPeople Data Platform handles the data collection layer.
 
@@ -35,7 +35,7 @@ That includes:
 
 The setup is designed to work in more complex environments too. For example, OptiPeople Data Platform can handle cases where one machine has multiple tracks, where different item numbers run at the same time, or where some machines have their own PLC while others do not.
 
-## How the Integration Works
+## How the integration works
 
 When OptiPeople Data Platform is integrated with iFix or a similar system, the structured production data is passed on for use in the SCADA layer.
 
@@ -43,7 +43,7 @@ iFix can then combine that data with other data sources that are unrelated to OE
 
 The result is a broader monitoring solution that helps users understand what is happening and how to respond.
 
-## The Result
+## The result
 
 The integration creates a stronger operational setup by:
 

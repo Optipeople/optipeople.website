@@ -32,13 +32,13 @@ const copy: Record<
     meta: {
       title: "About OptiPeople",
       description:
-        "Meet the team behind OptiPeople and learn how we help manufacturers connect systems, improve shopfloor visibility, and turn operational data into action.",
+        "Meet the team behind OptiPeople and learn how we help manufacturers connect systems, improve shop floor visibility, and turn operational data into action.",
     },
     eyebrow: "About us",
     title: "We make industrial operations work",
     intro:
-      "OptiPeople is a digital operations company. We build software, connect systems, and help industrial teams turn data into better decisions, from the shopfloor to the boardroom.",
-    missionHeading: "Built for the space between shopfloor and ERP",
+      "OptiPeople is a digital operations company. We build software, connect systems, and help industrial teams turn data into better decisions, from the shop floor to the boardroom.",
+    missionHeading: "Built for the space between shop floor and ERP",
     missionBody:
       "Most factories have machines that produce data and ERP systems that need it, but nothing useful in between. OptiPeople fills that gap. The OptiPeople Data Platform captures real-time production data, makes it visible to operators and managers, and turns it into actions that improve performance, reduce waste, and keep operations running.",
     valuesHeading: "How we work",
@@ -47,12 +47,12 @@ const copy: Record<
       {
         title: "Start with the problem",
         description:
-          "We don't lead with technology. We start by understanding how your operations actually work, the workarounds, the blind spots, the things that fall between systems. The solution follows from there.",
+          "We don't lead with technology. We start by understanding how your operations actually work: the workarounds, the blind spots, the things that fall between systems. The solution follows from there.",
       },
       {
         title: "Make it usable",
         description:
-          "Software that operators won't use is software that doesn't work. Everything we build is designed for the people on the floor, fast, clear, no training manual required.",
+          "Software that operators won't use is software that doesn't work. Everything we build is designed for the people on the floor: fast, clear, no training manual required.",
       },
       {
         title: "Own the outcome",

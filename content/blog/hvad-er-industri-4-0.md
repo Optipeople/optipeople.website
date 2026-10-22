@@ -15,7 +15,7 @@ The article places it in a historical sequence:
 - the third by computers
 - the fourth by connected digital production systems
 
-## The Four Principles of Industry 4.0
+## The four principles of Industry 4.0
 
 The article highlights four core principles:
 
@@ -31,7 +31,7 @@ Systems can support decision-making and help people perform difficult or risky t
 4. **Decentralized decisions**  
 Machines and software can solve certain tasks automatically based on data and rules.
 
-## Technologies Behind the Shift
+## Technologies behind the shift
 
 The article points to a broad set of enabling technologies, including:
 
@@ -45,7 +45,7 @@ The article points to a broad set of enabling technologies, including:
 
 Together, these tools blur the line between human work and machine-led decision support.
 
-## A Practical View of Industry 4.0
+## A practical view of Industry 4.0
 
 The article acknowledges that Industry 4.0 can sound like another buzzword, but argues that the underlying shift is real.
 

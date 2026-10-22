@@ -104,7 +104,7 @@ const copy: Record<Locale, ArchitectureCopy> = {
         {
           id: "operators",
           title: "Operator devices",
-          body: "Tablets and shopfloor registrations",
+          body: "Tablets and shop floor registrations",
         },
         {
           id: "sources",
@@ -218,14 +218,14 @@ const copy: Record<Locale, ArchitectureCopy> = {
       },
       {
         title: "Controlled access",
-        body: "Authenticated and authorised endpoints only",
+        body: "Authenticated and authorized endpoints only",
       },
     ],
   },
   da: {
     eyebrow: "Dataplatform",
     title: "Arkitekturen bag OptiPeople Data Platform",
-    lede: "Data forlader produktionen over krypterede forbindelser, bliver koblet til ordrer, skift, maskiner og operatører på vejen ind, og lander i en datacontainer, der kun er jeres. Jeres folk, jeres systemer og jeres AI-assistenter arbejder alle ud fra de samme data.",
+    lede: "Data forlader produktionen over krypterede forbindelser, bliver koblet til ordrer, skift, maskiner og operatører på vejen ind og lander i en datacontainer, der kun er jeres. Jeres folk, jeres systemer og jeres AI-assistenter arbejder alle ud fra de samme data.",
     site: {
       label: "Produktionssted",
       nodes: [

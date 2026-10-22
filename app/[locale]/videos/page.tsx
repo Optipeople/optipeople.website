@@ -48,7 +48,7 @@ const copy: Record<Locale, VideosCopy> = {
   en: {
     eyebrow: "Videos",
     headline: "See OptiPeople Data Platform in action",
-    body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place, plus short videos for your role. The customer stories and role videos are in Danish, the Omron talk is in English.",
+    body: "Customer conversations and partner talks about what changes on the floor once machines, orders, and stop causes are recorded in one place, plus short videos for your role. The customer stories and role videos are in Danish; the Omron talk is in English.",
     watchLabel: "Watch the stories",
     countLabel: (count) => `${count} videos, in Danish and English`,
     rolesTitle: "Find the video for your role",
@@ -95,7 +95,7 @@ const copy: Record<Locale, VideosCopy> = {
       },
       {
         videoId: "Llk6kkFCx80",
-        title: "Svar du kan stole på: Opti Assists kildehenvisninger",
+        title: "Svar, du kan stole på: Opti Assists kildehenvisninger",
         description:
           "Every answer from Opti Assist points to the manual page or document it came from, so the operator can check it.",
         languageLabel: "Danish",
@@ -149,12 +149,12 @@ const copy: Record<Locale, VideosCopy> = {
   da: {
     eyebrow: "Videoer",
     headline: "Se OptiPeople Data Platform i brug",
-    body: "Kunder og partnere fortæller, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret samme sted. Og der er en kort video til netop din rolle.",
+    body: "Kunder og partnere fortæller, hvad der ændrer sig på gulvet, når maskiner, ordrer og stopårsager bliver registreret samme sted. Og der er en kort video til netop jeres rolle.",
     watchLabel: "Se historierne",
     countLabel: (count) => `${count} videoer, på dansk og engelsk`,
-    rolesTitle: "Find videoen til din rolle",
+    rolesTitle: "Find videoen til jeres rolle",
     rolesBody:
-      "En kort video til hver rolle om, hvad OptiPeople Data Platform ændrer i dit job, fra direktøren til planlæggeren.",
+      "En kort video til hver rolle om, hvad OptiPeople Data Platform ændrer i jeres job, fra direktøren til planlæggeren.",
     playLabel: "Afspil",
     roleVideos: roleVideos("da"),
     carouselTitle: "Kundehistorier",
@@ -196,7 +196,7 @@ const copy: Record<Locale, VideosCopy> = {
       },
       {
         videoId: "Llk6kkFCx80",
-        title: "Svar du kan stole på: Opti Assists kildehenvisninger",
+        title: "Svar, du kan stole på: Opti Assists kildehenvisninger",
         description:
           "Hvert svar fra Opti Assist henviser til den side i manualen eller det dokument, det kommer fra, så operatøren selv kan tjekke det.",
         languageLabel: "Dansk",
@@ -219,7 +219,7 @@ const copy: Record<Locale, VideosCopy> = {
         videoId: "vP0ao7JwdNY",
         title: "Opti Assist på telefonen: én QR-kode ved maskinen",
         description:
-          "Scan QR-koden på maskinen, så åbner Opti Assist på telefonen og ved allerede, hvilken maskine du står ved.",
+          "Scan QR-koden på maskinen, så åbner Opti Assist på telefonen og ved allerede, hvilken maskine I står ved.",
         languageLabel: "Dansk",
       },
     ],
@@ -230,7 +230,7 @@ const copy: Record<Locale, VideosCopy> = {
       {
         title: "Alle kundecases",
         description:
-          "Resultater fra gulvet: højere OEE, mindre nedetid, og hvad der skulle til.",
+          "Resultater fra gulvet: højere OEE, mindre nedetid og hvad der skulle til.",
         href: "/cases",
       },
       {
@@ -257,7 +257,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return buildMetadata({
       title: "Videoer | OptiPeople",
       description:
-        "Korte videoer til din rolle, kundehistorier fra Glaseksperten og Nicholaisen og oplægget med Omron om, hvordan produktionsdata kan give en fordel over konkurrenterne.",
+        "Korte videoer til jeres rolle, kundehistorier fra Glaseksperten og Nicholaisen og oplægget med Omron om, hvordan produktionsdata kan give en fordel over konkurrenterne.",
       path: "/videos",
       locale: "da",
     })

@@ -12,7 +12,7 @@ type Props = { params: Promise<{ locale: string }> }
 
 const meta: Record<Locale, { title: string; description: string }> = {
   en: {
-    title: "Privacy Policy",
+    title: "Privacy policy",
     description:
       "How OptiPeople ApS collects, uses, and protects personal data on this website.",
   },
@@ -30,7 +30,7 @@ const updated: Record<Locale, string> = {
 
 const eyebrow: Record<Locale, string> = { en: "Legal", da: "Juridisk" }
 const heading: Record<Locale, string> = {
-  en: "Privacy Policy",
+  en: "Privacy policy",
   da: "Privatlivspolitik",
 }
 
@@ -196,13 +196,13 @@ export default async function PrivacyPage({ params }: Props) {
           <ul>
             <li>
               <strong>Contact requests.</strong> When you submit the contact
-              form we process your name, email, phone number (optional), and
-              message so we can respond to your enquiry. The legal basis is our
+              form, we process your name, email, phone number (optional), and
+              message so we can respond to your inquiry. The legal basis is our
               legitimate interest in answering you and taking steps prior to a
               possible agreement (GDPR Art. 6(1)(b) and (f)).
             </li>
             <li>
-              <strong>Newsletter.</strong> If you sign up for our newsletter we
+              <strong>Newsletter.</strong> If you sign up for our newsletter, we
               process your name, company, and email to send you updates you have
               consented to receive. The legal basis is your consent
               (GDPR Art. 6(1)(a)), which you can withdraw at any time.
@@ -229,7 +229,7 @@ export default async function PrivacyPage({ params }: Props) {
             We keep personal data only as long as necessary for the purpose it
             was collected, typically for the duration of our dialogue with you
             and any resulting business relationship, after which it is deleted
-            or anonymised in line with applicable bookkeeping requirements.
+            or anonymized in line with applicable bookkeeping requirements.
           </p>
           <h2 id="cookies">Cookies</h2>
           <p>
