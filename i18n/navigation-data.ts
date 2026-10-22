@@ -111,6 +111,18 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
           title: "XL-BYG Brejnholt",
           href: "/blog/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging",
         },
+        {
+          title: "Glaseksperten",
+          href: "/blog/glaseksperten-up-to-30-percent-more-uptime-on-one-machine",
+        },
+        {
+          title: "Nicholaisen",
+          href: "/blog/nicholaisen-building-business-on-the-partnership-with-optipeople",
+        },
+        {
+          title: "Omron",
+          href: "/blog/omron-five-kinds-of-data-that-make-production-more-competitive",
+        },
       ],
     },
     {
@@ -188,6 +200,18 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
         {
           title: "XL-BYG Brejnholt",
           href: "/blog/xl-byg-brejnholt-achieves-energy-savings-and-sustainability-with-optimized-forklift-charging",
+        },
+        {
+          title: "Glaseksperten",
+          href: "/blog/glaseksperten-up-to-30-percent-more-uptime-on-one-machine",
+        },
+        {
+          title: "Nicholaisen",
+          href: "/blog/nicholaisen-building-business-on-the-partnership-with-optipeople",
+        },
+        {
+          title: "Omron",
+          href: "/blog/omron-five-kinds-of-data-that-make-production-more-competitive",
         },
       ],
     },
@@ -307,7 +331,7 @@ function itemByHref(items: NavItem[], href: string): NavItem {
  *
  * The footer adds two things the header does not carry: the content archives
  * (cases, blog) under Resources, and the legal pages plus the login targets
- * under Company. The header's Customers menu (six case posts) is represented
+ * under Company. The header's Customers menu (nine case posts) is represented
  * by the single cases-archive link rather than repeated.
  */
 function buildFooterColumns(locale: Locale): FooterColumn[] {
