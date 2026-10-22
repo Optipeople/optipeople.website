@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { featureSlugs } from "@/content/pages/features";
 import { moduleSlugs } from "@/content/pages/modules";
 import { serviceSlugs } from "@/content/pages/services";
+import { personaSlugs } from "@/content/personas";
 import { solutionSlugs } from "@/content/pages/solutions";
 import { aiCapabilitySlugs } from "@/lib/ai-stack";
 import { getAllPosts, getPostBySlug } from "@/lib/blog-data";
@@ -15,6 +16,7 @@ import { addLocalePrefix } from "@/lib/i18n";
 const singleRoutes = [
   "/",
   "/about",
+  "/about/personas",
   "/contact",
   "/platform",
   "/insights",
@@ -39,6 +41,7 @@ const staticRoutes = [
   ...serviceSlugs.map((slug) => `/services/${slug}`),
   ...solutionSlugs.map((slug) => `/solutions/${slug}`),
   ...aiCapabilitySlugs.map((slug) => `/ai/${slug}`),
+  ...personaSlugs.map((slug) => `/about/personas/${slug}`),
 ];
 
 // Static pages carry no lastModified. A build timestamp changes on every deploy

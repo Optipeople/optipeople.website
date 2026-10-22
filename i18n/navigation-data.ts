@@ -119,6 +119,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       items: [
         { title: "Insights", href: "/insights" },
         { title: "People", href: "/resources/people" },
+        { title: "Personas", href: "/about/personas" },
         { title: "Get Help", href: "/get-help" },
         { title: "Contact", href: "/contact" },
         { title: "About us", href: "/about" },
@@ -196,6 +197,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       items: [
         { title: "Viden", href: "/insights" },
         { title: "Holdet", href: "/resources/people" },
+        { title: "Personaer", href: "/about/personas" },
         { title: "Få hjælp", href: "/get-help" },
         { title: "Kontakt", href: "/contact" },
         { title: "Om os", href: "/about" },
