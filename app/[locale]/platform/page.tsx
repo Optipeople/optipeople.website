@@ -59,7 +59,7 @@ const copy: Record<Locale, PlatformCopy> = {
     },
     intro: {
       title: "Most factories don't have a data problem. They have a data-in-pieces problem.",
-      body: "The OEE numbers live in one system, the maintenance log in another, quality in a binder, and energy on a bill that arrives a month late. Nobody is wrong, but nobody can see the whole picture either. OptiPeople Data Platform puts every one of those records on the same foundation, tied to the same machines, orders, and shifts. So the argument moves from whose number is right to what to do about it.",
+      body: "Orders sit in the ERP, the plan in a spreadsheet, quality in a binder, and maintenance in a log only one person knows. Nobody is wrong, but nobody can see the whole picture either. OptiPeople Data Platform brings orders, planning, quality, and machine data onto the same foundation, tied to the same machines, people, and shifts. So you can execute the plan, see where it slips, and keep optimizing from the same picture.",
     },
     steps: {
       title: "How it fits together",
@@ -117,7 +117,7 @@ const copy: Record<Locale, PlatformCopy> = {
     },
     intro: {
       title: "De fleste fabrikker mangler ikke data. Data ligger bare i stumper.",
-      body: "OEE-tallene ligger i ét system, vedligeholdsloggen i et andet, kvaliteten i et ringbind, og energien på en regning, der kommer en måned for sent. Ingen gør noget forkert, men ingen kan se det hele. OptiPeople Data Platform lægger det hele på det samme fundament, koblet til de samme maskiner, ordrer og skift. Så flytter diskussionen sig fra, hvis tal der er rigtigt, til hvad I gør ved det.",
+      body: "Ordrerne ligger i ERP, planen i et regneark, kvaliteten i et ringbind, og vedligeholdet i en log, som kun én kender. Ingen gør noget forkert, men ingen kan se det hele. OptiPeople Data Platform samler ordrer, planlægning, kvalitet og maskindata på det samme fundament, koblet til de samme maskiner, medarbejdere og skift. Så kan I eksekvere planen, se hvor den skrider, og hele tiden optimere ud fra det samme billede.",
     },
     steps: {
       title: "Sådan hænger det sammen",
