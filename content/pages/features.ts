@@ -916,9 +916,9 @@ const features: LocalizedPage<FeaturePage>[] = [
             title: "Compare anything against anything",
             description:
               "Side-by-side bar charts across shifts, lines, weeks, machines, or workstations. See where performance diverges and where it converges. The comparisons that used to take a full afternoon in Excel now take one click.",
-            image: "/images/report-mockup2.webp",
+            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
             imageAlt:
-              "Bar chart report comparing production metrics across different time periods and categories",
+              "Report for one machine showing availability, performance and OEE, a timeline of the day and the stops broken down by cause",
           },
           {
             title: "From raw data to shared insight",
@@ -989,8 +989,8 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Hvor I taber mest",
             description: "Find de stop, de produkter og de linjer, der koster mest.",
-            image: "/images/report-mockup2.webp",
-            imageAlt: "Tabsanalyse",
+            image: "/images/Mockups/Report-OEE-Efficiency-With-Filter.webp",
+            imageAlt: "Rapport for en maskine med tilgængelighed, ydelse og OEE, dagens tidslinje og stoppene fordelt på årsag",
           },
           {
             title: "Klik jer ned i tallene",
