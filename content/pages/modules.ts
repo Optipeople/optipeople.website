@@ -1018,16 +1018,16 @@ const modules: LocalizedPage<StandardPage>[] = [
         capabilitiesTitle: "The modules a modular MES is made of",
         features: [
           {
-            icon: ClipboardCheck,
-            title: "Orders",
-            description:
-              "The orders to run, on the panel at the machine or workstation. Start, stop, and report quantities and scrap where the work happens, with or without an ERP behind it.",
-          },
-          {
             icon: Calendar,
             title: "Planning",
             description:
               "Sequence work orders across the entities of each production route, on a timeline the floor can see, against the capacity the machines and workstations actually have.",
+          },
+          {
+            icon: ClipboardCheck,
+            title: "Orders",
+            description:
+              "The orders to run, on the panel at the machine or workstation. Start, stop, and report quantities and scrap where the work happens, with or without an ERP behind it.",
           },
           {
             icon: ShieldCheck,
@@ -1116,16 +1116,16 @@ const modules: LocalizedPage<StandardPage>[] = [
         capabilitiesTitle: "Modulerne i et modulært MES",
         features: [
           {
-            icon: ClipboardCheck,
-            title: "Ordrer",
-            description:
-              "Ordrerne står på panelet ved maskinen eller arbejdsstationen. Start, stop, meld antal og kassation, med eller uden ERP bagved.",
-          },
-          {
             icon: Calendar,
             title: "Planlægning",
             description:
               "Læg ordrerne i rækkefølge hen over de enheder, hver produktionsrute går igennem, på en tidslinje, gulvet kan se.",
+          },
+          {
+            icon: ClipboardCheck,
+            title: "Ordrer",
+            description:
+              "Ordrerne står på panelet ved maskinen eller arbejdsstationen. Start, stop, meld antal og kassation, med eller uden ERP bagved.",
           },
           {
             icon: ShieldCheck,

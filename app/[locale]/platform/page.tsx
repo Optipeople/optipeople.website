@@ -59,7 +59,7 @@ const copy: Record<Locale, PlatformCopy> = {
     },
     intro: {
       title: "Most factories don't have a data problem. They have a data-in-pieces problem.",
-      body: "Orders sit in the ERP, the plan in a spreadsheet, quality in a binder, and maintenance in a log only one person knows. Nobody is wrong, but nobody can see the whole picture either. OptiPeople Data Platform brings orders, planning, quality, and machine data onto the same foundation, tied to the same machines, people, and shifts. So you can execute the plan, see where it slips, and keep optimizing from the same picture.",
+      body: "Orders sit in the ERP, the plan in a spreadsheet, quality in a binder, and maintenance in a log only one person knows. Nobody is wrong, but nobody can see the whole picture either. OptiPeople Data Platform brings planning, orders, quality, and machine data onto the same foundation, tied to the same machines, people, and shifts. So you can execute the plan, see where it slips, and keep optimizing from the same picture.",
     },
     steps: {
       title: "How it fits together",
@@ -117,7 +117,7 @@ const copy: Record<Locale, PlatformCopy> = {
     },
     intro: {
       title: "De fleste fabrikker mangler ikke data. Data ligger bare i stumper.",
-      body: "Ordrerne ligger i ERP, planen i et regneark, kvaliteten i et ringbind, og vedligeholdet i en log, som kun én kender. Ingen gør noget forkert, men ingen kan se det hele. OptiPeople Data Platform samler ordrer, planlægning, kvalitet og maskindata på det samme fundament, koblet til de samme maskiner, medarbejdere og skift. Så kan I eksekvere planen, se hvor den skrider, og hele tiden optimere ud fra det samme billede.",
+      body: "Ordrerne ligger i ERP, planen i et regneark, kvaliteten i et ringbind, og vedligeholdet i en log, som kun én kender. Ingen gør noget forkert, men ingen kan se det hele. OptiPeople Data Platform samler planlægning, ordrer, kvalitet og maskindata på det samme fundament, koblet til de samme maskiner, medarbejdere og skift. Så kan I eksekvere planen, se hvor den skrider, og hele tiden optimere ud fra det samme billede.",
     },
     steps: {
       title: "Sådan hænger det sammen",

@@ -173,7 +173,7 @@ export function moduleNavItems(locale: Locale) {
 const navGroups: { title: Record<Locale, string>; ids: string[] }[] = [
   {
     title: { en: "Production", da: "Produktion" },
-    ids: ["orders", "planning", "qms"],
+    ids: ["planning", "orders", "qms"],
   },
   {
     title: { en: "Machines, OEE and energy", da: "Maskiner, OEE og energi" },

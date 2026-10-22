@@ -262,7 +262,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "What do you want to run better?",
       moduleRows: [
-        ["mes", "orders", "planning", "qms", "iot"],
+        ["mes", "planning", "orders", "qms", "iot"],
         ["oee", "ems", "maintenance", "documents", "ai-agents"],
       ],
     },
@@ -445,7 +445,7 @@ const copy: Record<Locale, HomeCopy> = {
       },
       modulePrompt: "Hvad vil I have bedre styr på?",
       moduleRows: [
-        ["mes", "orders", "planning", "qms", "iot"],
+        ["mes", "planning", "orders", "qms", "iot"],
         ["oee", "ems", "maintenance", "documents", "ai-agents"],
       ],
     },
