@@ -179,6 +179,9 @@ const platformIntro = {
     description:
       "Take one module or all nine. Every module shares the same live data, so what one team registers, every team can use.",
     centerLabel: "OptiPeople Data Platform",
+    // Under the name in the hub: the first line reads as a subtitle, the rest
+    // as the smaller keyword lines beneath it.
+    centerLines: ["Modular MES", "Cloud, on-prem or hybrid", "UNS, Industry 4.0 and 5.0", "ISA-95, data lake"],
   },
   da: {
     eyebrow: "Platform",
@@ -186,6 +189,7 @@ const platformIntro = {
     description:
       "Tag ét modul eller alle ni. Modulerne bruger de samme data, så det, ét team registrerer, kan de andre bruge.",
     centerLabel: "OptiPeople Data Platform",
+    centerLines: ["Modulær MES", "Cloud, on-prem eller hybrid", "UNS, Industri 4.0 og 5.0", "ISA-95, data lake"],
   },
 } as const
 
@@ -397,6 +401,18 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
       >
         {isCenter && <OptiMark className="mb-1.5 h-11 w-11" />}
         <span className={cn("font-bold tracking-tight", isCenter ? "text-2xl" : "text-lg")}>{m.name}</span>
+        {isCenter && (
+          <span className="mt-2 flex flex-col items-center">
+            {intro.centerLines.map((line, i) => (
+              <span
+                key={line}
+                className={cn("leading-snug opacity-95", i === 0 ? "mb-1 text-lg font-semibold" : "text-base font-medium")}
+              >
+                {line}
+              </span>
+            ))}
+          </span>
+        )}
         {/* Capped below the full petal width: a pentagon narrows away from its
             middle, so a long line that fits the box still spills past the shape. */}
         {!isCenter && <span className="mt-1 max-w-[78%] text-balance text-sm font-medium leading-snug opacity-95">{m.description}</span>}
