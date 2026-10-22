@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation"
 import type { VideoData } from "@/components/video-carousel"
 import { VideoGrid } from "@/components/video-grid"
 import { RoleVideoGrid, type RoleVideo } from "@/components/role-video-grid"
-import { personas } from "@/content/personas"
 import { getSurface } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
@@ -36,10 +35,56 @@ type VideosCopy = {
   moreLinks: { title: string; description: string; href: string }[]
 }
 
-// Persona shorts, one per role, from the personas catalog. All are in Danish;
-// the English titles are translations of the YouTube titles.
+// Persona shorts, one per role, in the order they should appear. All are in
+// Danish; the English titles are translations of the YouTube titles.
+const roleVideoIds = [
+  "siSXdSd0G3o",
+  "IXDN_Ai6Ank",
+  "kqMOxAQ02e0",
+  "tnoy3-B0s8I",
+  "aD9I-Rdedjo",
+  "I_GInMVfuN8",
+  "zwa7gHegd0s",
+  "6IUQ7bcRjjo",
+  "nx6AtYqqcoE",
+  "hJc5P5No_u0",
+  "2gLBRps2SX0",
+  "u0KXgYzEfVQ",
+]
+
+const roleTitles: Record<Locale, string[]> = {
+  en: [
+    "Are you a CEO?",
+    "Are you a COO?",
+    "Are you a plant manager?",
+    "Are you a production manager?",
+    "Do you work with Operational Excellence or Continuous Improvement?",
+    "Are you an IT manager?",
+    "Do you work with IT or OT?",
+    "Are you a maintenance manager?",
+    "Are you a CEO, COO or salesperson at a machine builder?",
+    "Do you work in aftersales?",
+    "Are you a planner?",
+    "Do you work in supply chain?",
+  ],
+  da: [
+    "Er du CEO?",
+    "Er du COO?",
+    "Er du fabrikschef?",
+    "Er du produktionschef?",
+    "Er du ansvarlig for Operational Excellence eller Continuous Improvement?",
+    "Er du IT-chef?",
+    "Arbejder du med IT eller OT?",
+    "Er du vedligeholdelseschef?",
+    "Er du CEO, COO eller sælger hos en maskinbygger?",
+    "Arbejder du med aftersales?",
+    "Er du planlægger?",
+    "Arbejder du med supply chain?",
+  ],
+}
+
 const roleVideos = (locale: Locale): RoleVideo[] =>
-  personas.map((p) => ({ videoId: p.videoId, title: p.content[locale].question }))
+  roleVideoIds.map((videoId, i) => ({ videoId, title: roleTitles[locale][i] }))
 
 // Video titles match the published titles on the OptiPeople YouTube channel.
 // The two customer stories are in Danish, the Omron talk is in English; the
