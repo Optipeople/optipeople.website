@@ -23,7 +23,7 @@ type Props = { params: Promise<{ locale: string; slug: string }> }
 const copy: Record<
   Locale,
   {
-    about: string
+    cases: string
     personas: string
     playLabel: string
     videoNote: string
@@ -33,7 +33,7 @@ const copy: Record<
   }
 > = {
   en: {
-    about: "About",
+    cases: "Cases",
     personas: "Personas",
     playLabel: "Play",
     videoNote: "The video is in Danish.",
@@ -42,7 +42,7 @@ const copy: Record<
     othersTitle: "Other roles",
   },
   da: {
-    about: "Om",
+    cases: "Cases",
     personas: "Personaer",
     playLabel: "Afspil",
     videoNote: "",
@@ -92,6 +92,7 @@ export default async function PersonaPage({ params }: Props) {
     <div className="min-h-screen">
       <JsonLd
         data={breadcrumbSchema(l, [
+          { name: t.cases, path: "/cases" },
           { name: t.personas, path: "/about/personas" },
           { name: c.name, path: personaHref(slug) },
         ])}
@@ -109,8 +110,8 @@ export default async function PersonaPage({ params }: Props) {
         <div className="grid grid-cols-1 items-start gap-12 px-[var(--edge)] lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-20">
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
-              <Link href="/about" className="hover:text-foreground">
-                {t.about}
+              <Link href="/cases" className="hover:text-foreground">
+                {t.cases}
               </Link>
               {" / "}
               <Link href="/about/personas" className="hover:text-foreground">

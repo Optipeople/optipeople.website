@@ -499,7 +499,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/maintenance-and-tasks",
           },
           {
-            title: "Energy and telemetry",
+            title: "Energy and process data",
             description:
               "Sensor data from the machine control layer feeds directly into telemetry dashboards.",
             href: "/features/energy-and-telemetry",
@@ -568,7 +568,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/maintenance-and-tasks",
           },
           {
-            title: "Energi og målinger",
+            title: "Energi og procesdata",
             description: "Sensordata går direkte ind i jeres dashboards.",
             href: "/features/energy-and-telemetry",
           },
@@ -954,7 +954,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/stop-cause-registration",
           },
           {
-            title: "Energy and telemetry",
+            title: "Energy and process data",
             description:
               "Add energy consumption and sensor data to your production reports.",
             href: "/features/energy-and-telemetry",
@@ -1011,7 +1011,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/ai-and-copilots",
           },
           {
-            title: "Energi og målinger",
+            title: "Energi og procesdata",
             description: "Følg energiforbruget og det, der stikker ud.",
             href: "/features/energy-and-telemetry",
           },
@@ -1029,12 +1029,12 @@ const features: LocalizedPage<FeaturePage>[] = [
     href: "/features/energy-and-telemetry",
     content: {
       en: {
-        metaTitle: "Energy and telemetry | OptiPeople",
+        metaTitle: "Energy and process data | OptiPeople",
         metaDescription:
           "Connect energy, vibration, flow, and temperature directly to production. Identify waste, anomalies, and optimization opportunities.",
         parentLabel: "EMS",
         parentHref: "/modules/energy",
-        eyebrow: "Energy and telemetry",
+        eyebrow: "Energy and process data",
         heroTitle: "Know what your machines are feeling",
         heroBody:
           "Connect energy, vibration, flow, and temperature directly to production. Spot waste, catch anomalies early, and find optimization opportunities hiding in the data.",
@@ -1067,7 +1067,7 @@ const features: LocalizedPage<FeaturePage>[] = [
           {
             title: "Sensor data meets production data",
             description:
-              "Energy and telemetry don't live in isolation. OptiPeople connects sensor readings directly to OEE, stop events, and shift data, so you can answer questions like: how much energy did that unplanned stop cost? Which shift runs most efficiently?",
+              "Energy and process data don't live in isolation. OptiPeople connects sensor readings directly to OEE, stop events, and shift data, so you can answer questions like: how much energy did that unplanned stop cost? Which shift runs most efficiently?",
             image: "/images/Product/platform-report.png",
             imageAlt:
               "Production and efficiency reports side by side in OptiPeople Data Platform",
@@ -1100,12 +1100,12 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
       },
       da: {
-        metaTitle: "Energi og målinger | OptiPeople",
+        metaTitle: "Energi og procesdata | OptiPeople",
         metaDescription:
           "Kobl energi, vibration, flow og temperatur sammen med produktionen, og find spildet og det, der stikker ud.",
         parentLabel: "EMS",
         parentHref: "/modules/energy",
-        eyebrow: "Energi og målinger",
+        eyebrow: "Energi og procesdata",
         heroTitle: "Se, hvad maskinerne bruger, og hvad de fortæller",
         heroBody:
           "Kobl energimålere og sensorer sammen med produktionen, så spild, slid og det, der stikker ud, bliver til at få øje på.",
@@ -1113,8 +1113,8 @@ const features: LocalizedPage<FeaturePage>[] = [
         heroImageAlt: "Energiforbrug for én maskine over 48 timer",
         valueTitle: "Energi og maskinernes tilstand uden et ekstra system",
         valueBody:
-          "Mange fabrikker følger energien i ét system, produktionen i et andet og maskinernes tilstand i et tredje, hvis overhovedet. Så kan ingen se, hvad der hænger sammen med hvad. I OptiPeople ligger målingerne sammen med produktionstallene, så I kan se forskel på almindelige udsving og et rigtigt problem.",
-        capabilitiesTitle: "Målinger med produktionen ved siden af",
+          "Mange fabrikker følger energien i ét system, produktionen i et andet og maskinernes tilstand i et tredje, hvis overhovedet. Så kan ingen se, hvad der hænger sammen med hvad. I OptiPeople ligger energi- og procesdata sammen med produktionstallene, så I kan se forskel på almindelige udsving og et rigtigt problem.",
+        capabilitiesTitle: "Energi og procesdata med produktionen ved siden af",
         capabilitiesBody:
           "Energi og sensortal ligger i det samme billede som OEE og stop.",
         capabilities: [
@@ -1125,7 +1125,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             imageAlt: "Graf over målinger",
           },
           {
-            title: "Sensorerne over tid",
+            title: "Data over tid",
             description: "Hold øje med temperatur, vibration, flow og de andre signaler.",
             image: "/images/Telemetry-Numbers.png",
             imageAlt: "Måletal",
@@ -1145,7 +1145,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         related: [
           {
             title: "Vedligehold og opgaver",
-            description: "Lad målingerne udløse vedligeholdet.",
+            description: "Lad data udløse vedligeholdet.",
             href: "/features/maintenance-and-tasks",
           },
           {
@@ -1230,7 +1230,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/stop-cause-registration",
           },
           {
-            title: "Energy and telemetry",
+            title: "Energy and process data",
             description:
               "Monitor vibration, temperature, and energy to trigger condition-based maintenance.",
             href: "/features/energy-and-telemetry",
@@ -1287,7 +1287,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
         related: [
           {
-            title: "Energi og målinger",
+            title: "Energi og procesdata",
             description: "Brug sensorerne til at opdage slid, før det bliver til nedbrud.",
             href: "/features/energy-and-telemetry",
           },
@@ -1367,7 +1367,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/analysis-and-reporting",
           },
           {
-            title: "Energy and telemetry",
+            title: "Energy and process data",
             description:
               "AI detects patterns in sensor data that signal wear, waste, or emerging failures.",
             href: "/features/energy-and-telemetry",
@@ -1432,7 +1432,7 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/analysis-and-reporting",
           },
           {
-            title: "Energi og målinger",
+            title: "Energi og procesdata",
             description: "Find de mønstre i sensordata, der peger på fejl eller spild.",
             href: "/features/energy-and-telemetry",
           },

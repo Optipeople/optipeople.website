@@ -1122,7 +1122,7 @@ function EmsMockup() {
             className="text-[9.5px] font-semibold uppercase tracking-[0.06em] leading-none"
             style={{ color: "var(--green-dark3)" }}
           >
-            Energy and telemetry
+            Energy and process data
           </p>
           <span className="ml-auto inline-flex shrink-0 items-center gap-[3px] rounded-full bg-slate-100 px-1.5 py-[2px] text-[6px] font-medium leading-none text-slate-500">
             <span

@@ -87,6 +87,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       title: "Cases",
       items: [
         { title: "All cases", href: "/cases" },
+        { title: "Personas", href: "/about/personas" },
         {
           title: "Carl Hansen & Søn",
           href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai",
@@ -131,7 +132,6 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       items: [
         { title: "Insights", href: "/insights" },
         { title: "People", href: "/resources/people" },
-        { title: "Personas", href: "/about/personas" },
         { title: "Get help", href: "/get-help" },
         { title: "Contact", href: "/contact" },
         { title: "About us", href: "/about" },
@@ -177,6 +177,7 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       title: "Cases",
       items: [
         { title: "Alle cases", href: "/cases" },
+        { title: "Personaer", href: "/about/personas" },
         {
           title: "Carl Hansen & Søn",
           href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai",
@@ -221,7 +222,6 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       items: [
         { title: "Viden", href: "/insights" },
         { title: "Holdet", href: "/resources/people" },
-        { title: "Personaer", href: "/about/personas" },
         { title: "Få hjælp", href: "/get-help" },
         { title: "Kontakt", href: "/contact" },
         { title: "Om os", href: "/about" },
@@ -332,7 +332,7 @@ function itemByHref(items: NavItem[], href: string): NavItem {
  * The footer adds two things the header does not carry: the content archives
  * (cases, blog) under Resources, and the legal pages plus the login targets
  * under Company. The header's Customers menu (nine case posts) is represented
- * by the single cases-archive link rather than repeated.
+ * by the single cases-archive link rather than repeated, plus its Personas link.
  */
 function buildFooterColumns(locale: Locale): FooterColumn[] {
   const copy = footerCopy[locale]
@@ -340,6 +340,7 @@ function buildFooterColumns(locale: Locale): FooterColumn[] {
   const platform = menuById(locale, "platform")
   const services = menuById(locale, "services")
   const resources = menuById(locale, "resources")
+  const personas = itemByHref(menuById(locale, "customers").items, "/about/personas")
 
   const insights = itemByHref(resources.items, "/insights")
   const otherResources = resources.items.filter(
@@ -368,6 +369,7 @@ function buildFooterColumns(locale: Locale): FooterColumn[] {
       items: [
         insights,
         { title: copy.cases, href: "/cases" },
+        personas,
         { title: copy.blog, href: "/blog" },
         ...navigationLinks[locale],
         newsletterLink[locale],

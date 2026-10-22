@@ -18,7 +18,7 @@ const copy: Record<
   {
     metaTitle: string
     metaDescription: string
-    about: string
+    cases: string
     eyebrow: string
     headline: string
     body: string
@@ -29,7 +29,7 @@ const copy: Record<
     metaTitle: "Personas | OptiPeople",
     metaDescription:
       "The roles we work with in manufacturing, from the CEO to the planner: a short video for each, and the problems OptiPeople Data Platform helps solve in that job.",
-    about: "About",
+    cases: "Cases",
     eyebrow: "Personas",
     headline: "Find your role",
     body: "A short video for each role we work with, and the everyday problems we help solve in that job. The videos are in Danish.",
@@ -39,7 +39,7 @@ const copy: Record<
     metaTitle: "Personaer | OptiPeople",
     metaDescription:
       "De roller, vi arbejder med i produktionen, fra direktøren til planlæggeren: en kort video til hver og de problemer, OptiPeople Data Platform hjælper med i jobbet.",
-    about: "Om",
+    cases: "Cases",
     eyebrow: "Personaer",
     headline: "Find jeres rolle",
     body: "En kort video til hver af de roller, vi arbejder med, og de problemer i hverdagen, vi hjælper med at løse i netop det job.",
@@ -74,7 +74,10 @@ export default async function PersonasPage({ params }: Props) {
   return (
     <div className="min-h-screen">
       <JsonLd
-        data={breadcrumbSchema(l, [{ name: t.eyebrow, path: "/about/personas" }])}
+        data={breadcrumbSchema(l, [
+          { name: t.cases, path: "/cases" },
+          { name: t.eyebrow, path: "/about/personas" },
+        ])}
       />
       <section className="relative isolate overflow-hidden pb-16 pt-12 lg:pb-24 lg:pt-20">
         <div
@@ -86,8 +89,8 @@ export default async function PersonasPage({ params }: Props) {
         />
         <div className="px-[var(--edge)]">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
-            <Link href="/about" className="hover:text-foreground">
-              {t.about}
+            <Link href="/cases" className="hover:text-foreground">
+              {t.cases}
             </Link>
             {" / "}
             {t.eyebrow}
