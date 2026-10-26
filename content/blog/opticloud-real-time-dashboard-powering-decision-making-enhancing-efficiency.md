@@ -1,30 +1,33 @@
 ---
-title: "OptiPeople Data Platform real-time dashboard: Powering decision-making, enhancing efficiency"
-description: "The real-time dashboard shows live numbers from the floor, changes colour when something needs attention, and is shared with a link, no extra login."
+title: "Real-time dashboards in OptiPeople Data Platform: See production now, decide faster"
+description: "Dashboards show live machine status, counts and stops from the floor. You build them from widgets, so each role sees the numbers it needs."
 date: "2023-06-29"
+updated: "2026-10-26"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/dashboards-v51.jpg"
 ---
 
-## Instant data, insightful decisions
+## Live numbers, better decisions
 
-In manufacturing, real-time data is the foundation of good decision-making. OptiPeople Data Platform’s Real-Time Dashboard gives teams up-to-the-minute information directly from the factory floor.
+Good decisions on the floor need numbers from right now, not from yesterday's shift report. Dashboards in OptiPeople Data Platform show what your machines are doing as it happens: whether they run or stand still, how many units they make, and where the time goes.
 
-## Adaptable, powerful, simple
+## Built from widgets
 
-Dashboards are easy to create and flexible enough for operators, technicians, managers, and executives alike. Add widgets, arrange them as needed, and build a live view around the data your team actually needs to monitor.
+You build a dashboard from widgets. Each widget shows one thing, such as machine status, a unit counter, units per hour, the production timeline, stops or orders. Pick the widgets and the machines you care about, and you have a live view built around the job.
 
-## Visual clarity, quick comprehension
+That matters, because people need different views of the same factory. An operator wants the state of one machine. A technician wants stops and causes. A production manager wants OEE across lines and shifts.
 
-Widgets change color based on defined conditions, whether performance is critical, normal, or strong. Layouts also adapt to different screen sizes, so teams get a clear viewing experience everywhere.
+## Read it at a glance
 
-## Collaborate and share
+Colour does a lot of the work. Machine status and the production timeline are colour-coded, so a stopped machine stands out at once. OEE is measured against the targets you set for availability, performance and quality on each machine, so you can see straight away whether a number is good or bad.
 
-Sharing critical data should be straightforward. With OptiPeople Data Platform’s Real-Time Dashboard, you can share dashboards across the factory without requiring extra logins or software knowledge. Share a link and the team can access the same live view.
+## The operator panel at the machine
 
-## Take control of your data
+Each machine also has an operator panel: its status, its counter, units per hour, the timeline of the shift and the buttons operators use to register a stop or a setup. It is a page in the platform, so it can run on a screen or tablet at the machine. The stop causes registered there go straight into the stop and OEE figures everyone else sees.
 
-In a fast-moving production environment, the faster you access and interpret your data, the faster you can act. Real-time dashboards help keep production, efficiency, and decision-making one step ahead.
+## Act while it still matters
 
-Ready to see what the OptiPeople Data Platform real-time dashboard can do for your business? [Get started today](/contact).
+When production moves fast, the sooner you see a problem, the sooner you can fix it. A live view of status, counts and stops lets you react during the shift instead of reading about it afterwards.
+
+Read more about the [OEE module](/modules/production), or [get in touch](/contact) to see the dashboards on your own production.

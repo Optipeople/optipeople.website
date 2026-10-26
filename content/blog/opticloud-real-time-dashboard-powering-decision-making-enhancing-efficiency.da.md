@@ -1,26 +1,29 @@
 ---
 title: "Dashboards i realtid: Se produktionen nu, og beslut hurtigere"
-description: "Realtidsdashboardet viser tallene fra gulvet, mens det sker, skifter farve, når noget kræver opmærksomhed, og deles med et link uden ekstra login."
+description: "Dashboards viser maskinstatus, tællere og stop fra gulvet, mens det sker. I bygger dem af widgets, så hver rolle ser de tal, den har brug for."
+updated: "2026-10-26"
 ---
 
 ## Friske tal giver bedre beslutninger
 
-I produktionen er data i realtid grundlaget for gode beslutninger. Med realtidsdashboardet i OptiPeople Data Platform ser I tallene fra fabriksgulvet, minut for minut.
+Skal I træffe gode beslutninger på gulvet, skal tallene være fra nu, ikke fra gårsdagens skiftrapport. Dashboards i OptiPeople Data Platform viser, hvad maskinerne laver, mens det sker: om de kører eller står stille, hvor mange emner de laver, og hvor tiden går hen.
 
-## Nemt at lave, nemt at tilpasse
+## Bygget af widgets
 
-Dashboards er nemme at lave, og de kan tilpasses, så de passer til både operatører, teknikere, ledere og direktion. I tilføjer widgets, flytter rundt på dem og bygger en live visning af de tal, jeres folk faktisk skal holde øje med.
+I bygger et dashboard af widgets. Hver widget viser én ting: maskinstatus, en tæller, emner i timen, produktionens tidslinje, stop eller ordrer. I vælger de widgets og maskiner, I vil følge, og så har I en live visning, der passer til opgaven.
 
-## Forstå det med ét blik
+Det betyder noget, for folk har brug for forskellige billeder af den samme fabrik. Operatøren vil se, hvordan maskinen kører. Teknikeren vil se stop og årsager. Produktionschefen vil se OEE på tværs af linjer og skift.
 
-Widgets skifter farve efter de grænser, I har sat. Så kan I se med det samme, om det står kritisk, normalt eller godt til. Layoutet tilpasser sig også skærmens størrelse, så visningen er tydelig, uanset hvor den bliver vist.
+## Se det med ét blik
 
-## Del det med resten af fabrikken
+Farverne gør meget af arbejdet. Maskinstatus og tidslinjen er farvekodet, så en maskine, der står, springer i øjnene med det samme. OEE bliver målt mod de mål, I selv sætter for tilgængelighed, ydelse og kvalitet på hver maskine. Så kan I se med det samme, om et tal er godt eller skidt.
 
-Det skal være nemt at dele de vigtige tal. Med realtidsdashboardet i platformen kan I dele dashboards på tværs af fabrikken, uden at folk skal have ekstra login eller kende til systemet. I sender et link, og så ser alle den samme live visning.
+## Operatørpanelet ved maskinen
 
-## Tag styringen med jeres data
+Hver maskine har også et operatørpanel. Det viser status, tælleren, emner i timen og skiftets tidslinje, og det har knapperne, operatøren bruger til at registrere et stop eller en omstilling. Panelet er en side i platformen, så det kan køre på en skærm eller en tablet ved maskinen. De stopårsager, der bliver registreret der, går direkte ind i de stop- og OEE-tal, alle andre ser.
 
-Når produktionen går stærkt, gælder det om at få fat i tallene og forstå dem hurtigt. Jo før I gør det, jo før kan I handle. Dashboards i realtid holder jer et skridt foran med både produktion, effektivitet og beslutninger.
+## Handl, mens det stadig nytter
 
-Vil I se, hvad realtidsdashboardet i OptiPeople Data Platform kan gøre for jer? [Kom i gang i dag](/da/contact).
+Når produktionen går stærkt, gælder det om at se problemet tidligt. Jo før I ser det, jo før kan I rette det. Med status, tællere og stop live kan I reagere i løbet af skiftet i stedet for at læse om det bagefter.
+
+Læs mere om [OEE-modulet](/da/modules/production), eller [tag fat i os](/da/contact), hvis I vil se dashboards på jeres egen produktion.

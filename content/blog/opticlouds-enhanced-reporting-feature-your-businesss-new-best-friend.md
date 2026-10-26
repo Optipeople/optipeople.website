@@ -1,36 +1,37 @@
 ---
-title: "OptiPeople Data Platform's enhanced reporting feature: Your business's new best friend"
-description: "Build reports that show only the numbers you need: start from three ready templates or make your own, and choose who can see each report."
+title: "Reporting in OptiPeople Data Platform: Only the numbers you need"
+description: "Reports in OptiPeople Data Platform show OEE, stops, unit counts and telemetry per machine, shift or period, straight from machine data, with no spreadsheet in between."
 date: "2023-08-03"
+updated: "2026-10-26"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/oee-module-report.png"
 ---
 
-Welcome to the future of efficient reporting with OptiPeople Data Platform’s new and enhanced feature, the Customizable Report Templates. This feature allows you to focus on the data that matters by personalizing your reports.
+A good report answers one question quickly. Reports in OptiPeople Data Platform are built from the same live machine data as everything else in the platform, so nobody has to collect numbers by hand or paste them into a spreadsheet.
 
-## One feature, unlimited possibilities
+## The OEE report
 
-Say goodbye to the clutter of irrelevant metrics and hello to targeted data. With this feature, you can create, manage, and customize your report templates using a variety of widgets packed with useful charts and data.
+The OEE report shows availability, performance, quality and OEE for each machine. Next to them you get shift time, run time, planned and unplanned stop time, the number of stops, produced and rejected units per counter, and the biggest stop reasons.
 
-### Preconfigured templates for an instant start
+Pick a week or a range of days. Narrow it to the shifts you care about, for example only the night shift. While a period is still running, the numbers keep updating.
 
-Ease into the enhanced reporting experience with three preconfigured standard templates: Efficiency, Telemetry, and Unit Counters. These templates capture key metrics for different operations. For example, the Efficiency template can highlight areas in your production line where energy consumption could be reduced, helping support sustainability goals.
+## Unit counts
 
-### Tailor-made reporting at your fingertips
+Counter reports show produced, rejected and good units per machine and counter. You can look at them per hour, shift, day, week or month, and see the average day next to the best and the worst.
 
-For a more custom setup, create templates through the `Manage Templates` option. You can add, remove, rearrange, and resize widgets based on your business needs. If you need to monitor machine vibration for preventive maintenance or evaluate CO2 footprint per product, you can build a custom template around those exact data points.
+## Stops
 
-### Privacy on your terms
+Every stop has a reason, a category and a duration, and each reason is set up as planned or unplanned. That lets you see which reasons cost the most time, how much of it was planned, and how many stops were never given a reason.
 
-All templates are public by default for easy sharing across teams. When a report needs to stay confidential, privacy settings let you control who has access.
+## Telemetry
 
-## Accessible data for all
+If your machines send telemetry, such as temperature, vibration, spindle speed or power consumption, you can follow those readings over time too. Group them by hour, shift or day, or look only at the time the machine was actually running. That is useful when you are tracking wear before it turns into a breakdown.
 
-This feature is designed to make data more understandable regardless of technical skill level. It streamlines the visualization process and helps teams make data-driven decisions faster.
+## Dashboards for the daily view
 
-## The first step to efficient reporting
+The numbers you check every day belong on a dashboard. You build it from widgets, such as machine status, counters, stops and orders, so each team sees its own view of the same data.
 
-This feature is designed to change how teams manage data and make decisions. To get started, log in to your OptiPeople Data Platform account and try the customizable templates.
+## Numbers anyone can read
 
-We look forward to your feedback as we continue improving the experience.
+The point is to get the numbers to the people who act on them, whether or not they are technical. Read more about [analysis and reporting](/features/analysis-and-reporting) and the [OEE module](/modules/production), or [get in touch](/contact) to see the reports on your own data.

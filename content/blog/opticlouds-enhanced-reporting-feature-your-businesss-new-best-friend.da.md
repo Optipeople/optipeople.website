@@ -1,32 +1,33 @@
 ---
 title: "Rapporter, der kun viser det, I har brug for"
-description: "Byg rapporter, der kun viser de tal, I har brug for: start med tre færdige skabeloner eller lav jeres egne, og bestem selv, hvem der kan se dem."
+description: "Rapporterne i OptiPeople Data Platform viser OEE, stop, tællere og telemetri for hver maskine, hvert skift eller hver periode, direkte fra maskinerne og uden regneark."
+updated: "2026-10-26"
 ---
 
-OptiPeople Data Platform har fået en ny og bedre rapportfunktion: rapportskabeloner, I selv kan tilpasse. Så kan I skrue rapporterne sammen, så de kun viser de tal, der betyder noget for jer.
+En god rapport svarer hurtigt på ét spørgsmål. Rapporterne i OptiPeople Data Platform bygger på de samme maskindata som resten af platformen. Så skal ingen samle tal sammen i hånden eller sætte dem ind i et regneark.
 
-## Én funktion, mange muligheder
+## OEE-rapporten
 
-Slut med rapporter fyldt med nøgletal, ingen kigger på. Nu kan I lave, styre og tilpasse jeres egne rapportskabeloner med en række widgets med grafer og data.
+OEE-rapporten viser tilgængelighed, ydelse, kvalitet og OEE for hver maskine. Ved siden af ser I skifttid, køretid, planlagte og uplanlagte stop, antal stop, producerede og kasserede emner for hver tæller og de største stopårsager.
 
-### Færdige skabeloner, så I kan gå i gang med det samme
+I vælger en uge eller en række dage. I kan også nøjes med de skift, I vil se, for eksempel kun nathold. Så længe perioden ikke er slut, bliver tallene ved med at opdatere.
 
-I kan starte med tre færdige standardskabeloner: Efficiency, Telemetry og Unit Counters. De samler de vigtigste nøgletal for forskellige typer drift. Skabelonen Efficiency kan for eksempel vise, hvor på produktionslinjen I kan skære ned på energiforbruget. Det hjælper jer også med jeres bæredygtighedsmål.
+## Tællere
 
-### Byg rapporten, som I vil have den
+Tællerrapporterne viser producerede, kasserede og gode emner for hver maskine og tæller. I kan se dem pr. time, skift, dag, uge eller måned og se den gennemsnitlige dag ved siden af den bedste og den dårligste.
 
-Skal det være mere skræddersyet, laver I skabeloner under `Manage Templates`. Her kan I tilføje, fjerne, flytte og ændre størrelse på widgets efter, hvad I har brug for. Skal I holde øje med vibrationer på en maskine for at forebygge nedbrud, eller vil I opgøre CO2-aftrykket per produkt, så bygger I en skabelon op om netop de tal.
+## Stop
 
-### I bestemmer, hvem der ser hvad
+Hvert stop har en årsag, en kategori og en varighed, og hver årsag er sat op som planlagt eller uplanlagt. Så kan I se, hvilke årsager der koster mest tid, hvor meget af det der var planlagt, og hvor mange stop der aldrig fik en årsag.
 
-Alle skabeloner er som udgangspunkt offentlige, så de er nemme at dele på tværs af afdelingerne. Skal en rapport holdes fortrolig, kan I selv styre, hvem der har adgang.
+## Telemetri
 
-## Data, alle kan forstå
+Sender jeres maskiner telemetri, for eksempel temperatur, vibrationer, spindelhastighed eller strømforbrug, kan I også følge de målinger over tid. I kan dele dem op pr. time, skift eller dag eller kun se på den tid, maskinen faktisk kørte. Det er nyttigt, når I holder øje med slid, før det ender med et nedbrud.
 
-Funktionen er lavet, så alle kan forstå tallene, også dem, der ikke er tekniske. Det bliver nemmere at få tallene vist, og jeres folk kan hurtigere træffe beslutninger ud fra data.
+## Dashboards til det daglige overblik
 
-## Kom i gang
+De tal, I kigger på hver dag, hører hjemme på et dashboard. I bygger det af widgets, for eksempel maskinstatus, tællere, stop og ordrer, så hvert team ser sit eget billede af de samme data.
 
-Funktionen skal gøre det nemmere for jer at holde styr på data og træffe beslutninger. Log ind på jeres konto i OptiPeople Data Platform, og prøv skabelonerne.
+## Tal, alle kan læse
 
-Vi glæder os til at høre, hvad I synes, så vi kan blive ved med at gøre den bedre.
+Det handler om at få tallene ud til dem, der skal gøre noget ved dem, uanset om de er tekniske eller ej. Læs mere om [analyse og rapporter](/da/features/analysis-and-reporting) og [OEE-modulet](/da/modules/production), eller [tag fat i os](/da/contact), hvis I vil se rapporterne på jeres egne data.

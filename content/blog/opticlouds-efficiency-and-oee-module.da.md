@@ -1,21 +1,22 @@
 ---
 title: "OEE-modulet i OptiPeople Data Platform: Se, hvor effektiviteten går tabt"
-description: "OEE-modulet viser tilgængelighed, ydelse og kvalitet live. Så kan I se, hvor effektiviteten går tabt, og følge en vejledning trin for trin til at rette det."
+description: "OEE-modulet måler tilgængelighed, ydelse og kvalitet direkte fra maskinerne, viser OEE mod jeres mål og deler tabet op på stopårsager og skift."
+updated: "2026-10-26"
 ---
 
-## Følg effektiviteten live med OEE-modulet
+## OEE fra maskinen, ikke fra et regneark
 
-Når I vil optimere produktionen, skal I kende jeres OEE (Overall Equipment Effectiveness). OEE-modulet i OptiPeople Data Platform viser live, hvordan maskinerne kører, ved at samle tilgængelighed, kvalitet og ydelse i ét tal.
+OEE (Overall Equipment Effectiveness) fortæller jer, hvor meget af den planlagte tid der bliver til gode emner. [OEE-modulet](/da/modules/production) i OptiPeople Data Platform måler det direkte fra maskinerne og samler tilgængelighed, ydelse og kvalitet i ét tal.
 
 ![](/images/blog/oee-module-report.png)
 
-## Det får I ud af OEE-modulet
+## Det får I
 
-**Præcise tal, live:** I får løbende opdateringer fra gulvet og kan reagere hurtigt, når noget påvirker produktiviteten.
+**Tal, mens skiftet kører:** Maskinstatus og tællere kommer ind løbende. Så kan I reagere på en ændring, før skiftet er slut.
 
-**Detaljerede rapporter:** I kan se nedetid, langsom kørsel og de årsager, der går igen, så detaljeret, at I kan planlægge målrettede forbedringer.
+**Rapporter, der forklarer tallet:** OEE-rapporten viser tilgængelighed, ydelse, kvalitet og OEE for hver maskine. Ved siden af ser I skifttid, køretid, planlagte og uplanlagte stop, antal stop, producerede og kasserede emner for hver tæller og de største stopårsager. I vælger en uge eller en række dage og kan nøjes med de skift, I vil se.
 
-**Korrekt OEE:** Platformen bruger branchens standardformel `OEE = Tilgængelighed x Ydelse x Kvalitet`, så I beslutter ud fra solide tal.
+**Standardformlen:** `OEE = Tilgængelighed x Ydelse x Kvalitet`. Hver del bliver målt mod de mål, I har sat for maskinen.
 
 Video: [Gennemgang af OEE live og historisk](https://player.vimeo.com/video/678151922?dnt=1&app_id=122963)
 
@@ -25,27 +26,27 @@ Video: [Gennemgang af OEE live og historisk](https://player.vimeo.com/video/6781
 
 ## Sådan bruger I modulet, trin for trin
 
-**Trin 1: Sæt det op og følg med**
+**Trin 1: Kobl maskinerne på**
 
-- Sæt OEE-modulet op, så det henter tal live fra gulvet. Det kobles på de maskiner, I allerede har, så opdateringerne kommer uden store ændringer i hardwaren.
+- Hver maskine bliver koblet på gennem en enhed, der sender maskinens status og tællere til platformen. Skiftene sætter I op for hver fabrik, så tallene følger jeres rigtige arbejdstider.
+- Operatøren registrerer stopårsagen ved maskinen, på operatørpanelet. Det er det, der gør "maskinen stod stille" til "maskinen stod stille på grund af et værktøjsskift".
 
 **Trin 2: Forstå jeres OEE-tal**
 
-- OEE-tallet viser med det samme, hvor effektivt fabrikken kører.
-- **Tilgængelighed:** Viser, hvor meget af den planlagte tid maskinerne faktisk er klar til at køre.
-- **Ydelse:** Viser, hvor hurtigt maskinerne kører i forhold til den hastighed, de er bygget til.
-- **Kvalitet:** Viser, hvor mange gode emner der kommer ud i forhold til det antal, der blev startet.
+- **Tilgængelighed:** Hvor meget af den planlagte tid maskinen faktisk kørte.
+- **Ydelse:** Hvor hurtigt den kørte i forhold til den hastighed, den skal køre med.
+- **Kvalitet:** Hvor mange af de producerede emner der var gode.
 
-**Trin 3: Gå i dybden med rapporterne**
+**Trin 3: Find tabet**
 
-- Brug rapporterne til at finde mønstre, de grundlæggende årsager til tabt tid og de steder, hvor der er mest at hente.
+- Brug OEE-rapporten til at se, hvilke stopårsager der koster mest tid, hvordan planlagte og uplanlagte stop fordeler sig, og hvor forskellige skiftene er.
 
-**Trin 4: Handl på det, I ser**
+**Trin 4: Gør noget ved det, I ser**
 
-- Lav bedre vedligeholdelsesplaner, læg arbejdsgangene om, fjern flaskehalse og tag fat i de kvalitetsproblemer, tallene viser.
+- Planlæg vedligehold, fjern flaskehalse, gør omstillingerne kortere og tag fat i de kvalitetsproblemer, tallene peger på.
 
 **Trin 5: Mål, lær og gentag**
 
-- Følg udviklingen over tid, mål effekten af det, I har gjort, og bliv ved med at justere ud fra tallene.
+- Følg tallene over tid, se om ændringen virkede, og bliv ved med at justere.
 
-**OEE-modulet i OptiPeople Data Platform er ikke bare et rapportværktøj. Det er en praktisk måde at få højere produktivitet og bedre kvalitet på hele fabrikken.**
+**OEE-modulet er mere end en rapport. Det viser jer, hvor tiden går hen, så I ved, hvor I skal starte.**

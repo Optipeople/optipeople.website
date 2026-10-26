@@ -1,25 +1,26 @@
 ---
-title: "OptiPeople Data Platform’s efficiency and OEE module"
-description: "The OEE module shows availability, performance and quality live, so you can see where efficiency is lost and follow a step-by-step path to fix it."
+title: "The OEE module in OptiPeople Data Platform: See where efficiency is lost"
+description: "The OEE module measures availability, performance and quality from the machines, shows OEE against your targets, and breaks the losses down by stop cause and shift."
 date: "2023-06-29"
+updated: "2026-10-26"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/oee-module-report.png"
 ---
 
-## OptiPeople Data Platform’s OEE module: A powerful tool for enhanced efficiency
+## OEE from the machine, not from a spreadsheet
 
-Understanding Overall Equipment Effectiveness, or OEE, is fundamental to manufacturing optimization. OptiPeople Data Platform’s OEE Module provides a real-time view of machine performance by combining availability, quality, and performance.
+Overall Equipment Effectiveness, or OEE, tells you how much of your planned time turns into good parts. The [OEE module](/modules/production) in OptiPeople Data Platform measures it from the machines themselves and combines availability, performance and quality into one number.
 
 ![](/images/blog/oee-module-report.png)
 
-## Benefits of using OptiPeople Data Platform’s OEE module
+## What you get
 
-**Accurate real-time data:** Get live updates from the factory floor and act quickly on changes that affect productivity.
+**Live numbers:** Machine state and unit counts come in while the shift runs, so you can act on a change before the shift is over.
 
-**In-depth reporting:** Understand downtime, slowdowns, and recurring causes in enough detail to plan targeted improvements.
+**Reports that explain the number:** The OEE report shows availability, performance, quality and OEE per machine. Next to them you get shift time, run time, planned and unplanned stop time, the number of stops, produced and rejected units per counter, and the biggest stop reasons. Pick a week or a range of days, and narrow it to the shifts you want.
 
-**Accurate OEE calculation:** Use the industry-standard formula `OEE = Availability x Performance x Quality` to make decisions on solid data.
+**The standard formula:** `OEE = Availability x Performance x Quality`. Each part is measured against the targets you set for the machine.
 
 Video: [OEE real-time and historic walkthrough](https://player.vimeo.com/video/678151922?dnt=1&app_id=122963)
 
@@ -27,29 +28,29 @@ Video: [OEE real-time and historic walkthrough](https://player.vimeo.com/video/6
 
 ![](/images/blog/oee-module-case.png)
 
-## A step-by-step guide to using the module
+## How to use the module, step by step
 
-**Step 1: Deploy and monitor**
+**Step 1: Connect the machines**
 
-- Deploy OptiPeople Data Platform’s OEE module to capture real-time data from your factory floor. It integrates with existing machinery so live updates start without extensive hardware changes.
+- Each machine is connected through a device that sends its state and unit counts to the platform. Shifts are set up per factory, so the numbers follow your actual working hours.
+- Operators register stop causes at the machine, on the operator panel. That is what turns "the machine stopped" into "the machine stopped for a tool change".
 
 **Step 2: Understand your OEE score**
 
-- The OEE score provides an immediate snapshot of factory efficiency.
-- **Availability:** Shows how much of the scheduled time the equipment is actually available to operate.
-- **Performance:** Reflects how fast work centers operate relative to designed speed.
-- **Quality:** Shows the share of good units compared with total units started.
+- **Availability:** How much of the planned time the machine actually ran.
+- **Performance:** How fast it ran compared with the speed it is expected to run at.
+- **Quality:** How many of the units produced were good.
 
-**Step 3: Deep dive with in-depth reports**
+**Step 3: Find the losses**
 
-- Use reporting to identify patterns, root causes of inefficiency, and the areas with the greatest improvement potential.
+- Use the OEE report to see which stop reasons cost the most time, how planned and unplanned stops compare, and how shifts differ.
 
-**Step 4: Take action based on insights**
+**Step 4: Act on what you see**
 
-- Improve maintenance schedules, restructure workflows, remove bottlenecks, and focus on the quality issues surfaced by the data.
+- Plan maintenance, fix bottlenecks, shorten setups and go after the quality problems the numbers point to.
 
-**Step 5: Measure, learn, and repeat**
+**Step 5: Measure, learn and repeat**
 
-- Track changes over time, measure the impact of your actions, and continue iterating with data.
+- Follow the numbers over time, check whether the change worked, and keep adjusting.
 
-**OptiPeople Data Platform’s OEE module is not just a reporting tool. It is a practical way to improve productivity and quality across the factory.**
+**The OEE module is more than a report. It shows you where the time goes, so you know where to start.**
