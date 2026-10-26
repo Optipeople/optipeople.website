@@ -27,7 +27,7 @@ export function VideoGrid({ videos, playLabel }: VideoGridProps) {
         const title = video.title ?? `Video ${index + 1}`
         return (
           <li key={video.videoId}>
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-[0_24px_60px_-28px_rgba(0,0,0,0.5)] ring-1 ring-black/[0.08]">
+            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-[0_14px_36px_-20px_rgba(0,0,0,0.28)] ring-1 ring-black/[0.08]">
               {playing === video.videoId ? (
                 <iframe
                   src={`https://www.youtube.com/embed/${video.videoId}?rel=0&autoplay=1`}
