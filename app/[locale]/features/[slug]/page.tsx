@@ -6,7 +6,7 @@ import { getFeature, featureSlugs } from "@/content/pages/features"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
 import { JsonLd } from "@/components/json-ld"
-import { breadcrumbSchema, pageName } from "@/lib/structured-data"
+import { breadcrumbSchema, faqSchema, pageName } from "@/lib/structured-data"
 import { getSimplePage } from "@/content/pages/simple"
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
@@ -45,6 +45,7 @@ export default async function FeaturePage({ params }: Props) {
           { name: pageName(c.metaTitle), path: entry.href },
         ])}
       />
+      {c.faq && <JsonLd data={faqSchema(locale as Locale, entry.href, c.faq.items)} />}
       <FeaturePageTemplate page={entry.content[locale as Locale]} slug={entry.slug} />
     </>
   )

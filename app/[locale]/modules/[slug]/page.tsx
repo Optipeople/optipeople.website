@@ -7,7 +7,7 @@ import { getModule, moduleSlugs } from "@/content/pages/modules"
 import type { Locale } from "@/i18n/routing"
 import { buildMetadata } from "@/lib/seo"
 import { JsonLd } from "@/components/json-ld"
-import { breadcrumbSchema, moduleSchema, pageName } from "@/lib/structured-data"
+import { breadcrumbSchema, faqSchema, moduleSchema, pageName } from "@/lib/structured-data"
 import { getSimplePage } from "@/content/pages/simple"
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
@@ -54,6 +54,7 @@ export default async function ModulePage({ params }: Props) {
           locale: locale as Locale,
         })}
       />
+      {c.faq && <JsonLd data={faqSchema(locale as Locale, entry.href, c.faq.items)} />}
       <StandardPageTemplate
         page={entry.content[locale as Locale]}
         family="modules"

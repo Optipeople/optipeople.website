@@ -12,6 +12,7 @@ import {
 } from "@/components/module-mockups"
 import { PlatformArchitecture } from "@/components/platform-architecture"
 import { FramedImage } from "@/components/framed-image"
+import { PageFaqSection } from "@/components/page-faq"
 import type { StandardPage } from "@/content/shared/types"
 import type { Locale } from "@/i18n/routing"
 import { getPageTheme, type PageFamily } from "@/lib/page-theme"
@@ -271,6 +272,8 @@ export function StandardPageTemplate({
           ))}
         </ol>
       </section>
+
+      {page.faq && <PageFaqSection faq={page.faq} />}
 
       {/* Visual. Either a section in its own right, or the full-bleed deep
           surface that is otherwise the page's one hard rhythm break. */}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
 import { RoutesVisual } from "@/components/module-mockups"
 import { FramedImage } from "@/components/framed-image"
+import { PageFaqSection } from "@/components/page-faq"
 import type { FeaturePage } from "@/content/shared/types"
 import { getPageTheme } from "@/lib/page-theme"
 
@@ -235,6 +236,8 @@ export function FeaturePageTemplate({
             </div>
           </section>
         )}
+
+      {page.faq && <PageFaqSection faq={page.faq} />}
 
       {/* Related, hairline grid instead of detached bordered cards.
           The page closes here: the conversion CTA is rendered globally by

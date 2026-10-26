@@ -64,7 +64,18 @@ export type StandardPage = {
   metrics: Metric[]
   stepsTitle: string
   steps: Step[]
+  faq?: PageFaq
   darkHero?: boolean
+}
+
+/**
+ * Questions a buyer asks, answered on the page. Rendered as a definition list
+ * and emitted as FAQPage structured data, so each answer has to stand on its
+ * own and match the visible text.
+ */
+export type PageFaq = {
+  title: string
+  items: { question: string; answer: string }[]
 }
 
 /** Feature deep-dive page, alternating image/text capabilities. */
@@ -94,6 +105,7 @@ export type FeaturePage = {
   showcaseDrawn?: "routes"
   metrics: Metric[]
   related: RelatedLink[]
+  faq?: PageFaq
 }
 
 /** Simple landing / index page, eyebrow, headline, body, link grid. */
