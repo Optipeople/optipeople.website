@@ -9,6 +9,8 @@
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 "Switch on the booking page" blocked on the Entra app registration (tenant admin, the human's). Left it blocked and noted; also flagged the buffer mismatch (15 min assumed vs none built) to verify in config.ts.
+- 2026-10-26 Booking page quest conflicted with 236a565 (phone header) in site-header.tsx. Fix-up already running; told it to keep main's header and carry only the /book vs /contact CTA switch, recheck the platform page CTA. Switch-on quest stays with the human (Entra app).
 - 2026-10-26 Hourly round: nothing changed since the last round (same four blocked quests, two dated SEO quests queued). Nothing filed or cast.
 - 2026-10-26 Round as the human left: four quests blocked on the human or on dates (week 1 check, transfer, outreach, operator panel retake), SEO week 2026-11-02 and week 4 check queued, so log not dry. No check stone for the 21 unshipped quests; nothing filed or cast.
 - 2026-10-26 Round after the DNS verify quest landed. Transfer quest blocked on the Wannafind EPP code and the USD 10 yes; both the human's, noted and left blocked. Log not dry (SEO week 2026-11-02 queued); nothing filed or cast.
@@ -70,4 +72,5 @@
 ## Open
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
 - .com transfer waits on the human's Wannafind EPP code and a yes to pay about USD 10; after it completes, the human can cancel Wannafind DNS Hotel.
+- Booking page goes live only after the human registers the Entra app (Calendars.ReadWrite, admin consent) and hands over tenant id, client id and secret; quest "Switch on the booking page" holds it.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
