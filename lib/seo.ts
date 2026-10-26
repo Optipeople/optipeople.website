@@ -35,6 +35,18 @@ export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
 }
 
+// Pages with a Markdown twin at the same path plus ".md" (lib/page-markdown.ts,
+// app/md). Kept as a pattern rather than an import, so this module stays free
+// of the content catalogs; a slug the catalogs do not know never gets this far.
+const markdownTwin =
+  /^\/(platform|cases|about|contact|agents|docs\/(agents|mcp)|(modules|features|solutions|services)(\/[^/]+)?|(ai|blog)\/[^/]+)?$/;
+
+/** The .md twin of an unprefixed path in a locale, if the page has one. */
+export function markdownUrl(path: string, locale: Locale) {
+  if (!markdownTwin.test(path)) return undefined;
+  return absoluteUrl(path === "/" ? addLocalePrefix("/index", locale) : addLocalePrefix(path, locale)) + ".md";
+}
+
 export function buildMetadata({
   title,
   description,
@@ -53,6 +65,7 @@ export function buildMetadata({
   const englishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "en"));
   const danishUrl = absoluteUrl(addLocalePrefix(unprefixedPath, "da"));
   const hasDanish = availableLocales.includes("da");
+  const markdown = markdownUrl(unprefixedPath, canonicalLocale);
 
   return {
     title,
@@ -65,6 +78,7 @@ export function buildMetadata({
         ...(hasDanish && { da: danishUrl }),
         "x-default": englishUrl,
       },
+      ...(markdown && { types: { "text/markdown": markdown } }),
     },
     openGraph: {
       type,

@@ -25,7 +25,7 @@ export const PLATFORM_NAME = "OptiPeople Data Platform"
 const TEAM_AUTHOR = "OptiPeople Team"
 
 // Matches the footer (components/site-footer.tsx) and the contact page.
-const ORGANIZATION = {
+export const ORGANIZATION = {
   legalName: "OptiPeople ApS",
   vatID: "DK32883532",
   telephone: "+45 23 74 47 05",

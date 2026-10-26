@@ -33,6 +33,10 @@ const singleRoutes = [
   "/solutions",
   "/privacy",
   "/terms",
+  "/agents",
+  "/docs",
+  "/docs/agents",
+  "/docs/mcp",
 ];
 
 const staticRoutes = [

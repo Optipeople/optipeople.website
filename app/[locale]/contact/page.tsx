@@ -10,107 +10,20 @@ import { buildMetadata } from "@/lib/seo"
 import type { Locale } from "@/i18n/routing"
 import { JsonLd } from "@/components/json-ld"
 import { breadcrumbSchema } from "@/lib/structured-data"
+import { contactCopy as copy, contactDetails, contactMetadata } from "@/content/pages/contact"
 
 type Props = { params: Promise<{ locale: string }> }
-
-type ContactCopy = {
-  eyebrow: string
-  headline: string
-  body: string
-  formTitle: string
-  quickIntro: string
-  orDivider: string
-  stepsTitle: string
-  steps: { title: string; description: string }[]
-  emailLabel: string
-  phoneLabel: string
-  officeLabel: string
-  officeLine2: string
-}
-
-const copy: Record<Locale, ContactCopy> = {
-  en: {
-    eyebrow: "Contact",
-    headline: "Let's talk about your operations",
-    body: "Tell us about your situation and we'll get back to you within one business day. No sales sequence, no gatekeeping: you talk to the people who run the platform.",
-    formTitle: "Send a message",
-    quickIntro: "Leave your email and we'll reach out, no form required.",
-    orDivider: "or",
-    stepsTitle: "What happens next",
-    steps: [
-      {
-        title: "We read it the same day",
-        description:
-          "Your message goes to the team behind OptiPeople Data Platform, not into a queue.",
-      },
-      {
-        title: "A short call",
-        description:
-          "Twenty minutes on your lines, your machines, and what you already measure today.",
-      },
-      {
-        title: "A walkthrough on your data",
-        description:
-          "We show the platform against your own production rather than a demo dataset.",
-      },
-    ],
-    emailLabel: "Email",
-    phoneLabel: "Phone",
-    officeLabel: "Office",
-    officeLine2: "8362 Hørning, Denmark",
-  },
-  da: {
-    eyebrow: "Kontakt",
-    headline: "Lad os tage en snak om jeres drift",
-    body: "Fortæl, hvor I står, så vender vi tilbage inden for én arbejdsdag. Ingen sælgerforløb og ingen mellemled: I taler direkte med dem, der står for platformen.",
-    formTitle: "Skriv til os",
-    quickIntro: "Skriv jeres e-mail, så kontakter vi jer. I behøver ikke udfylde en formular.",
-    orDivider: "eller",
-    stepsTitle: "Sådan foregår det",
-    steps: [
-      {
-        title: "Vi læser den samme dag",
-        description:
-          "Beskeden går direkte til folkene bag OptiPeople Data Platform. Den havner ikke i en kø.",
-      },
-      {
-        title: "En kort snak",
-        description:
-          "Tyve minutter om jeres linjer og maskiner, og om det, I allerede måler i dag.",
-      },
-      {
-        title: "Vi viser det på jeres data",
-        description:
-          "Vi viser platformen på jeres egen produktion, ikke på demodata.",
-      },
-    ],
-    emailLabel: "E-mail",
-    phoneLabel: "Telefon",
-    officeLabel: "Kontor",
-    officeLine2: "8362 Hørning, Danmark",
-  },
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   setRequestLocale(locale as Locale)
 
-  if (locale === "da") {
-    return buildMetadata({
-      title: "Kontakt OptiPeople",
-      description:
-        "Tag en snak med OptiPeople om overvågning af produktionen, OEE, integrationer og digital drift på jeres fabrik.",
-      path: "/contact",
-      locale: "da",
-    })
-  }
-
+  const m = contactMetadata[locale as Locale] ?? contactMetadata.en
   return buildMetadata({
-    title: "Contact OptiPeople",
-    description:
-      "Talk to OptiPeople about production monitoring, OEE, industrial integrations, and digital operations improvements for your factory.",
+    title: m.title,
+    description: m.description,
     path: "/contact",
-    locale: "en",
+    locale: locale === "da" ? "da" : "en",
   })
 }
 
@@ -145,13 +58,13 @@ export default async function ContactPage({ params }: Props) {
     {
       icon: Phone,
       label: t.phoneLabel,
-      value: "+45 23 74 47 05",
-      href: "tel:+4523744705",
+      value: contactDetails.phone,
+      href: contactDetails.phoneHref,
     },
     {
       icon: MapPin,
       label: t.officeLabel,
-      value: `Sønderskovvej 17, ${t.officeLine2}`,
+      value: `${contactDetails.street}, ${t.officeLine2}`,
       href: undefined,
     },
   ]

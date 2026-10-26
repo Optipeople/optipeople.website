@@ -46,6 +46,20 @@ const nextConfig: NextConfig = {
         has: [{ type: "host" as const, value: vercelAppHostPattern }],
         headers: [noindexHeader],
       },
+      // The Markdown twins answer at /<page>.md through the rewrites below.
+      // Their internal /md/... address must not be indexed as a page of its
+      // own. Headers match the requested URL, so a rewritten .md is untouched.
+      { source: "/md/:path*", headers: [noindexHeader] },
+    ];
+  },
+  async rewrites() {
+    // Markdown twins of the pages for AI agents (lib/page-markdown.ts): the
+    // page path plus ".md", Danish under /da, the home page as /index.md.
+    // proxy.ts skips any path with a dot, so next-intl never sees these.
+    // Danish first, or the English rule would read "da" as part of the path.
+    return [
+      { source: "/da/:path(.+)\\.md", destination: "/md/da/:path" },
+      { source: "/:path(.+)\\.md", destination: "/md/en/:path" },
     ];
   },
   async redirects() {

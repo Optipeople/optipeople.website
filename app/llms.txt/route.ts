@@ -45,10 +45,29 @@ function build() {
 > OptiPeople is a Danish digital operations company that helps manufacturers run production on live data. Its product, the OptiPeople Data Platform, is a modular MES: it connects the machines a factory already has, shows OEE and downtime as they happen, and adds modules for maintenance, quality, energy, orders, planning, documents, analysis and AI agents on the same data.
 
 The platform fills the gap between the shopfloor and the ERP system. Besides the software, OptiPeople offers advisory on smart operations, automation, business intelligence and AI. Every page exists in English and Danish; the Danish version sits under the /da prefix of the same path.
+
+The key pages also come as plain Markdown: add .md to the path (${absoluteUrl("/platform.md")}, ${absoluteUrl("/da/platform.md")}). The home page is ${absoluteUrl("/index.md")}.
 `
 
   const parts = [
     intro,
+    section("For AI agents", [
+      {
+        title: "OptiPeople for agents",
+        href: "/agents.md",
+        description: "What OptiPeople is, the modules, customer cases, how to connect and how to reach us, in one Markdown file.",
+      },
+      {
+        title: "Connect an agent",
+        href: "/docs/agents.md",
+        description: "The REST API, the MCP server and Opti Assist: what each one is for and how to authenticate.",
+      },
+      {
+        title: "MCP server",
+        href: "/docs/mcp.md",
+        description: "Set-up for Claude and other MCP clients, the tools, the data sources and the limits.",
+      },
+    ]),
     section("Platform", [
       {
         title: "OptiPeople Data Platform",
