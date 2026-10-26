@@ -8,6 +8,7 @@
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 Round after the comparison pages landed (c9e0ad2, human approved). Captures quest now blocked only on the replays quest landing. Log not dry (replays running, SEO week 2026-11-02 queued); nothing filed or cast.
 - 2026-10-26 Round after the Bing import landed (human signed in, quest done). Comparison pages blocked on pricing wording and competitor claims as planned; left with the human, noted. Log not dry, nothing filed or cast.
 - 2026-10-26 Danish buyer pages conflicted with the cloud MES commit (f9c6bb2) in feature-page.tsx, standard-page.tsx, modules.ts. Fix-up already running; told it to keep both sides, one FAQPage per page, MES title as assumed.
 - 2026-10-26 Captures quest blocked on the OptiCloudMultiTenant consent and platform login; account consent is the human's, left it blocked and noted. Comparison session confirmed it follows my plan; nothing more to tell it.
@@ -61,6 +62,5 @@
 ## Open
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
-- Comparison pages (Evocon, Factbird) blocked with the human on pricing wording and competitor claims; on yes, land branch write-honest-comparison-pages-optipeople, never before.
-- Captures quest waits on the human: Accept the OptiCloudMultiTenant consent in the pane, log in to platform.optipeople.dk, rerun.
+- Captures quest: 10 showcase images retaken (f951c5a); alt texts and live operator panel shots wait for the replays quest to land, then rerun it.
 - Replays quest blocked once on opus (2026-10-26); if it blocks again, read why before it starts over.
