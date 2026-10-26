@@ -89,13 +89,13 @@ export const oeeReplay: Record<"en" | "da", ReplayContent<OeeDemo>> = {
         title: "Three numbers and the shift behind them",
         body: "Availability, performance and OEE on top. Below them the timeline shows when the machine ran and when it stood still, and the stop distribution shows which reasons cost the most.",
         image: "/images/replays/oee/shift-report.webp",
-        alt: "An OEE report with gauges for availability, performance and OEE, a timeline chart from 05:30 to 15:58 and a stop distribution by reason",
+        alt: "An OEE report with gauges for availability, performance and OEE, a timeline chart over 24 hours and the stop distribution by reason",
       },
       {
         title: "Every stop on a line of its own",
         body: "Start, end, duration, stop reason, category and tags. Filter by category or tag, download the list, or add a stop the machine did not catch.",
         image: "/images/replays/oee/stop-table.webp",
-        alt: "The registered stop list for CNC Drilling, with QA Check, Tool Error, Coolant Stop and Missing Material among the stops",
+        alt: "The registered stop list for CNC Drilling, with Tool Error, Coolant Stop and Missing Material among the stops",
       },
       {
         title: "The same timeline on the floor",
@@ -134,13 +134,13 @@ export const oeeReplay: Record<"en" | "da", ReplayContent<OeeDemo>> = {
         title: "Tre tal og skiftet bag dem",
         body: "Tilgængelighed, ydelse og OEE øverst. Under dem viser tidslinjen, hvornår maskinen kørte, og hvornår den stod stille. Stopfordelingen viser, hvilke stopårsager der kostede mest.",
         image: "/images/replays/oee/shift-report.webp",
-        alt: "En OEE-rapport med målere for tilgængelighed, ydelse og OEE, en tidslinje fra 05:30 til 15:58 og stopfordelingen pr. stopårsag",
+        alt: "En OEE-rapport med målere for tilgængelighed, ydelse og OEE, en tidslinje over døgnet og stopfordelingen pr. stopårsag",
       },
       {
         title: "Hvert stop på sin egen linje",
         body: "Start, slut, varighed, stopårsag, kategori og tags. Filtrér på kategori eller tag, hent listen ned, eller tilføj et stop, maskinen ikke selv fangede.",
         image: "/images/replays/oee/stop-table.webp",
-        alt: "Listen over registrerede stop for CNC Drilling, blandt andet QA Check, Tool Error, Coolant Stop og Missing Material",
+        alt: "Listen over registrerede stop for CNC Drilling, blandt andet Tool Error, Coolant Stop og Missing Material",
       },
       {
         title: "Den samme tidslinje ude på gulvet",

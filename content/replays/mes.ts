@@ -64,7 +64,7 @@ export const mesReplay: Record<"en" | "da", ReplayContent<MesDemo>> = {
         title: "Produced and rejected, day by day",
         body: "The counter report adds up good and rejected parts per day, shift or hour for any period, with average and trend lines when you need them.",
         image: "/images/replays/mes/production-counters.webp",
-        alt: "The production counter report for CNC Drilling: 3,685 produced and 770 rejected in a week, parts per day and parts per hour",
+        alt: "The production counter report for CNC Drilling: 541 produced and 109 rejected in a day, and parts per hour",
       },
       {
         title: "The week in eight numbers",
@@ -106,7 +106,7 @@ export const mesReplay: Record<"en" | "da", ReplayContent<MesDemo>> = {
         title: "Produceret og kasseret, dag for dag",
         body: "Tællerrapporten lægger gode og kasserede emner sammen pr. dag, skift eller time for den periode, I vælger. Gennemsnit og trend er et klik væk.",
         image: "/images/replays/mes/production-counters.webp",
-        alt: "Tællerrapporten for CNC Drilling: 3.685 produceret og 770 kasseret på en uge, emner pr. dag og emner i timen",
+        alt: "Tællerrapporten for CNC Drilling: 541 produceret og 109 kasseret på en dag, og emner i timen",
       },
       {
         title: "Ugen i otte tal",
