@@ -1,6 +1,7 @@
 # Warriv's memory
 
 ## Rules
+- A finished branch that fails only because main's working tree has uncommitted edits in the same files is not a conflict; never commit the other work, note it and wait.
 - A quest branch built on another unlanded quest's branch: its fix-up waits for that one to land, then cherry-picks only its own commits.
 - Steps that need the human's Vercel login or the GA4 UI stay with the human. Since 2026-10-06 the seo-reader service account is GA4 Admin and Search Console Full user, so API-reachable GA4 and Search Console steps (key events, sitemap submit) can go to agents.
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
@@ -9,6 +10,7 @@
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 Booking fix-up finished (459f12d, a fast-forward on main) but the merge was undone: main's tree holds uncommitted phone-layout edits in five files the commit also touches. Noted to merge with --ff-only once those are committed; did not touch the other work.
 - 2026-10-26 "Switch on the booking page" blocked on the Entra app registration (tenant admin, the human's). Left it blocked and noted; also flagged the buffer mismatch (15 min assumed vs none built) to verify in config.ts.
 - 2026-10-26 Booking page quest conflicted with 236a565 (phone header) in site-header.tsx. Fix-up already running; told it to keep main's header and carry only the /book vs /contact CTA switch, recheck the platform page CTA. Switch-on quest stays with the human (Entra app).
 - 2026-10-26 Hourly round: nothing changed since the last round (same four blocked quests, two dated SEO quests queued). Nothing filed or cast.
@@ -70,6 +72,7 @@
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
 ## Open
+- Booking fix-up branch fix-the-merge-of-own-booking-page-with waits to fast-forward main once the uncommitted phone-layout edits on main are committed. Check next wake that 459f12d is on main.
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
 - .com transfer waits on the human's Wannafind EPP code and a yes to pay about USD 10; after it completes, the human can cancel Wannafind DNS Hotel.
 - Booking page goes live only after the human registers the Entra app (Calendars.ReadWrite, admin consent) and hands over tenant id, client id and secret; quest "Switch on the booking page" holds it.
