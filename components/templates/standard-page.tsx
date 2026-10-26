@@ -13,6 +13,7 @@ import {
 import { PlatformArchitecture } from "@/components/platform-architecture"
 import { FramedImage } from "@/components/framed-image"
 import { PageFaqSection } from "@/components/page-faq"
+import { AnswerSection, CaseSection } from "@/components/buyer-answer"
 import type { StandardPage } from "@/content/shared/types"
 import type { Locale } from "@/i18n/routing"
 import { getPageTheme, type PageFamily } from "@/lib/page-theme"
@@ -26,8 +27,10 @@ import { getPageTheme, type PageFamily } from "@/lib/page-theme"
  * Where the feature page leads with a screenshot, this one leads with an
  * editorial statement, these pages sell a scope, not a screen.
  *
- * Section flow: hero, proof strip, intro, capabilities, deep dives, steps,
- * visual. The deep dives only render when `deepDives` is passed: the module
+ * Section flow: hero, answer, proof strip, intro, capabilities, deep dives,
+ * steps, case, visual. The answer and case render only when the page has
+ * them (see components/buyer-answer.tsx). The deep dives only render when
+ * `deepDives` is passed: the module
  * pages use it to link down to their feature pages, which the header no
  * longer lists one by one.
  * The conversion CTA is appended globally by app/[locale]/layout.tsx, so the
@@ -132,6 +135,10 @@ export function StandardPageTemplate({
           </div>
         </div>
       </section>
+
+      {page.answer && (
+        <AnswerSection answer={page.answer} theme={theme} className="pt-16 lg:pt-20" />
+      )}
 
       {/* Proof strip, the numbers used to sit two thirds down the page. */}
       <section className="px-[var(--edge)] pt-16 lg:pt-20">
@@ -290,6 +297,7 @@ export function StandardPageTemplate({
         </ol>
       </section>
 
+      {page.caseLink && <CaseSection caseLink={page.caseLink} theme={theme} />}
       {page.rollout && page.rollout.length > 0 && (
         <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">

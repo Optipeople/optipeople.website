@@ -115,6 +115,9 @@
     "typicalResults": "Typiske resultater",
     "relatedFeatures": "Andre relevante funktioner",
     "goDeeper": "Gå i dybden"
+,
+    "customerCase": "Kundecase",
+    "readCase": "Læs casen"
   },
   "notFound": {
     "title": "Siden blev ikke fundet",

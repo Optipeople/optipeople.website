@@ -84,7 +84,7 @@ De fleste starter med OEE og tager TEEP med, når spørgsmålet bliver kapacitet
 
 ## Hvordan følger I OEE i praksis?
 
-Alle tre tal kræver, at I kender den rigtige køretid og årsagen til hvert eneste stop. [OptiPeoples OEE-modul](/da/modules/production) henter de data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen.
+Alle tre tal kræver, at I kender den rigtige køretid og årsagen til hvert eneste stop. [OptiPeoples OEE-modul](/da/modules/production) henter de data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Operatørerne registrerer [stopårsagerne](/da/features/stop-cause-registration) ved maskinen.
 
 ## Ofte stillede spørgsmål
 

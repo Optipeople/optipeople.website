@@ -21,7 +21,7 @@ Konklusionen er, at arbejdet med bæredygtighed skal hænge sammen med virksomhe
 
 Digital transformation og lavere CO2-udledning hænger direkte sammen.
 
-Når I måler energiforbruget, kan I bruge tallene til at:
+Når I måler energiforbruget, for eksempel med [energiovervågning i produktionen](/da/modules/energy), kan I bruge tallene til at:
 
 - se, hvad I bruger i dag
 - finde ud af, hvor der er noget at hente

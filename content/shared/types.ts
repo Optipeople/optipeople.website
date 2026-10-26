@@ -30,6 +30,24 @@ export type RelatedLink = {
   href: string
 }
 
+/**
+ * The buyer-search block: a short answer to "what is X" that sits right under
+ * the hero, so a search snippet or an AI answer can quote it whole. Keep the
+ * body to 40 to 60 words.
+ */
+export type AnswerBlock = {
+  question: string
+  body: string
+}
+
+/** A customer case the page points to, a post under /blog. */
+export type CaseLink = {
+  customer: string
+  title: string
+  body: string
+  href: string
+}
+
 /** "Standard" marketing page, modules, services, solutions. */
 export type StandardPage = {
   metaTitle: string
@@ -74,6 +92,10 @@ export type StandardPage = {
   steps: Step[]
   faq?: PageFaq
   darkHero?: boolean
+  /** Answer-first block under the hero. See AnswerBlock. */
+  answer?: AnswerBlock
+  /** A customer case, shown after the capabilities. */
+  caseLink?: CaseLink
 }
 
 /**
@@ -114,6 +136,10 @@ export type FeaturePage = {
   metrics: Metric[]
   related: RelatedLink[]
   faq?: PageFaq
+  /** Answer-first block under the hero. See AnswerBlock. */
+  answer?: AnswerBlock
+  /** A customer case, shown after the capabilities. */
+  caseLink?: CaseLink
 }
 
 /** Simple landing / index page, eyebrow, headline, body, link grid. */

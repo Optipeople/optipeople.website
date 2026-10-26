@@ -99,7 +99,7 @@ Når OEE stiger, får I kapacitet, I allerede ejer. Før I sætter flere skift p
 
 OEE gør ikke produktionen bedre af sig selv. Virkningen er, at et bredt problem bliver til tre konkrete: i stedet for at spørge, hvorfor fabrikken underpræsterer, kan I spørge, om det er tilgængeligheden, ydelsen eller kvaliteten. Hver af dem peger på en gruppe af de seks store tab:
 
-- **Tab i tilgængelighed** er uplanlagt nedetid og planlagt nedetid som opstart og omstilling. Bedre forebyggende eller forudsigende vedligehold, bedre registrering af nedetid og hurtigere omstillinger mindsker dem.
+- **Tab i tilgængelighed** er uplanlagt nedetid og planlagt nedetid som opstart og omstilling. Bedre forebyggende eller forudsigende vedligehold, bedre [stopregistrering](/da/features/stop-cause-registration) og hurtigere omstillinger mindsker dem.
 - **Tab i ydelse** er småstop og nedsat hastighed. Oplæring af operatører, opfølgning på tilbagevendende opbremsninger og klare standardprocedurer tager fat i dem.
 - **Tab i kvalitet** er kassation, omarbejde og opstartsspild. Følg fejlmønstre, skift slidte værktøjer, og hold processen ens, så falder de.
 

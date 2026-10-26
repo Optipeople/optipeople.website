@@ -3,7 +3,7 @@ title: "Se, hvad hvert emne koster i strøm: kWh per produceret enhed (v50)"
 description: "Se, hvor meget strøm der går til hvert emne. Brug kWh per enhed til at producere, når strømmen er billig, slukke det, der står stille, og spare omstillinger."
 ---
 
-Med OptiPeople Data Platform kan I følge energiforbruget helt ned i detaljen. Detaljerne er fine nok til, at I kan bruge dem, når der skal træffes beslutninger i produktionen.
+Med [energiovervågning i produktionen](/da/modules/energy) fra OptiPeople Data Platform kan I følge energiforbruget helt ned i detaljen. Detaljerne er fine nok til, at I kan bruge dem, når der skal træffes beslutninger i produktionen.
 
 Uanset hvor hurtigt maskinen kører, kan platformen vise, hvor meget strøm der går til hvert emne. Så har I et bedre grundlag for at optimere både produktionen og energiforbruget.
 

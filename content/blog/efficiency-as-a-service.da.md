@@ -76,4 +76,4 @@ Så kan I se produceret mængde, hastighed og kvalitet samlet ét sted.
 
 ## Den bærende idé
 
-OptiPeople Data Platform er ikke bare en enkelt softwarefunktion. Det er en løbende service: et system af moduler, der hjælper jer med at træffe bedre beslutninger i produktionen, uanset hvilken slags proces det drejer sig om.
+OptiPeople Data Platform er ikke bare en enkelt softwarefunktion. Det er en løbende service: [et modulært MES-system](/da/modules/mes), der hjælper jer med at træffe bedre beslutninger i produktionen, uanset hvilken slags proces det drejer sig om.

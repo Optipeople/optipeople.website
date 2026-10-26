@@ -67,7 +67,7 @@ Værktøjerne falder i tre grupper, der virker bedst sammen: sensorer, der opdag
 - **Termografi** bruger infrarøde data til at vise unormal varme, før en del går i stykker.
 - **Olieanalyse** undersøger smøreolien og de slidpartikler, der er i den.
 
-**Overvågnings- og analysesystemer** samler sensordata, viser udviklingen, sammenligner over tid og melder afvigelser fra normal drift.
+**Overvågnings- og analysesystemer** samler sensordata, viser udviklingen, sammenligner over tid og melder afvigelser fra normal drift. Det er det, [maskinovervågning](/da/modules/iot) går ud på.
 
 **Værktøjer til vedligeholdsstyring** som CMMS, planlægning og arbejdsordrer gør en alarm til en opgave med en ansvarlig. Uden dem ændrer selv god indsigt ingenting.
 

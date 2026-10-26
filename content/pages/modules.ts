@@ -121,11 +121,11 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "OEE-måling og OEE-system til produktionen | OptiPeople",
+        metaTitle: "OEE-system og OEE-måling til produktionen | OptiPeople",
         metaDescription:
-          "Mål OEE direkte fra maskinerne. Se stop, nedetid og tab for hvert skift og hver linje, mens det sker, uden håndskrevne lister og regneark.",
+          "OEE-software, der måler direkte på maskinerne. Se tilgængelighed, ydelse, kvalitet og stopårsager for hvert skift, mens det sker. Uden regneark.",
         eyebrow: "OEE-modul",
-        heroTitle: "Mål OEE, og se, hvor tiden går tabt",
+        heroTitle: "Et OEE-system, der viser, hvor tiden går tabt",
         heroBody:
           "Følg OEE, mens skiftet kører, og se præcis, hvor tiden forsvinder. Så skal I ikke gætte længere.",
         primaryLabel: "Book en demo",
@@ -181,6 +181,51 @@ const modules: LocalizedPage<StandardPage>[] = [
               "Brug tallene til at rette ét sted ad gangen, og mål bagefter, om det virkede.",
           },
         ],
+        answer: {
+          question: "Hvad er et OEE-system?",
+          body: "Et OEE-system måler, hvor meget af den planlagte produktionstid der bliver til gode emner. Det samler tilgængelighed, ydelse og kvalitet i ét tal, så I kan se, om tiden forsvinder i stop, langsom kørsel eller kassation. OptiPeople Data Platform henter maskinstatus og emnetællere direkte fra maskinerne, og operatøren registrerer stopårsagen ved maskinen.",
+        },
+        caseLink: {
+          customer: "Dansk Træemballage",
+          title: "5% højere OEE på tre måneder",
+          body: "Dansk Træemballage satte OptiPeople Data Platform på én linje. Operatørerne følger oppetiden live på en tablet, og linjen kommer hurtigere i gang igen efter et stop.",
+          href: "/blog/dansk-traeemballage-boosts-oee-by-5-in-3-months-with-opticloud",
+        },
+        faq: {
+          title: "Spørgsmål om OEE-systemet",
+          items: [
+            {
+              question: "Hvordan måler I OEE på ældre maskiner?",
+              answer:
+                "Nyere maskiner læser vi over de protokoller, styringen taler i forvejen. På ældre maskiner, hvor der ikke er noget at læse fra, sætter vi sensorer på og måler signalet direkte. Alderen afgør ikke, om en maskine kan måles.",
+            },
+            {
+              question: "Skal vi have en PLC for at måle OEE?",
+              answer:
+                "Nej. Har maskinen en PLC, kan den sende maskinstatus og emnetællere direkte til platformen, for eksempel over MQTT. Har den ikke, måler en sensor signalet i stedet.",
+            },
+            {
+              question: "Hvordan bliver OEE regnet ud?",
+              answer:
+                "OEE er tilgængelighed x ydelse x kvalitet. Tilgængelighed er, hvor meget af den planlagte tid maskinen kørte. Ydelse er, hvor hurtigt den kørte i forhold til den hastighed, den skal køre med, og kvalitet er andelen af gode emner. Hver del bliver målt mod de mål, I har sat for maskinen.",
+            },
+            {
+              question: "Hvem registrerer stopårsagerne?",
+              answer:
+                "Operatøren gør, på panelet ved maskinen. Så står der ikke bare, at maskinen stod stille, men at den stod stille på grund af for eksempel et værktøjsskift. OEE-rapporten viser bagefter, hvilke stopårsager der koster mest tid.",
+            },
+            {
+              question: "Er en emnetæller ikke nok?",
+              answer:
+                "En emnetæller viser, om maskinen kører, og hvor mange emner den laver. Men en maskine kan køre og stadig producere for langsomt. OEE tager ydelse og kvalitet med, så I ser, om maskinen producerer effektivt, og ikke kun om den kører.",
+            },
+            {
+              question: "Hvor lang tid tager det at komme i gang?",
+              answer:
+                "De fleste starter med én linje. Vi kobler os på, uden at produktionen skal stå stille. Når linjen er koblet på, ser I med det samme, hvor meget den kørte, hvornår den stoppede, og hvor lang tid omstillingerne tog.",
+            },
+          ],
+        },
       },
     },
   },
@@ -590,9 +635,9 @@ const modules: LocalizedPage<StandardPage>[] = [
       da: {
         metaTitle: "Energiovervågning i produktionen | OptiPeople",
         metaDescription:
-          "Se energiforbruget pr. maskine, pr. ordre og pr. produkt, og hold det op mod det, I producerer. Så kan I se, hvor strømmen går til spilde.",
+          "Energiovervågning i produktionen: se kWh pr. maskine, pr. ordre og pr. produkt, holdt op mod det, I producerer. Så ser I, hvor strømmen går til spilde.",
         eyebrow: "EMS-modul",
-        heroTitle: "Skær spildet væk, ikke kvaliteten",
+        heroTitle: "Energiovervågning, der viser, hvad hvert emne koster i strøm",
         heroBody:
           "Mål energien løbende, og hold forbruget op mod det, I producerer: pr. produkt, pr. maskine og pr. skift.",
         primaryLabel: "Book en demo",
@@ -649,6 +694,51 @@ const modules: LocalizedPage<StandardPage>[] = [
               "Find spildet, skriv forbedringen ned, og følg med i, om den holder.",
           },
         ],
+        answer: {
+          question: "Hvad er energiovervågning i produktionen?",
+          body: "Energiovervågning i produktionen betyder, at I måler strømforbruget pr. maskine og holder det op mod det, maskinen har produceret. Så ser I ikke kun én samlet regning, men kWh pr. emne, pr. ordre og pr. skift. OptiPeople Data Platform lægger energidata sammen med maskinstatus, ordrer og produktionstal, så I kan se, hvad der trækker strømmen.",
+        },
+        caseLink: {
+          customer: "Steel Products",
+          title: "Strømforbruget pr. produceret emne",
+          body: "Steel Products henter strømforbruget fra de tilkoblede maskiner. Operatørerne vælger, hvilket emne der kører, og registrerer stopårsager, så energien kan holdes op mod hvert emne.",
+          href: "/blog/optimizing-machine-performance-and-power-consumption-with-opticloud-at-steel-products",
+        },
+        faq: {
+          title: "Spørgsmål om energiovervågning",
+          items: [
+            {
+              question: "Kan vi se energi pr. produceret enhed?",
+              answer:
+                "Ja. Platformen viser, hvor meget strøm der går til hvert emne, uanset hvor hurtigt maskinen kører. I kan følge kWh pr. produkt, pr. ordre og pr. linje over tid.",
+            },
+            {
+              question: "Hvor kommer energitallene fra?",
+              answer:
+                "Vi kobler energimålere, sensorer og de data, I allerede har, på OptiPeople Data Platform. Forbruget bliver så holdt op mod produkter, ordrer og maskinstatus.",
+            },
+            {
+              question: "Kan vi lægge produktionen, når strømmen er billigst?",
+              answer:
+                "Ja. Platformen kan hente kWh-priserne ind op til 24 timer frem. Sammen med data fra produktionsordrerne kan I se, hvilke ordrer der bruger mest energi, og lægge de energitunge ordrer, når strømmen er billigere.",
+            },
+            {
+              question: "Kan det, der står stille, slukke af sig selv?",
+              answer:
+                "Ja. OptiPeople Data Platform kan styre ting på både fabriks- og maskinniveau, for eksempel lys, varme, opladning af trucks og nedlukning af maskiner. Når operatørerne går til pause eller har fri, kan det, der ikke er kritisk, slukke af sig selv.",
+            },
+            {
+              question: "Får vi besked, når forbruget stikker ud?",
+              answer:
+                "Ja. I får besked, når forbruget ikke ligner det normale, før det når at blive en dyr vane.",
+            },
+            {
+              question: "Kan vi følge andet end strøm?",
+              answer:
+                "Ja. Ud over energi kan I følge temperatur, vibration, flow og andre signaler over tid. De ligger i det samme billede som OEE og stop.",
+            },
+          ],
+        },
       },
     },
   },
@@ -738,11 +828,11 @@ const modules: LocalizedPage<StandardPage>[] = [
         darkHero: true,
       },
       da: {
-        metaTitle: "Maskinovervågning og IoT i produktionen | OptiPeople",
+        metaTitle: "Maskinovervågning og produktionsovervågning | OptiPeople",
         metaDescription:
-          "Kobl de maskiner, PLC'er og systemer på, I allerede har, også de gamle. Nye sensorer kommer kun op dér, hvor der ikke er noget at læse fra.",
+          "Maskinovervågning på nye og gamle maskiner. Vi kobler de PLC'er og systemer på, I har, og sætter kun sensorer op, hvor der ikke er noget at læse fra.",
         eyebrow: "IoT-modul",
-        heroTitle: "Få data fra det, I allerede har",
+        heroTitle: "Maskinovervågning med det udstyr, I allerede har",
         heroBody:
           "De færreste starter fra nul. Der er styringer, sensorer, en historian og et system eller to, der allerede samler noget op. IoT-modulet samler det, der er, og sætter kun nyt op, hvor der ikke er noget at læse fra.",
         primaryLabel: "Book en demo",
@@ -804,6 +894,51 @@ const modules: LocalizedPage<StandardPage>[] = [
               "Data bliver til dashboards, rapporter, alarmer og automatik i de andre moduler: Planlægning, Ordrer, Kvalitet, OEE, EMS, Vedligehold, Dokumenter og AI-agenter.",
           },
         ],
+        answer: {
+          question: "Hvad er produktionsovervågning?",
+          body: "Produktionsovervågning betyder, at I kan se, hvordan maskinerne kører, mens det sker: om de kører eller står stille, hvor mange emner de laver, og hvorfor de stopper. Tallene kommer fra maskinerne, ikke fra håndskrevne lister. OptiPeople Data Platform læser fra de styringer og systemer, I har, og sætter kun sensorer op, hvor der ikke er noget at læse fra.",
+        },
+        caseLink: {
+          customer: "Glaseksperten",
+          title: "Op til 30% mere oppetid på én maskine",
+          body: "Glaseksperten ville have svar på et simpelt spørgsmål: Kører maskinen, eller gør den ikke? Da operatørerne kunne se oppetiden, steg den op til 30% på én maskine, uden at noget blev bygget om.",
+          href: "/blog/glaseksperten-up-to-30-percent-more-uptime-on-one-machine",
+        },
+        faq: {
+          title: "Spørgsmål om maskinovervågning",
+          items: [
+            {
+              question: "Kan I overvåge gamle maskiner?",
+              answer:
+                "Ja. Nyere styringer læser vi over de protokoller, maskinerne taler i forvejen. På de ældre maskiner, hvor der ikke er noget at læse fra, sætter vi sensorer på og måler signalet direkte. Alderen afgør ikke, om en maskine kan måles.",
+            },
+            {
+              question: "Skal vi have en PLC?",
+              answer:
+                "Nej. Har maskinen en PLC, læser vi fra den. Har den ikke, måler en sensor signalet direkte. Det samme gælder sensorer og dataloggere fra tidligere projekter: dem læser vi fra i stedet for at sætte nye op ved siden af.",
+            },
+            {
+              question: "Hvilke protokoller kan I koble på?",
+              answer:
+                "OPC-UA, Modbus, MQTT, IO-Link, REST, filer og sensorsæt. Har I en historian, SCADA eller maskinleverandørens portal, bliver den koblet på som en kilde og ikke skiftet ud.",
+            },
+            {
+              question: "Skal produktionen stå stille, mens I kobler på?",
+              answer:
+                "Nej. Vi kobler os på de maskiner og PLC'er, I har, uden at produktionen skal stå stille. Data bliver sendt krypteret og kontrolleret undervejs.",
+            },
+            {
+              question: "Hvor hurtigt kommer tallene frem?",
+              answer:
+                "Der går under et minut, fra det sker på maskinen, til det står på skærmen. Så kan I reagere, mens skiftet stadig kører.",
+            },
+            {
+              question: "Kan vi få data ud i vores egne systemer?",
+              answer:
+                "Ja. Alt det, platformen samler op, kan I hente gennem API'et eller få sendt ud over MQTT. Så kan jeres produktionsdata også fodre Power BI, et datawarehouse eller jeres egne systemer.",
+            },
+          ],
+        },
       },
     },
   },
@@ -1294,6 +1429,40 @@ const modules: LocalizedPage<StandardPage>[] = [
               "Uanset hvor mange moduler der ender med at køre, er der én registrering pr. maskine eller arbejdsstation, ordre, batch og skift.",
           },
         ],
+        answer: {
+          question: "Hvad er et MES-system?",
+          body: "Et MES-system (Manufacturing Execution System) styrer og registrerer det, der sker på gulvet: hvilke ordrer der kører på hvilken maskine, hvor mange emner der blev lavet, og hvorfor maskinen stoppede. Det sidder mellem ERP og maskinerne. OptiPeople Data Platform er et modulært MES, hvor I starter med ét modul og slår de næste til på de samme data.",
+        },
+        faq: {
+          title: "Spørgsmål om MES-systemet",
+          items: [
+            {
+              question: "Hvad er forskellen på MES og ERP?",
+              answer:
+                "ERP holder styr på økonomi, salg og ordrer for hele virksomheden. MES styrer det, der sker på gulvet: hvilken ordre der kører på hvilken maskine, hvor mange der blev lavet, og hvorfor maskinen stoppede. Et økonomi-ERP er bygget til månedsafslutning, ikke til en operatør ved maskinen klokken 05.40.",
+            },
+            {
+              question: "Skal vi have et ERP for at bruge MES-systemet?",
+              answer:
+                "Nej. Ordremodulet kan selv holde ordrerne. Ligger de allerede i et ERP, kobler vi os på begge veje.",
+            },
+            {
+              question: "Skal vi tage hele MES-systemet på én gang?",
+              answer:
+                "Nej. I starter med det modul, der svarer på det spørgsmål, I har nu, for eksempel ordrer, planen, maskindata eller OEE. Det næste modul starter på de data, I allerede samler op, så det kommer med historik bag sig.",
+            },
+            {
+              question: "Er det et stort IT-projekt?",
+              answer:
+                "Nej. OptiPeople Data Platform kører i skyen, og I bruger den gennem en browser. Fordi I bygger den op lidt ad gangen, skal der ikke være et stort projekt, der er færdigt på én gang.",
+            },
+            {
+              question: "Hvilke systemer kan MES-systemet kobles på?",
+              answer:
+                "Typisk ERP, SCADA og PLC'er. Har I en historian eller maskinleverandørens portal, bliver den koblet på som en kilde. Alt, platformen samler op, kan I hente gennem API'et eller få sendt ud over MQTT.",
+            },
+          ],
+        },
       },
     },
   },

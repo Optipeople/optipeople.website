@@ -107,7 +107,7 @@ Nej. 100% er den perfekte produktion: kun gode emner, i fuld fart, uden stop. F�
 
 ## Hvordan regner I OEE ud automatisk?
 
-At regne OEE ud i hånden fra skiftsedler tager tid og giver som regel et for pænt tal, fordi de korte stop og den langsomme kørsel ikke bliver skrevet ned. [OptiPeoples OEE-modul](/da/modules/production) henter køretid og antal direkte fra maskinerne og regner tilgængelighed, ydelse, kvalitet og OEE ud live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen, så I kan se, hvad der tog tiden, og ikke kun tallet.
+At regne OEE ud i hånden fra skiftsedler tager tid og giver som regel et for pænt tal, fordi de korte stop og den langsomme kørsel ikke bliver skrevet ned. [OptiPeoples OEE-modul](/da/modules/production) henter køretid og antal direkte fra maskinerne og regner tilgængelighed, ydelse, kvalitet og OEE ud live pr. maskine, linje og skift. Med [stopregistrering ved maskinen](/da/features/stop-cause-registration) sætter operatørerne årsagen på hvert stop, så I kan se, hvad der tog tiden, og ikke kun tallet.
 
 Når I har tallet, viser [guiden til at hæve OEE](/da/blog/how-do-i-improve-my-oee-with-examples), hvor I skal starte.
 

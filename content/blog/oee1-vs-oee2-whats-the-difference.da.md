@@ -82,7 +82,7 @@ For at regne OEE2 rigtigt ud skal I vide:
 
 ## Hvordan måler man OEE2 automatisk?
 
-OEE2 er aldrig bedre end de køretider og stop, det bygger på. [OptiPeoples OEE-modul](/da/modules/production) henter de data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Operatørerne registrerer stopårsagen ved maskinen, så alle kan se, hvad der tog tiden, og ikke kun tallet.
+OEE2 er aldrig bedre end de køretider og stop, det bygger på. [OptiPeoples OEE-modul](/da/modules/production) henter de data direkte fra maskinerne og viser tilgængelighed, ydelse, kvalitet og OEE live pr. maskine, linje og skift. Med [stopregistrering](/da/features/stop-cause-registration) ved maskinen sætter operatørerne årsagen på hvert stop, så alle kan se, hvad der tog tiden, og ikke kun tallet.
 
 ## Ofte stillede spørgsmål
 

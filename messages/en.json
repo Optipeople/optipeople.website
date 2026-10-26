@@ -115,6 +115,9 @@
     "typicalResults": "Typical results",
     "relatedFeatures": "Other relevant features",
     "goDeeper": "Go deeper"
+,
+    "customerCase": "Customer case",
+    "readCase": "Read the case"
   },
   "notFound": {
     "title": "Page not found",

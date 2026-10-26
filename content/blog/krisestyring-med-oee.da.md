@@ -21,7 +21,7 @@ Under de forhold bliver live data fra produktionen meget mere værd.
 
 ## Sådan hjælper OEE jer med at handle hurtigere
 
-Live overvågning giver flere konkrete fordele:
+Live [produktionsovervågning](/da/modules/iot) og [OEE-måling](/da/modules/production) giver flere konkrete fordele:
 
 - I kan følge produktionen uden hele tiden at være fysisk til stede på fabrikken
 - I får mindre spild, så det bliver billigere at producere

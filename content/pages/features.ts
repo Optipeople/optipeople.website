@@ -810,15 +810,15 @@ const features: LocalizedPage<FeaturePage>[] = [
         ],
       },
       da: {
-        metaTitle: "Stopårsager | OptiPeople",
+        metaTitle: "Stopregistrering ved maskinen | OptiPeople",
         metaDescription:
-          "Få styr på nedetiden ude ved maskinen eller arbejdsstationen. Operatøren registrerer stoppet med det samme, så I får tal, I kan bruge.",
+          "Stopregistrering, der passer til gulvet: maskinen melder stoppet, og operatøren vælger stopårsagen ved maskinen. Så ved I, hvor nedetiden går hen.",
         parentLabel: "OEE",
         parentHref: "/modules/production",
-        eyebrow: "Stopårsager",
-        heroTitle: "Få styr på nedetiden ude ved maskinen eller arbejdsstationen",
+        eyebrow: "Stopregistrering",
+        heroTitle: "Stopregistrering, der viser, hvor nedetiden går hen",
         heroBody:
-          "Operatøren registrerer stoppet direkte på maskinen eller arbejdsstationen, mens det stadig står klart, hvad der skete. Så får I tal, der er til at stole på og til at gøre noget ved.",
+          "Maskinen melder selv stoppet. Operatøren vælger årsagen på panelet ved maskinen eller arbejdsstationen, mens det stadig står klart, hvad der skete. Så får I tal, der er til at stole på og til at gøre noget ved.",
         heroImage: "/images/Stop-Screen-Select.png",
         heroImageAlt: "Skærm til valg af stopårsag",
         valueTitle: "Det, I ikke kan se, kan I ikke rette",
@@ -877,6 +877,46 @@ const features: LocalizedPage<FeaturePage>[] = [
             href: "/features/analysis-and-reporting",
           },
         ],
+        answer: {
+          question: "Hvad er stopregistrering?",
+          body: "Stopregistrering betyder, at hvert stop på en maskine eller linje bliver registreret med tidspunkt, varighed og årsag. Så kan I se, hvad nedetiden går til, og rette de største årsager først. I OptiPeople Data Platform melder maskinen selv stoppet, og operatøren vælger stopårsagen fra en fast liste på panelet ved maskinen.",
+        },
+        caseLink: {
+          customer: "Fiberline Composites",
+          title: "41% færre unødvendige stop",
+          body: "Fiberline Composites ville vide, hvornår og hvorfor maskinerne stoppede. Nu kommer data direkte fra maskinernes software, og stopårsagerne bliver registreret. Det gav 41% færre unødvendige stop, og hvert stop varer i snit 6% kortere.",
+          href: "/blog/konkurrencekraft-og-tempo-pa-digital-transformation",
+        },
+        faq: {
+          title: "Spørgsmål om stopregistrering",
+          items: [
+            {
+              question: "Hvad er forskellen på manuel og automatisk stopregistrering?",
+              answer:
+                "Ved manuel registrering skriver nogen stoppet på en skiftseddel bagefter, og de korte stop kommer sjældent med. Ved automatisk registrering kommer stoppet direkte fra maskinen, med tidspunkt og varighed. I OptiPeople Data Platform melder maskinen selv stoppet, og operatøren sætter årsagen på. Kan PLC'en selv sende årsagen med, kommer stoppet ind med årsagen sat på i forvejen.",
+            },
+            {
+              question: "Hvem registrerer stopårsagen?",
+              answer:
+                "Det gør operatøren ved maskinen, for det er den, der ved, hvad der skete. Panelet bliver rødt, når maskinen stopper, og operatøren vælger årsagen med det samme. Panelet er en side i platformen, så det kan køre på en skærm eller en tablet ved maskinen.",
+            },
+            {
+              question: "Hvordan bliver stopårsagerne sat op?",
+              answer:
+                "Hver maskine eller arbejdsstation får sin egen faste liste, fordi maskiner stopper af forskellige grunde. Typiske årsager er omstilling, værktøjsskift, venter på materiale og fejl. En fast liste giver tal, I kan regne på, i stedet for fritekst, ingen kan tyde bagefter.",
+            },
+            {
+              question: "Hvad kan vi bruge tallene til?",
+              answer:
+                "Hvert stop lander på skiftets tidslinje og i OEE-rapporten, hvor I ser planlagte og uplanlagte stop, antal stop og de største stopårsager. Et Pareto-diagram viser, hvilke få årsager der tager det meste af tiden. Ret den største, og tjek i næste uges tal, at den er væk.",
+            },
+            {
+              question: "Hvad med de korte stop?",
+              answer:
+                "Et stop på et minut eller to bliver sjældent skrevet ned. Så gemmer det sig i ydelsen, og ingen ved, hvad der skete. Når stoppene kommer direkte fra maskinen, bliver de korte stop også talt med, og I kan se, hvor tit de sker.",
+            },
+          ],
+        },
       },
     },
   },

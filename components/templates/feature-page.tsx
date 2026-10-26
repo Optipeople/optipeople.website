@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation"
 import { RoutesVisual } from "@/components/module-mockups"
 import { FramedImage } from "@/components/framed-image"
 import { PageFaqSection } from "@/components/page-faq"
+import { AnswerSection, CaseSection } from "@/components/buyer-answer"
 import type { FeaturePage } from "@/content/shared/types"
 import { getPageTheme } from "@/lib/page-theme"
 
@@ -18,7 +19,9 @@ import { getPageTheme } from "@/lib/page-theme"
  * bordered cards floating on white. Each slug carries its own colour pair
  * (see lib/page-theme.ts) so the eight feature pages stay distinguishable.
  *
- * Section flow: hero, proof strip, value, capabilities, showcase, related.
+ * Section flow: hero, answer, proof strip, value, capabilities, case,
+ * showcase, related. The answer and case render only when the page has
+ * them (see components/buyer-answer.tsx).
  * Screenshots lead; copy supports. The conversion CTA is appended globally by
  * app/[locale]/layout.tsx, so the template deliberately ends on related links.
  */
@@ -97,6 +100,10 @@ export function FeaturePageTemplate({
           </div>
         </div>
       </section>
+
+      {page.answer && (
+        <AnswerSection answer={page.answer} theme={theme} className="pb-16 lg:pb-20" />
+      )}
 
       {/* Proof strip, numbers move up out of the page tail so the visitor
           meets the evidence while the claim is still on screen. */}
@@ -195,6 +202,8 @@ export function FeaturePageTemplate({
           ))}
         </div>
       </section>
+
+      {page.caseLink && <CaseSection caseLink={page.caseLink} theme={theme} />}
 
       {/* Showcase, full-bleed deep surface, the one hard rhythm break. The
           panel is either a screenshot or a code-built graphic. */}

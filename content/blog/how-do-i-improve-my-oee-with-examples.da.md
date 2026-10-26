@@ -43,7 +43,7 @@ Del OEE op i de tre dele, og kig på hullerne, ikke på procenterne:
 
 ## Hvordan hjælper stopårsager med at hæve OEE?
 
-En stopårsag gør tabt tid til noget, I kan gøre noget ved. Når operatørerne registrerer, hvorfor maskinen stoppede, viser et Pareto-diagram over ugen, hvilke få årsager der tager det meste af tiden. Typisk står tre eller fire årsager for mere end halvdelen af al stoptid.
+En stopårsag gør tabt tid til noget, I kan gøre noget ved. Når operatørerne [registrerer stopårsagen](/da/features/stop-cause-registration) hver gang, maskinen stopper, viser et Pareto-diagram over ugen, hvilke få årsager der tager det meste af tiden. Typisk står tre eller fire årsager for mere end halvdelen af al stoptid.
 
 Ret den største årsag, tjek i næste uges tal, at den er væk, og tag så den næste. Uden stopårsager diskuterer folk, hvad problemet er. Med dem siger tallene det.
 
