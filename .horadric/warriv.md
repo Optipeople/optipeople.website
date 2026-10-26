@@ -9,6 +9,7 @@
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 Round as the human left: four quests blocked on the human or on dates (week 1 check, transfer, outreach, operator panel retake), SEO week 2026-11-02 and week 4 check queued, so log not dry. No check stone for the 21 unshipped quests; nothing filed or cast.
 - 2026-10-26 Round after the DNS verify quest landed. Transfer quest blocked on the Wannafind EPP code and the USD 10 yes; both the human's, noted and left blocked. Log not dry (SEO week 2026-11-02 queued); nothing filed or cast.
 - 2026-10-26 Round after the AI-readable site quest landed (69a45ec, 2b2d72d). Noted on the operator panel retake to work from main, since its base branch landed and was deleted. Log not dry (SEO week 2026-11-02 queued, checks waiting on dates); nothing filed or cast.
 - 2026-10-26 Round after the captures fix-up landed (00f3a4b); replays and AI-readable site quests also done, so both Open lines on them are settled. Operator panel retake in progress, SEO week 2026-11-02 queued, so log not dry. No check stone; nothing filed or cast.
