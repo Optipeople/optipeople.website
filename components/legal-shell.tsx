@@ -42,7 +42,7 @@ export function LegalShell({
       </section>
 
       <section className="pb-16 sm:pb-20 lg:pb-28 px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl prose prose-slate prose-headings:font-medium prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-p:leading-relaxed prose-a:text-foreground">
+        <div className="mx-auto max-w-3xl prose prose-slate prose-code:before:content-none prose-code:after:content-none prose-headings:font-medium prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-p:leading-relaxed prose-a:text-foreground">
           {children}
         </div>
       </section>

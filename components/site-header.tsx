@@ -634,14 +634,14 @@ function LanguageSwitcher() {
 
   return (
     <div
-      className="flex items-center gap-1.5 text-xs font-medium"
+      className="flex items-center gap-0.5 text-xs font-medium"
       aria-label={t("languageLabel")}
     >
       {(["en", "da"] as const).map((language, index) => {
         const isActive = locale === language
 
         return (
-          <span key={language} className="flex items-center gap-1.5">
+          <span key={language} className="flex items-center gap-0.5">
             {index > 0 && (
               <span className="text-border" aria-hidden="true">
                 /
@@ -651,7 +651,7 @@ function LanguageSwitcher() {
               href={pathname}
               locale={language}
               aria-current={isActive ? "page" : undefined}
-              className={`flex h-7 cursor-pointer items-center rounded px-1 transition-colors ${FOCUS_RING} ${
+              className={`flex h-7 min-w-8 cursor-pointer items-center justify-center rounded px-1.5 transition-colors ${FOCUS_RING} ${
                 isActive
                   ? "text-foreground"
                   : "text-foreground/70 hover:text-foreground"

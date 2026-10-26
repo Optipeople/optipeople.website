@@ -67,6 +67,13 @@ export function useTurnstile() {
             sitekey: SITE_KEY,
             action: "turnstile-spin-v1",
             appearance: "interaction-only",
+            // The normal widget is a fixed 300px and pokes out of the form
+            // cards on a 375px phone; compact (150px) fits any column. The
+            // container itself is hidden while empty, so measure its parent.
+            size:
+              (containerRef.current.parentElement?.clientWidth ?? 0) < 300
+                ? "compact"
+                : "flexible",
             "refresh-expired": "auto",
             callback: (value: string) => {
               token.current = value

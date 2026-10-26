@@ -98,7 +98,7 @@
     "successBody": "We'll get back to you within one business day."
   },
   "leadForm": {
-    "placeholder": "Enter your work email",
+    "placeholder": "Your work email",
     "submit": "Get started",
     "loading": "Sending…",
     "successTitle": "Thanks for reaching out",

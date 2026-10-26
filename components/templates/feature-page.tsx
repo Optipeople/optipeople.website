@@ -246,7 +246,16 @@ export function FeaturePageTemplate({
           </section>
         )}
 
-      {page.faq && <PageFaqSection faq={page.faq} />}
+      {page.faq && (
+        <PageFaqSection
+          faq={page.faq}
+          afterBand={Boolean(
+            page.showcaseTitle &&
+              page.showcaseBody &&
+              (page.showcaseImage || page.showcaseDrawn)
+          )}
+        />
+      )}
 
       {/* Related, hairline grid instead of detached bordered cards.
           The page closes here: the conversion CTA is rendered globally by

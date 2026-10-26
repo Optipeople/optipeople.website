@@ -84,7 +84,7 @@ export default async function TermsPage({ params }: Props) {
             (CVR 32883532). Vi er et dansk anpartsselskab, der udvikler software til
             industrien, blandt andet OptiPeople Data Platform. Du kan skrive til os
             på <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> eller ringe
-            på +45 23 74 47 05.
+            på <span className="whitespace-nowrap">+45 23 74 47 05</span>.
           </p>
           <h2>Brug af websitet og indholdet</h2>
           <p>
@@ -197,7 +197,7 @@ export default async function TermsPage({ params }: Props) {
             Har du spørgsmål til vilkårene, er du velkommen til at kontakte
             OptiPeople ApS, Sønderskovvej 17, 8362 Hørning, på{" "}
             <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> eller
-            +45 23 74 47 05.
+            <span className="whitespace-nowrap">+45 23 74 47 05</span>.
           </p>
         </>
       ) : (
@@ -218,7 +218,7 @@ export default async function TermsPage({ params }: Props) {
             develops software for industry, including the OptiPeople Data Platform.
             You can contact us at{" "}
             <a href="mailto:hi@optipeople.dk">hi@optipeople.dk</a> or
-            +45 23 74 47 05.
+            <span className="whitespace-nowrap">+45 23 74 47 05</span>.
           </p>
           <h2>Use of the website and content license</h2>
           <p>
@@ -336,7 +336,7 @@ export default async function TermsPage({ params }: Props) {
             If you have questions about these terms, you are welcome to contact
             OptiPeople ApS, Sønderskovvej 17, 8362 Hørning, Denmark, at{" "}
             <a href="mailto:hi@optipeople.dk">hi@optipeople.dk</a> or
-            +45 23 74 47 05.
+            <span className="whitespace-nowrap">+45 23 74 47 05</span>.
           </p>
         </>
       )}

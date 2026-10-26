@@ -124,7 +124,7 @@ export function MarkdownContent({ content }: { content: string }) {
           const isInline = !className
           if (isInline) {
             return (
-              <code className="bg-muted px-1.5 py-0.5 rounded text-sm">
+              <code className="bg-muted px-1.5 py-0.5 rounded text-sm box-decoration-clone before:content-none after:content-none">
                 {children}
               </code>
             )
@@ -132,17 +132,19 @@ export function MarkdownContent({ content }: { content: string }) {
           return <code className={className}>{children}</code>
         },
         table: ({ children }) => (
-          <div className="overflow-x-auto my-6">
-            <table className="min-w-full border-collapse">{children}</table>
+          <div className="scroll-cue-x my-6 overflow-x-auto">
+            <table className="my-0 min-w-full border-collapse text-[0.9375rem] sm:text-base">
+              {children}
+            </table>
           </div>
         ),
         th: ({ children }) => (
-          <th className="border border-border px-4 py-2 bg-muted text-left font-semibold">
+          <th className="min-w-[8.5rem] border border-border bg-muted px-3 py-2 text-left font-semibold sm:px-4">
             {children}
           </th>
         ),
         td: ({ children }) => (
-          <td className="border border-border px-4 py-2">{children}</td>
+          <td className="min-w-[8.5rem] border border-border px-3 py-2 sm:px-4">{children}</td>
         ),
         blockquote: ({ children }) => (
           <blockquote className="border-l-4 border-primary pl-4 italic my-6">

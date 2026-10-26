@@ -79,7 +79,7 @@ export default async function PrivacyPage({ params }: Props) {
             dataansvarlig for de personoplysninger, vi indsamler via dette website.
             Du kan skrive til os på{" "}
             <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a> eller ringe på
-            +45 23 74 47 05.
+            <span className="whitespace-nowrap">+45 23 74 47 05</span>.
           </p>
           <h2>Hvad vi indsamler, og hvorfor</h2>
           <p>
@@ -186,7 +186,7 @@ export default async function PrivacyPage({ params }: Props) {
             (CVR 32883532) is the data controller for personal data collected
             via this website. You can reach us at{" "}
             <a href="mailto:hi@optipeople.dk">hi@optipeople.dk</a> or
-            +45 23 74 47 05.
+            <span className="whitespace-nowrap">+45 23 74 47 05</span>.
           </p>
           <h2>What we collect and why</h2>
           <p>

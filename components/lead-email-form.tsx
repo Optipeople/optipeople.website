@@ -121,7 +121,7 @@ export function LeadEmailForm({
           />
         </div>
 
-        <div className="flex items-center gap-2 rounded-full border border-border/60 bg-white p-1.5 pl-5 shadow-sm transition-all duration-200 focus-within:border-[var(--green-system)] focus-within:ring-4 focus-within:ring-[var(--green-system)]/15">
+        <div className="flex items-center gap-2 rounded-full border border-border/60 bg-white p-1.5 pl-5 shadow-sm transition-all duration-200 max-[399px]:pl-4 focus-within:border-[var(--green-system)] focus-within:ring-4 focus-within:ring-[var(--green-system)]/15">
           <input
             name="email"
             type="email"
@@ -138,12 +138,12 @@ export function LeadEmailForm({
           <button
             type="submit"
             disabled={status === "loading"}
-            className="group inline-flex h-10 shrink-0 items-center gap-2 rounded-full bg-primary px-5 text-base font-semibold text-white transition-all hover:opacity-90 disabled:opacity-50"
+            className="group inline-flex h-10 shrink-0 items-center gap-2 rounded-full bg-primary px-4 text-base font-semibold min-[400px]:px-5 text-white transition-all hover:opacity-90 disabled:opacity-50"
           >
             {status === "loading" ? t("loading") : t("submit")}
             {status !== "loading" && (
               <ArrowRight
-                className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
+                className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 max-[399px]:hidden"
                 aria-hidden="true"
               />
             )}

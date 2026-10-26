@@ -587,3 +587,14 @@ html[data-consent] .consent-banner {
     display: none;
   }
 }
+
+/* Wide tables in articles scroll sideways inside their box on a phone. Shadows
+   at the cut edges say there is more: the background-coloured covers scroll
+   with the content (`local`) and hide a shadow once its edge is reached. */
+.scroll-cue-x {
+  background:
+    linear-gradient(to right, var(--background) 30%, transparent) left / 2.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--background) 30%, transparent) right / 2.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, rgb(0 0 0 / 0.14), transparent) left / 0.875rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, rgb(0 0 0 / 0.14), transparent) right / 0.875rem 100% no-repeat scroll;
+}
