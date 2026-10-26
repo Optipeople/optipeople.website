@@ -31,12 +31,15 @@ const daily = load("gsc-monthly") ?? []; // one row per day despite the name
 const pageDaily = load("gsc-page-date");
 const sources = load("ga-sources") ?? [];
 const landing = load("ga-landing-pages") ?? [];
+const recentQueries = load("gsc-query-page-28d");
+const targetsFile = "Docs/seo/targets.json";
 
 const out = [];
 const lastDay = daily.map((r) => r.date).sort().at(-1);
 out.push("# SEO report", "");
 out.push(`Generated ${new Date().toISOString().slice(0, 10)} from \`${dataDir}/\`. Search Console data runs to ${lastDay ?? "?"}.`, "");
 
+targetStatus();
 monthly();
 brandSplit();
 strikingDistance();
@@ -47,6 +50,27 @@ deadUrls();
 
 writeFileSync(outFile, out.join("\n"));
 console.log(`Wrote ${outFile}`);
+
+// Each target in Docs/seo/targets.json, measured over the last 28 days: an exact
+// query match (case-insensitive), limited to one country when the target names one.
+function targetStatus() {
+  out.push("## Targets, last 28 days", "");
+  if (!existsSync(targetsFile)) return out.push(`No ${targetsFile}.`, "");
+  if (!recentQueries) return out.push("No gsc-query-page-28d.json: run pull.mjs --pull again.", "");
+  const targets = JSON.parse(readFileSync(targetsFile, "utf8")).targets;
+  const rows = targets.map((t) => {
+    const hits = recentQueries.filter((r) => r.query.toLowerCase() === t.query.toLowerCase() && (!t.country || r.country === t.country));
+    const total = totals(hits);
+    const byPage = [...group(hits, (r) => new URL(r.page).pathname)].map(([p, rs]) => [p, sum(rs, "impressions")]).sort((a, b) => b[1] - a[1]);
+    const ranking = byPage[0]?.[0] ?? "";
+    // Old WordPress paths count when their last segment matches, e.g. /<slug>/ for /blog/<slug>.
+    const last = (p) => p.split("/").filter(Boolean).at(-1) ?? "";
+    const onTarget = !t.page || !ranking || last(ranking) === last(t.page);
+    return [t.query, t.country ?? "all", fmt(total.impressions), fmt(total.clicks), pos(total.position) || "not seen", t.goal, onTarget ? ranking : `${ranking} (want ${t.page})`];
+  });
+  table(["Query", "Country", "Impressions", "Clicks", "Position", "Goal", "Ranking page"], rows);
+  out.push("Not seen means Google showed no page of ours for the query in 28 days.", "");
+}
 
 function monthly() {
   out.push("## Monthly clicks and impressions", "");
@@ -178,6 +202,7 @@ function siteRoutes() {
     blog: blogSlugs,
     features: () => slugsIn("content/pages/features.ts"),
     modules: () => slugsIn("content/pages/modules.ts"),
+    personas: () => slugsIn("content/personas.ts"),
     services: () => slugsIn("content/pages/services.ts"),
     solutions: () => slugsIn("content/pages/solutions.ts"),
   };

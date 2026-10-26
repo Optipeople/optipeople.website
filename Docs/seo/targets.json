@@ -1,0 +1,26 @@
+{
+  "about": "Queries the growth loop tracks. report.mjs measures each over the last 28 days. country is a Search Console ISO-3 code (dnk) or absent for all countries. page is the path we want to rank. See Docs/seo/targets.md for why each is here.",
+  "targets": [
+    { "query": "oee system", "country": "dnk", "page": "/da/modules/production", "goal": "top 5" },
+    { "query": "oee software", "country": "dnk", "page": "/da/modules/production", "goal": "top 5" },
+    { "query": "oee måling", "country": "dnk", "page": "/da/modules/production", "goal": "top 3" },
+    { "query": "oee beregning", "page": "/da/blog/how-to-calculate-oee-for-manufacturing-and-maintenance", "goal": "top 3" },
+    { "query": "produktionsovervågning", "country": "dnk", "page": "/da/modules/iot", "goal": "top 3" },
+    { "query": "maskinovervågning", "country": "dnk", "page": "/da/modules/iot", "goal": "top 3" },
+    { "query": "stopregistrering", "country": "dnk", "page": "/da/features/stop-cause-registration", "goal": "top 3" },
+    { "query": "mes system", "country": "dnk", "page": "/da/modules/mes", "goal": "top 5" },
+    { "query": "energiovervågning", "country": "dnk", "page": "/da/modules/energy", "goal": "top 5" },
+    { "query": "cloud mes", "page": "/modules/mes", "goal": "top 5" },
+    { "query": "cloud based manufacturing execution system", "page": "/modules/mes", "goal": "top 5" },
+    { "query": "cloud mes software", "page": "/modules/mes", "goal": "top 5" },
+    { "query": "saas mes", "page": "/modules/mes", "goal": "top 10" },
+    { "query": "oee software for small manufacturers", "page": "/modules/production", "goal": "top 10" },
+    { "query": "energy consumption per unit produced", "page": "/modules/energy", "goal": "top 10" },
+    { "query": "stop analysis", "page": "/features/stop-cause-registration", "goal": "top 5" },
+    { "query": "what are the disadvantages of predictive maintenance", "page": "/blog/what-are-the-advantages-and-disadvantages-of-predictive-maintenance", "goal": "top 3, clicks above 0" },
+    { "query": "types of predictive maintenance", "page": "/blog/the-four-types-of-predictive-maintenance-and-why-they-matter", "goal": "top 5" },
+    { "query": "ooe meaning", "page": "/blog/oee-teep-and-ooe-whats-the-difference-with-examples", "goal": "top 3" },
+    { "query": "what does oee stand for", "page": "/blog/what-is-oee", "goal": "top 5" },
+    { "query": "5th industrial revolution", "page": "/blog/the-fifth-industrial-revolution-industry-5-0", "goal": "top 5" }
+  ]
+}

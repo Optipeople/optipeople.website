@@ -72,6 +72,9 @@ async function pull() {
     "gsc-monthly": { ...range, dimensions: ["date"] },
     // Per page per day, so report.mjs can find pages losing impressions month over month.
     "gsc-page-date": { ...range, dimensions: ["page", "date"] },
+    // The last 28 days per query, page and country: what report.mjs checks the targets in
+    // Docs/seo/targets.json against, so each growth cycle sees where a target stands now.
+    "gsc-query-page-28d": { startDate: iso(daysAgo(29)), endDate: iso(end), dimensions: ["query", "page", "country"] },
   };
   for (const [name, body] of Object.entries(gsc)) {
     const rows = await gscQuery(site, body);
