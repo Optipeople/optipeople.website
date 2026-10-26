@@ -473,3 +473,62 @@
     animation: chapter-float 8s ease-in-out infinite;
   }
 }
+
+/* Opti Assist hero phone (components/opti-assist-demo.tsx). New lines rise into
+   the chat, the scanner sweeps the sticker, the caret blinks while a question
+   is typed. Classes exist only under `no-preference`, so reduced motion gets
+   the finished conversation. */
+@keyframes assist-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes assist-scan {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(118px);
+  }
+}
+
+@keyframes assist-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes assist-press {
+  50% {
+    transform: scale(0.94);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .assist-rise {
+    animation: assist-rise 0.45s ease-out both;
+  }
+
+  .assist-scan-line {
+    animation: assist-scan 1.8s ease-in-out infinite;
+  }
+
+  .assist-spin {
+    animation: assist-spin 0.8s linear infinite;
+  }
+
+  .assist-caret {
+    animation: mockup-caret 1s steps(1) infinite;
+  }
+
+  .assist-press {
+    animation: assist-press 0.4s ease-in-out;
+  }
+}

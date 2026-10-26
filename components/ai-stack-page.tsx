@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CapabilityMockup } from "@/components/ai-stack-mockups"
+import { OptiAssistPage } from "@/components/opti-assist-page"
 import { aiCapabilities, getAiCapability } from "@/lib/ai-stack"
 import { getPageTheme } from "@/lib/page-theme"
 import { addLocalePrefix, type Locale } from "@/lib/i18n"
@@ -23,6 +24,10 @@ export function AiStackPage({
   slug: string
   locale: Locale
 }) {
+  // Opti Assist is a product people can try, so it gets a page that shows
+  // the app working instead of this template.
+  if (slug === "chat") return <OptiAssistPage locale={locale} />
+
   const cap = getAiCapability(slug)
   if (!cap) return null
 
@@ -186,7 +191,7 @@ export function AiStackPage({
             <Button
               asChild
               size="lg"
-              className="rounded-full bg-white px-7 text-foreground hover:bg-white/90"
+              className="bg-white px-7 text-foreground hover:bg-white/90"
             >
               <Link href={contactHref}>{c.primaryCtaLabel}</Link>
             </Button>
