@@ -249,7 +249,12 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-1 md:gap-2">
-            <Button asChild size="sm" className="px-3 md:px-4">
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="border-primary px-3 text-primary md:px-4"
+            >
               <Link
                 href={newsletterLink[locale].href}
                 className="cursor-pointer"
