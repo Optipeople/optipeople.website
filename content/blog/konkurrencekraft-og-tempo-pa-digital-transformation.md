@@ -1,5 +1,6 @@
 ---
 title: "Fiberline Composites: 41% reduction in unnecessary stops and 6% reduction in average time per stop"
+description: "Fiberline Composites pulls data straight from its machine software and logs every stop cause: 41% fewer unnecessary stops, and each stop 6% shorter."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"

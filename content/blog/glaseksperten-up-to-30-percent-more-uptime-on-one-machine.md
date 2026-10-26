@@ -1,5 +1,6 @@
 ---
 title: "Glaseksperten: up to 30% more uptime on one machine"
+description: "Glaseksperten swapped gut feeling for live machine data. Once the operators could see uptime, one machine got up to 30% more of it. Watch the video."
 date: "2026-03-03"
 author: "OptiPeople Team"
 category: "Cases"

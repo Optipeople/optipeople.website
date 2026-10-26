@@ -1,5 +1,6 @@
 ---
 title: "From data to efficiency"
+description: "A factory measured OEE by series size, found that changeovers on small series were the problem, bought a second machine and lifted OEE from 21% to 41%."
 date: "2021-12-01"
 author: "OptiPeople Team"
 category: "Cases"

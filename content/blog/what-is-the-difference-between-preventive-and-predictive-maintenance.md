@@ -1,5 +1,6 @@
 ---
 title: "What is the difference between preventive and predictive maintenance?"
+description: "Preventive maintenance runs on a schedule, predictive maintenance on the machine's actual condition. See the difference and when to use which."
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"

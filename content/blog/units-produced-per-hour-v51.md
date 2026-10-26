@@ -1,5 +1,6 @@
 ---
 title: "Units produced per hour (v51)"
+description: "Version 51 adds a units produced per hour graph that zooms from hours to days to months, with trend and average lines to show where output is heading."
 date: "2022-11-16"
 author: "OptiPeople Team"
 category: "Insights"

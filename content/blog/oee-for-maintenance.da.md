@@ -1,5 +1,6 @@
 ---
 title: "Brug OEE til at styre vedligeholdet"
+description: "Sådan bruger vedligeholdet OEE: hvad lav tilgængelighed, ydelse og kvalitet peger på, hvilke maskiner der skal prioriteres, og hvordan I planlægger."
 ---
 
 En fabrik, der kører godt, er afhængig af ydelse, kvalitet og tilgængelighed. Maskiner og anlæg er ofte de vigtigste værdier på en fabrik, og derfor betyder vedligeholdet meget for både konkurrenceevnen og hvor meget I får produceret.

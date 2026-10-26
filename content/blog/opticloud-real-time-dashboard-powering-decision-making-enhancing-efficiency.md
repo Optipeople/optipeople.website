@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople Data Platform real-time dashboard: Powering decision-making, enhancing efficiency"
+description: "The real-time dashboard shows live numbers from the floor, changes colour when something needs attention, and is shared with a link, no extra login."
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"

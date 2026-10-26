@@ -1,5 +1,6 @@
 ---
 title: "Glaseksperten: op til 30% mere oppetid på én maskine"
+description: "Glaseksperten har skiftet mavefornemmelsen ud med live tal fra maskinerne. Da operatørerne kunne se oppetiden, steg den op til 30% på én maskine."
 customer: "Glaseksperten"
 metric: "+30%"
 metricLabel: "oppetid på én maskine"

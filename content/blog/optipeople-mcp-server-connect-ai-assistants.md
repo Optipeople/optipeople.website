@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople MCP server: ask your production data questions in Claude"
+description: "Connect Claude or another AI assistant to the OptiPeople MCP server and ask your machine data questions in plain words. No code, no export, no BI model."
 date: "2026-10-26"
 author: "OptiPeople Team"
 category: "Insights"

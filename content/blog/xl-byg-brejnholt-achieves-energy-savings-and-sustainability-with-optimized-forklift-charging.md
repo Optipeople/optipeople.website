@@ -1,5 +1,6 @@
 ---
 title: "XL-BYG Brejnholt achieves energy savings and sustainability with optimized forklift charging"
+description: "XL-BYG Brejnholt charges its forklifts when power is cheapest and the solar panels deliver, for an estimated 30% saving on the trucks' electricity bill."
 date: "2024-12-10"
 author: "OptiPeople Team"
 category: "Cases"

@@ -1,5 +1,6 @@
 ---
 title: "Dansand: 3.5 million bags of sand yearly, and the OptiPeople Data Platform enables better time management"
+description: "Dansand measures uptime and output on its big-bag sand lines, and uses the numbers in production meetings and when deciding which machines to replace."
 date: "2022-04-07"
 draft: true
 author: "OptiPeople Team"

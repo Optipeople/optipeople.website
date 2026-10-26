@@ -1,5 +1,6 @@
 ---
 title: "DFI Geisler: 5% højere produktivitet med tal fra OptiPeople Data Platform"
+description: "DFI Geisler følger syv maskiner, hænger en ugerapport op ved hver og tager snakken om stoppene på gulvet. Produktiviteten er steget cirka 5% på to år."
 metricLabel: "produktivitet over to år"
 quote: "Præcise data og stopregistrering er afgørende for, at vi kan tage fat i de rigtige problemer og handle rigtigt."
 outcome: "Ugentlige maskinrapporter, hængt op ved maskinerne, har gjort tallene til en fast del af forbedringsarbejdet."

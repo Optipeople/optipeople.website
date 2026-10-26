@@ -1,5 +1,6 @@
 ---
 title: "Sådan henter I data med API'et i OptiPeople Data Platform, trin for trin"
+description: "Kom i gang med API'et i OptiPeople Data Platform: find adgangskoden, log på, og vælg det rigtige endpoint til oppetid, OEE, ordrer og telemetri."
 ---
 
 OptiPeople Data Platform har et REST-API, som I kan hente data ud med og sende data ind med. Det kan være simpel oppetid og nedetid, OEE pr. skift, ordrer, stopårsager, telemetri som temperatur og vibration, og de stamdata, I har liggende i platformen.

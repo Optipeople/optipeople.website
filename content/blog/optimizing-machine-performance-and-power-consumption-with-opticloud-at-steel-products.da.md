@@ -1,5 +1,6 @@
 ---
 title: "Steel Products følger maskinernes ydelse og strømforbrug med OptiPeople Data Platform"
+description: "Steel Products kobler stopårsager, emner og strømforbrug sammen. Så kan de se, hvor længe maskinerne står stille, og hvor meget strøm hvert emne koster."
 metricLabel: "Energi per produceret emne"
 outcome: "Maskinernes ydelse og strømforbrug følges per emne, så energiforbruget kan holdes direkte op mod det, der bliver produceret."
 ---

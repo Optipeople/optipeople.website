@@ -1,5 +1,6 @@
 ---
 title: "DFI Geisler: Increases productivity by 5% with OptiPeople Data Platform’s data-driven insights"
+description: "DFI Geisler tracks seven machines, hangs a weekly report by each one and talks through the stops on the floor. Productivity is up about 5% in two years."
 date: "2025-01-08"
 author: "OptiPeople Team"
 category: "Cases"

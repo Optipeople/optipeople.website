@@ -1,5 +1,6 @@
 ---
 title: "Fiberline Composites: 41% færre unødvendige stop, og hvert stop er 6% kortere"
+description: "Fiberline Composites henter data direkte fra maskinernes software og registrerer stopårsagerne. Det gav 41% færre unødvendige stop og 6% kortere stop."
 metricLabel: "unødvendige stop"
 quote: "Nu bliver stopårsagerne registreret, og vi har et meget bedre overblik over maskinernes effektivitet."
 outcome: "Maskindata hentes direkte fra maskinernes software. Det har givet 41% færre unødvendige stop, og stoppene varer i snit 6% kortere."

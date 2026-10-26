@@ -1,5 +1,6 @@
 ---
 title: "Broen: OptiPeople Data Platform enables increased collaboration"
+description: "Broen put the OptiPeople Data Platform on key valve machines. Operators log stop causes, and managers and operators now follow the same live numbers."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"

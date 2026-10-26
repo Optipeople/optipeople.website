@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople and Omron: five kinds of data that make production more competitive"
+description: "In an interview with Omron, CEO Stefan Jensen walks through five kinds of production data: energy, efficiency, quality, maintenance and cost."
 date: "2025-10-09"
 author: "OptiPeople Team"
 category: "Cases"

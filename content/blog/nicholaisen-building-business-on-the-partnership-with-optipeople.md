@@ -1,5 +1,6 @@
 ---
 title: "Nicholaisen: building business on what OptiPeople knows"
+description: "Kenneth from Nicholaisen explains how the partnership with OptiPeople gives them specialist knowledge they can build business on with their own customers."
 date: "2026-01-28"
 author: "OptiPeople Team"
 category: "Cases"

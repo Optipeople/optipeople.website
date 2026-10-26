@@ -1,5 +1,6 @@
 ---
 title: "How to increase manufacturing efficiency in your facility today"
+description: "Four places to start improving manufacturing efficiency: asset utilization, quality control, maintenance and automation, with concrete steps for each."
 date: "2022-06-27"
 author: "OptiPeople Team"
 category: "Insights"

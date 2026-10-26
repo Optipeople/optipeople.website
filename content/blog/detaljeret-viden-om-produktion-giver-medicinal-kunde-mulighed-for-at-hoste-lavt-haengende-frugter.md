@@ -1,5 +1,6 @@
 ---
 title: "Detailed knowledge of production allows a pharmaceutical customer to harvest low-hanging fruit"
+description: "An animal medicine producer swapped late monthly figures for live stop and uptime data. Operators log stop causes, and the easy gains show up first."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"

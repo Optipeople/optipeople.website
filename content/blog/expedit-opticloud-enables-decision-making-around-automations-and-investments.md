@@ -1,5 +1,6 @@
 ---
 title: "Expedit: OptiPeople Data Platform enables decision-making around automations and investments"
+description: "Expedit put its wood and metal lines in Hadsten on one live view, to improve production flow, cut errors and decide on automation and investments."
 date: "2022-04-07"
 author: "OptiPeople Team"
 category: "Cases"

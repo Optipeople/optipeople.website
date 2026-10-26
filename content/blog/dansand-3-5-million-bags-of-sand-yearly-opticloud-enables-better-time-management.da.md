@@ -1,5 +1,6 @@
 ---
 title: "Dansand: 3,5 millioner sække sand om året og bedre styr på tiden med OptiPeople Data Platform"
+description: "Dansand måler oppetid og produceret mængde på linjerne med big bags og bruger tallene på produktionsmøderne, og når en maskine skal skiftes."
 metricLabel: "sække sand om året"
 quote: "Vi vil bruge data til at træffe investeringsbeslutninger, når en maskine skal skiftes, så vi investerer rigtigt."
 outcome: "Tal for oppetid og produceret mængde på big bag-linjerne bruges nu i den daglige opfølgning og som grundlag, når der skal investeres."

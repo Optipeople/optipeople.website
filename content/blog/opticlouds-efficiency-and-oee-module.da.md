@@ -1,5 +1,6 @@
 ---
 title: "OEE-modulet i OptiPeople Data Platform: Se, hvor effektiviteten går tabt"
+description: "OEE-modulet viser tilgængelighed, ydelse og kvalitet live. Så kan I se, hvor effektiviteten går tabt, og følge en vejledning trin for trin til at rette det."
 ---
 
 ## Følg effektiviteten live med OEE-modulet

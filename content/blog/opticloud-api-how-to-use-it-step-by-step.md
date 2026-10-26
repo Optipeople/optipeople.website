@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople Data Platform API: How to use it step by step"
+description: "Get started with the OptiPeople Data Platform REST API: find your access code, authenticate, and pick the right endpoint for uptime, OEE, orders and more."
 date: "2026-10-26"
 author: "OptiPeople Team"
 category: "Insights"

@@ -1,5 +1,6 @@
 ---
 title: "Tavlemøder med tal, alle kan se"
+description: "Brug produktionsdata på tavlemødet: hvad I skal følge, hvordan I viser det på papir eller storskærm, og hvorfor en gang om ugen ofte er bedst."
 ---
 
 OptiPeople Data Platform kan gøre jeres tavlemøder i produktionen bedre.

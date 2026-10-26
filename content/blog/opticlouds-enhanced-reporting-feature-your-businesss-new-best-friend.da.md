@@ -1,5 +1,6 @@
 ---
 title: "Rapporter, der kun viser det, I har brug for"
+description: "Byg rapporter, der kun viser de tal, I har brug for: start med tre færdige skabeloner eller lav jeres egne, og bestem selv, hvem der kan se dem."
 ---
 
 OptiPeople Data Platform har fået en ny og bedre rapportfunktion: rapportskabeloner, I selv kan tilpasse. Så kan I skrue rapporterne sammen, så de kun viser de tal, der betyder noget for jer.

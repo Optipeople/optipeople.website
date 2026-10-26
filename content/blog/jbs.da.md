@@ -1,5 +1,6 @@
 ---
 title: "Gurit: Fuldt overblik over kapaciteten med OptiPeople Data Platform"
+description: "Gurit har koblet CNC-maskinerne og ERP på OptiPeople Data Platform. Nu kan de se den reelle kapacitet og undgår at købe maskiner, de ikke har brug for."
 metricLabel: "Fuldt overblik over kapaciteten"
 quote: "Når vi kører optimeringsprojekter, kan vi måle dem. Det er nøglen til at træffe de rigtige beslutninger."
 outcome: "Data fra CNC-maskinerne og ERP giver et klart billede af kapaciteten, så Gurit undgår at købe maskiner, der ikke er brug for."

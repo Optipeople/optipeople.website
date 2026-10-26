@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople og Omron: fem slags data, der gør produktionen mere konkurrencedygtig"
+description: "I et interview med Omron gennemgår vores CEO, Stefan Jensen, fem slags produktionsdata: energi, effektivitet, kvalitet, vedligehold og omkostninger."
 customer: "Omron"
 metricLabel: "Energi, effektivitet, kvalitet, vedligehold og omkostninger"
 quote: "Hvis du er en lille eller mellemstor virksomhed, er det nu, du skal handle."

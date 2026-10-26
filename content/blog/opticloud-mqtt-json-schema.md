@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople Data Platform MQTT JSON schema"
+description: "The JSON format for sending data to the OptiPeople Data Platform over MQTT: how a message is built, what each field means, and an example for each type."
 date: "2022-06-15"
 author: "OptiPeople Team"
 category: "Insights"

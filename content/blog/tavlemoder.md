@@ -1,5 +1,6 @@
 ---
 title: "Board meetings"
+description: "Use production data in board meetings: what to follow, how to show it on paper or a big screen, and why a weekly rhythm works best for spotting trends."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"

@@ -1,5 +1,6 @@
 ---
 title: "Forebyggende eller forudsigende vedligehold: forskellen, og hvornår I vælger hvad"
+description: "Forebyggende vedligehold følger en fast plan, forudsigende vedligehold følger maskinens faktiske tilstand. Her er forskellen, og hvornår I vælger hvad."
 ---
 
 Forebyggende og forudsigende vedligehold vil begge gribe ind, før maskinen står af. Forskellen ligger i, **hvordan I beslutter, hvornår der skal vedligeholdes**.

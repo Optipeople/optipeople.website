@@ -1,5 +1,6 @@
 ---
 title: "Expedit: Bedre beslutninger om automatisering og investeringer med OptiPeople Data Platform"
+description: "Expedit har koblet træ- og metallinjerne i Hadsten på ét live-overblik. Det giver bedre flow, færre fejl og tal at beslutte automatisering ud fra."
 metricLabel: "Bedre flow, færre fejl"
 quote: "Med løsningen har vi kunnet analysere, hvad vi kan gøre for at få et bedre produktionsflow og minimere fejl."
 outcome: "Træ- og metallinjerne står i samme live-overblik, så Expedit har tal at beslutte automatisering og investeringer ud fra."

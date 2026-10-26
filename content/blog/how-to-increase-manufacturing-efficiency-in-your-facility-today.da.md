@@ -1,5 +1,6 @@
 ---
 title: "Sådan gør I produktionen mere effektiv, allerede i dag"
+description: "Fire steder at starte, hvis produktionen skal være mere effektiv: udnyttelse af maskinerne, kvalitetskontrol, vedligehold og automatisering."
 ---
 
 Hvordan I driver jeres maskiner og udstyr, er afgørende for hele produktionen. Når produktionen bliver mere effektiv, sparer I tid og penge, og kvaliteten holder.

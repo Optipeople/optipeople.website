@@ -1,5 +1,6 @@
 ---
 title: "Tallene viste vejen til næsten dobbelt så høj OEE"
+description: "En fabrik opgjorde OEE per seriestørrelse og så, at omstillinger på små serier var problemet. En maskine nummer to løftede OEE fra 21% til 41%."
 customer: "Industrivirksomhed"
 metricLabel: "OEE, næsten fordoblet"
 outcome: "OEE opgjort per seriestørrelse viste, at der skulle en maskine nummer to til. Bagefter steg OEE fra 21% til 41%."

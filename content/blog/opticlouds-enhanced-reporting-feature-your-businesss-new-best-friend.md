@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople Data Platform's enhanced reporting feature: Your business's new best friend"
+description: "Build reports that show only the numbers you need: start from three ready templates or make your own, and choose who can see each report."
 date: "2023-08-03"
 author: "OptiPeople Team"
 category: "Insights"

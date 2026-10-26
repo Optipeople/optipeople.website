@@ -1,5 +1,6 @@
 ---
 title: "The interplay between OptiPeople Data Platform and iFix from General Electric"
+description: "How the OptiPeople Data Platform collects and structures machine and OEE data, then feeds it into a GE iFix SCADA system for factory-wide monitoring."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Cases"

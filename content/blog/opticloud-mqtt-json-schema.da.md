@@ -1,5 +1,6 @@
 ---
 title: "Sådan sender I data til OptiPeople Data Platform over MQTT: JSON-skemaet"
+description: "JSON-formatet, når I sender data til OptiPeople Data Platform over MQTT: hvordan en besked er bygget op, hvad hvert felt betyder, og eksempler på hver type."
 ---
 
 Her er en vejledning til det JSON-skema, I skal bruge, når I sender data til OptiPeople Data Platform over MQTT.

@@ -1,5 +1,6 @@
 ---
 title: "OEE for maintenance"
+description: "How maintenance teams use OEE: what low availability, performance and quality point to, which machines to prioritize, and how to plan for reliability."
 date: "2022-06-28"
 author: "OptiPeople Team"
 category: "Insights"

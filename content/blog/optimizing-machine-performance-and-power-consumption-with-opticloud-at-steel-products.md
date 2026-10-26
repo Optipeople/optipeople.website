@@ -1,5 +1,6 @@
 ---
 title: "Optimizing machine performance and power consumption with OptiPeople Data Platform at Steel Products"
+description: "Steel Products links stop causes, items and power data on each machine, so it can see idle time and how much energy goes into every produced item."
 date: "2024-11-28"
 author: "OptiPeople Team"
 category: "Cases"

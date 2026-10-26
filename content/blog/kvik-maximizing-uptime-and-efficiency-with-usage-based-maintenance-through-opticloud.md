@@ -1,5 +1,6 @@
 ---
 title: "Kvik: Maximizing uptime and efficiency with usage-based maintenance through OptiPeople Data Platform"
+description: "Kvik services machines by operating hours, not the calendar: 5% more uptime and about 4 fewer services a year on machines that run 24/7."
 date: "2024-12-18"
 author: "OptiPeople Team"
 category: "Cases"

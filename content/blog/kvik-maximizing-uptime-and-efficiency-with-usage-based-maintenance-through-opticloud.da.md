@@ -1,5 +1,6 @@
 ---
 title: "Kvik: Mere oppetid med vedligehold efter driftstimer i OptiPeople Data Platform"
+description: "Kvik vedligeholder efter driftstimer i stedet for kalenderen. Det gav 5% mere oppetid og cirka 4 færre services om året på maskiner, der kører 24/7."
 metricLabel: "oppetid"
 quote: "Vi vedligeholder nu efter ønskede driftstimer i stedet for faste tidsintervaller, og det er langt mere effektivt."
 outcome: "Vedligehold efter driftstimer gav 5% mere oppetid og sparede omkring fire unødvendige services om året på maskiner, der kører 24/7."

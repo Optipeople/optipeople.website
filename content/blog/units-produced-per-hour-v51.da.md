@@ -1,5 +1,6 @@
 ---
 title: "Se, hvor mange enheder I laver i timen (v51)"
+description: "Version 51 giver jer en graf over producerede enheder i timen. Den zoomer fra timer til dage og måneder og viser med en trendlinje, hvor det går hen."
 ---
 
 Med version 51 fik OptiPeople Data Platform en ny graf: **producerede enheder per time**.

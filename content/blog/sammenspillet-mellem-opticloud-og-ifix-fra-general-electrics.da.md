@@ -1,5 +1,6 @@
 ---
 title: "Sådan spiller OptiPeople Data Platform sammen med iFix fra General Electric"
+description: "Sådan samler OptiPeople Data Platform maskin- og OEE-data i et fast format og sender dem videre til GE iFix, så hele fabrikken kan overvåges ét sted."
 metricLabel: "SCADA-integration"
 outcome: "OptiPeople Data Platform samler maskin- og OEE-data i et fast format og sender dem videre til GE iFix, så de indgår i den samlede SCADA-overvågning."
 ---

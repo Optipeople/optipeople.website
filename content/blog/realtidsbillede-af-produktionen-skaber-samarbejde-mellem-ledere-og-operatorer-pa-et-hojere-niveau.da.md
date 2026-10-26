@@ -1,5 +1,6 @@
 ---
 title: "Broen: Ledere og operatører ser de samme tal med OptiPeople Data Platform"
+description: "Broen har OptiPeople Data Platform på nøglemaskinerne. Operatørerne registrerer stopårsager, og ledere og operatører følger de samme tal live."
 metricLabel: "Samme live-billede for alle"
 outcome: "Ledere og operatører ser nu det samme live-billede af nøglemaskinerne og taler ud fra de samme tal."
 ---

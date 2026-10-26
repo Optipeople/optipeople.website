@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople MCP-server: spørg Claude om jeres produktionsdata"
+description: "Kobl Claude eller en anden AI-assistent på OptiPeople MCP-serveren, og stil spørgsmål til jeres maskindata på almindeligt dansk. Ingen kode, intet udtræk."
 ---
 
 OptiPeople Data Platform har en MCP-server. Den lader en AI-assistent som Claude læse jeres maskindata direkte og svare på spørgsmål som "hvad var OEE på pakkelinjen i sidste uge?" eller "hvilke stopårsager kostede mest tid i september?".

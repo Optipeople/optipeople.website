@@ -1,5 +1,6 @@
 ---
 title: "Byg jeres egne dashboards (v51)"
+description: "Med version 51 bygger I selv dashboards i realtid: vælg maskiner og datapunkter, sæt widgets op, og giv hver rolle den visning, den har brug for."
 ---
 
 Med version 51 fik OptiPeople Data Platform noget nyt: **dashboards i realtid, som I selv sætter sammen**.

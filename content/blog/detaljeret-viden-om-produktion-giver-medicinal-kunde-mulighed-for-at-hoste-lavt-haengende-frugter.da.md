@@ -1,5 +1,6 @@
 ---
 title: "Detaljerede tal fra produktionen viser medicinalproducent de lavthængende frugter"
+description: "En producent af dyremedicin fik tal for stop og oppetid, mens produktionen kører. Operatørerne registrerer stopårsager, og de nemme gevinster bliver tydelige."
 customer: "Medicinalproducent"
 metricLabel: "Lavthængende frugter fundet"
 outcome: "Med tal for stop og oppetid, mens produktionen kører, kunne en producent af dyremedicin effektivisere uden at presse medarbejderne."

@@ -1,5 +1,6 @@
 ---
 title: "Gurit: OptiPeople Data Platform enables overview of capacity"
+description: "Gurit links its CNC machines and ERP to the OptiPeople Data Platform to see real capacity, measure improvement projects and avoid needless machine buys."
 date: "2022-02-17"
 author: "OptiPeople Team"
 category: "Cases"

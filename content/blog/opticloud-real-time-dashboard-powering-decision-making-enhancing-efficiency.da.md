@@ -1,5 +1,6 @@
 ---
 title: "Dashboards i realtid: Se produktionen nu, og beslut hurtigere"
+description: "Realtidsdashboardet viser tallene fra gulvet, mens det sker, skifter farve, når noget kræver opmærksomhed, og deles med et link uden ekstra login."
 ---
 
 ## Friske tal giver bedre beslutninger

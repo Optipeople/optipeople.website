@@ -1,5 +1,6 @@
 ---
 title: "XL-BYG Brejnholt sparer energi og CO2 med smartere opladning af trucks"
+description: "XL-BYG Brejnholt lader trucks op, når strømmen er billigst, og solcellerne leverer. Det anslås at spare 30% på elregningen til trucks."
 metricLabel: "Anslået besparelse på elregningen til trucks"
 outcome: "Trucks lades op, når strømmen er billig, og solcellerne leverer. Det anslås at skære 30% af elregningen til trucks og bringer XL-BYG tættere på fossilfri drift."
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Dansk Træemballage: 5% højere OEE på tre måneder med OptiPeople Data Platform"
+description: "Dansk Træemballage satte OptiPeople Data Platform på én linje. Operatørerne ser oppetiden live på en tablet, og OEE steg 5% på tre måneder."
 metricLabel: "OEE på tre måneder"
 outcome: "Operatørerne ser oppetiden live ved én produktionslinje, og på tre måneder steg OEE med 5%."
 ---

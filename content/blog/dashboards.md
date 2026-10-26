@@ -1,5 +1,6 @@
 ---
 title: "Dashboards (v51)"
+description: "Version 51 lets you build your own real-time dashboards: pick machines and data points, arrange widgets, and give each role the view it needs."
 date: "2022-11-11"
 author: "OptiPeople Team"
 category: "Insights"

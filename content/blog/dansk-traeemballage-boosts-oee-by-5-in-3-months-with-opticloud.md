@@ -1,5 +1,6 @@
 ---
 title: "Dansk Træemballage boosts OEE by 5% in 3 months with OptiPeople Data Platform"
+description: "Dansk Træemballage put the OptiPeople Data Platform on one line, let operators see uptime live on a tablet, and raised OEE by 5% in three months."
 date: "2024-11-15"
 author: "OptiPeople Team"
 category: "Cases"

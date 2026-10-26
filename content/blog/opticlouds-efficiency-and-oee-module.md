@@ -1,5 +1,6 @@
 ---
 title: "OptiPeople Data Platform’s efficiency and OEE module"
+description: "The OEE module shows availability, performance and quality live, so you can see where efficiency is lost and follow a step-by-step path to fix it."
 date: "2023-06-29"
 author: "OptiPeople Team"
 category: "Insights"

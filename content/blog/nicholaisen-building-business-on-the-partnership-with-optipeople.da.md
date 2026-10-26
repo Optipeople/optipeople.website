@@ -1,5 +1,6 @@
 ---
 title: "Nicholaisen: forretning bygget på det, OptiPeople ved"
+description: "Kenneth fra Nicholaisen fortæller, hvordan samarbejdet med OptiPeople giver dem specialviden, de kan bygge forretning på sammen med deres egne kunder."
 customer: "Nicholaisen"
 metricLabel: "En partner, der lægger et ekstra lag på forretningen"
 quote: "Vi nyder godt af den viden, som de tilegner sig, og så kan vi tage den ind i vores virksomhed, når vi føler os klar til det."

@@ -1,5 +1,6 @@
 ---
 title: "kWh per produced unit (v50)"
+description: "See how much energy goes into every unit you make, and use kWh per unit to plan around power prices, switch off idle equipment and cut changeovers."
 date: "2022-11-10"
 author: "OptiPeople Team"
 category: "Insights"
