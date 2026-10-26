@@ -1,6 +1,6 @@
 # Search and AI targets
 
-Set 2026-10-26 from 16 months of Search Console and GA4 data (2025-06-24 to 2026-10-24), a check of who ranks and who gets recommended for buyer queries, and two Perplexity prompts. The tracked list is `targets.json`. The growth loop (`growth-loop.md`) reviews both every 14 days.
+Set 2026-10-26 from 16 months of Search Console and GA4 data (2025-06-24 to 2026-10-24), a check of who ranks and who gets recommended for buyer queries, and two Perplexity prompts. The tracked list is `targets.json`. The growth loop (`growth-loop.md`) reviews both every second week.
 
 ## Where we stand
 
@@ -56,7 +56,7 @@ These bring the traffic AI engines quote from. Keep them top 5, keep them answer
 | what does oee stand for | what-is-oee | 10.3, the OEE1 vs OEE2 post ranks instead |
 | 5th industrial revolution | Industry 5.0 guide | 8.4 |
 
-### 4. AI answers (checked in Perplexity every cycle)
+### 4. AI answers (checked in Perplexity every review week)
 
 Goal by end of Q1 2027: OptiPeople named in at least 3 of these 6 answers. The most important lever is off-site: directory profiles with reviews, inclusion in the lists AI engines cite, and Danish trade press and partner pages that name OptiPeople and its customers.
 

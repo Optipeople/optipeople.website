@@ -1,6 +1,6 @@
 # Growth loop log
 
-One entry per cycle, newest first. See `growth-loop.md`.
+One entry per week, newest first. See `growth-loop.md`.
 
 Template:
 
@@ -10,8 +10,8 @@ Template:
 **Numbers** (last 28 days vs the 28 before): non-brand clicks, impressions, Danish non-brand impressions, AI referral sessions, key events.
 **Targets:** which moved, which did not, with positions.
 **AI answers:** per prompt, named or not, and who was named.
-**Last cycle's changes:** worked, too early, or missed.
-**Done this cycle:** commits.
+**Changes from 2 to 4 weeks ago (review weeks):** worked, too early, or missed.
+**Shipped this week:** pages and commits.
 **Filed:** quests.
 **Next time check:** what to look at first.
 ```
