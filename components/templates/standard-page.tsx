@@ -103,7 +103,7 @@ export function StandardPageTemplate({
             <Button
               asChild
               size="lg"
-              className={`rounded-full px-7 ${
+              className={`px-7 ${
                 dark ? "bg-white text-foreground hover:bg-white/90" : ""
               }`}
             >

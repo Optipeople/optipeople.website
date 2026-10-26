@@ -286,7 +286,7 @@ export default async function GetHelpPage({ params }: Props) {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Button asChild size="lg" className="rounded-full px-7">
+            <Button asChild size="lg" className="px-7">
               <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
             </Button>
             <Link

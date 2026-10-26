@@ -210,7 +210,7 @@ export default async function PlatformPage({ params }: PageProps) {
             {t.hero.lede}
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Button asChild size="lg" className="rounded-full px-7">
+            <Button asChild size="lg" className="px-7">
               <Link href="/contact">{t.hero.cta}</Link>
             </Button>
             <Link

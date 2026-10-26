@@ -184,7 +184,7 @@ export default async function AboutPage({ params }: PageProps) {
             {t.intro}
           </p>
           <div className="mt-10">
-            <Button asChild size="lg" className="rounded-full px-7">
+            <Button asChild size="lg" className="px-7">
               <Link href="/contact">{t.cta}</Link>
             </Button>
           </div>
