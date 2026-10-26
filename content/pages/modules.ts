@@ -189,17 +189,17 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/quality",
     content: {
       en: {
-        metaTitle: "Quality module",
+        metaTitle: "Quality module (QMS)",
         metaDescription:
           "Digitize inspections, trace deviations, monitor trends, and build quality traceability directly into production workflows.",
-        eyebrow: "Quality module",
+        eyebrow: "Quality module (QMS)",
         heroTitle: "Build accountability into production",
         heroBody:
           "Register quality data at the source and trace every deviation back to machines or workstations, batches, and shifts. Make quality everyone's responsibility.",
         primaryLabel: "Request a demo",
         introTitle: "Quality issues shouldn't surface after the fact",
         introBody:
-          "When quality data lives in spreadsheets and paper forms, problems hide until they become expensive. Deviations get lost, traceability gaps appear during audits, and root causes stay unknown. The Quality module captures data where it happens and connects it to the full production context.",
+          "When quality data lives in spreadsheets and paper forms, problems hide until they become expensive. Deviations get lost, traceability gaps appear during audits, and root causes stay unknown. The Quality module is a QMS that captures data where it happens and connects it to the full production context.",
         capabilitiesTitle: "Everything you need for digital quality management",
         features: [
           {
@@ -276,17 +276,17 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Kvalitetsstyring og sporbarhed i produktionen | OptiPeople",
+        metaTitle: "QMS: kvalitetsstyring og sporbarhed i produktionen | OptiPeople",
         metaDescription:
           "Kvalitetskontrol på skærmen ved maskinen eller arbejdsstationen i stedet for på papir. Følg afvigelserne, og spor hvert emne tilbage til maskine eller arbejdsstation, batch og skift.",
-        eyebrow: "Kvalitetsmodul",
+        eyebrow: "Kvalitetsmodul (QMS)",
         heroTitle: "Fang fejlen, mens den er billig",
         heroBody:
           "Registrer kvaliteten ude ved maskinen eller arbejdsstationen, og følg hver afvigelse tilbage til maskine, batch og skift.",
         primaryLabel: "Book en demo",
         introTitle: "Kvalitetsfejl skal ikke først opdages bagefter",
         introBody:
-          "Papirskemaer og regneark gemmer på problemerne, indtil de bliver dyre. Her hænger kontroller, afvigelser og handlinger sammen med det, der faktisk skete i produktionen.",
+          "Papirskemaer og regneark gemmer på problemerne, indtil de bliver dyre. Kvalitetsmodulet er et QMS, hvor kontroller, afvigelser og handlinger hænger sammen med det, der faktisk skete i produktionen.",
         capabilitiesTitle: "Sådan holder I styr på kvaliteten",
         features: [
           {
@@ -351,17 +351,17 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/maintenance",
     content: {
       en: {
-        metaTitle: "Maintenance module",
+        metaTitle: "Maintenance module (CMMS)",
         metaDescription:
           "Plan preventive maintenance, receive predictive alerts, manage tasks, and reduce unplanned downtime with connected maintenance workflows.",
-        eyebrow: "Maintenance module",
+        eyebrow: "Maintenance module (CMMS)",
         heroTitle: "Fix it before it breaks",
         heroBody:
           "Move from reactive firefighting to planned maintenance. Reduce unplanned downtime and extend equipment life.",
         primaryLabel: "Request a demo",
         introTitle: "Maintenance shouldn't be a fire drill",
         introBody:
-          "When maintenance is reactive, every breakdown is an emergency. Technicians scramble, production stops, and costs spiral. The Maintenance module gives your team the tools to plan ahead, track tasks, and prevent problems before they impact the line.",
+          "When maintenance is reactive, every breakdown is an emergency. Technicians scramble, production stops, and costs spiral. The Maintenance module is a CMMS that gives your team the tools to plan ahead, track tasks, and prevent problems before they impact the line.",
         capabilitiesTitle: "Everything you need for proactive maintenance",
         features: [
           {
@@ -432,17 +432,17 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Forebyggende vedligehold af maskiner | OptiPeople",
+        metaTitle: "CMMS og forebyggende vedligehold af maskiner | OptiPeople",
         metaDescription:
           "Planlæg forebyggende vedligehold efter driftstimer og maskinens tilstand, ikke kun efter kalenderen. Styr opgaverne, og få mindre uplanlagt nedetid.",
-        eyebrow: "Vedligeholdsmodul",
+        eyebrow: "Vedligeholdsmodul (CMMS)",
         heroTitle: "Løs det, før det bryder ned",
         heroBody:
           "Slut med brandslukning. Planlæg vedligeholdet ud fra, hvor meget maskinen har kørt, hvordan den har det, og hvad der er sket før.",
         primaryLabel: "Book en demo",
         introTitle: "Vedligehold skal følge virkeligheden",
         introBody:
-          "En dato i kalenderen fortæller sjældent hele historien. Med driftstimer, sensordata og opgaver samme sted kan I lave det rigtige arbejde på det rigtige tidspunkt.",
+          "En dato i kalenderen fortæller sjældent hele historien. Vedligeholdsmodulet er et CMMS, hvor driftstimer, sensordata og opgaver ligger samme sted, så I kan lave det rigtige arbejde på det rigtige tidspunkt.",
         capabilitiesTitle: "Sådan kommer I på forkant",
         features: [
           {
@@ -1055,7 +1055,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           },
           {
             icon: Wrench,
-            title: "Maintenance",
+            title: "Maintenance (CMMS)",
             description:
               "Preventive and predictive maintenance triggered by running hours and machine condition instead of the calendar.",
           },
@@ -1153,7 +1153,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           },
           {
             icon: Wrench,
-            title: "Vedligehold",
+            title: "Vedligehold (CMMS)",
             description:
               "Forebyggende og forudsigende vedligehold, sat i gang af driftstimer og maskinens tilstand i stedet for kalenderen.",
           },

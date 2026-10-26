@@ -266,6 +266,7 @@ const footerCopy: Record<
   Locale,
   {
     platformOverview: string
+    modularMes: string
     features: string
     allFeatures: string
     cases: string
@@ -278,6 +279,7 @@ const footerCopy: Record<
 > = {
   en: {
     platformOverview: "Platform overview",
+    modularMes: "Modular MES",
     features: "Features",
     allFeatures: "All features",
     cases: "Customer cases",
@@ -293,6 +295,7 @@ const footerCopy: Record<
   },
   da: {
     platformOverview: "Om platformen",
+    modularMes: "Modulært MES",
     features: "Funktioner",
     allFeatures: "Alle funktioner",
     cases: "Kundecases",
@@ -353,6 +356,7 @@ function buildFooterColumns(locale: Locale): FooterColumn[] {
       title: platform.title,
       items: [
         { title: copy.platformOverview, href: "/platform" },
+        { title: copy.modularMes, href: "/modules/mes" },
         ...platform.items,
       ],
     },

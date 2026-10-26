@@ -73,7 +73,7 @@ const englishModules: ModuleNode[] = [
   },
   {
     id: "maintenance",
-    name: "Maintenance",
+    name: "Maintenance (CMMS)",
     description: "Fix it before it breaks",
     pitch: "Move from reactive firefighting to preventive maintenance, and to predictive where the machine signals support it. Less unplanned downtime, longer equipment life.",
     features: ["Preventive and predictive", "Triggered by connected IoT data", "Mobile task management"],
@@ -151,7 +151,7 @@ const danishModules: ModuleNode[] = [
   },
   {
     id: "maintenance",
-    name: "Vedligehold",
+    name: "Vedligehold (CMMS)",
     description: "Løs det, før det stopper",
     pitch:
       "Gå fra brandslukning til forebyggende vedligehold, og til forudsigende vedligehold dér, hvor maskinens signaler kan bære det. Færre uplanlagte stop, og maskinerne holder længere.",

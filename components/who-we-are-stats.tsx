@@ -15,10 +15,10 @@ const copy: Record<
       { metric: "100+", label: "Factories" },
       { metric: "10+", label: "Years of experience" },
       {
-        metric: "5",
+        metric: "7",
         label: "Disciplines",
         detail:
-          "Automation, IoT, software, operations implementation, operations consulting",
+          "Automation, IoT, software, Modular MES, operations analysis, operations implementation, operations consulting",
       },
     ],
   },
@@ -28,10 +28,10 @@ const copy: Record<
       { metric: "100+", label: "Fabrikker" },
       { metric: "10+", label: "Års erfaring" },
       {
-        metric: "5",
+        metric: "7",
         label: "Fagområder",
         detail:
-          "Automation, IoT, software, implementering i driften og driftsrådgivning",
+          "Automation, IoT, software, modulært MES, driftsanalyse, implementering i driften og driftsrådgivning",
       },
     ],
   },

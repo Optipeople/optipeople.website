@@ -297,7 +297,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Quality management | OptiPeople",
         metaDescription:
           "Register quality data where it happens. Trace deviations back to machines or workstations, batches, and shifts, and build accountability into production.",
-        parentLabel: "Quality",
+        parentLabel: "Quality (QMS)",
         parentHref: "/modules/quality",
         eyebrow: "Quality management",
         heroTitle: "Catch quality issues where they start",
@@ -368,7 +368,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Kvalitetsstyring | OptiPeople",
         metaDescription:
           "Registrer kvalitetsdata dér, hvor arbejdet sker, og følg en afvigelse tilbage til maskine eller arbejdsstation, batch og skift.",
-        parentLabel: "Kvalitet",
+        parentLabel: "Kvalitet (QMS)",
         parentHref: "/modules/quality",
         eyebrow: "Kvalitetsstyring",
         heroTitle: "Fang fejlen, hvor den opstår",
@@ -1170,7 +1170,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Maintenance and tasks | OptiPeople",
         metaDescription:
           "Plan and execute preventive maintenance based on usage and condition. Assign tasks, track completion, and reduce unplanned downtime.",
-        parentLabel: "Maintenance",
+        parentLabel: "Maintenance (CMMS)",
         parentHref: "/modules/maintenance",
         eyebrow: "Maintenance and tasks",
         heroTitle: "Fix things before they break",
@@ -1241,7 +1241,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         metaTitle: "Vedligehold og opgaver | OptiPeople",
         metaDescription:
           "Planlæg vedligehold efter, hvor meget maskinen har kørt, og hvordan den har det. Fordel opgaverne, følg dem til dørs, og få færre uplanlagte stop.",
-        parentLabel: "Vedligehold",
+        parentLabel: "Vedligehold (CMMS)",
         parentHref: "/modules/maintenance",
         eyebrow: "Vedligehold og opgaver",
         heroTitle: "Løs det, før det bryder ned",
