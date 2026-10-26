@@ -26,6 +26,10 @@ export function ConsentBanner() {
   // the head script, keeps it hidden until they reopen it from settings.
   const [open, setOpen] = useState(true)
   const [visible, setVisible] = useState(true)
+  // Phones never get the banner on their own: on a small screen it covered
+  // close to half the page. Without an answer nothing is tracked (consent
+  // stays denied), and the privacy page can still open it on any screen.
+  const [reopened, setReopened] = useState(false)
 
   useEffect(() => {
     const choice = readConsent()
@@ -34,6 +38,7 @@ export function ConsentBanner() {
       // React decides from here, so reopening from settings works.
       document.documentElement.removeAttribute("data-consent")
       setOpen(true)
+      setReopened(true)
       requestAnimationFrame(() => setVisible(true))
     }
     return onConsentSettingsOpen(show)
@@ -68,7 +73,7 @@ export function ConsentBanner() {
       role="dialog"
       aria-labelledby="consent-title"
       aria-describedby="consent-body"
-      className={`consent-banner fixed bottom-4 left-4 z-[60] w-[calc(100vw-2rem)] max-w-sm transition-all duration-500 ease-out sm:bottom-6 sm:left-6 ${
+      className={`consent-banner fixed bottom-4 left-4 z-[60] w-[calc(100vw-2rem)] max-w-sm transition-all duration-500 ease-out sm:bottom-6 sm:left-6 ${reopened ? "" : "max-sm:hidden"} ${
         visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
       }`}
     >

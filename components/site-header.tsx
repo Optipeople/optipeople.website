@@ -7,8 +7,6 @@ import {
   ChevronDown,
   LogIn,
   Menu,
-  Mail,
-  MessageCircle,
   X,
 } from "lucide-react"
 import { useCallback, useEffect, useRef, useState } from "react"
@@ -249,34 +247,22 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-1 md:gap-2">
+            {/* On a phone an envelope icon reads as "email us", not
+                "newsletter", so the newsletter lives in the menu there and the
+                one visible button says what it does. */}
             <Button
               asChild
               size="sm"
               variant="outline"
-              className="border-primary px-3 text-primary md:px-4"
+              className="hidden border-primary px-4 text-primary md:inline-flex"
             >
-              <Link
-                href={newsletterLink[locale].href}
-                className="cursor-pointer"
-                aria-label={newsletterLink[locale].title}
-              >
-                <Mail className="h-4 w-4 md:hidden" aria-hidden="true" />
-                <span className="hidden md:inline">{newsletterLink[locale].title}</span>
-                <span className="sr-only md:hidden">{newsletterLink[locale].title}</span>
+              <Link href={newsletterLink[locale].href} className="cursor-pointer">
+                {newsletterLink[locale].title}
               </Link>
             </Button>
-            <Button asChild size="sm" className="px-3 md:px-4">
-              <Link
-                href="/contact"
-                className="cursor-pointer"
-                aria-label={t("talkToUs")}
-              >
-                <MessageCircle
-                  className="h-4 w-4 md:hidden"
-                  aria-hidden="true"
-                />
-                <span className="hidden md:inline">{t("talkToUs")}</span>
-                <span className="sr-only md:hidden">{t("talkToUs")}</span>
+            <Button asChild size="sm" className="px-4">
+              <Link href="/contact" className="cursor-pointer">
+                {t("talkToUs")}
               </Link>
             </Button>
 

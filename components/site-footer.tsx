@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { ChevronDown, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import logo from "@/app/Optipeople-Logo-Vector.svg"
@@ -36,25 +36,37 @@ const HEADING_CLASS =
 
 // Site pages go through the localized Link; the login portals are off-site and
 // render as plain anchors, the same way the header treats them.
-function FooterLink({ item }: { item: NavItem }) {
+function FooterLink({
+  item,
+  className = LINK_CLASS,
+}: {
+  item: NavItem
+  className?: string
+}) {
   if (item.external) {
     return (
-      <a href={item.href} className={LINK_CLASS}>
+      <a href={item.href} className={className}>
         {item.title}
       </a>
     )
   }
   return (
-    <Link href={item.href} className={LINK_CLASS}>
+    <Link href={item.href} className={className}>
       {item.title}
     </Link>
   )
 }
 
+// Phone links get a full 40px row: they sit in a list the thumb scans.
+const MOBILE_LINK_CLASS =
+  "block py-2.5 text-[0.9375rem] text-gray-400 hover:text-white transition-colors duration-200"
+
 export function SiteFooter() {
   const currentYear = new Date().getFullYear()
   const locale = useLocale() as Locale
   const columns = footerColumns[locale]
+  const companyColumn = columns.at(-1)
+  const menuColumns = columns.slice(0, -1)
   const t = useTranslations("chrome.footer")
   const email = generalEmail(locale)
 
@@ -84,7 +96,7 @@ export function SiteFooter() {
             three across from the sm breakpoint so the six columns (mirroring
             the header's menus) fall into two even rows instead of a cramped
             six-across strip. */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-16">
+        <div className="grid grid-cols-1 gap-10 sm:gap-12 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-16">
           {/* Brand column */}
           <div>
             <Link href="/" className="inline-block mb-6">
@@ -151,10 +163,49 @@ export function SiteFooter() {
             </div>
           </div>
 
+          {/* On a phone the six link columns ran to three screens. There the
+              Company column (about, contact, legal, logins) stays open, since
+              people come to a footer for exactly those, and the menu mirrors
+              fold into one tap each. */}
+          <nav aria-label={t("navigationLabel")} className="sm:hidden">
+            {companyColumn && (
+              <div>
+                <h3 className={HEADING_CLASS}>{companyColumn.title}</h3>
+                <ul className="grid grid-cols-2 gap-x-6">
+                  {companyColumn.items.map((item) => (
+                    <li key={item.href}>
+                      <FooterLink item={item} className={MOBILE_LINK_CLASS} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="mt-8 border-t border-white/10">
+              {menuColumns.map((column) => (
+                <details key={column.title} className="group border-b border-white/10">
+                  <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-sm font-semibold uppercase tracking-wide text-gray-300 [&::-webkit-details-marker]:hidden">
+                    {column.title}
+                    <ChevronDown
+                      className="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                      aria-hidden="true"
+                    />
+                  </summary>
+                  <ul className="pb-3">
+                    {column.items.map((item) => (
+                      <li key={item.href}>
+                        <FooterLink item={item} className={MOBILE_LINK_CLASS} />
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ))}
+            </div>
+          </nav>
+
           {/* Link columns, one per header menu plus Company */}
           <nav
             aria-label={t("navigationLabel")}
-            className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3"
+            className="hidden grid-cols-3 gap-x-8 gap-y-10 sm:grid"
           >
             {columns.map((column) => (
               <div key={column.title}>
