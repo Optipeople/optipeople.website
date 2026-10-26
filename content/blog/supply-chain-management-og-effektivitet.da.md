@@ -1,5 +1,6 @@
 ---
 title: "Supply chain management og effektivitet"
+description: "Sådan giver en mere effektiv forsyningskæde kortere leveringstider og bedre flow, og tre konkrete forslag bygget på rigtige tal fra produktionen."
 ---
 
 Supply chain management spiller en central rolle, når I vil skabe et forspring i konkurrencen.

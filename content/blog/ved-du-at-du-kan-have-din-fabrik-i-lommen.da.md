@@ -1,5 +1,6 @@
 ---
 title: "Ved du, at du kan have din fabrik i lommen?"
+description: "Sådan har du tallene fra produktionen live på mobilen eller computeren med OptiPeople Data Platform, så du kan følge maskinerne, uanset hvor du er."
 ---
 
 Med OptiPeople Data Platform har du fabrikken lige ved hånden, også når du ikke står på gulvet.

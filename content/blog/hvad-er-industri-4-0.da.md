@@ -1,5 +1,6 @@
 ---
 title: "Hvad er Industri 4.0?"
+description: "Hvad Industri 4.0 betyder på almindeligt dansk: de fire principper, teknologien bag, og hvad det ændrer for jer på fabriksgulvet."
 ---
 
 Industri 4.0 er det stadie, industrien står i nu, hvor produktionen bliver mere og mere digital, forbundet og styret af data.

@@ -1,42 +1,43 @@
 ---
 title: "Crisis management with OEE"
+description: "How live OEE data helps you keep production running in a crisis: follow it remotely, find the critical stop causes early and act fast."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/crisis-management-with-oee.jpg"
 ---
 
-Normal production planning is often not enough when conditions become unstable.
+Normal production planning often isn't enough when things get unstable.
 
-The article argues that in a crisis, manufacturers need better visibility and faster decisions if they want to protect productivity and stay competitive.
+In a crisis, you need to see more and decide faster if you want to keep productivity up and stay competitive.
 
-## Why real-time data matters more in a crisis
+## Why live data matters more in a crisis
 
-The article uses the pressures of the corona period as an example:
+The corona period is a good example of what puts pressure on production:
 
-- fewer people can be present at work
-- distancing changes normal routines
+- fewer people can be at work
+- distancing rules change the usual routines
 - customers are under pressure
-- support arrives late
-- daily operations become less predictable
+- help arrives too late
+- day-to-day operations get harder to predict
 
-Under those conditions, real-time production data becomes much more valuable.
+Under those conditions, live production data is worth a lot more.
 
-## How OEE supports faster action
+## How OEE helps you act faster
 
-The article highlights several practical benefits of real-time monitoring:
+Live monitoring gives you several concrete benefits:
 
-- production can be followed without constant physical presence in the factory
-- waste can be reduced, lowering production cost
-- critical stop causes can be identified earlier
-- managers can react quickly when changeovers or stoppages take too long
+- you can follow production without being in the factory all the time
+- you get less waste, so it costs less to produce
+- you find the critical stop causes earlier
+- you can react fast when a changeover or a stop drags on
 
-This makes it easier to solve problems while they are still small.
+That makes it easier to solve problems while they are still small.
 
-## Focus on the few issues that matter most
+## Focus on the few things that matter most
 
-One of the article's main points is that a relatively small share of stoppages can often explain a large share of lost production time.
+Here is a key point: a fairly small share of the stops often accounts for a large share of the lost production time.
 
-If teams can identify the most important stop causes quickly, they can focus their effort where it has the highest impact.
+If you can find the most important stop causes quickly, you can put your effort where it makes the biggest difference.
 
-The overall message is that OEE and real-time data are not only optimization tools. In periods of disruption, they also become practical tools for crisis management.
+So OEE and live data aren't only tools for optimization. When everything gets turned upside down, they are also practical tools for crisis management.

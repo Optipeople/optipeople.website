@@ -1,5 +1,6 @@
 ---
 title: "Skiftehold uden bøvl"
+description: "Sådan gør operatørpanelet i OptiPeople Data Platform overleveringen lettere, med stopårsager, varighed og noter fra logbogen klar til næste skift."
 ---
 
 I mange virksomheder går der for meget viden tabt mellem skiftene. Overleveringen er kort, og der er ofte meget at nå at fortælle.

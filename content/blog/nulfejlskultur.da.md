@@ -1,5 +1,6 @@
 ---
 title: "Nulfejlskultur"
+description: "Derfor bremser frygten for fejl jeres fabrik, og sådan giver åbne data, fælles analyse og læring af det, der ikke virkede, bedre resultater."
 ---
 
 Effektivitet og optimering handler ikke kun om teknologi. Det handler også om mennesker, kultur og om, hvordan I håndterer forandringer på fabrikken.

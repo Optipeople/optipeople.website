@@ -1,40 +1,41 @@
 ---
 title: "Fun facts: What are the costs?"
+description: "Real figures from 191 machines over four weeks: what 103,770 stops and low availability cost, and the questions you should ask next."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/focus-on-capex.jpg"
 ---
 
-This article uses real production figures to illustrate what inefficiency can cost when availability is low.
+Here we use real production figures to show what it costs when availability is low.
 
-The example looks only at **availability**, not performance or quality.
+We only look at **availability**, not performance or quality.
 
 ## Uptime and stops
 
-Across a four-week period, the article reports:
+Over four weeks, the numbers looked like this:
 
 - average uptime of `48.63%`
 - `191` machines measured
 - `103,770` total stops
 - `543` stops per machine on average
 
-That amounted to:
+That added up to:
 
 - `2,537,798` minutes of downtime
 - `42,297` hours of downtime
 
-Using an assumed downtime cost of `2,000 DKK` per hour, the calculated loss becomes:
+If you put the cost of one hour of downtime at `2,000 DKK`, the loss becomes:
 
 `84,594,000 DKK`
 
 ## Why this matters
 
-The article makes the point that even if the exact downtime price varies by machine or industry, the cost of low availability is still substantial.
+The cost of an hour of downtime varies from machine to machine and from industry to industry. But even if the figure isn't exact, low availability still costs a lot of money.
 
-The real takeaway is to ask:
+What you should take away are these questions:
 
-- what does a 1% improvement in availability mean financially?
-- how much does suboptimal operation cost over time?
+- what is a 1% gain in availability worth in money?
+- what does it cost over time when production doesn't run as well as it could?
 
-Efficiency work becomes more compelling when the cost of lost time is made visible.
+It is much easier to make the case for better efficiency when everyone can see what the lost time costs.

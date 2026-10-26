@@ -1,5 +1,6 @@
 ---
 title: "Fun facts: Hvad koster det?"
+description: "Rigtige tal fra 191 maskiner over fire uger: hvad 103.770 stop og lav tilgængelighed koster, og hvad I bør spørge jer selv om."
 ---
 
 Her bruger vi rigtige tal fra produktionen til at vise, hvad det koster, når tilgængeligheden er lav.

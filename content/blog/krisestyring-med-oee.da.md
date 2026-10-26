@@ -1,5 +1,6 @@
 ---
 title: "Krisestyring med OEE: hold produktionen kørende, når alt er usikkert"
+description: "Sådan hjælper live OEE-data jer med at holde produktionen kørende i en krise: følg den på afstand, find de vigtige stop tidligt, og handl hurtigt."
 ---
 
 Almindelig produktionsplanlægning slår tit ikke til, når situationen bliver ustabil.

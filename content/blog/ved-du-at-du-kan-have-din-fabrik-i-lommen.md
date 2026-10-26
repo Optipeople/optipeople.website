@@ -1,37 +1,38 @@
 ---
 title: "Did you know you can have your factory in your pocket?"
+description: "How OptiPeople Data Platform puts live production data on your phone or computer, so you can follow your machines and act fast from anywhere."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/factory-in-your-pocket.jpg"
 ---
 
-The article positions OptiPeople Data Platform as a way to keep your factory close at hand, even when you are away from the production floor.
+With OptiPeople Data Platform, you have your factory close at hand, even when you're not on the floor.
 
-Instead of relying on delayed reports or physical presence, teams can access live production information from a computer or mobile phone.
+You don't have to wait for reports that arrive too late, or be there in person. You can see the production figures live on your computer or phone.
 
-## Real-time production data anywhere
+## Live production data, wherever you are
 
-The central idea is that OptiPeople Data Platform can collect the production data a company wants to monitor, as long as the required signals can be captured technically.
+OptiPeople Data Platform can collect the production data you want to keep an eye on, as long as the signals can be captured technically.
 
-That data can then be used to:
+You can use that data to:
 
-- understand what is working well
+- see what is running well
 - spot problems as they happen
-- support faster decisions
+- make decisions faster
 
-## Visibility on the floor and away from it
+## Overview on the floor and away from it
 
-The article highlights the practical value of mobile access.
+It is the access from your phone that makes the real difference day to day.
 
-No one can look at every machine at the same time. A mobile overview helps when:
+Nobody can watch every machine at once. The overview on your phone helps when:
 
-- you are moving around the factory
-- you are off-site
-- you need a quick status update without waiting for a report
+- you're walking around the factory
+- you're out of the building
+- you need a quick status without waiting for a report
 
-Both graphs and underlying figures are presented as available on demand.
+Both the graphs and the figures behind them are ready when you need them.
 
-## The main point
+## The point
 
-The message is straightforward: when production data is always available, it becomes easier to manage daily operations, react faster, and stay connected to what is happening in the factory.
+The message is simple: when your production figures are always at hand, it's easier to run daily operations, react faster and know what is happening in the factory.
