@@ -7,6 +7,7 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-26 Danish buyer pages conflicted with the cloud MES commit (f9c6bb2) in feature-page.tsx, standard-page.tsx, modules.ts. Fix-up already running; told it to keep both sides, one FAQPage per page, MES title as assumed.
 - 2026-10-26 Captures quest blocked on the OptiCloudMultiTenant consent and platform login; account consent is the human's, left it blocked and noted. Comparison session confirmed it follows my plan; nothing more to tell it.
 - 2026-10-26 Comparison pages quest paused while its research agents ran. Told it to finish and commit on its branch only (main deploys live), then block with one line: our pricing wording plus approval of the competitor claims.
 - 2026-10-26 Bing import quest blocked on the Bing sign-in, as expected. Handed it to the human: sign in at bing.com/webmasters in the pane, then rerun.
