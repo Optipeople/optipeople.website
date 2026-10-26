@@ -7,6 +7,8 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-26 Captures quest blocked on the OptiCloudMultiTenant consent and platform login; account consent is the human's, left it blocked and noted. Comparison session confirmed it follows my plan; nothing more to tell it.
+- 2026-10-26 Comparison pages quest paused while its research agents ran. Told it to finish and commit on its branch only (main deploys live), then block with one line: our pricing wording plus approval of the competitor claims.
 - 2026-10-26 Bing import quest blocked on the Bing sign-in, as expected. Handed it to the human: sign in at bing.com/webmasters in the pane, then rerun.
 - 2026-10-26 Round after the MES fix landed, plus the outreach quest blocking: drafts are in Docs/seo/outreach/, sending them is the human's (accounts, outside contact), so left it blocked and noted. Log not dry (buyer pages, comparisons, replays, Bing in progress; SEO week 2026-11-02 queued); nothing filed or cast.
 - 2026-10-26 Round after a landing: MES cloud page conflicted with the buyer FAQ commit (c9d6512) in standard-page.tsx and types.ts. Gave the fix-up quest sonnet and noted to keep both sides (answers, rollout, PageFaq), one FAQPage per page. Log not dry, nothing filed or cast.
@@ -57,4 +59,6 @@
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
 - Bing import quest handed to the human (2026-10-26): waits for their sign-in at bing.com/webmasters, then a rerun.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
+- Comparison pages (Evocon, Factbird): expect a block for the human on pricing wording and competitor claims; must not land on main before a yes.
+- Captures quest waits on the human: Accept the OptiCloudMultiTenant consent in the pane, log in to platform.optipeople.dk, rerun.
 - Replays quest blocked once on opus (2026-10-26); if it blocks again, read why before it starts over.
