@@ -140,7 +140,7 @@ const copy: Record<Locale, PlatformCopy> = {
         {
           title: "Handl",
           description:
-            "Brug tallene til noget: opret opgaver, planlæg vedligehold, ret planen til, og spørg AI om jeres egne data.",
+            "Fra indsigt til handling: opret opgaver, planlæg vedligehold, ret planen til, og spørg AI om jeres egne data.",
         },
       ],
     },

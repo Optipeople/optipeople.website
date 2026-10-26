@@ -220,7 +220,11 @@ export function SiteHeader() {
                       >
                         <Link
                           href={item.href}
-                          className={`block w-full cursor-pointer rounded-md px-4 py-3 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+                          className={`block w-full cursor-pointer rounded-md px-4 py-3 text-sm transition-colors duration-150 ${
+                            item.highlight
+                              ? "mb-1 bg-[var(--green-dark3)]/[0.06] font-medium text-[var(--green-dark3)] hover:bg-[var(--green-dark3)]/[0.11]"
+                              : "text-foreground/85 hover:bg-foreground/[0.045] hover:text-foreground"
+                          } ${FOCUS_RING_INSET}`}
                           aria-label={t("linkLabel", { title: item.title })}
                         >
                           {item.title}
@@ -536,7 +540,14 @@ function MobileNavSection({ menu }: { menu: NavMenu }) {
           <ul>
             {menu.items.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className={linkClass}>
+                <Link
+                  href={item.href}
+                  className={
+                    item.highlight
+                      ? `${linkClass} -mx-3 mb-1 bg-[var(--green-dark3)]/[0.06] px-3 font-medium text-[var(--green-dark3)]`
+                      : linkClass
+                  }
+                >
                   {item.title}
                 </Link>
               </li>

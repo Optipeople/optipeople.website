@@ -18,6 +18,12 @@ export type NavItem = {
   description?: string
   /** Off-site URL, rendered as a plain anchor instead of a localized Link. */
   external?: boolean
+  /**
+   * Tinted in the header dropdown, so index pages stand apart from the
+   * individual entries listed under them (All cases and Personas above the
+   * case posts).
+   */
+  highlight?: boolean
 }
 
 export type NavMenuId = "ai" | "platform" | "services" | "customers" | "resources"
@@ -86,8 +92,8 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       id: "customers",
       title: "Cases",
       items: [
-        { title: "All cases", href: "/cases" },
-        { title: "Personas", href: "/about/personas" },
+        { title: "All cases", href: "/cases", highlight: true },
+        { title: "Personas", href: "/about/personas", highlight: true },
         {
           title: "Carl Hansen & Søn",
           href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai",
@@ -176,8 +182,8 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
       id: "customers",
       title: "Cases",
       items: [
-        { title: "Alle cases", href: "/cases" },
-        { title: "Personaer", href: "/about/personas" },
+        { title: "Alle cases", href: "/cases", highlight: true },
+        { title: "Personaer", href: "/about/personas", highlight: true },
         {
           title: "Carl Hansen & Søn",
           href: "/blog/carl-hansen-son-enhances-productivity-and-reduces-setup-times-with-opticloud-and-optiai",
