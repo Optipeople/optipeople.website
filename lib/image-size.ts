@@ -14,7 +14,7 @@ export type ImageSize = { width: number; height: number }
  *
  * Content references images by path, not by static import, so next/image never
  * learns the size on its own and we read it out of the file header: a fixed
- * offset for a PNG, a short walk over the segment table for a JPEG. Every page
+ * offset for a PNG or WebP, a short walk over the segment table for a JPEG. Every page
  * that draws a frame is prerendered, so this runs at build time, and the cache
  * holds it to one read per file per build.
  *
@@ -47,7 +47,7 @@ function read(src: string): ImageSize | null {
     return null
   }
 
-  return png(file) ?? jpeg(file)
+  return png(file) ?? webp(file) ?? jpeg(file)
 }
 
 const PNG_SIGNATURE = "89504e470d0a1a0a"
@@ -57,6 +57,35 @@ function png(file: Buffer): ImageSize | null {
   if (file.length < 24) return null
   if (file.subarray(0, 8).toString("hex") !== PNG_SIGNATURE) return null
   return { width: file.readUInt32BE(16), height: file.readUInt32BE(20) }
+}
+
+/**
+ * RIFF container, then one of three bitstream chunks, each with the size at a
+ * fixed offset: lossy (VP8), lossless (VP8L) or extended (VP8X).
+ */
+function webp(file: Buffer): ImageSize | null {
+  if (file.length < 30) return null
+  if (file.toString("ascii", 0, 4) !== "RIFF") return null
+  if (file.toString("ascii", 8, 12) !== "WEBP") return null
+
+  switch (file.toString("ascii", 12, 16)) {
+    case "VP8 ":
+      return {
+        width: file.readUInt16LE(26) & 0x3fff,
+        height: file.readUInt16LE(28) & 0x3fff,
+      }
+    case "VP8L": {
+      const bits = file.readUInt32LE(21)
+      return { width: (bits & 0x3fff) + 1, height: ((bits >> 14) & 0x3fff) + 1 }
+    }
+    case "VP8X":
+      return {
+        width: file.readUIntLE(24, 3) + 1,
+        height: file.readUIntLE(27, 3) + 1,
+      }
+    default:
+      return null
+  }
 }
 
 /** Start-of-frame markers, the segments that carry the size. */
