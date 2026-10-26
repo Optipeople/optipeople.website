@@ -1,94 +1,154 @@
 ---
 title: "OptiPeople Data Platform API: How to use it step by step"
-date: "2022-05-11"
+date: "2026-10-26"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/opticloud-api-code.jpg"
 ---
 
-OptiPeople Data Platform exposes APIs for data exchange, whether the data is simple uptime and downtime or more advanced information such as orders, vibration, temperature, ERP data, or SCADA-related context.
+The OptiPeople Data Platform has an external REST API for getting data out and putting data in. It covers simple uptime and downtime, OEE per shift, orders, stop causes, telemetry such as temperature and vibration, and the master data you keep in the platform.
 
-All APIs are REST-based and use JSON.
+All endpoints use HTTPS and JSON. There are 54 of them, and the full reference with every response schema is in the [External API Reference (PDF)](https://storageprodoptipeople.blob.core.windows.net/application-resources/v1/Optipeople_External_API.pdf). This guide walks you through getting started and shows which endpoint to reach for.
 
-## How to get data and test connection
+Want to ask your data questions in plain language instead of writing code? Read [how to connect Claude and other AI assistants with the OptiPeople MCP server](/blog/optipeople-mcp-server-connect-ai-assistants).
 
-To get data from OptiPeople Data Platform, the original guide lists four prerequisites:
+## Before you start
 
-1. Have an account set up in `portal.optipeople.dk`
-2. Add a machine and a device
-3. Send data to the device
-4. Create an API access key through the portal
+You need four things in place:
 
-Once that is done, a connection can be tested directly in a browser by opening a REST endpoint over HTTPS on port `443`.
+1. An account on `portal.optipeople.dk`
+2. At least one machine with a device attached
+3. Data flowing from the device
+4. Your API access code
 
-## Testing the connection
+You find the access code in the portal under **Accounts > External API**. It is generated per account, so treat it like a password.
 
-The original article uses a demo account and a sample URL to verify access.
+## Authenticate
 
-In practice, the pattern is:
+Every call goes to the same base URL:
 
 ```text
-https://dataexport.optipeople.dk/api/DataExport/<Endpoint>?access_code=<ACCESS_KEY>
+https://dataexport.optipeople.dk/api
 ```
 
-If the endpoint returns JSON, the connection is working.
+There are two ways to send the access code. The preferred one is an `Authorization` header with the `Opti` scheme:
 
-## Adding parameters
+```text
+Authorization: Opti <ACCESS_CODE>
+```
 
-The API supports extra parameters such as:
+The other is the `access_code` query parameter, which is handy for a quick test in the browser:
 
-- `machineId`
-- `from`
-- `to`
+```text
+https://dataexport.optipeople.dk/api/Machine/GetAll?access_code=<ACCESS_CODE>
+```
 
-These can be added to limit the response to a machine or time period.
+If that URL returns a JSON list of your machines, the connection works.
 
-## Common APIs mentioned in the guide
+## Step by step: your first export
 
-### `GetEventExport`
+**1. Find your machines.** Call `GET /Machine/GetAll`. Note the `id` of each machine. Almost every other endpoint takes a `machineId`.
 
-Returns raw machine events such as runtime and downtime messages.
+```bash
+curl -H "Authorization: Opti <ACCESS_CODE>" \
+  https://dataexport.optipeople.dk/api/Machine/GetAll
+```
 
-Useful when you want a lightweight event-level export.
+**2. Pull production data for a period.** Call `GET /DataExport/GetDataExport` with a machine and a date range:
 
-### `GetDataExport`
+```bash
+curl -H "Authorization: Opti <ACCESS_CODE>" \
+  "https://dataexport.optipeople.dk/api/DataExport/GetDataExport?machineId=<MACHINE_ID>&from=2026-10-01&to=2026-10-25"
+```
 
-This is described as the main export API for efficiency-related data.
+**3. Use the JSON** in Power BI, Excel, your ERP or your own code.
 
-It includes information related to:
+## Parameters that work across endpoints
 
-- availability
-- performance
-- quality
-- units
-- shifts
-- stop causes
+- `machineId`: the machine to report on. On `GetDataExport`, `GetEventExport` and `GetOEE` you can repeat it to get several machines in one call: `&machineId=<id1>&machineId=<id2>`.
+- `factoryId`: limits an export to one factory.
+- `from` and `to`: the period, as `yyyy-MM-dd`. Most exports default to today when you leave them out, and a single call can span at most one year.
 
-The article notes that this API is often used with BI tools such as Power BI.
+Responses have the same envelope: `data` holds the result, `errors` lists anything that went wrong, and `meta` carries extra information.
 
-### Main data areas mentioned
+## The main data exports
 
-The article describes several important arrays or data tables:
+### `GetDataExport`: the one for reporting and BI
 
-- `shiftData`
-- `counterData`
-- `unitData`
-- `wasteData`
+This is the endpoint most Power BI reports start from. One call returns a period's production data grouped into arrays:
 
-These support reporting on shifts, counters, orders, and waste or stop events.
+- `shiftData`: one row per shift with duration, start and stop, planned and unplanned stop time
+- `counterData`: produced and rejected units per counter
+- `unitData`: orders (part order numbers) run in each shift, with speed
+- `wasteData`: every stop with its reason, category and whether it was planned
+- operator presence per shift and the machine settings, such as expected speed and targets
 
-### `GetTPMAlertsExport`
+### `GetOEE`: ready-made KPIs
 
-The article also mentions TPM alert export as a separate API for predictive-maintenance or task-related alert data.
+Returns OEE, availability, performance and quality per machine for a period, so you don't have to calculate them yourself. Add `includePerShiftData=true` to get the split per shift.
 
-## Practical takeaway
+### `GetEventExport`: raw machine events
 
-The overall API model is straightforward:
+Every individual runtime and downtime event. Use it when you need the event log rather than the summary.
 
-- use REST
-- authenticate with an access code
-- select the right endpoint
-- add query parameters when needed
-- consume JSON in your own reporting or integration layer
+### `GetOrderReportExport`: production per order
 
-For most reporting and BI work, `GetDataExport` appears to be the main starting point.
+Order-based production data with stop time allocated to each order.
+
+### `GetLatestStop` and `GetHeartbeats`: what is happening now
+
+`GetLatestStop` gives a machine's most recent stop. `GetHeartbeats` shows whether the machines are reporting in.
+
+### Telemetry
+
+- `GetTelemetryData` returns samples for one machine parameter (for example temperature) between two timestamps.
+- `GetTelemetry` lets you query raw telemetry rows with OData: `$filter`, `$orderby`, `$top` (up to 10,000 rows), `$skip` and `$count`. Follow `@odata.nextLink` to page through large results.
+- `GetHoursSpentBetweenTelemetryThresholds` tells you how many hours a parameter spent between two values, for example how long an oven ran between 180 and 200 degrees.
+
+### `GetTPMAlertsExport`: maintenance alerts
+
+Exports TPM alerts for one or more machines, for use in maintenance planning.
+
+## Writing data back
+
+The API is not read-only. You can also send data into the platform:
+
+- **Orders:** `POST /Machine/SetMachinePartInformation` starts an order on a machine, and `POST /PartOrderNumber/ExternalSetPartOrder` sets the order on factory level. Typical use: your ERP or MES tells the platform which order is running.
+- **Operators:** create, update and delete operators with the `/User` endpoints. `CreateOrUpdateOperators` matches on worker id, so you can sync straight from your HR or payroll system.
+- **Waste:** `POST /Waste/RegisterAllPendingWaste` registers pending stops with one reason in one go.
+- **Master data:** read, create, update, search and delete rows in your master data tables with the `/MasterData` endpoints. Useful for quality results, scans or lookup tables that other systems need.
+
+## All endpoint groups
+
+| Group | What it covers |
+|---|---|
+| Account | Account settings |
+| API Usage | How many calls and how much data you have used, per account or per external application |
+| Factory | Your factories |
+| Device | Devices and their status |
+| Machine | Machines, manual operator logs, waste configurations, starting orders |
+| Machine Shift and Shift Identifier | Shift schedules and shift names |
+| Data Export | Production, OEE, events, orders, stops, heartbeats, TPM alerts and telemetry |
+| Report | Current order on a machine, part counter reports per day and per hour, order information with custom fields |
+| Part Order Number | Orders per factory and exact units produced between two timestamps |
+| Master Data | Your own data tables |
+| Task Configuration and Task Instance | Tasks, active and completed task instances with their history |
+| User | Operators |
+| Waste | Registering pending stops |
+| Incomac App | Energy optimisation settings, spot prices and machine notifications |
+
+The [PDF reference](https://storageprodoptipeople.blob.core.windows.net/application-resources/v1/Optipeople_External_API.pdf) has the parameters and the full response schema for each one.
+
+## Keep an eye on usage
+
+`GET /APIUsage/GetUsageForAccount?startDate=2026-10-01` shows how many requests you have made and how much data they returned, split per endpoint. `GetUsageForExternalApplication` does the same for a single integration.
+
+## The short version
+
+- Get your access code under **Accounts > External API**
+- Send it as `Authorization: Opti <code>`
+- Start with `Machine/GetAll`, then `DataExport/GetDataExport` or `DataExport/GetOEE`
+- Add `machineId`, `from` and `to` to narrow it down
+- Use the PDF reference when you need a specific field
+
+And if you would rather ask "what stopped the packing line most last week?" than build the query yourself, [connect an AI assistant through our MCP server](/blog/optipeople-mcp-server-connect-ai-assistants).
