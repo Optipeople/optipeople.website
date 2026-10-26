@@ -14,8 +14,8 @@ Every item ships in Danish and English together, answers its main query in the f
 
 | # | Page | Main query (DA / EN) | Links to | Status |
 | --- | --- | --- | --- | --- |
-| 1 | Guide: how to choose an OEE system | oee system, oee software / oee software for small manufacturers | /modules/production | 2026-10-26 in progress |
-| 2 | Guide: stop registration and stop causes | stopregistrering, stopårsager / downtime tracking, stop cause analysis | /features/stop-cause-registration | 2026-10-26 in progress |
+| 1 | Guide: how to choose an OEE system | oee system, oee software / oee software for small manufacturers | /modules/production | done 2026-10-26 |
+| 2 | Guide: stop registration and stop causes | stopregistrering, stopårsager / downtime tracking, stop cause analysis | /features/stop-cause-registration | done 2026-10-26 |
 | 3 | Rebuild kwh-per-produced-unit-v50 into the energy per unit guide | energiforbrug pr. produceret enhed, energiovervågning / energy consumption per unit produced | /modules/energy | open |
 | 4 | Guide: what is an MES system (after the MES quest lands) | mes system, hvad er mes / what is mes for small manufacturers | /modules/mes | open |
 | 5 | Guide: machine monitoring on older machines (PLC, retrofit sensors) | maskinovervågning, overvågning af gamle maskiner / machine monitoring older machines | /modules/iot | open |
