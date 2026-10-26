@@ -1,3 +1,4 @@
+import type { ReplaySlug } from "@/content/replays/types"
 import type { LucideIcon } from "lucide-react"
 import type { Locale } from "@/i18n/routing"
 
@@ -86,6 +87,12 @@ export type StandardPage = {
   rollout?: Step[]
   /** Blog explainer the page links to, with the search query as anchor. */
   explainer?: { lead: string; anchor: string; href: string; tail?: string }
+  /**
+   * Play a scripted replay of the module in the real app beside the hero,
+   * and its screenshot showcase after the capabilities. See
+   * components/replays/index.tsx.
+   */
+  replay?: ReplaySlug
   metricsTitle: string
   metrics: Metric[]
   stepsTitle: string

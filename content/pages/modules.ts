@@ -45,6 +45,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Track OEE, downtime, losses, and shift performance with an OEE module built for real-time manufacturing visibility.",
         eyebrow: "OEE module",
+        replay: "production",
         heroTitle: "See where production time is lost",
         heroBody:
           "Track OEE in real time and understand exactly where production time disappears. Stop guessing, start improving.",
@@ -126,6 +127,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           "OEE-software, der måler direkte på maskinerne. Se tilgængelighed, ydelse, kvalitet og stopårsager for hvert skift, mens det sker. Uden regneark.",
         eyebrow: "OEE-modul",
         heroTitle: "Et OEE-system, der viser, hvor tiden går tabt",
+        replay: "production",
         heroBody:
           "Følg OEE, mens skiftet kører, og se præcis, hvor tiden forsvinder. Så skal I ikke gætte længere.",
         primaryLabel: "Book en demo",
@@ -238,6 +240,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Digitize inspections, trace deviations, monitor trends, and build quality traceability directly into production workflows.",
         eyebrow: "Quality module (QMS)",
+        replay: "quality",
         heroTitle: "Build accountability into production",
         heroBody:
           "Register quality data at the source and trace every deviation back to machines or workstations, batches, and shifts. Make quality everyone's responsibility.",
@@ -325,6 +328,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Kvalitetskontrol på skærmen ved maskinen eller arbejdsstationen i stedet for på papir. Følg afvigelserne, og spor hvert emne tilbage til maskine eller arbejdsstation, batch og skift.",
         eyebrow: "Kvalitetsmodul (QMS)",
+        replay: "quality",
         heroTitle: "Fang fejlen, mens den er billig",
         heroBody:
           "Registrer kvaliteten ude ved maskinen eller arbejdsstationen, og følg hver afvigelse tilbage til maskine, batch og skift.",
@@ -400,6 +404,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Plan preventive maintenance, receive predictive alerts, manage tasks, and reduce unplanned downtime with connected maintenance workflows.",
         eyebrow: "Maintenance module (CMMS)",
+        replay: "maintenance",
         heroTitle: "Fix it before it breaks",
         heroBody:
           "Move from reactive firefighting to planned maintenance. Reduce unplanned downtime and extend equipment life.",
@@ -481,6 +486,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Planlæg forebyggende vedligehold efter driftstimer og maskinens tilstand, ikke kun efter kalenderen. Styr opgaverne, og få mindre uplanlagt nedetid.",
         eyebrow: "Vedligeholdsmodul (CMMS)",
+        replay: "maintenance",
         heroTitle: "Løs det, før det bryder ned",
         heroBody:
           "Slut med brandslukning. Planlæg vedligeholdet ud fra, hvor meget maskinen har kørt, hvordan den har det, og hvad der er sket før.",
@@ -556,6 +562,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Track kWh usage, monitor telemetry, detect anomalies, and connect energy performance to production output in real time.",
         eyebrow: "EMS module",
+        replay: "energy",
         heroTitle: "Cut waste, not corners",
         heroBody:
           "Connect energy consumption directly to production output. Find anomalies and optimization opportunities automatically.",
@@ -638,6 +645,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           "Energiovervågning i produktionen: se kWh pr. maskine, pr. ordre og pr. produkt, holdt op mod det, I producerer. Så ser I, hvor strømmen går til spilde.",
         eyebrow: "EMS-modul",
         heroTitle: "Energiovervågning, der viser, hvad hvert emne koster i strøm",
+        replay: "energy",
         heroBody:
           "Mål energien løbende, og hold forbruget op mod det, I producerer: pr. produkt, pr. maskine og pr. skift.",
         primaryLabel: "Book en demo",
@@ -751,6 +759,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Consolidate the machines, hardware, and data systems a site already runs into one structured data foundation, and add sensors only where there is nothing to read from.",
         eyebrow: "IoT module",
+        replay: "iot",
         heroTitle: "Get data from anything you already run",
         heroBody:
           "Most sites are not starting from nothing. They have controls, sensor kits, historians, and a system or two that already collects something. The IoT module consolidates what is there, and adds hardware only where a machine has nothing to read from.",
@@ -833,6 +842,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           "Maskinovervågning på nye og gamle maskiner. Vi kobler de PLC'er og systemer på, I har, og sætter kun sensorer op, hvor der ikke er noget at læse fra.",
         eyebrow: "IoT-modul",
         heroTitle: "Maskinovervågning med det udstyr, I allerede har",
+        replay: "iot",
         heroBody:
           "De færreste starter fra nul. Der er styringer, sensorer, en historian og et system eller to, der allerede samler noget op. IoT-modulet samler det, der er, og sætter kun nyt op, hvor der ikke er noget at læse fra.",
         primaryLabel: "Book en demo",
@@ -951,6 +961,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Run production orders on the floor: start, stop, and report at the machine or workstation. Works standalone, and syncs two ways with your ERP if you want it to.",
         eyebrow: "Orders module",
+        replay: "erp-shopfloor",
         heroTitle: "The orders to run, on the screen at the machine or workstation",
         heroBody:
           "The Orders module is the basis for both planning production and executing the plan. Operators see what to produce next, with the work order instructions and standard operating procedures that belong to it, start and stop the job, and report quantities and scrap where the work happens. It runs on its own, and it connects to your ERP if you want it to.",
@@ -1044,6 +1055,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Kør produktionsordrerne ved maskinen eller arbejdsstationen: start, stop og meld tilbage dér. Virker alene og taler med jeres ERP begge veje, hvis I vil.",
         eyebrow: "Ordremodul",
+        replay: "erp-shopfloor",
         heroTitle: "Ordrerne står på skærmen ved maskinen eller arbejdsstationen",
         heroBody:
           "Ordremodulet er grundlaget for både at planlægge produktionen og at føre planen ud i livet. Operatøren ser, hvad der skal produceres, sammen med de arbejdsinstruktioner og standardprocedurer, der hører til, starter og stopper jobbet og melder antal og kassation dér, hvor arbejdet sker. Det kører alene, og det kan kobles på jeres ERP, hvis I vil.",
@@ -1144,6 +1156,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           "Cloud MES software you roll out one module at a time. A cloud-based manufacturing execution system for small and mid-sized plants: no server room, no big IT project, live in weeks.",
         eyebrow: "Cloud MES",
         heroTitle: "Cloud MES, switched on one module at a time",
+        replay: "mes",
         heroBody:
           "A cloud-based manufacturing execution system you open in a browser, with no server room and no big IT project. Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
         primaryLabel: "Request a demo",
@@ -1290,6 +1303,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           "Cloud MES, I tager i brug ét modul ad gangen. Et MES-system i skyen til små og mellemstore produktioner: ingen serverrum, intet stort IT-projekt, i drift på uger.",
         eyebrow: "Cloud MES",
         heroTitle: "Cloud MES, I slår til ét modul ad gangen",
+        replay: "mes",
         heroBody:
           "Et MES i skyen, I åbner i browseren, uden serverrum og uden et stort IT-projekt. Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
         primaryLabel: "Book en demo",
@@ -1475,6 +1489,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Sequence work orders across the entities of each production route, not just one flat timeline, against measured run rates and real machine availability.",
         eyebrow: "Planning module",
+        replay: "planning",
         heroTitle: "Plan the whole route, not just one timeline",
         heroBody:
           "Most schedulers give you a single production timeline. This one plans across the entities of each production route, on measured run rates and real machine availability, visible to everyone who has to deliver it.",
@@ -1562,6 +1577,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Læg ordrerne i rækkefølge hen over hele produktionsruten, ikke bare på én tidslinje. Efter målte kørehastigheder og den tid, maskinerne reelt har.",
         eyebrow: "Planlægningsmodul",
+        replay: "planning",
         heroTitle: "Planlæg hele ruten, ikke bare én tidslinje",
         heroBody:
           "De fleste planlægningssystemer giver jer én produktionstidslinje. Her planlægger I hen over de enheder, hver produktionsrute går igennem, efter målte kørehastigheder og den tid, hvor maskinerne reelt er ledige.",
@@ -1637,6 +1653,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Work instructions, drawings, and certificates at the machine or workstation, always the current version, tied to the order and the operator in front of it.",
         eyebrow: "Documents module",
+        replay: "documents",
         heroTitle: "The right instruction, at the right place",
         heroBody:
           "Work instructions, drawings, and certificates where the work happens: at a machine, a station, a line, a warehouse, or a lab, in the version that applies to the job in front of the person doing it.",
@@ -1717,6 +1734,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Arbejdsinstruktioner, tegninger og certifikater på skærmen ved maskinen eller arbejdsstationen. Altid den version, der gælder, og knyttet til ordren, operatøren står med.",
         eyebrow: "Dokumentmodul",
+        replay: "documents",
         heroTitle: "Den rigtige instruktion på det rigtige sted",
         heroBody:
           "Arbejdsinstruktioner, tegninger og certifikater dér, hvor arbejdet sker: ved maskinen, på stationen, på linjen, på lageret eller i laboratoriet, i den version, der gælder for den opgave, man står med.",

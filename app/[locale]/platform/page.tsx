@@ -12,6 +12,7 @@ import { moduleIndexLinks } from "@/content/modules-catalog"
 import { getSurface, getThemeForHref } from "@/lib/page-theme"
 import { buildMetadata } from "@/lib/seo"
 import { FramedImage } from "@/components/framed-image"
+import { ReplayShowcases, ReplayStage } from "@/components/replays"
 import { JsonLd } from "@/components/json-ld"
 import { breadcrumbSchema, pageName, platformSchema } from "@/lib/structured-data"
 
@@ -199,11 +200,12 @@ export default async function PlatformPage({ params }: PageProps) {
             background: `linear-gradient(180deg, ${theme.tint} 0%, ${theme.tint} 55%, transparent 100%)`,
           }}
         />
-        <div className="px-[var(--edge)]">
+        <div className="grid grid-cols-1 items-center gap-12 px-[var(--edge)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
+          <div>
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/65">
             {t.hero.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 text-4xl font-normal leading-[1.05] tracking-tight text-foreground sm:text-5xl xl:text-6xl">
             {t.hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-normal leading-relaxed text-foreground/78 lg:text-xl">
@@ -223,6 +225,10 @@ export default async function PlatformPage({ params }: PageProps) {
               {t.hero.jump}
             </Link>
           </div>
+          </div>
+          {/* A stop registered on the operator panel, then the same stop in
+              the OEE report: the one-record claim, played in the real app. */}
+          <ReplayStage slug="platform" locale={loc} deep={theme.deep} />
         </div>
       </section>
 
@@ -263,6 +269,8 @@ export default async function PlatformPage({ params }: PageProps) {
           </p>
         </div>
       </section>
+
+      <ReplayShowcases slug="platform" locale={loc} tint={theme.tint} />
 
       {/* Interactive platform diagram */}
       <PlatformFlower locale={loc} />

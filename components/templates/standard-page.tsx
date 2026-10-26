@@ -14,6 +14,7 @@ import { PlatformArchitecture } from "@/components/platform-architecture"
 import { FramedImage } from "@/components/framed-image"
 import { PageFaqSection } from "@/components/page-faq"
 import { AnswerSection, CaseSection } from "@/components/buyer-answer"
+import { ReplayShowcases, ReplayStage } from "@/components/replays"
 import type { StandardPage } from "@/content/shared/types"
 import type { Locale } from "@/i18n/routing"
 import { getPageTheme, type PageFamily } from "@/lib/page-theme"
@@ -85,7 +86,14 @@ export function StandardPageTemplate({
           />
         )}
 
-        <div className="px-[var(--edge)]">
+        <div
+          className={`px-[var(--edge)] ${
+            page.replay
+              ? "grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16"
+              : ""
+          }`}
+        >
+          <div>
           <p
             className={`text-xs font-medium uppercase tracking-[0.2em] ${
               dark ? "text-white/65" : "text-foreground/65"
@@ -93,7 +101,7 @@ export function StandardPageTemplate({
           >
             {page.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className={`mt-5 text-4xl font-normal leading-[1.05] tracking-tight sm:text-5xl ${page.replay ? "lg:text-5xl xl:text-6xl" : "max-w-4xl lg:text-6xl"}`}>
             {page.heroTitle}
           </h1>
           <p
@@ -133,6 +141,9 @@ export function StandardPageTemplate({
               {t("seeCapabilities")}
             </Link>
           </div>
+          </div>
+          {/* A scripted replay of the module in the real app, when it has one. */}
+          {page.replay && <ReplayStage slug={page.replay} locale={locale} deep={theme.deep} dark={dark} />}
         </div>
       </section>
 
@@ -224,6 +235,8 @@ export function StandardPageTemplate({
           ))}
         </div>
       </section>
+
+      {page.replay && <ReplayShowcases slug={page.replay} locale={locale} tint={theme.tint} />}
 
       {deepDives && deepDives.length > 0 && (
         <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">

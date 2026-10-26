@@ -547,3 +547,43 @@ html[data-consent] .consent-banner {
     animation: assist-press 0.4s ease-in-out;
   }
 }
+/* Data Platform product replays (components/replays/*). They reuse the
+   assist-* classes above for lines rising in and buttons pressing; these add a
+   finger tap and a bar that grows in from the left. Like assist-*, they only
+   exist under `no-preference`. */
+@keyframes replay-tap {
+  from {
+    opacity: 0.9;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes replay-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .replay-tap {
+    animation: replay-tap 0.7s ease-out both;
+  }
+
+  .replay-grow {
+    transform-origin: left center;
+    animation: replay-grow 0.8s ease-out both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .replay-tap {
+    display: none;
+  }
+}
