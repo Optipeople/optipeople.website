@@ -172,3 +172,41 @@ export function buildLookup<T>(entries: LocalizedPage<T>[]) {
     get: (slug: string) => bySlug.get(slug),
   }
 }
+
+/**
+ * OptiPeople set against one competitor, row by row on what a buyer asks.
+ * Every competitor statement carries the numbers of the sources it came
+ * from, and `checked` says when those public pages were last read, so a
+ * claim can be traced and re-checked rather than taken on trust.
+ */
+export type ComparisonPage = {
+  metaTitle: string
+  metaDescription: string
+  eyebrow: string
+  heroTitle: string
+  /** Answers "which one should I pick" in the first 40 to 60 words. */
+  heroBody: string
+  competitor: string
+  /** e.g. "Competitor facts checked 26 October 2026 on their public pages." */
+  checked: string
+  tableTitle: string
+  topicLabel: string
+  rows: {
+    topic: string
+    us: string
+    them: string
+    /** 1-based indexes into `sources`. */
+    sources?: number[]
+  }[]
+  strongerTitle: string
+  stronger: { title: string; description: string }[]
+  oursTitle: string
+  ours: { title: string; description: string }[]
+  chooseTitle: string
+  chooseThem: string
+  chooseUs: string
+  sourcesTitle: string
+  sourcesNote: string
+  sources: { label: string; href: string }[]
+  faq: PageFaq
+}

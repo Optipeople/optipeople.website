@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { comparisonSlugs } from "@/content/pages/comparisons";
 import { featureSlugs } from "@/content/pages/features";
 import { moduleSlugs } from "@/content/pages/modules";
 import { serviceSlugs } from "@/content/pages/services";
@@ -42,6 +43,7 @@ const staticRoutes = [
   ...solutionSlugs.map((slug) => `/solutions/${slug}`),
   ...aiCapabilitySlugs.map((slug) => `/ai/${slug}`),
   ...personaSlugs.map((slug) => `/about/personas/${slug}`),
+  ...comparisonSlugs.map((slug) => `/compare/${slug}`),
 ];
 
 // Static pages carry no lastModified. A build timestamp changes on every deploy
