@@ -1,14 +1,15 @@
 ---
-title: "Carl Hansen & Søn: Mere produktivitet og kortere omstillinger med OptiPeople Data Platform og OptiAI"
-metricLabel: "Kortere omstillinger med OptiAI"
-outcome: "Et skarpere billede af produktiviteten og et pilotprojekt med OptiAI, der skal korte omstillingerne ned ved at lægge ordrerne i en smartere rækkefølge."
+title: "Carl Hansen & Søn: Mere produktivitet og kortere omstillinger med OptiPeople Data Platform og Opti Assist"
+description: "Carl Hansen & Søn får præcise tal fra produktionen med OptiPeople Data Platform og tester Opti Assist til at lægge ordrerne, så der skal stilles færre gange om."
+metricLabel: "Kortere omstillinger med Opti Assist"
+outcome: "Et skarpere billede af produktiviteten og et pilotprojekt med Opti Assist, der skal korte omstillingerne ned ved at lægge ordrerne i en smartere rækkefølge."
 ---
 
 ## Kort fortalt
 
 Carl Hansen & Søn bruger OptiPeople Data Platform til at få et mere præcist billede af produktionen.
 
-Samtidig kører virksomheden et pilotprojekt med OptiAI. Målet er kortere omstillinger, fordi ordrerne kommer i en bedre rækkefølge.
+Samtidig kører virksomheden et pilotprojekt med Opti Assist. Målet er kortere omstillinger, fordi ordrerne kommer i en bedre rækkefølge.
 
 ## Sådan bruger Carl Hansen & Søn OptiPeople Data Platform
 
@@ -18,11 +19,11 @@ Operatørerne registrerer stopårsager. Så er det lettere at se, hvor der er pr
 
 De vælger også, hvilket emne der kører. Så bliver cyklustiden i OptiPeople Data Platform tilpasset emnet, og tallene passer bedre til virkeligheden. Det gør opfølgningen i driften mere præcis.
 
-## Pilotprojektet med OptiAI
+## Pilotprojektet med Opti Assist
 
-Carl Hansen tester desuden OptiAI til at planlægge rækkefølgen af produktionsordrer.
+Carl Hansen tester desuden Opti Assist til at planlægge rækkefølgen af produktionsordrer.
 
-OptiAI foreslår en rækkefølge, hvor der skal stilles færre gange om mellem ordrerne. Det skal give kortere omstillingstider.
+Opti Assist foreslår en rækkefølge, hvor der skal stilles færre gange om mellem ordrerne. Det skal give kortere omstillingstider.
 
 ## Det skal det give
 
