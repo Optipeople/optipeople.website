@@ -33,7 +33,7 @@ declare global {
  * is in the server HTML so it paints with the page, and globals.css hides it
  * for returning visitors before React has run.
  */
-export const consentDefaultScript = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});try{var c=JSON.parse(localStorage.getItem('${CONSENT_KEY}')||'{}').analytics;if(c==='granted'||c==='denied')document.documentElement.setAttribute('data-consent','')}catch(e){}`
+export const consentDefaultScript = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});(function(){try{var c=JSON.parse(localStorage.getItem('${CONSENT_KEY}')||'{}').analytics;if(c==='granted'||c==='denied')document.documentElement.setAttribute('data-consent','')}catch(e){}})();`
 
 // Preview deployments and localhost would pollute the live property, so GA
 // only loads on the real domains. NEXT_PUBLIC_GA_ANY_HOST=1 lifts that for

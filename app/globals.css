@@ -1,4 +1,12 @@
-@import "tailwindcss";
+/* Scan only the code. Left to itself Tailwind also read seo-data, Docs and the
+   blog Markdown and turned stray words into classes, which tripled the
+   stylesheet that every page now carries inline. */
+@import "tailwindcss" source(none);
+@source "../app";
+@source "../components";
+@source "../lib";
+@source "../i18n";
+@source "../content/**/*.ts";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
 
