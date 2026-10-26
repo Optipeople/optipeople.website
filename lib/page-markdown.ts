@@ -27,6 +27,8 @@ import da from "@/messages/da.json"
 // render, through one converter per template rather than one per page, so a
 // copy change shows up here the day it ships. Nothing is written here that
 // the page itself does not say, apart from section labels.
+// A new family of twins also needs adding to `markdownTwin` in lib/seo.ts,
+// which decides which HTML pages advertise a twin.
 
 const messages = { en, da }
 
