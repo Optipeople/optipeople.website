@@ -12,6 +12,7 @@
 - A quest with a broken After line can't be fixed by command; file replacement quests and tell its session to mark itself done.
 
 ## Lately
+- 2026-10-26 Round as the human left: unchanged. Phone-layout edits still uncommitted, 6568dce still off main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-26 Round as the human left: the human marked the commit-or-discard question settled without words, but the phone-layout edits are still uncommitted and 6568dce still off main. Noted on the /book quest, kept waiting. Log not dry (SEO week 2026-11-02, week 4 check queued); nothing filed or cast.
 - 2026-10-26 Round after "Land the booking code on main" finished: 6568dce is a clean fast-forward but was undone again, because main's tree still holds uncommitted phone-layout edits (13 files, saved 19:21) in six files it touches. Left them alone, told the /book test session to wait, and asked the human to commit or discard them.
 - 2026-10-26 "Switch on the booking page" stuck on a note written as an After line (can't be removed by command). Entra and Vercel env are done; 459f12d never reached main. Filed "Land the booking code on main" and "Test /book on production and switch on the booking flag" (both sonnet), told the old session to mark itself done.
