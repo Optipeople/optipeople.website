@@ -61,7 +61,7 @@ export function LeadEmailForm({
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, modules: modules ?? [] }),
+        body: JSON.stringify({ email, modules: modules ?? [], source: formName }),
       })
       if (!res.ok) throw new Error("Failed to submit")
       trackEvent("generate_lead", { form_name: formName })

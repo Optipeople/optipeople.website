@@ -3,6 +3,8 @@ import { NextResponse } from "next/server"
 const MONDAY_API_URL = "https://api.monday.com/v2"
 const BOARD_ID = "5978901066"
 const GROUP_ID = "group_mm13rdh1"
+// "Type" status column on the board, so the team can tell the forms apart.
+const TYPE_COLUMN_ID = "color_mm8gnxqq"
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 type NewsletterPayload = {
@@ -58,6 +60,7 @@ export async function POST(request: Request) {
 
     const columnValues: Record<string, unknown> = {
       text: subscriberDetails,
+      [TYPE_COLUMN_ID]: { label: "Nyhedsbrev" },
     }
 
     const query = `mutation ($boardId: ID!, $groupId: String!, $itemName: String!, $columnValues: JSON!) {

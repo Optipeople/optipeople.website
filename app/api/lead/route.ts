@@ -4,6 +4,14 @@ const MONDAY_API_URL = "https://api.monday.com/v2"
 const BOARD_ID = "5978901066"
 // Same group as the full contact form, all website leads land together.
 const GROUP_ID = "group_mm13rdh1"
+// "Type" status and "Moduler" text columns on the board.
+const TYPE_COLUMN_ID = "color_mm8gnxqq"
+const MODULES_COLUMN_ID = "text_mm8ged7e"
+/** Which form the lead came from, mapped to its "Type" label in Monday. */
+const TYPE_LABELS: Record<string, string> = {
+  hero_lead: "Lead fra forsiden",
+  contact_lead: "Lead fra kontaktside",
+}
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 type LeadPayload = {
@@ -11,6 +19,8 @@ type LeadPayload = {
   website?: unknown
   /** Module chips the visitor picked in the hero, in display order. */
   modules?: unknown
+  /** The form's analytics name, e.g. "hero_lead". */
+  source?: unknown
 }
 
 /** Hard cap so a tampered payload can't push an essay into the Monday note. */
@@ -29,6 +39,7 @@ export async function POST(request: Request) {
 
     const email = getString(payload.email).trim()
     const modules = getModules(payload.modules)
+    const typeLabel = TYPE_LABELS[getString(payload.source)] ?? TYPE_LABELS.hero_lead
 
     if (!email || !emailPattern.test(email)) {
       return NextResponse.json(
@@ -45,8 +56,16 @@ export async function POST(request: Request) {
       )
     }
 
-    const query = `mutation ($boardId: ID!, $groupId: String!, $itemName: String!) {
-      create_item (board_id: $boardId, group_id: $groupId, item_name: $itemName) {
+    const columnValues: Record<string, unknown> = {
+      [TYPE_COLUMN_ID]: { label: typeLabel },
+    }
+
+    if (modules.length > 0) {
+      columnValues[MODULES_COLUMN_ID] = modules.join(", ")
+    }
+
+    const query = `mutation ($boardId: ID!, $groupId: String!, $itemName: String!, $columnValues: JSON!) {
+      create_item (board_id: $boardId, group_id: $groupId, item_name: $itemName, column_values: $columnValues) {
         id
       }
     }`
@@ -55,6 +74,7 @@ export async function POST(request: Request) {
       boardId: BOARD_ID,
       groupId: GROUP_ID,
       itemName: email,
+      columnValues: JSON.stringify(columnValues),
     }
 
     const response = await fetch(MONDAY_API_URL, {
@@ -91,9 +111,8 @@ export async function POST(request: Request) {
 
     const itemId = data.data.create_item.id
 
-    // The picked modules go on as a note rather than a column, so this stays
-    // decoupled from the board's column setup. Best-effort: a failed note must
-    // never cost us the lead itself.
+    // The picked modules also go on as a note, kept as a backup to the column.
+    // Best-effort: a failed note must never cost us the lead itself.
     if (modules.length > 0) {
       await addModulesNote(itemId, modules, token)
     }
