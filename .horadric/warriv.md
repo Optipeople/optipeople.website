@@ -7,6 +7,7 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-26 Round as the human left, with day look-back: the day was clean. Main now matches origin/main (the human merged and pushed, 7293b97), so the push question is settled. Log all done, no aim, optipeople.com still WordPress. Nothing to file or cast.
 - 2026-10-20 Hourly round: log all done, no aim. Main 61 ahead, 12 behind origin, push still the human's call. Nothing to file or cast.
 - 2026-10-20 Round as the human left: log all done, no aim. Main 60 ahead, 12 behind origin, still not pushed; that stays the human's call. Nothing to file or cast.
 - 2026-10-20 Round after the squash sync landed: log all done, no aim. Main is 59 ahead, 12 behind origin, origin not an ancestor. Noted on the quest that pushing needs a merge or force push, the human's call. Nothing to file or cast.
@@ -48,5 +49,4 @@
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
 ## Open
-- Sync landed as a squash (2026-10-20); main is 59 ahead, 12 behind origin/main. Push (merge with origin/main or force) waits on the human; noted under the last fix-up quest. Check next round whether they pushed.
 - Launch day checklist was removed from the log (uncommitted edit, not by me). optipeople.com still serves WordPress on 2026-10-07. Once it serves the new site, file agent quests: sitemap resubmit via API, check-redirects against https://optipeople.com, pull.mjs comparisons at week 1 and week 4. trafficheap.cc unwanted referral stays with the human (GA4 UI).
