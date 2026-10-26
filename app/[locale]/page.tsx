@@ -5,14 +5,13 @@ import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { SlideCarousel, type SlideData } from "@/components/slide-carousel"
 import { LogoWall } from "@/components/logo-wall"
-import { CustomerVoices, type CustomerVoice } from "@/components/customer-voices"
 import { HeroModulePicker } from "@/components/hero-module-picker"
 import { ProductChapters } from "@/components/product-chapters"
 import { WhoWeAreStats } from "@/components/who-we-are-stats"
 import { hasModuleMockup } from "@/components/module-mockups"
 import { Button } from "@/components/ui/button"
 import { moduleCatalog, moduleChipRows } from "@/content/modules-catalog"
-import { getCaseStudies, getPostBySlug } from "@/lib/blog-data"
+import { getPostBySlug } from "@/lib/blog-data"
 import { aiStackSlides, aiStackSliderCopy } from "@/lib/ai-stack"
 import { customerLogos } from "@/lib/customers"
 import { buildMetadata } from "@/lib/seo"
@@ -161,30 +160,6 @@ function buildModuleSlides(
 /** Chips picked before the visitor touches anything. Locale-independent. */
 const heroDefaultModules = ["mes"]
 
-/**
- * Points each quote at that customer's case study, matched on the case's
- * `customer` frontmatter. A quote from a customer without a published story
- * keeps no link rather than sending the reader to the archive.
- *
- * Slugs and `customer` are the same across translations, so the default-locale
- * set is enough here. The locale prefix on the link comes from next-intl.
- */
-function linkTestimonials(testimonials: CustomerVoice[]): CustomerVoice[] {
-  const slugByCustomer = new Map<string, string>()
-  for (const study of getCaseStudies()) {
-    const key = study.customer?.toLowerCase()
-    // getCaseStudies leads with the strongest stories, so the first wins.
-    if (key && !slugByCustomer.has(key)) {
-      slugByCustomer.set(key, study.slug)
-    }
-  }
-
-  return testimonials.map((testimonial) => {
-    const slug = slugByCustomer.get(testimonial.company.toLowerCase())
-    return slug ? { ...testimonial, href: `/blog/${slug}` } : testimonial
-  })
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -263,7 +238,9 @@ export default async function Home({
       {/* Customer Logo Wall */}
       <LogoWall logos={customerLogos} className="pb-0 lg:pb-0" />
 
-      {/* Trust band, pairs the logo wall with social proof */}
+      {/* Trust band, pairs the logo wall with social proof. The page quotes
+          customers here and nowhere else: their results live in the case
+          cards below, so the quote is one that states no number. */}
       <section className="pt-16 pb-12 sm:pt-20 lg:pt-32 lg:pb-28">
         <div className="grid w-full grid-cols-1 gap-12 px-[var(--edge)] lg:grid-cols-2 lg:gap-16">
           {/* Left, headline + customer stories link */}
@@ -339,14 +316,6 @@ export default async function Home({
           storageKey="home-ai"
         />
       </section>
-
-      {/* Customer voices, an editorial spread instead of the carousel that
-          sat here (TestimonialCarousel is kept for other pages). */}
-      <CustomerVoices
-        voices={linkTestimonials(t.testimonials)}
-        title={t.testimonialTitle}
-        caseLabel={t.testimonialCaseLabel}
-      />
 
       {/* Customer Results, Scandinavian bento of measured outcomes */}
       {/* The CTA below carries no top margin, so the two backgrounds already
@@ -463,7 +432,7 @@ export default async function Home({
               }
 
               // ── Image card (full-bleed photo + overlay) ──
-              const image = getPostBySlug(card.slug)?.image
+              const image = card.plain ? undefined : getPostBySlug(card.slug)?.image
               const accent = imageAccents[card.slug]
               const light = accent.tone === "light"
               return (
@@ -484,10 +453,11 @@ export default async function Home({
                     />
                   )}
                   {/* color wash, AI-slider palette, near-opaque so the photo
-                      recedes to a subtle texture under the brand color. */}
+                      recedes to a subtle texture under the brand color. Solid on a
+                      plain card, which has no photo under it. */}
                   <div
                     aria-hidden
-                    className="absolute inset-0 opacity-90"
+                    className={`absolute inset-0 ${image ? "opacity-90" : ""}`}
                     style={{ backgroundColor: accent.bg }}
                   />
                   {/* legibility gradient toward the content at the bottom */}

@@ -1,4 +1,3 @@
-import type { CustomerVoice } from "@/components/customer-voices"
 import type { SlideData } from "@/components/slide-carousel"
 import type { Locale } from "@/i18n/routing"
 
@@ -20,6 +19,12 @@ export type CaseCard = {
   tone?: "sage" | "dark"
   /** Before/after data for the mini comparison chart. */
   chart?: { before: number; after: number; beforeLabel: string; afterLabel: string }
+  /**
+   * Image cards only: leave the cover photo off and show the card colour
+   * alone. For covers that are a sign or a logo rather than the floor, whose
+   * lettering shows through the wash and fights the number.
+   */
+  plain?: boolean
 }
 
 export type HomeCopy = {
@@ -54,11 +59,6 @@ export type HomeCopy = {
   /** CTA on each module slide. "{module}" is replaced with the module name. */
   moduleCta: string
   ai: { ariaLabel: string }
-  /** One quote per person (and Fiberline, quoted as a company); the first is set large. */
-  testimonials: CustomerVoice[]
-  testimonialTitle: string
-  /** Link label on each testimonial card that has a matching case study. */
-  testimonialCaseLabel: string
   bento: {
     eyebrow: string
     title: string
@@ -121,7 +121,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       headingSub: "See how they run production on data with OptiPeople.",
       storiesLabel: "Customer stories",
       quote:
-        "Comparing our OEE to previous data before OptiPeople Data Platform, we’ve seen an average increase of 5% within just three months.",
+        "OptiPeople Data Platform provides us with valuable management information that was previously unavailable. Our operators monitor uptime on tablets, which has encouraged quicker recovery times.",
       cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
@@ -174,36 +174,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
 
     ai: { ariaLabel: "AI capabilities" },
-    testimonials: [
-      {
-        quote:
-          "Over the past two years, OptiPeople Data Platform has helped us increase productivity by approximately 5%. Data collection combined with continuous improvements is key.",
-        author: "Tommy Andersen",
-        role: "Production Manager",
-        company: "DFI Geisler",
-      },
-      {
-        quote:
-          "OptiPeople Data Platform provides us with valuable management information that was previously unavailable. Our operators monitor uptime on tablets, which has encouraged quicker recovery times.",
-        author: "Kasper Kielgast Poulsen",
-        role: "Fabrikschef",
-        company: "Dansk Træemballage",
-      },
-      {
-        quote:
-          "We now perform maintenance based on operating hours instead of fixed time intervals. This gives us ~40 extra production hours annually and 50% fewer service hours.",
-        author: "Stefan Lindell",
-        role: "Lean Project Manager",
-        company: "Kvik",
-      },
-      {
-        quote:
-          "Now stop reasons are being registered and we have a much better overview of our machines’ efficiency.",
-        company: "Fiberline Composites",
-      },
-    ],
-    testimonialTitle: "In their own words.",
-    testimonialCaseLabel: "Read the case",
     bento: {
       eyebrow: "Customer results",
       title: "Measured on the floor.",
@@ -249,6 +219,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           slug: "kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud",
           span: "wide",
           kind: "image",
+          plain: true,
         },
         {
           company: "Dansk Træemballage",
@@ -304,7 +275,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       headingSub: "Læs, hvordan de gør det i hverdagen.",
       storiesLabel: "Kundehistorier",
       quote:
-        "Sammenlignet med vores OEE før OptiPeople Data Platform har vi set en gennemsnitlig stigning på 5% på bare tre måneder.",
+        "OptiPeople Data Platform giver os ledelsesinformation, vi ikke havde før. Operatørerne følger oppetiden på tablets, og det har fået dem til at komme hurtigere i gang igen efter et stop.",
       cite: "Kasper Kielgast Poulsen, Fabrikschef, Dansk Træemballage",
     },
     platform: {
@@ -357,36 +328,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
 
     ai: { ariaLabel: "AI-funktioner" },
-    testimonials: [
-      {
-        quote:
-          "OptiPeople Data Platform har hjulpet os med at øge produktiviteten med cirka 5%. Dataindsamling kombineret med løbende forbedringer er nøglen.",
-        author: "Tommy Andersen",
-        role: "Production Manager",
-        company: "DFI Geisler",
-      },
-      {
-        quote:
-          "OptiPeople Data Platform giver os ledelsesinformation, vi ikke havde før. Operatørerne følger oppetiden på tablets, og det har fået dem til at komme hurtigere i gang igen efter et stop.",
-        author: "Kasper Kielgast Poulsen",
-        role: "Fabrikschef",
-        company: "Dansk Træemballage",
-      },
-      {
-        quote:
-          "Vi vedligeholder nu efter driftstimer i stedet for faste intervaller. Det giver omkring 40 ekstra produktionstimer årligt.",
-        author: "Stefan Lindell",
-        role: "Lean Project Manager",
-        company: "Kvik",
-      },
-      {
-        quote:
-          "Nu bliver stopårsagerne registreret, og vi har et meget bedre overblik over maskinernes effektivitet.",
-        company: "Fiberline Composites",
-      },
-    ],
-    testimonialTitle: "Med deres egne ord.",
-    testimonialCaseLabel: "Læs casen",
     bento: {
       eyebrow: "Kunderesultater",
       title: "Målt på fabriksgulvet.",
@@ -432,6 +373,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           slug: "kvik-maximizing-uptime-and-efficiency-with-usage-based-maintenance-through-opticloud",
           span: "wide",
           kind: "image",
+          plain: true,
         },
         {
           company: "Dansk Træemballage",

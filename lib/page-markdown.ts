@@ -259,12 +259,6 @@ function homeMarkdown(locale: Locale) {
     ),
     section(t.platform.title, t.platform.subtitle, bullets(modules, locale)),
     section(ai.title, ai.subtitle, bullets(capabilities, locale)),
-    section(
-      t.testimonialTitle,
-      ...t.testimonials.map((v) =>
-        quote(v.quote, [v.author, v.role, v.company].filter(Boolean).join(", ")),
-      ),
-    ),
     section(t.bento.title, t.bento.subtitle, bullets(cards, locale)),
   ])
 }
