@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18.14 4.37 87 87">
+  <style>
+    .mark { fill: #000; stroke: #000; }
+    @media (prefers-color-scheme: dark) { .mark { fill: #fff; stroke: #fff; } }
+  </style>
+  <defs>
+    <clipPath id="c"><circle cx="61.64" cy="47.87" r="30.07"/></clipPath>
+  </defs>
+  <g class="mark">
+    <path clip-path="url(#c)" stroke="none" d="M32.38,40.21s7.68-9.23,14.82,6.55c6.55,14.48,10.77,1.72,10.77,1.72l2.15-6.03,30.93.09h8.53v7.19l-36.06.13s-6.12,21.89-17.28,9.91c0,0-7.84-9-11.72-6.2-3.49,2.52,1.210,11.98,5.51,15.42l-6.38,6.38s-14.3-21.630-1.29-35.16Z"/>
+    <circle cx="61.64" cy="47.87" r="36.36" fill="none" stroke-width="13.07"/>
+  </g>
+</svg>
