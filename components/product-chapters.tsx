@@ -101,7 +101,7 @@ type MesCopy = {
 const MES_COPY: Record<Locale, MesCopy> = {
   en: {
     name: "Modular MES",
-    tagline: "Run the floor on facts.",
+    tagline: "Earn more on every single order.",
     body: "All modules on one foundation. Add the next module when you need it, with or without your ERP.",
     gridLabel: "Nine modules. One data foundation.",
     shots: {
@@ -122,7 +122,7 @@ const MES_COPY: Record<Locale, MesCopy> = {
   },
   da: {
     name: "Modulært MES",
-    tagline: "Styr gulvet efter fakta.",
+    tagline: "Øg indtjeningen på hver eneste ordre.",
     body: "Alle moduler på samme fundament. Tag næste modul, når I har brug for det, med eller uden jeres ERP.",
     gridLabel: "Ni moduler. Ét datagrundlag.",
     shots: {
