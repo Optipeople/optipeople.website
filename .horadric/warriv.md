@@ -9,6 +9,7 @@
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 Round after the AI-readable site quest landed (69a45ec, 2b2d72d). Noted on the operator panel retake to work from main, since its base branch landed and was deleted. Log not dry (SEO week 2026-11-02 queued, checks waiting on dates); nothing filed or cast.
 - 2026-10-26 Round after the captures fix-up landed (00f3a4b); replays and AI-readable site quests also done, so both Open lines on them are settled. Operator panel retake in progress, SEO week 2026-11-02 queued, so log not dry. No check stone; nothing filed or cast.
 - 2026-10-26 Captures quest (10 images plus alt texts, 330a6df) conflicted because its branch carries the replays commit 5ab5fe8. Gave the fix-up sonnet; told it to wait for the replays fix-up, then cherry-pick only 0396384 and 330a6df, keeping its webp files and alt texts.
 - 2026-10-26 Replays quest finished but conflicted with c9d6512, f9c6bb2 and 025b07c in standard-page.tsx, modules.ts, shared/types.ts. Gave the fix-up sonnet and told it to keep both sides, replays on top of main's FAQ and answer fields.
