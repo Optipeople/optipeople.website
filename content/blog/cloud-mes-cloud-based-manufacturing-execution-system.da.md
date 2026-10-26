@@ -32,7 +32,7 @@ I stedet for at gå på mavefornemmelsen kan I træffe beslutningerne ud fra tal
 
 ## OptiPeople Data Platform som cloud MES
 
-OptiPeople Data Platform er en cloud MES og [et modulært MES-system](/da/modules/mes), I kan indføre trin for trin. Det kræver ikke et stort IT-projekt, der skal være færdigt på én gang.
+OptiPeople Data Platform er [et MES-system i skyen](/da/modules/mes), I kan indføre ét modul ad gangen. Det kræver ikke et stort IT-projekt, der skal være færdigt på én gang.
 
 I kan starte med ét klart mål, for eksempel:
 

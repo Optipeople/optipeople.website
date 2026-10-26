@@ -183,7 +183,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         answer: {
           question: "Hvad er et OEE-system?",
-          body: "Et OEE-system måler, hvor meget af den planlagte produktionstid der bliver til gode emner. Det samler tilgængelighed, ydelse og kvalitet i ét tal, så I kan se, om tiden forsvinder i stop, langsom kørsel eller kassation. OptiPeople Data Platform henter maskinstatus og emnetællere direkte fra maskinerne, og operatøren registrerer stopårsagen ved maskinen.",
+          body: "Et OEE-system måler, hvor meget af den planlagte produktionstid, der bliver til gode emner. Det samler tilgængelighed, ydelse og kvalitet i ét tal, så I kan se, om tiden forsvinder i stop, langsom kørsel eller kassation. OptiPeople Data Platform henter maskinstatus og emnetællere direkte fra maskinerne, og operatøren registrerer stopårsagen ved maskinen.",
         },
         caseLink: {
           customer: "Dansk Træemballage",
@@ -195,7 +195,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           title: "Spørgsmål om OEE-systemet",
           items: [
             {
-              question: "Hvordan måler I OEE på ældre maskiner?",
+              question: "Kan man måle OEE på ældre maskiner?",
               answer:
                 "Nyere maskiner læser vi over de protokoller, styringen taler i forvejen. På ældre maskiner, hvor der ikke er noget at læse fra, sætter vi sensorer på og måler signalet direkte. Alderen afgør ikke, om en maskine kan måles.",
             },
@@ -896,7 +896,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
         answer: {
           question: "Hvad er produktionsovervågning?",
-          body: "Produktionsovervågning betyder, at I kan se, hvordan maskinerne kører, mens det sker: om de kører eller står stille, hvor mange emner de laver, og hvorfor de stopper. Tallene kommer fra maskinerne, ikke fra håndskrevne lister. OptiPeople Data Platform læser fra de styringer og systemer, I har, og sætter kun sensorer op, hvor der ikke er noget at læse fra.",
+          body: "Produktionsovervågning betyder, at I kan se, hvordan maskinerne kører, mens det sker: om de kører eller står stille, hvor mange emner de laver, og hvorfor de stopper. Status og antal kommer fra maskinerne, ikke fra håndskrevne lister. OptiPeople Data Platform læser fra de styringer og systemer, I har, og sætter kun sensorer op, hvor der ikke er noget at læse fra.",
         },
         caseLink: {
           customer: "Glaseksperten",
@@ -908,7 +908,7 @@ const modules: LocalizedPage<StandardPage>[] = [
           title: "Spørgsmål om maskinovervågning",
           items: [
             {
-              question: "Kan I overvåge gamle maskiner?",
+              question: "Kan gamle maskiner overvåges?",
               answer:
                 "Ja. Nyere styringer læser vi over de protokoller, maskinerne taler i forvejen. På de ældre maskiner, hvor der ikke er noget at læse fra, sætter vi sensorer på og måler signalet direkte. Alderen afgør ikke, om en maskine kan måles.",
             },
@@ -918,19 +918,19 @@ const modules: LocalizedPage<StandardPage>[] = [
                 "Nej. Har maskinen en PLC, læser vi fra den. Har den ikke, måler en sensor signalet direkte. Det samme gælder sensorer og dataloggere fra tidligere projekter: dem læser vi fra i stedet for at sætte nye op ved siden af.",
             },
             {
-              question: "Hvilke protokoller kan I koble på?",
+              question: "Hvilke protokoller kan kobles på?",
               answer:
                 "OPC-UA, Modbus, MQTT, IO-Link, REST, filer og sensorsæt. Har I en historian, SCADA eller maskinleverandørens portal, bliver den koblet på som en kilde og ikke skiftet ud.",
             },
             {
-              question: "Skal produktionen stå stille, mens I kobler på?",
+              question: "Skal produktionen stå stille, mens maskinerne kobles på?",
               answer:
                 "Nej. Vi kobler os på de maskiner og PLC'er, I har, uden at produktionen skal stå stille. Data bliver sendt krypteret og kontrolleret undervejs.",
             },
             {
               question: "Hvor hurtigt kommer tallene frem?",
               answer:
-                "Der går under et minut, fra det sker på maskinen, til det står på skærmen. Så kan I reagere, mens skiftet stadig kører.",
+                "Med det samme. Tallene kommer live fra maskinerne, så I kan reagere, mens skiftet stadig kører.",
             },
             {
               question: "Kan vi få data ud i vores egne systemer?",

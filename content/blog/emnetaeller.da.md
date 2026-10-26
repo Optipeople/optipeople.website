@@ -27,7 +27,7 @@ OEE er et mere brugbart nøgletal, fordi det samler:
 - ydelse
 - kvalitet
 
-Så kan I se, om maskinen rent faktisk producerer effektivt, og ikke bare om den kører. [Et OEE-system](/da/modules/production) regner de tre tal ud direkte fra maskinerne, mens skiftet kører.
+Så kan I se, om maskinen rent faktisk producerer effektivt, og ikke bare om den kører. [Et OEE-system](/da/modules/production) regner de tre tal ud løbende med data fra maskinerne, mens skiftet kører.
 
 ## Her er emnetælleren stadig god
 

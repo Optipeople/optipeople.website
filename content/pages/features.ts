@@ -818,7 +818,7 @@ const features: LocalizedPage<FeaturePage>[] = [
         eyebrow: "Stopregistrering",
         heroTitle: "Stopregistrering, der viser, hvor nedetiden går hen",
         heroBody:
-          "Maskinen melder selv stoppet. Operatøren vælger årsagen på panelet ved maskinen eller arbejdsstationen, mens det stadig står klart, hvad der skete. Så får I tal, der er til at stole på og til at gøre noget ved.",
+          "Maskinen melder selv stoppet. Operatøren vælger årsagen på panelet ved maskinen, mens det stadig står klart, hvad der skete. Så får I tal, der er til at stole på og til at gøre noget ved.",
         heroImage: "/images/Stop-Screen-Select.png",
         heroImageAlt: "Skærm til valg af stopårsag",
         valueTitle: "Det, I ikke kan se, kan I ikke rette",
