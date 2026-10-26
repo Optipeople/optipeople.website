@@ -1,6 +1,7 @@
 # Warriv's memory
 
 ## Rules
+- A quest branch built on another unlanded quest's branch: its fix-up waits for that one to land, then cherry-picks only its own commits.
 - Steps that need the human's Vercel login or the GA4 UI stay with the human. Since 2026-10-06 the seo-reader service account is GA4 Admin and Search Console Full user, so API-reachable GA4 and Search Console steps (key events, sitemap submit) can go to agents.
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 - A quest branch that holds a merge commit cannot land by rebase or cherry-pick; land it as one squash commit.
@@ -8,6 +9,7 @@
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 Captures quest (10 images plus alt texts, 330a6df) conflicted because its branch carries the replays commit 5ab5fe8. Gave the fix-up sonnet; told it to wait for the replays fix-up, then cherry-pick only 0396384 and 330a6df, keeping its webp files and alt texts.
 - 2026-10-26 Replays quest finished but conflicted with c9d6512, f9c6bb2 and 025b07c in standard-page.tsx, modules.ts, shared/types.ts. Gave the fix-up sonnet and told it to keep both sides, replays on top of main's FAQ and answer fields.
 - 2026-10-26 Round after the comparison pages landed (c9e0ad2, human approved). Captures quest now blocked only on the replays quest landing. Log not dry (replays running, SEO week 2026-11-02 queued); nothing filed or cast.
 - 2026-10-26 Round after the Bing import landed (human signed in, quest done). Comparison pages blocked on pricing wording and competitor claims as planned; left with the human, noted. Log not dry, nothing filed or cast.
@@ -63,5 +65,5 @@
 ## Open
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
-- Captures quest: 10 showcase images retaken (f951c5a); alt texts and live operator panel shots wait for the replays quest to land, then rerun it.
+- Captures fix-up waits on the replays fix-up, then lands 0396384 and 330a6df only. Operator panel shots have their own quest.
 - Replays merge fix-up running (sonnet); once it lands, the captures quest can do its alt texts in content/replays/*.ts.
