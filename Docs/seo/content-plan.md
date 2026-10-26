@@ -8,7 +8,7 @@ Every item ships in Danish and English together, answers its main query in the f
 
 - Danish buyer pages for OEE, monitoring, stops, MES and energy (quest).
 - The MES module page as the cloud MES page (quest).
-- Comparison pages against Evocon and Factbird (quest, waits for review).
+- Comparison pages against Evocon and Factbird: /compare/evocon and /compare/factbird, approved 2026-10-26. Re-check competitor facts every six months.
 
 ## Backlog
 
