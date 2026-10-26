@@ -96,14 +96,14 @@ function WorkflowsMockup() {
           </span>
           Create work order
         </span>
-        <span className="text-slate-300">···</span>
+        <span className="text-slate-500">···</span>
       </div>
       <div className={`${panel} w-full p-2`}>
         <div className="flex items-center justify-between px-1 pb-1.5">
           <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-slate-700">
             <Plus className="size-3.5" /> Add node
           </span>
-          <span className="text-slate-300">×</span>
+          <span className="text-slate-500">×</span>
         </div>
         <div className="space-y-0.5">
           {nodes.map(({ icon: Icon, title, desc }) => (
@@ -175,12 +175,12 @@ function AgentsMockup() {
 function IntegrationsMockup() {
   const tiles = [
     { label: "SAP", color: "bg-blue-600" },
-    { label: "D365", color: "bg-sky-500" },
-    { label: "BC", color: "bg-indigo-500" },
-    { label: "NAV", color: "bg-cyan-600" },
-    { label: "ORA", color: "bg-red-500" },
+    { label: "D365", color: "bg-sky-700" },
+    { label: "BC", color: "bg-indigo-600" },
+    { label: "NAV", color: "bg-cyan-700" },
+    { label: "ORA", color: "bg-red-600" },
     { label: "NS", color: "bg-slate-700" },
-    { label: "M", color: "bg-emerald-600" },
+    { label: "M", color: "bg-emerald-700" },
     { label: "T", color: "bg-violet-600" },
   ]
   return (

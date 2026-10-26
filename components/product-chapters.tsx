@@ -617,7 +617,7 @@ function ManualFragment({ manual }: { manual: AssistCopy["manual"] }) {
           <FileText className="size-3.5" />
           {manual.title}
         </span>
-        <span className="text-slate-400">{manual.page}</span>
+        <span className="text-slate-500">{manual.page}</span>
       </div>
       <div className="mt-3 space-y-1.5" aria-hidden="true">
         <div className="h-1.5 w-full rounded-full bg-slate-100" />
