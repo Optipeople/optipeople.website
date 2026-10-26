@@ -80,8 +80,8 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             topic: "MES scope",
             us: "A modular MES: OEE, orders with work instructions and traceability, planning against measured capacity, quality, maintenance and documents, on one data foundation. Runs with or without an ERP.",
-            them: "An OEE system. Jobs can be read from the ERP and picked by the operator. Materials and labour are covered through ERP or MES integrations. Scheduling, work orders and traceability are not described.",
-            sources: [7, 8],
+            them: "An OEE system. ERP integrations are priced case by case. Materials and labour are covered through ERP or MES integrations. Scheduling, work orders and traceability are not described.",
+            sources: [7, 2],
           },
           {
             topic: "Energy",
@@ -118,7 +118,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             title: "Simple to start",
             description:
-              "A box with three inputs, a relay or a sensor, and a screen you already own. It counts and records stops without anyone working in the PLC, and Evocon says setup takes a few days.",
+              "A box with three inputs, a relay or a sensor, and a screen you already own. It counts and records stops without programming the PLC, and Evocon says setup takes a few days.",
           },
           {
             title: "Proven in many countries",
@@ -151,7 +151,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             title: "An assistant at the machine",
             description:
-              "Opti Assist answers operators at the machine, in Danish, from your own manuals and live data. It does more than report on OEE losses.",
+              "Opti Assist answers operators at the machine, in Danish, from your own manuals and live data.",
           },
           {
             title: "Danish, close by",
@@ -161,7 +161,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
         ],
         chooseTitle: "Which one should you choose?",
         chooseThem:
-          "Choose Evocon if you want OEE and stop tracking on a few machines quickly, at a known price, want to try it free first, and do not need orders, planning or energy in the same system.",
+          "Choose Evocon if you want OEE and stop tracking on your lines quickly, at a known price, want to try it free first, and do not need orders, planning or energy in the same system.",
         chooseUs:
           "Choose OptiPeople if OEE is the first step and you want orders, planning, quality, maintenance and energy per unit on the same data later, with the machine's own signals read directly, and a Danish team on site.",
         sourcesTitle: "Sources",
@@ -201,7 +201,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
         eyebrow: "Sammenligning",
         heroTitle: "OptiPeople eller Evocon",
         heroBody:
-          "Begge måler OEE og stopårsager live, og begge tager pris pr. maskine. Vælg Evocon, hvis I vil have enkel OEE med kendte priser, 30 dages gratis prøve og en boks, der tæller ud fra et relæ. Vælg OptiPeople, når OEE skal vokse til ordrer, planlægning, energi pr. enhed og vedligehold på én platform, med et dansk hold, der kommer ud til jer.",
+          "Begge måler OEE og stopårsager live, og begge tager pris pr. maskine. Vælg Evocon, hvis I vil have enkel, gennemprøvet OEE med kendte priser, 30 dages gratis prøve og en boks, der tæller ud fra et relæ. Vælg OptiPeople, når OEE skal vokse til ordrer, planlægning, energi pr. enhed og vedligehold på én platform, med et dansk hold, der kommer ud til jer.",
         competitor: "Evocon",
         checked:
           "Fakta om Evocon er tjekket 26. oktober 2026 på Evocons og deres danske partner Flexkoms sider. Linkene står nederst. Sig til, hvis noget har ændret sig, så retter vi det.",
@@ -229,8 +229,8 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             topic: "MES",
             us: "Et modulært MES: OEE, ordrer med arbejdsinstruktioner og sporbarhed, planlægning ud fra den målte kapacitet, kvalitet, vedligehold og dokumenter på samme data. Kører med eller uden ERP.",
-            them: "Et OEE-system. Ordrer kan hentes fra ERP, og operatøren vælger, hvad der kører. Materialer og arbejdstid dækkes gennem integration til ERP eller MES. Planlægning, arbejdsordrer og sporbarhed er ikke beskrevet.",
-            sources: [7, 8],
+            them: "Et OEE-system. Integration til ERP prissættes fra sag til sag. Materialer og arbejdstid dækkes gennem integration til ERP eller MES. Planlægning, arbejdsordrer og sporbarhed er ikke beskrevet.",
+            sources: [7, 2],
           },
           {
             topic: "Energi",
@@ -267,7 +267,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             title: "Enkelt at komme i gang",
             description:
-              "En boks med tre indgange, et relæ eller en sensor og en skærm, I allerede har. Den tæller og registrerer stop, uden at nogen skal ind i PLC'en, og Evocon siger, det tager et par dage.",
+              "En boks med tre indgange, et relæ eller en sensor og en skærm, I allerede har. Den tæller og registrerer stop, uden at nogen skal programmere PLC'en, og Evocon siger, det tager et par dage.",
           },
           {
             title: "Afprøvet i mange lande",
@@ -300,7 +300,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             title: "En assistent ved maskinen",
             description:
-              "Opti Assist svarer operatøren ved maskinen, på dansk, ud fra jeres egne manualer og live data. Den gør mere end at lave en rapport om OEE-tab.",
+              "Opti Assist svarer operatøren ved maskinen, på dansk, ud fra jeres egne manualer og live data.",
           },
           {
             title: "Dansk og tæt på",
@@ -310,7 +310,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
         ],
         chooseTitle: "Hvilken skal I vælge?",
         chooseThem:
-          "Vælg Evocon, hvis I hurtigt vil have OEE og stopregistrering på nogle få maskiner til en kendt pris, vil prøve det gratis først og ikke har brug for ordrer, planlægning eller energi i samme system.",
+          "Vælg Evocon, hvis I hurtigt vil have OEE og stopregistrering på jeres linjer til en kendt pris, vil prøve det gratis først og ikke har brug for ordrer, planlægning eller energi i samme system.",
         chooseUs:
           "Vælg OptiPeople, hvis OEE er første skridt, og I senere vil have ordrer, planlægning, kvalitet, vedligehold og energi pr. enhed på de samme data, med maskinens egne signaler læst direkte og et dansk hold, der kommer ud til jer.",
         sourcesTitle: "Kilder",
@@ -390,7 +390,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             topic: "Energy",
             us: "An EMS module in the same platform: kWh per machine, line and site, and energy per unit, order and shift, next to OEE.",
-            them: "Clip-on current sensors and Siemens meters. Utility monitoring covers electricity, water, gas and compressed air, with product-level carbon footprint. Sold as an add-on.",
+            them: "Clip-on current sensors and Siemens meters. Utility monitoring covers electricity, water, gas and compressed air, with product-level carbon footprint. Utility monitoring is an add-on.",
             sources: [8, 9, 1],
           },
           {
@@ -408,7 +408,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             topic: "Pricing model",
             us: "A subscription per connected machine per month, not per user. Hardware and installation are priced separately. No public price list: you get a quote after we have looked at your machines.",
-            them: "Public prices per line per month for each app, plus a platform fee per site. On the day we checked, the page showed two tables: from $250 or $399 per line, and a $1,000 platform fee per site. Extra inputs, energy and hardware cost extra.",
+            them: "Public prices per line per month for each app, plus a platform fee per site. On the day we checked, the page showed two tables: from $250 or $399 per line, and a $1,000 platform fee per site. Extra inputs, utility monitoring and add-ons such as the VIEW camera are priced separately.",
             sources: [1],
           },
         ],
@@ -445,22 +445,17 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             title: "Orders and planning, not only monitoring",
             description:
-              "Orders, work instructions and planning run in the same platform as OEE, so every stop and every scrapped part lands on an order. You can start with OEE and switch on the next module when you are ready.",
+              "Orders, work instructions and planning run in the same platform as OEE, so every stop and every scrapped part lands on an order. Factbird has shift and batch scheduling, but its pages do not describe production orders.",
           },
           {
             title: "Energy per unit next to OEE",
             description:
-              "The EMS module ties kWh to the machine, the order and the shift, so energy shows up as cost per unit, not as a separate meter report.",
+              "The EMS module ties kWh to the machine, the order and the shift, so energy shows up as cost per unit.",
           },
           {
             title: "Works with the machines you have",
             description:
-              "We read existing PLCs and controls first and only add sensors where nothing can be read, which gives you the machine's own signals rather than a count from the outside.",
-          },
-          {
-            title: "Priced per machine, not per line and site",
-            description:
-              "There is no site fee on top. Everyone in the factory can log in without the price going up.",
+              "We read PLCs and controls first, across mixed and older machines, and add sensors only where nothing can be read.",
           },
           {
             title: "Danish, close by",
@@ -483,7 +478,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
             {
               question: "Is Factbird or OptiPeople better for OEE?",
               answer:
-                "Both measure OEE and stop causes live. Factbird is quick to put on a line with its own sensor box. OptiPeople reads the machine's PLC and ties OEE to orders, planning and energy in the same platform. The better fit depends on whether you want monitoring alone or a step towards an MES.",
+                "Both measure OEE and stop causes live. Factbird is quick to put on a line with its own sensor box. Both can read PLC data. OptiPeople ties OEE to orders, planning and energy in the same platform. The better fit depends on whether you want monitoring alone or a step towards an MES.",
             },
             {
               question: "Is Factbird a Danish company?",
@@ -498,7 +493,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
             {
               question: "Does Factbird have an MES?",
               answer:
-                "Factbird does not sell a product called MES. Its Connected Operations app covers digital SOPs, quality checks and maintenance, and it integrates with ERP and MES systems. OptiPeople's modular MES covers orders, planning, quality, maintenance and documents.",
+                "Factbird does not sell a product called MES. Its Connected Operations app covers digital SOPs, quality checks and maintenance, Production Insights has shift and batch scheduling, and it integrates with ERP and MES systems. OptiPeople's modular MES covers orders, planning, quality, maintenance and documents.",
             },
           ],
         },
@@ -544,7 +539,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             topic: "Energi",
             us: "Et EMS-modul på samme platform: kWh pr. maskine, linje og fabrik og energi pr. enhed, ordre og skift, lige ved siden af OEE.",
-            them: "Strømtænger og Siemens-målere. Forsyningsovervågning dækker el, vand, gas og trykluft, med CO2-aftryk pr. produkt. Sælges som tilkøb.",
+            them: "Strømtænger og Siemens-målere. Forsyningsovervågning dækker el, vand, gas og trykluft, med CO2-aftryk pr. produkt. Forsyningsovervågning er et tilkøb.",
             sources: [8, 9, 1],
           },
           {
@@ -562,7 +557,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             topic: "Prismodel",
             us: "Et abonnement pr. tilkoblet maskine pr. måned, ikke pr. bruger. Hardware og installation prissættes for sig. Ingen offentlig prisliste: I får et tilbud, når vi har set jeres maskiner.",
-            them: "Offentlige priser pr. linje pr. måned for hver app plus et platformsgebyr pr. fabrik. Den dag vi tjekkede, viste siden to tabeller: fra 250 eller 399 dollar pr. linje og 1.000 dollar pr. fabrik i platformsgebyr. Ekstra input, energi og hardware koster ekstra.",
+            them: "Offentlige priser pr. linje pr. måned for hver app plus et platformsgebyr pr. fabrik. Den dag vi tjekkede, viste siden to tabeller: fra 250 eller 399 dollar pr. linje og 1.000 dollar pr. fabrik i platformsgebyr. Ekstra input, forsyningsovervågning og tilkøb som VIEW-kameraet prissættes for sig.",
             sources: [1],
           },
         ],
@@ -599,22 +594,17 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
           {
             title: "Ordrer og planlægning, ikke kun overvågning",
             description:
-              "Ordrer, arbejdsinstruktioner og planlægning kører på samme platform som OEE, så hvert stop og hver kasseret del lander på en ordre. I kan starte med OEE og slå næste modul til, når I er klar.",
+              "Ordrer, arbejdsinstruktioner og planlægning kører på samme platform som OEE, så hvert stop og hver kasseret del lander på en ordre. Factbird har planlægning af skift og batch, men deres sider beskriver ikke produktionsordrer.",
           },
           {
             title: "Energi pr. enhed ved siden af OEE",
             description:
-              "EMS-modulet kobler kWh til maskinen, ordren og skiftet. Energien bliver en pris pr. enhed, ikke en måler-rapport for sig.",
+              "EMS-modulet kobler kWh til maskinen, ordren og skiftet. Energien bliver en pris pr. enhed.",
           },
           {
             title: "Virker med de maskiner, I har",
             description:
-              "Vi læser først de PLC'er og styringer, der er, og sætter kun sensorer på, hvor der ikke er noget at læse. Så får I maskinens egne signaler og ikke en tælling udefra.",
-          },
-          {
-            title: "Pris pr. maskine, ikke pr. linje og fabrik",
-            description:
-              "Der kommer ikke et fabriksgebyr oveni. Alle på fabrikken kan logge ind, uden at prisen stiger.",
+              "Vi læser først de PLC'er og styringer, der er, også på gamle og blandede maskiner, og sætter kun sensorer på, hvor der ikke er noget at læse.",
           },
           {
             title: "Dansk og tæt på",
@@ -637,7 +627,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
             {
               question: "Er Factbird eller OptiPeople bedst til OEE?",
               answer:
-                "Begge måler OEE og stopårsager live. Factbird er hurtigt sat op på en linje med deres egen sensorboks. OptiPeople læser maskinens PLC og kobler OEE til ordrer, planlægning og energi på samme platform. Hvad der passer bedst, afhænger af, om I kun vil overvåge, eller om det er et skridt mod et MES.",
+                "Begge måler OEE og stopårsager live. Factbird er hurtigt sat op på en linje med deres egen sensorboks. Begge kan læse data fra PLC'en. OptiPeople kobler OEE til ordrer, planlægning og energi på samme platform. Hvad der passer bedst, afhænger af, om I kun vil overvåge, eller om det er et skridt mod et MES.",
             },
             {
               question: "Er Factbird en dansk virksomhed?",
@@ -652,7 +642,7 @@ const comparisons: LocalizedPage<ComparisonPage>[] = [
             {
               question: "Har Factbird et MES?",
               answer:
-                "Factbird sælger ikke et produkt, der hedder MES. Deres Connected Operations-app dækker digitale SOP'er, kvalitetstjek og vedligehold, og de integrerer med ERP- og MES-systemer. OptiPeoples modulære MES dækker ordrer, planlægning, kvalitet, vedligehold og dokumenter.",
+                "Factbird sælger ikke et produkt, der hedder MES. Deres Connected Operations-app dækker digitale SOP'er, kvalitetstjek og vedligehold, Production Insights har planlægning af skift og batch, og de integrerer med ERP- og MES-systemer. OptiPeoples modulære MES dækker ordrer, planlægning, kvalitet, vedligehold og dokumenter.",
             },
           ],
         },
