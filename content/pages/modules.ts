@@ -1004,18 +1004,30 @@ const modules: LocalizedPage<StandardPage>[] = [
     href: "/modules/mes",
     content: {
       en: {
-        metaTitle: "Modular MES",
+        metaTitle: "Cloud MES software: a modular, cloud-based MES",
         metaDescription:
-          "A modular MES made of nine modules (Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents), switched on one module at a time.",
-        eyebrow: "Modular MES",
-        heroTitle: "Your Modular MES platform",
+          "Cloud MES software you roll out one module at a time. A cloud-based manufacturing execution system for small and mid-sized plants: no server room, no big IT project, live in weeks.",
+        eyebrow: "Cloud MES",
+        heroTitle: "Cloud MES, switched on one module at a time",
         heroBody:
-          "Manufacturing execution you switch on one module at a time. Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
+          "A cloud-based manufacturing execution system you open in a browser, with no server room and no big IT project. Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
         primaryLabel: "Request a demo",
         introTitle: "Nobody needs a whole MES on day one",
         introBody:
           "The classic MES is an all-or-nothing project: eighteen months, every process at once, and a scope nobody on the floor recognizes by the end of it. A modular MES is the opposite. Start with the module that answers the question you have this quarter, whether that is orders, the plan, machine and workstation data, or OEE, and add the next one when the next question turns up. Every module you add reads the data the earlier ones already collect.",
-        capabilitiesTitle: "The modules a modular MES is made of",
+        answers: [
+          {
+            title: "What is a cloud MES?",
+            body:
+              "A cloud MES (cloud-based manufacturing execution system) is software for running production that lives in the cloud and is used through a browser. It connects machines, workstations, orders, and people on the floor, and it can exchange data with the ERP and SCADA you already have. It is delivered as SaaS, so the vendor runs the servers, updates, and backups.",
+          },
+          {
+            title: "Cloud vs on-premise MES",
+            body:
+              "An on-premise MES runs on your own servers: hardware to buy, a team to maintain it, and upgrades as projects of their own. A cloud MES is a subscription: it is up in weeks, updates itself, and scales by adding machines or modules instead of servers. On-premise still makes sense where a plant cannot reach the internet at all. For most small and mid-sized plants, cloud is the faster, cheaper route.",
+          },
+        ],
+        capabilitiesTitle: "The modules a cloud MES is made of",
         features: [
           {
             icon: Calendar,
@@ -1082,6 +1094,42 @@ const modules: LocalizedPage<StandardPage>[] = [
           { metric: "9", label: "Modules on the same data foundation" },
           { metric: "0", label: "Re-entry between them" },
         ],
+        rolloutTitle: "Rolling out a cloud MES in a small plant",
+        rolloutIntro:
+          "No eighteen-month project. A small plant can have its first machine reporting in days and a full picture in a few months.",
+        rollout: [
+          {
+            title: "Pick one question",
+            description:
+              "Where do we lose time? Which orders are late? Choose the one question that matters this quarter, and the module that answers it.",
+          },
+          {
+            title: "Connect the first machines",
+            description:
+              "Start with the two or three machines that matter most. Existing controls, retrofitted sensors, or a manual panel all work, with no rip-and-replace.",
+          },
+          {
+            title: "Put the panel at the machine",
+            description:
+              "Operators start jobs, report quantities, and register stop causes on the panel where the work happens. Training is minutes, not days.",
+          },
+          {
+            title: "Read the first weeks",
+            description:
+              "After a couple of weeks the data shows the biggest losses. Fix the largest one and measure that it moved.",
+          },
+          {
+            title: "Add machines, then the next module",
+            description:
+              "Roll out to the rest of the plant, then switch on planning, quality, or energy against data you already hold. Link the ERP when it earns its keep.",
+          },
+        ],
+        explainer: {
+          lead: "New to the idea? Read the plain explainer:",
+          anchor: "cloud based manufacturing execution system",
+          href: "/blog/cloud-mes-cloud-based-manufacturing-execution-system",
+          tail: ".",
+        },
         stepsTitle: "How it works",
         steps: [
           {
@@ -1102,18 +1150,30 @@ const modules: LocalizedPage<StandardPage>[] = [
         ],
       },
       da: {
-        metaTitle: "Modulært MES-system til produktionen | OptiPeople",
+        metaTitle: "Cloud MES: modulært MES-system i skyen | OptiPeople",
         metaDescription:
-          "Et MES, I tager i brug ét modul ad gangen: Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter. Start dér, hvor det gør ondt.",
-        eyebrow: "Modulært MES",
-        heroTitle: "Jeres modulære MES",
+          "Cloud MES, I tager i brug ét modul ad gangen. Et MES-system i skyen til små og mellemstore produktioner: ingen serverrum, intet stort IT-projekt, i drift på uger.",
+        eyebrow: "Cloud MES",
+        heroTitle: "Cloud MES, I slår til ét modul ad gangen",
         heroBody:
-          "Et MES, I slår til ét modul ad gangen. Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
+          "Et MES i skyen, I åbner i browseren, uden serverrum og uden et stort IT-projekt. Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
         primaryLabel: "Book en demo",
         introTitle: "Ingen har brug for et helt MES fra dag ét",
         introBody:
           "Et klassisk MES-projekt er alt eller intet: halvandet år, alle processer på én gang, og et omfang, ingen på gulvet kan genkende til sidst. Et modulært MES er det modsatte. Start med det modul, der svarer på det spørgsmål, I har lige nu, og tag det næste, når det næste spørgsmål dukker op.",
-        capabilitiesTitle: "Modulerne i et modulært MES",
+        answers: [
+          {
+            title: "Hvad er en cloud MES?",
+            body:
+              "En cloud MES er et MES-system, der kører i skyen, og som I bruger i en browser. Det binder maskiner, arbejdsstationer, ordrer og folk på gulvet sammen, og det kan udveksle data med det ERP og SCADA, I allerede har. Det leveres som SaaS, så leverandøren tager sig af servere, opdateringer og backup.",
+          },
+          {
+            title: "Cloud MES eller MES på egne servere?",
+            body:
+              "Et MES på egne servere kræver hardware, en der passer det, og opgraderinger, der bliver til projekter. En cloud MES er et abonnement: den er oppe på uger, opdaterer sig selv og vokser med flere maskiner eller moduler i stedet for flere servere. Egne servere giver stadig mening, hvis fabrikken slet ikke kan komme på nettet. For de fleste små og mellemstore produktioner er skyen den hurtigste og billigste vej.",
+          },
+        ],
+        capabilitiesTitle: "Modulerne i en cloud MES",
         features: [
           {
             icon: Calendar,
@@ -1180,6 +1240,42 @@ const modules: LocalizedPage<StandardPage>[] = [
           { metric: "9", label: "Moduler på det samme datagrundlag" },
           { metric: "0", label: "Gange, I taster det samme igen" },
         ],
+        rolloutTitle: "Sådan får en lille produktion en cloud MES i drift",
+        rolloutIntro:
+          "Ikke et projekt på halvandet år. En lille produktion kan have den første maskine på nettet på få dage og det fulde overblik efter nogle måneder.",
+        rollout: [
+          {
+            title: "Vælg ét spørgsmål",
+            description:
+              "Hvor taber vi tid? Hvilke ordrer er forsinkede? Vælg det ene spørgsmål, der tæller i dette kvartal, og det modul, der svarer på det.",
+          },
+          {
+            title: "Kobl de første maskiner på",
+            description:
+              "Start med de to-tre maskiner, der betyder mest. Eksisterende styringer, eftermonterede sensorer eller et manuelt panel virker alle, uden at noget skal skiftes ud.",
+          },
+          {
+            title: "Sæt panelet ved maskinen",
+            description:
+              "Operatørerne starter job, melder antal og registrerer stopårsager på panelet dér, hvor arbejdet sker. Oplæring tager minutter, ikke dage.",
+          },
+          {
+            title: "Læs de første uger",
+            description:
+              "Efter et par uger viser data de største tab. Ret det største, og mål, at tallet flyttede sig.",
+          },
+          {
+            title: "Tag flere maskiner, så næste modul",
+            description:
+              "Rul ud på resten af fabrikken, og slå så planlægning, kvalitet eller energi til på data, I allerede har. Kobl ERP på, når det kan betale sig.",
+          },
+        ],
+        explainer: {
+          lead: "Ny i begrebet? Læs den enkle forklaring:",
+          anchor: "cloud MES",
+          href: "/blog/cloud-mes-cloud-based-manufacturing-execution-system",
+          tail: ".",
+        },
         stepsTitle: "Sådan virker det",
         steps: [
           {

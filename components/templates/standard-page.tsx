@@ -172,6 +172,23 @@ export function StandardPageTemplate({
         </div>
       </section>
 
+      {page.answers && page.answers.length > 0 && (
+        <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
+          <div className="grid gap-px overflow-hidden rounded-2xl bg-black/[0.08] lg:grid-cols-2">
+            {page.answers.map((item) => (
+              <div key={item.title} className="bg-background p-7 lg:p-10">
+                <h2 className="text-2xl font-normal leading-[1.2] tracking-tight text-foreground lg:text-3xl">
+                  {item.title}
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-foreground/78">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Capabilities, tinted cards carrying the page's colour. */}
       <section
         id="capabilities"
@@ -273,6 +290,54 @@ export function StandardPageTemplate({
         </ol>
       </section>
 
+      {page.rollout && page.rollout.length > 0 && (
+        <section className="px-[var(--edge)] pb-16 sm:pb-20 lg:pb-28">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-20">
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <h2 className="text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
+                {page.rolloutTitle}
+              </h2>
+              {page.rolloutIntro && (
+                <p className="mt-4 text-base leading-relaxed text-foreground/78 lg:text-lg">
+                  {page.rolloutIntro}
+                </p>
+              )}
+              {page.explainer && (
+                <p className="mt-6 text-sm leading-relaxed text-foreground/72">
+                  {page.explainer.lead}{" "}
+                  <Link
+                    href={page.explainer.href}
+                    className="underline underline-offset-4 hover:text-foreground"
+                  >
+                    {page.explainer.anchor}
+                  </Link>
+                  {page.explainer.tail}
+                </p>
+              )}
+            </div>
+            <ol className="border-t border-black/[0.08]">
+              {page.rollout.map((step, i) => (
+                <li
+                  key={step.title}
+                  className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-black/[0.08] py-6 lg:py-8"
+                >
+                  <span className="text-sm font-medium tabular-nums text-foreground/50">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-medium tracking-tight text-foreground">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground/72">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
       {page.faq && <PageFaqSection faq={page.faq} />}
 
       {/* Visual. Either a section in its own right, or the full-bleed deep

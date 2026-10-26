@@ -51,6 +51,8 @@ Then you can add more steps, for example:
 - maintenance planning
 - predictive alarms that warn you before something goes wrong
 
+OptiPeople Data Platform covers this on the [cloud MES module page](/modules/mes), including a step-by-step rollout for a small plant and a comparison of cloud vs on-premise MES.
+
 ## The practical advantage
 
 The big advantage of a cloud MES is that you can build it up a bit at a time.

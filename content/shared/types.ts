@@ -60,6 +60,14 @@ export type StandardPage = {
    * product view. Takes precedence over `visualDrawn` and `visualImage`.
    */
   visualSection?: "architecture"
+  /** Answer-first prose blocks (a question as title) rendered under the intro. */
+  answers?: { title: string; body: string }[]
+  /** A numbered, longer rollout plan rendered after the steps. */
+  rolloutTitle?: string
+  rolloutIntro?: string
+  rollout?: Step[]
+  /** Blog explainer the page links to, with the search query as anchor. */
+  explainer?: { lead: string; anchor: string; href: string; tail?: string }
   metricsTitle: string
   metrics: Metric[]
   stepsTitle: string

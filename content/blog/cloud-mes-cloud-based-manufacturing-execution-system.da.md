@@ -47,6 +47,8 @@ Bagefter kan I tage flere trin, for eksempel:
 - planlægning af vedligehold
 - alarmer, der advarer, før noget går galt
 
+Se hele [cloud MES-modulet](/da/modules/mes) med en trin-for-trin udrulning for en lille produktion og en sammenligning af cloud MES og MES på egne servere.
+
 ## Fordelen i praksis
 
 Den store fordel ved en cloud MES er, at I kan bygge den op lidt ad gangen.
