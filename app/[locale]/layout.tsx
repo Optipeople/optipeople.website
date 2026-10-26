@@ -7,7 +7,7 @@ import "../globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalizedCallToAction } from "@/components/localized-call-to-action";
-import { NewsletterPrompt } from "@/components/newsletter-prompt";
+import { LazyNewsletterPrompt } from "@/components/newsletter-prompt-lazy";
 import { ConsentBanner } from "@/components/consent-banner";
 import { JsonLd } from "@/components/json-ld";
 import { routing } from "@/i18n/routing";
@@ -27,6 +27,9 @@ const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
+  // Only quotes and blog pull quotes use it, never the first screen, so it
+  // must not compete with the CSS and the sans for early bandwidth.
+  preload: false,
   variable: "--font-ibm-plex-serif",
 });
 
@@ -35,6 +38,7 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
+  preload: false,
   variable: "--font-ibm-plex-mono",
 });
 
@@ -67,6 +71,8 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
+      // The head script may add data-consent before React hydrates.
+      suppressHydrationWarning
       className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} ${ibmPlexMono.variable}`}
     >
       <head>
@@ -85,7 +91,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <LocalizedCallToAction />
           <SiteFooter />
-          <NewsletterPrompt />
+          <LazyNewsletterPrompt />
           <ConsentBanner />
         </NextIntlClientProvider>
       </body>

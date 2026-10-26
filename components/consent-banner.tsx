@@ -20,17 +20,22 @@ import {
  */
 export function ConsentBanner() {
   const t = useTranslations("consent")
-  const [open, setOpen] = useState(false)
-  const [visible, setVisible] = useState(false)
+  // Open in the server HTML, so a first-time visitor sees it in the first
+  // paint instead of fading in after hydration (that late change cost the
+  // PageSpeed Speed Index). For returning visitors <html data-consent>, set by
+  // the head script, keeps it hidden until they reopen it from settings.
+  const [open, setOpen] = useState(true)
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const choice = readConsent()
     if (choice) applyConsent(choice)
     const show = () => {
+      // React decides from here, so reopening from settings works.
+      document.documentElement.removeAttribute("data-consent")
       setOpen(true)
       requestAnimationFrame(() => setVisible(true))
     }
-    if (!choice) show()
     return onConsentSettingsOpen(show)
   }, [])
 
@@ -63,11 +68,11 @@ export function ConsentBanner() {
       role="dialog"
       aria-labelledby="consent-title"
       aria-describedby="consent-body"
-      className={`fixed bottom-4 left-4 z-[60] w-[calc(100vw-2rem)] max-w-sm transition-all duration-500 ease-out sm:bottom-6 sm:left-6 ${
+      className={`consent-banner fixed bottom-4 left-4 z-[60] w-[calc(100vw-2rem)] max-w-sm transition-all duration-500 ease-out sm:bottom-6 sm:left-6 ${
         visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
       }`}
     >
-      <div className="rounded-[1.5rem] border border-border/50 bg-white/95 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_24px_60px_-24px_rgba(0,0,0,0.28)] backdrop-blur-md sm:p-6">
+      <div className="rounded-[1.5rem] border border-border/50 bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_24px_60px_-24px_rgba(0,0,0,0.28)] sm:p-6">
         <h2
           id="consent-title"
           className="text-lg font-normal tracking-tight text-foreground"

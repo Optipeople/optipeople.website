@@ -149,7 +149,7 @@ export function LeadEmailForm({
       )}
 
       {showFineprint && (
-        <p className="mt-3 px-1 text-center text-sm text-muted-foreground/80">
+        <p className="mt-3 px-1 text-center text-sm text-muted-foreground">
           {t.rich("fineprint", {
             link: (chunks) => (
               <Link

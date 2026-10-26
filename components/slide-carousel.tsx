@@ -454,14 +454,12 @@ export function SlideCarousel({
                   key={slide.title}
                   className={`pl-6 ${itemBasisClass}`}
                 >
+                  {/* Clicking a card brings it into view. Not a button for
+                      keyboards or screen readers: the dots and arrows do that,
+                      and a button wrapped around the card's own links hid
+                      their text behind one label. */}
                   <div
                     onClick={() => scrollTo(index)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") scrollTo(index)
-                    }}
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`Go to slide ${index + 1}: ${slide.title}`}
                     style={
                       isAi
                         ? { backgroundColor: slide.cardColor }

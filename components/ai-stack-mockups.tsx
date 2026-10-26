@@ -52,7 +52,7 @@ function ChatMockup() {
         <span className="text-slate-400">×</span>
       </div>
       <div className="mt-3 flex items-center gap-2">
-        <p className="min-w-0 flex-1 truncate text-sm text-slate-400">
+        <p className="min-w-0 flex-1 truncate text-sm text-slate-500">
           Ask Opti Assist…
         </p>
         <span className="inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
@@ -118,7 +118,7 @@ function WorkflowsMockup() {
                 <span className="text-[11px] font-medium leading-tight text-slate-700">
                   {title}
                 </span>
-                <span className="text-[10px] leading-tight text-slate-400">
+                <span className="text-[10px] leading-tight text-slate-500">
                   {desc}
                 </span>
               </span>
@@ -163,7 +163,7 @@ function AgentsMockup() {
         </li>
         <li className="flex gap-2.5">
           <Loader2 className="mt-0.5 size-4 shrink-0 animate-spin text-slate-400" />
-          <p className="text-[12px] font-medium leading-tight text-slate-400">
+          <p className="text-[12px] font-medium leading-tight text-slate-500">
             Generating response
           </p>
         </li>

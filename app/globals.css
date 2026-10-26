@@ -243,6 +243,13 @@
   }
 }
 
+/* The consent banner ships open in the server HTML. A visitor who already
+   chose gets <html data-consent> from the head script (lib/analytics.ts), so
+   the banner never shows before React closes it. */
+html[data-consent] .consent-banner {
+  display: none;
+}
+
 /* Scroll-linked reveal for large panels (feature pages).
    Pure CSS via a view() timeline: no JS, no hydration cost, and browsers
    without `animation-timeline` simply render the panels in place. Motion is

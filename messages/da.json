@@ -36,7 +36,7 @@
   },
   "consent": {
     "title": "Cookies til statistik",
-    "body": "Vi vil gerne bruge Google Analytics til at se, hvilke sider der bliver læst, så vi kan gøre sitet bedre. Der kommer kun cookies på, hvis du siger ja, og du kan altid fortryde. <link>Læs mere</link>",
+    "body": "Vi vil gerne bruge Google Analytics til at se, hvilke sider der bliver læst, så vi kan gøre sitet bedre. Der kommer kun cookies på, hvis du siger ja, og du kan altid fortryde. <link>Læs om cookies</link>",
     "accept": "Ja tak",
     "decline": "Nej tak"
   },

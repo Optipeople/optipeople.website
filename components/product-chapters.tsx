@@ -46,20 +46,24 @@ import { moduleCatalog } from "@/content/modules-catalog"
 const DEEP = "var(--gray-8)"
 const DEMO_HREF = "/contact"
 
-type Links = { learn: string; demo: string }
+// `about` plus the topic is read out after `learn` but hidden on screen, so
+// the link says where it goes (a bare "Learn more" fails Lighthouse SEO).
+type Links = { learn: string; about: string; demo: string }
 
 const LINKS: Record<Locale, Links> = {
-  en: { learn: "Learn more", demo: "Book a demo" },
-  da: { learn: "Læs mere", demo: "Book en demo" },
+  en: { learn: "Learn more", about: "about", demo: "Book a demo" },
+  da: { learn: "Læs mere", about: "om", demo: "Book en demo" },
 }
 
 function ChapterLinks({
   href,
+  topic,
   locale,
   tone,
   className = "",
 }: {
   href: string
+  topic: string
   locale: Locale
   tone: "light" | "dark"
   className?: string
@@ -68,8 +72,8 @@ function ChapterLinks({
   return (
     <div className={`flex flex-wrap items-center gap-x-8 gap-y-3 text-lg ${className}`}>
       {[
-        { label: LINKS[locale].learn, href },
-        { label: LINKS[locale].demo, href: DEMO_HREF },
+        { label: LINKS[locale].learn, href, hidden: ` ${LINKS[locale].about} ${topic}` },
+        { label: LINKS[locale].demo, href: DEMO_HREF, hidden: "" },
       ].map((link) => (
         <Link
           key={link.label}
@@ -78,6 +82,7 @@ function ChapterLinks({
           style={{ color }}
         >
           {link.label}
+          {link.hidden && <span className="sr-only">{link.hidden}</span>}
           <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
         </Link>
       ))}
@@ -187,7 +192,7 @@ function MesChapter({ locale }: { locale: Locale }) {
             {t.tagline}
           </p>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-white/70">{t.body}</p>
-          <ChapterLinks href="/modules/mes" locale={locale} tone="light" className="mt-8" />
+          <ChapterLinks href="/modules/mes" topic={t.name} locale={locale} tone="light" className="mt-8" />
         </div>
 
         <div className="lg:col-span-6">
@@ -213,7 +218,7 @@ function MesChapter({ locale }: { locale: Locale }) {
                 >
                   <span
                     className="min-w-0 flex-1 truncate text-xl font-normal tracking-tight text-white transition-transform duration-300 group-hover:translate-x-1.5 min-[400px]:text-2xl sm:text-3xl"
-                    style={{ opacity: "calc(0.28 + var(--lit) * 0.72)" }}
+                    style={{ opacity: "calc(0.42 + var(--lit) * 0.58)" }}
                   >
                     {moduleLabel(id, locale)}
                   </span>
@@ -429,7 +434,7 @@ function IotChapter({ locale }: { locale: Locale }) {
           </div>
           <div className="lg:col-span-4">
             <p className="text-lg leading-relaxed text-slate-900/72">{t.body}</p>
-            <ChapterLinks href="/modules/iot" locale={locale} tone="dark" className="mt-6" />
+            <ChapterLinks href="/modules/iot" topic={t.eyebrow} locale={locale} tone="dark" className="mt-6" />
           </div>
         </div>
 
@@ -677,7 +682,7 @@ function AssistChapter({ locale }: { locale: Locale }) {
       <p className="mx-auto mt-6 max-w-lg text-balance text-lg leading-relaxed text-white/70">
         {t.body}
       </p>
-      <ChapterLinks href="/ai/chat" locale={locale} tone="light" className="mt-8 justify-center" />
+      <ChapterLinks href="/ai/chat" topic={t.name} locale={locale} tone="light" className="mt-8 justify-center" />
     </div>
   )
 

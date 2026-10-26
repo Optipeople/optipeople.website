@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
   // With it off, the legacy sources match the slash themselves and proxy.ts
   // strips it everywhere else.
   skipTrailingSlashRedirect: true,
+  experimental: {
+    // Tailwind ships one stylesheet for the whole site. Inlined, it arrives
+    // with the HTML instead of as a render-blocking request, which was most
+    // of the mobile PageSpeed FCP and LCP.
+    inlineCss: true,
+  },
   images: {
     // AVIF first. On the product screenshots, WebP at quality 75 smears the
     // 1px rules and small type; AVIF holds them at the same quality setting
