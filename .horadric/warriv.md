@@ -8,8 +8,10 @@
 - A quest branch that holds a merge commit cannot land by rebase or cherry-pick; land it as one squash commit.
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
+- A quest with a broken After line can't be fixed by command; file replacement quests and tell its session to mark itself done.
 
 ## Lately
+- 2026-10-26 "Switch on the booking page" stuck on a note written as an After line (can't be removed by command). Entra and Vercel env are done; 459f12d never reached main. Filed "Land the booking code on main" and "Test /book on production and switch on the booking flag" (both sonnet), told the old session to mark itself done.
 - 2026-10-26 Booking fix-up finished (459f12d, a fast-forward on main) but the merge was undone: main's tree holds uncommitted phone-layout edits in five files the commit also touches. Noted to merge with --ff-only once those are committed; did not touch the other work.
 - 2026-10-26 "Switch on the booking page" blocked on the Entra app registration (tenant admin, the human's). Left it blocked and noted; also flagged the buffer mismatch (15 min assumed vs none built) to verify in config.ts.
 - 2026-10-26 Booking page quest conflicted with 236a565 (phone header) in site-header.tsx. Fix-up already running; told it to keep main's header and carry only the /book vs /contact CTA switch, recheck the platform page CTA. Switch-on quest stays with the human (Entra app).
@@ -72,8 +74,7 @@
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
 ## Open
-- Booking fix-up branch fix-the-merge-of-own-booking-page-with waits to fast-forward main once the uncommitted phone-layout edits on main are committed. Check next wake that 459f12d is on main.
+- Booking code: "Land the booking code on main" replaces the undone fast-forward of 459f12d; then the /book test quest sets the flag. Check the old switch-on quest got closed.
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
 - .com transfer waits on the human's Wannafind EPP code and a yes to pay about USD 10; after it completes, the human can cancel Wannafind DNS Hotel.
-- Booking page goes live only after the human registers the Entra app (Calendars.ReadWrite, admin consent) and hands over tenant id, client id and secret; quest "Switch on the booking page" holds it.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
