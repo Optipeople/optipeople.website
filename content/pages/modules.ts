@@ -646,7 +646,6 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "EMS-modul",
         replay: "energy",
         heroTitle: "Energiovervågning, der viser, hvad hvert emne koster i strøm",
-        replay: "energy",
         heroBody:
           "Mål energien løbende, og hold forbruget op mod det, I producerer: pr. produkt, pr. maskine og pr. skift.",
         primaryLabel: "Book en demo",
@@ -844,7 +843,6 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "IoT-modul",
         replay: "iot",
         heroTitle: "Maskinovervågning med det udstyr, I allerede har",
-        replay: "iot",
         heroBody:
           "De færreste starter fra nul. Der er styringer, sensorer, en historian og et system eller to, der allerede samler noget op. IoT-modulet samler det, der er, og sætter kun nyt op, hvor der ikke er noget at læse fra.",
         primaryLabel: "Book en demo",
@@ -1159,7 +1157,6 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Cloud MES",
         replay: "mes",
         heroTitle: "Cloud MES, switched on one module at a time",
-        replay: "mes",
         heroBody:
           "A cloud-based manufacturing execution system you open in a browser, with no server room and no big IT project. Planning, Orders, Quality, IoT, OEE, EMS, Maintenance, Documents, and AI Agents on one data foundation, turned into something every level of the organization can act on.",
         primaryLabel: "Request a demo",
@@ -1307,7 +1304,6 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "Cloud MES",
         replay: "mes",
         heroTitle: "Cloud MES, I slår til ét modul ad gangen",
-        replay: "mes",
         heroBody:
           "Et MES i skyen, I åbner i browseren, uden serverrum og uden et stort IT-projekt. Planlægning, Ordrer, Kvalitet, IoT, OEE, EMS, Vedligehold, Dokumenter og AI-agenter på ét fælles datagrundlag.",
         primaryLabel: "Book en demo",
