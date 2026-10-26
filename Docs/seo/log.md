@@ -16,6 +16,11 @@ Template:
 **Next time check:** what to look at first.
 ```
 
+## 2026-10-26 (key events)
+
+**Key events:** `generate_lead` and `sign_up` were already marked as key events on GA4 property 310277562 (created 2026-10-06, counted once per event). The Admin API returned 409 on create, and the list shows them next to `purchase`. So the baseline note that none were marked was out of date.
+**Test:** submitted the contact form on optipeople.com with a marked test message (test-ignore@optipeople.dk) after accepting cookies. `generate_lead` appeared in GA4 realtime (Data API) within about a minute. Tracking only fires after cookie consent. `sign_up` (newsletter) was not tested live.
+
 ## 2026-10-26 (baseline)
 
 **Numbers:** last 28 days to 2026-10-24: non-brand 15,152 impressions and 24 clicks (query-level data), almost all US readers of guides. Danish non-brand: 709 impressions and 3 clicks in the last 3 months. AI referral sessions: 75 in 16 months. Key events: none, because GA4 has no key events marked. The new site went live on optipeople.com on 2026-10-26, so the next cycle compares across the migration.
