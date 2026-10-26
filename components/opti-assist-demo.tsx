@@ -76,14 +76,16 @@ export function OptiAssistDemo({ copy }: { copy: DemoCopy }) {
   const id = BEATS[beat].id
   const question = id === "type1" ? copy.q1 : id === "type2" ? copy.q2 : ""
   useEffect(() => {
-    setTyped(0)
     if (!question || still || !visible) return
     const step = Math.max(18, (BEATS[beat].ms - 350) / question.length)
     const t = setInterval(
       () => setTyped((n) => (n >= question.length ? n : n + 1)),
       step
     )
-    return () => clearInterval(t)
+    return () => {
+      clearInterval(t)
+      setTyped(0)
+    }
   }, [question, beat, still, visible])
 
   // With reduced motion, sit on the finished answer to the manual question.

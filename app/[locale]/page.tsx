@@ -69,27 +69,6 @@ const CASE_IMAGE_ACCENTS: { bg: string; tone: "light" | "dark" }[] = [
   { bg: "#163b40", tone: "light" }, // deep teal
 ]
 
-const caseDateMonths = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-]
-
-function formatCaseDate(date: string): string {
-  const parsed = new Date(date)
-  if (Number.isNaN(parsed.getTime())) return date
-  return `${caseDateMonths[parsed.getMonth()]} ${parsed.getFullYear()}`
-}
-
 /**
  * One card colour per module. The family is the AI section's, deep greens and
  * teals against a charcoal, a pale blue and a warm sand, because that section

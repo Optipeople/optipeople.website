@@ -1,0 +1,5 @@
+#!/bin/sh
+# Run the same lint and message check CI runs, so a push that would fail CI
+# stops here instead. Skip in an emergency with: git push --no-verify
+npm run --silent lint || { echo "pre-push: lint failed, push stopped"; exit 1; }
+npm run --silent check:messages || { echo "pre-push: message check failed, push stopped"; exit 1; }
