@@ -9,6 +9,7 @@
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 Round after the DNS verify quest landed. Transfer quest blocked on the Wannafind EPP code and the USD 10 yes; both the human's, noted and left blocked. Log not dry (SEO week 2026-11-02 queued); nothing filed or cast.
 - 2026-10-26 Round after the AI-readable site quest landed (69a45ec, 2b2d72d). Noted on the operator panel retake to work from main, since its base branch landed and was deleted. Log not dry (SEO week 2026-11-02 queued, checks waiting on dates); nothing filed or cast.
 - 2026-10-26 Round after the captures fix-up landed (00f3a4b); replays and AI-readable site quests also done, so both Open lines on them are settled. Operator panel retake in progress, SEO week 2026-11-02 queued, so log not dry. No check stone; nothing filed or cast.
 - 2026-10-26 Captures quest (10 images plus alt texts, 330a6df) conflicted because its branch carries the replays commit 5ab5fe8. Gave the fix-up sonnet; told it to wait for the replays fix-up, then cherry-pick only 0396384 and 330a6df, keeping its webp files and alt texts.
@@ -66,4 +67,5 @@
 
 ## Open
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
+- .com transfer waits on the human's Wannafind EPP code and a yes to pay about USD 10; after it completes, the human can cancel Wannafind DNS Hotel.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
