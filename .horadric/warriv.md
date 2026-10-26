@@ -7,6 +7,8 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 
 ## Lately
+- 2026-10-26 Bing import quest blocked on the Bing sign-in, as expected. Handed it to the human: sign in at bing.com/webmasters in the pane, then rerun.
+- 2026-10-26 Round after the MES fix landed, plus the outreach quest blocking: drafts are in Docs/seo/outreach/, sending them is the human's (accounts, outside contact), so left it blocked and noted. Log not dry (buyer pages, comparisons, replays, Bing in progress; SEO week 2026-11-02 queued); nothing filed or cast.
 - 2026-10-26 Round after a landing: MES cloud page conflicted with the buyer FAQ commit (c9d6512) in standard-page.tsx and types.ts. Gave the fix-up quest sonnet and noted to keep both sides (answers, rollout, PageFaq), one FAQPage per page. Log not dry, nothing filed or cast.
 - 2026-10-26 Bing/IndexNow quest blocked on a Bing sign-in. Split it: told the session to land the IndexNow code only (no login needed) and ping once; filed "Bing Webmaster Tools: import optipeople.com and submit the sitemap" (sonnet) after it, to block on the human's sign-in.
 - 2026-10-26 Hourly round: site live on optipeople.com since 13:00 UTC and the aim plus 11 quests were filed (not by me), none with a Model line. Gave opus to the growth cycle, Danish buyer pages and comparison pages; sonnet to the rest. Replays quest is in progress after an opus block. Log not dry, so nothing filed; no check stone.
@@ -53,5 +55,6 @@
 
 ## Open
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
-- Bing import quest needs the human to sign in to Bing Webmaster Tools in the Horadric pane; its session will block and ask.
+- Bing import quest handed to the human (2026-10-26): waits for their sign-in at bing.com/webmasters, then a rerun.
+- Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
 - Replays quest blocked once on opus (2026-10-26); if it blocks again, read why before it starts over.
