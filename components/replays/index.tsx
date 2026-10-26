@@ -1,6 +1,8 @@
 import type { ReactNode } from "react"
+import Image from "next/image"
 
 import { FramedImage } from "@/components/framed-image"
+import { imageSize } from "@/lib/image-size"
 import type { Locale } from "@/i18n/routing"
 import type { ReplaySlug, ReplayShowcase } from "@/content/replays/types"
 
@@ -119,7 +121,9 @@ export function ReplayShowcases({ slug, locale, tint }: { slug: ReplaySlug; loca
         {c.showcases.map((item: ReplayShowcase, i: number) => (
           <div
             key={item.image}
-            className={`reveal grid items-center gap-8 overflow-hidden rounded-[1.5rem] p-7 sm:p-10 lg:gap-12 lg:rounded-[1.75rem] lg:p-12 ${
+            className={`reveal grid items-center gap-8 overflow-hidden rounded-[1.5rem] ${
+              item.phoneCrop ? "p-5" : "p-7"
+            } sm:p-10 lg:gap-12 lg:rounded-[1.75rem] lg:p-12 ${
               i % 2
                 ? "lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]"
                 : "lg:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)]"
@@ -137,13 +141,14 @@ export function ReplayShowcases({ slug, locale, tint }: { slug: ReplaySlug; loca
                 {item.body}
               </p>
             </div>
-            <AppWindow>
+            <AppWindow flush={!!item.phoneCrop}>
+              {item.phoneCrop ? <PhoneCrop item={item} crop={item.phoneCrop} /> : null}
               <FramedImage
                 src={item.image}
                 alt={item.alt}
                 boxSizes="(min-width: 1024px) 680px, 100vw"
                 cap="[--frame-cap:30rem] lg:[--frame-cap:36rem]"
-                className="mx-auto"
+                className={`mx-auto ${item.phoneCrop ? "hidden sm:block" : ""}`}
               />
             </AppWindow>
           </div>
@@ -153,7 +158,45 @@ export function ReplayShowcases({ slug, locale, tint }: { slug: ReplaySlug; loca
   )
 }
 
-function AppWindow({ children }: { children: ReactNode }) {
+/**
+ * The phone view of a showcase: one region of the screenshot at a size that can
+ * be read, instead of the whole desktop screen shrunk to a phone column. The
+ * picture is placed so the region fills the box exactly; nothing is redrawn.
+ */
+function PhoneCrop({
+  item,
+  crop,
+}: {
+  item: ReplayShowcase
+  crop: { x: number; y: number; w: number; h: number }
+}) {
+  const size = imageSize(item.image)
+  if (!size) return null
+  const zoom = size.width / crop.w
+  return (
+    <div
+      className="relative w-full overflow-hidden sm:hidden"
+      style={{ aspectRatio: `${crop.w} / ${crop.h}` }}
+    >
+      <Image
+        src={item.image}
+        alt={item.alt}
+        width={size.width}
+        height={size.height}
+        sizes={`${Math.ceil(zoom * 100)}vw`}
+        className="absolute max-w-none"
+        style={{
+          width: `${zoom * 100}%`,
+          height: "auto",
+          left: `${(-crop.x / crop.w) * 100}%`,
+          top: `${(-crop.y / crop.h) * 100}%`,
+        }}
+      />
+    </div>
+  )
+}
+
+function AppWindow({ children, flush = false }: { children: ReactNode; flush?: boolean }) {
   return (
     <div className="overflow-hidden rounded-xl bg-[#f7f7f6] shadow-[0_18px_44px_-24px_rgba(0,0,0,0.35)] ring-1 ring-black/[0.08]">
       <div className="flex items-center gap-1.5 bg-[#233431] px-3.5 py-2.5">
@@ -162,7 +205,7 @@ function AppWindow({ children }: { children: ReactNode }) {
         <span className="h-2 w-2 rounded-full bg-white/25" />
         <span className="ml-3 text-[0.68rem] font-medium text-white/70">platform.optipeople.dk</span>
       </div>
-      <div className="p-3 sm:p-4">{children}</div>
+      <div className={flush ? "sm:p-4" : "p-3 sm:p-4"}>{children}</div>
     </div>
   )
 }

@@ -130,8 +130,42 @@ export default async function PlatformPage({ params }: PageProps) {
 
       <ReplayShowcases slug="platform" locale={loc} tint={theme.tint} />
 
-      {/* Interactive platform diagram */}
-      <PlatformFlower locale={loc} />
+      {/* The modules, once: the flower diagram from lg, the linked cards
+          below it. Each card wears the colour of the page it opens, so the
+          list previews its destinations. With nine cards in two columns the
+          last one spans both, so it reads as the end of the list. */}
+      <PlatformFlower
+        locale={loc}
+        id="modules"
+        heading={{ eyebrow: t.modules.eyebrow, title: t.modules.title, description: t.modules.subtitle }}
+        moreLabel={t.modules.more}
+        mobile={
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
+            {t.modules.cards.map((card, i) => (
+              <Link
+                key={card.href}
+                href={card.href}
+                className={`group flex flex-col rounded-[1.25rem] px-5 py-4 transition-shadow duration-300 hover:shadow-[0_12px_40px_-16px_rgba(0,0,0,0.28)] sm:p-6 ${
+                  i === t.modules.cards.length - 1 && t.modules.cards.length % 2 === 1 ? "sm:col-span-2" : ""
+                }`}
+                style={{ backgroundColor: getThemeForHref(card.href).tint }}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="text-lg font-normal tracking-tight text-foreground sm:text-xl">
+                    {card.title}
+                  </h3>
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </div>
+                <p className="mt-1.5 text-sm leading-relaxed text-foreground/78">
+                  {card.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        }
+      />
 
       {/* Steps: numbered rail on hairlines, replacing the centred 01 to 04 row. */}
       <section className="px-[var(--edge)] py-16 sm:py-20 lg:py-28">
@@ -168,46 +202,6 @@ export default async function PlatformPage({ params }: PageProps) {
           the depth an IT reviewer asks for. Where data goes, who hosts it,
           and what is isolated per customer. */}
       <PlatformArchitecture locale={loc} />
-
-      {/* Modules: each card wears the colour of the page it opens, so this
-          grid previews its destinations instead of repeating one grey box. */}
-      <section
-        id="modules"
-        /* Deliberately more top padding than the standard rhythm: this section
-           follows the architecture band, and a band's bottom padding sits
-           inside the band, so the standard py-20 left this heading reading as
-           flush with the coloured edge above it. */
-        className="scroll-mt-24 px-[var(--edge)] pb-16 pt-20 sm:pb-20 sm:pt-28 lg:pb-28 lg:pt-40"
-      >
-        <h2 className="max-w-2xl text-3xl font-normal leading-[1.15] tracking-tight text-foreground lg:text-4xl">
-          {t.modules.title}
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/72 lg:text-lg">
-          {t.modules.subtitle}
-        </p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-5">
-          {t.modules.cards.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className="reveal group flex flex-col rounded-[1.25rem] p-7 transition-shadow duration-300 hover:shadow-[0_12px_40px_-16px_rgba(0,0,0,0.28)] lg:rounded-[1.5rem] lg:p-8"
-              style={{ backgroundColor: getThemeForHref(card.href).tint }}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl font-normal tracking-tight text-foreground lg:text-2xl">
-                  {card.title}
-                </h3>
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/60 transition-colors group-hover:border-black/25 group-hover:bg-white">
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </span>
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/78">
-                {card.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* Visual: full-bleed deep surface, the one hard rhythm break. */}
       <section

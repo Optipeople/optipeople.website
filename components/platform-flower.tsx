@@ -1,8 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
+import { ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { Locale } from "@/lib/i18n"
+import { Link } from "@/i18n/navigation"
+import { getModuleEntry } from "@/content/modules-catalog"
 import {
   Dialog,
   DialogContent,
@@ -362,9 +365,37 @@ function petalLayout() {
   })
 }
 
-export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
+// Flower ids are the module page slugs; these four differ from the catalog id.
+const CATALOG_ID: Record<string, string> = {
+  "erp-shopfloor": "orders",
+  quality: "qms",
+  production: "oee",
+  energy: "ems",
+}
+const moduleHref = (id: string) => getModuleEntry(CATALOG_ID[id] ?? id)?.href
+
+/**
+ * The module overview. From `lg` it is the flower diagram, whose petals open a
+ * dialog that links on to the module's page. Below `lg` the radial layout does
+ * not fit, so the page hands in its own list as `mobile` (on /platform, the
+ * linked module cards) instead of the tile grid this falls back to.
+ */
+export function PlatformFlower({
+  locale = "en",
+  id,
+  heading,
+  mobile,
+  moreLabel,
+}: {
+  locale?: Locale
+  id?: string
+  heading?: { eyebrow: string; title: string; description: string }
+  mobile?: ReactNode
+  /** Link text in the dialog, followed by the module name, e.g. "Go to". */
+  moreLabel?: string
+}) {
   const modules = locale === "da" ? danishModules : englishModules
-  const intro = platformIntro[locale]
+  const intro = { ...platformIntro[locale], ...heading }
   const [activeModule, setActiveModule] = useState<string | null>(null)
   const byId = (id: string) => modules.find((m) => m.id === id)!
   const dialogModule = activeModule ? byId(activeModule) : null
@@ -421,7 +452,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[var(--gray-1)] py-16 sm:py-20 lg:py-32">
+    <section id={id} className="relative scroll-mt-24 overflow-hidden bg-[var(--gray-1)] py-16 sm:py-20 lg:py-32">
       {/* Keeps its own wide canvas: the diagram needs more room than the
           1140px content column, but the heading type matches the rest of the
           redesigned pages. */}
@@ -440,7 +471,9 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          {/* Mobile: Grid layout */}
+          {mobile ? (
+            <div className="w-full lg:hidden">{mobile}</div>
+          ) : (
           <div className="lg:hidden w-full">
             <div className="grid grid-cols-2 gap-3">
               {modules.filter(m => m.id !== "opticloud").map((module) => (
@@ -469,6 +502,7 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
               </div>
             </div>
           </div>
+          )}
 
           {/* Desktop: the platform flower, rounded pentagons around an octagonal hub */}
           <div
@@ -606,6 +640,15 @@ export function PlatformFlower({ locale = "en" }: { locale?: Locale }) {
                   </li>
                 ))}
               </ul>
+              {moreLabel && moduleHref(dialogModule.id) ? (
+                <Link
+                  href={moduleHref(dialogModule.id)!}
+                  className="group inline-flex items-center gap-2 self-start text-sm font-medium text-foreground"
+                >
+                  {moreLabel} {dialogModule.name}
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              ) : null}
             </>
           )}
         </DialogContent>

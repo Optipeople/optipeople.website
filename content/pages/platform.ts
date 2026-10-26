@@ -22,7 +22,14 @@ export type PlatformCopy = {
   proof: { title: string; items: { metric: string; label: string }[] }
   intro: { title: string; body: string }
   steps: { title: string; items: { title: string; description: string }[] }
-  modules: { title: string; subtitle: string; cards: { title: string; href: string; description: string }[] }
+  modules: {
+    eyebrow: string
+    title: string
+    subtitle: string
+    /** The link in the module dialog on the desktop diagram, e.g. "Go to Planning". */
+    more: string
+    cards: { title: string; href: string; description: string }[]
+  }
   visual: { eyebrow: string; title: string; body: string }
   logos: string
 }
@@ -74,9 +81,11 @@ export const platformCopy: Record<Locale, PlatformCopy> = {
       ],
     },
     modules: {
-      title: "The modules",
+      eyebrow: "Modules",
+      title: "Nine modules, one shared record",
       subtitle:
-        "Each module solves a specific operational need, and together they give you a single, connected view of the shop floor.",
+        "Each module solves one job on the shop floor, and they all work from the same record. Start where it hurts most and switch on the rest as you need them.",
+      more: "Go to",
       cards: moduleIndexLinks("en"),
     },
     visual: {
@@ -132,9 +141,11 @@ export const platformCopy: Record<Locale, PlatformCopy> = {
       ],
     },
     modules: {
-      title: "Modulerne",
+      eyebrow: "Modulerne",
+      title: "Ni moduler på de samme data",
       subtitle:
-        "Hvert modul løser en konkret opgave i driften. Sammen giver de jer overblikket over hele gulvet.",
+        "Hvert modul løser én opgave i driften, og de arbejder alle sammen ud fra de samme registreringer. Start dér, hvor det gør mest ondt, og slå resten til, når I får brug for dem.",
+      more: "Se mere om",
       cards: moduleIndexLinks("da"),
     },
     visual: {

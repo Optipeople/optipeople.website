@@ -378,7 +378,9 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center rounded-2xl px-4 py-5 text-center",
+        // A phone gets a compact row, icon beside the text; from `sm` the
+        // centred tile. The stacked tiles ran about two and a half screens.
+        "flex items-start gap-3 rounded-2xl px-4 py-3 text-left sm:flex-col sm:items-center sm:justify-center sm:gap-0 sm:py-5 sm:text-center",
         inverted
           ? "text-white shadow-[0_12px_34px_-20px_rgba(0,0,0,0.75)]"
           : "border border-black/[0.07] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)]",
@@ -387,13 +389,14 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
       style={inverted ? { backgroundColor: HIGHLIGHT_FILL } : undefined}
     >
       <Icon
-        className={cn("h-5 w-5", inverted ? undefined : "text-foreground/60")}
+        className={cn("mt-0.5 h-5 w-5 shrink-0 sm:mt-0", inverted ? undefined : "text-foreground/60")}
         style={inverted ? { color: "var(--green-system)" } : undefined}
         aria-hidden
       />
+      <div className="min-w-0 sm:flex sm:flex-col sm:items-center">
       <h3
         className={cn(
-          "mt-3 text-sm font-medium leading-snug tracking-tight",
+          "text-sm sm:mt-3 font-medium leading-snug tracking-tight",
           inverted ? "text-white" : "text-foreground"
         )}
       >
@@ -401,7 +404,7 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
       </h3>
       <p
         className={cn(
-          "mt-1.5 text-xs leading-relaxed",
+          "mt-1 text-xs leading-relaxed sm:mt-1.5",
           inverted ? "text-white/82" : "text-foreground/70"
         )}
       >
@@ -409,7 +412,7 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
       </p>
       {node.badge ? (
         <span
-          className="mt-3 rounded-full px-2.5 py-1 text-[0.6rem] font-medium uppercase tracking-[0.12em]"
+          className="mt-2 inline-block rounded-full px-2.5 py-1 text-[0.6rem] font-medium uppercase tracking-[0.12em]"
           style={{
             backgroundColor: "var(--green-light2)",
             color: "var(--green-dark3)",
@@ -418,6 +421,7 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
           {node.badge}
         </span>
       ) : null}
+      </div>
     </div>
   )
 }
@@ -425,7 +429,7 @@ function NodeCard({ node, className }: { node: NodeSpec; className?: string }) {
 /** The gap between two zones. A chevron, pointing down on a phone. */
 function Flow() {
   return (
-    <div className="flex items-center justify-center py-1 xl:py-0" aria-hidden>
+    <div className="flex items-center justify-center xl:py-0" aria-hidden>
       <ChevronRight className="h-5 w-5 rotate-90 text-foreground/35 xl:rotate-0" />
     </div>
   )
@@ -435,7 +439,7 @@ function Zone({ label, nodes }: { label: string; nodes: NodeSpec[] }) {
   return (
     <div className="flex flex-col rounded-[1.25rem] border border-black/[0.06] bg-white/70 p-4 xl:rounded-[1.5rem] xl:p-5">
       <p className={cn(ZONE_LABEL, "px-1")}>{label}</p>
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:flex xl:flex-1 xl:flex-col">
+      <div className="mt-3 grid gap-2 sm:mt-4 sm:grid-cols-2 sm:gap-3 xl:flex xl:flex-1 xl:flex-col">
         {nodes.map((node) => (
           <NodeCard key={node.id} node={node} className="xl:flex-1" />
         ))}
@@ -500,9 +504,9 @@ export function PlatformArchitecture({ locale = "en" }: { locale?: Locale }) {
               ))}
             </div>
 
-            <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:flex-1 xl:grid-cols-4 xl:items-stretch">
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 sm:gap-3 xl:flex-1 xl:grid-cols-4 xl:items-stretch">
               {stages.map((stage) => (
-                <div key={stage.id} className="flex flex-col gap-3 xl:justify-center">
+                <div key={stage.id} className="flex flex-col gap-2 sm:gap-3 xl:justify-center">
                   <p className={cn(STAGE_LABEL, "xl:hidden")}>{stage.label}</p>
                   {stage.nodes.map((node) => (
                     <NodeCard key={node.id} node={node} />

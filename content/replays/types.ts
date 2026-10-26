@@ -1,5 +1,16 @@
 /** A showcase row on a Data Platform page: a real screenshot beside its claim. */
-export type ReplayShowcase = { title: string; body: string; image: string; alt: string }
+export type ReplayShowcase = {
+  title: string
+  body: string
+  image: string
+  alt: string
+  /**
+   * Below `sm`, show only this region of the screenshot, in source pixels, so a
+   * desktop capture is still legible on a phone. Without it the whole picture
+   * is shown at every width.
+   */
+  phoneCrop?: { x: number; y: number; w: number; h: number }
+}
 
 /**
  * Everything a page needs from one product replay, per locale: the replay's
