@@ -222,8 +222,8 @@ export function SiteHeader() {
                           href={item.href}
                           className={`block w-full cursor-pointer rounded-md px-4 py-3 text-sm transition-colors duration-150 ${
                             item.highlight
-                              ? "mb-1 bg-[var(--green-dark3)]/[0.06] font-medium text-[var(--green-dark3)] hover:bg-[var(--green-dark3)]/[0.11]"
-                              : "text-foreground/85 hover:bg-foreground/[0.045] hover:text-foreground"
+                              ? "mb-1 bg-[var(--green-dark3)]/[0.06] font-medium text-[var(--green-dark3)] hover:bg-[var(--green-dark3)]/[0.11] data-[highlighted]:bg-[var(--green-dark3)]/[0.11]"
+                              : "text-foreground/85 hover:bg-foreground/[0.045] data-[highlighted]:bg-foreground/[0.045] hover:text-foreground"
                           } ${FOCUS_RING_INSET}`}
                           aria-label={t("linkLabel", { title: item.title })}
                         >
@@ -336,7 +336,7 @@ function MegaMenuPanel({ menu }: { menu: NavMenu }) {
               >
                 <Link
                   href={item.href}
-                  className={`block w-full cursor-pointer rounded-md px-3 py-2 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+                  className={`block w-full cursor-pointer rounded-md px-3 py-2 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] data-[highlighted]:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
                   aria-label={linkLabel(item)}
                 >
                   {item.title}
@@ -353,7 +353,7 @@ function MegaMenuPanel({ menu }: { menu: NavMenu }) {
             <DropdownMenuItem asChild className="p-0 focus:bg-transparent">
               <Link
                 href={menu.overview.href}
-                className={`cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-primary transition-colors duration-150 hover:bg-foreground/[0.045] ${FOCUS_RING_INSET}`}
+                className={`cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-primary transition-colors duration-150 hover:bg-foreground/[0.045] data-[highlighted]:bg-foreground/[0.045] ${FOCUS_RING_INSET}`}
                 aria-label={linkLabel(menu.overview)}
               >
                 <span>{menu.overview.title}</span>
@@ -369,7 +369,7 @@ function MegaMenuPanel({ menu }: { menu: NavMenu }) {
             >
               <Link
                 href={item.href}
-                className={`cursor-pointer rounded-md px-3 py-2 text-xs font-medium text-foreground/72 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+                className={`cursor-pointer rounded-md px-3 py-2 text-xs font-medium text-foreground/72 transition-colors duration-150 hover:bg-foreground/[0.045] data-[highlighted]:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
                 aria-label={linkLabel(item)}
               >
                 {item.title}
@@ -616,7 +616,7 @@ function LoginMenu() {
           >
             <a
               href={target.href}
-              className={`block w-full cursor-pointer rounded-md px-4 py-2.5 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
+              className={`block w-full cursor-pointer rounded-md px-4 py-2.5 text-sm text-foreground/85 transition-colors duration-150 hover:bg-foreground/[0.045] data-[highlighted]:bg-foreground/[0.045] hover:text-foreground ${FOCUS_RING_INSET}`}
             >
               {t(`loginMenu.${target.key}`)}
             </a>
