@@ -1,6 +1,7 @@
 # Warriv's memory
 
 ## Rules
+- Uncommitted edits on main that no quest owns are the human's; when they block a landing twice, ask the human to commit them rather than waiting again.
 - A finished branch that fails only because main's working tree has uncommitted edits in the same files is not a conflict; never commit the other work, note it and wait.
 - A quest branch built on another unlanded quest's branch: its fix-up waits for that one to land, then cherry-picks only its own commits.
 - Steps that need the human's Vercel login or the GA4 UI stay with the human. Since 2026-10-06 the seo-reader service account is GA4 Admin and Search Console Full user, so API-reachable GA4 and Search Console steps (key events, sitemap submit) can go to agents.
@@ -11,6 +12,7 @@
 - A quest with a broken After line can't be fixed by command; file replacement quests and tell its session to mark itself done.
 
 ## Lately
+- 2026-10-26 Round after "Land the booking code on main" finished: 6568dce is a clean fast-forward but was undone again, because main's tree still holds uncommitted phone-layout edits (13 files, saved 19:21) in six files it touches. Left them alone, told the /book test session to wait, and asked the human to commit or discard them.
 - 2026-10-26 "Switch on the booking page" stuck on a note written as an After line (can't be removed by command). Entra and Vercel env are done; 459f12d never reached main. Filed "Land the booking code on main" and "Test /book on production and switch on the booking flag" (both sonnet), told the old session to mark itself done.
 - 2026-10-26 Booking fix-up finished (459f12d, a fast-forward on main) but the merge was undone: main's tree holds uncommitted phone-layout edits in five files the commit also touches. Noted to merge with --ff-only once those are committed; did not touch the other work.
 - 2026-10-26 "Switch on the booking page" blocked on the Entra app registration (tenant admin, the human's). Left it blocked and noted; also flagged the buffer mismatch (15 min assumed vs none built) to verify in config.ts.
@@ -74,7 +76,8 @@
 - 2026-10-06 Woken for two blocked human-step quests (launch day SEO checklist, check NEXT_PUBLIC_SITE_URL on Vercel). Both need accounts, so left them with the human and noted one-line questions. Checked lib/seo.ts falls back to https://optipeople.com, so an unset var is safe.
 
 ## Open
-- Booking code: "Land the booking code on main" replaces the undone fast-forward of 459f12d; then the /book test quest sets the flag. Check the old switch-on quest got closed.
+- Booking code: branch land-the-booking-code-on-main (6568dce) waits for the human to commit or discard the uncommitted phone-layout edits on main; then git merge --ff-only it, and the /book test quest sets the flag. Old switch-on quest is closed.
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
 - .com transfer waits on the human's Wannafind EPP code and a yes to pay about USD 10; after it completes, the human can cancel Wannafind DNS Hotel.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
+- Answered: on "Test /book on production and switch on the booking flag" you asked "Main has your uncommitted phone-layout edits in 13 files (globals.css, templates, about, people, insights...). Commit them so the booking branch can land, or say discard?". The human settled it without words Horadric heard: read the quest and its notes for how.
