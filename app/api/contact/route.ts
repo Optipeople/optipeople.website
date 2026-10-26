@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+import { verifyTurnstile } from "@/lib/turnstile"
+
 const MONDAY_API_URL = "https://api.monday.com/v2"
 const BOARD_ID = "5978901066"
 const GROUP_ID = "group_mm13rdh1"
@@ -16,6 +18,7 @@ type ContactPayload = {
   phone?: unknown
   message?: unknown
   website?: unknown
+  turnstileToken?: unknown
 }
 
 /** Matches the textarea's maxLength, so a tampered payload can't post an essay. */
@@ -28,6 +31,10 @@ export async function POST(request: Request) {
     // Honeypot: real visitors never see the website field, bots fill it.
     if (getString(payload.website).trim()) {
       return NextResponse.json({ success: true })
+    }
+
+    if (!(await verifyTurnstile(payload.turnstileToken, request))) {
+      return NextResponse.json({ error: "Bot check failed" }, { status: 403 })
     }
 
     const name = getString(payload.name).trim()

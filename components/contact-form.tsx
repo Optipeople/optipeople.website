@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react"
 import { useTranslations } from "next-intl"
 
+import { useTurnstile } from "@/components/turnstile"
 import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 
@@ -15,6 +16,7 @@ export function ContactForm() {
     "idle"
   )
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const turnstile = useTurnstile()
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -50,16 +52,25 @@ export function ContactForm() {
     setStatus("loading")
 
     try {
+      const turnstileToken = await turnstile.getToken()
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message, website }),
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+          website,
+          turnstileToken,
+        }),
       })
       if (!res.ok) throw new Error("Failed to submit")
       trackEvent("generate_lead", { form_name: "contact_form" })
       setStatus("success")
     } catch {
       setStatus("error")
+      turnstile.reset()
     }
   }
 
@@ -144,6 +155,8 @@ export function ContactForm() {
           placeholder={t("messagePlaceholder")}
         />
       </div>
+
+      <div ref={turnstile.containerRef} className="empty:hidden" />
 
       {status === "error" && (
         <p className="text-sm text-destructive">{t("errorSubmit")}</p>

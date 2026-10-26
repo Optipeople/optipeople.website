@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+import { verifyTurnstile } from "@/lib/turnstile"
+
 const MONDAY_API_URL = "https://api.monday.com/v2"
 const BOARD_ID = "5978901066"
 const GROUP_ID = "group_mm13rdh1"
@@ -13,6 +15,7 @@ type NewsletterPayload = {
   email?: unknown
   consent?: unknown
   website?: unknown
+  turnstileToken?: unknown
 }
 
 export async function POST(request: Request) {
@@ -22,6 +25,10 @@ export async function POST(request: Request) {
 
     if (website.trim()) {
       return NextResponse.json({ success: true })
+    }
+
+    if (!(await verifyTurnstile(payload.turnstileToken, request))) {
+      return NextResponse.json({ error: "Bot check failed" }, { status: 403 })
     }
 
     const name = getString(payload.name).trim()

@@ -10,6 +10,7 @@ import {
 import { ArrowRight, Check, X } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+import { useTurnstile } from "@/components/turnstile"
 import { usePathname } from "@/i18n/navigation"
 import { CONSENT_CHANGE_EVENT, readConsent, trackEvent } from "@/lib/analytics"
 
@@ -286,6 +287,7 @@ function PromptCard({
   const [status, setStatus] = useState<FormStatus>("idle")
   const [error, setError] = useState<string | null>(null)
   const emailRef = useRef<HTMLInputElement>(null)
+  const turnstile = useTurnstile()
 
   useEffect(() => {
     if (variant === "modal") emailRef.current?.focus()
@@ -314,11 +316,12 @@ function PromptCard({
     setError(null)
     setStatus("loading")
     try {
+      const turnstileToken = await turnstile.getToken()
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // Consent is given by submitting, per the notice shown below the button.
-        body: JSON.stringify({ email, consent: true }),
+        body: JSON.stringify({ email, consent: true, turnstileToken }),
       })
       if (!res.ok) throw new Error("failed")
       trackEvent("sign_up", {
@@ -330,6 +333,7 @@ function PromptCard({
     } catch {
       setStatus("error")
       setError(copy.errorSubmit)
+      turnstile.reset()
     }
   }
 
@@ -395,6 +399,8 @@ function PromptCard({
             />
 
             {error && <p className="text-xs text-destructive">{error}</p>}
+
+            <div ref={turnstile.containerRef} className="flex justify-center empty:hidden" />
 
             <button
               type="submit"

@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+import { verifyTurnstile } from "@/lib/turnstile"
+
 const MONDAY_API_URL = "https://api.monday.com/v2"
 const BOARD_ID = "5978901066"
 // Same group as the full contact form, all website leads land together.
@@ -17,6 +19,7 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 type LeadPayload = {
   email?: unknown
   website?: unknown
+  turnstileToken?: unknown
   /** Module chips the visitor picked in the hero, in display order. */
   modules?: unknown
   /** The form's analytics name, e.g. "hero_lead". */
@@ -35,6 +38,10 @@ export async function POST(request: Request) {
     // Honeypot, silently accept bots without creating an item.
     if (website.trim()) {
       return NextResponse.json({ success: true })
+    }
+
+    if (!(await verifyTurnstile(payload.turnstileToken, request))) {
+      return NextResponse.json({ error: "Bot check failed" }, { status: 403 })
     }
 
     const email = getString(payload.email).trim()

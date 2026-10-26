@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react"
 import { ArrowRight, Check } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+import { useTurnstile } from "@/components/turnstile"
 import { Link } from "@/i18n/navigation"
 import { trackEvent } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
@@ -34,6 +35,7 @@ export function LeadEmailForm({
   const t = useTranslations("leadForm")
   const [status, setStatus] = useState<FormStatus>("idle")
   const [error, setError] = useState<string | null>(null)
+  const turnstile = useTurnstile()
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -58,10 +60,16 @@ export function LeadEmailForm({
     setStatus("loading")
 
     try {
+      const turnstileToken = await turnstile.getToken()
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, modules: modules ?? [], source: formName }),
+        body: JSON.stringify({
+          email,
+          modules: modules ?? [],
+          source: formName,
+          turnstileToken,
+        }),
       })
       if (!res.ok) throw new Error("Failed to submit")
       trackEvent("generate_lead", { form_name: formName })
@@ -70,6 +78,7 @@ export function LeadEmailForm({
     } catch {
       setStatus("error")
       setError(t("errorSubmit"))
+      turnstile.reset()
     }
   }
 
@@ -140,6 +149,7 @@ export function LeadEmailForm({
             )}
           </button>
         </div>
+        <div ref={turnstile.containerRef} className="mt-3 flex justify-center empty:hidden" />
       </form>
 
       {error && (

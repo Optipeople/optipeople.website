@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react"
 import { ArrowRight, Check } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+import { useTurnstile } from "@/components/turnstile"
 import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 
@@ -26,6 +27,7 @@ export function NewsletterForm() {
   const t = useTranslations("newsletterForm")
   const [status, setStatus] = useState<FormStatus>("idle")
   const [errors, setErrors] = useState<FormErrors>({})
+  const turnstile = useTurnstile()
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -65,6 +67,7 @@ export function NewsletterForm() {
     setStatus("loading")
 
     try {
+      const turnstileToken = await turnstile.getToken()
       const response = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -73,6 +76,7 @@ export function NewsletterForm() {
           company: company.trim(),
           email: email.trim(),
           consent,
+          turnstileToken,
         }),
       })
 
@@ -86,6 +90,7 @@ export function NewsletterForm() {
       setStatus("success")
     } catch {
       setStatus("error")
+      turnstile.reset()
     }
   }
 
@@ -199,6 +204,8 @@ export function NewsletterForm() {
           </p>
         )}
       </div>
+
+      <div ref={turnstile.containerRef} className="mt-5 empty:hidden" />
 
       {status === "error" && (
         <p className="mt-5 text-sm text-destructive">{t("errorSubmit")}</p>
