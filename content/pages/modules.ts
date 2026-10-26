@@ -126,6 +126,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "OEE-software, der måler direkte på maskinerne. Se tilgængelighed, ydelse, kvalitet og stopårsager for hvert skift, mens det sker. Uden regneark.",
         eyebrow: "OEE-modul",
+        replay: "production",
         heroTitle: "Et OEE-system, der viser, hvor tiden går tabt",
         replay: "production",
         heroBody:
@@ -644,6 +645,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Energiovervågning i produktionen: se kWh pr. maskine, pr. ordre og pr. produkt, holdt op mod det, I producerer. Så ser I, hvor strømmen går til spilde.",
         eyebrow: "EMS-modul",
+        replay: "energy",
         heroTitle: "Energiovervågning, der viser, hvad hvert emne koster i strøm",
         replay: "energy",
         heroBody:
@@ -841,6 +843,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Maskinovervågning på nye og gamle maskiner. Vi kobler de PLC'er og systemer på, I har, og sætter kun sensorer op, hvor der ikke er noget at læse fra.",
         eyebrow: "IoT-modul",
+        replay: "iot",
         heroTitle: "Maskinovervågning med det udstyr, I allerede har",
         replay: "iot",
         heroBody:
@@ -1155,6 +1158,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Cloud MES software you roll out one module at a time. A cloud-based manufacturing execution system for small and mid-sized plants: no server room, no big IT project, live in weeks.",
         eyebrow: "Cloud MES",
+        replay: "mes",
         heroTitle: "Cloud MES, switched on one module at a time",
         replay: "mes",
         heroBody:
@@ -1302,6 +1306,7 @@ const modules: LocalizedPage<StandardPage>[] = [
         metaDescription:
           "Cloud MES, I tager i brug ét modul ad gangen. Et MES-system i skyen til små og mellemstore produktioner: ingen serverrum, intet stort IT-projekt, i drift på uger.",
         eyebrow: "Cloud MES",
+        replay: "mes",
         heroTitle: "Cloud MES, I slår til ét modul ad gangen",
         replay: "mes",
         heroBody:
