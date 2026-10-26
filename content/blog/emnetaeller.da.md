@@ -1,5 +1,6 @@
 ---
 title: "Emnetælleren fortæller ikke hele historien"
+description: "Emnetælleren alene kan få en langsom maskine til at se produktiv ud. Se, hvorfor OEE giver et ærligere billede, og hvad emnetælleren stadig er god til."
 ---
 
 Mange fabrikker bruger en emnetæller til at se, om en maskine kører, og hvor mange emner den laver.

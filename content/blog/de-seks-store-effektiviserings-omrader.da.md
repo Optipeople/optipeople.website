@@ -1,5 +1,6 @@
 ---
 title: "De seks store tab: Her går effektiviteten tabt i produktionen"
+description: "De seks store tab bag OEE, fra opstilling og nedbrud til korte stop, lav hastighed og kassation. Se, hvor jeres egen produktion taber mest."
 ---
 
 Når I måler effektiviteten, er formålet at se, hvor produktionen kører dårligere, end den kunne. Når det er synligt, er det lettere at se, hvor I skal starte.

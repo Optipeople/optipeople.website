@@ -1,5 +1,6 @@
 ---
 title: "Cloud MES: Saml produktionen i ét system i skyen"
+description: "Hvad en cloud MES er, hvilke spørgsmål den svarer på, og hvordan I kan indføre OptiPeople Data Platform trin for trin uden et stort IT-projekt."
 ---
 
 Produktion, ressourcer, kassation, skift, operatører, vedligehold, maskinstyring og ordrer er svære at planlægge, når hver afdeling sidder med sin del. En cloud MES samler det hele ét sted.

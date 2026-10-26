@@ -1,53 +1,54 @@
 ---
 title: "Focus on CAPEX"
+description: "Why you should optimize the production you already have before buying new machines, and how data helps you avoid capital investments you never needed."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/focus-on-capex.jpg"
 ---
 
-CAPEX refers to **capital expenditure**, or capital investment.
+CAPEX stands for **capital expenditure**, or capital investment.
 
-The article argues that production measurement and optimization can help manufacturers avoid unnecessary capital investments.
+When you measure and optimize your production, you can avoid investments you didn't need.
 
 ## Why CAPEX matters
 
-Buying another machine may appear to be a good way to increase production, but it also creates:
+Buying another machine can look like a good way to produce more. But it also brings:
 
 - capital cost
 - depreciation
 - financial risk
 
-If production can instead be made more efficient with existing equipment, revenue can increase without increasing capital exposure.
+If you can get more out of the equipment you already have, revenue can grow without tying up more capital.
 
 ## Avoid unnecessary risk
 
-The article gives a simple example:
+A simple example:
 
-If a company buys a machine to satisfy increased demand, but the customer behind that demand disappears early, the depreciation remains even though the extra revenue does not.
+A company buys a machine to keep up with rising demand. Then the customer behind that demand disappears early. The extra revenue is gone, but the depreciation keeps running.
 
-That makes the investment risky if it was avoidable.
+If the investment could have been avoided, it was an unnecessary risk.
 
 ## The better way
 
-The preferred approach described is:
+Do it in this order:
 
-1. optimize current production first
-2. use data to understand where waste exists
-3. decide on capital investment only after optimization potential is clear
+1. optimize the production you have today
+2. use data to find out where the waste is
+3. decide on an investment only once you know how much there is to gain from optimizing
 
-This approach can result in:
+This can give you:
 
 - fewer unnecessary investments
-- better use of existing capacity
+- better use of the capacity you have
 - stronger financial discipline
 
 ## CAPEX and production efficiency
 
-The article also connects efficient production with sustainability and job satisfaction:
+Efficient production also ties in with sustainability and job satisfaction:
 
 - less waste
 - smarter use of resources
 - less financial risk
 
-The core message is that data-driven optimization should come before major capital expenditure whenever possible.
+The point is that data-driven optimization should come before major capital investments whenever possible.

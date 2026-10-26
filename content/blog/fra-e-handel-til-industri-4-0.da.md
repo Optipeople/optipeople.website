@@ -1,5 +1,6 @@
 ---
 title: "Fra e-handel til Industri 4.0"
+description: "Industrien står over for det samme skift mod data, som e-handlen gav detailhandlen. Se, hvad det betyder for jer, og hvordan I tester, hvor I står."
 ---
 
 Industrien står midt i den samme omvæltning, som detailhandlen gik igennem, da e-handlen ændrede konkurrencen.

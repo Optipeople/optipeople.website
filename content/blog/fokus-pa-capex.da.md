@@ -1,5 +1,6 @@
 ---
 title: "Fokus på CAPEX"
+description: "Få mere ud af den produktion, I har, før I køber nye maskiner. Sådan hjælper data jer med at undgå investeringer, der aldrig var nødvendige."
 ---
 
 CAPEX står for **capital expenditure**, altså kapitalinvesteringer.

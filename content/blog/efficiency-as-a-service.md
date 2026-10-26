@@ -1,14 +1,15 @@
 ---
 title: "Efficiency as a service"
+description: "How OptiPeople Data Platform measures OEE on both automatic and manual processes, with modules for availability, shifts, performance, orders and scrap."
 date: "2022-02-15"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/efficiency-as-a-service.png"
 ---
 
-OptiPeople Data Platform began as a tool for improving machine efficiency and productivity, but the broader vision is to support competitive and sustainable local production industries.
+OptiPeople Data Platform started as a tool for raising machine efficiency and productivity. But the vision is bigger: to help local production become competitive and sustainable.
 
-OptiPeople Data Platform is software, but the article frames it more accurately as a service and partnership built to support the journey toward production excellence.
+OptiPeople Data Platform is software. More precisely, it is a service and a partnership built to support you on the way to production excellence.
 
 ## Efficiency for both automatic and manual processes
 
@@ -17,9 +18,9 @@ OptiPeople Data Platform can collect data from both:
 - automatic processes
 - manual processes
 
-Automatic processes typically include machines and industrial systems where runtime or value signals can be captured automatically.
+Automatic processes are typically machines and industrial systems, where runtime or measured values can be captured automatically.
 
-Manual processes include activities such as:
+Manual processes are, for example:
 
 - mounting
 - packaging
@@ -28,44 +29,44 @@ Manual processes include activities such as:
 - sanding
 - drilling
 
-In these cases, operators can use the OptiPeople Data Platform operator panel to register start and stop times, number of units, and related process information.
+Here, your operators use the operator panel in OptiPeople Data Platform to register start and stop times, number of units and other information about the process.
 
 ## Calculating OEE
 
 One of the core modules in the platform is the OEE module.
 
-The OEE calculation is built around:
+OEE is calculated from:
 
 - availability
 - performance
 - quality
 
-These modules help answer practical production questions and support continuous improvement.
+The modules answer practical questions from production and help you keep improving.
 
 ## Measuring availability
 
-The availability module helps answer questions such as:
+The availability module answers questions such as:
 
-- What is average uptime?
-- How long do stops usually last?
+- What is the average uptime?
+- How long does a stop usually last?
 - How much time passes between stops?
-- How many stops happen per shift or day?
+- How many stops are there per shift or per day?
 
 ## Planning shifts
 
-To calculate real availability, the platform needs planned production time.
+To calculate real availability, the platform needs to know your planned production time.
 
-That is why shift planning is part of the model. Users can create:
+That is why shift planning is part of the model. You can create:
 
 - multiple shifts per day
-- customized shift templates
+- your own shift templates
 - shift calendars for holidays and exceptions
 
 ## Analyzing performance
 
-Availability alone does not describe how fast the machine performs while running.
+Availability doesn't tell you how fast the machine runs while it is running.
 
-The performance module compares actual output speed against target or expected speed and helps identify whether the process is running effectively when it is online.
+The performance module compares actual speed with target or expected speed. That shows you whether the process runs effectively when it is up.
 
 ## Quality and units information
 
@@ -75,8 +76,8 @@ The platform can also handle:
 - different expected speeds by order type
 - scrap and rejection tracking
 
-That makes it possible to connect output, speed, and quality in the same operational view.
+That way you see output, speed and quality together in one place.
 
 ## The main idea
 
-The article positions OptiPeople Data Platform less as a single software feature and more as an ongoing service model: a modular system that supports better production decisions across different process types.
+OptiPeople Data Platform is not just a single software feature. It is an ongoing service: a modular system that helps you make better production decisions, whatever kind of process you run.

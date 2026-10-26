@@ -1,5 +1,6 @@
 ---
 title: "Efficiency as a Service"
+description: "Sådan måler OptiPeople Data Platform OEE på både automatiske og manuelle processer, med moduler til tilgængelighed, skift, ydelse, ordrer og kassation."
 ---
 
 OptiPeople Data Platform startede som et værktøj til at øge maskinernes effektivitet og produktivitet. Men visionen er større: at hjælpe lokal produktion med at blive konkurrencedygtig og bæredygtig.

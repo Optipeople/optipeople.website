@@ -1,45 +1,46 @@
 ---
 title: "Part counter"
+description: "Why a part counter alone can make a slow machine look productive, why OEE gives you a truer picture, and where the part counter is still useful."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/part-counter.jpg"
 ---
 
-Many factories use a part counter to determine whether a machine is running and how many units it produces.
+Many factories use a part counter to see whether a machine is running and how many units it produces.
 
-The article points out that this can be useful, but also misleading if it becomes the main way of judging performance.
+That can be useful. But it can also mislead you if it becomes the way you judge production.
 
 ## Why a part counter can be misleading
 
-A machine can appear to be running well while still producing too slowly.
+A machine can look like it is running fine and still produce too slowly.
 
-If operators can influence machine speed, uptime alone may give a false sense of efficiency:
+If operators can adjust the machine's speed, uptime alone can give you a false picture of efficiency:
 
 - the machine is technically running
-- output may still be lower than expected
-- productivity can look better than it really is
+- it may still make fewer units than expected
+- productivity looks better than it really is
 
-That is the main limitation of relying only on a part counter.
+That is the big weakness of looking only at the part counter.
 
 ## Why OEE gives a better picture
 
-The article recommends OEE as a more useful production metric because it combines:
+OEE is a more useful metric because it combines:
 
 - availability
 - performance
 - quality
 
-That creates a more realistic view of whether the machine is truly producing effectively, not just running.
+That shows you whether the machine is actually producing effectively, not just whether it is running.
 
 ## Where a part counter still helps
 
-The article does not dismiss the part counter entirely.
+You don't need to throw the part counter out.
 
-It can still be valuable for:
+It is still good for:
 
 - counting produced units
-- identifying basic runtime
-- supporting maintenance planning
+- seeing how long the machine has run
+- planning maintenance
 
-The practical takeaway is that a part counter is a useful input, but not a complete measure of production performance on its own.
+The point is that a part counter is a useful input. But on its own, it can't tell you how well your production is performing.

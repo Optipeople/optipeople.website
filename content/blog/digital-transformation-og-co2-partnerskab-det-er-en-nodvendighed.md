@@ -1,44 +1,45 @@
 ---
 title: "Digital transformation and CO2 partnership: It's a necessity"
+description: "Why sustainability is now a business requirement for manufacturers, how measured energy data drives CO2 cuts, and how we help you get it done with a partner."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/digital-transformation-co2-partnership.png"
 ---
 
-The article presents green transition as both a business opportunity and a business requirement.
+Green transition is both a business opportunity and a requirement you can't get around.
 
-It argues that sustainability is no longer optional for industrial companies because customers, regulations, and market expectations are all moving in the same direction.
+Sustainability is no longer optional for industrial companies. Customers, regulation and the market are all pulling in the same direction.
 
 ## Why sustainability has become strategic
 
-The article cites a Ramboll survey of large Danish industrial companies, where the main reasons for working with sustainability were:
+Ramboll asked large Danish industrial companies why they work with sustainability. The main answers were:
 
 - customer demand
-- responsibility for societal challenges
-- compliance with legislation and regulation
+- responsibility for solving society's challenges
+- requirements in legislation and regulation
 
-The conclusion is that sustainability work has to be connected to the broader company strategy if it is going to produce lasting business value.
+The conclusion is that your sustainability work has to tie in with your overall company strategy if it is going to create lasting business value.
 
 ## Data is the basis for green transition
 
-The article links digital transformation directly to CO2 reduction.
+Digital transformation and lower CO2 emissions go hand in hand.
 
-Measured energy data can be used to:
+When you measure your energy use, you can use the numbers to:
 
-- map current consumption
-- identify improvement opportunities
-- support energy optimization projects
-- create the basis for continuous CO2 reduction
+- see what you use today
+- find out where there is something to gain
+- support projects that lower energy use
+- build the basis for cutting CO2 year after year
 
-That makes data collection a practical foundation for climate work rather than just a reporting exercise.
+That makes data collection a practical foundation for your climate work, not just something to report.
 
-## Partnership as an execution model
+## Partnership as a way to get it done
 
-The article describes OptiPeople as working together with a Danish energy consultancy to help companies:
+At OptiPeople, we work with a Danish energy consultancy to help companies:
 
 - reduce CO2 emissions
-- move toward climate neutrality
-- apply for public energy subsidies where relevant
+- move closer to climate neutrality
+- apply for public energy subsidies where it makes sense
 
-The core point is that green transition works best when sustainability targets, operational data, and business priorities are handled together.
+The point is that green transition works best when sustainability targets, operational data and business priorities are handled together.

@@ -1,43 +1,44 @@
 ---
 title: "Bohica"
+description: "Why so many improvement projects fade once the consultants leave, and what makes them stick: shared ownership, visible results and backing from leadership."
 date: "2022-01-06"
 author: "OptiPeople Team"
 category: "Insights"
 image: "/images/blog and case/blog/bohica.jpg"
 ---
 
-The article uses the expression "Bohica" to describe what many employees feel when one more improvement initiative arrives without lasting follow-through.
+"Bohica" is the word many employees have in the back of their minds when one more improvement project rolls in and nobody follows up on it afterwards.
 
-Too many change projects promise better efficiency, but lose impact once the consultants leave and the daily pressure returns.
+Far too many change projects promise higher efficiency. But once the consultants have left and the daily pressure is back, the effect disappears.
 
 ## Improvement needs shared ownership
 
-The article argues that long-term change cannot rest on one person alone.
+Lasting change cannot rest on one person.
 
-In many organizations, continuous improvement fails because:
+In many places, continuous improvement stalls because:
 
-- responsibility is too narrow
-- teams are not supported properly
-- the work is treated like a short campaign instead of a long-term habit
+- too few people carry the responsibility
+- teams don't get the support they need
+- the work is run as a short campaign, not as a habit
 
-Real change needs broad involvement and a culture that keeps the work alive after the kickoff phase.
+Real change needs many people on board, and a culture that keeps the work alive once the kickoff is over.
 
-## Communication makes progress visible
+## Show that it works
 
-Improvement work only sticks when people can clearly see that it is producing results.
+Improvement work only sticks when people can see that it gets results.
 
-That is why visible production data matters. The article highlights the value of:
+That is why it matters that production data is visible to everyone. It lets you:
 
-- showing trends over time
-- proving the effect of actions
-- creating motivation through shared visibility
+- show how things develop over time
+- prove that your actions work
+- build motivation, because everyone sees the same numbers
 
-Board meetings and common production reviews are presented as practical ways to keep teams aligned on current performance and next actions.
+Short whiteboard meetings at the line and shared production reviews are two practical ways to keep your teams agreed on where you stand and what happens next.
 
 ## No backing, no lasting effect
 
-Without support from leadership, improvement programs typically lose time, energy, and credibility.
+Without backing from leadership, improvement programs usually lose time, energy and credibility.
 
-When resources disappear and priorities shift, production slides back to the old normal. Then, sooner or later, a new efficiency push begins and the cycle repeats.
+When the resources disappear and priorities shift, production slides back to the old normal. Sooner or later a new efficiency project starts, and the cycle repeats.
 
-The message is straightforward: change projects only create lasting value when they are supported, communicated, and sustained by the whole organization.
+The point is simple: change projects only create lasting value when the whole organization backs them, talks about them and sticks with them.

@@ -1,5 +1,6 @@
 ---
 title: "Bohica"
+description: "Hvorfor forbedringsprojekter dør, når konsulenterne går, og hvad der får dem til at holde: fælles ejerskab, synlige resultater og opbakning fra ledelsen."
 ---
 
 "Bohica" er det udtryk, mange medarbejdere har i baghovedet, når endnu et forbedringsprojekt ruller ind, uden at nogen følger op på det bagefter.

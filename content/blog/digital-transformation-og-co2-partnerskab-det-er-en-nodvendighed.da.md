@@ -1,5 +1,6 @@
 ---
 title: "Digital transformation og CO2-partnerskab: Det er en nødvendighed"
+description: "Bæredygtighed er blevet et krav i industrien. Se, hvordan målte energidata hjælper jer med at skære CO2 væk, og hvordan vi gør det med en partner."
 ---
 
 Grøn omstilling er både en forretningsmulighed og et krav, I ikke kommer udenom.
