@@ -128,7 +128,6 @@ const modules: LocalizedPage<StandardPage>[] = [
         eyebrow: "OEE-modul",
         replay: "production",
         heroTitle: "Et OEE-system, der viser, hvor tiden går tabt",
-        replay: "production",
         heroBody:
           "Følg OEE, mens skiftet kører, og se præcis, hvor tiden forsvinder. Så skal I ikke gætte længere.",
         primaryLabel: "Book en demo",
