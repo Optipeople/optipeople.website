@@ -5,8 +5,10 @@
 - `quest blocked` fails on a quest with no live session; a note is the only way to leave the human a question there.
 - A quest branch that holds a merge commit cannot land by rebase or cherry-pick; land it as one squash commit.
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
+- The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 
 ## Lately
+- 2026-10-26 Round after the Bing import landed (human signed in, quest done). Comparison pages blocked on pricing wording and competitor claims as planned; left with the human, noted. Log not dry, nothing filed or cast.
 - 2026-10-26 Danish buyer pages conflicted with the cloud MES commit (f9c6bb2) in feature-page.tsx, standard-page.tsx, modules.ts. Fix-up already running; told it to keep both sides, one FAQPage per page, MES title as assumed.
 - 2026-10-26 Captures quest blocked on the OptiCloudMultiTenant consent and platform login; account consent is the human's, left it blocked and noted. Comparison session confirmed it follows my plan; nothing more to tell it.
 - 2026-10-26 Comparison pages quest paused while its research agents ran. Told it to finish and commit on its branch only (main deploys live), then block with one line: our pricing wording plus approval of the competitor claims.
@@ -58,8 +60,7 @@
 
 ## Open
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
-- Bing import quest handed to the human (2026-10-26): waits for their sign-in at bing.com/webmasters, then a rerun.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
-- Comparison pages (Evocon, Factbird): expect a block for the human on pricing wording and competitor claims; must not land on main before a yes.
+- Comparison pages (Evocon, Factbird) blocked with the human on pricing wording and competitor claims; on yes, land branch write-honest-comparison-pages-optipeople, never before.
 - Captures quest waits on the human: Accept the OptiCloudMultiTenant consent in the pane, log in to platform.optipeople.dk, rerun.
 - Replays quest blocked once on opus (2026-10-26); if it blocks again, read why before it starts over.
