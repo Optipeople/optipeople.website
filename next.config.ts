@@ -50,6 +50,8 @@ const nextConfig: NextConfig = {
       // Their internal /md/... address must not be indexed as a page of its
       // own. Headers match the requested URL, so a rewritten .md is untouched.
       { source: "/md/:path*", headers: [noindexHeader] },
+      // The Swedish cold email landing pages (app/sv) never go in search.
+      { source: "/sv/:path*", headers: [noindexHeader] },
     ];
   },
   async rewrites() {

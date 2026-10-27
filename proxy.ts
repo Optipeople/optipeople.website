@@ -12,6 +12,16 @@ export default function proxy(request: NextRequest) {
   // routes never resolve here, so next-intl still sees the /en/... links its
   // language switcher uses to set the locale cookie.
   const { pathname, search } = request.nextUrl
+
+  // The Swedish outreach pages under /sv (app/sv) are not a next-intl locale.
+  // Without this, next-intl would read /sv/... as an English path and 404 it.
+  if (pathname === "/sv" || pathname.startsWith("/sv/")) {
+    if (pathname.length > 1 && pathname.endsWith("/")) {
+      const stripped = pathname.replace(/\/+$/, "")
+      return NextResponse.redirect(new URL(stripped + search, request.url), 308)
+    }
+    return NextResponse.next()
+  }
   const legacy = resolveLegacyPath(pathname)
   if (legacy) return NextResponse.redirect(new URL(legacy + search, request.url), 308)
 
