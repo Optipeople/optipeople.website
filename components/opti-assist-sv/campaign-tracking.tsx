@@ -12,6 +12,16 @@ import { captureCampaign, readCampaign } from "@/lib/campaign"
 
 export const LANDING_ID = "opti_assist_sv"
 
+/**
+ * The nvoke cold email links are short, /sv/opti-assist?r=<nvoke lead UUID>.
+ * Those get these utm values; a link with its own utm_* keeps its own.
+ */
+const SHORT_LINK_UTM = {
+  utm_source: "nvoke",
+  utm_medium: "email",
+  utm_campaign: "opti-assist-se",
+}
+
 /** The campaign fields as GA4 event params. `ref` is the per-recipient `r`. */
 export function campaignParams() {
   const c = readCampaign()
@@ -37,7 +47,7 @@ export function campaignParams() {
  */
 export function CampaignTracking() {
   useEffect(() => {
-    captureCampaign()
+    captureCampaign(SHORT_LINK_UTM)
 
     let sent = false
     const sendView = () => {

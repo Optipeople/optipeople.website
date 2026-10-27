@@ -45,18 +45,32 @@ export function readCampaign(): Campaign {
 }
 
 /**
- * Reads the campaign parameters from the current URL and stores them. A new
- * value replaces the stored one key by key, so a second link from another
- * mail wins, while a plain reload without parameters keeps what was there.
+ * Reads the campaign parameters from the current URL and stores them. A link
+ * that carries any of them replaces what was stored, so a second link from
+ * another mail wins, while a plain reload without parameters keeps it.
+ *
+ * `refDefaults` serves short links like ?r=<id>: when the URL carries `r`
+ * but no utm_* at all, those utm values are filled in. Any explicit utm
+ * parameter in the URL switches the defaults off entirely.
  */
-export function captureCampaign(): Campaign {
+export function captureCampaign(refDefaults?: Campaign): Campaign {
   const params = new URLSearchParams(window.location.search)
   const fromUrl: Record<string, string> = {}
   for (const key of CAMPAIGN_KEYS) {
     const value = params.get(key)
     if (value) fromUrl[key] = value
   }
-  const merged = { ...readCampaign(), ...cleanCampaign(fromUrl) }
+  const hasUtm = CAMPAIGN_KEYS.some((key) => key !== "r" && fromUrl[key])
+  if (refDefaults && fromUrl.r && !hasUtm) {
+    for (const key of CAMPAIGN_KEYS) {
+      const value = refDefaults[key]
+      if (key !== "r" && value) fromUrl[key] = value
+    }
+  }
+  const incoming = cleanCampaign(fromUrl)
+  // A link with any campaign value starts a fresh attribution, so nothing
+  // from an earlier link (an old utm_content, say) sticks to the new one.
+  const merged = Object.keys(incoming).length > 0 ? incoming : readCampaign()
   inMemory = merged
   try {
     window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(merged))
