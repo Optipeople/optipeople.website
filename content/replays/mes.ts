@@ -58,7 +58,7 @@ export const mesReplay: Record<"en" | "da", ReplayContent<MesDemo>> = {
         title: "The counter next to the machine",
         body: "The panel shows the machine's state, the part counter and parts per hour through the shift. The operator sees at a glance whether the order keeps pace.",
         image: "/images/replays/mes/panel-counter.webp",
-        alt: "The operator panel for CNC Drilling: running, all stops registered, a counter at 188 and a parts per hour chart from 06:00 to 16:00",
+        alt: "The operator panel for CNC Drilling: running, all stops registered, performance at 48 and a parts per hour chart from 06:00 to 14:00",
       },
       {
         title: "Produced and rejected, day by day",
@@ -100,7 +100,7 @@ export const mesReplay: Record<"en" | "da", ReplayContent<MesDemo>> = {
         title: "Tælleren ved maskinen",
         body: "Panelet viser maskinens status, tælleren og emner i timen gennem skiftet. Operatøren kan se med det samme, om ordren holder tempoet.",
         image: "/images/replays/mes/panel-counter.webp",
-        alt: "Operatørpanelet for CNC Drilling: maskinen kører, alle stop er registreret, tælleren står på 188, og en graf viser emner i timen fra 06:00 til 16:00",
+        alt: "Operatørpanelet for CNC Drilling: maskinen kører, alle stop er registreret, performance står på 48, og en graf viser emner i timen fra 06:00 til 14:00",
       },
       {
         title: "Produceret og kasseret, dag for dag",

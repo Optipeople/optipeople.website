@@ -97,7 +97,7 @@ export const ordersReplay: Record<"en" | "da", ReplayContent<OrdersDemo>> = {
         title: "Start and stop where the work happens",
         body: "The panel at the machine shows the state, the stop buttons the operator actually uses, and parts per hour through the shift. Every start and stop is tied to the running order, so the order carries its own run time and stops.",
         image: "/images/replays/orders/operator-panel.webp",
-        alt: "The operator panel for CNC Drilling: machine running, stop buttons for maintenance, QA check, setup and break, parts per hour and the shift timeline",
+        alt: "The operator panel for CNC Drilling: machine running, stop buttons for maintenance, QA check, break and missing material, parts per hour and the shift timeline",
       },
       {
         title: "Good parts and scrap, counted by the machine",
@@ -140,7 +140,7 @@ export const ordersReplay: Record<"en" | "da", ReplayContent<OrdersDemo>> = {
         title: "Start og stop dér, hvor arbejdet sker",
         body: "Panelet ved maskinen viser, om den kører, de stopknapper, operatøren faktisk bruger, og emner i timen hen over skiftet. Hver start og hvert stop hænger på den ordre, der kører. Så har ordren sin egen køretid og sine egne stop med.",
         image: "/images/replays/orders/operator-panel.webp",
-        alt: "Operatørpanelet til CNC Drilling: maskinen kører, stopknapper til vedligehold, kvalitetstjek, omstilling og pause, emner i timen og skiftets tidslinje",
+        alt: "Operatørpanelet til CNC Drilling: maskinen kører, stopknapper til vedligehold, kvalitetstjek, pause og manglende materiale, emner i timen og skiftets tidslinje",
       },
       {
         title: "Gode emner og kassation, talt af maskinen",

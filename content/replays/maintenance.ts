@@ -82,7 +82,7 @@ export const maintenanceReplay: Record<"en" | "da", ReplayContent<MaintenanceDem
         title: "Planned maintenance is one tap on the panel",
         body: "When the machine goes into maintenance, the operator starts it from the panel. The time is booked as maintenance, not as an unexplained stop.",
         image: "/images/replays/maintenance/panel-stops.webp",
-        alt: "Operator panel for CNC Drilling with Maintenance, QA Check, Setup and Breaktime buttons",
+        alt: "Operator panel for CNC Drilling with Maintenance, QA Check, Breaktime and Missing Material buttons",
       },
       {
         title: "Spare parts next to the tasks",
@@ -133,7 +133,7 @@ export const maintenanceReplay: Record<"en" | "da", ReplayContent<MaintenanceDem
         title: "Planlagt vedligehold er ét tryk på panelet",
         body: "Når maskinen skal have vedligehold, starter operatøren det fra panelet. Tiden bliver bogført som vedligehold og ikke som et stop, ingen kan forklare.",
         image: "/images/replays/maintenance/panel-stops.webp",
-        alt: "Operatørpanel for CNC Drilling med knapper til Maintenance, QA Check, Setup og Breaktime",
+        alt: "Operatørpanel for CNC Drilling med knapper til Maintenance, QA Check, Breaktime og Missing Material",
       },
       {
         title: "Reservedele ved siden af opgaverne",

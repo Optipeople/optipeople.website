@@ -87,8 +87,8 @@ export const platformReplay: Record<"en" | "da", ReplayContent<PlatformDemo>> = 
         title: "The operator panel shows the shift as it happens",
         body: "State, counter, parts per hour and the production timeline for each machine, on a screen next to it. Setup and breaks are one tap, so the time lands in the right place from the start.",
         image: "/images/replays/platform/operator-panel.webp",
-        phoneCrop: { x: 630, y: 18, w: 730, h: 722 },
-        alt: "The operator panel for CNC Drilling: running state, a counter at 188, parts per hour through the day and the production timeline",
+        phoneCrop: { x: 905, y: 5, w: 910, h: 900 },
+        alt: "The operator panel for CNC Drilling: running state, performance at 48, parts per hour through the day and the production timeline",
       },
       {
         title: "The report reads the same record",
@@ -155,8 +155,8 @@ export const platformReplay: Record<"en" | "da", ReplayContent<PlatformDemo>> = 
         title: "Operatørpanelet viser skiftet, mens det kører",
         body: "Status, tæller, emner i timen og tidslinjen for hver maskine, på en skærm lige ved siden af. Omstilling og pause er ét tryk, så tiden lander det rigtige sted fra start.",
         image: "/images/replays/platform/operator-panel.webp",
-        phoneCrop: { x: 630, y: 18, w: 730, h: 722 },
-        alt: "Operatørpanelet for CNC Drilling: maskinen kører, tælleren står på 188, emner i timen hen over dagen og tidslinjen",
+        phoneCrop: { x: 905, y: 5, w: 910, h: 900 },
+        alt: "Operatørpanelet for CNC Drilling: maskinen kører, performance står på 48, emner i timen hen over dagen og tidslinjen",
       },
       {
         title: "Rapporten læser den samme registrering",
