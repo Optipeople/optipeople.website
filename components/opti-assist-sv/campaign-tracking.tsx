@@ -2,12 +2,7 @@
 
 import { useEffect } from "react"
 
-import {
-  applyConsent,
-  CONSENT_CHANGE_EVENT,
-  readConsent,
-  trackEvent,
-} from "@/lib/analytics"
+import { trackEvent } from "@/lib/analytics"
 import { captureCampaign, readCampaign } from "@/lib/campaign"
 
 export const LANDING_ID = "opti_assist_sv"
@@ -39,26 +34,17 @@ export function campaignParams() {
  * Stores utm_* and `r` from the URL on arrival, sends one `landing_view`
  * event with them, and a `cta_click` for every element marked `data-cta`.
  *
- * GA4 is consent-gated like the rest of the site (lib/analytics.ts), so the
- * view goes out as soon as consent is known: right away for a returning
- * visitor who said yes, or the moment a new visitor accepts. The campaign
- * fields always travel with the form itself, consent or not, since that is a
- * message the visitor sends us on purpose.
+ * Every visitor is counted: without consent the events go out as cookieless
+ * pings (Consent Mode advanced, lib/analytics.ts), which matters here since
+ * most cold email clicks come from phones, where no banner is shown. The
+ * campaign fields also travel with the form itself, since that is a message
+ * the visitor sends us on purpose.
  */
 export function CampaignTracking() {
   useEffect(() => {
     captureCampaign(SHORT_LINK_UTM)
 
-    let sent = false
-    const sendView = () => {
-      if (sent || readConsent() !== "granted") return
-      // This runs before the consent banner's own effect, so load GA here.
-      applyConsent("granted")
-      sent = true
-      trackEvent("landing_view", campaignParams())
-    }
-    sendView()
-    window.addEventListener(CONSENT_CHANGE_EVENT, sendView)
+    trackEvent("landing_view", campaignParams())
 
     const onClick = (event: MouseEvent) => {
       const el = (event.target as Element | null)?.closest?.("[data-cta]")
@@ -71,7 +57,6 @@ export function CampaignTracking() {
     document.addEventListener("click", onClick, { capture: true })
 
     return () => {
-      window.removeEventListener(CONSENT_CHANGE_EVENT, sendView)
       document.removeEventListener("click", onClick, { capture: true })
     }
   }, [])

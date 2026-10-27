@@ -4,7 +4,7 @@ import "../globals.css"
 
 import { ConsentBanner } from "@/components/consent-banner"
 import { svCopy } from "@/content/opti-assist-sv"
-import { consentDefaultScript } from "@/lib/analytics"
+import { analyticsHeadScript } from "@/lib/analytics"
 import { ibmPlexSans } from "@/lib/fonts"
 import { siteUrl } from "@/lib/seo"
 
@@ -13,7 +13,7 @@ import { siteUrl } from "@/lib/seo"
 // site, and stay out of search. proxy.ts lets /sv/... past next-intl, and
 // this layout stands in for app/[locale]/layout.tsx without the site header,
 // footer, newsletter prompt or language switcher, none of which has a Swedish
-// version. Same font, CSS and consent-gated GA4 as the rest of the site.
+// version. Same font, CSS and GA4 setup as the rest of the site.
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -28,8 +28,8 @@ export default function SwedishLayout({ children }: { children: React.ReactNode 
   return (
     <html lang="sv" suppressHydrationWarning className={ibmPlexSans.variable}>
       <head>
-        {/* Consent Mode v2 defaults, before any tag could run. */}
-        <script dangerouslySetInnerHTML={{ __html: consentDefaultScript }} />
+        {/* GA4 with Consent Mode v2 defaults, before any other tag. */}
+        <script dangerouslySetInnerHTML={{ __html: analyticsHeadScript }} />
       </head>
       <body className="bg-background text-foreground min-h-screen flex flex-col">
         {/* The site's own consent banner, fed Swedish strings. Its privacy

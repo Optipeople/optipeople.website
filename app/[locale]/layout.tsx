@@ -10,7 +10,7 @@ import { LazyNewsletterPrompt } from "@/components/newsletter-prompt-lazy";
 import { ConsentBanner } from "@/components/consent-banner";
 import { JsonLd } from "@/components/json-ld";
 import { routing } from "@/i18n/routing";
-import { consentDefaultScript } from "@/lib/analytics";
+import { analyticsHeadScript } from "@/lib/analytics";
 import { ibmPlexMono, ibmPlexSans, ibmPlexSerif } from "@/lib/fonts";
 import { isIndexableDeploy } from "@/lib/indexing";
 import { siteUrl } from "@/lib/seo";
@@ -50,8 +50,8 @@ export default async function LocaleLayout({
       className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} ${ibmPlexMono.variable}`}
     >
       <head>
-        {/* Consent Mode v2 defaults, before any tag could run. */}
-        <script dangerouslySetInnerHTML={{ __html: consentDefaultScript }} />
+        {/* GA4 with Consent Mode v2 defaults, before any other tag. */}
+        <script dangerouslySetInnerHTML={{ __html: analyticsHeadScript }} />
         <JsonLd data={organizationSchema(locale)} />
         <JsonLd data={websiteSchema(locale)} />
       </head>

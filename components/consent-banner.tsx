@@ -5,10 +5,8 @@ import { useTranslations } from "next-intl"
 
 import { Link } from "@/i18n/navigation"
 import {
-  applyConsent,
   onConsentSettingsOpen,
   openConsentSettings,
-  readConsent,
   saveConsent,
   trackEvent,
   type ConsentChoice,
@@ -27,13 +25,13 @@ export function ConsentBanner() {
   const [open, setOpen] = useState(true)
   const [visible, setVisible] = useState(true)
   // Phones never get the banner on their own: on a small screen it covered
-  // close to half the page. Without an answer nothing is tracked (consent
-  // stays denied), and the privacy page can still open it on any screen.
+  // close to half the page. Without an answer GA4 still counts them with
+  // cookieless pings (consent stays denied, see lib/analytics.ts), and the
+  // privacy page can still open it on any screen.
   const [reopened, setReopened] = useState(false)
 
   useEffect(() => {
-    const choice = readConsent()
-    if (choice) applyConsent(choice)
+    // A stored choice is applied by the head script, before the first hit.
     const show = () => {
       // React decides from here, so reopening from settings works.
       document.documentElement.removeAttribute("data-consent")
