@@ -14,6 +14,7 @@
 - A quest that sends out long research agents gets told up front to commit on its branch and end with quest done or quest blocked, never just stop; the comparison pages session stopped silently twice.
 
 ## Lately
+- 2026-10-27 Hourly round: the human started and paid the .com transfer (pending at Key-Systems); the Cancel Wannafind quest waits on RDAP by itself. Noted the transfer quest as done in substance. Phone-layout edits still uncommitted, 6568dce still off origin/main. Nothing filed or cast.
 - 2026-10-27 Hourly round: unchanged. Phone-layout edits still uncommitted, 6568dce still off origin/main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-27 Round as the human left: unchanged. Phone-layout edits still uncommitted, 6568dce still off origin/main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-27 Hourly round: unchanged. Phone-layout edits still uncommitted, 6568dce still off origin/main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
@@ -90,5 +91,5 @@
 ## Open
 - Booking code: branch land-the-booking-code-on-main (6568dce) waits for the human to commit or discard the uncommitted phone-layout edits on main; then git merge --ff-only it, and the /book test quest sets the flag. Old switch-on quest is closed.
 - trafficheap.cc unwanted referral stays with the human (GA4 UI); no quest covers it.
-- .com transfer waits on the human's Wannafind EPP code and a yes to pay about USD 10; after it completes, the human can cancel Wannafind DNS Hotel.
+- .com transfer started and paid 2026-10-27 (up to 5 days). "Cancel Wannafind after optipeople.com lands at Cloudflare" wakes on RDAP; then the human cancels Wannafind DNS Hotel and renewal (WF83574). The transfer quest itself can't be marked done by command.
 - Outreach drafts in Docs/seo/outreach/ wait on the human to fill [brackets] and send (Capterra, customer emails, pitches).
