@@ -14,6 +14,7 @@
 - A quest that sends out long research agents gets told up front to commit on its branch and end with quest done or quest blocked, never just stop; the comparison pages session stopped silently twice.
 
 ## Lately
+- 2026-10-27 Hourly round: unchanged. Phone-layout edits still uncommitted, 6568dce still off origin/main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-27 Round as the human left: unchanged. Phone-layout edits still uncommitted, 6568dce still off origin/main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-27 Hourly round: unchanged. Phone-layout edits still uncommitted, 6568dce still off origin/main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-27 Hourly round with day look-back: unchanged otherwise (phone-layout edits still uncommitted, 6568dce still off main, same blocked quests). The day's repeats: 5 merge conflicts on shared page files (all fixed by fix-ups) and the comparison session stopping silently twice (quest now done); wrote both as rules and noted the hot files on SEO week 2026-11-02. No new quest needed. Lore notes from the day: delegated to a helper, count pending.
