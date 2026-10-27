@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
-import { IBM_Plex_Sans } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import "../globals.css"
 
 import { ConsentBanner } from "@/components/consent-banner"
 import { svCopy } from "@/content/opti-assist-sv"
 import { consentDefaultScript } from "@/lib/analytics"
+import { ibmPlexSans } from "@/lib/fonts"
 import { siteUrl } from "@/lib/seo"
 
 // Root layout for the Swedish outreach pages under /sv. Swedish is not a site
@@ -14,13 +14,6 @@ import { siteUrl } from "@/lib/seo"
 // this layout stands in for app/[locale]/layout.tsx without the site header,
 // footer, newsletter prompt or language switcher, none of which has a Swedish
 // version. Same font, CSS and consent-gated GA4 as the rest of the site.
-
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-  variable: "--font-ibm-plex-sans",
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

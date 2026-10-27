@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -12,35 +11,10 @@ import { ConsentBanner } from "@/components/consent-banner";
 import { JsonLd } from "@/components/json-ld";
 import { routing } from "@/i18n/routing";
 import { consentDefaultScript } from "@/lib/analytics";
+import { ibmPlexMono, ibmPlexSans, ibmPlexSerif } from "@/lib/fonts";
 import { isIndexableDeploy } from "@/lib/indexing";
 import { siteUrl } from "@/lib/seo";
 import { organizationSchema, websiteSchema } from "@/lib/structured-data";
-
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-  variable: "--font-ibm-plex-sans",
-});
-
-const ibmPlexSerif = IBM_Plex_Serif({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-  // Only quotes and blog pull quotes use it, never the first screen, so it
-  // must not compete with the CSS and the sans for early bandwidth.
-  preload: false,
-  variable: "--font-ibm-plex-serif",
-});
-
-// Live readings and other small data, e.g. the module index on the homepage.
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-  preload: false,
-  variable: "--font-ibm-plex-mono",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
