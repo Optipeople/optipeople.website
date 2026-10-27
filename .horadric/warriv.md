@@ -10,8 +10,11 @@
 - Deleting or merging published posts needs the human's yes per row; once given for a content inventory, carry out every approved row with redirects in lib/legacy-redirects.ts and scripts/seo/old-paths.json.
 - The human often settles a sign-in or account step by just doing it in the pane; check the quest's status and notes before asking again.
 - A quest with a broken After line can't be fixed by command; file replacement quests and tell its session to mark itself done.
+- Quests that edit the shared page files (components/templates/standard-page.tsx, feature-page.tsx, lib/modules.ts, shared/types.ts, components/site-header.tsx) never run side by side: give the later one an After line on the earlier, or build both in one session. Five merges conflicted on these on 2026-10-26.
+- A quest that sends out long research agents gets told up front to commit on its branch and end with quest done or quest blocked, never just stop; the comparison pages session stopped silently twice.
 
 ## Lately
+- 2026-10-27 Hourly round with day look-back: unchanged otherwise (phone-layout edits still uncommitted, 6568dce still off main, same blocked quests). The day's repeats: 5 merge conflicts on shared page files (all fixed by fix-ups) and the comparison session stopping silently twice (quest now done); wrote both as rules and noted the hot files on SEO week 2026-11-02. No new quest needed. Lore notes from the day: delegated to a helper, count pending.
 - 2026-10-26 Hourly round: unchanged. Phone-layout edits still uncommitted, 6568dce still off main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-26 Hourly round: unchanged. Phone-layout edits still uncommitted, 6568dce still off main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
 - 2026-10-26 Round as the human left: unchanged. Phone-layout edits still uncommitted, 6568dce still off main; same blocked quests, two dated SEO quests queued. Nothing filed or cast.
