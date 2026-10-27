@@ -24,6 +24,11 @@ const DISMISS_COOLDOWN_DAYS = 30
 const SCROLL_THRESHOLD = 0.55
 // Don't arm exit-intent until the visitor has been around for a moment.
 const EXIT_INTENT_ARM_DELAY = 4000
+// Touch screens have no exit intent. Instead, after this long on the page the
+// corner card shows on the next scroll, so short pages get a nudge too.
+const TOUCH_DWELL_MS = 30000
+// Same breakpoint as the consent banner's max-sm:hidden (Tailwind sm, 40rem).
+const PHONE_QUERY = "(max-width: 639.98px)"
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -86,10 +91,13 @@ export function NewsletterPrompt() {
   const [visible, setVisible] = useState(false)
   const triggered = useRef(false)
   // Wait for the cookie banner to be answered, so the two never stack up.
+  // Phones never see the banner (see consent-banner.tsx), so there is nothing
+  // to wait for there.
   const [consentAnswered, setConsentAnswered] = useState(false)
 
   useEffect(() => {
-    const sync = () => setConsentAnswered(readConsent() !== null)
+    const isPhone = window.matchMedia(PHONE_QUERY).matches
+    const sync = () => setConsentAnswered(isPhone || readConsent() !== null)
     sync()
     window.addEventListener(CONSENT_CHANGE_EVENT, sync)
     return () => window.removeEventListener(CONSENT_CHANGE_EVENT, sync)
@@ -114,9 +122,18 @@ export function NewsletterPrompt() {
 
     let armed = true
     let exitArmed = false
+    let dwellReached = false
 
     const onScroll = () => {
       if (!armed) return
+      // Touch fallback: a visitor who has stayed a while and is still
+      // scrolling gets the corner card, whatever the page length.
+      if (dwellReached && window.scrollY > 0) {
+        armed = false
+        cleanup()
+        open("slide")
+        return
+      }
       const doc = document.documentElement
       const scrollable = doc.scrollHeight - window.innerHeight
       // Only on genuinely long pages (articles/case studies), never short ones.
@@ -155,6 +172,12 @@ export function NewsletterPrompt() {
         exitArmed = true
         document.addEventListener("mouseout", onMouseOut)
       }, EXIT_INTENT_ARM_DELAY)
+    } else {
+      // Never the modal on touch: only the corner card, and only after a
+      // scroll, so nothing covers the page on load.
+      armTimer = setTimeout(() => {
+        dwellReached = true
+      }, TOUCH_DWELL_MS)
     }
 
     // Evaluate scroll position once in case the page loads already scrolled.

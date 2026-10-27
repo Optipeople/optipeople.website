@@ -24,8 +24,8 @@ const meta: Record<Locale, { title: string; description: string }> = {
 }
 
 const updated: Record<Locale, string> = {
-  en: "2 October 2026",
-  da: "2. oktober 2026",
+  en: "28 October 2026",
+  da: "28. oktober 2026",
 }
 
 const eyebrow: Record<Locale, string> = { en: "Legal", da: "Juridisk" }
@@ -83,8 +83,8 @@ export default async function PrivacyPage({ params }: Props) {
           </p>
           <h2>Hvad vi indsamler, og hvorfor</h2>
           <p>
-            Vi indsamler de personoplysninger, du selv giver os, og hvis du siger ja
-            til det, statistik om, hvordan sitet bliver brugt:
+            Vi indsamler de personoplysninger, du selv giver os, og statistik om,
+            hvordan sitet bliver brugt:
           </p>
           <ul>
             <li>
@@ -103,11 +103,13 @@ export default async function PrivacyPage({ params }: Props) {
               tilbage.
             </li>
             <li>
-              <strong>Statistik.</strong> Siger du ja til cookies, bruger vi Google
-              Analytics til at se, hvilke sider der bliver besøgt, hvor besøgende
-              kommer fra, og om de sender en formular eller klikker på et
-              telefonnummer eller en e-mailadresse. Det sker på grundlag af dit
-              samtykke (GDPR art. 6, stk. 1, litra a).
+              <strong>Statistik.</strong> Vi bruger Google Analytics til at se,
+              hvilke sider der bliver besøgt, hvor de besøgende kommer fra, og om de
+              sender en formular eller klikker på et telefonnummer eller en
+              e-mailadresse. Hvordan det foregår, kan du læse under{" "}
+              <a href="#statistik">Statistik med Google Analytics</a>. Cookies
+              sætter vi kun på grundlag af dit samtykke (GDPR art. 6, stk. 1,
+              litra a).
             </li>
           </ul>
           <h2>Sådan behandles dine data</h2>
@@ -125,11 +127,81 @@ export default async function PrivacyPage({ params }: Props) {
             og i et eventuelt kundeforhold bagefter. Derefter sletter eller
             anonymiserer vi dem under hensyn til de gældende regler om bogføring.
           </p>
+          <h2 id="statistik">Statistik med Google Analytics</h2>
+          <p>
+            Vi bruger Google Analytics 4 til at tælle besøg og til at se, hvilke
+            kampagner der virker, fx hvilken mail der fik dig ind på sitet. Den kører
+            i Googles Consent Mode. Det betyder, at det, der bliver målt, afhænger
+            af, om du har sagt ja til cookies.
+          </p>
+          <h3>Uden dit samtykke</h3>
+          <p>
+            Det gælder alle, der ikke har sagt ja. Også alle på mobil, for der
+            spørger vi slet ikke om cookies. Google Analytics måler så uden cookies.
+            Der bliver ikke gemt noget på din enhed, og der bliver ikke sat et
+            klient-id. Hver sidevisning og hvert klik bliver sendt til Google for
+            sig, med:
+          </p>
+          <ul>
+            <li>
+              din IP-adresse. Google bruger den til at regne ud, hvilket land og
+              hvilken by besøget kommer fra, og smider den så væk. GA4 logger og
+              gemmer ikke IP-adresser.
+            </li>
+            <li>
+              din browser og enhed, som browseren selv oplyser dem (user agent), og
+              dit sprog og din skærmstørrelse
+            </li>
+            <li>adressen på siden og den side, du kom fra</li>
+            <li>
+              hvad du gør på siden: hvilke sider du ser, om du klikker på knapper,
+              telefonnumre og e-mailadresser, og om du sender en formular
+            </li>
+            <li>
+              kampagneoplysninger i det link, du kom ind fra. Det er fx
+              utm-værdier og den reference (ref), der står i links i vores mails.
+              Den viser, hvilken mail du klikkede på.
+            </li>
+          </ul>
+          <h3>Med dit samtykke</h3>
+          <p>
+            Siger du ja på en computer, sætter Google Analytics også cookies (se{" "}
+            <a href="#cookies">Cookies</a>). Så kan den kende din browser igen,
+            næste gang du kommer, og vi kan se, hvor mange der kommer tilbage.
+          </p>
+          <h3>Formål og modtager</h3>
+          <p>
+            Vi bruger tallene til statistik om websitet og til at måle vores
+            kampagner. Vi bruger dem ikke til reklame. Google får data som vores
+            databehandler. Google kan overføre data til USA. Google LLC er
+            certificeret under EU-US Data Privacy Framework.
+          </p>
+          <h3>Sådan siger du nej</h3>
+          <p>
+            Du kan altid{" "}
+            <ConsentSettingsButton>ændre dit valg om cookies</ConsentSettingsButton>
+            . Trækker du dit samtykke tilbage, sletter vi Google Analytics-cookies
+            igen. Så bliver du kun målt uden cookies, som beskrevet ovenfor.
+          </p>
+          <p>
+            Vil du slet ikke måles, kan du installere{" "}
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Googles tilføjelse til browseren, der slår Google Analytics fra
+            </a>
+            , eller blokere Google Analytics i din browser. Har du spørgsmål, så
+            skriv til <a href="mailto:hej@optipeople.dk">hej@optipeople.dk</a>.
+          </p>
           <h2 id="cookies">Cookies</h2>
           <p>
-            Første gang du besøger sitet, spørger vi, om vi må bruge cookies til
-            statistik. Indtil du siger ja, sætter vi ingen cookies og sender intet
-            til Google.
+            På en computer spørger vi første gang, om vi må bruge cookies til
+            statistik. På mobil spørger vi ikke, og der bliver ikke sat cookies.
+            Indtil du siger ja, sætter Google Analytics ingen cookies, men måler
+            stadig uden cookies, som beskrevet under{" "}
+            <a href="#statistik">Statistik med Google Analytics</a>.
           </p>
           <p>
             Siger du ja, sætter Google Analytics cookien <code>_ga</code> og en{" "}
@@ -137,10 +209,8 @@ export default async function PrivacyPage({ params }: Props) {
             bruges kun til statistik. Vi bruger ikke cookies til reklame.
           </p>
           <p>
-            Dit valg gemmer vi i din browser, så vi ikke spørger igen hver gang. Du
-            kan altid{" "}
-            <ConsentSettingsButton>ændre dit valg om cookies</ConsentSettingsButton>
-            . Siger du nej, sletter vi Google Analytics-cookies igen.
+            Dit valg gemmer vi i din browser, så vi ikke spørger igen hver gang.
+            Siger du nej, sletter vi Google Analytics-cookies igen.
           </p>
           <h2>Dine rettigheder</h2>
           <p>
@@ -190,8 +260,8 @@ export default async function PrivacyPage({ params }: Props) {
           </p>
           <h2>What we collect and why</h2>
           <p>
-            We collect the personal data you actively provide to us and, if you
-            agree to it, statistics about how the site is used:
+            We collect the personal data you actively provide to us, and
+            statistics about how the site is used:
           </p>
           <ul>
             <li>
@@ -208,11 +278,12 @@ export default async function PrivacyPage({ params }: Props) {
               (GDPR Art. 6(1)(a)), which you can withdraw at any time.
             </li>
             <li>
-              <strong>Statistics.</strong> If you accept cookies, we use Google
-              Analytics to see which pages are visited, where visitors come
-              from, and whether they send a form or click a phone number or
-              email address. The legal basis is your consent
-              (GDPR Art. 6(1)(a)).
+              <strong>Statistics.</strong> We use Google Analytics to see which
+              pages are visited, where visitors come from, and whether they send
+              a form or click a phone number or email address. How this works is
+              described under{" "}
+              <a href="#analytics">Statistics with Google Analytics</a>. We set
+              cookies only with your consent (GDPR Art. 6(1)(a)).
             </li>
           </ul>
           <h2>How your data is processed</h2>
@@ -231,11 +302,82 @@ export default async function PrivacyPage({ params }: Props) {
             and any resulting business relationship, after which it is deleted
             or anonymized in line with applicable bookkeeping requirements.
           </p>
+          <h2 id="analytics">Statistics with Google Analytics</h2>
+          <p>
+            We use Google Analytics 4 to count visits and to see which campaigns
+            work, for example which email brought you to the site. It runs in
+            Google&apos;s Consent Mode, so what is measured depends on whether
+            you have said yes to cookies.
+          </p>
+          <h3>Without your consent</h3>
+          <p>
+            This applies to everyone who has not said yes, including every
+            visitor on a phone, where we do not ask about cookies at all. Google
+            Analytics then measures without cookies. Nothing is stored on your
+            device and no client ID is set. Each page view and click is sent to
+            Google as a separate measurement, with:
+          </p>
+          <ul>
+            <li>
+              your IP address. Google uses it to work out the country and city
+              of the visit and then discards it. GA4 does not log or store IP
+              addresses.
+            </li>
+            <li>
+              your browser and device as your browser reports them (the user
+              agent), plus your language and screen size
+            </li>
+            <li>the address of the page and the page you came from (referrer)</li>
+            <li>
+              what you do on the page: the pages you view, clicks on buttons,
+              phone numbers and email addresses, and form submissions
+            </li>
+            <li>
+              campaign details in the link you followed, such as utm values and
+              the reference (ref) in links in our emails, which tells us which
+              email you clicked
+            </li>
+          </ul>
+          <h3>With your consent</h3>
+          <p>
+            If you say yes on a computer, Google Analytics also sets cookies
+            (see <a href="#cookies">Cookies</a>). These let it recognise your
+            browser on later visits, so we can see how many people come back.
+          </p>
+          <h3>Purpose and recipient</h3>
+          <p>
+            We use the data for statistics about the website and to measure our
+            campaigns. We do not use it for advertising. Google receives the
+            data as our processor. Google may transfer it to the US. Google LLC
+            is certified under the EU-US Data Privacy Framework.
+          </p>
+          <h3>How to say no</h3>
+          <p>
+            You can{" "}
+            <ConsentSettingsButton>change your cookie choice</ConsentSettingsButton>{" "}
+            at any time. If you withdraw your consent, we delete the Google
+            Analytics cookies, and you are then only measured without cookies,
+            as described above.
+          </p>
+          <p>
+            To opt out of the measurement altogether, install{" "}
+            <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google&apos;s Analytics opt-out browser add-on
+            </a>
+            , or block Google Analytics in your browser. If you have questions,
+            write to <a href="mailto:hi@optipeople.dk">hi@optipeople.dk</a>.
+          </p>
           <h2 id="cookies">Cookies</h2>
           <p>
-            On your first visit we ask whether we may use cookies for
-            statistics. Until you accept, we set no cookies and send nothing to
-            Google.
+            On a computer, we ask on your first visit whether we may use cookies
+            for statistics. On a phone we do not ask, and no cookies are set.
+            Until you say yes, Google Analytics sets no cookies but still
+            measures without them, as described under{" "}
+            <a href="#analytics">Statistics with Google Analytics</a>.
           </p>
           <p>
             If you accept, Google Analytics sets the <code>_ga</code> cookie and
@@ -245,10 +387,7 @@ export default async function PrivacyPage({ params }: Props) {
           </p>
           <p>
             Your choice is stored in your browser so we do not ask on every
-            visit. You can{" "}
-            <ConsentSettingsButton>change your cookie choice</ConsentSettingsButton>{" "}
-            at any time. If you decline, we delete the Google Analytics cookies
-            again.
+            visit. If you decline, we delete the Google Analytics cookies again.
           </p>
           <h2>Your rights</h2>
           <p>
