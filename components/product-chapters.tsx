@@ -295,7 +295,7 @@ type IotCopy = {
 const IOT_COPY: Record<Locale, IotCopy> = {
   en: {
     eyebrow: "IoT",
-    tagline: "Data from every machine, new or old.",
+    tagline: "Data from every machine and workstation, new or old.",
     body: "We read from the controls, sensors and systems you already have. New hardware only goes where there is nothing to read.",
     sources: [
       { title: "CNC robot", sub: "Siemens S7 over OPC UA", tag: "Connected" },
@@ -318,7 +318,7 @@ const IOT_COPY: Record<Locale, IotCopy> = {
   },
   da: {
     eyebrow: "IoT",
-    tagline: "Data fra alle maskiner, nye som gamle.",
+    tagline: "Data fra alle maskiner og arbejdsstationer, nye som gamle.",
     body: "Vi læser fra de styringer, sensorer og systemer, I allerede har. Ny hardware kommer kun op, hvor der ikke er noget at læse fra.",
     sources: [
       { title: "CNC-robot", sub: "Siemens S7 over OPC UA", tag: "Tilkoblet" },
