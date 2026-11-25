@@ -181,15 +181,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       allCases: "All cases",
       caseCards: [
         {
-          company: "Fiberline Composites",
-          value: "−41%",
-          unit: "unnecessary stops",
-          note: "Fewer machine stops, and 6% less time lost per stop.",
-          slug: "konkurrencekraft-og-tempo-pa-digital-transformation",
+          company: "Vola",
+          value: "2 hours",
+          unit: "saved every week",
+          note: "Paperless quality control across the CNC department, and management reporting built on facts.",
+          slug: "vola-paperless-quality-control-saves-2-hours-a-week",
           span: "wide",
           kind: "chart",
           tone: "sage",
-          chart: { before: 100, after: 59, beforeLabel: "Before", afterLabel: "After" },
         },
         {
           company: "Industrial company",
@@ -335,15 +334,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       allCases: "Alle cases",
       caseCards: [
         {
-          company: "Fiberline Composites",
-          value: "−41%",
-          unit: "unødvendige stop",
-          note: "Færre maskinstop, og hvert stop koster 6% mindre tid.",
-          slug: "konkurrencekraft-og-tempo-pa-digital-transformation",
+          company: "Vola",
+          value: "2 timer",
+          unit: "sparet om ugen",
+          note: "Papirløs kvalitetskontrol i hele CNC-afdelingen, og ledelsesrapportering, der bygger på fakta.",
+          slug: "vola-paperless-quality-control-saves-2-hours-a-week",
           span: "wide",
           kind: "chart",
           tone: "sage",
-          chart: { before: 100, after: 59, beforeLabel: "Før", afterLabel: "Efter" },
         },
         {
           company: "Industrivirksomhed",
