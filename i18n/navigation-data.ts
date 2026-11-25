@@ -130,6 +130,10 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
           title: "Omron",
           href: "/blog/omron-five-kinds-of-data-that-make-production-more-competitive",
         },
+        {
+          title: "Vola",
+          href: "/blog/vola-paperless-quality-control-saves-2-hours-a-week",
+        },
       ],
     },
     {
@@ -219,6 +223,10 @@ export const navigationMenus: Record<Locale, NavMenu[]> = {
         {
           title: "Omron",
           href: "/blog/omron-five-kinds-of-data-that-make-production-more-competitive",
+        },
+        {
+          title: "Vola",
+          href: "/blog/vola-paperless-quality-control-saves-2-hours-a-week",
         },
       ],
     },
